@@ -1,0 +1,88 @@
+#!/bin/bash
+arg=$2
+
+cd /opt/sifter
+
+
+#if [ $1 == '-a' ] && [ $2 == '$INPUT' ]:
+#	echo "$INPUT" >> files/host_list.txt
+
+if [ $# -ge 1 ]
+	then
+	$1
+
+while [ -n "$1" ]; do # while loop starts
+ 
+    case "$1" in
+ 
+    -c) echo "Checking Host List (files/host_list.txt)"
+			 ./modules/ping_check.sh
+			 ;;
+ 
+	-e) echo "Manually Editing Host List"
+			 sleep 2
+			 nano files/host_list.txt
+			 sleep 2
+			 ./modules/sifter_menu.sh
+			 ;;
+
+	-a) read $2 
+			 echo "$2" >> files/host_list.txt
+			 sleep 2
+			 ./modules/sifter_menu.sh
+			 ;;
+			 
+	-m) echo "Module Menu" 
+			 ./modules/module_runner.sh
+			 ;;
+		
+	-b) echo "Running Blackwidow"
+			 ./modules/blackwidow_script.sh
+			 ;;
+			 
+	-n) echo "Running Nikto"
+			 ./modules/nikto_script.sh
+			 ;;
+			 
+	-p) echo "Running Nmap"
+			 ./modules/nmap_script.sh
+			 ;;
+			 
+	-d) echo "Running Dirbuster"
+			 ./modules/dirb_script.sh
+			 ;;
+			 
+	-w) echo "Running WPScan"
+			 ./modules/wpscan_script.sh
+			 ;;
+			 
+	-h | *) figlet "SifteR"
+			echo "Sifter Help Menu"
+			echo "*****************"
+			echo "+"
+			echo "+"
+			echo "./sifter 		runs the programs bringing up the menu in a cli environment"
+			echo "			-c 	will check the exsiting hosts in the hostlist"
+			echo "			-e 	will open the files/host_list.txt file to be manually edited"
+			echo "			-m 	starts the program under the module menu with the existing host_list.txt"
+			echo "			-b	Runs Blackwidow against the existing hosts in the files/host_list.txt"
+			echo "			-n Runs Nikto using the existing hosts in the files/host_list.txt"
+			echo "			-d Runs Dirbuster against existing hosts in the files/host_list.txt"
+			echo "			-w	Runs WPScan against the existing hosts in the files/host_list.txt"
+			echo "			-p	Runs Nmap against the existing hosts in the files/host_list.txt"
+			echo "			-h 	This Help Menu"
+			echo "			-a 'hostname/IP' must be added with '' and then automattically appends the hostname/IP to host file"
+			sleep 5
+			break
+			;;
+			
+#        *) figlet "............SiFTeR..........."
+#	   ./modules/sifter_menu.sh
+#			;;
+    esac
+    
+done 
+	else 
+		figlet "............SiFTeR..........."
+           	./modules/sifter_menu.sh
+fi
