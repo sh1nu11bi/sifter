@@ -17,3 +17,10 @@ So far results are able to be parsed to:
 -WPScan '--> WPScan WPScanTeam - https://github.com/wpscanteam/wpscan
 
 Any suggestions for extra modules are welcome.
+
+
+*TODO*
+
+- Adding modules in order to open metasploit from sifter for quick exploitation
+- Adding in modules in order to use Zeus Scanner to check for SQL injection 
+- Adding Yuki-Chan module for a more indepth vulnerability scan
