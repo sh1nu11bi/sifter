@@ -12,6 +12,22 @@ read TARGET
 echo "==================================================================================="
 wpscan --url $TARGET --wp-content-dir wp-content -e vp vt u1-10 dbe --api-token 8oTZXNMC2J9l77RxlcrhkMpfqmd3njuQBip1wyyGbtc
 echo "==================================================================================="
+echo -e "${W}Would you like to check for passwords?(y/n)${NC}"
+sleep 1
+read PASS
+echo "==================================================================================="
+do
+    if [ $PASS == y ]; then
+        echo -e "${W}Please enter the full /path/to/wordlist.txt${NC}"
+        sleep 1
+        read WORDLIST
+        sleep 1
+        wpscan --url $TARGET --wp-content-dir wp-content -e vp vt u1-10 dbe -P $WORDLIST --api-token 8oTZXNMC2J9l77RxlcrhkMpfqmd3njuQBip1wyyGbtc
+        echo "==================================================================================="
+    else
+        continue
+    fi
+done
 sleep 5
 echo "==================================================================================="
 ./modules/module_runner.sh
