@@ -4,17 +4,40 @@ Sifter is a recon tool, originally designed to check the status of domains/hosts
 
 From there a few extra tools were integrated in to further the info gathering process.
 
-So far results are able to be parsed to:
 
--Nmap
 
--Nikto
+Modules:
+**********
 
--Dirbuster
+	-Nmap '--> Nmap Gordon Lyon - https://nmap.org
 
--Blackwidow '--> Blackwidow 1N3 - https://github.com/1N3/blackwidow
+	-Nikto '--> Nikto Sullo - https://github.com/sullo/nikto
 
--WPScan '--> WPScan WPScanTeam - https://github.com/wpscanteam/wpscan
+	-Dirbuster '--> DirBuster mgeeky - https://github.com/mgeeky/dirbuster
+
+	-Blackwidow '--> Blackwidow 1N3 - https://github.com/1N3/blackwidow
+
+	-WPScan '--> WPScan WPScanTeam - https://github.com/wpscanteam/wpscan
+
+	-Yuki-Chan '--> Yuki-Chan Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
+
+
+"Sifter Help Menu"
+"*****************"
+"+"
+"+"
+
+./sifter 		runs the programs bringing up the menu in a cli environment"
+			-c 	will check the exsiting hosts in the hostlist"
+			-e 	will open the files/host_list.txt file to be manually edited"
+			-m 	starts the program under the module menu with the existing host_list.txt"
+			-b	Runs Blackwidow against the existing hosts in the files/host_list.txt"
+			-n Runs Nikto using the existing hosts in the files/host_list.txt"
+			-d Runs Dirbuster against existing hosts in the files/host_list.txt"
+			-w	Runs WPScan against the existing hosts in the files/host_list.txt"
+			-p	Runs Nmap against the existing hosts in the files/host_list.txt"
+			-h 	This Help Menu"
+			-a 'hostname/IP' must be added with '' and then automattically appends the hostname/IP to host file
 
 Any suggestions for extra modules are welcome.
 
@@ -23,4 +46,4 @@ Any suggestions for extra modules are welcome.
 
 - Adding modules in order to open metasploit from sifter for quick exploitation
 - Adding in modules in order to use Zeus Scanner to check for SQL injection 
-- Adding Yuki-Chan module for a more indepth vulnerability scan
+
