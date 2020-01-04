@@ -22,10 +22,9 @@ Modules:
 	-Yuki-Chan '--> Yuki-Chan Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
 
 
-"Sifter Help Menu"
-"*****************"
-"+"
-"+"
+Sifter Help Menu
+*****************
+
 
  -c 	will check the exsiting hosts in the hostlist
  
