@@ -24,10 +24,9 @@ sudo mv Yuki-Chan-The-Auto-Pentest yuki
 cd yuki
 pip2 install -r requirements.txt
 pip3 install -r requirements.txt
-./install-perl-module.sh
 chmod +x Module --recursive
-chmod +x wafninja joomscan yuki.sh
-
+chmod +x wafninja joomscan yuki.sh install-perl-module.sh
+./install-perl-module.sh
 
 
 
