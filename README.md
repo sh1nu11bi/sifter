@@ -37,7 +37,7 @@ Modules:
  -w	Runs WPScan against the existing hosts in the files/host_list.txt
  -p	Runs Nmap against the existing hosts in the files/host_list.txt
  -y	Runs the Yuki-Chan module against current host file
- -h 	This Help Menu
+ -h 	Help Menu
 	 
 Any suggestions for extra modules are welcome.
 
