@@ -27,18 +27,18 @@ Modules:
 "+"
 "+"
 
-./sifter 	runs the programs bringing up the menu in a cli environment"
-	 -c 	will check the exsiting hosts in the hostlist"
-	 -e 	will open the files/host_list.txt file to be manually edited"
+./sifter 	runs the programs bringing up the menu in a cli environment
+	 -c 	will check the exsiting hosts in the hostlist
+	 -e 	will open the files/host_list.txt file to be manually edited
 	 -a 'hostname/IP' must be added with '' and then automattically appends the hostname/IP to host file
-	 -m 	starts the program under the module menu with the existing host_list.txt"
-	 -b	Runs Blackwidow against the existing hosts in the files/host_list.txt"
-	 -n 	Runs Nikto using the existing hosts in the files/host_list.txt"
-	 -d 	Runs Dirbuster against existing hosts in the files/host_list.txt"
-	 -w	Runs WPScan against the existing hosts in the files/host_list.txt"
-	 -p	Runs Nmap against the existing hosts in the files/host_list.txt"
+	 -m 	starts the program under the module menu with the existing host_list.txt
+	 -b	Runs Blackwidow against the existing hosts in the files/host_list.txt
+	 -n 	Runs Nikto using the existing hosts in the files/host_list.txt
+	 -d 	Runs Dirbuster against existing hosts in the files/host_list.txt
+	 -w	Runs WPScan against the existing hosts in the files/host_list.txt
+	 -p	Runs Nmap against the existing hosts in the files/host_list.txt
 	 -y	Runs the Yuki-Chan module against current host file
-	 -h 	This Help Menu"
+	 -h 	This Help Menu
 	 
 Any suggestions for extra modules are welcome.
 
