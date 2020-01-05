@@ -10,24 +10,30 @@ cat files/pingtest_pass.txt
 echo -e "${W}Please copy and paste in your target site${NC}"
 read TARGET
 echo "==================================================================================="
-wpscan --url $TARGET --wp-content-dir wp-content -e vp vt u1-10 dbe --api-token 8oTZXNMC2J9l77RxlcrhkMpfqmd3njuQBip1wyyGbtc
+wpscan --url $TARGET --wp-content-dir wp-content -e u vp vt dbe --api-token 8oTZXNMC2J9l77RxlcrhkMpfqmd3njuQBip1wyyGbtc
 echo "==================================================================================="
-echo -e "${W}Would you like to check for passwords?(y/n)${NC}"
-sleep 1
-read PASS
-echo "==================================================================================="
-do
-    if [ $PASS == y ]; then
-        echo -e "${W}Please enter the full /path/to/wordlist.txt${NC}"
-        sleep 1
-        read WORDLIST
-        sleep 1
-        wpscan --url $TARGET --wp-content-dir wp-content -e vp vt u1-10 dbe -P $WORDLIST --api-token 8oTZXNMC2J9l77RxlcrhkMpfqmd3njuQBip1wyyGbtc
-        echo "==================================================================================="
-    else
-        continue
-    fi
-done
-sleep 5
-echo "==================================================================================="
-./modules/module_runner.sh
+sleep 2
+
+	echo -e "${W}Would you like WPScan to search for passwords of enumerated users (if any)${NC}"
+	options=("Yes" "No")
+	select opts in "${options[@]}"
+	do
+		case $opts in
+			"Yes")
+				echo "==================================================================================="
+				echo -e "${W}Please enter the full /path/to/wordlist.txt${NC}"
+			       	sleep 2
+			        read WORDLIST
+			        sleep 2
+			        wpscan --url $TARGET --wp-content-dir wp-content -e u -P $WORDLIST --api-token 8oTZXNMC2J9l77RxlcrhkMpfqmd3njuQBip1wyyGbtc
+				echo "==================================================================================="
+				sleep 1
+				./modules/module_runner.sh
+				;;
+
+			"No")
+				./modules/module_runner.sh
+				;;
+
+		esac
+	done
