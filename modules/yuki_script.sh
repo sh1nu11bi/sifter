@@ -6,7 +6,11 @@ W='\033[1;37m'
 
 echo -e "${ORNG}Yuki-Chan${NC}"
 echo -e "${ORNG}***********${NC}"
+<<<<<<< HEAD
 cat files/pingtest.pass
+=======
+cat files/pingtest_pass.txt
+>>>>>>> 8598350644d2892d3031b556b7c8301c57d271f2
 echo -e "${W}Please copy and paste in your target site${NC}"
 echo "================================================================================================="
 cd /root/yuki
