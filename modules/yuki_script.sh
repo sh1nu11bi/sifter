@@ -6,11 +6,11 @@ W='\033[1;37m'
 
 echo -e "${ORNG}Yuki-Chan${NC}"
 echo -e "${ORNG}***********${NC}"
-cat files/pingtest_pass.txt
+cat files/pingtest.pass
 echo -e "${W}Please copy and paste in your target site${NC}"
 echo "================================================================================================="
 cd /root/yuki
 sleep 1
-sudo ./yuki.sh
+sudo ./startyuki
 echo "================================================================================================="
 ./modules/module_runner.sh
