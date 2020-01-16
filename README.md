@@ -9,17 +9,19 @@ From there a few extra tools were integrated in to further the info gathering pr
 Modules:
 **********
 
-	-Nmap '--> Nmap Gordon Lyon - https://nmap.org
+	-Nmap '--> Gordon Lyon - https://nmap.org
 
-	-Nikto '--> Nikto Sullo - https://github.com/sullo/nikto
+	-Nikto '--> Sullo - https://github.com/sullo/nikto
 
-	-Dirbuster '--> DirBuster mgeeky - https://github.com/mgeeky/dirbuster
+	-Dirbuster '--> mgeeky - https://github.com/mgeeky/dirbuster
 
-	-Blackwidow '--> Blackwidow 1N3 - https://github.com/1N3/blackwidow
+	-Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow
 
-	-WPScan '--> WPScan WPScanTeam - https://github.com/wpscanteam/wpscan
+	-WPScan '--> WPScanTeam - https://github.com/wpscanteam/wpscan
 
-	-Yuki-Chan '--> Yuki-Chan Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
+	-Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
+	
+	-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper 
 
 
 Sifter Help Menu
