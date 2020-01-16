@@ -5,6 +5,11 @@ sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster
 cd ../
 sudo mv sifter -t /opt
 cd /opt/sifter
+<<<<<<< HEAD
+=======
+        sudo chmod +x /usr/sbin/blackwidow
+        sudo chmod +x /usr/sbin/injectx.py
+>>>>>>> 8fea368f8558fa609a2738a2c94ba26acddd89e9
         sudo chmod +x /opt/sifter/sifter.sh
         sudo chmod +x /opt/sifter/modules/*
 
@@ -14,9 +19,13 @@ cd blackwidow
     sudo cp blackwidow /usr/sbin/blackwidow
     sudo cp injectx.py /usr/sbin/injectx.py
     pip install -r requirements.txt
+<<<<<<< HEAD
     sudo chmod +x /usr/sbin/blackwidow
     sudo chmod +x /usr/sbin/injectx.py
     
+=======
+
+>>>>>>> 8fea368f8558fa609a2738a2c94ba26acddd89e9
 cd /root
 git clone https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest.git
 	sudo mv Yuki-Chan-The-Auto-Pentest yuki
@@ -27,6 +36,7 @@ git clone https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest.git
 	sudo chown $USER:$USER Module --recursive
 	chmod +x wafninja joomscan yuki.sh install-perl-module.sh
 	./install-perl-module.sh
+<<<<<<< HEAD
 
 cd /opt
 git clone https://github.com/s1l3n7h0s7/AttackSurfaceMapper.git
@@ -35,4 +45,8 @@ git clone https://github.com/s1l3n7h0s7/AttackSurfaceMapper.git
 	sudo chmod +x /usr/sbin/asm
 	echo "Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm"
 	
+=======
+
+
+>>>>>>> 8fea368f8558fa609a2738a2c94ba26acddd89e9
 figlet "Done! =D"
