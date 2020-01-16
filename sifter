@@ -44,6 +44,10 @@ while [ -n "$1" ]; do # while loop starts
 			 ./modules/nmap_script.sh
 			 ;;
 
+	-s) echo "Running AttackSurfaceMapper"
+			./modules/asm_module.sh
+			;;
+
 	-d) echo "Running Dirbuster"
 			 ./modules/dirb_script.sh
 			 ;;
@@ -62,6 +66,7 @@ while [ -n "$1" ]; do # while loop starts
 		echo "                  -a	'hostname/IP' must be added with '' and then automattically appends the hostname/IP to host file"
 		echo "                  -e      will open the host file for manual editing"
 		echo "                  -m      Opens the Modules Menu"
+		echo "			-s 	Runs AttackSurfaceMapper against a chosen target"
 		echo "                  -b      Runs the Blackwidow Module using the existing host file"
 		echo "                  -n      Runs the Nikto Module using the existing host file"
 		echo "                  -d      Runs the Dirbuster Module using the existing host file"
