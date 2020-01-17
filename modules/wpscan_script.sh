@@ -10,7 +10,7 @@ cat files/pingtest_pass.txt
 echo -e "${W}Please copy and paste in your target site${NC}"
 read TARGET
 echo "==================================================================================="
-wpscan --url $TARGET --wp-content-dir wp-content -e u vp vt dbe --api-token 8oTZXNMC2J9l77RxlcrhkMpfqmd3njuQBip1wyyGbtc
+wpscan --url $TARGET --wp-content-dir wp-content -e u vp vt dbe --api-token
 echo "==================================================================================="
 sleep 2
 
@@ -25,7 +25,7 @@ sleep 2
 			       	sleep 2
 			        read WORDLIST
 			        sleep 2
-			        wpscan --url $TARGET --wp-content-dir wp-content -e u -P $WORDLIST --api-token 8oTZXNMC2J9l77RxlcrhkMpfqmd3njuQBip1wyyGbtc
+			        wpscan --url $TARGET --wp-content-dir wp-content -e u -P $WORDLIST --api-token
 				echo "==================================================================================="
 				sleep 1
 				./modules/module_runner.sh
