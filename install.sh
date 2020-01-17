@@ -1,4 +1,8 @@
 #!/bin/bash
+RED='\033[0;31m'
+NC='\033[0m'
+ORNG='\033[0;33m'
+W='\033[1;37m'
 
 sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano
 
@@ -7,9 +11,13 @@ sudo mv sifter -t /opt
 cd /opt/sifter
         sudo chmod +x /opt/sifter/sifter.sh
         sudo chmod +x /opt/sifter/modules/*
+		sleep 2
+
+echo -e "${w}===========================================================================================${NC}"
+figlet -f mini "Checking for Blackwidow"
 
 if [ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py || -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]; then
-    echo "Blackwidow is already installed."
+    echo -e "${ORNG}Blackwidow is already installed.${NC}"
 else
 	cd /root
 	git clone https://github.com/1N3/blackwidow.git
@@ -19,8 +27,11 @@ else
 	    pip install -r requirements.txt
 fi
 
+echo -e "${w}===========================================================================================${NC}"
+figlet -f mini "Checking for Yuki-Chan"
+
 if [ -d "/root/Yuki-Chan-The-Auto-Pentest" ]; then
-	echo "Yuki-Chan is already installed"
+	echo -e "${ORNG}Yuki-Chan is already installed.${NC}"
 else
 	cd /root
 	git clone https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest.git
@@ -34,8 +45,11 @@ else
 		sudo ./install-perl-module.sh
 fi
 
+echo -e "${w}===========================================================================================${NC}"
+figlet -f mini "Checking for Attack Surface Mapper"
+
 if [ -d /opt/AttackSurfaceMapper || -d /root/AttackSurfaceMapper ]; then
-	echo "ASM is already installed"
+	echo -e "${ORNG}ASM is already installed.${NC}"
 else
 	cd /opt
 	git clone https://github.com/s1l3n7h0s7/AttackSurfaceMapper.git
