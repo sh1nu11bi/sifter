@@ -44,5 +44,5 @@ else
 		sudo chmod +x /usr/sbin/asm
 		echo "Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm"
 fi
-	
+
 figlet "Done! =D"
