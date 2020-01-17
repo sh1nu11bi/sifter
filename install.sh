@@ -6,12 +6,20 @@ W='\033[1;37m'
 
 sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano
 
-cd ../
-sudo mv sifter -t /opt
-cd /opt/sifter
+echo -e "${w}===========================================================================================${NC}"
+figlet -f mini "Checking for Sifter"
+
+if  [ -d /opt/sifter ]; then
+	echo -e "${ORNG}Sifter is already installed.${NC}"
+	exit
+else
+	cd ../
+	sudo mv sifter -t /opt
+	cd /opt/sifter
         sudo chmod +x /opt/sifter/sifter.sh
         sudo chmod +x /opt/sifter/modules/*
 		sleep 2
+fi
 
 echo -e "${w}===========================================================================================${NC}"
 figlet -f mini "Checking for Blackwidow"
