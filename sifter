@@ -81,4 +81,24 @@ while [ -n "$1" ]; do # while loop starts
 	esac
 
 done
+else
+		echo "Sifter Quick Commands"
+		echo "**********************"
+		echo ""
+		echo ""
+		echo "./sifter		        runs the programs bringing up the menu in a cli environment"
+		echo "                  -c      will check the exsiting hosts in the hostlist"
+		echo "                  -a	'hostname/IP' must be added with '' and then automattically appends the hostname/IP to host file"
+		echo "                  -e      will open the host file for manual editing"
+		echo "                  -m      Opens the Modules Menu"
+		echo "			-s 	Runs AttackSurfaceMapper against a chosen target"
+		echo "                  -b      Runs the Blackwidow Module using the existing host file"
+		echo "                  -n      Runs the Nikto Module using the existing host file"
+		echo "                  -d      Runs the Dirbuster Module using the existing host file"
+		echo "                  -w      Runs the WPScan Module using the existing host file"
+		echo "                  -p      Runs the Nmap Module using the existing host file"
+		echo "                  -y      Runs the Yuki-Chan Module using the existing host file"
+		echo "                  -h      This Help Menu"
+		sleep 5
+		./modules/sifter_menu.sh
 fi
