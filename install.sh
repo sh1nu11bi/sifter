@@ -9,12 +9,11 @@ sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster
 echo -e "${w}===========================================================================================${NC}"
 figlet -f mini "Checking for Sifter"
 
-if  [ -d /opt/sifter ]; then
+if [[ -d /opt/sifter ]]; then
 	echo -e "${ORNG}Sifter is already installed.${NC}"
-	exit
 else
-	cd ../
-	sudo mv sifter -t /opt
+	pwd && cd ..
+	sudo mv sifter /opt/sifter
 	cd /opt/sifter
         sudo chmod +x /opt/sifter/sifter
         sudo chmod +x /opt/sifter/modules/*
