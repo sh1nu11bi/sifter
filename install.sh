@@ -16,15 +16,15 @@ else
 	cd ../
 	sudo mv sifter -t /opt
 	cd /opt/sifter
-        sudo chmod +x /opt/sifter/sifter.sh
+        sudo chmod +x /opt/sifter/sifter
         sudo chmod +x /opt/sifter/modules/*
-		sleep 2
+	sleep 2
 fi
 
 echo -e "${w}===========================================================================================${NC}"
 figlet -f mini "Checking for Blackwidow"
 
-if [ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py || -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]; then
+if [[ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py ]] || [[ -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]]; then
     echo -e "${ORNG}Blackwidow is already installed.${NC}"
 else
 	cd /root
@@ -38,7 +38,7 @@ fi
 echo -e "${w}===========================================================================================${NC}"
 figlet -f mini "Checking for Yuki-Chan"
 
-if [ -d "/root/Yuki-Chan-The-Auto-Pentest" ]; then
+if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]]; then
 	echo -e "${ORNG}Yuki-Chan is already installed.${NC}"
 else
 	cd /root
@@ -56,7 +56,7 @@ fi
 echo -e "${w}===========================================================================================${NC}"
 figlet -f mini "Checking for Attack Surface Mapper"
 
-if [ -d /opt/AttackSurfaceMapper || -d /root/AttackSurfaceMapper ]; then
+if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
 	echo -e "${ORNG}ASM is already installed.${NC}"
 else
 	cd /opt
