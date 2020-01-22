@@ -55,6 +55,8 @@ while [ -n "$1" ]; do # while loop starts
 	-w) echo "Running WPScan"
 			 ./modules/wpscan_script.sh
 			 ;;
+	-y) echo "Running Yuki-Chan"
+			./modules/yuki_script.sh
 
 	-h | *) figlet "SifteR"
 		echo "Sifter Help Menu"
