@@ -27,12 +27,16 @@ do
         
         "Fuzz all GET parameters for common OWASP Vulns (Verbose enabled)")
             cat files/pingtest_pass.txt
-            echo -e "${W}Please copy and paste in your target site and add GET parameters${NC}"
-            echo -e "${LP}e.g. https://test.com/users.php?user=1&admin=true${NC}"
+            echo -e "${W}Please enter your target domain and trailing directories${NC}"
+	    echo -e "${LP}ex. http://target.com/wp-content/uploads/${NC}"
+	    sleep 2
+	    read TARGETDMN
+	    echo -e "${W}Please enter the target file & GET or POST parameters${NC}"
+	    echo -e "${LP}ex. 'users.php?user=1&admin=true'${NC}"
+	    sleep 2
+	    read TARGETEXT
+	    echo -e "${W}Running injectx script with the following argument, ${LP}'python injectx.py -u $TARGETDMN$TARGETEXT -v y'${NC}"
 	    sleep 5
-	    read TARGET
-	    echo -e "${W}Running injectx script with the following argument, ${LP}'python injectx.py -u $TARGET -v y'${NC}"
-	    sleep 10
             sudo injectx.py -u $TARGET -v y
             ./modules/blackwidow_script.sh
             ;;
