@@ -105,9 +105,9 @@ usage() {                                      # Function: Print a help message.
 
 	esac
 done
-if (( $OPTIND == 1 )); then
-	echo -e "${RED}"
-	figlet SifteR
+if (( $OPTIND == 1 )); then				# if no option is passed
+	echo -e "${RED}"				# during script execution then 
+	figlet SifteR					# the default command will run
 	echo -e "${NC}"
 	./modules/sifter_menu.sh
 fi
