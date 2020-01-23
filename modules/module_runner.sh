@@ -7,7 +7,7 @@ W='\033[1;37m'
 echo -e "${RED}Modules${NC}"
 echo -e "${RED}*******${NC}"
 PS3='What would you like to do?'
-        options=("nmap" "WPScan" "Nikto" "Dirbuster" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "Back")
+        options=("nmap" "WPScan" "Nikto" "Dirbuster" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -42,5 +42,9 @@ PS3='What would you like to do?'
                         "Back")
                             ./modules/sifter_menu.sh
 			    ;;
+			    
+			 "Quit")
+			     exit 0
+			     ;;
                 esac
         done
