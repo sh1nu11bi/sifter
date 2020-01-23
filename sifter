@@ -23,6 +23,8 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter    -h      This Help Menu" 1>&2
 }
 
+cd /opt/sifter
+
 	while getopts "a:cembndwpyh" options; do              # Loop: Get the next option;
 # use silent error checking;
 # option a take arguments.
