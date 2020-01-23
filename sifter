@@ -1,88 +1,114 @@
 #!/bin/bash
-arg=$2
+RED='\033[0;31m'
+NC='\033[0m'
+ORNG='\033[0;33m'
+W='\033[1;37m'
+ARG=$1                                        # IP addition argument 
+usage() {                                      # Function: Print a help message.
+	echo "Sifter Help Menu"
+	echo "*****************"
+	echo "+"
+	echo "+"
+	echo "./sifter		        runs the programs bringing up the menu in a cli environment"
+	echo "                  -c      will check the exsiting hosts in the hostlist"
+	echo "                  -a	'hostname/IP' must be added with '' and then automattically appends the hostname/IP to host file"
+	echo "                  -e      will open the host file for manual editing"
+	echo "                  -m      Opens the Modules Menu"
+	echo "                  -b      Runs the Blackwidow Module using the existing host file"
+	echo "                  -n      Runs the Nikto Module using the existing host file"
+	echo "                  -d      Runs the Dirbuster Module using the existing host file"
+	echo "                  -w      Runs the WPScan Module using the existing host file"
+	echo "                  -p      Runs the Nmap Module using the existing host file"
+	echo "                  -y      Runs the Yuki-Chan Module using the existing host file"
+	echo "                  -h      This Help Menu" 1>&2 
+}
 
-cd /opt/sifter
+	while getopts "a:cembndwpyh" options || getopts "" noopts; do              # Loop: Get the next option;
+# use silent error checking;
+# option a take arguments.
+	case "${options}" in                         # 
 
-
-#if [ $1 == '-a' ] && [ $2 == '$INPUT' ]:
-#	echo "$INPUT" >> files/host_list.txt
-
-if [ $# -ge 1 ]
-	then
-	$1
-
-while [ -n "$1" ]; do # while loop starts
- 
-    case "$1" in
- 
-    -c) echo "Checking Host List (files/host_list.txt)"
-			 ./modules/ping_check.sh
-			 ;;
- 
-	-e) echo "Manually Editing Host List"
-			 sleep 2
-			 nano files/host_list.txt
-			 sleep 2
-			 ./modules/sifter_menu.sh
-			 ;;
-
-	-a) read $2 
-			 echo "$2" >> files/host_list.txt
-			 sleep 2
-			 ./modules/sifter_menu.sh
-			 ;;
-			 
-	-m) echo "Module Menu" 
-			 ./modules/module_runner.sh
-			 ;;
-		
-	-b) echo "Running Blackwidow"
-			 ./modules/blackwidow_script.sh
-			 ;;
-			 
-	-n) echo "Running Nikto"
-			 ./modules/nikto_script.sh
-			 ;;
-			 
-	-p) echo "Running Nmap"
-			 ./modules/nmap_script.sh
-			 ;;
-			 
-	-d) echo "Running Dirbuster"
-			 ./modules/dirb_script.sh
-			 ;;
-			 
-	-w) echo "Running WPScan"
-			 ./modules/wpscan_script.sh
-			 ;;
-			 
-	-h | *) figlet "SifteR"
-			echo "Sifter Help Menu"
-			echo "*****************"
-			echo "+"
-			echo "+"
-			echo "./sifter 		runs the programs bringing up the menu in a cli environment"
-			echo "			-c 	will check the exsiting hosts in the hostlist"
-			echo "			-e 	will open the files/host_list.txt file to be manually edited"
-			echo "			-m 	starts the program under the module menu with the existing host_list.txt"
-			echo "			-b	Runs Blackwidow against the existing hosts in the files/host_list.txt"
-			echo "			-n Runs Nikto using the existing hosts in the files/host_list.txt"
-			echo "			-d Runs Dirbuster against existing hosts in the files/host_list.txt"
-			echo "			-w	Runs WPScan against the existing hosts in the files/host_list.txt"
-			echo "			-p	Runs Nmap against the existing hosts in the files/host_list.txt"
-			echo "			-h 	This Help Menu"
-			echo "			-a 'hostname/IP' must be added with '' and then automattically appends the hostname/IP to host file"
-			sleep 5
-			break
+		c) 
+			echo -e "${ORNG}"
+			figlet -f mini "Checking for live hosts"
+			echo -e "${NC}"
+			./modules/ping_check.sh
 			;;
-			
-#        *) figlet "............SiFTeR..........."
-#	   ./modules/sifter_menu.sh
-#			;;
-    esac
-    
-done 
-	else 
-		figlet "............SiFTeR..........."
-           	./modules/sifter_menu.sh
+
+		e) 
+			echo -e "${ORNG}"
+			figlet -f mini "Editing Host List"
+			echo -e "${NC}"
+			sleep 2
+			nano files/host_list.txt
+			sleep 2
+			./modules/sifter_menu.sh
+			;;
+
+		a) 
+			echo -e "${ORNG}"
+			figlet -f mini "Adding $ARG to host list"
+			echo -e "${NC}"
+			echo "$ARG" >> files/host_list.txt
+			sleep 2
+			./modules/sifter_menu.sh
+			;;
+
+		m) 
+			echo -e "${ORNG}"
+			figlet -f mini "Module Menu"
+			echo -e "${NC}"
+			./modules/module_runner.sh
+			;;
+
+		b) 
+			echo -e "${ORNG}"
+			figlet -f mini "Running BlackWidow"
+			echo -e "${NC}"
+			./modules/blackwidow_script.sh
+			;;
+
+		n) 
+			echo -e "${ORNG}"
+			figlet -f mini "Running Nikto"
+			echo -e "${NC}"
+			./modules/nikto_script.sh
+			;;
+
+		p) 
+			echo -e "${ORNG}"
+			figlet -f mini "Running Nmap"
+			echo -e "${NC}"
+			./modules/nmap_script.sh
+			;;
+
+		d) 
+			echo -e "${ORNG}"
+			figlet -f mini "Running Dirbuster"
+			echo -e "${NC}"
+			./modules/dirb_script.sh
+			;;
+
+		w) 
+			echo -e "${ORNG}"
+			figlet -f mini "Running WPScan"
+			echo -e "${NC}"
+			./modules/wpscan_script.sh
+			;;
+
+		h) 
+			echo -e "${RED}"
+			figlet "SifteR"
+			echo -e "${NC}"
+			usage
+			;;
+
+	esac
+done
+if (( $OPTIND == 1 )); then
+	echo -e "${RED}"
+	figlet SifteR
+	echo -e "${NC}"
+	./modules/sifter_menu.sh
 fi
+exit 0

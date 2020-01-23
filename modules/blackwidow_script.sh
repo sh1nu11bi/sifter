@@ -33,7 +33,7 @@ do
 	    read TARGET
 	    echo -e "${W}Running injectx script with the following argument, ${LP}'python injectx.py -u $TARGET -v y'${NC}"
 	    sleep 10
-            sudo python injectx.py -u $TARGET -v y
+            sudo injectx.py -u $TARGET -v y
             ./modules/blackwidow_script.sh
             ;;
         
