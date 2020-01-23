@@ -3,7 +3,7 @@ RED='\033[0;31m'
 NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
-ARG=$1                                        # IP addition argument 
+ARG=$2                                        # IP addition argument 
 usage() {                                      # Function: Print a help message.
 	echo "Sifter Help Menu"
 	echo "*****************"
@@ -20,22 +20,22 @@ usage() {                                      # Function: Print a help message.
 	echo "                  -w      Runs the WPScan Module using the existing host file"
 	echo "                  -p      Runs the Nmap Module using the existing host file"
 	echo "                  -y      Runs the Yuki-Chan Module using the existing host file"
-	echo "                  -h      This Help Menu" 1>&2 
+	echo "                  -h      This Help Menu" 1>&2
 }
 
 	while getopts "a:cembndwpyh" options || getopts "" noopts; do              # Loop: Get the next option;
 # use silent error checking;
 # option a take arguments.
-	case "${options}" in                         # 
+	case "${options}" in                         #
 
-		c) 
+		c)
 			echo -e "${ORNG}"
 			figlet -f mini "Checking for live hosts"
 			echo -e "${NC}"
 			./modules/ping_check.sh
 			;;
 
-		e) 
+		e)
 			echo -e "${ORNG}"
 			figlet -f mini "Editing Host List"
 			echo -e "${NC}"
@@ -45,7 +45,7 @@ usage() {                                      # Function: Print a help message.
 			./modules/sifter_menu.sh
 			;;
 
-		a) 
+		a)
 			echo -e "${ORNG}"
 			figlet -f mini "Adding $ARG to host list"
 			echo -e "${NC}"
@@ -54,49 +54,49 @@ usage() {                                      # Function: Print a help message.
 			./modules/sifter_menu.sh
 			;;
 
-		m) 
+		m)
 			echo -e "${ORNG}"
 			figlet -f mini "Module Menu"
 			echo -e "${NC}"
 			./modules/module_runner.sh
 			;;
 
-		b) 
+		b)
 			echo -e "${ORNG}"
 			figlet -f mini "Running BlackWidow"
 			echo -e "${NC}"
 			./modules/blackwidow_script.sh
 			;;
 
-		n) 
+		n)
 			echo -e "${ORNG}"
 			figlet -f mini "Running Nikto"
 			echo -e "${NC}"
 			./modules/nikto_script.sh
 			;;
 
-		p) 
+		p)
 			echo -e "${ORNG}"
 			figlet -f mini "Running Nmap"
 			echo -e "${NC}"
 			./modules/nmap_script.sh
 			;;
 
-		d) 
+		d)
 			echo -e "${ORNG}"
 			figlet -f mini "Running Dirbuster"
 			echo -e "${NC}"
 			./modules/dirb_script.sh
 			;;
 
-		w) 
+		w)
 			echo -e "${ORNG}"
 			figlet -f mini "Running WPScan"
 			echo -e "${NC}"
 			./modules/wpscan_script.sh
 			;;
 
-		h) 
+		h)
 			echo -e "${RED}"
 			figlet "SifteR"
 			echo -e "${NC}"
