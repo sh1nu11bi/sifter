@@ -108,9 +108,6 @@ cd /opt/sifter
 	esac
 done
 if (( $OPTIND == 1 )); then				# if no option is passed
-	echo -e "${RED}"				# during script execution then 
-	figlet SifteR					# the default command will run
-	echo -e "${NC}"
-	./modules/sifter_menu.sh
+	./modules/sifter_menu.sh			# default command is run
 fi
 exit 0
