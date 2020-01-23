@@ -16,8 +16,7 @@ else
 	sudo mv sifter /opt/sifter
 	cd /opt/sifter
         sudo cp sifter /usr/sbin/sifter
-				sudo chmod +x -R /opt/sifter
-				sudo chmod +x /usr/sbin/sifter
+				sudo chmod +x -R /opt/sifter /usr/sbin/sifter
 				sleep 2
 fi
 
@@ -68,3 +67,5 @@ else
 fi
 
 figlet "Done! =D"
+cd /opt/sifter
+sifter -h
