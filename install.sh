@@ -15,9 +15,10 @@ else
 	pwd && cd ..
 	sudo mv sifter /opt/sifter
 	cd /opt/sifter
-        sudo chmod +x /opt/sifter/sifter
-        sudo chmod +x /opt/sifter/modules/*
-	sleep 2
+        sudo cp sifter /usr/sbin/sifter
+				sudo chmod +x -R /opt/sifter
+				sudo chmod +x /usr/sbin/sifter
+				sleep 2
 fi
 
 echo -e "${w}===========================================================================================${NC}"
@@ -37,7 +38,7 @@ fi
 echo -e "${w}===========================================================================================${NC}"
 figlet -f mini "Checking for Yuki-Chan"
 
-if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]]; then
+if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
 	echo -e "${ORNG}Yuki-Chan is already installed.${NC}"
 else
 	cd /root
