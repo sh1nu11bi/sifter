@@ -5,9 +5,11 @@ ORNG='\033[0;35m'
 NC='\033[0m'
 W='\033[1;37m'
 LP='\033[1;35m'
+RED='\033[0;31m'
 
-#echo -e "${ORNG}Sifter${NC}"
-figlet "$ifteR"
+echo -e "${RED}"
+figlet "SifteR"
+echo -e "${NC}"
 echo -e "${ORNG}****************************========================*******************************${NC}"
 echo -e "${LP}======================Hit Ctrl + c at any time to quit Sifter====================${NC}"
 arg=$1
