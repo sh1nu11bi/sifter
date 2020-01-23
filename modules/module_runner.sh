@@ -44,7 +44,7 @@ PS3='What would you like to do?'
 			    ;;
 			    
 			 "Quit")
-			     exit 0
+			     exit 
 			     ;;
                 esac
         done
