@@ -11,14 +11,20 @@ select opts in "${options[@]}"
 do
 	case $opts in
 		"Full Port")
-			echo -e "${RED}This option takes +- 30mins${NC}"
-			cat files/host_list.txt
-			echo -e "${W}Please copy and paste in your target${NC}"
-			read TARGET
-			echo "================================================================================================="
-			sudo nmap -p- -Pn -O -A $TARGET
-			echo "================================================================================================="
-			./modules/module_runner.sh
+			echo -e "${RED}NOTE: This option takes +- 30mins${NC}"
+			echo -e "${W}Would you like to continue?(y/n)${NC}"
+			read REPLY
+			if [[ $REPLY == y ]]; then
+			   cat files/host_list.txt
+			   echo -e "${W}Please copy and paste in your target${NC}"
+			   read TARGET
+			   echo "================================================================================================="
+			   sudo nmap -p- -Pn -O -A $TARGET
+			   echo "================================================================================================="
+			   ./modules/module_runner.sh
+			else
+			   ./modules/nmap_script.sh
+			fi
 			;;
 			
 		"Common Vulnerabilities")
