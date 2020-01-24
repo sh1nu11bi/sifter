@@ -2,6 +2,7 @@
 ORNG='\033[0;33m'
 NC='\033[0m'
 W='\033[1;37m'
+RED='\033[0;31m'
 
 echo -e "${ORNG}nmap${NC}"
 echo -e "${ORNG}*****${NC}"
@@ -10,6 +11,7 @@ select opts in "${options[@]}"
 do
 	case $opts in
 		"Full Port")
+			echo -e "${RED}This option takes +- 30mins${NC}"
 			cat files/host_list.txt
 			echo -e "${W}Please copy and paste in your target${NC}"
 			read TARGET
