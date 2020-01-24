@@ -2,6 +2,23 @@
 RED='\033[0;31m'
 NC='\033[0m'
 W='\033[1;37m'
+ip_add() {
+  echo -e "${W}Please enter your target:${NC} "
+  read IP_ANS
+  sleep 1
+  echo "$IP_ANS" >> files/host_list.txt
+  ip_q
+}
+ip_q() {
+  echo -e "${W}Would you like to add another?(y/n)${NC}"
+	read ANS
+	sleep 1
+	if [[ $ANS == y ]]; then
+	  ip_add
+	else
+	  ./modules/sifter_menu.sh
+	fi
+}
 
 arg=$1
 echo -e "${RED}List Editor${NC}"
@@ -32,8 +49,7 @@ cat files/host_list.txt
                             read TARGET
                             echo "$TARGET" >> files/host_list.txt
                             echo -e "${W}Target Added!${NC}"
-                            sleep 5
-                            ./modules/list_editor.sh
+                            ip_q
                             ;;
                             
                         "Remove")
