@@ -8,10 +8,10 @@ LP='\033[1;35m'
 RED='\033[0;31m'
 
 echo -e "${RED}"
-figlet "SifteR"
+figlet "..SifteR.."
 echo -e "${NC}"
-echo -e "${ORNG}****************************========================*******************************${NC}"
-echo -e "${LP}======================Hit Ctrl + c at any time to quit Sifter====================${NC}"
+echo -e "${ORNG}///////========================\\\\\\\\${NC}
+echo -e "${LP}==Hit Ctrl + c at any time to quit Sifter==${NC}"
 arg=$1
 PS3='What would you like to do?'
         options=("Check" "Edit List" "Parse Results to Modules" "Quit")
