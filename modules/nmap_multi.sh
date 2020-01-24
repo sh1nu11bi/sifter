@@ -2,6 +2,7 @@
 ORNG='\033[0;33m'
 NC='\033[0m'
 W='\033[1;37m'
+RED='\033[0;31m'
 
 echo -e "${ORNG}nmap${NC}"
 echo -e "${ORNG}*****${NC}"
@@ -10,6 +11,7 @@ select opts in "${options[@]}"
 do
     case $opts in
         "Full Port")
+	    echo -e "${RED}NOTE: This option takes +- 30mins per host.${NC}"
             sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
             sleep 5
             ./modules/module_runner.sh
