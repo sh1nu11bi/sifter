@@ -4,7 +4,7 @@ NC='\033[0m'
 W='\033[1;37m'
 RED='\033[0;31m'
 
-echo -e "${ORNG}nmap${NC}"
+echo -e "${ORNG}nMap${NC}"
 echo -e "${ORNG}*****${NC}"
 options=("Full Port" "Common Vulnerabilities" "UDP Port Scan" "Back")
 select opts in "${options[@]}"
