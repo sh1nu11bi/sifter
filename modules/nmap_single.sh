@@ -3,6 +3,7 @@ ORNG='\033[0;33m'
 NC='\033[0m'
 W='\033[1;37m'
 RED='\033[0;31m'
+YLW='\033[1;33m'
 
 echo -e "${ORNG}nmap${NC}"
 echo -e "${ORNG}*****${NC}"
@@ -15,7 +16,9 @@ do
 			echo -e "${W}Would you like to continue?(y/n)${NC}"
 			read REPLY
 			if [[ $REPLY == y ]]; then
+			   echo -e "${YLW}"
 			   cat files/host_list.txt
+			   echo -e "${NC}"
 			   echo -e "${W}Please copy and paste in your target${NC}"
 			   read TARGET
 			   echo "================================================================================================="
@@ -28,7 +31,9 @@ do
 			;;
 			
 		"Common Vulnerabilities")
+			echo -e "${YLW}"
 			cat files/host_list.txt
+			echo -e "${NC}"
 			echo -e "${W}Please copy and paste in your target${NC}"
 			read TARGET
 			echo "================================================================================================="
@@ -38,7 +43,9 @@ do
 			;;
 			
 		"UDP Port Scan")
+			echo -e "${YLW}"
 			cat files/host_list.txt
+			echo -e "${NC}"
 			echo -e "${W}Please copy and paste in your target${NC}"
 			read TARGET
 			echo "================================================================================================="

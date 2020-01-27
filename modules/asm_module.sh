@@ -42,7 +42,7 @@ if [ $SC1 == y ];then
 		fi
 		echo "============================================================================"
 		echo -e "${W}Would you like to run the scan in Stealth mode${NC}"
-		echo -e "${ORNG}Please note this means only OSINT techniques will be used(y/n)${NC}"
+		echo -e "${ORNG}Please note this means only OSINT techniques will be used(y/n) \\ Disabled by default${NC}"
 		sleep 1
 		read STLTH1
 		sleep 1

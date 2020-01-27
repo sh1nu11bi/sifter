@@ -23,7 +23,7 @@ do
             echo -e "${W}Would you like to fuzz all possible parameters for OWASP vulns? (y/n)${NC}"
 				read TARGET3
 			echo -e "${LP}Running Blackwidow with the following command, 'blackwidow -u $TARGET1 -l $TARGET2 -s $TARGET3 -v y'${NC}"
-				sleep 10
+				sleep 5
 			sudo blackwidow -u $TARGET1 -l $TARGET2 -s $TARGET3 -v y
             ./modules/blackwidow_script.sh
             ;;

@@ -52,6 +52,8 @@ Sifter Help Menu
 	 
 
 Any suggestions for extra modules are welcome.
+Just submit an issue with your tool suggestion
+Otherwise for developers just submit a pull request 
 
 
 *TODO*

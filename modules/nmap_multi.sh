@@ -16,9 +16,9 @@ do
 	    read REPLY
 	    if [[ $REPLY == y ]]; then
 	       sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
-               sleep 5
-               ./modules/module_runner.sh
-            else
+           sleep 5
+           ./modules/module_runner.sh
+        else
 	       ./modules/nmap_script.sh
 	    fi
 	    ;;
