@@ -64,7 +64,8 @@ else
 	   sudo python3 -m pip install -r requirements.txt
 	   sudo cp asm -t /usr/sbin
 	   sudo chmod +x /usr/sbin/asm
-	   echo "Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm"
+	   echo -e "${W}Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm"
+		 echo -e "& add your WPvulnDB api token to modules/wpscan_script.sh${NC}"
 fi
 
 figlet "Done! =D"
