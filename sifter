@@ -25,10 +25,10 @@ usage() {                                      # Function: Print a help message.
 
 cd /opt/sifter
 
-	while getopts "a:cembndwpyh" options; do              # Loop: Get the next option;
-# use silent error checking;
-# option a take arguments.
-	case "${options}" in                         #
+while getopts "a:cembndwpyh" options; do            	# Loop: Get the next option;
+							# use silent error checking;
+							# option a takes 1 arguments.
+	case "${options}" in                         
 
 		c)
 			echo -e "${ORNG}"
