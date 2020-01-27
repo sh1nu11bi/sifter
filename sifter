@@ -3,23 +3,6 @@ RED='\033[0;31m'
 NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
-ip_add() {
-  echo -e "${W}Please enter your target:${NC} "
-  read IP_ANS
-  sleep 1
-  echo "$IP_ANS" >> files/host_list.txt
-  ip_q
-}
-ip_q() {
-  echo -e "${W}Would you like to add another?(y/n)${NC}"
-	read ANS
-	sleep 1
-	if [[ $ANS == y ]]; then
-	  ip_add
-	else
-	  ./modules/sifter_menu.sh
-	fi
-}
 ARG=$2                                        # IP addition argument
 usage() {                                      # Function: Print a help message.
 	echo "Sifter Help Menu"
@@ -70,7 +53,7 @@ while getopts "a:cembndwpyh" options; do            	# Loop: Get the next option
 			echo -e "${NC}"
 			echo "$ARG" >> files/host_list.txt
 			sleep 2
-			ip_q
+			./modules/sifter_menu.sh
 			;;
 
 		m)
