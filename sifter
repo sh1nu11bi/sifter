@@ -98,12 +98,12 @@ while getopts "a:cembndwpyh" options; do            	# Loop: Get the next option
 			./modules/wpscan_script.sh
 			;;
 
-    y)
-      echo -e "${ORNG}"
-      figlet -f mini "Running Yuki-Chan"
-      echo -e "${NC}"
-      ./modules/yuki_blackwidow_script.sh
-      ;;
+ 		y)
+      			echo -e "${ORNG}"
+      			figlet -f mini "Running Yuki-Chan"
+      			echo -e "${NC}"
+      			./modules/yuki_blackwidow_script.sh
+      			;;
 
 		h)
 			echo -e "${RED}"
