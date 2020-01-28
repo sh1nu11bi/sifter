@@ -25,7 +25,7 @@ for name in `cat files/host_list.txt`
             echo -e "\e[95mPingtest_Pass\e[0m"
             echo $'\e[95m*************\e[0m'
 	    cat files/pingtest_raw.pass | sort | uniq > files/pingtest.pass
-            echo -e "${YLW}"
+      echo -e "${YLW}"
 	    cat files/pingtest.pass
 	    echo -e "${NC}"
 	    sed -e 's/^/http:\/\//' files/pingtest.pass > files/pingtest_pass.txt
@@ -37,7 +37,7 @@ for name in `cat files/host_list.txt`
             cat files/pingtest_raw.fail | sort | uniq > files/pingtest.fail
             echo -e "${YLW}"
 	    cat files/pingtest.fail
-	    echo -e "${NC}
+	    echo -e "${NC}"
             sleep 5
         
         ./modules/sifter_menu.sh

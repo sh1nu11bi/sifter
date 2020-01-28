@@ -14,6 +14,6 @@ echo -e "${W}Please copy and paste in your target site${NC}"
 echo "================================================================================================="
 cd /root/yuki
 sleep 1
-sudo ./startyuki
+sudo ./yuki.sh
 echo "================================================================================================="
 ./modules/module_runner.sh

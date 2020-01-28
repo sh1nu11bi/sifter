@@ -11,7 +11,7 @@ nikto_single(){
 	echo -e "${W}Please enter your target.${NC}"
 	read TARGET
 	sleep 1
-	nikto -t $TARGET
+	nikto -host $TARGET
 }
 
 echo -e "${ORNG}Nikto${NC}"

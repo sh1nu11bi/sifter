@@ -4,7 +4,7 @@ NC='\033[0m'
 W='\033[1;37m'
 YLW='\033[1;33m'
 ip_add() {
-  echo -e "${W}Please enter your target:${NC} "
+  echo -e "${W}Please enter your target:${NC}"
   read IP_ANS
   sleep 1
   echo "$IP_ANS" >> files/host_list.txt
@@ -33,11 +33,11 @@ echo -e "${NC}"
         select opt in "${options[@]}"
         do
                 case $opt in
-						"Check")
-							./modules/ping_check.sh 
-							sleep 5
-							./modules/list_editor.sh
-                            ;;
+                        "Check")
+                          ./modules/ping_check.sh
+                          sleep 5
+                          ./modules/list_editor.sh
+                                        ;;
                         
                         "List")
                             echo -e "${YLW}"
@@ -49,7 +49,7 @@ echo -e "${NC}"
                         
                         "Add")
                             echo -e "${W}Type the IP or hostname you would like to add${NC}"
-			    sleep 5
+			                      sleep 5
                             read TARGET
                             echo "$TARGET" >> files/host_list.txt
                             echo -e "${W}Target Added!${NC}"

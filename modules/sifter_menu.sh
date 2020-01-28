@@ -10,7 +10,7 @@ RED='\033[0;31m'
 echo -e "${RED}"
 figlet "..SifteR.."
 echo -e "${NC}"
-echo -e "${ORNG}///////========================\\\\\\\\${NC}
+echo -e "${ORNG}///////========================\\\\\\\\${NC}"
 echo -e "${LP}==Hit Ctrl + c at any time to quit Sifter==${NC}"
 arg=$1
 PS3='What would you like to do?'
