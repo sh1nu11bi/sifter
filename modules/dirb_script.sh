@@ -13,6 +13,6 @@ echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site${NC}"
 read TARGET
 echo "================================================================================================="
-dirb $TARGET -f
+dirb ${TARGET} -f
 echo "================================================================================================="
 ./modules/module_runner.sh

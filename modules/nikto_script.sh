@@ -11,7 +11,7 @@ nikto_single(){
 	echo -e "${W}Please enter your target.${NC}"
 	read TARGET
 	sleep 1
-	nikto -host $TARGET
+	nikto -host ${TARGET}
 }
 
 echo -e "${ORNG}Nikto${NC}"
@@ -19,7 +19,7 @@ echo -e "${ORNG}******${NC}"
 echo -e "${W}Would you like to run Nikto against a Single target or against your target List?(s/l)${NC}"
 read ANS
 sleep 1
-if [[ $ANS == s ]] || [[ $ANS == S ]]; then
+if [[ ${ANS} == s ]] || [[ ${ANS} == S ]]; then
 	nikto_single
 else 
 	nikto_multi

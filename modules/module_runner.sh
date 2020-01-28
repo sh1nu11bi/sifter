@@ -7,11 +7,11 @@ W='\033[1;37m'
 echo -e "${RED}Modules${NC}"
 echo -e "${RED}*******${NC}"
 PS3='What would you like to do?'
-        options=("nmap" "WPScan" "Nikto" "Dirbuster" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "Back" "Quit")
+        options=("nMap" "WPScan" "Nikto" "Dirbuster" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
-                        "nmap")
+                        "nMap")
                             ./modules/nmap_script.sh
                             ;;
                             
@@ -43,7 +43,7 @@ PS3='What would you like to do?'
                             ./modules/sifter_menu.sh
 			                ;;
 			    
-			             "Quit")
+			            "Quit")
 			                 exit 
 			                 ;;
                 esac

@@ -35,18 +35,18 @@ echo "==========================================================================
 echo -e "${W}Would you like to enable screen capture?(y/n)${NC}"
 sleep 1
 read SC1
-if [ $SC1 == y ];then
+if [[ ${SC1} == y ]];then
 	SC='-sc'
 	else
 		SC=''
 		fi
 		echo "============================================================================"
 		echo -e "${W}Would you like to run the scan in Stealth mode${NC}"
-		echo -e "${ORNG}Please note this means only OSINT techniques will be used(y/n) \\ Disabled by default${NC}"
+		echo -e "${ORNG}Please note this means only OSINT techniques will be used(y/n) \n Disabled by default${NC}"
 		sleep 1
 		read STLTH1
 		sleep 1
-		if [ $STLTH1 == y ]; then
+		if [[ ${STLTH1} == y ]]; then
 			STLTH='--stealth'
 			else
 				STLTH=''
@@ -61,4 +61,4 @@ if [ $SC1 == y ];then
 				echo -e "${W}Screen Capture	: ${RED} $SC1 ${NC}"
 				echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
 				echo "Please wait...."
-				python3 asm.py -t $TARGET -ln -w $LIST -o $DOC -f $FORMAT $SC $STLTH
+				python3 asm.py -t ${TARGET} -ln -w ${LIST} -o ${DOC} -f ${FORMAT} ${SC} ${STLTH}

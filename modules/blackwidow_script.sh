@@ -24,7 +24,7 @@ do
 				read TARGET3
 			echo -e "${LP}Running Blackwidow with the following command, 'blackwidow -u $TARGET1 -l $TARGET2 -s $TARGET3 -v y'${NC}"
 				sleep 5
-			sudo blackwidow -u $TARGET1 -l $TARGET2 -s $TARGET3 -v y
+			sudo blackwidow -u ${TARGET1} -l ${TARGET2} -s ${TARGET3} -v y
             ./modules/blackwidow_script.sh
             ;;
         
@@ -40,9 +40,9 @@ do
 	    echo -e "${LP}ex. 'users.php?user=1&admin=true'${NC}"
 	    sleep 2
 	    read TARGETEXT
-	    echo -e "${W}Running injectx script with the following argument, ${LP}'python injectx.py -u $TARGETDMN$TARGETEXT -v y'${NC}"
+	    echo -e "${W}Running injectx script with the following argument, ${LP}'injectx.py -u ${TARGETDMN}${TARGETEXT} -v y'${NC}"
 	    sleep 5
-            sudo injectx.py -u $TARGET -v y
+            sudo injectx.py -u ${TARGET} -v y
             ./modules/blackwidow_script.sh
             ;;
         

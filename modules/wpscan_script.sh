@@ -13,7 +13,7 @@ echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site${NC}"
 read TARGET
 echo "==================================================================================="
-sudo wpscan --url $TARGET --wp-content-dir wp-content -e u vp vt dbe --api-token 
+sudo wpscan --url ${TARGET} --wp-content-dir wp-content -e u vp vt dbe --api-token
 echo "==================================================================================="
 sleep 2
 
@@ -28,7 +28,7 @@ sleep 2
 			       	sleep 2
 			        read WORDLIST
 			        sleep 2
-			        sudo wpscan --url $TARGET --wp-content-dir wp-content -e u -P $WORDLIST --api-token 
+			        sudo wpscan --url ${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --api-token
 				echo "==================================================================================="
 				sleep 1
 				./modules/module_runner.sh

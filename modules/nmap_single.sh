@@ -22,7 +22,7 @@ do
 			   echo -e "${W}Please copy and paste in your target${NC}"
 			   read TARGET
 			   echo "================================================================================================="
-			   sudo nmap -p- -Pn -O -A $TARGET
+			   sudo nmap -p- -Pn -O -A ${TARGET}
 			   echo "================================================================================================="
 			   ./modules/module_runner.sh
 			else
@@ -37,7 +37,7 @@ do
 			echo -e "${W}Please copy and paste in your target${NC}"
 			read TARGET
 			echo "================================================================================================="
-			sudo nmap -sS -Pn -O -A -sV $TARGET
+			sudo nmap -sS -Pn -O -A -sV ${TARGET}
 			echo "================================================================================================="
 			./modules/module_runner.sh
 			;;
@@ -49,7 +49,7 @@ do
 			echo -e "${W}Please copy and paste in your target${NC}"
 			read TARGET
 			echo "================================================================================================="
-			sudo nmap -sU -Pn -O -A $TARGET
+			sudo nmap -sU -Pn -O -A ${TARGET}
 			echo "================================================================================================="
 			./modules/module_runner.sh
 			;;
@@ -57,5 +57,5 @@ do
 		"Back")
 			./modules/module_runner.sh
 			;;
-esac
+    esac
 done
