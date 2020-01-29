@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f348c9eb-2ab1-4208-aa54-32481a8cbb34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/modules/harvester_script.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/list_editor.sh" beforeDir="false" afterPath="$PROJECT_DIR$/modules/list_editor.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/module_runner.sh" beforeDir="false" afterPath="$PROJECT_DIR$/modules/module_runner.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/nikto_script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/modules/nikto_script.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/nmap_multi.sh" beforeDir="false" afterPath="$PROJECT_DIR$/modules/nmap_multi.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ping_check.sh" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ping_check.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/sifter_menu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/modules/sifter_menu.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/yuki_script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/modules/yuki_script.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sifter" beforeDir="false" afterPath="$PROJECT_DIR$/sifter" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +14,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1X0NlIx5p0ASY42OmO6XgvuZJHn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -58,5 +54,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580304591319">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="223" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1580304591319" />
+    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580306705145">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1580306705145" />
   </component>
 </project>
