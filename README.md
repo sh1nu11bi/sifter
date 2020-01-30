@@ -22,7 +22,11 @@ Modules:
 	-Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
 	
 	-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper 
-
+	
+	-theHarvester '--> laramies - https://github.com/laramies/theHarvester
+	
+	-Photon '--> s0md3v - https://github.com/s0md3v/Photon
+	
 
 Sifter Help Menu
 *****************
@@ -32,6 +36,8 @@ Sifter Help Menu
  
 	$	 -e 	will open the files/host_list.txt file to be manually edited
  
+ 	$	 -s	Runs the AttackSurfaceMapper module against target or host list
+	
 	$	 -a 'x.x.x.x' Target appended to host file
  
 	$	 -m 	starts the program under the module menu with the existing host_list.txt
@@ -45,10 +51,16 @@ Sifter Help Menu
 	$	 -w	Runs WPScan against the existing hosts in the files/host_list.txt
 	 
 	$	 -p	Runs Nmap against the existing hosts in the files/host_list.txt
- 
+ 	
+	$	 -t	Runs theHarvester against target or host list
+	
+	$	 -o	Runs the Photon OSINT module against target or host list
+	
 	$	 -y	Runs the Yuki-Chan module against current host file
+	
+	$	 -u	Updates sifter from Github
  
-	$ 	-h 	Help Menu
+	$  	 -h 	Help Menu
 	 
 
 Any suggestions for extra modules are welcome.
