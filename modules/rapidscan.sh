@@ -23,6 +23,6 @@ echo -e "and will be run in the background. Feel free to keep using the tool.${N
 listing
 sleep 1
 echo "==================================================================================="
-xterm rapidscan 
+xterm rapidscan &
 sleep 1
 ./modules/module.sh
