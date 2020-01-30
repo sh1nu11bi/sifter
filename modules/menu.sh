@@ -19,15 +19,15 @@ PS3='What would you like to do?'
         do
             case $opt in
                 "Check")
-                    ./modules/ping_check.sh
+                    ./modules/check.sh
                     ;;
-					
+
                 "Edit List")
-                    ./modules/list_editor.sh
+                    ./modules/editor.sh
                     ;;
-					
+
                 "Parse Results to Modules")
-                    ./modules/module_runner.sh
+                    ./modules/module.sh
                     ;;
 
 		        "Update")
@@ -42,4 +42,3 @@ PS3='What would you like to do?'
                     ;;
             esac
         done
-

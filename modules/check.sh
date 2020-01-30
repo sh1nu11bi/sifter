@@ -40,4 +40,4 @@ for name in `cat files/host_list.txt`
 	    echo -e "${NC}"
         sleep 5
 
-        ./modules/sifter_menu.sh
+        ./modules/menu.sh

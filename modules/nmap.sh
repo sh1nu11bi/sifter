@@ -16,26 +16,26 @@ multi() {
 					if [[ $REPLY == y ]]; then
 						sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
 						sleep 5
-						./modules/module_runner.sh
+						./modules/module.sh
 					else
-						./modules/nmap_script.sh
+						./modules/nmap.sh
 					fi
 					;;
 
 				"Common Vulnerabilities")
 					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
 					sleep 5
-					./modules/module_runner.sh
+					./modules/module.sh
 					;;
 
 				"UDP Port Scan")
 					sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
 					sleep 5
-					./modules/module_runner.sh
+					./modules/module.sh
 					;;
 
 				"Back")
-					./modules/module_runner.sh
+					./modules/module.sh
 					;;
 				esac
 			done
@@ -58,9 +58,9 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -p- -Pn -O -A ${TARGET}
 					echo "================================================================================================="
-					./modules/module_runner.sh
+					./modules/modulesh
 					else
-					./modules/nmap_script.sh
+					./modules/nmap.sh
 					fi
 					;;
 
@@ -73,7 +73,7 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -sS -Pn -O -A -sV ${TARGET}
 					echo "================================================================================================="
-					./modules/module_runner.sh
+					./modules/module.sh
 					;;
 
 				"UDP Port Scan")
@@ -85,11 +85,11 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -sU -Pn -O -A ${TARGET}
 					echo "================================================================================================="
-					./modules/module_runner.sh
+					./modules/module.sh
 					;;
 
 				"Back")
-					./modules/module_runner.sh
+					./modules/module.sh
 					;;
 			esac
 		done
@@ -111,7 +111,7 @@ do
 			;;
 
 		"Back")
-			./modules/module_runner.sh
+			./modules/module.sh
 			;;
 	esac
 done

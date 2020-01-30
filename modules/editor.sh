@@ -17,7 +17,7 @@ ip_q() {
 	if [[ $ANS == y ]]; then
 	  ip_add
 	else
-	  ./modules/sifter_menu.sh
+	  ./modules/menu.sh
 	fi
 }
 
@@ -34,9 +34,9 @@ echo -e "${NC}"
         do
                 case $opt in
                         "Check")
-                          ./modules/ping_check.sh
+                          ./modules/check.sh
                           sleep 5
-                          ./modules/list_editor.sh
+                          ./modules/editor.sh
                                         ;;
 
                         "List")
@@ -44,7 +44,7 @@ echo -e "${NC}"
                             cat files/host_list.txt
                             echo -e "${NC}"
                             sleep 5
-                            ./modules/list_editor.sh
+                            ./modules/editor.sh
                             ;;
 
                         "Add")
@@ -60,11 +60,11 @@ echo -e "${NC}"
                             nano files/host_list.txt
                             echo -e "${W}Target Removed!${NC}"
                             sleep 5
-                            ./modules/list_editor.sh
+                            ./modules/editor.sh
                             ;;
 
                         "Back")
-                            ./modules/sifter_menu.sh
+                            ./modules/menu.sh
                             ;;
                 esac
         done

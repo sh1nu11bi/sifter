@@ -37,11 +37,11 @@ sleep 2
 			        sudo wpscan --url ${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --api-token <WPVulnDB api token here> | tee /opt/sifter/results/WPScan/${TARGET}.txt
 				echo "==================================================================================="
 				sleep 1
-				./modules/module_runner.sh
+				./modules/module.sh
 				;;
 
 			"No")
-				./modules/module_runner.sh
+				./modules/module.sh
 				;;
 
 		esac

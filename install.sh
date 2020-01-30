@@ -51,6 +51,17 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
+figlet -f mini "Checking for RapidScan"
+echo -e "${NC}"
+if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -f "/usr/bin/rapidscan.py" ]]; then
+	echo -e "${ORNG}RapidScan is already installed.${NC}"
+else
+	wget -O rapidscan.py https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py && chmod +x rapidscan.py
+	sudo mv rapidscan.py -t /usr/sbin
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
 figlet -f mini "Checking for Yuki-Chan"
 echo -e "${NC}"
 if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then

@@ -17,4 +17,4 @@ cd /root/yuki
 sleep 1
 sudo ./yuki.sh
 echo "================================================================================================="
-./modules/module_runner.sh
+./modules/module.sh

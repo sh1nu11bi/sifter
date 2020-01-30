@@ -22,4 +22,4 @@ echo "==========================================================================
 dirb ${TARGET} -f -o /opt/sifter/results/Dirb/${TARGET}.txt
 echo -e "${RED}Results have been saved to /opt/sifter/results/Dirb/${NC}"
 echo "================================================================================================="
-./modules/module_runner.sh
+./modules/module.sh

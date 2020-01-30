@@ -12,43 +12,43 @@ PS3='What would you like to do?'
         do
                 case $opt in
                         "nMap")
-                            ./modules/nmap_script.sh
+                            ./modules/nmap.sh
                             ;;
-                            
+
                         "WPScan")
-                            ./modules/wpscan_script.sh
+                            ./modules/wpscan.sh
                             ;;
-                            
+
                         "Nikto")
-                            ./modules/nikto_script.sh
+                            ./modules/nikto.sh
                             ;;
-                            
+
                         "Dirbuster")
-                            ./modules/dirb_script.sh
+                            ./modules/dirb.sh
                             ;;
-                            
+
                         "BlackWidow")
-                            ./modules/blackwidow_script.sh
+                            ./modules/widow.sh
                             ;;
-                        
+
                         "Yuki-Chan")
-                             ./modules/yuki_script.sh
+                             ./modules/yuki.sh
                          ;;
 
                         "Attack Surface Mapper")
-                         ./modules/asm_module.sh
+                         ./modules/asm.sh
                          ;;
 
 			"theHarvester")
-			    ./modules/harvester_script.sh
+			    ./modules/harvester.sh
 			    ;;
 
 			"Photon")
-			    ./modules/photon_script.sh
+			    ./modules/photon.sh
 			    ;;
 
                         "Back")
-                            ./modules/sifter_menu.sh
+                            ./modules/menu.sh
 			    ;;
                 esac
         done
