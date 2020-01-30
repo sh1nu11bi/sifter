@@ -6,6 +6,11 @@ W='\033[1;37m'
 LP='\033[1;35m'
 YLW='\033[1;33m'
 
+if [[ -d /opt/sifter/results/Blackwidow ]]; then
+    echo ""
+else 
+    mkdir /opt/sifter/results/Blackwidow
+fi
 echo -e "${ORNG}Blackwidow${NC}"
 echo -e "${ORNG}***********${NC}"
 options=("Crawl the target domain & fuzz all parameters (Verbose enabled)" "Fuzz all GET parameters for common OWASP Vulns (Verbose enabled)" "Back")
@@ -24,7 +29,7 @@ do
 				read TARGET3
 			echo -e "${LP}Running Blackwidow with the following command, 'blackwidow -u $TARGET1 -l $TARGET2 -s $TARGET3 -v y'${NC}"
 				sleep 5
-			sudo blackwidow -u ${TARGET1} -l ${TARGET2} -s ${TARGET3} -v y
+			sudo blackwidow -u ${TARGET1} -l ${TARGET2} -s ${TARGET3} -v y | tee /opt/sifter/results/Blackwidow/${TARGET}.txt
             ./modules/blackwidow_script.sh
             ;;
         
@@ -42,7 +47,7 @@ do
 	    read TARGETEXT
 	    echo -e "${W}Running injectx script with the following argument, ${LP}'injectx.py -u ${TARGETDMN}${TARGETEXT} -v y'${NC}"
 	    sleep 5
-            sudo injectx.py -u ${TARGET} -v y
+            sudo injectx.py -u ${TARGET} -v y | tee /opt/sifter/results/Blackwidow/${TARGET}_owaspVulns.txt
             ./modules/blackwidow_script.sh
             ;;
         

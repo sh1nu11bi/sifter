@@ -7,7 +7,7 @@ W='\033[1;37m'
 echo -e "${RED}Modules${NC}"
 echo -e "${RED}*******${NC}"
 PS3='What would you like to do?'
-        options=("nMap" "WPScan" "Nikto" "Dirbuster" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "Back" "Quit")
+        options=("nMap" "WPScan" "Nikto" "Dirbuster" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "theHarvester" "Photon" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -38,13 +38,21 @@ PS3='What would you like to do?'
                         "Attack Surface Mapper")
                          ./modules/asm_module.sh
                          ;;
+
+						"theHarvester")
+							./modules/harvester_script.sh
+							;;
 							
+						"Photon")
+							./modules/photon_script.sh
+							;;
+
                         "Back")
                             ./modules/sifter_menu.sh
 			                ;;
 			    
 			            "Quit")
-			                 exit 
+			                 exit 0
 			                 ;;
                 esac
         done

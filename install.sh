@@ -35,6 +35,18 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+figlet -f mini "Checking for Photon"
+
+if [[ -d /opt/Photon ]] || [[ -d /root/Photon ]]; then
+    echo -e "${ORNG}Photon is already installed.${NC}"
+else
+	cd /opt
+	git clone https://github.com/s0md3v/Photon.git
+	cd Photon
+	    sudo python3 -m pip install -r requirements.txt
+fi
+
+echo -e "${W}===========================================================================================${NC}"
 figlet -f mini "Checking for Yuki-Chan"
 
 if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
