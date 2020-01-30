@@ -25,8 +25,16 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	  -o 	  Runs the Photon module against target or host list"
 	echo "# sifter	  -u	  Checks for any updates on Github"
 	echo "# sifter    -h      This Help Menu" 1>&2
+update(){
+	figlet -f mini "Checking for updates"
+	cd /opt
+	sudo rm -rf sifter
+	sudo git clone https://github.com/s1l3n7h0s7/sifter.git
+	cd sifter && sudo chmod +x install.#!/bin/sh
+	sudo ./install.sh
+	echo -e "${W}Done!${NC}"
+	;;
 }
-
 cd /opt/sifter
 
 while getopts "a:cembndwptoryhu" options; do            	# Loop: Get the next option;
@@ -122,7 +130,7 @@ while getopts "a:cembndwptoryhu" options; do            	# Loop: Get the next op
       			echo -e "${NC}"
       			./modules/yuki.sh
       			;;
-		
+
 		r)
 			echo -e "${ORNG}"
 			figlet -f mini "RapidscaN"
@@ -133,7 +141,7 @@ while getopts "a:cembndwptoryhu" options; do            	# Loop: Get the next op
     		u)
       			echo -e "${ORNG}"
       			figlet -f mini "Checking for updates"
-      			git pull
+      		  update
       			echo -e "${W}Done!${NC}"
       			;;
 
