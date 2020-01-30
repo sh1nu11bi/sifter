@@ -32,23 +32,27 @@ PS3='What would you like to do?'
                             ;;
 
                         "Yuki-Chan")
-                             ./modules/yuki.sh
-                         ;;
+                            ./modules/yuki.sh
+                            ;;
 
                         "Attack Surface Mapper")
-                         ./modules/asm.sh
-                         ;;
+                            ./modules/asm.sh
+                            ;;
 
-			"theHarvester")
-			    ./modules/harvester.sh
-			    ;;
+                        "theHarvester")
+                            ./modules/harvester.sh
+                            ;;
 
-			"Photon")
-			    ./modules/photon.sh
-			    ;;
+                        "Photon")
+                            ./modules/photon.sh
+                            ;;
 
                         "Back")
                             ./modules/menu.sh
-			    ;;
+			                ;;
+
+                        "Quit")
+                            exit 
+                            ;;
                 esac
         done
