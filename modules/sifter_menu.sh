@@ -14,7 +14,11 @@ echo -e "${ORNG}////////========================\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 echo -e "${LP}==Hit Ctrl + c at any time to quit Sifter==${NC}"
 arg=$1
 PS3='What would you like to do?'
+<<<<<<< HEAD
         options=("Check" "Edit List" "Parse Results to Modules" "Update" "Quit")
+=======
+        options=("Check" "Edit List" "Parse Results to Modules" "Updates" "Quit")
+>>>>>>> master
         select opt in "${options[@]}"
         do
             case $opt in
