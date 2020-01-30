@@ -21,11 +21,8 @@ echo -e "*********${NC}"
 echo -e "${YLW}Note: This module can take a while (30+ mins),"
 echo -e "and will be run in the background. Feel free to keep using the tool.${NC}"
 listing
-echo -e "${W}Please enter your target: ${NC}"
-read TARGET
 sleep 1
 echo "==================================================================================="
-figlet -f mini "RapidscaN"
-xterm rapidscan ${TARGET} | tee /opt/sifter/results/Rapidscan/${TARGET}.txt
+xterm rapidscan 
 sleep 1
 ./modules/module.sh
