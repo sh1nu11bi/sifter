@@ -7,8 +7,9 @@ W='\033[1;37m'
 sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester
 echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
 figlet -f mini "Checking for Sifter"
-
+echo -e "${NC}"
 if [[ -d /opt/sifter ]]; then
 	echo -e "${ORNG}Sifter is already installed.${NC}"
 else
@@ -21,8 +22,9 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
 figlet -f mini "Checking for Blackwidow"
-
+echo -e "${NC}"
 if [[ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py ]] || [[ -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]]; then
     echo -e "${ORNG}Blackwidow is already installed.${NC}"
 else
@@ -35,8 +37,9 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
 figlet -f mini "Checking for Photon"
-
+echo -e "${NC}"
 if [[ -d /opt/Photon ]] || [[ -d /root/Photon ]]; then
     echo -e "${ORNG}Photon is already installed.${NC}"
 else
@@ -47,8 +50,9 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
 figlet -f mini "Checking for Yuki-Chan"
-
+echo -e "${NC}"
 if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
 	echo -e "${ORNG}Yuki-Chan is already installed.${NC}"
 else
@@ -65,8 +69,9 @@ else
 fi
 
 echo -e "${w}===========================================================================================${NC}"
+echo -e "${ORNG}"
 figlet -f mini "Checking for Attack Surface Mapper"
-
+echo -e "${NC}"
 if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
 	echo -e "${ORNG}ASM is already installed.${NC}"
 else
@@ -79,7 +84,8 @@ else
 fi
 echo -e "${W}Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm"
 echo -e "& add your WPvulnDB api token to modules/wpscan_script.sh${NC}"
-
+echo -e "${RED}"
 figlet "Done! =D"
+echo -e "${NC}"
 cd /opt/sifter
 sifter -h

@@ -4,6 +4,7 @@ NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
 YLW='\033[1;33m'
+LBBLUE='\e[104m'
 nikto_multi(){
 	for name in `cat files/pingtest_pass.txt`
         do
@@ -11,6 +12,9 @@ nikto_multi(){
 		done
 }
 nikto_single(){
+	echo -e "${LBBLUE}"
+	cat pingtest_pass.txt
+	echo -e "${NC}"
 	echo -e "${W}Please enter your target.${NC}"
 	read TARGET
 	sleep 1
@@ -19,7 +23,7 @@ nikto_single(){
 
 if [[ -d /opt/sifter/results/Nikto ]]; then
     echo ""
-else 
+else
     mkdir /opt/sifter/results/Nikto
 fi
 echo -e "${ORNG}Nikto${NC}"
@@ -29,7 +33,7 @@ read ANS
 sleep 1
 if [[ ${ANS} == s ]] || [[ ${ANS} == S ]]; then
 	nikto_single
-else 
+else
 	nikto_multi
 fi
 echo "==============================================================================================="

@@ -4,20 +4,21 @@ NC='\033[0m'
 W='\033[1;37m'
 LP='\033[1;35m'
 YLW='\033[1;33m'
+LBBLUE='\e[104m'
 listing(){
-    echo -e "${YLW}"
+    echo -e "${LBBLUE}"
     cat files/pingtest.pass
     echo -e "${NC}"
 }
 single_target(){
     listing
     echo -e "${W}Please enter your target${NC}"
-    read TARGET 
+    read TARGET
     echo -e "${W}How many levels would you like to crawl?: ${NC}"
     read LEVEL
     echo -e "${W}How many threads would you like to run?: ${NC}"
     read THREADS
-    sleep 1 
+    sleep 1
     python3 /opt/Photon/photon.py -u ${TARGET} -l ${LEVEL} -t ${THREADS} -v --dns --keys -o /opt/sifter/results/Photon
 }
 multi_target(){

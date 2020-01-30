@@ -4,15 +4,16 @@ NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
 YLW='\033[1;33m'
+LBBLUE='\e[104m'
 
 if [[ -d /opt/sifter/results/WPScan ]]; then
     echo ""
-else 
+else
     mkdir /opt/sifter/results/WPScan
 fi
 echo -e "${ORNG}WPscan${NC}"
 echo -e "${ORNG}*******${NC}"
-echo -e "${YLW}"
+echo -e "${LBBLUE}"
 cat files/pingtest_pass.txt
 echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site${NC}"

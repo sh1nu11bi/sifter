@@ -4,15 +4,16 @@ NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
 YLW='\033[1;33m'
+LBBLUE='\e[104m'
 
 if [[ -d /opt/sifter/results/ASM ]]; then
     echo ""
-else 
+else
     mkdir /opt/sifter/results/ASM
 fi
 figlet -f mini "AttackSurfaceMapper"
 cd /opt/AttackSurfaceMapper
-echo -e "${YLW}"
+echo -e "${LBBLUE}"
 cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
 echo "============================================================================"

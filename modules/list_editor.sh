@@ -25,7 +25,7 @@ arg=$1
 echo -e "${RED}List Editor${NC}"
 echo -e "${RED}************${NC}"
 
-echo -e "${YLW}"
+echo -e "${LBBLUE}"
 cat files/host_list.txt
 echo -e "${NC}"
         PS3='What would you like to do?'
@@ -38,15 +38,15 @@ echo -e "${NC}"
                           sleep 5
                           ./modules/list_editor.sh
                                         ;;
-                        
+
                         "List")
-                            echo -e "${YLW}"
+                            echo -e "${LBBLUE}"
                             cat files/host_list.txt
                             echo -e "${NC}"
                             sleep 5
                             ./modules/list_editor.sh
                             ;;
-                        
+
                         "Add")
                             echo -e "${W}Type the IP or hostname you would like to add${NC}"
 			                      sleep 5
@@ -55,14 +55,14 @@ echo -e "${NC}"
                             echo -e "${W}Target Added!${NC}"
                             ip_q
                             ;;
-                            
+
                         "Remove")
                             nano files/host_list.txt
                             echo -e "${W}Target Removed!${NC}"
                             sleep 5
                             ./modules/list_editor.sh
                             ;;
-                        
+
                         "Back")
                             ./modules/sifter_menu.sh
                             ;;

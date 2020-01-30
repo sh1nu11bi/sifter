@@ -2,6 +2,7 @@
 ORNG='\033[0;33m'
 NC='\033[0m'
 W='\033[1;37m'
+LBBLUE='\e[104m'
 multi() {
 	options=("Full Port" "Common Vulnerabilities" "UDP Port Scan" "Back")
 		select opts in "${options[@]}"
@@ -20,7 +21,7 @@ multi() {
 						./modules/nmap_script.sh
 					fi
 					;;
-					
+
 				"Common Vulnerabilities")
 					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
 					sleep 5
@@ -49,7 +50,7 @@ single() {
 					echo -e "${W}Would you like to continue?(y/n)${NC}"
 					read REPLY
 					if [[ $REPLY == y ]]; then
-					echo -e "${YLW}"
+					echo -e "${LBBLUE}"
 					cat files/host_list.txt
 					echo -e "${NC}"
 					echo -e "${W}Please copy and paste in your target${NC}"
@@ -62,7 +63,7 @@ single() {
 					./modules/nmap_script.sh
 					fi
 					;;
-					
+
 				"Common Vulnerabilities")
 					echo -e "${YLW}"
 					cat files/host_list.txt
@@ -74,7 +75,7 @@ single() {
 					echo "================================================================================================="
 					./modules/module_runner.sh
 					;;
-					
+
 				"UDP Port Scan")
 					echo -e "${YLW}"
 					cat files/host_list.txt
@@ -108,7 +109,7 @@ do
 		"Multiple Targets")
 			multi
 			;;
-			
+
 		"Back")
 			./modules/module_runner.sh
 			;;

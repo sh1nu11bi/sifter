@@ -4,6 +4,7 @@ NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
 YLW='\033[1;33m'
+LBBLUE='\e[104m'
 multi_scan(){
     for name in `cat files/pingtest.pass`
         do
@@ -29,7 +30,7 @@ single_scan(){
 
 echo -e "${ORNG}theHarvester${NC}"
 echo -e "${ORNG}*************${NC}"
-echo -e "${YLW}"
+echo -e "${LBBLUE}"
 cat files/pingtest.pass
 echo -e "${NC}"
 echo -e "${W}Would you like to use a single target or the whole list?(s/l)${NC}"
