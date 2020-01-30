@@ -4,7 +4,7 @@ NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
 YLW='\033[1;33m'
-multi_scan() {
+multi_scan(){
     for name in `cat files/pingtest.pass`
         do
             echo -e "${W}How long would you like theHarvester to run for?(seconds)${NC}"
@@ -14,7 +14,7 @@ multi_scan() {
             echo -e "${RED}Results saved to /opt/sifter/results/Harvester/results_${name}.html${NC}"
         done
 }
-single_scan() {
+single_scan(){
     echo -e "${YLW}"
     cat files/pingtest.pass
     echo -e "${NC}"

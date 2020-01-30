@@ -33,6 +33,6 @@ else
 	nikto_multi
 fi
 echo "==============================================================================================="
-sleep 5
+echo -e "${RED}Results have been saved to /opt/sifter/results/Nikto${NC}"
 echo "==============================================================================================="
 ./modules/module_runner.sh
