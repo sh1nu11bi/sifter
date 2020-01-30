@@ -56,6 +56,7 @@ echo -e "${NC}"
 if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
 	echo -e "${ORNG}RapidScan is already installed.${NC}"
 else
+	cd /opt
 	git clone https://github.com/s1l3n7h0s7/rapidscan.git
 	cd rapidscan 
 	chmod +x rapidscan.py rapidscan
