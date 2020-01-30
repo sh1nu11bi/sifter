@@ -49,6 +49,5 @@ if [[ ${ANS} == s ]]; then
 else
     multi_target
 fi
-echo -e "${RED}Results have been saved to /opt/sifter/results/Photon${NC}"
 echo "==============================================================================================================a"
 ./modules/module_runner.sh
