@@ -14,7 +14,7 @@ echo -e "${ORNG}////////========================\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 echo -e "${LP}==Hit Ctrl + c at any time to quit Sifter==${NC}"
 arg=$1
 PS3='What would you like to do?'
-        options=("Check" "Edit List" "Parse Results to Modules" "Quit")
+        options=("Check" "Edit List" "Parse Results to Modules" "Update" "Quit")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -29,7 +29,14 @@ PS3='What would you like to do?'
                 "Parse Results to Modules")
                     ./modules/module_runner.sh
                     ;;
-					
+
+				"Update")
+				    echo -e "${ORNG}"
+                    figlet -f mini "Checking for updates"
+                    git pull
+                    echo -e "${W}Done!${NC}"
+                    ;;
+
                 "Quit")
                     exit
                     ;;
