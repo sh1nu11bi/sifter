@@ -11,8 +11,11 @@ if [[ -d /opt/sifter/results/ASM ]]; then
 else
     mkdir /opt/sifter/results/ASM
 fi
+echo -e "${ORNG}"
 figlet -f mini "AttackSurfaceMapper"
+echo -e "${NC}"
 cd /opt/AttackSurfaceMapper
+echo -e "${YLW}"
 echo -e "${LBBLUE}"
 cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
