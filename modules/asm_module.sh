@@ -5,6 +5,11 @@ ORNG='\033[0;33m'
 W='\033[1;37m'
 YLW='\033[1;33m'
 
+if [[ -d /opt/sifter/results/ASM ]]; then
+    echo ""
+else 
+    mkdir /opt/sifter/results/Photon
+fi
 figlet -f mini "AttackSurfaceMapper"
 cd /opt/AttackSurfaceMapper
 echo -e "${YLW}"
@@ -61,4 +66,4 @@ if [[ ${SC1} == y ]];then
 				echo -e "${W}Screen Capture	: ${RED} $SC1 ${NC}"
 				echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
 				echo "Please wait...."
-				python3 asm.py -t ${TARGET} -ln -w ${LIST} -o ${DOC} -f ${FORMAT} ${SC} ${STLTH}
+				python3 asm.py -t ${TARGET} -ln -w ${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH}
