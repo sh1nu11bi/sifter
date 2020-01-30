@@ -39,20 +39,16 @@ PS3='What would you like to do?'
                          ./modules/asm_module.sh
                          ;;
 
-						"theHarvester")
-							./modules/harvester_script.sh
-							;;
-							
-						"Photon")
-							./modules/photon_script.sh
-							;;
+			"theHarvester")
+			    ./modules/harvester_script.sh
+			    ;;
+
+			"Photon")
+			    ./modules/photon_script.sh
+			    ;;
 
                         "Back")
                             ./modules/sifter_menu.sh
-			                ;;
-			    
-			            "Quit")
-			                 exit 0
-			                 ;;
+			    ;;
                 esac
         done

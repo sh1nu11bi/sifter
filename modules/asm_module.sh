@@ -8,7 +8,7 @@ YLW='\033[1;33m'
 if [[ -d /opt/sifter/results/ASM ]]; then
     echo ""
 else 
-    mkdir /opt/sifter/results/Photon
+    mkdir /opt/sifter/results/ASM
 fi
 figlet -f mini "AttackSurfaceMapper"
 cd /opt/AttackSurfaceMapper
