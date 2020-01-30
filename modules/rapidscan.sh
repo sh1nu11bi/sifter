@@ -26,6 +26,6 @@ read TARGET
 sleep 1
 echo "==================================================================================="
 figlet -f mini "RapidscaN"
-xterm python rapidscan.py ${TARGET} | tee /opt/sifter/results/Rapidscan/${TARGET}.txt
+xterm rapidscan ${TARGET} | tee /opt/sifter/results/Rapidscan/${TARGET}.txt
 sleep 1
 ./modules/module.sh

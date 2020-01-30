@@ -53,11 +53,13 @@ echo -e "${W}===================================================================
 echo -e "${ORNG}"
 figlet -f mini "Checking for RapidScan"
 echo -e "${NC}"
-if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -f "/usr/bin/rapidscan.py" ]]; then
+if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
 	echo -e "${ORNG}RapidScan is already installed.${NC}"
 else
-	wget -O rapidscan.py https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py && chmod +x rapidscan.py
-	sudo mv rapidscan.py -t /usr/sbin
+	git clone https://github.com/s1l3n7h0s7/rapidscan.git
+	cd rapidscan 
+	chmod +x rapidscan.py rapidscan
+	sudo mv rapidscan -t /usr/sbin
 fi
 
 echo -e "${W}===========================================================================================${NC}"
