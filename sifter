@@ -26,7 +26,7 @@ usage() {                                      # Function: Print a help message.
 
 cd /opt/sifter
 
-while getopts "a:cembndwpHyh" options; do            	# Loop: Get the next option;
+while getopts "a:cembndwptyhu" options; do            	# Loop: Get the next option;
 							# use silent error checking;
 							# option a takes 1 arguments.
 	case "${options}" in                         
@@ -99,19 +99,26 @@ while getopts "a:cembndwpHyh" options; do            	# Loop: Get the next optio
 			./modules/wpscan_script.sh
 			;;
 
-		H)
-		        echo -e "${ORNG}"
-		        figlet -f mini "Running theHarvester"
-		        echo -e "${NC}"
-		        ./modules/harvester_script.sh
-                ;;
+		t)
+		    echo -e "${ORNG}"
+		    figlet -f mini "Running theHarvester"
+		    echo -e "${NC}"
+		    ./modules/harvester_script.sh
+            ;;
 
  		y)
-      			echo -e "${ORNG}"
-      			figlet -f mini "Running Yuki-Chan"
-      			echo -e "${NC}"
-      			./modules/yuki_blackwidow_script.sh
-      			;;
+      		echo -e "${ORNG}"
+      		figlet -f mini "Running Yuki-Chan"
+      		echo -e "${NC}"
+      		./modules/yuki_blackwidow_script.sh
+      		;;
+
+        u)
+            echo -e "${ORNG}"
+            figlet -f mini "Checking for updates"
+            git pull
+            echo -e "${W}Done!${NC}"
+            ;;
 
 		h)
 			echo -e "${RED}"

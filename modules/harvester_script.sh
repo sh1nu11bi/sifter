@@ -10,7 +10,7 @@ multi_scan() {
             echo -e "${W}How long would you like theHarvester to run for?(seconds)${NC}"
             read TIME
             sleep 1
-            theHarvester -d $name -S ${TIME} -s -e 8.8.8.8 -n -c -b all -f results_${name}.html
+            theHarvester -d ${name} -S ${TIME} -s -e 8.8.8.8 -n -c -b all -f results_${name}.html
         done
 }
 single_scan() {
