@@ -30,6 +30,8 @@ Modules:
 	-Flan '--> Cloudflare - https://github.com/cloudflare/flan.git
 	
 	-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
+	
+	-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
 
 Sifter Help Menu
 *****************
