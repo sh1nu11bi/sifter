@@ -25,19 +25,20 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	  -o 	  Runs the Photon module against target or host list"
 	echo "# sifter	  -u	  Checks for any updates on Github"
 	echo "# sifter    -h      This Help Menu" 1>&2
+}
 update(){
 	figlet -f mini "Checking for updates"
 	cd /opt
 	sudo rm -rf sifter
 	sudo git clone https://github.com/s1l3n7h0s7/sifter.git
-	cd sifter && sudo chmod +x install
+	cd sifter && sudo chmod +x install.sh
 	sudo ./install.sh
 	echo -e "${W}Done!${NC}"
 }
 
 cd /opt/sifter
 
-while getopts "a:cembndwptoryhu" options; do            	# Loop: Get the next option;
+while getopts "a:cembndwptorfyhu" options; do            	# Loop: Get the next option;
 							# use silent error checking;
 							# option a takes 1 arguments.
 	case "${options}" in
@@ -122,14 +123,14 @@ while getopts "a:cembndwptoryhu" options; do            	# Loop: Get the next op
 		  	figlet -f mini "Running theHarvester"
 		  	echo -e "${NC}"
 		  	./modules/harvester.sh
-      			;;
+      		;;
 
  		y)
-      			echo -e "${ORNG}"
-      			figlet -f mini "Running Yuki-Chan"
-      			echo -e "${NC}"
-      			./modules/yuki.sh
-      			;;
+      		echo -e "${ORNG}"
+      		figlet -f mini "Running Yuki-Chan"
+      		echo -e "${NC}"
+      		./modules/yuki.sh
+      		;;
 
 		r)
 			echo -e "${ORNG}"
@@ -138,12 +139,19 @@ while getopts "a:cembndwptoryhu" options; do            	# Loop: Get the next op
 			./modules/rapidscan.sh
 			;;
 
-    		u)
-      			echo -e "${ORNG}"
-      			figlet -f mini "Checking for updates"
-      		  update
-      			echo -e "${W}Done!${NC}"
-      			;;
+		f)
+			echo -e "${ORNG}"
+			figlet -f mini "Flan"
+			echo -e "${NC}"
+			./modules/flan.sh
+			;;
+
+    	u)
+      		echo -e "${ORNG}"
+      		figlet -f mini "Checking for updates"
+      		update
+      		echo -e "${W}Done!${NC}"
+      		;;
 
 		h)
 			echo -e "${RED}"

@@ -5,11 +5,7 @@ NC='\033[0m'
 W='\033[1;37m'
 LP='\033[1;35m'
 ARG=$2
-<<<<<<< HEAD
 cd /opt/flan
-=======
-cd /apps/vuln-scanners/flan
->>>>>>> master
 while getopts "t:" options; do
 	case "${options}" in
 		t)
