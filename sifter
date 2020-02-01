@@ -34,6 +34,7 @@ update(){
 	sudo ./install.sh
 	echo -e "${W}Done!${NC}"
 }
+
 cd /opt/sifter
 
 while getopts "a:cembndwptoryhu" options; do            	# Loop: Get the next option;
