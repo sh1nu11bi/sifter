@@ -27,6 +27,9 @@ Modules:
 	
 	-Photon '--> s0md3v - https://github.com/s0md3v/Photon
 	
+	-Flan '--> Cloudflare - https://github.com/cloudflare/flan.git
+	
+	-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
 
 Sifter Help Menu
 *****************
