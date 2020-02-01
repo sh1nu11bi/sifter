@@ -25,6 +25,7 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	  -o 	  Runs the Photon module against target or host list"
 	echo "# sifter	  -u	  Checks for any updates on Github"
 	echo "# sifter    -h      This Help Menu" 1>&2
+}
 update() {
 	figlet -f mini "Checking for updates"
 	cd /opt
@@ -37,7 +38,7 @@ update() {
 
 cd /opt/sifter
 
-while getopts "a:cembndwptorfyhu" options; do            	# Loop: Get the next option;
+while getopts "a:cembndwptoryfhu" options; do            	# Loop: Get the next option;
 							# use silent error checking;
 							# option a takes 1 arguments.
 	case "${options}" in

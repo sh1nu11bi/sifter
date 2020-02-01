@@ -16,9 +16,9 @@ else
 	pwd && cd ..
 	sudo mv sifter /opt/sifter
 	cd /opt/sifter
-           sudo cp sifter /usr/sbin/sifter
-	   sudo chmod +x -R /opt/sifter /usr/sbin/sifter
-	   sleep 2
+    sudo cp sifter /usr/sbin/sifter
+	sudo chmod +x /opt/sifter/sifter /opt/sifter/modules/* /usr/sbin/sifter
+	sleep 2
 fi
 
 echo -e "${W}===========================================================================================${NC}"
