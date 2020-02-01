@@ -30,10 +30,9 @@ update(){
 	cd /opt
 	sudo rm -rf sifter
 	sudo git clone https://github.com/s1l3n7h0s7/sifter.git
-	cd sifter && sudo chmod +x install.#!/bin/sh
+	cd sifter && sudo chmod +x install
 	sudo ./install.sh
 	echo -e "${W}Done!${NC}"
-	;;
 }
 cd /opt/sifter
 
