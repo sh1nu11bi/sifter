@@ -25,8 +25,7 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	  -o 	  Runs the Photon module against target or host list"
 	echo "# sifter	  -u	  Checks for any updates on Github"
 	echo "# sifter    -h      This Help Menu" 1>&2
-}
-update(){
+update() {
 	figlet -f mini "Checking for updates"
 	cd /opt
 	sudo rm -rf sifter
