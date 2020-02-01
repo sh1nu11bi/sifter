@@ -4,7 +4,7 @@ NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
 
-sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester
+sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker
 echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
@@ -32,6 +32,20 @@ else
 	git clone https://github.com/aboul3la/Sublist3r.git
 	cd Sublist3r
 	sudo pip install -r requirements.txt
+	sleep 2
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
+figlet -f mini "Checking for Flan"
+echo -e "${NC}"
+if [[ -d /opt/flan ]]; then
+	echo -e "${ORNG}Flan is already installed.${NC}"
+else
+	cd /opt
+	git clone https://github.com/s1l3n7h0s7/flan.git
+	cd flan
+	sudo docker build .
 	sleep 2
 fi
 

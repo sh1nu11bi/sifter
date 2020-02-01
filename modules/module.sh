@@ -7,7 +7,7 @@ W='\033[1;37m'
 echo -e "${RED}Modules${NC}"
 echo -e "${RED}*******${NC}"
 PS3='What would you like to do?'
-        options=("nMap" "WPScan" "Nikto" "Dirbuster" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "theHarvester" "Photon" "RapidScan" "Sublist3r" "Back" "Quit")
+        options=("nMap" "WPScan" "Nikto" "Dirbuster" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "theHarvester" "Photon" "RapidScan" "Sublist3r" "Flan" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -49,6 +49,10 @@ PS3='What would you like to do?'
 
                         "Sublist3r")
                             ./modules/sublist3r.sh
+                            ;;
+
+                        "Flan")
+                            ./modules/flan.sh
                             ;;
 
                         "Back")
