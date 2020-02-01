@@ -59,6 +59,10 @@ Sifter Help Menu
  	
 	$	 -t	Runs theHarvester against target or host list
 	
+	$	 -r	Runs that rapidscan module against a given target.
+	
+	$	 -f	Runs the Flan modules against a given target
+	
 	$	 -o	Runs the Photon OSINT module against target or host list
 	
 	$	 -y	Runs the Yuki-Chan module against current host file
