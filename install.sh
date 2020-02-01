@@ -23,6 +23,20 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
+figlet -f mini "Checking for Sublist3r"
+echo -e "${NC}"
+if [[ -d /opt/Sublist3r ]]; then
+	echo -e "${ORNG}Sublist3r is already installed.${NC}"
+else
+	cd /opt
+	git clone https://github.com/aboul3la/Sublist3r.git
+	cd Sublist3r
+	sudo pip install -r requirements.txt
+	sleep 2
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
 figlet -f mini "Checking for Blackwidow"
 echo -e "${NC}"
 if [[ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py ]] || [[ -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]]; then

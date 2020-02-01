@@ -11,11 +11,8 @@ if [[ -d /opt/sifter/results/ASM ]]; then
 else
     mkdir /opt/sifter/results/ASM
 fi
-echo -e "${ORNG}"
 figlet -f mini "AttackSurfaceMapper"
-echo -e "${NC}"
 cd /opt/AttackSurfaceMapper
-echo -e "${YLW}"
 echo -e "${LBBLUE}"
 cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
@@ -51,8 +48,7 @@ if [[ ${SC1} == y ]];then
 		fi
 		echo "============================================================================"
 		echo -e "${W}Would you like to run the scan in Stealth mode${NC}"
-		echo -e "${ORNG}Please note this means only OSINT techniques will be used(y/n)"
-		echo -e "${RED}Note: Disabled by default${NC}"
+		echo -e "${ORNG}Please note this means only OSINT techniques will be used(y/n) \n Disabled by default${NC}"
 		sleep 1
 		read STLTH1
 		sleep 1
