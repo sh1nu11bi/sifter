@@ -7,7 +7,7 @@ W='\033[1;37m'
 echo -e "${RED}Modules${NC}"
 echo -e "${RED}*******${NC}"
 PS3='What would you like to do?'
-        options=("nMap" "WPScan" "Nikto" "Dirbuster" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "theHarvester" "Photon" "RapidScan" "Sublist3r" "Flan" "Back" "Quit")
+        options=("nMap" "WPScan" "Nikto" "Dirbuster" "DnsTwist" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "theHarvester" "Photon" "RapidScan" "Sublist3r" "Flan" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -25,6 +25,10 @@ PS3='What would you like to do?'
 
                         "Dirbuster")
                             ./modules/dirb.sh
+                            ;;
+
+                        "DnsTwist")
+                            ./modules/dnstwist.sh
                             ;;
 
                         "BlackWidow")
@@ -60,7 +64,7 @@ PS3='What would you like to do?'
 			                ;;
 
                         "Quit")
-                            exit 
+                            exit
                             ;;
                 esac
         done
