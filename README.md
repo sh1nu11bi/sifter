@@ -46,7 +46,7 @@ Sifter Help Menu
 	$	 -m starts the program under the module menu with the existing host_list.txt
 	$	 -b Runs Blackwidow against the existing hosts in the files/host_list.txt
 	$	 -n Runs Nikto using the existing hosts in the files/host_list.txt
-	$	 -b Runs the DnsTwist module against a given target
+	$	 -v Runs the DnsTwist module against a given target
  	$	 -d Runs Dirbuster against existing hosts in the files/host_list.txt
 	$	 -w Runs WPScan against the existing hosts in the files/host_list.txt
 	$	 -p Runs Nmap against the existing hosts in the files/host_list.txt
