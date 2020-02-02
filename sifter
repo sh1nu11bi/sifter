@@ -29,15 +29,14 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	  -u	  Checks for any updates on Github"
 	echo "# sifter    -h      This Help Menu" 1>&2
 }
-update() {
-	figlet -f mini "Checking for updates"
-	cd /opt
-	sudo rm -rf sifter
-	sudo git clone https://github.com/s1l3n7h0s7/sifter.git
-	cd sifter && sudo chmod +x install.sh
-	sudo ./install.sh
-	echo -e "${W}Done!${NC}"
-}
+#update() {
+#	figlet -f mini "Checking for updates"
+#	cd /opt
+#	sudo rm -rf sifter
+#	cd sifter && sudo chmod +x install.sh
+#	sudo ./install.sh
+#	echo -e "${W}Done!${NC}"
+#}
 
 cd /opt/sifter
 
@@ -165,7 +164,7 @@ while getopts "a:cembnzdwptorsyfhu" options; do            	# Loop: Get the next
     	u)
       		echo -e "${ORNG}"
       		figlet -f mini "Checking for updates"
-      		update
+      		git pull
       		echo -e "${W}Done!${NC}"
       		;;
 
