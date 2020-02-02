@@ -8,7 +8,7 @@ LBBLUE='\e[104m'
 
 echo -e "${ORNG}Yuki-Chan${NC}"
 echo -e "${ORNG}***********${NC}"
-echo -e "${LBBLUE}"
+echo -e "${YLW}"
 cat files/pingtest.pass
 echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site${NC}"

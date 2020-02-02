@@ -6,7 +6,7 @@ W='\033[1;37m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 listing(){
-    echo -e "${LBBLUE}"
+    echo -e "${YLW}"
     cat files/pingtest.pass
     echo -e "${NC}"
 }

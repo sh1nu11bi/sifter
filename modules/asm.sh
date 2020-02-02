@@ -13,7 +13,7 @@ else
 fi
 figlet -f mini "AttackSurfaceMapper"
 cd /opt/AttackSurfaceMapper
-echo -e "${LBBLUE}"
+echo -e "${YLW}"
 cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
 echo "============================================================================"

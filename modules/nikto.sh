@@ -12,7 +12,7 @@ nikto_multi(){
 		done
 }
 nikto_single(){
-	echo -e "${LBBLUE}"
+	echo -e "${YLW}"
 	cat pingtest_pass.txt
 	echo -e "${NC}"
 	echo -e "${W}Please enter your target.${NC}"

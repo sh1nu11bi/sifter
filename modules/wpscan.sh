@@ -13,7 +13,7 @@ else
 fi
 echo -e "${ORNG}WPscan${NC}"
 echo -e "${ORNG}*******${NC}"
-echo -e "${LBBLUE}"
+echo -e "${YLW}"
 cat files/pingtest_pass.txt
 echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site${NC}"

@@ -19,7 +19,7 @@ select opts in "${options[@]}"
 do
     case $opts in
         "Crawl the target domain & fuzz all parameters (Verbose enabled)")
-            echo -e "${LBBLUE}"
+            echo -e "${YLW}"
             cat files/pingtest_pass.txt
             echo -e "${NC}"
             echo -e "${W}Please copy and paste in your target site${NC}"
@@ -35,7 +35,7 @@ do
             ;;
 
         "Fuzz all GET parameters for common OWASP Vulns (Verbose enabled)")
-            echo -e "${LBBLUE}"
+            echo -e "${YLW}"
             cat files/pingtest_pass.txt
             echo -e "${NC}"
             echo -e "${W}Please enter your target domain and trailing directories${NC}"

@@ -30,7 +30,7 @@ single_scan(){
 
 echo -e "${ORNG}theHarvester${NC}"
 echo -e "${ORNG}*************${NC}"
-echo -e "${LBBLUE}"
+echo -e "${YLW}"
 cat files/pingtest.pass
 echo -e "${NC}"
 echo -e "${W}Would you like to use a single target or the whole list?(s/l)${NC}"

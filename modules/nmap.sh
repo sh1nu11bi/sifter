@@ -50,7 +50,7 @@ single() {
 					echo -e "${W}Would you like to continue?(y/n)${NC}"
 					read REPLY
 					if [[ $REPLY == y ]]; then
-					echo -e "${LBBLUE}"
+					echo -e "${YLW}"
 					cat files/host_list.txt
 					echo -e "${NC}"
 					echo -e "${W}Please copy and paste in your target${NC}"
