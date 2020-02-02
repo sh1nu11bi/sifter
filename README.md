@@ -32,6 +32,8 @@ Modules:
 	-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
 	
 	-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
+	
+	-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
 
 Sifter Help Menu
 *****************
@@ -44,6 +46,7 @@ Sifter Help Menu
 	$	 -m starts the program under the module menu with the existing host_list.txt
 	$	 -b Runs Blackwidow against the existing hosts in the files/host_list.txt
 	$	 -n Runs Nikto using the existing hosts in the files/host_list.txt
+	$	 -b Runs the DnsTwist module against a given target
  	$	 -d Runs Dirbuster against existing hosts in the files/host_list.txt
 	$	 -w Runs WPScan against the existing hosts in the files/host_list.txt
 	$	 -p Runs Nmap against the existing hosts in the files/host_list.txt
