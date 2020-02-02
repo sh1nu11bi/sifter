@@ -100,7 +100,7 @@ if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
 else
 	cd /opt
 	git clone https://github.com/s1l3n7h0s7/rapidscan.git
-	cd rapidscan 
+	cd rapidscan
 	chmod +x rapidscan.py rapidscan
 	sudo mv rapidscan -t /usr/sbin
 fi
@@ -138,10 +138,11 @@ else
 	   sudo cp asm -t /usr/sbin
 	   sudo chmod +x /usr/sbin/asm
 fi
-echo -e "${W}Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm"
-echo -e "& add your WPvulnDB api token to modules/wpscan_script.sh${NC}"
+
 echo -e "${RED}"
 figlet "Done! =D"
 echo -e "${NC}"
 cd /opt/sifter
 sifter -h
+echo -e "${W}Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm"
+echo -e "& add your WPvulnDB api token to modules/wpscan_script.sh${NC}"
