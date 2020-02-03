@@ -169,6 +169,7 @@ while getopts "a:cembnzdwptvorsyfhu" options; do            	# Loop: Get the nex
       		figlet -f mini "Checking for updates"
 					git fetch
 					git pull
+					sudo cp sifter -t /usr/sbin
       		echo -e "${W}Done!${NC}"
       		;;
 
