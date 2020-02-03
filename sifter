@@ -20,7 +20,7 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter   -w	Runs the WPScan Module using the existing host file"
 	echo "# sifter	 -r	Runs the RapidScan module against a given target"
 	echo "# sifter   -p	Runs the Nmap Module using the existing host file"
-	echo "# sifter	 -f	Runs the Flan Vuln-Scanner module against target or host list"
+	echo "# sifter	 -f	Runs the Flan Vuln-Scanner module against target or host list, can be parsed with target.(-f x.x.x.x)"
 	echo "# sifter   -t	Runs theHarvester against target or host file"
 	echo "# sifter   -y	Runs the Yuki-Chan Module using the existing host file"
 	echo "# sifter	 -s	Runs the Sublist3r module against targets"
@@ -29,14 +29,6 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	 -u	Checks for any updates on Github"
 	echo "# sifter   -h	This Help Menu" 1>&2
 }
-#update() {
-#	figlet -f mini "Checking for updates"
-#	cd /opt
-#	sudo rm -rf sifter
-#	cd sifter && sudo chmod +x install.sh
-#	sudo ./install.sh
-#	echo -e "${W}Done!${NC}"
-#}
 
 cd /opt/sifter
 
@@ -165,13 +157,18 @@ while getopts "a:cembnzdwptvorsyfhu" options; do            	# Loop: Get the nex
 			echo -e "${ORNG}"
 			figlet -f mini "Flan"
 			echo -e "${NC}"
-			./modules/flan.sh
+			if [[ ${2} == ${ARG} ]]; then
+				./modules/flan.sh -t ${ARG}
+			else
+				./modules/flan.sh
+			fi
 			;;
 
     	u)
       		echo -e "${ORNG}"
       		figlet -f mini "Checking for updates"
-      		git pull
+					git fetch
+					git pull
       		echo -e "${W}Done!${NC}"
       		;;
 
