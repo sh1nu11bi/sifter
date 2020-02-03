@@ -8,21 +8,6 @@ sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster
 echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
-figlet -f mini "Checking for Sifter"
-echo -e "${NC}"
-if [[ -d /opt/sifter ]]; then
-	echo -e "${ORNG}Sifter is already installed.${NC}"
-else
-	pwd && cd ..
-	sudo mv sifter /opt/sifter
-	cd /opt/sifter
-    sudo cp sifter /usr/sbin/sifter
-	sudo chmod +x /opt/sifter/sifter /opt/sifter/modules/* /usr/sbin/sifter
-	sleep 2
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
 figlet -f mini "Checking for Sublist3r"
 echo -e "${NC}"
 if [[ -d /opt/Sublist3r ]]; then
@@ -138,6 +123,20 @@ else
 	   sudo cp asm -t /usr/sbin
 	   sudo chmod +x /usr/sbin/asm
 fi
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
+figlet -f mini "Checking for Sifter"
+echo -e "${NC}"
+if [[ -d /opt/sifter ]]; then
+	echo -e "${ORNG}Sifter is already installed.${NC}"
+else
+	pwd && cd ..
+	sudo mv sifter /opt/sifter
+	cd /opt/sifter
+    	sudo cp sifter /usr/sbin/sifter
+	sudo chmod +x /opt/sifter/sifter /opt/sifter/modules/* /usr/sbin/sifter
+	sleep 2
+fi
 
 echo -e "${RED}"
 figlet "Done! =D"
@@ -145,4 +144,4 @@ echo -e "${NC}"
 cd /opt/sifter
 sifter -h
 echo -e "${W}Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm"
-echo -e "& add your WPvulnDB api token to modules/wpscan_script.sh${NC}"
+echo -e "& add your WPvulnDB api token to modules/wpscan.sh to both of the command arguments${NC}"
