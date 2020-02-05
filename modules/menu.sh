@@ -33,11 +33,9 @@ PS3='What would you like to do?'
 		        "Update")
 		            echo -e "${ORNG}"
                     figlet -f mini "Checking for updates"
-                    cd /opt
-                    sudo rm -rf sifter
-                    git clone https://github.com/s1l3n7h0s7/sifter.git
-                    cd sifter
-                    chmod +x install && sudo ./install.sh
+                    cd /opt/sifter
+                    git fetch
+                    git pull
                     echo -e "${W}Done!${NC}"
                     ;;
 
