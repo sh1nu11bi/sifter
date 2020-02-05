@@ -35,4 +35,5 @@ mkdir /opt/sifter/results/DnsTwist/${TARGET}
 echo -e "${W}"
 figlet -f mini "Done"
 echo -e "Results saved to /opt/sifter/results/DnsTwist/${TARGET}${NC}"
+cd /opt/sifter
 ./modules/module.sh
