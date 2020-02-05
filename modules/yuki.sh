@@ -17,4 +17,5 @@ cd /root/yuki
 sleep 1
 sudo ./yuki.sh
 echo "================================================================================================="
+cd /opt/sifter
 ./modules/module.sh
