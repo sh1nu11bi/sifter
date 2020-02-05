@@ -125,6 +125,7 @@ while getopts "a:cembnzdwiptvorsyfhu" options; do            	# Loop: Get the ne
 			figlet -f mini "Running DnsTwist"
 			echo -e "${NC}"
 			./module/dnstwist.sh
+			;;
 
 		z)
 			echo -e "${ORNG}"
