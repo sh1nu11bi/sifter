@@ -9,30 +9,31 @@ usage() {                                      # Function: Print a help message.
 	echo "*****************"
 	echo "+"
 	echo "+"
-	echo "# sifter	  runs the programs bringing up the menu in a cli environment"
-	echo "# sifter   -c	will check the exsiting hosts in the hostlist"
-	echo "# sifter   -a '*'  must be added with '' and then automattically appends the hostname/IP to host file"
-	echo "# sifter   -e	will open the host file for manual editing"
-	echo "# sifter   -m	Opens the Modules Menu"
-	echo "# sifter   -b	Runs the Blackwidow Module using the existing host file"
-	echo "# sifter   -n	Runs the Nikto Module using the existing host file"
-	echo "# sifter   -d	Runs the Dirbuster Module using the existing host file"
-	echo "# sifter   -w	Runs the WPScan Module using the existing host file"
-	echo "# sifter	 -r	Runs the RapidScan module against a given target"
-	echo "# sifter   -p	Runs the Nmap Module using the existing host file"
-	echo "# sifter	 -f	Runs the Flan Vuln-Scanner module against target or host list, can be parsed with target.(-f x.x.x.x)"
-	echo "# sifter   -t	Runs theHarvester against target or host file"
-	echo "# sifter   -y	Runs the Yuki-Chan Module using the existing host file"
-	echo "# sifter	 -s	Runs the Sublist3r module against targets"
-	echo "# sifter	 -z	Runs the AttackSurfaceMapper module against a given target"
-	echo "# sifter	 -o	Runs the Photon module against target or host list"
-	echo "# sifter	 -u	Checks for any updates on Github"
-	echo "# sifter   -h	This Help Menu" 1>&2
+	echo "# sifter	runs the programs bringing up the menu in a cli environment"
+	echo "# sifter	-c will check the exsiting hosts in the hostlist"
+	echo "# sifter	-a '*' must be added with '' and then automattically appends the hostname/IP to host file"
+	echo "# sifter	-e will open the host file for manual editing"
+	echo "# sifter	-m Opens the Modules Menu"
+	echo "# sifter 	-b Runs the Blackwidow Module using the existing host file"
+	echo "# sifter 	-n Runs the Nikto Module using the existing host file"
+	echo "# sifter	-d Runs the Dirbuster Module using the existing host file"
+	echo "# sifter	-w Runs the WPScan Module using the existing host file"
+	echo "# sifter	-r Runs the RapidScan module against a given target"
+	echo "# sifter	-p Runs the Nmap Module using the existing host file"
+	echo "# sifter	-i Runs the DnsTwist module against a given target"
+	echo "# sifter	-f Runs the Flan Vuln-Scanner module against target or host list, can be parsed with target.(eg. sifter -f x.x.x.x)"
+	echo "# sifter 	-t Runs theHarvester against target or host file"
+	echo "# sifter 	-y Runs the Yuki-Chan Module using the existing host file"
+	echo "# sifter	-s Runs the Sublist3r module against targets"
+	echo "# sifter	-z Runs the AttackSurfaceMapper module against a given target"
+	echo "# sifter	-o Runs the Photon module against target or host list"
+	echo "# sifter	-u Checks for any updates on Github"
+	echo "# sifter  -h This Help Menu" 1>&2
 }
 
 cd /opt/sifter
 
-while getopts "a:cembnzdwptvorsyfhu" options; do            	# Loop: Get the next option;
+while getopts "a:cembnzdwiptvorsyfhu" options; do            	# Loop: Get the next option;
 							# use silent error checking;
 							# option a takes 1 arguments.
 	case "${options}" in
@@ -116,7 +117,14 @@ while getopts "a:cembnzdwptvorsyfhu" options; do            	# Loop: Get the nex
 			echo -e "${ORNG}"
 			figlet -f mini "Running Sublist3r"
 			echo -e "${NC}"
+			./module/sublist3r.sh
 			;;
+
+		i)
+			echo -e "${ORNG}"
+			figlet -f mini "Running DnsTwist"
+			echo -e "${NC}"
+			./module/dnstwist.sh
 
 		z)
 			echo -e "${ORNG}"
