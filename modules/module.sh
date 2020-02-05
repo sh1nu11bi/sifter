@@ -51,6 +51,10 @@ PS3='What would you like to do?'
                             ./modules/photon.sh
                             ;;
 
+                        "RapidScan"
+                            ./modules/rapidscan.sh
+                            ;;
+
                         "Sublist3r")
                             ./modules/sublist3r.sh
                             ;;
