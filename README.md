@@ -4,6 +4,7 @@ Sifter is a recon tool, originally designed to check the status of domains/hosts
 
 From there a few extra tools were integrated in to further the info gathering process.
 
+Looking for a developer to help incorporate more offensive modules for exploitation, along side the recon.
 
 
 Modules:
