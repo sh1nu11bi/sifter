@@ -4,7 +4,7 @@ Sifter is a recon tool, originally designed to check the status of domains/hosts
 
 From there a few extra tools were integrated in to further the info gathering process.
 
-Looking for a developer to help incorporate more offensive modules for exploitation, along side the recon.
+**Looking for a developer to help incorporate more offensive modules for exploitation, along side the recon.
 
 
 Modules:
@@ -61,7 +61,10 @@ Sifter Help Menu
 	$	 -u Updates sifter from Github
  	$  	 -h Help Menu
 	 
-
+**TODO 
+	- Adding DomainFuzz Module
+	- Incorporation of exploitative modules
+	
 Any suggestions for extra modules are welcome.
 Just submit an issue with your tool suggestion
 Otherwise for developers just submit a pull request 
