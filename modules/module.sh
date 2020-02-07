@@ -6,10 +6,10 @@ W='\033[1;37m'
 
 echo -e "${RED}Modules${NC}"
 echo -e "${RED}*******${NC}"
+echo -e "${ORNG}"
 PS3='What would you like to do?'
         options=("Info-Focused Modules" "Domain-Focused Modules" "Network-Focused Modules" "Web-Focused Modules" "Vulnerability-Focused Modules" "Back" "Quit")
         select opt in "${options[@]}"
-        echo -e "${ORNG}"
         do
                 case $opt in
                         "Info-Focused Modules")
@@ -41,4 +41,4 @@ PS3='What would you like to do?'
                             ;;
                 esac
         done
-        echo -e "${NC}"
+echo -e "${NC}"

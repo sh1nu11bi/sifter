@@ -43,7 +43,7 @@ while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the n
 			echo -e "${ORNG}"
 			figlet -f mini "Checking for live targets..."
 			echo -e "${NC}"
-			./modules/check.sh
+			./modules/netmods/check.sh
 			;;
 
 		e)
@@ -76,98 +76,98 @@ while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the n
 			echo -e "${ORNG}"
 			figlet -f mini "Running BlackWidow"
 			echo -e "${NC}"
-			./modules/widow.sh
+			./modules/webmods/widow.sh
 			;;
 
 		n)
 			echo -e "${ORNG}"
 			figlet -f mini "Running Nikto"
 			echo -e "${NC}"
-			./modules/nikto.sh
+			./modules/webmods/nikto.sh
 			;;
 
 		p)
 			echo -e "${ORNG}"
 			figlet -f mini "Running Nmap"
 			echo -e "${NC}"
-			./modules/nmap.sh
+			./modules/netmods/nmap.sh
 			;;
 
 		d)
 			echo -e "${ORNG}"
 			figlet -f mini "Running Dirbuster"
 			echo -e "${NC}"
-			./modules/dirb.sh
+			./modules/webmods/dirb.sh
 			;;
 
 		v)
 			echo -e "${ORNG}"
 			figlet -f mini "DnsTwist"
 			echo -e "${NC}"
-			./modules/dnstwist.sh
+			./modules/dommods/dnstwist.sh
 			;;
 
 		q)
 			echo -e "${ORNG}"
 			figlet -f mini "Running DomainFuzz"
 			echo -e "${NC}"
-			./modules/domainfuzz.sh
+			./modules/dommods/domainfuzz.sh
 			;;
 
 		o)
 			echo -e "${ORNG}"
 			figlet -f mini "Running Photon"
 			echo -e "${NC}"
-			./modules/photon.sh
+			./modules/netmods/photon.sh
 			;;
 
 		s)
 			echo -e "${ORNG}"
 			figlet -f mini "Running Sublist3r"
 			echo -e "${NC}"
-			./module/sublist3r.sh
+			./module/dommods/sublist3r.sh
 			;;
 
 		i)
 			echo -e "${ORNG}"
 			figlet -f mini "Running DnsTwist"
 			echo -e "${NC}"
-			./module/dnstwist.sh
+			./module/dommods/dnstwist.sh
 			;;
 
 		z)
 			echo -e "${ORNG}"
 			figlet -f mini "Running AttackSurfaceMapper"
 			echo -e "${NC}"
-			./modules/asm.sh
+			./modules/netmods/asm.sh
 			;;
 
 		w)
 			echo -e "${ORNG}"
-			figlet -f mini "Running WPScan"
+			figlet -f mini "Rcfunning WPScan"
 			echo -e "${NC}"
-			./modules/wpscan.sh
+			./modules/webmods/wpscan.sh
 			;;
 
 		t)
 		  	echo -e "${ORNG}"
 		  	figlet -f mini "Running theHarvester"
 		  	echo -e "${NC}"
-		  	./modules/harvester.sh
+		  	./modules/credmods/harvester.sh
       		;;
 
  		y)
       		echo -e "${ORNG}"
       		figlet -f mini "Running Yuki-Chan"
       		echo -e "${NC}"
-      		./modules/yuki.sh
+      		./modules/vulnmods/yuki.sh
       		;;
 
 		r)
 			echo -e "${ORNG}"
 			figlet -f mini "RapidscaN"
 			echo -e "${NC}"
-			./modules/rapidscan.sh
+			./modules/vulnmods/rapidscan.sh
 			;;
 
 		f)
@@ -175,9 +175,9 @@ while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the n
 			figlet -f mini "Flan"
 			echo -e "${NC}"
 			if [[ ${2} == ${ARG} ]]; then
-				./modules/flan.sh -t ${ARG}
+				./modules/vulnmods/flan.sh -t ${ARG}
 			else
-				./modules/flan.sh
+				./modules/vulnmods/flan.sh
 			fi
 			;;
 
@@ -191,7 +191,7 @@ while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the n
       		;;
 
 		h)
-			echo -e "${RED}"
+			echo -e "${RED}"SssssssSSSSSSSssSSSSSSSssssssssssssssssssssssssssssssssssssSs
 			figlet "SifteR"
 			echo -e "${NC}"
 			usage
