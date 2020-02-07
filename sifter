@@ -26,6 +26,7 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter 	-y Runs the Yuki-Chan Module using the existing host file"
 	echo "# sifter	-s Runs the Sublist3r module against targets"
 	echo "# sifter	-z Runs the AttackSurfaceMapper module against a given target"
+	echo "# sifter	-q Runs the DomainFuzz module against a given target"
 	echo "# sifter	-o Runs the Photon module against target or host list"
 	echo "# sifter	-u Checks for any updates on Github"
 	echo "# sifter  -h This Help Menu" 1>&2
@@ -33,7 +34,7 @@ usage() {                                      # Function: Print a help message.
 
 cd /opt/sifter
 
-while getopts "a:cembnzdwiptvorsyfhu" options; do            	# Loop: Get the next option;
+while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the next option;
 							# use silent error checking;
 							# option a takes 1 arguments.
 	case "${options}" in
@@ -104,6 +105,13 @@ while getopts "a:cembnzdwiptvorsyfhu" options; do            	# Loop: Get the ne
 			figlet -f mini "DnsTwist"
 			echo -e "${NC}"
 			./modules/dnstwist.sh
+			;;
+
+		q)
+			echo -e "${ORNG}"
+			figlet -f mini "Running DomainFuzz"
+			echo -e "${NC}"
+			./modules/domainfuzz.sh
 			;;
 
 		o)
