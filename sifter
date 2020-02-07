@@ -193,7 +193,7 @@ while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the n
       		;;
 
 		h)
-			echo -e "${RED}"SssssssSSSSSSSssSSSSSSSssssssssssssssssssssssssssssssssssssSs
+			echo -e "${RED}"
 			figlet "SifteR"
 			echo -e "${NC}"
 			usage
