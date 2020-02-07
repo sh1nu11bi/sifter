@@ -6,11 +6,10 @@ W='\033[1;37m'
 
 echo -e "${RED}"
 figlet -f mini "Web-Focused Modules"
-echo -e "${NC}"
+echo -e "${ORNG}"
 PS3='What would you like to do?'
         options=("Dirb" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
         select opt in "${options[@]}"
-        echo -e "${ORNG}"
         do
                 case $opt in
                           "Dirb")

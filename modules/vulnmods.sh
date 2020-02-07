@@ -6,11 +6,10 @@ W='\033[1;37m'
 
 echo -e "${RED}"
 figlet -f mini "Vulnerability-Focused Modules"
-echo -e "${NC}"
+echo -e "${ORNG}"
 PS3='What would you like to do?'
         options=("Flan" "RapidScan" "Yuki-Chan" "Back" "Quit")
         select opt in "${options[@]}"
-        echo -e "${ORNG}"
         do
                 case $opt in
                           "Flan")
