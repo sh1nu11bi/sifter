@@ -4,7 +4,7 @@ NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
 
-sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep
+sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm
 echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
@@ -17,6 +17,19 @@ else
 	git clone https://github.com/aboul3la/Sublist3r.git
 	cd Sublist3r
 	sudo pip install -r requirements.txt
+	sleep 2
+fi
+
+echo -e "${RED}Checking for external dependencies${NC}"
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
+figlet -f mini "Checking for Sublist3r"
+echo -e "${NC}"
+if [[ -d /opt/DomainFuzz ]]; then
+	echo -e "${ORNG}DomainFuzz is already installed.${NC}"
+else
+	cd /opt
+	git clone https://github.com/monkeym4ster/DomainFuzz.git
 	sleep 2
 fi
 
