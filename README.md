@@ -36,6 +36,8 @@ Modules:
 	
 	-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
 
+	-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
+
 Sifter Help Menu
 *****************
 
@@ -55,6 +57,7 @@ Sifter Help Menu
 	$	 -r Runs that rapidscan module against a given target.
 	$	 -f Runs the Flan modules against a given target
 	$	 -s Runs the Sublist3r module against a given target
+	$	 -q Runs the DomainFuzz module against a given target
 	$	 -z Runs the AttackSurfaceMapper module against a given target
 	$	 -o Runs the Photon OSINT module against target or host list
 	$	 -y Runs the Yuki-Chan module against current host file
