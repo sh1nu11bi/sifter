@@ -20,20 +20,21 @@ PS3='What would you like to do?'
         do
             case $opt in
                 "Check")
-                    ./modules/check.sh
+                    ./modules/netmods/check.sh
                     ;;
 
                 "Edit List")
-                    ./modules/editor.sh
+                    ./modules/netmods/editor.sh
                     ;;
 
                 "Parse Results to Modules")
                     ./modules/module.sh
                     ;;
 
-		        "Update")
-		            echo -e "${ORNG}"
+		            "Update")
+		                echo -e "${ORNG}"
                     figlet -f mini "Checking for updates"
+                    echo -e "${NC}"
                     cd /opt/sifter
                     git fetch
                     git pull

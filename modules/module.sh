@@ -7,72 +7,38 @@ W='\033[1;37m'
 echo -e "${RED}Modules${NC}"
 echo -e "${RED}*******${NC}"
 PS3='What would you like to do?'
-        options=("nMap" "WPScan" "Nikto" "Dirbuster" "DnsTwist" "BlackWidow" "Yuki-Chan" "Attack Surface Mapper" "theHarvester" "Photon" "RapidScan" "DomainFuzz" "Sublist3r" "Flan" "Back" "Quit")
+        options=("Info-Focused Modules" "Domain-Focused Modules" "Network-Focused Modules" "Web-Focused Modules" "Vulnerability-Focused Modules" "Back" "Quit")
         select opt in "${options[@]}"
+        echo -e "${ORNG}"
         do
                 case $opt in
-                        "nMap")
-                            ./modules/nmap.sh
+                        "Info-Focused Modules")
+                            ./modules/credmods.sh
                             ;;
 
-                        "WPScan")
-                            ./modules/wpscan.sh
+                        "Domain-Focused Modules")
+                            ./modules/dommods.sh
                             ;;
 
-                        "Nikto")
-                            ./modules/nikto.sh
+                        "Network-Focused Modules")
+                            ./modules/netmods.sh
                             ;;
 
-                        "Dirbuster")
-                            ./modules/dirb.sh
+                        "Web-Focused Modules")
+                            ./modules/webmods.sh
                             ;;
 
-                        "DnsTwist")
-                            ./modules/dnstwist.sh
-                            ;;
-
-                        "BlackWidow")
-                            ./modules/widow.sh
-                            ;;
-
-                        "Yuki-Chan")
-                            ./modules/yuki.sh
-                            ;;
-
-                        "Attack Surface Mapper")
-                            ./modules/asm.sh
-                            ;;
-
-                        "theHarvester")
-                            ./modules/harvester.sh
-                            ;;
-
-                        "Photon")
-                            ./modules/photon.sh
-                            ;;
-
-                        "DomainFuzz"
-                            ./modules/domainfuzz.sh
-                            ;;
-
-                        "RapidScan"
-                            ./modules/rapidscan.sh
-                            ;;
-
-                        "Sublist3r")
-                            ./modules/sublist3r.sh
-                            ;;
-
-                        "Flan")
-                            ./modules/flan.sh
+                        "Vulnerability-Focused Modules")
+                            ./modules/vulnmods.sh
                             ;;
 
                         "Back")
                             ./modules/menu.sh
-			                ;;
+			                      ;;
 
                         "Quit")
                             exit
                             ;;
                 esac
         done
+        echo -e "${NC}"
