@@ -187,6 +187,8 @@ while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the n
 					git fetch
 					git pull
 					sudo cp sifter -t /usr/sbin
+					sudo chmod +x -R /opt/sifter/modules
+					sudo chmod +x /usr/sbin/sifter
       		echo -e "${W}Done!${NC}"
       		;;
 

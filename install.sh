@@ -147,7 +147,8 @@ else
 	sudo mv sifter /opt/sifter
 	cd /opt/sifter
     	sudo cp sifter /usr/sbin/sifter
-	sudo chmod +x /opt/sifter/sifter /opt/sifter/modules/* /usr/sbin/sifter
+	sudo chmod +x /opt/sifter/sifter /usr/sbin/sifter
+	sudo chmod +x -R /opt/sifter/modules
 	sleep 2
 fi
 
