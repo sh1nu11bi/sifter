@@ -6,11 +6,13 @@
  <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a> 
  <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
  <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
- <a href="#"><img align="center" src="https://img.shields.io/badge/Build-v1.2-red"/></a>
+ <a href="#"><img align="center" src="https://img.shields.io/badge/Build-v1.2-red"</a>
+ <br>
+	  <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
 
 # Sifter
-# s1l3nt78
+s1l3nt78
 <br>
 <br>
 Sifter is a recon tool, originally designed to check the status of domains/hosts/ip's
@@ -21,7 +23,6 @@ From there a few extra tools were integrated in to further the info gathering pr
 
 
 # Modules:
-# **********
 
 	-Nmap '--> Gordon Lyon - https://nmap.org
 
@@ -52,7 +53,6 @@ From there a few extra tools were integrated in to further the info gathering pr
 	-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
 
 # Sifter Help Menu
-# *****************
 
 
 	$	 -c will check the exsiting hosts in the hostlist
