@@ -10,7 +10,7 @@
 </p>
 
 # Sifter
-s1l3nt78
+# s1l3nt78
 <br>
 <br>
 Sifter is a recon tool, originally designed to check the status of domains/hosts/ip's
@@ -20,8 +20,8 @@ From there a few extra tools were integrated in to further the info gathering pr
 **Looking for a developer to help incorporate more offensive modules for exploitation, along side the recon.
 
 
-Modules:
-**********
+# Modules:
+# **********
 
 	-Nmap '--> Gordon Lyon - https://nmap.org
 
@@ -51,8 +51,8 @@ Modules:
 
 	-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
 
-Sifter Help Menu
-*****************
+# Sifter Help Menu
+# *****************
 
 
 	$	 -c will check the exsiting hosts in the hostlist
