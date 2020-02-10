@@ -1,4 +1,15 @@
-# sifter
+<p align="center">
+ <img src="https://github.com/s1l3n7h0s7/sifter/blob/master/.vs/sifter.png" alt="" />
+</p>
+
+<p align="center">
+ <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a> 
+ <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
+ <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
+ <a href="#"><img align="center" src="https://img.shields.io/badge/Build-v1.2-red"/></a>
+</p>
+
+# Sifter
 
 Sifter is a recon tool, originally designed to check the status of domains/hosts/ip's
 
