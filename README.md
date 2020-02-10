@@ -78,7 +78,6 @@ Sifter Help Menu
  	$  	 -h Help Menu
 	 
 **TODO 
-	- Adding DomainFuzz Module
 	- Incorporation of exploitative modules
 	
 Any suggestions for extra modules are welcome.
