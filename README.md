@@ -1,5 +1,20 @@
-# sifter
+<p align="center">
+ <img src="https://github.com/s1l3n7h0s7/sifter/blob/master/.vs/sifter.png" alt="" />
+</p>
 
+<p align="center">
+ <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a> 
+ <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
+ <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
+ <a href="#"><img align="center" src="https://img.shields.io/badge/Build-v1.2-red"</a>
+ <br>
+	  <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
+</p>
+
+# Sifter
+s1l3nt78
+<br>
+<br>
 Sifter is a recon tool, originally designed to check the status of domains/hosts/ip's
 
 From there a few extra tools were integrated in to further the info gathering process.
@@ -7,8 +22,7 @@ From there a few extra tools were integrated in to further the info gathering pr
 **Looking for a developer to help incorporate more offensive modules for exploitation, along side the recon.
 
 
-Modules:
-**********
+# Modules:
 
 	-Nmap '--> Gordon Lyon - https://nmap.org
 
@@ -38,8 +52,7 @@ Modules:
 
 	-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
 
-Sifter Help Menu
-*****************
+# Sifter Help Menu
 
 
 	$	 -c will check the exsiting hosts in the hostlist
@@ -65,7 +78,6 @@ Sifter Help Menu
  	$  	 -h Help Menu
 	 
 **TODO 
-	- Adding DomainFuzz Module
 	- Incorporation of exploitative modules
 	
 Any suggestions for extra modules are welcome.
