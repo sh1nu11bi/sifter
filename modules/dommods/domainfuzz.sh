@@ -88,4 +88,4 @@ echo "==========================================================================
 				echo -e "${LP}Please wait....${NC}"
 				node cli.js --target ${TARGET} --format ${FORMAT} --out-put ${DOC} -c ${THREADS} --nameservers ${NS} --modules whois,banners,mxcheck,geoip,ssdeep
 
-./modules/menu.sh
+./modules/module.sh

@@ -30,3 +30,4 @@ if (( $OPTIND == 1 )); then				# if no option is passed
 	fi
 	echo -e "${ORNG}Done${NC}"
 fi
+./modules/module.sh

@@ -64,7 +64,7 @@ echo -e "${NC}"
                             ;;
 
                         "Back")
-                            ./modules/menu.sh
+                            ./modules/module.sh
                             ;;
                 esac
         done
