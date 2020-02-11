@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-	<a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a> 
-	<a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
-	<a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
-	<a href="#"><img align="center" src="https://img.shields.io/badge/Build-v1.2-red"</a>
-	<a href="#"><img align="centre" src="https://img.shields.io/badge/Version-Ruby-red"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a> 
+  <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Build-v1.2-red"</a>
+  <a href="#"><img align="centre" src="https://img.shields.io/badge/Version-Ruby-red"</a>
 	 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
