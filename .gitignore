@@ -6,7 +6,6 @@
 .idea/modules.xml
 
 .idea/
-modules/exmods/ar3.sh
 *.ini
 .vs/ProjectSettings.json
 .vs/sifter/v16/.suo
