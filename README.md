@@ -6,9 +6,10 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a> 
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Build-v1.2-red"</a>
-  <a href="#"><img align="centre" src="https://img.shields.io/badge/Version-Ruby-red"</a>
-	 <br>
+<br>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.5-yellowgreen"</a>
+  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Emerald-brightgreen"</a>
+<br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
 
@@ -21,9 +22,6 @@ From there a few extra tools were integrated in to further the info gathering pr
 <br>
 <br>
 **Looking for a developer to help incorporate more offensive modules for exploitation, along side the recon.
-<br>
-** New Modules coming soon in v1.5 (Emerald)
-<br>
 <br>
 # Modules:
 
@@ -54,6 +52,12 @@ From there a few extra tools were integrated in to further the info gathering pr
 	-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
 
 	-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
+	
+	-Konan '--> m4ll0k - https://github.com/m4ll0k/Konan
+
+	-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
+	
+	
 
 # Sifter Help Menu
 
