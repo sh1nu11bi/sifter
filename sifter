@@ -16,11 +16,11 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	-m Opens the Modules Menu"
 	echo "# sifter 	-b Runs the Blackwidow Module using the existing host file"
 	echo "# sifter 	-n Runs the Nikto Module using the existing host file"
-	echo "# sifter	-d Runs the Dirbuster Module using the existing host file"
+	echo "# sifter	-k Runs the Konan Module using the existing host file"
 	echo "# sifter	-w Runs the WPScan Module using the existing host file"
 	echo "# sifter	-r Runs the RapidScan module against a given target"
 	echo "# sifter	-p Runs the Nmap Module using the existing host file"
-	echo "# sifter	-i Runs the DnsTwist module against a given target"
+	echo "# sifter	-d Runs the DnsTwist module against a given target"
 	echo "# sifter	-f Runs the Flan Vuln-Scanner module against target or host list, can be parsed with target.(eg. sifter -f x.x.x.x)"
 	echo "# sifter 	-t Runs theHarvester against target or host file"
 	echo "# sifter 	-y Runs the Yuki-Chan Module using the existing host file"
@@ -34,7 +34,7 @@ usage() {                                      # Function: Print a help message.
 
 cd /opt/sifter
 
-while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the next option;
+while getopts "a:cembnzkwiptvoqrsyfhu" options; do            	# Loop: Get the next option;
 							# use silent error checking;
 							# option a takes 1 arguments.
 	case "${options}" in
@@ -93,11 +93,11 @@ while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the n
 			./modules/netmods/nmap.sh
 			;;
 
-		d)
+		k)
 			echo -e "${ORNG}"
-			figlet -f mini "Running Dirbuster"
+			figlet -f mini "Running Konan"
 			echo -e "${NC}"
-			./modules/webmods/dirb.sh
+			./modules/webmods/konan.sh
 			;;
 
 		v)
@@ -128,7 +128,7 @@ while getopts "a:cembnzdwiptvoqrsyfhu" options; do            	# Loop: Get the n
 			./module/dommods/sublist3r.sh
 			;;
 
-		i)
+		d)
 			echo -e "${ORNG}"
 			figlet -f mini "Running DnsTwist"
 			echo -e "${NC}"
