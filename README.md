@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://github.com/s1l3n7h0s7/sifter/blob/master/.vs/sifter.png" alt="" />
+ <img src="https://github.com/s1l3n7h0s7/sifter/blob/v1.5/.vs/sifter.png" alt="" />
 </p>
 
 <p align="center">
@@ -70,13 +70,14 @@ From there a few extra tools were integrated in to further the info gathering pr
 	$  -b Runs Blackwidow against the existing hosts in the files/host_list.txt
 	$  -n Runs Nikto using the existing hosts in the files/host_list.txt
 	$  -v Runs the DnsTwist module against a given target
- 	$  -d Runs Dirbuster against existing hosts in the files/host_list.txt
+ 	$  -k Runs Konan against existing hosts in the files/host_list.txt
 	$  -w Runs WPScan against the existing hosts in the files/host_list.txt
 	$  -p Runs Nmap against the existing hosts in the files/host_list.txt
 	$  -t Runs theHarvester against target or host list
 	$  -r Runs that rapidscan module against a given target.
 	$  -f Runs the Flan modules against a given target
 	$  -s Runs the Sublist3r module against a given target
+	$  -d Runs the DnsTwist module against a target
 	$  -q Runs the DomainFuzz module against a given target
 	$  -z Runs the AttackSurfaceMapper module against a given target
 	$  -o Runs the Photon OSINT module against target or host list
