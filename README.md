@@ -29,8 +29,6 @@ From there a few extra tools were integrated in to further the info gathering pr
 
 	-Nikto '--> Sullo - https://github.com/sullo/nikto
 
-	-Dirbuster '--> mgeeky - https://github.com/mgeeky/dirbuster
-
 	-Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow
 
 	-WPScan '--> WPScanTeam - https://github.com/wpscanteam/wpscan
