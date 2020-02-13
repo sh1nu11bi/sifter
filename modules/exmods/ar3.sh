@@ -213,6 +213,9 @@ query_mode(){
 }
 
 # Start of Script Execution
+echo -e "${LP}"
+figlet -f mini "ActiveReign"
+echo -e {NC}
 PS3='What would you like to do?'
         options=("Work With Database" "System Enum & Module Exec" "Spawn Emulated Shell on System" "Domain Pass Spraying or Bruting" "LDAP Queires on Domain" "Check Default Config" "Edit Default Config" "Back" "Quit")
         select opt in "${options[@]}"
