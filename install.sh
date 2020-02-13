@@ -20,7 +20,6 @@ else
 	sleep 2
 fi
 
-echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
 figlet -f mini "Checking for Sublist3r"
@@ -139,15 +138,22 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
-figlet -f mini "Installing ActiveReign"
-echo -e "${NC}"
-	git clone https://github.com/m8r0wn/ActiveReign.git
+figlet -f mini "Checking for ActiveReign"
+if [[ -d '/opt/ActiveReign' ]]; then
+	echo -e "ActiveReign is already installed${NC}"
+else
+	echo -e "${ORNG}"
+	figlet -f mini "Installing ActiveReign"
+	echo -e "${NC}"
+	cd /opt
+	sudo git clone https://github.com/m8r0wn/ActiveReign.git
 	cd ActiveReign
 	pip3 install -r requirements.txt
 	sudo python3 setup.py install
-	pip3 install prompt-toolkit=2.0.9 impacket
+	pip3 install prompt-toolkit==2.0.9 impacket
 	ar3 db help
 	cp ar3/config.json -t ~/.ar3
+fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
