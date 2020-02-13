@@ -164,6 +164,7 @@ if [[ -d /opt/sifter ]]; then
 else
 	pwd && cd ..
 	sudo mv sifter /opt/sifter
+	sudo chown $USER:$USER /opt/sifter --recursive 
 	cd /opt/sifter
     	sudo cp sifter /usr/sbin/sifter
 	sudo chmod +x /opt/sifter/sifter /usr/sbin/sifter

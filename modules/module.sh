@@ -168,7 +168,7 @@ ex_mods(){
   figlet -f mini "Exploitation Modules"
   echo -e "${NC}"
   sleep 5
-  ./Modules/exmods/ar3.sh
+  ./modules/exmods/ar3.sh
 }
 
 # Start of Module Script

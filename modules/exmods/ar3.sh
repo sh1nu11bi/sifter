@@ -5,8 +5,8 @@ W='\033[1;37m'
 LP='\033[1;35m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
-1='SMB'
-2='LDAP'
+A='SMB'
+B='LDAP'
 
 ## Script Variables
 # Config options
@@ -111,8 +111,8 @@ spawn_shell(){
 # Spray Options
 spray(){
   echo -e "${W}What spray method would you like to use?"
-  echo -e "${LP}1 = SMB"
-  echo -e "2 = LDAP${NC}"
+  echo -e "${LP}A = SMB"
+  echo -e "B = LDAP${NC}"
   read METHOD
   echo -e "${W}Please enter your target${NC}"
   read TARGET
