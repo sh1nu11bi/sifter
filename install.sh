@@ -5,6 +5,24 @@ ORNG='\033[0;33m'
 W='\033[1;37m'
 
 sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
+figlet -f mini "Checking for Sifter"
+echo -e "${NC}"
+if [[ -d /opt/sifter ]]; then
+	echo -e "${ORNG}Sifter is already installed.${NC}"
+else
+	pwd && cd ..
+	sudo mv sifter /opt/sifter
+	sudo chown $USER:$USER /opt/sifter --recursive 
+	cd /opt/sifter
+    sudo cp sifter /usr/sbin/sifter
+	sudo chmod +x /opt/sifter/sifter /usr/sbin/sifter
+	sudo chmod +x -R /opt/sifter/modules
+	sleep 2
+fi
+
 echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
@@ -157,19 +175,18 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
-figlet -f mini "Checking for Sifter"
-echo -e "${NC}"
-if [[ -d /opt/sifter ]]; then
-	echo -e "${ORNG}Sifter is already installed.${NC}"
+figlet -f mini "Checking for iSpy"
+if [[ -d '/opt/ispy' ]]; then
+	echo -e "iSpy is already installed${NC}"
 else
-	pwd && cd ..
-	sudo mv sifter /opt/sifter
-	sudo chown $USER:$USER /opt/sifter --recursive 
-	cd /opt/sifter
-    	sudo cp sifter /usr/sbin/sifter
-	sudo chmod +x /opt/sifter/sifter /usr/sbin/sifter
-	sudo chmod +x -R /opt/sifter/modules
-	sleep 2
+	echo -e "${ORNG}"
+	figlet -f mini "Installing iSpy"
+	echo -e "${NC}"
+	cd /opt/
+	sudo git clone https://github.com/Cyb0r9/ispy.git
+	cd ispy
+	chmod +x setup.sh
+	sudo ./setup.sh
 fi
 
 echo -e "${RED}"

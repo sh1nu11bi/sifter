@@ -54,6 +54,8 @@ From there a few extra tools were integrated in to further the info gathering pr
 	-Konan '--> m4ll0k - https://github.com/m4ll0k/Konan
 
 	-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
+
+	-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
 	
 	
 
@@ -75,6 +77,7 @@ From there a few extra tools were integrated in to further the info gathering pr
 	$  -r Runs that rapidscan module against a given target.
 	$  -f Runs the Flan modules against a given target
 	$  -s Runs the Sublist3r module against a given target
+	$  -i Runs the iSpy module against a given target
 	$  -d Runs the DnsTwist module against a target
 	$  -q Runs the DomainFuzz module against a given target
 	$  -z Runs the AttackSurfaceMapper module against a given target

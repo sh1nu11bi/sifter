@@ -21,6 +21,7 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	-r Runs the RapidScan module against a given target"
 	echo "# sifter	-p Runs the Nmap Module using the existing host file"
 	echo "# sifter	-d Runs the DnsTwist module against a given target"
+	echo "# sifter  -i Runs the iSpy module against a given target"
 	echo "# sifter	-f Runs the Flan Vuln-Scanner module against target or host list, can be parsed with target.(eg. sifter -f x.x.x.x)"
 	echo "# sifter 	-t Runs theHarvester against target or host file"
 	echo "# sifter 	-y Runs the Yuki-Chan Module using the existing host file"
@@ -34,7 +35,7 @@ usage() {                                      # Function: Print a help message.
 
 cd /opt/sifter
 
-while getopts "a:cembnzkwiptvoqrsyfhu" options; do            	# Loop: Get the next option;
+while getopts "a:cembnzkwiptvioqrsyfhu" options; do            	# Loop: Get the next option;
 							# use silent error checking;
 							# option a takes 1 arguments.
 	case "${options}" in
@@ -128,6 +129,13 @@ while getopts "a:cembnzkwiptvoqrsyfhu" options; do            	# Loop: Get the n
 			./module/dommods/sublist3r.sh
 			;;
 
+		i)
+			echo -e "${ORNG}"
+			figlet -f mini "Running iSpy"
+			echo -e "${NC}"
+			./modules/exmods/ispy.sh
+			;;
+
 		d)
 			echo -e "${ORNG}"
 			figlet -f mini "Running DnsTwist"
@@ -186,6 +194,7 @@ while getopts "a:cembnzkwiptvoqrsyfhu" options; do            	# Loop: Get the n
       		figlet -f mini "Checking for updates"
 					git fetch
 					git pull
+					sudo ./install.sh
 					sudo cp sifter -t /usr/sbin
 					sudo chmod +x -R /opt/sifter/modules
 					sudo chmod +x /usr/sbin/sifter

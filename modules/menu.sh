@@ -37,6 +37,7 @@ PS3='What would you like to do?'
                     cd /opt/sifter
                     git fetch
                     git pull
+                    sudo ./install.sh
                     echo -e "${W}Done!${NC}"
                     ;;
 
