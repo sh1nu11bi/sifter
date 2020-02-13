@@ -7,7 +7,7 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.5-yellowgreen"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.5(Stable)-yellowgreen"</a>
   <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Emerald-brightgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
