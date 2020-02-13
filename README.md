@@ -23,6 +23,24 @@ From there a few extra tools were integrated in to further the info gathering pr
 <br>
 **Looking for a developer to help incorporate more offensive modules for exploitation, along side the recon.
 <br>
+
+# Installation
+	
+	* This will download and install all required tools
+	*
+	$ git clone https://github.com/s1l3n7h0s7/sifter.git
+	$ cd sifter 
+	$ chmod +x install.sh
+	$ ./install.sh
+	
+	* To download sifter with all tools and install them thereafter
+	*
+	$ wget https://github.com/s1l3n7h0s7/sifter/releases/tag/v1.5.2/Release.zip
+	$ unzip Release.zip
+	$ cd sifter
+	$ chmod +x release-install.sh
+	$ ./release-install.sh
+	
 # Modules:
 
 	-Nmap '--> Gordon Lyon - https://nmap.org
