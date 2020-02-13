@@ -12,6 +12,14 @@ B='LDAP'
 # Config options
 config(){
   cat /opt/ActiveReign/ar3/config.json
+  echo -e "${W}Would you like to edit?(y/n)${NC}"
+  read CONANS
+  if [[ ${CONANS} == "y" ]]; then
+    sudo cp /opt/ActiveReign/ar3/config.json /opt/ActiveReign/ar3/default_config.json
+    sudo nano /opt/ActiveReign/ar3/config.json
+  else 
+    echo ""
+  fi
 }
 cedit(){
   sudo nano /opt/ActiveReign/ar3/config.json
