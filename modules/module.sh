@@ -7,7 +7,7 @@ cred_mods(){
   echo -e "${RED}"
   figlet -f mini "Info-Focused Modules"
   echo -e "${ORNG}"
-  PS3='What would you like to do?'
+  PS3='What tool would you like to use?'
           options=("theHarvester" "Back" "Quit")
           select opt in "${options[@]}"
           do
@@ -31,7 +31,7 @@ dom_mods(){
   echo -e "${RED}"
   figlet -f mini "Domain-Focused Modules"
   echo -e "${ORNG}"
-  PS3='What would you like to do?'
+  PS3='What tool would you like to use?'
           options=("DnsTwist" "DomainFuzz" "Sublist3r" "Back" "Quit")
           select opt in "${options[@]}"
           do
@@ -63,7 +63,7 @@ net_mods(){
   echo -e "${RED}"
   figlet -f mini "Network-Focused Modules"
   echo -e "${ORNG}"
-  PS3='What would you like to do?'
+  PS3='What tool would you like to use?'
           options=("Live-Host Scan" "nMap" "Photon" "AttackSurfaceMapper" "Back"  "Quit")
           select opt in "${options[@]}"
           do
@@ -99,7 +99,7 @@ vuln_mods(){
   echo -e "${RED}"
   figlet -f mini "Vulnerability-Focused Modules"
   echo -e "${ORNG}"
-  PS3='What would you like to do?'
+  PS3='What tool would you like to use?'
           options=("Flan" "RapidScan" "Yuki-Chan" "Back" "Quit")
           select opt in "${options[@]}"
           do
@@ -131,7 +131,7 @@ web_mods(){
   echo -e "${RED}"
   figlet -f mini "Web-Focused Modules"
   echo -e "${ORNG}"
-  PS3='What would you like to do?'
+  PS3='What tool would you like to use?'
           options=("Konan" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
           select opt in "${options[@]}"
           do
@@ -167,8 +167,51 @@ ex_mods(){
   echo -e "${RED}"
   figlet -f mini "Exploitation Modules"
   echo -e "${NC}"
-  sleep 5
-  ./modules/exmods/ar3.sh
+  PS3='What tool would you like to use?'
+        options=("ActiveReign" "iSpy" "Back" "Quit")
+        select opt in "${options[@]}"
+        do
+                case $opt in
+			"ActiveReign"
+			    ./modules/exmods/ar3.sh
+			    ;;
+
+			"iSpy"
+			    ./modules/exmods/ispy.sh
+			    ;;
+
+			"Back")
+                            ./modules/module.sh
+                            ;;
+
+                        "Quit")
+                            exit 0
+                            ;;
+                esac
+        done
+}
+webapps(){
+  echo -e "${RED}"
+  figlet -f mini "WebApp Modules"
+  echo -e "${NC}"
+  PS3='What tool would you like to use?'
+        options=("Sitadel" "Back" "Quit")
+        select opt in "${options[@]}"
+        do
+                case $opt in
+                        "Sitadel"
+                            ./modules/webapps/sitadel.sh
+                            ;;
+
+                        "Back")
+                            ./modules/module.sh
+                            ;;
+
+                        "Quit")
+                            exit 0
+                            ;;
+                esac
+        done
 }
 
 # Start of Module Script
@@ -204,9 +247,13 @@ PS3='What would you like to do?'
                             ex_mods
                             ;;
 
+			"WebApp-Focused Modules"
+			    webapps
+			    ;;
+
                         "Back")
                             ./modules/menu.sh
-			                      ;;
+			    ;;
 
                         "Quit")
                             exit 0
