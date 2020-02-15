@@ -189,6 +189,22 @@ else
 	sudo ./setup.sh
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
+figlet -f mini "Checking for Sitadel"
+if [[ -d '/opt/Sitadel' ]]; then
+	echo -e "Sitadel is already installed"
+else
+	echo -e "${ORNG}"
+	figlet -f mini "Installing iSpy"
+	echo -e "${NC}"
+	cd /opt/
+	sudo git clone https://github.com/shenril/Sitadel.git
+	cd Sitadel
+	sudo python3 -m pip install .
+	python3 setup.py install
+}
+
 echo -e "${RED}"
 figlet "Done! =D"
 echo -e "${NC}"
