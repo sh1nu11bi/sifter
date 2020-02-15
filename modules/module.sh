@@ -247,13 +247,13 @@ PS3='What would you like to do?'
                             ex_mods
                             ;;
 
-			"WebApp-Focused Modules"
-			    webapps
-			    ;;
+			            "WebApp-Focused Modules")
+			                webapps
+			                ;;
 
                         "Back")
                             ./modules/menu.sh
-			    ;;
+			                ;;
 
                         "Quit")
                             exit 0

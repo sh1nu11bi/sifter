@@ -7,7 +7,7 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.5.2(Stable)-yellowgreen"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.6.0(Stable)-yellowgreen"</a>
   <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Emerald-brightgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
@@ -75,7 +75,7 @@ From there a few extra tools were integrated in to further the info gathering pr
 
 	-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
 	
-	
+	-Sitadel '--> shenril - https://github.com/shenril/Sitadel
 
 # Sifter Help Menu
 

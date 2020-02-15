@@ -196,14 +196,14 @@ if [[ -d '/opt/Sitadel' ]]; then
 	echo -e "Sitadel is already installed"
 else
 	echo -e "${ORNG}"
-	figlet -f mini "Installing iSpy"
+	figlet -f mini "Installing Sitadel"
 	echo -e "${NC}"
 	cd /opt/
 	sudo git clone https://github.com/shenril/Sitadel.git
 	cd Sitadel
 	sudo python3 -m pip install .
 	python3 setup.py install
-}
+fi
 
 echo -e "${RED}"
 figlet "Done! =D"
