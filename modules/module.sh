@@ -219,7 +219,7 @@ echo -e "${RED}Modules${NC}"
 echo -e "${RED}*******${NC}"
 echo -e "${ORNG}"
 PS3='What would you like to do?'
-        options=("Info-Focused Modules" "Domain-Focused Modules" "Network-Focused Modules" "Web-Focused Modules" "Vulnerability-Focused Modules" "Exploitation(Beta)" "Back" "Quit")
+        options=("Info-Focused Modules" "Domain-Focused Modules" "Network-Focused Modules" "Web-Focused Modules" "Vulnerability-Focused Modules" "Exploitation(Beta)" "WebApp-Focused Modules" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
