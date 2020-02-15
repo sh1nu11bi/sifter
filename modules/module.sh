@@ -172,21 +172,21 @@ ex_mods(){
         select opt in "${options[@]}"
         do
                 case $opt in
-			"ActiveReign"
-			    ./modules/exmods/ar3.sh
-			    ;;
+			               "ActiveReign")
+			                  ./modules/exmods/ar3.sh
+			                  ;;
 
-			"iSpy"
-			    ./modules/exmods/ispy.sh
-			    ;;
+			               "iSpy")
+			                  ./modules/exmods/ispy.sh
+			                  ;;
 
-			"Back")
-                            ./modules/module.sh
-                            ;;
+			               "Back")
+                        ./modules/module.sh
+                        ;;
 
-                        "Quit")
-                            exit 0
-                            ;;
+                      "Quit")
+                        exit 0
+                        ;;
                 esac
         done
 }
@@ -199,7 +199,7 @@ webapps(){
         select opt in "${options[@]}"
         do
                 case $opt in
-                        "Sitadel"
+                        "Sitadel")
                             ./modules/webapps/sitadel.sh
                             ;;
 
