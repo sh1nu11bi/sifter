@@ -7,7 +7,7 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.6(Stable)-yellowgreen"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.7-red"</a>
   <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Emerald-brightgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
@@ -20,6 +20,8 @@ s1l3nt78
 Sifter is a recon tool, originally designed to check the status of domains/hosts/ip's
 From there a few extra tools were integrated in to further the info gathering process.
 <br>
+<br>
+*Frequently updated
 <br>
 **Looking for a developer to help incorporate more offensive modules for exploitation, along side the recon.
 <br>
@@ -76,6 +78,8 @@ From there a few extra tools were integrated in to further the info gathering pr
 	-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
 	
 	-Sitadel '--> shenril - https://github.com/shenril/Sitadel
+	
+	-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
 
 # Sifter Help Menu
 
