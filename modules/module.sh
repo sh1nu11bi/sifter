@@ -195,12 +195,16 @@ webapps(){
   figlet -f mini "WebApp Modules"
   echo -e "${NC}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "Back" "Quit")
+        options=("Sitadel" "wafw00f" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
                         "Sitadel")
                             ./modules/webapps/sitadel.sh
+                            ;;
+
+                        "wafw00f")
+                            ./modules/webapps/wafw00f.sh
                             ;;
 
                         "Back")
