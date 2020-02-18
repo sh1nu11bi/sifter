@@ -168,25 +168,29 @@ ex_mods(){
   figlet -f mini "Exploitation Modules"
   echo -e "${NC}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "iSpy" "Back" "Quit")
+        options=("ActiveReign" "iSpy" "ShodanSploit" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
 			               "ActiveReign")
-			                  ./modules/exmods/ar3.sh
-			                  ;;
+			                    ./modules/exmods/ar3.sh
+			                    ;;
 
 			               "iSpy")
-			                  ./modules/exmods/ispy.sh
-			                  ;;
+			                    ./modules/exmods/ispy.sh
+			                    ;;
+
+                           "ShodanSploit")
+                                ./modules/exmods/ssploit.sh
+                                ;;
 
 			               "Back")
-                        ./modules/module.sh
-                        ;;
+                                ./modules/module.sh
+                                ;;
 
-                      "Quit")
-                        exit 0
-                        ;;
+                           "Quit")
+                                exit 0
+                                ;;
                 esac
         done
 }

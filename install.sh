@@ -141,6 +141,17 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
+figlet -f mini "Checking for ShodanSploit"
+echo -e "${NC}"
+if [[ -d "/opt/shodansploit" ]]; then
+	echo -e "${ORNG}ShodanSploit is already installed.${NC}"
+else
+	cd /opt
+	git clone https://github.com/shodansploit/shodansploit.git
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
 figlet -f mini "Checking for Attack Surface Mapper"
 echo -e "${NC}"
 if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
