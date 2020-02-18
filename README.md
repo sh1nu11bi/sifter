@@ -84,6 +84,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 	
 	-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
 
+	-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
 # Sifter Help Menu
 
 
