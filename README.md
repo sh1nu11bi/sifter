@@ -7,7 +7,7 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.7.5-red"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.8(Stable)-red"</a>
   <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Emerald-brightgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
@@ -23,7 +23,7 @@ Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tool
 <br>
 Gathered info is saved to the results folder, these output files can be easily parsed over to <a href="https://github.com/s1l3n7h0s7/TigerShark">TigerShark</a> in order to be utilised within your campaign. Or compiled for s final report to wrap up a penetration test.
 <br>
-* Please, if you fork this repo ensure to keep it updated.
+**Please, if you fork this repo ensure to keep it updated.
 <br>
 **Frequently updated
 <br>
