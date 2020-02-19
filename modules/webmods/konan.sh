@@ -105,7 +105,7 @@ echo -e "${ORNG}*****${NC}"
 echo -e "${YLW}"
 cat files/pingtest_pass.txt
 echo -e "${NC}"
-echo -e "${W}Please enter your target site(without http/https:// protocol)${NC}"
+echo -e "${W}Please enter your target site(without <https://> protocol)${NC}"
 echo -e "${W}eg. example.com${NC}"
 read TARGET
 #PS3='Which mode would you like to run?'
@@ -137,6 +137,7 @@ brute_force     //${BF_SUB}
 multi_method    //${MMA}
 sleep 1
 echo "================================================================================================="
+cd /opt/Konan
 python3 konon.py --url https://${TARGET} ${WLISTA} ${WLISTD} ${CEXTQ} ${EXT_RT} ${FRC} ${EXTA} ${ST_EXCL} ${WLSA} ${RDA} ${DIRECTS} ${BF_SUBQ} ${BF_SUB} ${MMA} -O output.json
 mv output.json /opt/sifter/results/Konan/${TARGET}.json
 echo -e "${RED}Results have been saved to /opt/sifter/results/Konon/${NC}"

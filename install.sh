@@ -217,6 +217,21 @@ else
 	python3 setup.py install
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
+figlet -f mini "Checking for Konan"
+if [[ -d '/opt/Konan' ]]; then
+	echo -e "Konan is already installed"
+else
+	echo -e "${ORNG}"
+	figlet -f mini "Installing Konan"
+	echo -e "${NC}"
+	cd /opt/
+	sudo git clone https://github.com/m4ll0k/Konan.git
+	cd Konan
+	sudo pip install -r requirements.txt
+fi
+
 echo -e "${RED}"
 figlet "Done! =D"
 echo -e "${NC}"
