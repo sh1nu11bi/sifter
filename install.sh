@@ -148,6 +148,7 @@ if [[ -d "/opt/shodansploit" ]]; then
 else
 	cd /opt
 	git clone https://github.com/shodansploit/shodansploit.git
+	sudo chown $USER:$USER -R shodansploit
 fi
 
 echo -e "${W}===========================================================================================${NC}"

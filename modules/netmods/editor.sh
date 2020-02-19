@@ -34,9 +34,9 @@ echo -e "${NC}"
         do
                 case $opt in
                         "Check")
-                          ./modules/check.sh
+                          ./modules/netmods/check.sh
                           sleep 5
-                          ./modules/editor.sh
+                          ./modules/netmods/editor.sh
                                         ;;
 
                         "List")
@@ -44,7 +44,7 @@ echo -e "${NC}"
                             cat files/host_list.txt
                             echo -e "${NC}"
                             sleep 5
-                            ./modules/editor.sh
+                            ./modules/netmods/editor.sh
                             ;;
 
                         "Add")
@@ -60,7 +60,7 @@ echo -e "${NC}"
                             nano files/host_list.txt
                             echo -e "${W}Target Removed!${NC}"
                             sleep 5
-                            ./modules/editor.sh
+                            ./modules/netmods/editor.sh
                             ;;
 
                         "Back")
