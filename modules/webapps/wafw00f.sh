@@ -10,7 +10,11 @@ RED='\033[0;31m'
 waf_list(){
 	wafw00f --list
 }
-
+if [[ -d '/opt/sifter/results/w00f' ]]; then
+	sleep 1
+else
+	mkdir /opt/sifter/results/w00f
+fi
 echo -e "${ORNG}"
 figlet -f mini Wafw00f
 echo -e "${NC}"
@@ -44,9 +48,6 @@ else
 	echo -e "${W}Not using a proxy for the scan${NC}"
 	CPROXY=''
 fi
-echo -e "${W}Please enter the name for output with format${RED}"
-echo -e "Format can be csv, json or txt${NC}"
-read OUTPUT
 echo -e "${W}Would you like to give a single target or use a list?"
 echo -e "list can be in csv, json or txt(s/l)${NC}"
 read TARGETO
@@ -58,6 +59,7 @@ else
 	read TARGETP
 	TARGET='-i ${TARGETP}'
 fi
-wafw00f ${WAF_T} ${XREDIR} ${CPROXY} ${OUTPUT} ${TARGET} 
+wafw00f ${WAF_T} ${XREDIR} ${CPROXY} ${TARGET} >> /opt/sifter/results/w00f/${TARGET}.txt
+echo -e "${W}Results saved to /opt/sifter/results/w00f${NC}"
 sleep 5
 ./modules/module.sh
