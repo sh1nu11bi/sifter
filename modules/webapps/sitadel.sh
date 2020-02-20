@@ -65,9 +65,14 @@ use_cookie(){
 	fi
 }
 config(){
-	CONF='/opt/Sitadel/config.yml'
+	
 	echo -e "${W}Please specify the config file to use, otherwise just hit enter to use default(/opt/Sitadel/config.yml)"
-	read CONF
+	read CONF1
+	if [[ ${CONF1} == '' ]];then
+		CONF='/opt/Sitadel/config.yml'
+	else
+		CONF='${CONF1}'
+	fi
 }
 verbose(){
 	echo -e "${W}Please enter the level of verbosity to use(0,1,2,3)"
@@ -103,7 +108,7 @@ echo -e "${W}Please enter your target${NC}"
 echo -e "${LP}eg. http://example.com"
 read TARGET
 echo "=============================================================================================================="
-python3 sitadel.py -r ${RISKLVL} ${FREDIR} -a ${ATK_MODULE} -f ${FP_MODULE} -t ${TIMO} ${UC} ${COOKIE} --config ${CONF} ${VERB} ${TARGET}
+sudo python3 sitadel.py -r ${RISKLVL} ${FREDIR} -a ${ATK_MODULE} -f ${FP_MODULE} -t ${TIMO} ${UC} ${COOKIE} --config ${CONF} ${VERB} ${TARGET}
 echo "=============================================================================================================="
 sleeo 2
 ./modules/module.sh
