@@ -32,19 +32,19 @@ dom_mods(){
   figlet -f mini "Domain-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "DomainFuzz" "Sublist3r" "Back" "Quit")
+          options=("DnsTwist \n Sub-Domain Bruteforcer for Typo Squatting Detection" "DomainFuzz \n Sub-Domain Bruteforcer" "Sublist3r \n Sub-Domain Enumerator" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
-                            "DnsTwist")
+                            "DnsTwist \n Sub-Domain Bruteforcer for Typo Squatting Detection")
                                 ./modules/dommods/dnstwist.sh
                                 ;;
 
-                            "DomainFuzz")
+                            "DomainFuzz \n Sub-Domain Bruteforcer")
                                 ./modules/dommods/domainfuzz.sh
                                 ;;
 
-                            "Sublist3r")
+                            "Sublist3r \n Sub-Domain Enumerator")
                                 ./modules/dommods/sublist3r.sh
                                 ;;
 
@@ -64,11 +64,11 @@ net_mods(){
   figlet -f mini "Network-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Live-Host Scan" "nMap" "Photon" "AttackSurfaceMapper" "Back"  "Quit")
+          options=("Scan for Live-Hosts" "nMap" "Photon" "AttackSurfaceMapper" "Back"  "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
-                            "Live-Host Scan")
+                            "Scan for Live-Hosts")
                                 ./modules/netmods/check.sh
                                 ;;
 
@@ -132,11 +132,11 @@ web_mods(){
   figlet -f mini "Web-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Konan" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
+          options=("Konan \n Sub-directory fuzzer" "Nikto" "BlackWidow \n High-Powered Web Crawler/OWASP Fuzzer" "WPScan" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
-                            "Konan")
+                            "Konan \n Sub-directory fuzzer")
                                 ./modules/webmods/konan.sh
                                 ;;
 
@@ -144,7 +144,7 @@ web_mods(){
                                 ./modules/webmods/nikto.sh
                                 ;;
 
-                            "BlackWidow")
+                            "BlackWidow \n High-Powered Web Crawler/OWASP Fuzzer")
                                 ./modules/webmods/widow.sh
                                 ;;
 
@@ -168,7 +168,7 @@ ex_mods(){
   figlet -f mini "Exploitation Modules"
   echo -e "${NC}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "iSpy" "ShodanSploit" "Back" "Quit")
+        options=("ActiveReign" "iSpy \n Scans & Exploits Microsft 'Blue' Vulns" "ShodanSploit \n Shodan searches from within the terminal" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -176,11 +176,11 @@ ex_mods(){
 			                    ./modules/exmods/ar3.sh
 			                    ;;
 
-			               "iSpy")
+			               "iSpy \n Scans & Exploits Microsft 'Blue' Vulns")
 			                    ./modules/exmods/ispy.sh
 			                    ;;
 
-                           "ShodanSploit")
+                           "ShodanSploit \n Shodan searches from within the terminal")
                                 ./modules/exmods/ssploit.sh
                                 ;;
 
@@ -199,15 +199,15 @@ webapps(){
   figlet -f mini "WebApp Modules"
   echo -e "${NC}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "wafw00f" "Back" "Quit")
+        options=("Sitadel \n Web-App Scanner" "wafw00f \n WAF Firewall Detection" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
-                        "Sitadel")
+                        "Sitadel \n Web-App Scanner")
                             ./modules/webapps/sitadel.sh
                             ;;
 
-                        "wafw00f")
+                        "wafw00f \n WAF Firewall Detection")
                             ./modules/webapps/wafw00f.sh
                             ;;
 
