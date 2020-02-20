@@ -70,8 +70,6 @@ config(){
 	read CONF1
 	if [[ ${CONF1} == '' ]];then
 		CONF='/opt/Sitadel/config/config.yml'
-	else
-		CONF='${CONF1}'
 	fi
 }
 verbose(){
@@ -110,5 +108,6 @@ read TARGET
 echo "=============================================================================================================="
 sudo python3 sitadel.py -r ${RISKLVL} ${FREDIR} -t ${TIMO} ${UC} ${COOKIE} -f ${FP_MODULE} -a ${ATK_MODULE} --config $CONF ${VERB} ${TARGET}
 echo "=============================================================================================================="
-sleeo 2
+sleep 2
+cd /opt/sifter
 ./modules/module.sh
