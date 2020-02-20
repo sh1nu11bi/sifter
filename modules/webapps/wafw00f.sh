@@ -27,11 +27,11 @@ else
 	WAF_T='-t ${WAF_O}'
 fi
 echo -e "${W}Would you like to follow 3xx redirects or not?(y/n)"
-read 3XR
-if [[ ${3XR} == "y" ]]; then
-	3XREDIR='-r'
+read R3PLY
+if [[ ${R3PLY} == "y" ]]; then
+	XREDIR='-r'
 else
-	3XREDIR='--noredirect'
+	XREDIR='--noredirect'
 fi
 echo -e "${W}Would you like to use a proxy for the scan?(y/n)${NC}"
 read PROXYO
@@ -58,6 +58,6 @@ else
 	read TARGETP
 	TARGET='-i ${TARGETP}'
 fi
-wafw00f ${WAF_T} ${3XREDIR} ${CPROXY} ${TARGET} ${OUTPUT}
+wafw00f ${WAF_T} ${XREDIR} ${CPROXY} ${TARGET} ${OUTPUT}
 sleep 5
 ./modules/module.sh
