@@ -7,11 +7,11 @@ W='\033[1;37m'
 sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Sifter"
-echo -e "${NC}"
+echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
-	echo -e "${ORNG}Sifter is already installed.${NC}"
+	echo -e "${ORNG}"
+	figlet -f mini "Sifter is already installed."
+	echo -e "${NC}"
 else
 	pwd && cd ..
 	sudo mv sifter /opt/sifter
@@ -25,11 +25,10 @@ fi
 
 echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Sublist3r"
-echo -e "${NC}"
+echo -e "${YLW}Checking for Sublist3r${NC}"
 if [[ -d /opt/Sublist3r ]]; then
-	echo -e "${ORNG}Sublist3r is already installed.${NC}"
+	figlet -f mini "Sublist3r is already installed."
+	echo -e "${NC}"
 else
 	cd /opt
 	git clone https://github.com/aboul3la/Sublist3r.git
@@ -39,11 +38,11 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Sublist3r"
-echo -e "${NC}"
+echo -e "${YLW}Checking for DomainFuzz${NC}"
 if [[ -d /opt/DomainFuzz ]]; then
-	echo -e "${ORNG}DomainFuzz is already installed.${NC}"
+	echo -e "${ORNG}"
+	figlet -f mini "Sublist3r is already installed."
+	echo -e "${NC}"
 else
 	cd /opt
 	git clone https://github.com/monkeym4ster/DomainFuzz.git
@@ -51,11 +50,11 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for DnsTwist"
-echo -e "${NC}"
+echo -e "${YLW}Checking for DnsTwist${NC}"
 if [[ -d /opt/dnstwist ]]; then
-	echo -e "${ORNG}DnsTwist is already installed.${NC}"
+	echo -e "${ORNG}"
+	figlet -f mini "DnsTwist is already installed."
+	echo -e "${NC}"
 else
 	cd /opt
 	git clone https://github.com/elceef/dnstwist.git
@@ -65,11 +64,11 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Flan"
-echo -e "${NC}"
+echo -e "${YLW}Checking for Flan${NC}"
 if [[ -d /opt/flan ]]; then
-	echo -e "${ORNG}Flan is already installed.${NC}"
+	echo -e "${ORNG}"
+	figlet -f mini "Flan is already installed"
+	echo -e "${NC}"
 else
 	cd /opt
 	git clone https://github.com/s1l3n7h0s7/flan.git
@@ -79,11 +78,11 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Blackwidow"
-echo -e "${NC}"
+echo -e "${YLW}Checking for Blackwidow${NC}"
 if [[ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py ]] || [[ -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]]; then
-    echo -e "${ORNG}Blackwidow is already installed.${NC}"
+	echo -e "${ORNG}"
+	figlet -f mini "Blackwidow is already installed"
+	echo -e "${NC}"
 else
 	cd /root
 	git clone https://github.com/1N3/blackwidow.git
@@ -94,11 +93,11 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Photon"
-echo -e "${NC}"
+echo -e "${YLW}Checking for Photon${NC}"
 if [[ -d /opt/Photon ]] || [[ -d /root/Photon ]]; then
-    echo -e "${ORNG}Photon is already installed.${NC}"
+    echo -e "${ORNG}"
+	figlet -f mini "Photon is already installed"
+	echo -e "${NC}"
 else
 	cd /opt
 	git clone https://github.com/s0md3v/Photon.git
@@ -107,11 +106,11 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for RapidScan"
-echo -e "${NC}"
+echo -e "${YLW}Checking for Rapidscan${NC}"
 if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
-	echo -e "${ORNG}RapidScan is already installed.${NC}"
+	echo -e "${ORNG}"
+	figlet -f mini "Rapidscan is already installed"
+	echo -e "${NC}"
 else
 	cd /opt
 	git clone https://github.com/s1l3n7h0s7/rapidscan.git
@@ -121,16 +120,16 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Yuki-Chan"
-echo -e "${NC}"
+echo -e "${YLW}Checking for Yuki-Chan${NC}"
 if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
-    echo -e "${ORNG}Yuki-Chan is already installed.${NC}"
+    echo -e "${ORNG}"
+	figlet -f mini "Yuki-Chan is already installed"
+	echo -e "${NC}"
 else
     cd /root
     sudo git clone https://github.com/s1l3n7h0s7/Yuki-Chan-The-Auto-Pentest.git
     sudo mv Yuki-Chan-The-Auto-Pentest yuki
-	d yuki
+	cd yuki
 	   sudo pip2 install -r requirements.txt
 	   sudo pip3 install -r requirements.txt
 	   sudo chmod +x Module --recursive
@@ -140,11 +139,11 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for ShodanSploit"
-echo -e "${NC}"
+echo -e "${YLW}Checking for ShodanSploit${NC}"
 if [[ -d "/opt/shodansploit" ]]; then
-	echo -e "${ORNG}ShodanSploit is already installed.${NC}"
+	echo -e "${ORNG}"
+	figlet -f mini "ShodanSploit is already installed."
+	echo -e "${NC}"
 else
 	cd /opt
 	git clone https://github.com/shodansploit/shodansploit.git
@@ -152,11 +151,11 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for ReconSpider"
-echo -e "${NC}"
+echo -e "${YLW}Checking for ReconSpider${NC}"
 if [[ -d "/opt/reconspider" ]]; then
-	echo -e "${ORNG}ReconSpider is already installed.${NC}"
+	echo -e "${ORNG}"
+	figlet -f mini "ReconSpider is already installed"
+	echo -e "${NC}"	
 else
 	cd /opt
 	git clone https://github.com/bhavsec/reconspider.git
@@ -165,11 +164,11 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Attack Surface Mapper"
-echo -e "${NC}"
+echo -e "${YLW}Checking for Attack Surface Mapper${NC}"
 if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
-	echo -e "${ORNG}ASM is already installed.${NC}"
+	echo -e "${ORNG}"
+	figlet -f mini "ASM is already installed."
+	echo -e "${NC}"
 else
 	cd /opt
 	git clone https://github.com/s1l3n7h0s7/AttackSurfaceMapper.git
@@ -180,14 +179,12 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for ActiveReign"
+echo -e "${YLW}Checking for ActiveReign${NC}"
 if [[ -d '/opt/ActiveReign' ]]; then
-	echo -e "ActiveReign is already installed${NC}"
-else
 	echo -e "${ORNG}"
-	figlet -f mini "Installing ActiveReign"
+	figlet -f mini "ActiveReign is already installed"
 	echo -e "${NC}"
+else
 	cd /opt
 	sudo git clone https://github.com/m8r0wn/ActiveReign.git
 	cd ActiveReign
@@ -199,14 +196,12 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for iSpy"
+echo -e "${YLW}Checking for iSpy${NC}"
 if [[ -d '/opt/ispy' ]]; then
-	echo -e "iSpy is already installed${NC}"
-else
 	echo -e "${ORNG}"
-	figlet -f mini "Installing iSpy"
+	figlet -f mini "iSpy is already installed"
 	echo -e "${NC}"
+else
 	cd /opt/
 	sudo git clone https://github.com/Cyb0r9/ispy.git
 	cd ispy
@@ -215,14 +210,12 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Sitadel"
+echo -e "${YLW}Checking for Sitadel${NC}"
 if [[ -d '/opt/Sitadel' ]]; then
-	echo -e "Sitadel is already installed"
-else
 	echo -e "${ORNG}"
-	figlet -f mini "Installing Sitadel"
+	figlet -f mini "Sitadel is already installed"
 	echo -e "${NC}"
+else
 	cd /opt/
 	sudo git clone https://github.com/shenril/Sitadel.git
 	cd Sitadel
@@ -231,14 +224,12 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Konan"
+echo -e "${YLW}Checking for Konan${NC}"
 if [[ -d '/opt/Konan' ]]; then
-	echo -e "Konan is already installed"
-else
 	echo -e "${ORNG}"
-	figlet -f mini "Installing Konan"
+	figlet -f mini "Konan is already installed"
 	echo -e "${NC}"
+else
 	cd /opt/
 	sudo git clone https://github.com/m4ll0k/Konan.git
 	cd Konan
@@ -246,14 +237,12 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for SniffingBear"
+echo -e "${YLW}Checking for SniffingBear${NC}"
 if [[ -d '/opt/SniffingBear' ]]; then
-	echo -e "SniffingBear is already installed"
-else
 	echo -e "${ORNG}"
-	figlet -f mini "Installing SniffingBear"
+	figlet -f mini "SniffingBear is already installed"
 	echo -e "${NC}"
+else
 	cd /opt/
 	sudo git clone https://github.com/MrSuicideParrot/SniffingBear.git
 	cd SniffingBear
@@ -261,14 +250,12 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${ORNG}"
-figlet -f mini "Checking for Osmedeus"
+echo -e "${YLW}Checking for Osmedeus${NC}"
 if [[ -d '/opt/Osmedeus' ]]; then
-	echo -e "Osmedeus is already installed"
-else
 	echo -e "${ORNG}"
-	figlet -f mini "Installing Osmedeus"
+	figlet -f mini "Osmedeus is already installed"
 	echo -e "${NC}"
+else
 	cd /opt/
 	git clone https://github.com/j3ssie/Osmedeus.git
 	cd Osmedeus
