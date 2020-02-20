@@ -58,6 +58,6 @@ else
 	read TARGETP
 	TARGET='-i ${TARGETP}'
 fi
-wafw00f ${WAF_T} ${XREDIR} ${CPROXY} ${TARGET} ${OUTPUT}
+wafw00f ${WAF_T} ${XREDIR} ${CPROXY} ${OUTPUT} ${TARGET} 
 sleep 5
 ./modules/module.sh
