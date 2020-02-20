@@ -8,7 +8,7 @@ cred_mods(){
   figlet -f mini "Info-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "Sniffing-Bear \n HoneyPot Detection" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          options=("theHarvester" "SniffingBear" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -16,7 +16,7 @@ cred_mods(){
                                 ./modules/credmods/harvester.sh
                                 ;;
 
-                            "Sniffing-Bear \n HoneyPot Detection")
+                            "SniffingBear")
                                 ./modules/credmods/s_bear.sh
                                 ;;
 
@@ -40,19 +40,19 @@ dom_mods(){
   figlet -f mini "Domain-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist \n Sub-Domain Bruteforcer for Typo Squatting Detection" "DomainFuzz \n Sub-Domain Bruteforcer" "Sublist3r \n Sub-Domain Enumerator" "Back" "Quit")
+          options=("DnsTwist" "DomainFuzz" "Sublist3r" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
-                            "DnsTwist \n Sub-Domain Bruteforcer for Typo Squatting Detection")
+                            "DnsTwist")
                                 ./modules/dommods/dnstwist.sh
                                 ;;
 
-                            "DomainFuzz \n Sub-Domain Bruteforcer")
+                            "DomainFuzz")
                                 ./modules/dommods/domainfuzz.sh
                                 ;;
 
-                            "Sublist3r \n Sub-Domain Enumerator")
+                            "Sublist3r")
                                 ./modules/dommods/sublist3r.sh
                                 ;;
 
@@ -140,11 +140,11 @@ web_mods(){
   figlet -f mini "Web-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Konan \n Sub-directory fuzzer" "Nikto" "BlackWidow \n High-Powered Web Crawler/OWASP Fuzzer" "WPScan" "Back" "Quit")
+          options=("Konan" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
-                            "Konan \n Sub-directory fuzzer")
+                            "Konan")
                                 ./modules/webmods/konan.sh
                                 ;;
 
@@ -152,7 +152,7 @@ web_mods(){
                                 ./modules/webmods/nikto.sh
                                 ;;
 
-                            "BlackWidow \n High-Powered Web Crawler/OWASP Fuzzer")
+                            "BlackWidow")
                                 ./modules/webmods/widow.sh
                                 ;;
 
@@ -176,7 +176,7 @@ ex_mods(){
   figlet -f mini "Exploitation Modules"
   echo -e "${NC}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "TigerShark" "iSpy \n Scans & Exploits Microsft 'Blue' Vulns" "ShodanSploit \n Shodan searches from within the terminal" "Back" "Quit")
+        options=("ActiveReign" "TigerShark" "iSpy" "ShodanSploit" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -188,11 +188,11 @@ ex_mods(){
                                 ./modules/exmods/tiger.sh
                                 ;;
 
-			               "iSpy \n Scans & Exploits Microsft 'Blue' Vulns")
+			               "iSpy")
 			                    ./modules/exmods/ispy.sh
 			                    ;;
 
-                           "ShodanSploit \n Shodan searches from within the terminal")
+                           "ShodanSploit")
                                 ./modules/exmods/ssploit.sh
                                 ;;
 
@@ -211,15 +211,15 @@ webapps(){
   figlet -f mini "WebApp Modules"
   echo -e "${NC}"
   PS3='What tool would you like to use?'
-        options=("Sitadel \n Web-App Scanner" "wafw00f \n WAF Firewall Detection" "Back" "Quit")
+        options=("Sitadel" "wafw00f" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
-                        "Sitadel \n Web-App Scanner")
+                        "Sitadel")
                             ./modules/webapps/sitadel.sh
                             ;;
 
-                        "wafw00f \n WAF Firewall Detection")
+                        "wafw00f")
                             ./modules/webapps/wafw00f.sh
                             ;;
 
