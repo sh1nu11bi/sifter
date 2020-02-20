@@ -8,13 +8,21 @@ cred_mods(){
   figlet -f mini "Info-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "Back" "Quit")
+          options=("theHarvester" "Sniffing-Bear \n HoneyPot Detection" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
           select opt in "${options[@]}"
           do
                   case $opt in
                             "theHarvester")
                                 ./modules/credmods/harvester.sh
                                 ;;
+
+                            "Sniffing-Bear \n HoneyPot Detection")
+                                ./modules/credmods/s_bear.sh
+                                ;;
+
+#                            "Sunny-Honey \n ssh HoneyPot")
+#                                ./modules/credmods/sunny-hon.sh
+#                                ;;
 
                             "Back")
                                 ./modules/module.sh
@@ -168,13 +176,17 @@ ex_mods(){
   figlet -f mini "Exploitation Modules"
   echo -e "${NC}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "iSpy \n Scans & Exploits Microsft 'Blue' Vulns" "ShodanSploit \n Shodan searches from within the terminal" "Back" "Quit")
+        options=("ActiveReign" "TigerShark" "iSpy \n Scans & Exploits Microsft 'Blue' Vulns" "ShodanSploit \n Shodan searches from within the terminal" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
 			               "ActiveReign")
 			                    ./modules/exmods/ar3.sh
 			                    ;;
+
+                           "TigerShark")
+                                ./modules/exmods/tiger.sh
+                                ;;
 
 			               "iSpy \n Scans & Exploits Microsft 'Blue' Vulns")
 			                    ./modules/exmods/ispy.sh

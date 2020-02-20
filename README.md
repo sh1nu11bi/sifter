@@ -3,12 +3,12 @@
 </p>
 
 <p align="center">
-  <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a> 
+  <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-1.8(Stable)-red"</a>
-  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Emerald-brightgreen"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2-yellow"</a>
+  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Ruby-red"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
@@ -19,7 +19,7 @@ s1l3nt78
 * Because the first step, is enumeration *
 <br>
 <br>
-Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tools within different module sets in order to quickly perform recon tasks, check network firewalling, enumerate remote and local hosts, and scan for the 'blue' vulnerabilities within microsft and if unpatched, exploit them.  It uses tools like blackwidow and konan for webdir enumeration and attack surface mapping rapidly using ASM. 
+Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tools within different module sets in order to quickly perform recon tasks, check network firewalling, enumerate remote and local hosts, and scan for the 'blue' vulnerabilities within microsft and if unpatched, exploit them.  It uses tools like blackwidow and konan for webdir enumeration and attack surface mapping rapidly using ASM.
 <br>
 Gathered info is saved to the results folder, these output files can be easily parsed over to <a href="https://github.com/s1l3n7h0s7/TigerShark">TigerShark</a> in order to be utilised within your campaign. Or compiled for s final report to wrap up a penetration test.
 <br>
@@ -32,14 +32,14 @@ Gathered info is saved to the results folder, these output files can be easily p
 	<br>
 
 # Installation
-	
+
 	* This will download and install all required tools
 	*
 	$ git clone https://github.com/s1l3n7h0s7/sifter.git
-	$ cd sifter 
+	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
-	
+
 	* To download sifter with all tools and install them thereafter
 	*
 	$ wget https://github.com/s1l3n7h0s7/sifter/releases/tag/v1.5.2/Release.zip
@@ -47,7 +47,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 	$ cd sifter
 	$ chmod +x release-install.sh
 	$ ./release-install.sh
-	
+
 # Modules:
 
 	-Nmap '--> Gordon Lyon - https://nmap.org
@@ -59,36 +59,38 @@ Gathered info is saved to the results folder, these output files can be easily p
 	-WPScan '--> WPScanTeam - https://github.com/wpscanteam/wpscan
 
 	-Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
-	
-	-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper 
-	
+
+	-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
+
 	-theHarvester '--> laramies - https://github.com/laramies/theHarvester
-	
+
 	-Photon '--> s0md3v - https://github.com/s0md3v/Photon
-	
+
 	-Flan '--> Cloudflare - https://github.com/cloudflare/flan.git
-	
+
 	-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
-	
+
 	-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
-	
+
 	-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
 
 	-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
-	
+
 	-Konan '--> m4ll0k - https://github.com/m4ll0k/Konan
 
 	-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
 
 	-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
-	
+
 	-Sitadel '--> shenril - https://github.com/shenril/Sitadel
-	
+
 	-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
 
 	-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
-# Sifter Help Menu
 
+  -SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear'
+
+# Sifter Help Menu
 
 	$  -c will check the exsiting hosts in the hostlist
 	$  -e will open the files/host_list.txt file to be manually edited
@@ -113,10 +115,10 @@ Gathered info is saved to the results folder, these output files can be easily p
 	$  -y Runs the Yuki-Chan module against current host file
 	$  -u Updates sifter from Github
  	$  -h Help Menu
-	 
-**TODO 
+
+**TODO
 	- Incorporation of exploitative modules
-	
+
 Any suggestions for extra modules are welcome.
 Just submit an issue with your tool suggestion
-Otherwise for developers just submit a pull request 
+Otherwise for developers just submit a pull request

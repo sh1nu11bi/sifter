@@ -232,6 +232,21 @@ else
 	sudo pip install -r requirements.txt
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
+figlet -f mini "Checking for SniffingBear"
+if [[ -d '/opt/SniffingBear' ]]; then
+	echo -e "SniffingBear is already installed"
+else
+	echo -e "${ORNG}"
+	figlet -f mini "Installing SniffingBear"
+	echo -e "${NC}"
+	cd /opt/
+	sudo git clone https://github.com/MrSuicideParrot/SniffingBear.git
+	cd SniffingBear
+	sudo pip install -r requirements.txt
+fi
+
 echo -e "${RED}"
 figlet "Done! =D"
 echo -e "${NC}"
