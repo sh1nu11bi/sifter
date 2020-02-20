@@ -124,12 +124,11 @@ echo -e "${W}===================================================================
 echo -e "${ORNG}"
 figlet -f mini "Checking for Yuki-Chan"
 echo -e "${NC}"
-if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
+if [[ -d "/root/yuki" ]]; then
 	echo -e "${ORNG}Yuki-Chan is already installed.${NC}"
 else
 	cd /root
-	git clone https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest.git
-	sudo mv Yuki-Chan-The-Auto-Pentest yuki
+	git clone https://github.com/s1l3n7h0s7/yuki.git
 	cd yuki
 	   pip2 install -r requirements.txt
 	   pip3 install -r requirements.txt
