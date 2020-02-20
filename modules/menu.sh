@@ -40,6 +40,9 @@ PS3='What would you like to do?'
                     git fetch
                     git pull
                     sudo ./install.sh
+                    sudo chown $USER:$USER -R /opt/sifter
+                    sudo cp sifter -t /usr/sbin
+                    sudo chown $USER:$USER /usr/sbin/sifter
                     echo -e "${W}Done!${NC}"
                     ;;
 
