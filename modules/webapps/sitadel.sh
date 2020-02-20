@@ -65,6 +65,7 @@ use_cookie(){
 	fi
 }
 config(){
+	CONF='/opt/Sitadel/config.yml'
 	echo -e "${W}Please specify the config file to use, otherwise just hit enter to use default(/opt/Sitadel/config.yml)"
 	read CONF
 }
