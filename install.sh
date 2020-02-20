@@ -124,17 +124,18 @@ echo -e "${W}===================================================================
 echo -e "${ORNG}"
 figlet -f mini "Checking for Yuki-Chan"
 echo -e "${NC}"
-if [[ -d "/root/yuki" ]]; then
-	echo -e "${ORNG}Yuki-Chan is already installed.${NC}"
+if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
+    echo -e "${ORNG}Yuki-Chan is already installed.${NC}"
 else
-	cd /root
-	git clone https://github.com/s1l3n7h0s7/yuki.git
-	cd yuki
-	   pip2 install -r requirements.txt
-	   pip3 install -r requirements.txt
-	   chmod +x Module --recursive
+    cd /root
+    sudo git clone https://github.com/s1l3n7h0s7/Yuki-Chan-The-Auto-Pentest.git
+    sudo mv Yuki-Chan-The-Auto-Pentest yuki
+	d yuki
+	   sudo pip2 install -r requirements.txt
+	   sudo pip3 install -r requirements.txt
+	   sudo chmod +x Module --recursive
 	   sudo chown $USER:$USER Module --recursive
-	   chmod +x wafninja joomscan yuki.sh install-perl-module.sh
+	   sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
 	   sudo ./install-perl-module.sh
 fi
 
