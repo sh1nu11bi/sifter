@@ -66,10 +66,10 @@ use_cookie(){
 }
 config(){
 	
-	echo -e "${W}Please specify the config file to use, otherwise just hit enter to use default(/opt/Sitadel/config.yml)"
+	echo -e "${W}Please specify the config file to use, otherwise just hit enter to use default(/opt/Sitadel/config/config.yml)"
 	read CONF1
 	if [[ ${CONF1} == '' ]];then
-		CONF='/opt/Sitadel/config.yml'
+		CONF='/opt/Sitadel/config/config.yml'
 	else
 		CONF='${CONF1}'
 	fi
