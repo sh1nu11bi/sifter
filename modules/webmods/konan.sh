@@ -138,7 +138,7 @@ multi_method    //${MMA}
 sleep 1
 echo "================================================================================================="
 cd /opt/Konan
-python3 konon.py --url https://${TARGET} ${WLISTA} ${WLISTD} ${CEXTQ} ${EXT_RT} ${FRC} ${EXTA} ${ST_EXCL} ${WLSA} ${RDA} ${DIRECTS} ${BF_SUBQ} ${BF_SUB} ${MMA} -O output.json
+python3 konan.py --url https://${TARGET} ${WLISTA} ${WLISTD} ${CEXTQ} ${EXT_RT} ${FRC} ${EXTA} ${ST_EXCL} ${WLSA} ${RDA} ${DIRECTS} ${BF_SUBQ} ${BF_SUB} ${MMA} -O output.json
 mv output.json /opt/sifter/results/Konan/${TARGET}.json
 echo -e "${RED}Results have been saved to /opt/sifter/results/Konon/${NC}"
 echo "================================================================================================="
