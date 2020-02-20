@@ -9,8 +9,10 @@ PPL='\033[0;35m'
 RED='\033[0;31m'
 
 echo -e "${RED}"
-figlet "..SifteR.."
-echo -e "${ORNG}////////========s1l3nt78========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+figlet -f big "..SifteR.."
+echo -e "${PPL}"
+figlet -f small "s1l3nt78"
+echo -e "${ORNG}////////========RubY========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
 echo -e "${LP}==Hit Ctrl + c at any time to quit Sifter==${NC}"
 arg=$1
 PS3='What would you like to do?'
