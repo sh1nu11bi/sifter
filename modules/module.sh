@@ -105,15 +105,15 @@ vuln_mods(){
           do
                   case $opt in
                             "Flan")
-                                ./modules/webmods/flan.sh
+                                ./modules/vulnscanners/flan.sh
                                 ;;
 
                             "RapidScan")
-                                ./modules/webmods/rapidscan.sh
+                                ./modules/vulnscanners/rapidscan.sh
                                 ;;
 
                             "Yuki-Chan")
-                                ./modules/webmods/yuki.sh
+                                ./modules/vulnscanners/yuki.sh
                                 ;;
 
                             "Back")
