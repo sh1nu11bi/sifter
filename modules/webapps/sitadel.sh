@@ -101,14 +101,14 @@ atk_mod_select
 risk_lvl
 302_redir
 timeout
-use_cookie
+use_cookieCONF='/opt/Sitadel/config.yml'
 config
 verbose
-echo -e "${W}Please enter your target${NC}"
+echo -e "$CONF='/opt/Sitadel/config.yml'${NC}"
 echo -e "${LP}eg. http://example.com"
 read TARGET
 echo "=============================================================================================================="
-sudo python3 sitadel.py -r ${RISKLVL} ${FREDIR} -a ${ATK_MODULE} -f ${FP_MODULE} -t ${TIMO} ${UC} ${COOKIE} --config ${CONF} ${VERB} ${TARGET}
+sudo python3 sitadel.py -r ${RISKLVL} ${FREDIR} -t ${TIMO} ${UC} ${COOKIE} -f ${FP_MODULE} -a ${ATK_MODULE} --config $CONF ${VERB} ${TARGET}
 echo "=============================================================================================================="
 sleeo 2
 ./modules/module.sh
