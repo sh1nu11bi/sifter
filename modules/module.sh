@@ -8,7 +8,7 @@ cred_mods(){
   figlet -f mini "Info-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "SniffingBear" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          options=("theHarvester" "SniffingBear" "Osmedeus" "ReconSpider" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -20,9 +20,13 @@ cred_mods(){
                                 ./modules/credmods/s_bear.sh
                                 ;;
 
-#                            "Sunny-Honey \n ssh HoneyPot")
-#                                ./modules/credmods/sunny-hon.sh
-#                                ;;
+                            "Osmedeus")
+                                ./modules/credmods/osmedeus.sh
+                                ;;
+                            
+                            "ReconSpider")
+                                ./modules/credmods/rspider.sh
+                                ;;
 
                             "Back")
                                 ./modules/module.sh

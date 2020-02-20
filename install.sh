@@ -153,6 +153,19 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${ORNG}"
+figlet -f mini "Checking for ReconSpider"
+echo -e "${NC}"
+if [[ -d "/opt/reconspider" ]]; then
+	echo -e "${ORNG}ReconSpider is already installed.${NC}"
+else
+	cd /opt
+	git clone https://github.com/bhavsec/reconspider.git
+	cd reconspider
+	sudo python3 setup.py install
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
 figlet -f mini "Checking for Attack Surface Mapper"
 echo -e "${NC}"
 if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
@@ -245,6 +258,21 @@ else
 	sudo git clone https://github.com/MrSuicideParrot/SniffingBear.git
 	cd SniffingBear
 	sudo pip install -r requirements.txt
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${ORNG}"
+figlet -f mini "Checking for Osmedeus"
+if [[ -d '/opt/Osmedeus' ]]; then
+	echo -e "Osmedeus is already installed"
+else
+	echo -e "${ORNG}"
+	figlet -f mini "Installing Osmedeus"
+	echo -e "${NC}"
+	cd /opt/
+	git clone https://github.com/j3ssie/Osmedeus.git
+	cd Osmedeus
+	sudo ./install.sh
 fi
 
 echo -e "${RED}"
