@@ -65,7 +65,8 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
 		-TigerShark '--> s1l3nt78 - https://github.com/s1l3n7h0s7/TigerShark
 		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
-
+		-NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
+	
 	* Network Modules
 		-Nmap '--> Gordon Lyon - https://nmap.org
 		-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper

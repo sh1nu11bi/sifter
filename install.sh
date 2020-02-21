@@ -192,7 +192,7 @@ else
 	sudo python3 setup.py install
 	pip3 install prompt-toolkit==2.0.9 impacket
 	ar3 db help
-	cp ar3/config.json -t ~/.ar3
+	cp ar3/config.json -t /home/$USER/.ar3
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -260,6 +260,17 @@ else
 	git clone https://github.com/mablanco/docker-osmedeus.git
 	cd docker-osmedeus 
 	sudo docker build -t mablanco/osmedeus .
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for NekoBot${NC}"
+if [[ -d '/opt/NekoBotV1' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "NekoBot is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	git clone https://github.com/tegal1337/NekoBotV1.git
 fi
 
 echo -e "${W}===========================================================================================${NC}"
