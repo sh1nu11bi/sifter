@@ -181,19 +181,58 @@ ex_mods(){
         do
                 case $opt in
 			               "ActiveReign")
-			                    ./modules/exmods/ar3.sh
+			                    echo -e "${YLW}ActiveReign is a Network-Attack toolkit${NC}"
+                                echo -e "${W}Would you like to continue?(y/n)${NC}"
+                                read M_ANS
+                                if [[ ${M_ANS} == 'y' ]]; then
+                                    ./modules/exmods/ar3.sh
+                                else
+                                    exmods
+                                fi
 			                    ;;
 
                            "TigerShark")
-                                ./modules/exmods/tiger.sh
+                                echo -e "${YLW}TigerShark is a multi-tooled phishing framework${NC}"
+                                echo -e "${W}Would you like to continue?(y/n)${NC}"
+                                read M_ANS
+                                if [[ ${M_ANS} == 'y' ]]; then
+                                    ./modules/exmods/tiger.sh
+                                else
+                                    exmods
+                                fi
                                 ;;
 
 			               "iSpy")
-			                    ./modules/exmods/ispy.sh
+                                echo -e "${YLW}iSpy is a Microsft 'blue' vuln exploitation framework${NC}"
+                                echo -e "${W}Would you like to continue?(y/n)${NC}"
+                                read M_ANS
+                                if [[ ${M_ANS} == 'y' ]]; then
+                                    ./modules/exmods/ispy.sh
+                                else
+                                    exmods
+			                    fi
 			                    ;;
 
                            "ShodanSploit")
-                                ./modules/exmods/ssploit.sh
+                                echo -e "${YLW}ShodanSploit allows for shodan searches to be done in the terminal${NC}"
+                                echo -e "${W}Would you like to continue?(y/n)${NC}"
+                                read M_ANS
+                                if [[ ${M_ANS} == 'y' ]]; then
+                                    ./modules/exmods/ssploit.sh
+                                else
+                                    exmods
+			                    fi
+                                ;;
+
+                            "NekoBot")
+                                echo -e "${YLW}NekoBot is a Web-Shell exploitation framework${NC}"
+                                echo -e "${W}Would you like to continue?(y/n)${NC}"
+                                read M_ANS
+                                if [[ ${M_ANS} == 'y' ]]; then
+                                    ./modules/exmods/nekobot.sh
+                                else
+                                    exmods
+			                    fi
                                 ;;
 
 			               "Back")

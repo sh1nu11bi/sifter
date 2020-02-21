@@ -71,7 +71,7 @@ if [[ -d /opt/flan ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/s1l3n7h0s7/flan.git
+	git clone https://github.com/s1l3nt78/flan.git
 	cd flan
 	sudo docker build .
 	sleep 2
@@ -113,7 +113,7 @@ if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/s1l3n7h0s7/rapidscan.git
+	git clone https://github.com/s1l3nt78/rapidscan.git
 	cd rapidscan
 	chmod +x rapidscan.py rapidscan
 	sudo mv rapidscan -t /usr/sbin
@@ -127,7 +127,7 @@ if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
 	echo -e "${NC}"
 else
     cd /root
-    sudo git clone https://github.com/s1l3n7h0s7/Yuki-Chan-The-Auto-Pentest.git
+    sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git
     sudo mv Yuki-Chan-The-Auto-Pentest yuki
 	cd yuki
 	   sudo pip2 install -r requirements.txt
@@ -171,7 +171,7 @@ if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/s1l3n7h0s7/AttackSurfaceMapper.git
+	git clone https://github.com/s1l3nt78/AttackSurfaceMapper.git
 	cd AttackSurfaceMapper
 	   sudo python3 -m pip install -r requirements.txt
 	   sudo cp asm -t /usr/sbin
@@ -261,6 +261,17 @@ else
 	git clone https://github.com/mablanco/docker-osmedeus.git
 	cd docker-osmedeus 
 	sudo docker build -t mablanco/osmedeus .
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for NekoBot${NC}"
+if [[ -d '/opt/NekoBotV1' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "NekoBot is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	git clone https://github.com/tegal1337/NekoBotV1.git
 fi
 
 echo -e "${W}===========================================================================================${NC}"

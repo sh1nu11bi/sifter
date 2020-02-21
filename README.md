@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a>
-  <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
-  <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3nt78/sifter"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>
 <br>
   <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.2-yellow"</a>
   <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Ruby-red"</a>
@@ -35,14 +35,14 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 	* This will download and install all required tools
 	*
-	$ git clone https://github.com/s1l3n7h0s7/sifter.git
+	$ git clone https://github.com/s1l3nt78/sifter.git
 	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
 
 	* To download sifter with all tools and install them thereafter
 	*
-	$ wget https://github.com/s1l3n7h0s7/sifter/releases/tag/v1.5.2/Release.zip
+	$ wget https://github.com/s1l3nt78/sifter/releases/tag/v1.5.2/Release.zip
 	$ unzip Release.zip
 	$ cd sifter
 	$ chmod +x release-install.sh
@@ -63,9 +63,10 @@ Gathered info is saved to the results folder, these output files can be easily p
 	* Exploitation Modules (Beta)
 		-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
 		-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
-		-TigerShark '--> s1l3nt78 - https://github.com/s1l3n7h0s7/TigerShark
+		-TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
 		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
-
+		-NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
+	
 	* Network Modules
 		-Nmap '--> Gordon Lyon - https://nmap.org
 		-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
