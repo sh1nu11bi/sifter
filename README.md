@@ -35,14 +35,14 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 	* This will download and install all required tools
 	*
-	$ git clone https://github.com/s1l3n7h0s7/sifter.git
+	$ git clone https://github.com/s1l3nt78/sifter.git
 	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
 
 	* To download sifter with all tools and install them thereafter
 	*
-	$ wget https://github.com/s1l3n7h0s7/sifter/releases/tag/v1.5.2/Release.zip
+	$ wget https://github.com/s1l3nt78/sifter/releases/tag/v1.5.2/Release.zip
 	$ unzip Release.zip
 	$ cd sifter
 	$ chmod +x release-install.sh
