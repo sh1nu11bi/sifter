@@ -12,7 +12,7 @@ echo -e "${RED}"
 figlet -f big "..SifteR.."
 echo -e "${PPL}"
 figlet -f small "s1l3nt78"
-echo -e "${ORNG}////////========RubY========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+echo -e "${ORNG}////////========RubY_(v2.2)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
 echo -e "${LP}==Hit Ctrl + c at any time to quit Sifter==${NC}"
 arg=$1
 PS3='What would you like to do?'

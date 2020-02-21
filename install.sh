@@ -251,16 +251,20 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Osmedeus${NC}"
-if [[ -d '/opt/Osmedeus' ]]; then
+if [[ -d '/opt/docker-osmedeus' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Osmedeus is already installed"
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/j3ssie/Osmedeus.git
-	cd Osmedeus
-	sudo ./install.sh
+	git clone https://github.com/mablanco/docker-osmedeus.git
+	cd docker-osmedeus 
+	sudo docker build -t mablanco/osmedeus .
 fi
+
+echo -e "${W}===========================================================================================${NC}"
+# asnip
+go get github.com/harleo/asnip
 
 echo -e "${RED}"
 figlet "Done! =D"

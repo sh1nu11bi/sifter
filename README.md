@@ -7,7 +7,7 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2-yellow"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.2-yellow"</a>
   <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Ruby-red"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
@@ -49,46 +49,44 @@ Gathered info is saved to the results folder, these output files can be easily p
 	$ ./release-install.sh
 
 # Modules:
+	* Information Modules
+		-theHarvester '--> laramies - https://github.com/laramies/theHarvester
+		-Osmedeus '--> j3ssie - https://github.com/j3ssie/Osmedeus
+		-ReconSpider '--> bhavsec - https://github.com/bhavsec/reconspider
+		-SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear
+	
+	* Domain Modules
+		-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
+		-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
+		-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
+	
+	* Exploitation Modules (Beta)
+		-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
+		-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
+		-TigerShark '--> s1l3nt78 - https://github.com/s1l3n7h0s7/TigerShark
+		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
 
-	-Nmap '--> Gordon Lyon - https://nmap.org
+	* Network Modules
+		-Nmap '--> Gordon Lyon - https://nmap.org
+		-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
+		-aSnip '--> harleo - https://github.com/harleo/asnip
 
-	-Nikto '--> Sullo - https://github.com/sullo/nikto
+	* Vulnerability Scanners
+		-Flan '--> Cloudflare - https://github.com/cloudflare/flan
+		-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
+		-Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
 
-	-Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow
+	* Web-App Modules
+		-Photon '--> s0md3v - https://github.com/s0md3v/Photon
+		-Sitadel '--> shenril - https://github.com/shenril/Sitadel
+		-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
+	
+	* Web Modules
+		-Nikto '--> Sullo - https://github.com/sullo/nikto
+		-Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow
+		-WPScan '--> WPScanTeam - https://github.com/wpscanteam/wpscan
+		-Konan '--> m4ll0k - https://github.com/m4ll0k/Konan
 
-	-WPScan '--> WPScanTeam - https://github.com/wpscanteam/wpscan
-
-	-Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
-
-	-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
-
-	-theHarvester '--> laramies - https://github.com/laramies/theHarvester
-
-	-Photon '--> s0md3v - https://github.com/s0md3v/Photon
-
-	-Flan '--> Cloudflare - https://github.com/cloudflare/flan.git
-
-	-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
-
-	-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
-
-	-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
-
-	-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
-
-	-Konan '--> m4ll0k - https://github.com/m4ll0k/Konan
-
-	-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
-
-	-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
-
-	-Sitadel '--> shenril - https://github.com/shenril/Sitadel
-
-	-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
-
-	-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
-
-  -SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear'
 
 # Sifter Help Menu
 
