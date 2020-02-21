@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3n7h0s7/sifter"</a>
-  <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3n7h0s7/sifter"</a>
-  <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3n7h0s7/sifter"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/github/issues/s1l3nt78/sifter"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>
 <br>
   <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.2-yellow"</a>
   <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Ruby-red"</a>
@@ -63,7 +63,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 	* Exploitation Modules (Beta)
 		-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
 		-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
-		-TigerShark '--> s1l3nt78 - https://github.com/s1l3n7h0s7/TigerShark
+		-TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
 		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
 		-NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
 	
