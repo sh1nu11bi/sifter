@@ -76,7 +76,7 @@ net_mods(){
   figlet -f mini "Network-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Scan for Live-Hosts" "nMap" "Photon" "AttackSurfaceMapper" "Back"  "Quit")
+          options=("Scan for Live-Hosts" "nMap" "AttackSurfaceMapper" "Back"  "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -86,10 +86,6 @@ net_mods(){
 
                             "nMap")
                                 ./modules/netmods/nmap.sh
-                                ;;
-
-                            "Photon")
-                                ./modules/netmods/photon.sh
                                 ;;
 
                             "AttackSurfaceMapper")
@@ -215,7 +211,7 @@ webapps(){
   figlet -f mini "WebApp Modules"
   echo -e "${NC}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "wafw00f" "Back" "Quit")
+        options=("Sitadel" "wafw00f" "Photon" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -225,6 +221,10 @@ webapps(){
 
                         "wafw00f")
                             ./modules/webapps/wafw00f.sh
+                            ;;
+
+                        "Photon")
+                            /modules/webapps/photon.sh
                             ;;
 
                         "Back")
