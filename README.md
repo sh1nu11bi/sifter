@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://github.com/s1l3n7h0s7/sifter/blob/master/.vs/sifter.png" alt="" />
+ <img src="https://github.com/s1l3nt78/sifter/blob/master/.vs/sifter.png" alt="" />
 </p>
 
 <p align="center">
