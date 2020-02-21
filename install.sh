@@ -192,7 +192,8 @@ else
 	sudo python3 setup.py install
 	pip3 install prompt-toolkit==2.0.9 impacket
 	ar3 db help
-	cp ar3/config.json -t /home/$USER/.ar3
+	sudo cp ar3/config.json -t /home/$USER/.ar3
+	sudo chown $USER:$USER /home/$USER/.ar3
 fi
 
 echo -e "${W}===========================================================================================${NC}"
