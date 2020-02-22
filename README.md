@@ -40,14 +40,6 @@ Gathered info is saved to the results folder, these output files can be easily p
 	$ chmod +x install.sh
 	$ ./install.sh
 
-	* To download sifter with all tools and install them thereafter
-	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/tag/v1.5.2/Release.zip
-	$ unzip Release.zip
-	$ cd sifter
-	$ chmod +x release-install.sh
-	$ ./release-install.sh
-
 # Modules:
 	* Information Modules
 		-theHarvester '--> laramies - https://github.com/laramies/theHarvester
