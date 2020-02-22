@@ -46,19 +46,19 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-Osmedeus '--> j3ssie - https://github.com/j3ssie/Osmedeus
 		-ReconSpider '--> bhavsec - https://github.com/bhavsec/reconspider
 		-SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear
-	
+
 	* Domain Modules
 		-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
 		-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
 		-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
-	
+
 	* Exploitation Modules (Beta)
 		-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
 		-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
 		-TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
 		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
 		-NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
-	
+
 	* Network Modules
 		-Nmap '--> Gordon Lyon - https://nmap.org
 		-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
@@ -73,7 +73,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-Photon '--> s0md3v - https://github.com/s0md3v/Photon
 		-Sitadel '--> shenril - https://github.com/shenril/Sitadel
 		-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
-	
+
 	* Web Modules
 		-Nikto '--> Sullo - https://github.com/sullo/nikto
 		-Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow
@@ -83,29 +83,18 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 # Sifter Help Menu
 
-	$  -c will check the exsiting hosts in the hostlist
-	$  -e will open the files/host_list.txt file to be manually edited
- 	$  -s Runs the AttackSurfaceMapper module against target or host list
-	$  -a 'x.x.x.x' Target appended to host file
-	$  -m starts the program under the module menu with the existing host_list.txt
-	$  -b Runs Blackwidow against the existing hosts in the files/host_list.txt
-	$  -n Runs Nikto using the existing hosts in the files/host_list.txt
-	$  -v Runs the DnsTwist module against a given target
- 	$  -k Runs Konan against existing hosts in the files/host_list.txt
-	$  -w Runs WPScan against the existing hosts in the files/host_list.txt
-	$  -p Runs Nmap against the existing hosts in the files/host_list.txt
-	$  -t Runs theHarvester against target or host list
-	$  -r Runs that rapidscan module against a given target.
-	$  -f Runs the Flan modules against a given target
-	$  -s Runs the Sublist3r module against a given target
-	$  -i Runs the iSpy module against a given target
-	$  -d Runs the DnsTwist module against a target
-	$  -q Runs the DomainFuzz module against a given target
-	$  -z Runs the AttackSurfaceMapper module against a given target
-	$  -o Runs the Photon OSINT module against target or host list
-	$  -y Runs the Yuki-Chan module against current host file
-	$  -u Updates sifter from Github
- 	$  -h Help Menu
+  $ sifter	runs the programs bringing up the menu in a cli environment
+  $ sifter	-c will check the existing hosts in the hostlist
+  $ sifter	-a 'target-ip' appends the hostname/IP to host file
+  $ sifter	-e Opens the Exploitation Module
+  $ sifter	-i Opens the Info-based Module menu
+  $ sifter 	-d Opens the Domain Focused Modules
+  $ sifter 	-n Opens the Network Mapping Modules menu
+  $ sifter	-w Opens the Website Focused Modules
+  $ sifter	-wa Opens the Web-App Focused Module menu
+  $ sifter	-v Opens the Vulnerability Scanning Module Menu
+  $ sifter	-u Checks for/and installs updates
+  $ sifter	-h This Help Menu
 
 **TODO
 	- Incorporation of exploitative modules
