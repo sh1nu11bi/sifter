@@ -57,7 +57,7 @@ cred_mods(){
                                 ;;
 
                             "Quit")
-                                exit
+                                exit 0
                                 ;;
                     esac
             done
@@ -90,7 +90,7 @@ dom_mods(){
                                 ;;
 
                             "Quit")
-                                exit
+                                exit 0
                                 ;;
                     esac
             done
@@ -127,7 +127,7 @@ net_mods(){
                                 ;;
 
                             "Quit")
-                                exit
+                                exit 0
                                 ;;
                     esac
             done
@@ -160,7 +160,7 @@ vuln_mods(){
                                 ;;
 
                             "Quit")
-                                exit
+                                exit 0
                                 ;;
                     esac
             done
@@ -197,7 +197,7 @@ web_mods(){
                                 ;;
 
                             "Quit")
-                                exit
+                                exit 0 
                                 ;;
                     esac
             done
@@ -213,8 +213,8 @@ ex_mods(){
         select opt in "${options[@]}"
         do
                 case $opt in
-			               "ActiveReign")
-			                    echo -e "${YLW}ActiveReign is a Network-Attack toolkit${NC}"
+			   "ActiveReign")
+			        echo -e "${YLW}ActiveReign is a Network-Attack toolkit${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
                                 if [[ ${M_ANS} == 'y' ]]; then
@@ -222,7 +222,7 @@ ex_mods(){
                                 else
                                     exmods
                                 fi
-			                    ;;
+			        ;;
 
                            "TigerShark")
                                 echo -e "${YLW}TigerShark is a multi-tooled phishing framework${NC}"
@@ -235,7 +235,7 @@ ex_mods(){
                                 fi
                                 ;;
 
-			               "iSpy")
+			   "iSpy")
                                 echo -e "${YLW}iSpy is a Microsft 'blue' vuln exploitation framework${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
@@ -243,8 +243,8 @@ ex_mods(){
                                     ./modules/exmods/ispy.sh
                                 else
                                     exmods
-			                    fi
-			                    ;;
+			        fi
+			        ;;
 
                            "ShodanSploit")
                                 echo -e "${YLW}ShodanSploit allows for shodan searches to be done in the terminal${NC}"
@@ -254,10 +254,10 @@ ex_mods(){
                                     ./modules/exmods/ssploit.sh
                                 else
                                     exmods
-			                    fi
+			        fi
                                 ;;
 
-                            "NekoBot")
+                           "NekoBot")
                                 echo -e "${YLW}NekoBot is a Web-Shell exploitation framework${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
@@ -265,10 +265,10 @@ ex_mods(){
                                     ./modules/exmods/nekobot.sh
                                 else
                                     exmods
-			                    fi
+			        fi
                                 ;;
 
-			               "Back")
+			   "Back")
                                 modules
                                 ;;
 
@@ -366,13 +366,13 @@ ip_add() {
 }
 ip_q() {
   echo -e "${W}Would you like to add another?(y/n)${NC}"
-	read ANS
-	sleep 1
-	if [[ $ANS == y ]]; then
-	  ip_add
-	else
-	  menu
-	fi
+read ANS
+sleep 1
+if [[ $ANS == y ]]; then
+  ip_add
+else
+  menu
+fi
 }
 # List Editor
 list_editor(){
@@ -393,7 +393,7 @@ list_editor(){
 
                             "Add")
                                 echo -e "${W}Type the IP or hostname you would like to add${NC}"
-			                    sleep 5
+			        sleep 5
                                 read LTARGET
                                 echo "$LTARGET" >> files/host_list.txt
                                 echo -e "${W}Target Added!${NC}"
@@ -448,9 +448,9 @@ modules(){
                                 ex_mods
                                 ;;
 
-			                "WebApp-Focused Modules")
-			                    webapps
-			                    ;;
+			    "WebApp-Focused Modules")
+			        webapps
+			        ;;
 
                             "Quit")
                                 exit 0
@@ -486,12 +486,12 @@ menu(){
                         modules
                         ;;
 
-		            "Update")
-		                update
+		    "Update")
+		        update
                         ;;
 
                     "Quit")
-                        exit
+                        exit 0
                         ;;
                 esac
             done
@@ -520,7 +520,7 @@ while getopts "a:wandwiecvuh" options; do            	# Loop: Get the next optio
 			figlet -f mini "Checking for live targets..."
 			echo -e "${NC}"
 			./modules/netmods/check.sh
-            modules
+            		modules
 			;;
 
 		a)
@@ -581,9 +581,9 @@ while getopts "a:wandwiecvuh" options; do            	# Loop: Get the next optio
 			web_mods
 			;;
 
-    	u)
-      		update
-      		;;
+    		u)
+      			update
+      			;;
 
 		h)
 			echo -e "${RED}"
