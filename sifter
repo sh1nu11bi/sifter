@@ -391,14 +391,6 @@ list_editor(){
                                 list_editor
                                 ;;
 
-                            "List")
-                                echo -e "${YLW}"
-                                cat files/host_list.txt
-                                echo -e "${NC}"
-                                sleep 5
-                                list_editor
-                                ;;
-
                             "Add")
                                 echo -e "${W}Type the IP or hostname you would like to add${NC}"
 			                    sleep 5
@@ -470,10 +462,10 @@ modules(){
 # Menu
 menu(){
     echo -e "${ORNG}"
-    figlet -f big "..SifteR.."
+    figlet -f big "'..SifteR..'"
     echo -e "${LP}"
-    figlet -f small "s1l3nt78"
-    echo -e "${RED}////////========RubY_(v2.2)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    figlet -f small "*s1l3nt78*"
+    echo -e "${RED}////////========Topaz_(v2.5)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}==Hit Ctrl + c at any time to quit Sifter==${NC}"
     arg=$1
     echo -e "${ORNG}"
