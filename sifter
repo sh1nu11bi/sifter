@@ -66,7 +66,7 @@ dom_mods(){
   figlet -f mini "Domain-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "DomainFuzz" "Sublist3r" "Back" "Quit")
+          options=("DnsTwist" "DomainFuzz" "Sublist3r" "Armory" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -80,6 +80,10 @@ dom_mods(){
 
                             "Sublist3r")
                                 ./modules/dommods/sublist3r.sh
+                                ;;
+
+                            "Armory")
+                                ./modules/dommods/armory.sh
                                 ;;
 
                             "Back")

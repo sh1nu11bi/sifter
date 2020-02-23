@@ -278,6 +278,20 @@ echo -e "${W}===================================================================
 # asnip
 go get github.com/harleo/asnip
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Armory{NC}"
+if [[ -d '/opt/armory' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Armory is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	git clone https://github.com/depthsecurity/armory.git
+	cd armory
+	sudo python3 setup.py install
+	armory
+fi
+
 echo -e "${RED}"
 figlet "Done! =D"
 echo -e "${NC}"
