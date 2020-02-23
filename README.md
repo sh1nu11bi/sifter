@@ -7,7 +7,7 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.2-yellow"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.5-yellow"</a>
   <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Ruby-red"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
@@ -63,6 +63,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-Nmap '--> Gordon Lyon - https://nmap.org
 		-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
 		-aSnip '--> harleo - https://github.com/harleo/asnip
+		-Armory '--> DepthSecurity - https://github.com/depthsecurity/armory
 
 	* Vulnerability Scanners
 		-Flan '--> Cloudflare - https://github.com/cloudflare/flan
