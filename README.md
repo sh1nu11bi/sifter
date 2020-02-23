@@ -51,6 +51,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
 		-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
 		-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
+		-Armory '--> DepthSecurity - https://github.com/depthsecurity/armory
 
 	* Exploitation Modules (Beta)
 		-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
