@@ -7,8 +7,8 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.5-yellow"</a>
-  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Ruby-red"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.5-red"</a>
+  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Topaz-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
