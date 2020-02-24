@@ -277,8 +277,8 @@ ex_mods(){
         select opt in "${options[@]}"
         do
                 case $opt in
-			   "ActiveReign")
-			        echo -e "${YLW}ActiveReign is a Network-Attack toolkit${NC}"
+			              "ActiveReign")
+			                    echo -e "${YLW}ActiveReign is a Network-Attack toolkit${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
                                 if [[ ${M_ANS} == 'y' ]]; then
@@ -286,9 +286,9 @@ ex_mods(){
                                 else
                                     exmods
                                 fi
-			        ;;
+			                    ;;
 
-                           "TigerShark")
+                          "TigerShark")
                                 echo -e "${YLW}TigerShark is a multi-tooled phishing framework${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
@@ -299,7 +299,7 @@ ex_mods(){
                                 fi
                                 ;;
 
-			   "iSpy")
+			              "iSpy")
                                 echo -e "${YLW}iSpy is a Microsft 'blue' vuln exploitation framework${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
@@ -307,10 +307,10 @@ ex_mods(){
                                     ./modules/exmods/ispy.sh
                                 else
                                     exmods
-			        fi
-			        ;;
+			                    fi
+			                    ;;
 
-                           "ShodanSploit")
+                          "ShodanSploit")
                                 echo -e "${YLW}ShodanSploit allows for shodan searches to be done in the terminal${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
@@ -318,10 +318,10 @@ ex_mods(){
                                     ./modules/exmods/ssploit.sh
                                 else
                                     exmods
-			        fi
+			                    fi
                                 ;;
 
-                           "NekoBot")
+                          "NekoBot")
                                 echo -e "${YLW}NekoBot is a Web-Shell exploitation framework${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
@@ -329,10 +329,10 @@ ex_mods(){
                                     ./modules/exmods/nekobot.sh
                                 else
                                     exmods
-			        fi
+			                    fi
                                 ;;
 
-			   "Back")
+			              "Back")
                                 modules
                                 ;;
 

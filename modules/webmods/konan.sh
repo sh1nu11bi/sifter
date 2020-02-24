@@ -108,25 +108,6 @@ echo -e "${NC}"
 echo -e "${W}Please enter your target site(without <https://> protocol)${NC}"
 echo -e "${W}eg. example.com${NC}"
 read TARGET
-#PS3='Which mode would you like to run?'
- #       options=("WebScan" "Injection Point")
- #       select opt in "${options[@]}"
- #       do
- #           case $opt in
- #                   "WebScan")
- #                       word_list_q     //${WLISTD}
- #                       extention_q     //${EXT_RT}
- #                       ext_exclu       //${ST_EXCL}
- #                       word_list_split //${WLSA}
- #                       recursive_dir   //${DIRECTS}
- #                       brute_force     //${BF_SUB}
- #                       multi_method    //${MMA}
- #                       sleep 1
- #                       python3 konon.py --url ${TARGET} ${WLISTA} ${WLISTD} ${CEXTQ} ${EXT_RT} ${EXTA} ${ST_EXCL} ${WLSA} ${RDA} ${DIRECTS} ${BF_SUBQ} ${BF_SUB} ${MMA}
-  #                      ;;
-  #
-  #                  "Injection Point")
-                     
 echo "================================================================================================="
 word_list_q     //${WLISTD}
 extention_q     //${EXT_RT}
