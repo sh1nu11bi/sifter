@@ -106,4 +106,4 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 Any suggestions for extra modules are welcome.
 Just submit an issue with your tool suggestion
-Otherwise for developers just submit a pull request
+Otherwise for developers just submit a pull request.
