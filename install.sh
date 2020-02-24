@@ -307,7 +307,7 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for AapFinder{NC}"
+echo -e "${YLW}Checking for AapFinder${NC}"
 if [[ -d '/opt/aapfinder' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "AapFinder is already installed"
