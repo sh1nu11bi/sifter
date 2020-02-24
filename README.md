@@ -7,7 +7,7 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.5-red"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.8-red"</a>
   <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Topaz-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
@@ -46,6 +46,8 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-Osmedeus '--> j3ssie - https://github.com/j3ssie/Osmedeus
 		-ReconSpider '--> bhavsec - https://github.com/bhavsec/reconspider
 		-SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear
+		-Seeker '--> thewhiteh4t - https://github.com/thewhiteh4t/seeker
+		-Sherlock '--> Sherlock-Project - https://github.com/sherlock-project/sherlock
 
 	* Domain Modules
 		-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
@@ -75,6 +77,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-Photon '--> s0md3v - https://github.com/s0md3v/Photon
 		-Sitadel '--> shenril - https://github.com/shenril/Sitadel
 		-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
+		-AapFinder '--> Technowlogy-Pushpender - https://github.com/Technowlogy-Pushpender/aapfinder
 
 	* Web Modules
 		-Nikto '--> Sullo - https://github.com/sullo/nikto
