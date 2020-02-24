@@ -27,9 +27,12 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	-h This Help Menu" 1>&2
 }
 # Information Modules
+# Enterprise Target Info
 cred_mods(){
   echo -e "${RED}"
-  figlet -f mini "Info-Focused Modules"
+  figlet -f mini "Enterprise Info-Focused Modules"
+  echo -e "${LP}This module focuses on Enterprises and their online presence"
+  echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
           options=("theHarvester" "SniffingBear" "Osmedeus" "ReconSpider" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
@@ -62,6 +65,67 @@ cred_mods(){
                     esac
             done
             echo -e "${NC}"
+}
+# Individual Target Info
+phone_mods(){
+  echo -e "${RED}"
+  figlet -f mini "Target Info-Focused Modules"
+  echo -e "${LP}This module focuses on individual targets."
+  echo -e "${YLW}eg. Social media information, phone number information, etc."
+  echo -e "${ORNG}"
+  PS3='What tool would you like to use?'
+          options=("Phonia" "Seeker" "Sherlock" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          select opt in "${options[@]}"
+          do
+                  case $opt in
+                            "Seeker")
+                                ./modules/credmods/seeker.sh
+                                ;;
+
+                            "Sherlock")
+                                ./modules/credmods/sherlock.sh
+                                ;;
+
+                            "Back")
+                                modules
+                                ;;
+
+                            "Quit")
+                                exit 0
+                                ;;
+                    esac
+            done
+            echo -e "${NC}"
+}
+# Info Module-Category Selection
+info_mods(){
+    echo -e "${RED}"
+    figlet -f mini "Info-Focused Modules"
+    echo -e "${ORNG}"
+    PS3='Which module category would you like to use?'
+            options=("Enterprise Focus" "Individual FocusS" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+            select opt in "${options[@]}"
+            do
+                    case $opt in
+                            "Enterprise Focus")
+                                cred_mods
+                                ;;
+
+                            "Individual Focus")
+                                phone_mods
+                                ;;
+                            
+                            "Back")
+                                modules
+                                ;;
+
+                            "Quit")
+                                exit 0
+                                ;;
+                    esac
+            done
+        echo -e "${NC}"
+                
 }
 # Domain Modules
 dom_mods(){
@@ -285,7 +349,7 @@ webapps(){
   figlet -f mini "WebApp Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "wafw00f" "Photon" "Back" "Quit")
+        options=("Sitadel" "wafw00f" "Photon" "AapFinder" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -298,7 +362,11 @@ webapps(){
                             ;;
 
                         "Photon")
-                            /modules/webapps/photon.sh
+                            ./modules/webapps/photon.sh
+                            ;;
+
+                        "AapFinder")
+                            ./modules/webapps/aapfinder.sh
                             ;;
 
                         "Back")
@@ -425,7 +493,7 @@ modules(){
             do
                     case $opt in
                             "Info-Focused Modules")
-                                cred_mods
+                                info_mods
                                 ;;
 
                             "Domain-Focused Modules")
@@ -512,7 +580,7 @@ update(){
 }
 
 cd /opt/sifter
-while getopts "a:wandwiecvuh" options; do            	# Loop: Get the next option;
+while getopts "a:wandwirecvuh" options; do            	# Loop: Get the next option;
 	case "${options}" in                                # use silent error checking;
                                                         # option a takes 1 arguments.
 		c)
@@ -520,7 +588,7 @@ while getopts "a:wandwiecvuh" options; do            	# Loop: Get the next optio
 			figlet -f mini "Checking for live targets..."
 			echo -e "${NC}"
 			./modules/netmods/check.sh
-            		modules
+            modules
 			;;
 
 		a)
@@ -581,9 +649,17 @@ while getopts "a:wandwiecvuh" options; do            	# Loop: Get the next optio
 			web_mods
 			;;
 
-    		u)
-      			update
-      			;;
+        r)
+            echo -e "${LP}"
+            figlet -f mini "Sifter Results"
+            echo -e "${NC}"
+            cd /opt/sifter/results
+            xterm ls
+            ;;
+
+        u)
+            update
+      		;;
 
 		h)
 			echo -e "${RED}"

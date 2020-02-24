@@ -4,7 +4,7 @@ NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
 
-sudo apt-get install -y python python-pip python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f
+sudo apt-get install -y python python-pip graphviz python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
@@ -279,7 +279,7 @@ echo -e "${W}===================================================================
 go get github.com/harleo/asnip
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Armory{NC}"
+echo -e "${YLW}Checking for Armory${NC}"
 if [[ -d '/opt/armory' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Armory is already installed"
@@ -290,6 +290,35 @@ else
 	cd armory
 	sudo python3 setup.py install
 	armory
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Sherlock${NC}"
+if [[ -d '/opt/sherlock' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Sherlock is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/thewhiteh4t/seeker.git
+	cd seeker
+	sudo chmod 777 install.sh
+	./install.sh
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for AapFinder{NC}"
+if [[ -d '/opt/aapfinder' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "AapFinder is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/Technowlogy-Pushpender/aapfinder.git
+	sudo chown $USER:$USER -R aapfinder
+	cd aapfinder
+	chmod +x aapfinder.py
+	touch targets.txt
 fi
 
 echo -e "${RED}"
