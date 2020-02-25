@@ -42,11 +42,14 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 # Modules:
 	* Information Modules
+	  = Enterprise Focued	
 		-theHarvester '--> laramies - https://github.com/laramies/theHarvester
 		-Osmedeus '--> j3ssie - https://github.com/j3ssie/Osmedeus
 		-ReconSpider '--> bhavsec - https://github.com/bhavsec/reconspider
 		-SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear
-		-Seeker '--> thewhiteh4t - https://github.com/thewhiteh4t/seeker
+	  
+	  = Indivual Target Focused
+	  	-Seeker '--> thewhiteh4t - https://github.com/thewhiteh4t/seeker
 		-Sherlock '--> Sherlock-Project - https://github.com/sherlock-project/sherlock
 
 	* Domain Modules

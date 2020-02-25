@@ -15,7 +15,7 @@ if [[ -d /opt/sifter ]]; then
 else
 	pwd && cd ..
 	sudo mv sifter /opt/sifter
-	sudo chown $USER:$USER /opt/sifter --recursive 
+	sudo chown $USER:$USER -R /opt/sifter 
 	cd /opt/sifter
     sudo cp sifter /usr/sbin/sifter
 	sudo chmod +x /opt/sifter/sifter /usr/sbin/sifter
@@ -321,6 +321,7 @@ else
 	touch targets.txt
 fi
 
+sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
 echo -e "${RED}"
 figlet "Done! =D"
 echo -e "${NC}"

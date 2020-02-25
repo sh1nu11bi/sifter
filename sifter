@@ -424,7 +424,7 @@ check_hosts(){
             sleep 5
             menu
 }
-# List Arguments for Options Below
+# List Argument Options Settings Below
 ip_add() {
   echo -e "${W}Please enter your target:${NC}"
   read IP_ANS
@@ -461,7 +461,7 @@ list_editor(){
 
                             "Add")
                                 echo -e "${W}Type the IP or hostname you would like to add${NC}"
-			        sleep 5
+			                    sleep 5
                                 read LTARGET
                                 echo "$LTARGET" >> files/host_list.txt
                                 echo -e "${W}Target Added!${NC}"
@@ -516,9 +516,9 @@ modules(){
                                 ex_mods
                                 ;;
 
-			    "WebApp-Focused Modules")
-			        webapps
-			        ;;
+			                "WebApp-Focused Modules")
+			                    webapps
+			                    ;;
 
                             "Quit")
                                 exit 0
@@ -533,7 +533,7 @@ menu(){
     figlet -f big "'..SifteR..'"
     echo -e "${LP}"
     figlet -f small "*s1l3nt78*"
-    echo -e "${RED}////////========TopaZ_(v2.5)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}////////========TopaZ_(v2.8)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}==Hit Ctrl + c at any time to quit Sifter==${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -554,8 +554,8 @@ menu(){
                         modules
                         ;;
 
-		    "Update")
-		        update
+		            "Update")
+		                update
                         ;;
 
                     "Quit")
@@ -565,7 +565,7 @@ menu(){
             done
     echo -e "${NC}"
 }
-# Update
+# Update Arg
 update(){
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
