@@ -124,4 +124,4 @@ mv output.json /opt/sifter/results/Konan/${TARGET}.json
 echo -e "${RED}Results have been saved to /opt/sifter/results/Konon/${NC}"
 echo "================================================================================================="
 cd /opt/sifter
-modules
+sifter -m

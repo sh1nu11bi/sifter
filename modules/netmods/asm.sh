@@ -70,4 +70,4 @@ if [[ ${SC1} == y ]];then
 				python3 asm.py -t ${TARGET} -ln -w ${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH}
 
 cd /opt/sifter
-modules
+sifter -m

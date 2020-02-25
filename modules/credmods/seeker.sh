@@ -29,5 +29,5 @@ echo -e "${YLW}eg. ifwfhw9w8f.ngrok.io/nearyou/${NC}"
 echo -e "${W}===========================================================================${NC}"
 sleep 10
 cd /opt/sifter
-modules
+sifter -m
 

@@ -580,7 +580,7 @@ update(){
 }
 
 cd /opt/sifter
-while getopts "a:wandwirecvuh" options; do            	# Loop: Get the next option;
+while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next option;
 	case "${options}" in                                # use silent error checking;
                                                         # option a takes 1 arguments.
 		c)
@@ -667,6 +667,13 @@ while getopts "a:wandwirecvuh" options; do            	# Loop: Get the next opti
 			echo -e "${NC}"
 			usage
 			;;
+
+        m) 
+            echo -e "${RED}"
+            figlet -f mini "Sifter Modules"
+            echo -e "${NC}"
+            modules
+            ;;
 
 	esac
 done

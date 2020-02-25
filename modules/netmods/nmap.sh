@@ -16,26 +16,31 @@ multi() {
 					if [[ $REPLY == y ]]; then
 						sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
 						sleep 5
-						modules
+						cd /opt/sifter
+						sifter -m
 					else
-						modules
+						cd /opt/sifter
+						sifter -m
 					fi
 					;;
 
 				"Common Vulnerabilities")
 					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
 					sleep 5
-					modules
+					cd /opt/sifter
+					sifter -m
 					;;
 
 				"UDP Port Scan")
 					sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
 					sleep 5
-					modules
+					cd /opt/sifter
+					sifter -m
 					;;
 
 				"Back")
-					modules
+					cd /opt/sifter
+					sifter -m
 					;;
 				esac
 			done
@@ -50,17 +55,18 @@ single() {
 					echo -e "${W}Would you like to continue?(y/n)${NC}"
 					read REPLY
 					if [[ $REPLY == y ]]; then
-					echo -e "${YLW}"
-					cat files/host_list.txt
-					echo -e "${NC}"
-					echo -e "${W}Please copy and paste in your target${NC}"
-					read TARGET
-					echo "================================================================================================="
-					sudo nmap -p- -Pn -O -A ${TARGET}
-					echo "================================================================================================="
-					modules
+						echo -e "${YLW}"
+						cat files/host_list.txt
+						echo -e "${NC}"
+						echo -e "${W}Please copy and paste in your target${NC}"
+						read TARGET
+						echo "================================================================================================="
+						sudo nmap -p- -Pn -O -A ${TARGET}
+						echo "================================================================================================="
+						cd /opt/sifter
+						sifter -m
 					else
-					./modules/netmods/nmap.sh
+						./modules/netmods/nmap.sh
 					fi
 					;;
 
@@ -73,7 +79,8 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -sS -Pn -O -A -sV ${TARGET}
 					echo "================================================================================================="
-					modules
+					cd /opt/sifter
+					sifter -m
 					;;
 
 				"UDP Port Scan")
@@ -85,11 +92,13 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -sU -Pn -O -A ${TARGET}
 					echo "================================================================================================="
-					modules
+					cd /opt/sifter
+					sifter -m
 					;;
 
 				"Back")
-					modules
+					cd /opt/sifter
+					sifter -m
 					;;
 			esac
 		done
@@ -111,7 +120,8 @@ do
 			;;
 
 		"Back")
-			modules
+			cd /opt/sifter
+			sifter -m
 			;;
 	esac
 done

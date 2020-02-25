@@ -13,4 +13,5 @@ echo -e "${NC}"
 python NekoBot.py
 sleep 1
 echo "=========================================================================="
-modules
+cd /opt/sifter
+sifter -m

@@ -110,4 +110,4 @@ sudo python3 sitadel.py -r ${RISKLVL} ${FREDIR} -t ${TIMO} ${UC} ${COOKIE} -f ${
 echo "=============================================================================================================="
 sleep 2
 cd /opt/sifter
-modules
+sifter -m

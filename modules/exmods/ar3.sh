@@ -238,7 +238,7 @@ PS3='What would you like to do?'
 
                     "Domain Pass Spraying or Bruting")
                         spray
-                        ./modules/exmods/ar3.#!/bin/sh
+                        ./modules/exmods/ar3.sh
                         ;;
 
                     "LDAP Queires on Domain")
@@ -265,3 +265,6 @@ PS3='What would you like to do?'
                         ;;
                 esac
         done
+        
+cd /opt/sifter
+sifter -m

@@ -58,7 +58,8 @@ do
             ;;
 
         "Back")
-            modules
+            cd /opt/sifter
+            sifter -m
             ;;
     esac
 done

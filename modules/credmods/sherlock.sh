@@ -50,4 +50,4 @@ sudo python3 serlock.py --verbose ${RANK} -fo /opt/sifter/results/Sherlock ${TOR
 echo -e "${YLW}Results have been saved to /opt/sifter/results/Sherlock"
 echo -e "${W}===========================================================================${NC}"
 cd /opt/sifter
-modules
+sifter -m

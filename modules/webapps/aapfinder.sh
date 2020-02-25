@@ -54,4 +54,4 @@ python3 aapfinder.py --targets targets.txt -d ${DELAY} ${THREAD} -t ${TYPE} -o /
 echo -e "${YLW}Results have been saved to /opt/sifter/results/AapFinder/${OUTPUT}.txt${NC}"
 echo -e "${W}===========================================================================${NC}"
 cd /opt/sifter
-modules
+sifter -m

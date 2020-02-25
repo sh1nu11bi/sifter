@@ -14,4 +14,5 @@ cd /opt/shodansploit
 sudo python shodansploit.py
 sleep 2
 cd /opt/sifter
-modules
+cd /opt/sifter
+sifter -m
