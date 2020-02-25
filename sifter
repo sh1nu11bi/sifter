@@ -103,7 +103,7 @@ info_mods(){
     figlet -f mini "Info-Focused Modules"
     echo -e "${ORNG}"
     PS3='Which module category would you like to use?'
-            options=("Enterprise Focus" "Individual FocusS" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+            options=("Enterprise Focus" "Individual Focus" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
             select opt in "${options[@]}"
             do
                     case $opt in

@@ -24,4 +24,4 @@ read TARGET
 sleep 1
 cd /opt/Sublist3r
 python sublist3r.py -d ${TARGET} -b -v -t 8 -o /opt/sifter/results/Sublist3r
-./modules/module.sh
+modules

@@ -31,4 +31,4 @@ if (( $OPTIND == 1 )); then				# if no option is passed
 	echo -e "${ORNG}Done${NC}"
 fi
 cd /opt/sifter
-./modules/module.sh
+modules

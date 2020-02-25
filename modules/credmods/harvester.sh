@@ -41,4 +41,4 @@ if [[ ${ANS} == s ]]; then
 else
     multi_scan
 fi
-./modules/module.sh
+modules

@@ -123,4 +123,5 @@ sudo python3 konan.py --url https://${TARGET} ${WLISTA} ${WLISTD} ${CEXTQ} ${EXT
 mv output.json /opt/sifter/results/Konan/${TARGET}.json
 echo -e "${RED}Results have been saved to /opt/sifter/results/Konon/${NC}"
 echo "================================================================================================="
-./modules/module.sh
+cd /opt/sifter
+modules

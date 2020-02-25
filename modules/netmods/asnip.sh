@@ -17,4 +17,4 @@ sleep 2
 echo "===================================================================="
 sleep 2
 cd /opt/sifter
-./modules/module.sh
+modules

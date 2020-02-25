@@ -13,4 +13,4 @@ echo -e "${NC}"
 python NekoBot.py
 sleep 1
 echo "=========================================================================="
-./modules/module.sh
+modules

@@ -29,6 +29,6 @@ else
 		./tigershark
 	else
 		cd /opt/sifter
-		./modules/module.sh
+		modules
 	fi
 fi 

@@ -257,7 +257,7 @@ PS3='What would you like to do?'
                         ;;
 
                     "Back")
-                        ./modules/module.sh
+                        modules
                         ;;
 
                     "Quit")

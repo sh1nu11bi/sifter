@@ -69,4 +69,5 @@ if [[ ${SC1} == y ]];then
 				echo "Please wait...."
 				python3 asm.py -t ${TARGET} -ln -w ${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH}
 
-./modules/module.sh
+cd /opt/sifter
+modules

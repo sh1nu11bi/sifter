@@ -36,7 +36,7 @@ do
 			echo -e "${LP}Running Blackwidow with the following command, 'blackwidow -u $TARGET1 -l $TARGET2 -s $TARGET3 -v y'${NC}"
 				sleep 5
 			sudo blackwidow -u ${TARGET1} -l ${TARGET2} -s ${TARGET3} -v y | tee /opt/sifter/results/Blackwidow/${TARGET}.txt
-            ./modules/widow.sh
+            ./modules/webmods/widow.sh
             ;;
 
         "Fuzz all GET parameters for common OWASP Vulns (Verbose enabled)")
@@ -54,11 +54,11 @@ do
 	    echo -e "${W}Running injectx script with the following argument, ${LP}'injectx.py -u ${TARGETDMN}${TARGETEXT} -v y'${NC}"
 	    sleep 5
             sudo injectx.py -u ${TARGET} -v y | tee /opt/sifter/results/Blackwidow/${TARGET}_owaspVulns.txt
-            ./modules/widow.sh
+            ./modules/webmods/widow.sh
             ;;
 
         "Back")
-            ./modules/module.sh
+            modules
             ;;
     esac
 done

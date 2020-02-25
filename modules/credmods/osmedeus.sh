@@ -42,4 +42,4 @@ sudo docker exec -it osmedeus grep password /root/.osmedeus/client.conf
 #sudo python3 osmedeus.py --report full ${TARGET} --slow "all" --auth="${USERUI}:${PASSUI}" -t /opt/sifter/results/Osmedeus
 sleep 2
 cd /opt/sifter
-./modules/module.sh
+modules

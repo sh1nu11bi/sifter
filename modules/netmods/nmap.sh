@@ -16,26 +16,26 @@ multi() {
 					if [[ $REPLY == y ]]; then
 						sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
 						sleep 5
-						./modules/module.sh
+						modules
 					else
-						./modules/nmap.sh
+						modules
 					fi
 					;;
 
 				"Common Vulnerabilities")
 					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
 					sleep 5
-					./modules/module.sh
+					modules
 					;;
 
 				"UDP Port Scan")
 					sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
 					sleep 5
-					./modules/module.sh
+					modules
 					;;
 
 				"Back")
-					./modules/module.sh
+					modules
 					;;
 				esac
 			done
@@ -58,9 +58,9 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -p- -Pn -O -A ${TARGET}
 					echo "================================================================================================="
-					./modules/module.sh
+					modules
 					else
-					./modules/nmap.sh
+					./modules/netmods/nmap.sh
 					fi
 					;;
 
@@ -73,7 +73,7 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -sS -Pn -O -A -sV ${TARGET}
 					echo "================================================================================================="
-					./modules/module.sh
+					modules
 					;;
 
 				"UDP Port Scan")
@@ -85,11 +85,11 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -sU -Pn -O -A ${TARGET}
 					echo "================================================================================================="
-					./modules/module.sh
+					modules
 					;;
 
 				"Back")
-					./modules/module.sh
+					modules
 					;;
 			esac
 		done
@@ -111,7 +111,7 @@ do
 			;;
 
 		"Back")
-			./modules/module.sh
+			modules
 			;;
 	esac
 done

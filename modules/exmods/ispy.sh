@@ -10,4 +10,4 @@ figlet -f mini "iSpy"
 echo -e "${NC}"
 ./opt/iSpy/ispy
 sleep 2
-./modules/module.sh
+modules

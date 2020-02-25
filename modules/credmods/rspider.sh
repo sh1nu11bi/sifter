@@ -14,4 +14,4 @@ cd /opt/reconspider
 sudo python3 reconspider.py
 sleep 2
 cd /opt/sifter
-./modules/module.sh
+modules
