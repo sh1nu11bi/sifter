@@ -321,6 +321,17 @@ else
 	touch targets.txt
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Dark Star${NC}"
+if [[ -d '/opt/Dark-Star' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Dark Star is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/s1l3nt78/Dark-Star.git
+fi
+
 sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
 echo -e "${RED}"
 figlet "Done! =D"

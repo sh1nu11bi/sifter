@@ -42,12 +42,15 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 # Modules:
 	* Information Modules
+	  = Enterprised Focused	
 		-theHarvester '--> laramies - https://github.com/laramies/theHarvester
 		-Osmedeus '--> j3ssie - https://github.com/j3ssie/Osmedeus
 		-ReconSpider '--> bhavsec - https://github.com/bhavsec/reconspider
 		-SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear
+	  = Individual Focused
 		-Seeker '--> thewhiteh4t - https://github.com/thewhiteh4t/seeker
 		-Sherlock '--> Sherlock-Project - https://github.com/sherlock-project/sherlock
+
 
 	* Domain Modules
 		-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
@@ -55,18 +58,26 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
 		-Armory '--> DepthSecurity - https://github.com/depthsecurity/armory
 
+
 	* Exploitation Modules (Beta)
+	  = MS Exploiters
 		-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
 		-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
-		-TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
-		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
+		
+	  = Website Exploiters	
+		-Dark Star '--> s1l3nt78 - https://github.com/s1l3nt78/Dark-Star
 		-NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
+
+	  -TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
+	  -ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
+
 
 	* Network Modules
 		-Nmap '--> Gordon Lyon - https://nmap.org
 		-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
 		-aSnip '--> harleo - https://github.com/harleo/asnip
 		-Armory '--> DepthSecurity - https://github.com/depthsecurity/armory
+
 
 	* Vulnerability Scanners
 		-Flan '--> Cloudflare - https://github.com/cloudflare/flan

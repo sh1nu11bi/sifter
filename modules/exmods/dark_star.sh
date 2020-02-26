@@ -8,10 +8,10 @@ LBBLUE='\e[104m'
 RED='\033[0;31m'
 
 echo -e "${ORNG}"
-figlet -f mini "ShodanSploit"
+figlet -f mini "Dark Star"
 echo -e "${NC}"
-cd /opt/shodansploit
-sudo python shodansploit.py
+cd /opt/darkstar
+python darkstar.py
 sleep 2
 cd /opt/sifter
 sifter -m
