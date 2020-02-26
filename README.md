@@ -7,8 +7,8 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.8-red"</a>
-  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Topaz-yellowgreen"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-3-red"</a>
+  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Amethyst-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
@@ -69,7 +69,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
 	  
 	  = Exploit Searching
-		-FindSploit '--> 1N3 - https://github.com/1N3/Findsploit
+		-FindSploit '--> xerosecurity - https://github.com/1N3/Findsploit
 		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
 	  
 	  -TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
