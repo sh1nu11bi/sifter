@@ -653,7 +653,7 @@ menu(){
     figlet -f big "'..SifteR..'"
     echo -e "${LP}"
     figlet -f small "*s1l3nt78*"
-    echo -e "${RED}////////========TopaZ_(v2.8)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}////////========Amethys7_(v3)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}==Hit Ctrl + c at any time to quit Sifter==${NC}"
     arg=$1
     echo -e "${ORNG}"
