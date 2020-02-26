@@ -43,65 +43,75 @@ Gathered info is saved to the results folder, these output files can be easily p
 # Modules:
 	* Information Modules
 	  = Enterprise Focued	
-		-theHarvester '--> laramies - https://github.com/laramies/theHarvester
-		-Osmedeus '--> j3ssie - https://github.com/j3ssie/Osmedeus
-		-ReconSpider '--> bhavsec - https://github.com/bhavsec/reconspider
-		-SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear
+		-theHarvester '--> laramies - <a href="https://github.com/laramies/theHarvester">https://github.com/laramies/theHarvester</a>
+		-Osmedeus '--> j3ssie - <a href="https://github.com/j3ssie/Osmedeus">https://github.com/j3ssie/Osmedeus</a>
+		-ReconSpider '--> bhavsec - <a href="https://github.com/bhavsec/reconspider">https://github.com/bhavsec/reconspider</a>
+		-SniffingBear '--> MrSuicideParrot - <a href="https://github.com/MrSuicideParrot/SniffingBear">https://github.com/MrSuicideParrot/SniffingBear</a>
 	  
 	  = Indivual Target Focused
-	  	-Seeker '--> thewhiteh4t - https://github.com/thewhiteh4t/seeker
-		-Sherlock '--> Sherlock-Project - https://github.com/sherlock-project/sherlock
+	  	-Seeker '--> thewhiteh4t - <a href="https://github.com/thewhiteh4t/seeker">https://github.com/thewhiteh4t/seeker</a>
+		-Sherlock '--> Sherlock-Project - <a href="https://github.com/sherlock-project/sherlock">https://github.com/sherlock-project/sherlock</a>
 
 	* Domain Modules
-		-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
-		-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
-		-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
-		-Armory '--> DepthSecurity - https://github.com/depthsecurity/armory
+		-Sublist3r '--> aboul3la - <a href="https://github.com/aboul3la/Sublist3r">https://github.com/aboul3la/Sublist3r</a>
+		-DnsTwist '--> elceef - <a href="https://github.com/elceef/dnstwist">https://github.com/elceef/dnstwist</a>
+		-DomainFuzz '--> monkeym4ster - <a href="https://github.com/monkeym4ster/DomainFuzz">https://github.com/monkeym4ster/DomainFuzz</a>
+		-Armory '--> DepthSecurity - <a href="https://github.com/depthsecurity/armory">https://github.com/depthsecurity/armory</a>
 
 	* Exploitation Modules (Beta)
-		-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
-		-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
-		-TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
-		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
-		-NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
+		-ActiveReign '--> m8r0wn - <a href="https://github.com/m8r0wn/ActiveReign">https://github.com/m8r0wn/ActiveReign</a>
+		-iSpy '--> Cyb0r9 - <a href="https://github.com/Cyb0r9/ispy">https://github.com/Cyb0r9/ispy</a>
+		-TigerShark '--> s1l3nt78 - <a href="https://github.com/s1l3nt78/TigerShark">https://github.com/s1l3nt78/TigerShark</a>
+		-ShodanSploit '--> ShodanSploit - <a href="https://github.com/shodansploit/shodansploit">https://github.com/shodansploit/shodansploit</a>
+		-NekoBot '--> tegal1337 - <a href="https://github.com/tegal1337/NekoBotV1">https://github.com/tegal1337/NekoBotV1</a>
 
 	* Network Modules
-		-Nmap '--> Gordon Lyon - https://nmap.org
-		-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
-		-aSnip '--> harleo - https://github.com/harleo/asnip
-		-Armory '--> DepthSecurity - https://github.com/depthsecurity/armory
+		-Nmap '--> Gordon Lyon - <a href="https://nmap.org">https://nmap.org</a>
+		-AttackSurfaceMapper '--> Superhedgy - <a href="https://github.com/superhedgy/AttackSurfaceMapper">https://github.com/superhedgy/AttackSurfaceMapper</a>
+		-aSnip '--> harleo - <a href="https://github.com/harleo/asnip">https://github.com/harleo/asnip</a>
+		-Armory '--> DepthSecurity - <a href="https://github.com/depthsecurity/armory">https://github.com/depthsecurity/armory</a>
 
 	* Vulnerability Scanners
-		-Flan '--> Cloudflare - https://github.com/cloudflare/flan
-		-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
-		-Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
-
+		-Flan '--> Cloudflare - <a href="https://github.com/cloudflare/flan">https://github.com/cloudflare/flan</a>
+		-Rapidscan '--> skavngr - <a href="https://github.com/skavngr/rapidscan">https://github.com/skavngr/rapidscan</a>
+		-Yuki-Chan '--> Yukinoshita47 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest</a>
 	* Web-App Modules
-		-Photon '--> s0md3v - https://github.com/s0md3v/Photon
-		-Sitadel '--> shenril - https://github.com/shenril/Sitadel
-		-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
-		-AapFinder '--> Technowlogy-Pushpender - https://github.com/Technowlogy-Pushpender/aapfinder
+		-Photon '--> s0md3v - <a href="https://github.com/s0md3v/Photon">https://github.com/s0md3v/Photon</a>
+		-Sitadel '--> shenril - <a href="https://github.com/shenril/Sitadel">https://github.com/shenril/Sitadel</a>
+		-wafw00f '--> EnableSecurity - <a href="https://github.com/EnableSecurity/wafw00f">https://github.com/EnableSecurity/wafw00f</a>
+		-AapFinder '--> Technowlogy-Pushpender - <a href="https://github.com/Technowlogy-Pushpender/aapfinder">https://github.com/Technowlogy-Pushpender/aapfinder</a>
 
 	* Web Modules
-		-Nikto '--> Sullo - https://github.com/sullo/nikto
-		-Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow
-		-WPScan '--> WPScanTeam - https://github.com/wpscanteam/wpscan
-		-Konan '--> m4ll0k - https://github.com/m4ll0k/Konan
+		-Nikto '--> Sullo - <a href="https://github.com/sullo/nikto">https://github.com/sullo/nikto</a>
+		-Blackwidow '--> 1N3 - <a href="https://github.com/1N3/blackwidow">https://github.com/1N3/blackwidow</a>
+		-WPScan '--> WPScanTeam - <a href="https://github.com/wpscanteam/wpscan">https://github.com/wpscanteam/wpscan</a>
+		-Konan '--> m4ll0k - <a href="https://github.com/m4ll0k/Konan">https://github.com/m4ll0k/Konan</a>
 
 
 # Sifter Help Menu
 
   $ sifter	runs the programs bringing up the menu in a cli environment
+  <br>
   $ sifter	-c will check the existing hosts in the hostlist
+  <br>
   $ sifter	-a 'target-ip' appends the hostname/IP to host file
+  <br>
   $ sifter	-e Opens the Exploitation Module
+ <br> 
   $ sifter	-i Opens the Info-based Module menu
+ <br> 
   $ sifter 	-d Opens the Domain Focused Modules
+ <br> 
   $ sifter 	-n Opens the Network Mapping Modules menu
+ <br>
   $ sifter	-w Opens the Website Focused Modules
+ <br> 
   $ sifter	-wa Opens the Web-App Focused Module menu
+ <br> 
   $ sifter	-v Opens the Vulnerability Scanning Module Menu
+ <br> 
   $ sifter	-u Checks for/and installs updates
+ <br> 
   $ sifter	-h This Help Menu
 
 **TODO
