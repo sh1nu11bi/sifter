@@ -7,10 +7,10 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
+cd /opt/Dark-Star
 echo -e "${ORNG}"
 figlet -f mini "Dark Star"
 echo -e "${NC}"
-cd /opt/darkstar
 python darkstar.py
 sleep 2
 cd /opt/sifter

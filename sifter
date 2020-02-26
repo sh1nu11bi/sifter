@@ -273,7 +273,7 @@ ex_mods(){
   figlet -f mini "Exploitation Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("MS Specific Tools" "TigerShark" "Web Exploiters" "ShodanSploit" "Back" "Quit")
+        options=("MS Specific Tools" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -310,16 +310,59 @@ ex_mods(){
                                 fi
                                 ;;
 
-                    "ShodanSploit")
-                                echo -e "${YLW}ShodanSploit allows for shodan searches to be done in the terminal${NC}"
+                    "Search for Exploits")
+                        echo -e "${YLW}These tools allow you to search to certain exploits or vulnerabilities${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
                                 if [[ ${M_ANS} == 'y' ]]; then
-                                    ./modules/exmods/ssploit.sh
+                                    search_tools
                                 else
                                     exmods
-			                    fi
+                                fi
                                 ;;
+
+                    "Back")
+                        modules
+                        ;;
+
+                    "Quit")
+                        exit 0
+                        ;;
+
+                esac
+        done
+    echo -e "${NC}"
+}
+search_tools(){
+    echo -e "${RED}"
+    figlet -f mini "Exploitation Modules"
+    echo -e "${ORNG}"
+    PS3='What tool would you like to use?'
+        options=("ShodanSploit" "FindSploit" "Back" "Quit")
+        select opt in "${options[@]}"
+        do
+                case $opt in
+                    "ShodanSploit")
+                        echo -e "${YLW}ShodanSploit allows for shodan searches to be done in the terminal${NC}"
+                        echo -e "${W}Would you like to continue?(y/n)${NC}"
+                        read M_ANS
+                        if [[ ${M_ANS} == 'y' ]]; then
+                            ./modules/exmods/ssploit.sh
+                        else
+                            exmods
+			            fi
+                        ;;
+
+                    "FindSploit")
+                        echo -e "${YLW}This tool allows you to search, copy or compile exploits${NC}"
+                        echo -e "${W}Would you like to continue?(y/n)${NC}"
+                        read M_ANS
+                        if [[ ${M_ANS} == 'y' ]]; then
+                            ./modules/exmods/fsploit.sh
+                        else
+                            exmods
+			            fi
+                        ;;
 
                     "Back")
                         modules
