@@ -103,16 +103,27 @@ Gathered info is saved to the results folder, these output files can be easily p
 # Sifter Help Menu
 
   $ sifter	runs the programs bringing up the menu in a cli environment
+  <br>
   $ sifter	-c will check the existing hosts in the hostlist
+  <br>
   $ sifter	-a 'target-ip' appends the hostname/IP to host file
+  <br>
   $ sifter	-e Opens the Exploitation Module
+  <br>
   $ sifter	-i Opens the Info-based Module menu
+  <br>
   $ sifter 	-d Opens the Domain Focused Modules
+  <br>
   $ sifter 	-n Opens the Network Mapping Modules menu
+  <br>
   $ sifter	-w Opens the Website Focused Modules
+  <br>
   $ sifter	-wa Opens the Web-App Focused Module menu
+  <br>
   $ sifter	-v Opens the Vulnerability Scanning Module Menu
+  <br>
   $ sifter	-u Checks for/and installs updates
+  <br>
   $ sifter	-h This Help Menu
 
 **TODO
