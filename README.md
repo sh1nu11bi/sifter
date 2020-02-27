@@ -43,46 +43,53 @@ Gathered info is saved to the results folder, these output files can be easily p
 # Modules:
 	# Information Modules
 	  = Enterprised Focused
-		  -theHarvester '--> laramies - https://github.com/laramies/theHarvester
-		  -Osmedeus '--> j3ssie - https://github.com/j3ssie/Osmedeus
-		  -ReconSpider '--> bhavsec - https://github.com/bhavsec/reconspider
-		  -SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear
+		  -theHarvester  - https://github.com/laramies/theHarvester
+		  -Osmedeus - https://github.com/j3ssie/Osmedeus
+		  -ReconSpider - https://github.com/bhavsec/reconspider
+		  
 	  = Individual Focused
-		  -Seeker '--> thewhiteh4t - https://github.com/thewhiteh4t/seeker
-		  -Sherlock '--> Sherlock-Project - https://github.com/sherlock-project/sherlock
+		  -Seeker - https://github.com/thewhiteh4t/seeker
+		  -Sherlock - https://github.com/sherlock-project/sherlock
+
 
 	# Domain Modules
-		-Omnibus '--> InQuest - https://github.com/InQuest/omnibus
-		-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
-		-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
-		-Armory '--> DepthSecurity - https://github.com/depthsecurity/armory
+		-Omnibus - https://github.com/InQuest/omnibus
+		-DnsTwist - https://github.com/elceef/dnstwist
+		-DomainFuzz - https://github.com/monkeym4ster/DomainFuzz
+		-Armory - https://github.com/depthsecurity/armory
+
 
 	# Exploitation Modules (Beta)
 	  = MS Exploiters
-		  -ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
-		  -iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
+		  -ActiveReign - https://github.com/m8r0wn/ActiveReign
+		  -iSpy - https://github.com/Cyb0r9/ispy
 		
 	  = Website Exploiters
-		  -Dark Star '--> s1l3nt78 - https://github.com/s1l3nt78/Dark-Star
-		  -NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
+		  -Dark Star - https://github.com/s1l3nt78/Dark-Star
+		  -NekoBot - https://github.com/tegal1337/NekoBotV1
 	  
 	  = Exploit Searching
-		  -FindSploit '--> xerosecurity - https://github.com/1N3/Findsploit
-		  -ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
+		  -FindSploit - https://github.com/1N3/Findsploit
+		  -ShodanSploit - https://github.com/shodansploit/shodansploit
 	  
-	    -TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
+	   -TigerShark - https://github.com/s1l3nt78/TigerShark
 
 
 	# Network Modules
-		  -Nmap '--> Gordon Lyon - https://nmap.org
-		  -AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
-		  -aSnip '--> harleo - https://github.com/harleo/asnip
+		-Nmap - https://nmap.org
+		-AttackSurfaceMapper - https://github.com/superhedgy/AttackSurfaceMapper
+		-aSnip - https://github.com/harleo/asnip
 
 
+	# HoneyPot Detection Systems
+		-HoneyCaught - https://github.com/aswinmguptha/HoneyCaught
+		-SniffingBear - https://github.com/MrSuicideParrot/SniffingBear
+		
+		
 	# Vulnerability Scanners
-		  -Flan '--> Cloudflare - https://github.com/cloudflare/flan
-	  	-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
-		  -Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
+		-Flan - https://github.com/cloudflare/flan
+	  	-Rapidscan - https://github.com/skavngr/rapidscan
+		-Yuki-Chan - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
 
 
 	# Web-App Modules
@@ -92,10 +99,10 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 
 	# Web Modules
-		  -Nikto '--> Sullo - https://github.com/sullo/nikto
-		  -Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow
-		  -WPScan '--> WPScanTeam - https://github.com/wpscanteam/wpscan
-		  -Konan '--> m4ll0k - https://github.com/m4ll0k/Konan
+		  -Nikto - https://github.com/sullo/nikto
+		  -Blackwidow - https://github.com/1N3/blackwidow
+		  -WPScan - https://github.com/wpscanteam/wpscan
+		  -Konan - https://github.com/m4ll0k/Konan
 
 
 # Sifter Help Menu
