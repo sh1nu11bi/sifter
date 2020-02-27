@@ -7,8 +7,8 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-2.8-red"</a>
-  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Topaz-yellowgreen"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-3-red"</a>
+  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Amethys7-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
@@ -50,49 +50,49 @@ Gathered info is saved to the results folder, these output files can be easily p
 	  = Individual Focused
 		-Seeker '--> thewhiteh4t - https://github.com/thewhiteh4t/seeker
 		-Sherlock '--> Sherlock-Project - https://github.com/sherlock-project/sherlock
-
-
+<br>
+<br>
 	* Domain Modules
-		-Sublist3r '--> aboul3la - https://github.com/aboul3la/Sublist3r
+		-Omnibus '--> InQuest - https://github.com/InQuest/omnibus
 		-DnsTwist '--> elceef - https://github.com/elceef/dnstwist
 		-DomainFuzz '--> monkeym4ster - https://github.com/monkeym4ster/DomainFuzz
 		-Armory '--> DepthSecurity - https://github.com/depthsecurity/armory
-
-
+<br>
+<br>
 	* Exploitation Modules (Beta)
 	  = MS Exploiters
 		-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
 		-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
-		
+<br>		
 	  = Website Exploiters	
 		-Dark Star '--> s1l3nt78 - https://github.com/s1l3nt78/Dark-Star
 		-NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
-	  
+<br>	  
 	  = Exploit Searching
 		-FindSploit '--> 1N3 - https://github.com/1N3/Findsploit
 		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
-	  
+<br>	  
 	  -TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
-	  
-
+<br>	  
+<br>
 	* Network Modules
 		-Nmap '--> Gordon Lyon - https://nmap.org
 		-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
 		-aSnip '--> harleo - https://github.com/harleo/asnip
-		-Armory '--> DepthSecurity - https://github.com/depthsecurity/armory
-
-
+<br>		
+<br>
 	* Vulnerability Scanners
 		-Flan '--> Cloudflare - https://github.com/cloudflare/flan
 		-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
 		-Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
-
+<br>
+<br>
 	* Web-App Modules
-		-Photon '--> s0md3v - https://github.com/s0md3v/Photon
 		-Sitadel '--> shenril - https://github.com/shenril/Sitadel
 		-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
 		-AapFinder '--> Technowlogy-Pushpender - https://github.com/Technowlogy-Pushpender/aapfinder
-
+<br>
+<br>
 	* Web Modules
 		-Nikto '--> Sullo - https://github.com/sullo/nikto
 		-Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow

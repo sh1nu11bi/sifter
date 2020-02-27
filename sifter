@@ -133,7 +133,7 @@ dom_mods(){
   figlet -f mini "Domain-Focused Modules"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "DomainFuzz" "Sublist3r" "Back" "Quit")
+          options=("DnsTwist" "DomainFuzz" "Armory" "Omnibus" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -145,8 +145,12 @@ dom_mods(){
                                 ./modules/dommods/domainfuzz.sh
                                 ;;
 
-                            "Sublist3r")
-                                ./modules/dommods/sublist3r.sh
+                            "Armory")
+                                ./modules/dommods/armory.sh
+                                ;;
+
+                            "Omnibus")
+                                ./modules/dommods/omnibus.sh
                                 ;;
 
                             "Back")
@@ -176,10 +180,6 @@ net_mods(){
 
                             "AttackSurfaceMapper")
                                 ./modules/netmods/asm.sh
-                                ;;
-
-                            "Armory")
-                                ./modules/netmods/armory.sh
                                 ;;
 
                             "aSnip")
@@ -479,10 +479,6 @@ webapps(){
 
                         "wafw00f")
                             ./modules/webapps/wafw00f.sh
-                            ;;
-
-                        "Photon")
-                            ./modules/webapps/photon.sh
                             ;;
 
                         "AapFinder")

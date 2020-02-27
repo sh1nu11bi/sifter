@@ -25,14 +25,14 @@ fi
 
 echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Sublist3r${NC}"
-if [[ -d /opt/Sublist3r ]]; then
-	figlet -f mini "Sublist3r is already installed."
+echo -e "${YLW}Checking for Omnibus${NC}"
+if [[ -d /opt/omnibus ]]; then
+	figlet -f mini "Omnibus is already installed."
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/aboul3la/Sublist3r.git
-	cd Sublist3r
+	git clone https://github.com/InQuest/omnibus.git
+	cd omnibus
 	sudo pip install -r requirements.txt
 	sleep 2
 fi
@@ -90,19 +90,6 @@ else
 	    sudo cp blackwidow /usr/sbin/blackwidow
 	    sudo cp injectx.py /usr/sbin/injectx.py
 	    pip install -r requirements.txt
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Photon${NC}"
-if [[ -d /opt/Photon ]] || [[ -d /root/Photon ]]; then
-    echo -e "${ORNG}"
-	figlet -f mini "Photon is already installed"
-	echo -e "${NC}"
-else
-	cd /opt
-	git clone https://github.com/s0md3v/Photon.git
-	cd Photon
-	    sudo python3 -m pip install -r requirements.txt
 fi
 
 echo -e "${W}===========================================================================================${NC}"
