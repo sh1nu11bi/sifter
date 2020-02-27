@@ -42,14 +42,14 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 # Modules:
 	* Information Modules
-	  = Enterprised Focused	
-		-theHarvester '--> laramies - https://github.com/laramies/theHarvester
-		-Osmedeus '--> j3ssie - https://github.com/j3ssie/Osmedeus
-		-ReconSpider '--> bhavsec - https://github.com/bhavsec/reconspider
-		-SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear
+	  = Enterprised Focused
+		  -theHarvester '--> laramies - https://github.com/laramies/theHarvester
+		  -Osmedeus '--> j3ssie - https://github.com/j3ssie/Osmedeus
+		  -ReconSpider '--> bhavsec - https://github.com/bhavsec/reconspider
+		  -SniffingBear '--> MrSuicideParrot - https://github.com/MrSuicideParrot/SniffingBear
 	  = Individual Focused
-		-Seeker '--> thewhiteh4t - https://github.com/thewhiteh4t/seeker
-		-Sherlock '--> Sherlock-Project - https://github.com/sherlock-project/sherlock
+		  -Seeker '--> thewhiteh4t - https://github.com/thewhiteh4t/seeker
+		  -Sherlock '--> Sherlock-Project - https://github.com/sherlock-project/sherlock
 <br>
 <br>
 	* Domain Modules
@@ -61,58 +61,69 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 	* Exploitation Modules (Beta)
 	  = MS Exploiters
-		-ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
-		-iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
+		  -ActiveReign '--> m8r0wn - https://github.com/m8r0wn/ActiveReign
+		  -iSpy '--> Cyb0r9 - https://github.com/Cyb0r9/ispy
 <br>		
-	  = Website Exploiters	
-		-Dark Star '--> s1l3nt78 - https://github.com/s1l3nt78/Dark-Star
-		-NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
+	  = Website Exploiters
+		  -Dark Star '--> s1l3nt78 - https://github.com/s1l3nt78/Dark-Star
+		  -NekoBot '--> tegal1337 - https://github.com/tegal1337/NekoBotV1
 <br>	  
 	  = Exploit Searching
-		-FindSploit '--> 1N3 - https://github.com/1N3/Findsploit
-		-ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
+		  -FindSploit '--> xerosecurity - https://github.com/1N3/Findsploit
+		  -ShodanSploit '--> ShodanSploit - https://github.com/shodansploit/shodansploit
 <br>	  
-	  -TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
+	    -TigerShark '--> s1l3nt78 - https://github.com/s1l3nt78/TigerShark
 <br>	  
 <br>
 	* Network Modules
-		-Nmap '--> Gordon Lyon - https://nmap.org
-		-AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
-		-aSnip '--> harleo - https://github.com/harleo/asnip
+		  -Nmap '--> Gordon Lyon - https://nmap.org
+		  -AttackSurfaceMapper '--> Superhedgy - https://github.com/superhedgy/AttackSurfaceMapper
+		  -aSnip '--> harleo - https://github.com/harleo/asnip
 <br>		
 <br>
 	* Vulnerability Scanners
-		-Flan '--> Cloudflare - https://github.com/cloudflare/flan
-		-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
-		-Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
+		  -Flan '--> Cloudflare - https://github.com/cloudflare/flan
+	  	-Rapidscan '--> skavngr - https://github.com/skavngr/rapidscan
+		  -Yuki-Chan '--> Yukinoshita47 - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
 <br>
 <br>
 	* Web-App Modules
-		-Sitadel '--> shenril - https://github.com/shenril/Sitadel
-		-wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
-		-AapFinder '--> Technowlogy-Pushpender - https://github.com/Technowlogy-Pushpender/aapfinder
+		  -Sitadel '--> shenril - https://github.com/shenril/Sitadel
+		  -wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
+		  -AapFinder '--> Technowlogy-Pushpender - https://github.com/Technowlogy-Pushpender/aapfinder
 <br>
 <br>
 	* Web Modules
-		-Nikto '--> Sullo - https://github.com/sullo/nikto
-		-Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow
-		-WPScan '--> WPScanTeam - https://github.com/wpscanteam/wpscan
-		-Konan '--> m4ll0k - https://github.com/m4ll0k/Konan
+		  -Nikto '--> Sullo - https://github.com/sullo/nikto
+		  -Blackwidow '--> 1N3 - https://github.com/1N3/blackwidow
+		  -WPScan '--> WPScanTeam - https://github.com/wpscanteam/wpscan
+		  -Konan '--> m4ll0k - https://github.com/m4ll0k/Konan
 
 
 # Sifter Help Menu
 
   $ sifter	runs the programs bringing up the menu in a cli environment
+  <br>
   $ sifter	-c will check the existing hosts in the hostlist
+  <br>
   $ sifter	-a 'target-ip' appends the hostname/IP to host file
+  <br>
   $ sifter	-e Opens the Exploitation Module
+  <br>
   $ sifter	-i Opens the Info-based Module menu
+  <br>
   $ sifter 	-d Opens the Domain Focused Modules
+  <br>
   $ sifter 	-n Opens the Network Mapping Modules menu
+  <br>
   $ sifter	-w Opens the Website Focused Modules
+  <br>
   $ sifter	-wa Opens the Web-App Focused Module menu
+  <br>
   $ sifter	-v Opens the Vulnerability Scanning Module Menu
+  <br>
   $ sifter	-u Checks for/and installs updates
+  <br>
   $ sifter	-h This Help Menu
 
 **TODO
