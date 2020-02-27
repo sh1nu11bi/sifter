@@ -46,7 +46,8 @@ Gathered info is saved to the results folder, these output files can be easily p
 		  -theHarvester  - https://github.com/laramies/theHarvester
 		  -Osmedeus - https://github.com/j3ssie/Osmedeus
 		  -ReconSpider - https://github.com/bhavsec/reconspider
-	  = Targeted Information Gatherers
+	 
+	 = Targeted Information Gatherers
 		  -Seeker - https://github.com/thewhiteh4t/seeker
 		  -Sherlock - https://github.com/sherlock-project/sherlock
 
