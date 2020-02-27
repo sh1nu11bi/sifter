@@ -78,6 +78,19 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for HoneyCaught${NC}"
+if [[ -d /opt/HoneyCaught ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "HoneyCaught is already installed"
+	echo -e "${NC}"
+else
+	cd /opt
+	git clone https://github.com/aswinmguptha/HoneyCaught.git
+	cd HoneyCaught
+	sudo python -m pip install -r requirements.txt
+fi
+
+echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Blackwidow${NC}"
 if [[ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py ]] || [[ -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]]; then
 	echo -e "${ORNG}"

@@ -30,7 +30,7 @@ usage() {                                      # Function: Print a help message.
 # Enterprise Target Info
 cred_mods(){
   echo -e "${RED}"
-  figlet -f mini "Enterprise Info-Focused Modules"
+  figlet -f mini "Enterprise Information Gatherers"
   echo -e "${LP}This module focuses on Enterprises and their online presence"
   echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
@@ -69,7 +69,7 @@ cred_mods(){
 # Individual Target Info
 phone_mods(){
   echo -e "${RED}"
-  figlet -f mini "Target Info-Focused Modules"
+  figlet -f mini "Targeted Information Gatherers"
   echo -e "${LP}This module focuses on individual targets."
   echo -e "${YLW}eg. Social media information, phone number information, etc."
   echo -e "${ORNG}"
@@ -100,7 +100,7 @@ phone_mods(){
 # Info Module-Category Selection
 info_mods(){
     echo -e "${RED}"
-    figlet -f mini "Info-Focused Modules"
+    figlet -f mini "Information Gatherers"
     echo -e "${ORNG}"
     PS3='Which module category would you like to use?'
             options=("Enterprise Focus" "Individual Focus" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
@@ -127,10 +127,42 @@ info_mods(){
         echo -e "${NC}"
                 
 }
+# HoneyPot Scanners
+honey_mods(){
+    echo -e "${RED}"
+    figlet -f mini "HoneyPot Detection Systems"
+    echo -e "${LP}This module focuses on Enterprises and their online presence"
+    echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
+    echo -e "${ORNG}"
+    PS3='What tool would you like to use?'
+            options=("HoneyCaught" "SniffingBear" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+            select opt in "${options[@]}"
+            do
+                    case $opt in
+                            "HoneyCaught")
+                                ./modules/honeymods/honeyc.sh
+                                ;;
+
+                            "SniffingBear")
+                                ./modules/honeymods/s_bear.sh
+                                ;;
+
+                            "Back")
+                                modules
+                                ;;
+
+                            "Quit")
+                                exit 0
+                                ;;
+                    esac
+            done
+        echo -e "${NC}"
+                
+}
 # Domain Modules
 dom_mods(){
   echo -e "${RED}"
-  figlet -f mini "Domain-Focused Modules"
+  figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
           options=("DnsTwist" "DomainFuzz" "Armory" "Omnibus" "Back" "Quit")
@@ -167,7 +199,7 @@ dom_mods(){
 # Network Modules
 net_mods(){
   echo -e "${RED}"
-  figlet -f mini "Network-Focused Modules"
+  figlet -f mini "Network Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
           options=("nMap" "AttackSurfaceMapper" "Armory" "aSnip" "Back"  "Quit")
@@ -200,7 +232,7 @@ net_mods(){
 # Vulnerability Scanners
 vuln_mods(){
   echo -e "${RED}"
-  figlet -f mini "Vulnerability-Focused Modules"
+  figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
           options=("Flan" "RapidScan" "Yuki-Chan" "Back" "Quit")
@@ -233,7 +265,7 @@ vuln_mods(){
 # Web-Focused Modules
 web_mods(){
   echo -e "${RED}"
-  figlet -f mini "Web-Focused Modules"
+  figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
           options=("Konan" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
@@ -270,7 +302,7 @@ web_mods(){
 # Exploitation Modules
 ex_mods(){
   echo -e "${RED}"
-  figlet -f mini "Exploitation Modules"
+  figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
         options=("MS Specific Tools" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
@@ -335,7 +367,7 @@ ex_mods(){
 }
 search_tools(){
     echo -e "${RED}"
-    figlet -f mini "Exploitation Modules"
+    figlet -f mini "Exploit Finders"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
         options=("ShodanSploit" "FindSploit" "Back" "Quit")
@@ -466,7 +498,7 @@ web_tools(){
 # Web-App Modules
 webapps(){
   echo -e "${RED}"
-  figlet -f mini "WebApp Modules"
+  figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
         options=("Sitadel" "wafw00f" "Photon" "AapFinder" "Back" "Quit")
@@ -608,31 +640,35 @@ modules(){
             select opt in "${options[@]}"
             do
                     case $opt in
-                            "Info-Focused Modules")
+                            "Information Gatherers")
                                 info_mods
                                 ;;
 
-                            "Domain-Focused Modules")
+                            "Domain Recon Gathering")
                                 dom_mods
                                 ;;
 
-                            "Network-Focused Modules")
+                            "Network Scanners")
                                 net_mods
                                 ;;
 
-                            "Web-Focused Modules")
+                            "Website Scanners & Enumerators")
                                 web_mods
                                 ;;
 
-                            "Vulnerability-Focused Modules")
+                            "Vulnerability Scanners")
                                 vuln_mods
                                 ;;
+                            
+                            "HoneyPot Detection Systems")
+                                honey_mods
+                                ;;
 
-                            "Exploitation(Beta)")
+                            "Exploitation Tools")
                                 ex_mods
                                 ;;
 
-			                "WebApp-Focused Modules")
+			                "WebAppplication Scanners")
 			                    webapps
 			                    ;;
 
