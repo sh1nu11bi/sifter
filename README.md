@@ -8,7 +8,7 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>
 <br>
   <a href="#"><img align="center" src="https://img.shields.io/badge/Version-3-red"</a>
-  <a href="#"><img align="centre" src="https://img.shields.io/badge/Build-Amethys7-yellowgreen"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Build-Amethys7-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
@@ -42,24 +42,23 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 # Modules:
 	# Information Modules
-	  = Enterprised Focused
+	  = Enterprise Information Gatherers
 		  -theHarvester  - https://github.com/laramies/theHarvester
 		  -Osmedeus - https://github.com/j3ssie/Osmedeus
 		  -ReconSpider - https://github.com/bhavsec/reconspider
-		  
-	  = Individual Focused
+	  = Targeted Information Gatherers
 		  -Seeker - https://github.com/thewhiteh4t/seeker
 		  -Sherlock - https://github.com/sherlock-project/sherlock
 
 
-	# Domain Modules
+	# Domain Recon Gathering
 		-Omnibus - https://github.com/InQuest/omnibus
 		-DnsTwist - https://github.com/elceef/dnstwist
 		-DomainFuzz - https://github.com/monkeym4ster/DomainFuzz
 		-Armory - https://github.com/depthsecurity/armory
 
 
-	# Exploitation Modules (Beta)
+	# Exploitation Tools
 	  = MS Exploiters
 		  -ActiveReign - https://github.com/m8r0wn/ActiveReign
 		  -iSpy - https://github.com/Cyb0r9/ispy
@@ -75,7 +74,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 	   -TigerShark - https://github.com/s1l3nt78/TigerShark
 
 
-	# Network Modules
+	# Network Scanners
 		-Nmap - https://nmap.org
 		-AttackSurfaceMapper - https://github.com/superhedgy/AttackSurfaceMapper
 		-aSnip - https://github.com/harleo/asnip
@@ -92,13 +91,13 @@ Gathered info is saved to the results folder, these output files can be easily p
 		-Yuki-Chan - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
 
 
-	# Web-App Modules
+	# WebApplication Scanners
 		  -Sitadel '--> shenril - https://github.com/shenril/Sitadel
 		  -wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
 		  -AapFinder '--> Technowlogy-Pushpender - https://github.com/Technowlogy-Pushpender/aapfinder
 
 
-	# Web Modules
+	# Website Scanners & Enumerators
 		  -Nikto - https://github.com/sullo/nikto
 		  -Blackwidow - https://github.com/1N3/blackwidow
 		  -WPScan - https://github.com/wpscanteam/wpscan
@@ -113,7 +112,9 @@ Gathered info is saved to the results folder, these output files can be easily p
   <br>
   $ sifter	-a 'target-ip' appends the hostname/IP to host file
   <br>
-  $ sifter	-e Opens the Exploitation Module
+  $ sifter -m Opens the Main Module menu
+  <br>
+  $ sifter	-e Opens the Exploitation Modules
   <br>
   $ sifter	-i Opens the Info-based Module menu
   <br>
