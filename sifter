@@ -382,8 +382,6 @@ bruters(){
     else
         exmods
 	fi
-    ;;
-
 }
 # Exploit Searchers
 search_tools(){
