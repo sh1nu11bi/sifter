@@ -8,7 +8,7 @@ LBBLUE='\e[104m'
 nikto_multi(){
 	for name in `cat files/pingtest_pass.txt`
         do
-			nikto -host ${TARGET} | tee /opt/sifter/results/Nikto/${TARGET}.txt
+			nikto -host ${name} | tee /opt/sifter/results/Nikto/${name}.txt
 		done
 }
 nikto_single(){
