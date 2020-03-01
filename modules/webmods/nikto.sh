@@ -6,7 +6,7 @@ W='\033[1;37m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 nikto_multi(){
-	for name in `cat /opt/sifter/files/pingtest.pass`
+	for name in `cat files/pingtest.pass`
         do
 			nikto -host http://${name} | tee /opt/sifter/results/Nikto/${name}.txt
 		done
