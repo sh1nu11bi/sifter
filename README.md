@@ -72,8 +72,9 @@ Gathered info is saved to the results folder, these output files can be easily p
 		  -FindSploit - https://github.com/1N3/Findsploit
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit
 	  
-	   -TigerShark - https://github.com/s1l3nt78/TigerShark
-
+	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
+	
+	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum 
 
 	# Network Scanners
 		-Nmap - https://nmap.org
