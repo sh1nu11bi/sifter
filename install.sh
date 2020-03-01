@@ -332,6 +332,16 @@ else
 	sudo git clone https://github.com/s1l3nt78/Dark-Star.git
 fi
 
+echo -e "${YLW}Checking for BruteDUM${NC}"
+if [[ -d '/opt/BruteDum' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "BruteDUM is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/GitHackTools/BruteDum.git
+fi
+
 sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
 echo -e "${RED}"
 figlet "Done! =D"

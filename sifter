@@ -305,7 +305,7 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("MS Specific Tools" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
+        options=("MS Specific Tools" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -319,6 +319,10 @@ ex_mods(){
                                     exmods
                                 fi
 			                    ;;
+                    
+                    "BruteDUM")
+                        bruters
+                        ;;
 
                     "TigerShark")
                         echo -e "${YLW}TigerShark is a multi-tooled phishing framework${NC}"
@@ -365,6 +369,23 @@ ex_mods(){
         done
     echo -e "${NC}"
 }
+# BRuteForce Modules
+bruters(){
+    echo -e "${RED}"
+    figlet -f mini "BruteDUM"
+    echo -e "${ORNG}"
+    echo -e "${YLW}BruteDUM is a bruteforcing tool that consists of Medusa, nCrack, Hydra${NC}"
+    echo -e "${W}Would you like to continue?(y/n)${NC}"
+    read M_ANS
+    if [[ ${M_ANS} == 'y' ]]; then
+        ./modules/exmods/ssploit.sh
+    else
+        exmods
+	fi
+    ;;
+
+}
+# Exploit Searchers
 search_tools(){
     echo -e "${RED}"
     figlet -f mini "Exploit Finders"
