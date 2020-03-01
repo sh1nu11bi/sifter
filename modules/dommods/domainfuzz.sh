@@ -86,7 +86,7 @@ echo "==========================================================================
 				echo -e "${W}Threads	 : ${RED} ${THREADS} ${NC}"
 				echo -e "${W}Nameservers	: ${RED} ${NS} ${NC}"
 				echo -e "${LP}Please wait....${NC}"
-				node cli.js --target ${TARGET} --format ${FORMAT} --out-put ${DOC} -c ${THREADS} --nameservers ${NS} --modules whois,banners,mxcheck,geoip,ssdeep
+				sudo node cli.js --target ${TARGET} --format ${FORMAT} --out-put ${DOC} -c ${THREADS} --nameservers ${NS} --modules whois,banners,mxcheck,geoip,ssdeep
 
 cd /opt/sifter
 sifter -m

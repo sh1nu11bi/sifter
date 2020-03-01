@@ -59,7 +59,7 @@ else
 	read TARGETP
 	TARGET='-i ${TARGETP}'
 fi
-wafw00f ${WAF_T} ${XREDIR} ${CPROXY} ${TARGET} >> /opt/sifter/results/w00f/${TARGET}.txt
+sudo wafw00f ${WAF_T} ${XREDIR} ${CPROXY} ${TARGET} >> /opt/sifter/results/w00f/${TARGET}.txt
 echo -e "${W}Results saved to /opt/sifter/results/w00f${NC}"
 sleep 5
 cd /opt/sifter

@@ -8,7 +8,7 @@ LP='\033[1;35m'
 echo -e "${ORNG}"
 figlet -f mini "iSpy"
 echo -e "${NC}"
-./opt/iSpy/ispy
+sudo ./opt/iSpy/ispy
 sleep 2
 cd /opt/sifter
 sifter -m

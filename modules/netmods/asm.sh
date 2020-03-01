@@ -22,7 +22,7 @@ sleep 1
 read TARGET
 sleep 1
 echo "============================================================================"
-#ls resources
+ls resources
 echo -e "${W}Please enter list to use for subdomain scanning${NC}"
 sleep 1
 read -e -p "" LIST
@@ -67,7 +67,7 @@ if [[ ${SC1} == y ]];then
 				echo -e "${W}Screen Capture	: ${RED} $SC1 ${NC}"
 				echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
 				echo "Please wait...."
-				python3 asm.py -t ${TARGET} -ln -w ${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH}
+				sudo python3 asm.py -t ${TARGET} -ln -w ${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH}
 
 cd /opt/sifter
 sifter -m

@@ -11,7 +11,7 @@ cd /opt/omnibus
 echo -e "${ORNG}"
 figlet -f mini "Omnibus"
 echo -e "${NC}"
-python omnibus-cli.py
+sudo python omnibus-cli.py
 sleep 2
 echo -e "${W}======================================================${NC}"
 sleep 2

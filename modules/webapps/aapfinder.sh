@@ -50,7 +50,7 @@ read TYPE
 echo -e "${W}Please enter the name of the output file${NC}"
 read OUTPUT
 echo -e "${W}===========================================================================${NC}"
-python3 aapfinder.py --targets targets.txt -d ${DELAY} ${THREAD} -t ${TYPE} -o /opt/sifter/results/AapFinder/${OUTPUT}.txt
+sudo python3 aapfinder.py --targets targets.txt -d ${DELAY} ${THREAD} -t ${TYPE} -o /opt/sifter/results/AapFinder/${OUTPUT}.txt
 echo -e "${YLW}Results have been saved to /opt/sifter/results/AapFinder/${OUTPUT}.txt${NC}"
 echo -e "${W}===========================================================================${NC}"
 cd /opt/sifter

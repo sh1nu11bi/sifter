@@ -23,7 +23,7 @@ read PORT
 echo -e "${W}Please enter the module you would like to use${NC}"
 read MODULE
 echo "============================================================================"
-python HoneyCaught.py -u ${HOST} -p ${PORT} -m ${MODULE}
+sudo python HoneyCaught.py -u ${HOST} -p ${PORT} -m ${MODULE}
 sleep 5
 cd /opt/sifter
 ./sifter -m

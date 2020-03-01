@@ -11,7 +11,7 @@ cd /opt/BruteDum
 echo -e "${ORNG}"
 figlet -f mini "BruteDUM"
 echo -e "${NC}"
-python3 brutedum.py
+sudo python3 brutedum.py
 sleep 2
 cd /opt/sifter
 sifter -m

@@ -11,7 +11,7 @@ cd /opt/Dark-Star
 echo -e "${ORNG}"
 figlet -f mini "Dark Star"
 echo -e "${NC}"
-python darkstar.py
+sudo python darkstar.py
 sleep 2
 cd /opt/sifter
 sifter -m
