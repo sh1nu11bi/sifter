@@ -74,6 +74,9 @@ else
 	git clone https://github.com/s1l3nt78/flan.git
 	cd flan
 	sudo docker build .
+	echo -e "${W}Please copy and paste the final container's image ID shown above"
+	read ID
+	sudo docker tag ${ID} flan_scan
 	sleep 2
 fi
 
