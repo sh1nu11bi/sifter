@@ -14,7 +14,7 @@ if [[ -d /opt/sifter ]]; then
 	echo -e "${NC}"
 else
 	pwd && cd ..
-	sudo mv sifter /opt/sifter
+	sudo cp -r sifter -t /opt
 	sudo chown $USER:$USER -R /opt/sifter 
 	cd /opt/sifter
     sudo cp sifter /usr/sbin/sifter
@@ -335,6 +335,7 @@ else
 	sudo git clone https://github.com/s1l3nt78/Dark-Star.git
 fi
 
+echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for BruteDUM${NC}"
 if [[ -d '/opt/BruteDum' ]]; then
 	echo -e "${ORNG}"
