@@ -23,6 +23,7 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	-w Opens the Website Focused Modules"
 	echo "# sifter	-wa Opens the Web-App Focused Module menu"
 	echo "# sifter	-v Opens the Vulnerability Scanning Module Menu"
+    echo "# sifter  -m Opens the Module Menu directly"
 	echo "# sifter	-u Checks for any updates on Github"
 	echo "# sifter	-h This Help Menu" 1>&2
 }
@@ -60,7 +61,7 @@ cred_mods(){
                                 ;;
 
                             "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                     esac
             done
@@ -91,7 +92,7 @@ phone_mods(){
                                 ;;
 
                             "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                     esac
             done
@@ -120,7 +121,7 @@ info_mods(){
                                 ;;
 
                             "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                     esac
             done
@@ -152,7 +153,7 @@ honey_mods(){
                                 ;;
 
                             "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                     esac
             done
@@ -190,7 +191,7 @@ dom_mods(){
                                 ;;
 
                             "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                     esac
             done
@@ -223,7 +224,7 @@ net_mods(){
                                 ;;
 
                             "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                     esac
             done
@@ -256,7 +257,7 @@ vuln_mods(){
                                 ;;
 
                             "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                     esac
             done
@@ -293,7 +294,7 @@ web_mods(){
                                 ;;
 
                             "Quit")
-                                exit 0 
+                                exit 1 
                                 ;;
                     esac
             done
@@ -316,7 +317,7 @@ ex_mods(){
                                 if [[ ${M_ANS} == 'y' ]]; then
                                     ms_tools
                                 else
-                                    exmods
+                                    ex_mods
                                 fi
 			                    ;;
                     
@@ -331,7 +332,7 @@ ex_mods(){
                                 if [[ ${M_ANS} == 'y' ]]; then
                                     ./modules/exmods/tiger.sh
                                 else
-                                    exmods
+                                    ex_mods
                                 fi
                                 ;;
 
@@ -342,7 +343,7 @@ ex_mods(){
                                 if [[ ${M_ANS} == 'y' ]]; then
                                     web_tools
                                 else
-                                    exmods
+                                    ex_mods
                                 fi
                                 ;;
 
@@ -353,7 +354,7 @@ ex_mods(){
                                 if [[ ${M_ANS} == 'y' ]]; then
                                     search_tools
                                 else
-                                    exmods
+                                    ex_mods
                                 fi
                                 ;;
 
@@ -362,14 +363,14 @@ ex_mods(){
                         ;;
 
                     "Quit")
-                        exit 0
+                        exit 1
                         ;;
 
                 esac
         done
     echo -e "${NC}"
 }
-# BRuteForce Modules
+# BruteForce Modules
 bruters(){
     echo -e "${RED}"
     figlet -f mini "BruteDUM"
@@ -380,7 +381,7 @@ bruters(){
     if [[ ${M_ANS} == 'y' ]]; then
         ./modules/exmods/ssploit.sh
     else
-        exmods
+        ex_mods
 	fi
 }
 # Exploit Searchers
@@ -400,7 +401,7 @@ search_tools(){
                         if [[ ${M_ANS} == 'y' ]]; then
                             ./modules/exmods/ssploit.sh
                         else
-                            exmods
+                            ex_mods
 			            fi
                         ;;
 
@@ -411,7 +412,7 @@ search_tools(){
                         if [[ ${M_ANS} == 'y' ]]; then
                             ./modules/exmods/fsploit.sh
                         else
-                            exmods
+                            ex_mods
 			            fi
                         ;;
 
@@ -420,7 +421,7 @@ search_tools(){
                         ;;
 
                     "Quit")
-                        exit 0
+                        exit 1
                         ;;
 
                 esac
@@ -433,38 +434,53 @@ ms_tools(){
   figlet -f mini "MicroSoft Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "iSpy" "Back" "Quit")
+        options=("ActiveReign" "iSpy" "FuzzyDander" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
 			              "ActiveReign")
-			                    echo -e "${YLW}ActiveReign is a Network-Attack toolkit${NC}"
+			                    echo -e "${YLW}ActiveReign is a LDAP Network-Attack toolkit${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
                                 if [[ ${M_ANS} == 'y' ]]; then
                                     ./modules/exmods/ar3.sh
                                 else
-                                    exmods
+                                    ex_mods
                                 fi
 			                    ;;
 
                           "iSpy")
-                                echo -e "${YLW}iSpy is a Microsft 'blue' vuln exploitation framework${NC}"
+                                echo -e "${YLW}iSpy is a Microsft 'blue' vulnerability scanner${NC}"
+                                echo -e "${YLW}Allows exploitation through metasploit${NC}"
                                 echo -e "${W}Would you like to continue?(y/n)${NC}"
                                 read M_ANS
                                 if [[ ${M_ANS} == 'y' ]]; then
                                     ./modules/exmods/ispy.sh
                                 else
-                                    exmods
+                                    ex_mods
 			                    fi
 			                    ;;
                           
+                          "FuzzyDander")
+                                echo -e "${LP}FuzzBunch & DanderSpritz Framework," 
+                                echo -e "codename:${RED}FuzzyDander${NC}"
+                                echo -e "${YLW}If you do not know what these tools are or how they work,"
+                                echo -e "you should not be using them. As such no instructions will be added.${NC}"
+                                echo -e "${W}Would you like to continue?(y/n)${NC}"
+                                read M_ANS
+                                if [[ ${M_ANS} == 'y' ]]; then
+                                    ./modules/exmods/fuzzydander.sh
+                                else
+                                    ex_mods
+			                    fi
+			                    ;;
+
                           "Back")
                                 modules
                                 ;;
 
                            "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                 esac
         done
@@ -487,7 +503,7 @@ web_tools(){
                                 if [[ ${M_ANS} == 'y' ]]; then
                                     ./modules/exmods/nekobot.sh
                                 else
-                                    exmods
+                                    ex_mods
 			                    fi
                                 ;;
 			              
@@ -499,7 +515,7 @@ web_tools(){
                                 if [[ ${M_ANS} == 'y' ]]; then
                                     ./modules/exmods/dark_star.sh
                                 else
-                                    exmods
+                                    ex_mods
 			                    fi
                                 ;;                          
 
@@ -508,7 +524,7 @@ web_tools(){
                                 ;;
 
                            "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                 esac
         done
@@ -541,7 +557,7 @@ webapps(){
                             ;;
 
                         "Quit")
-                            exit 0
+                            exit 1
                             ;;
                 esac
         done
@@ -692,7 +708,7 @@ modules(){
 			                    ;;
 
                             "Quit")
-                                exit 0
+                                exit 1
                                 ;;
                     esac
             done
@@ -701,10 +717,10 @@ modules(){
 # Menu
 menu(){
     echo -e "${ORNG}"
-    figlet -f big "'..SifteR..'"
+    figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "*s1l3nt78*"
-    echo -e "${RED}////////========Amethys7_(v3)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}////////========Ame7hys7_(v3.5)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}==Hit Ctrl + c at any time to quit Sifter==${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -730,7 +746,7 @@ menu(){
                         ;;
 
                     "Quit")
-                        exit 0
+                        exit 1
                         ;;
                 esac
             done
