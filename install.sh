@@ -332,6 +332,19 @@ if [[ -d '/opt/Dark-Star' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
+	sudo git clone https://github.com/mazen160/bfac.git
+	cd bfac
+	sudo python setup.py install
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for BFAC${NC}"
+if [[ -d '/opt/bfac' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "BFAC is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
 	sudo git clone https://github.com/s1l3nt78/Dark-Star.git
 fi
 

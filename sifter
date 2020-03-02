@@ -497,35 +497,34 @@ web_tools(){
         do
                 case $opt in
                     "NekoBot")
-                                echo -e "${YLW}NekoBot is a Web-Shell exploitation framework${NC}"
-                                echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                read M_ANS
-                                if [[ ${M_ANS} == 'y' ]]; then
-                                    ./modules/exmods/nekobot.sh
-                                else
-                                    ex_mods
-			                    fi
-                                ;;
-			              
+                        echo -e "${YLW}NekoBot is a Web-Shell exploitation framework${NC}"
+                        echo -e "${W}Would you like to continue?(y/n)${NC}"
+                        read M_ANS
+                        if [[ ${M_ANS} == 'y' ]]; then
+                            ./modules/exmods/nekobot.sh
+                        else
+                            ex_mods
+			            fi
+                        ;;
+			        
+                    "Dark Star")
+                        echo -e "${YLW}Dark Star is a DDos tool${NC}"
+                        echo -e "${W}Would you like to continue?(y/n)${NC}"
+                        read M_ANS
+                        if [[ ${M_ANS} == 'y' ]]; then
+                            ./modules/exmods/dark_star.sh
+                        else
+                            ex_mods
+			            fi
+                        ;;                          
 
-                          "Dark Star")
-                                echo -e "${YLW}Dark Star is a DDos tool${NC}"
-                                echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                read M_ANS
-                                if [[ ${M_ANS} == 'y' ]]; then
-                                    ./modules/exmods/dark_star.sh
-                                else
-                                    ex_mods
-			                    fi
-                                ;;                          
+			        "Back")
+                        modules
+                        ;;
 
-			              "Back")
-                                modules
-                                ;;
-
-                           "Quit")
-                                exit 1
-                                ;;
+                    "Quit")
+                        exit 1
+                        ;;
                 esac
         done
     echo -e "${NC}"
@@ -536,7 +535,7 @@ webapps(){
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "wafw00f" "Photon" "AapFinder" "Back" "Quit")
+        options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -550,6 +549,10 @@ webapps(){
 
                         "AapFinder")
                             ./modules/webapps/aapfinder.sh
+                            ;;
+
+                        "BFAC")
+                            ./modules/webapps/bfac.sh
                             ;;
 
                         "Back")
