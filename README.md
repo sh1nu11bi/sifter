@@ -7,8 +7,8 @@
   <a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   <a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>
 <br>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-3-red"</a>
-  <a href="#"><img align="center" src="https://img.shields.io/badge/Build-Amethys7-yellowgreen"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Version-3.5-red"</a>
+  <a href="#"><img align="center" src="https://img.shields.io/badge/Build-Ame7hys7-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
@@ -96,9 +96,10 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 
 	# WebApplication Scanners
-		  -Sitadel '--> shenril - https://github.com/shenril/Sitadel
-		  -wafw00f '--> EnableSecurity - https://github.com/EnableSecurity/wafw00f
-		  -AapFinder '--> Technowlogy-Pushpender - https://github.com/Technowlogy-Pushpender/aapfinder
+		  -Sitadel - https://github.com/shenril/Sitadel
+		  -wafw00f - https://github.com/EnableSecurity/wafw00f
+		  -AapFinder - https://github.com/Technowlogy-Pushpender/aapfinder
+		  -BFAC - https://github.com/mazen160/bfac
 
 
 	# Website Scanners & Enumerators
@@ -116,7 +117,7 @@ Gathered info is saved to the results folder, these output files can be easily p
   <br>
   $ sifter	-a 'target-ip' appends the hostname/IP to host file
   <br>
-  $ sifter -m Opens the Main Module menu
+  $ sifter 	-m Opens the Main Module menu
   <br>
   $ sifter	-e Opens the Exploitation Modules
   <br>
