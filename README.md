@@ -74,7 +74,8 @@ Gathered info is saved to the results folder, these output files can be easily p
 	  
 	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
 	   
-	   -FuzzyDander 
+	   -FuzzyDander (Obtained though issue request. Thereafter you may get this module. It is not privided openly as to stop
+				script kiddies from causing to much damage. Thank you for understanding.)
 
 	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum 
 
