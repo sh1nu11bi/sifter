@@ -379,7 +379,7 @@ bruters(){
     echo -e "${W}Would you like to continue?(y/n)${NC}"
     read M_ANS
     if [[ ${M_ANS} == 'y' ]]; then
-        ./modules/exmods/ssploit.sh
+        ./modules/exmods/brutedum.sh
     else
         ex_mods
 	fi
@@ -755,14 +755,28 @@ menu(){
 update(){
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
-	git fetch
-	git pull
-	sudo ./install.sh
-	sudo cp sifter -t /usr/sbin
-	sudo chmod +x -R /opt/sifter/modules
-	sudo chmod +x /usr/sbin/sifter
-    sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
-    echo -e "${W}Done!${NC}"
+    if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
+        cd /opt/sifter
+        mv modules/exmods/fuzzydander.sh -t ~
+        git fetch
+	    git pull
+	    sudo ./install.sh
+	    sudo cp sifter -t /usr/sbin
+        sudo mv ~/fuzzydander.sh -t /opt/sifter/modules/exmods/
+	    sudo chmod +x -R /opt/sifter/modules
+	    sudo chmod +x /usr/sbin/sifter
+        sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
+        echo -e "${W}Done!${NC}"
+    else
+        git fetch
+	    git pull
+	    sudo ./install.sh
+	    sudo cp sifter -t /usr/sbin
+	    sudo chmod +x -R /opt/sifter/modules
+	    sudo chmod +x /usr/sbin/sifter
+        sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
+        echo -e "${W}Done!${NC}"
+    fi
 }
 
 cd /opt/sifter
