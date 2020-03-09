@@ -531,7 +531,7 @@ webapps(){
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "Back" "Quit")
+        options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -549,6 +549,10 @@ webapps(){
 
                         "BFAC")
                             ./modules/webapps/bfac.sh
+                            ;;
+
+                        "OneFind")
+                            ./modules/webapps/onefind.sh
                             ;;
 
                         "Back")

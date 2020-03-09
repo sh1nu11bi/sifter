@@ -359,6 +359,17 @@ else
 	sudo git clone https://github.com/GitHackTools/BruteDum.git
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for OneFind${NC}"
+if [[ -d '/opt/onedrive_user_enum' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "OneDrive UserSearch is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/nyxgeek/onedrive_user_enum
+fi
+
 sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
 echo -e "${RED}"
 figlet "Done! =D"
