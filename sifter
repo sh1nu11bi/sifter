@@ -274,7 +274,14 @@ web_mods(){
           do
                   case $opt in
                             "Konan")
-                                ./modules/webmods/konan.sh
+                                echo -e "${RED}This module takes 30min+ to run"
+                                echo -e "${W}Would you like to continue?(y/n)${NC}"
+                                read K_ANS
+                                if [[ ${K_ANS} == "y" ]]; then
+                                    ./modules/webmods/konan.sh
+                                else
+                                    web_mods
+                                fi
                                 ;;
 
                             "Nikto")
