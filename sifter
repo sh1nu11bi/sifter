@@ -203,12 +203,16 @@ net_mods(){
   figlet -f mini "Network Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("nMap" "AttackSurfaceMapper" "Armory" "aSnip" "Back"  "Quit")
+          options=("nMap" "Arp-Scan" "AttackSurfaceMapper" "Armory" "aSnip" "Back"  "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
                             "nMap")
                                 ./modules/netmods/nmap.sh
+                                ;;
+
+                            "Arp-Scan")
+                                sudo arp-scan -l
                                 ;;
 
                             "AttackSurfaceMapper")
