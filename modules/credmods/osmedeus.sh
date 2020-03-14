@@ -19,7 +19,7 @@ echo -e "${W}Please enter your target${NC}"
 read TARGET
 sleep 5
 echo -e "${LP}Starting Osmedeus Container${NC}"
-sudo docker run -it --rm --name osmedeus -p 8000:8000 mablanco/osmedeus ./osmedeus.py -t example.com --slow "all"
+sudo docker run -it --rm --name osmedeus -p 8000:8000 mablanco/osmedeus ./osmedeus.py -t ${TARGET} --slow "all"
 sleep 5
 echo -e "${RED}Below is your password for Osmedeus Web UI, available at http://127.0.0.1:8000"
 sudo docker exec -it osmedeus grep password /root/.osmedeus/client.conf
