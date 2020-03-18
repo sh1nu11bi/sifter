@@ -115,7 +115,7 @@ info_mods(){
                             "Individual Focus")
                                 phone_mods
                                 ;;
-                            
+
                             "Back")
                                 modules
                                 ;;
@@ -126,7 +126,7 @@ info_mods(){
                     esac
             done
         echo -e "${NC}"
-                
+
 }
 # HoneyPot Scanners
 honey_mods(){
@@ -158,7 +158,7 @@ honey_mods(){
                     esac
             done
         echo -e "${NC}"
-                
+
 }
 # Domain Modules
 dom_mods(){
@@ -305,7 +305,7 @@ web_mods(){
                                 ;;
 
                             "Quit")
-                                exit 1 
+                                exit 1
                                 ;;
                     esac
             done
@@ -331,7 +331,7 @@ ex_mods(){
                                     ex_mods
                                 fi
 			                    ;;
-                    
+
                     "BruteDUM")
                         bruters
                         ;;
@@ -471,7 +471,7 @@ ms_tools(){
                                     ex_mods
 			                    fi
 			                    ;;
-                          
+
                             "FuzzyDander*")
                                 echo -e "${LBBLUE}This module is not included in the open git repo."
                                 echo -e "${RED}In order to obtain this module, please ensure Sifter is"
@@ -513,7 +513,7 @@ web_tools(){
                             ex_mods
 			            fi
                         ;;
-			        
+
                     "Dark Star")
                         echo -e "${YLW}Dark Star is a DDos tool${NC}"
                         echo -e "${W}Would you like to continue?(y/n)${NC}"
@@ -523,7 +523,7 @@ web_tools(){
                         else
                             ex_mods
 			            fi
-                        ;;                          
+                        ;;
 
 			        "Back")
                         modules
@@ -594,7 +594,7 @@ check_hosts(){
                     else
                         echo -e "${RED}=================="
                         echo -e "\e[1;31m$name Dead\e[0m" && echo $name >> files/pingtest_raw.fail
-                        echo -e "${RED}==================${NC}"                        
+                        echo -e "${RED}==================${NC}"
                     fi
             done
 
@@ -708,7 +708,7 @@ modules(){
                             "Vulnerability Scanners")
                                 vuln_mods
                                 ;;
-                            
+
                             "HoneyPot Detection Systems")
                                 honey_mods
                                 ;;
@@ -802,7 +802,7 @@ while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next opt
 			echo -e "${YLW}"
 			figlet -f mini "Checking for live targets..."
 			echo -e "${NC}"
-			./modules/netmods/check.sh
+			check_hosts
             modules
 			;;
 
@@ -883,7 +883,7 @@ while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next opt
 			usage
 			;;
 
-        m) 
+        m)
             echo -e "${RED}"
             figlet -f mini "Sifter Modules"
             echo -e "${NC}"
