@@ -273,7 +273,7 @@ web_mods(){
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Konan" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
+          options=("Konan" "Dirb" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -287,6 +287,10 @@ web_mods(){
                                     web_mods
                                 fi
                                 ;;
+
+														"Dirb")
+																./modules/webmods/dirb.#!/bin/sh
+																;;
 
                             "Nikto")
                                 ./modules/webmods/nikto.sh
