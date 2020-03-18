@@ -14,12 +14,12 @@ t_question(){
     t_ans
 }
 t_ans(){
-    if [[ ${TLISt} == 'y' ]]; then
+    if [[ ${TLIST} == 'y' ]]; then
         echo -e "${W}Great! Time to start AapFinder${NC}"
     else
         echo -e "${W}Please enter your target/s when the file opens${NC}"
         sleep 5
-        nano targets.txt
+        sudo nano targets.txt
         t_question
     fi
 }
