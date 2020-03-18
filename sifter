@@ -75,7 +75,7 @@ phone_mods(){
   echo -e "${YLW}eg. Social media information, phone number information, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Phonia" "Seeker" "Sherlock" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          options=("Seeker" "Sherlock" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
           select opt in "${options[@]}"
           do
                   case $opt in
