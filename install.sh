@@ -332,7 +332,7 @@ if [[ -d '/opt/Dark-Star' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	sudo git clone https://github.com/mazen160/bfac.git
+	sudo git clone https://github.com/s1l3nt78/Dark-Star.git
 	cd bfac
 	sudo python setup.py install
 fi
@@ -345,7 +345,7 @@ if [[ -d '/opt/bfac' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	sudo git clone https://github.com/s1l3nt78/Dark-Star.git
+	sudo git clone https://github.com/mazen160/bfac.git
 fi
 
 echo -e "${W}===========================================================================================${NC}"
