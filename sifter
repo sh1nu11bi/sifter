@@ -273,7 +273,7 @@ web_mods(){
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Konan" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
+          options=("Konan" "Dirb" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -287,6 +287,10 @@ web_mods(){
                                     web_mods
                                 fi
                                 ;;
+
+														"Dirb")
+																./modules/webmods/dirb.#!/bin/sh
+																;;
 
                             "Nikto")
                                 ./modules/webmods/nikto.sh
@@ -679,13 +683,56 @@ list_editor(){
             done
     echo -e "${NC}"
 }
+result_choices(){
+    PS3='What would you like to do?'
+            options=("Check File" "Change Directory" "Back")
+            select opt in "${options[@]}"
+            do
+                    case $opt in
+                            "Check File")
+                                ls
+                                echo -e "${W}Please enter the file name${NC}"
+                                read FNAME
+                                cat ${FNAME}
+                                result_choices
+                                ;;
+
+                            "Change Directory")
+                                ls
+                                echo -e "${W}Please enter the directory name${NC}"
+                                read DIR_NAME
+                                cd ${DIR_NAME}
+                                result_choices
+                                ;;
+
+                            "Back")
+                                modules
+                                ;;
+                            
+                    esac
+            done
+    echo -e "${NC}"
+}   
+# Results
+results(){
+    echo -e "${YLW}Results"
+    echo -e "${LP}*******${NC}"
+    echo -e "${ORNG}"
+    cd /opt/sifter/results
+    ls
+    echo -e "${W}Please enter the name of the result directory you'd like to see${NC}"
+    read DNAME
+    cd ${DNAME}
+    ls
+    result_choices
+}
 # Module Menu
 modules(){
     echo -e "${RED}Modules${NC}"
     echo -e "${RED}*******${NC}"
     echo -e "${ORNG}"
     PS3='What would you like to do?'
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "Quit")
+            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "View Results" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -721,6 +768,10 @@ modules(){
 			                    webapps
 			                    ;;
 
+                            "View Results")
+                                results
+                                ;;
+
                             "Quit")
                                 exit 1
                                 ;;
@@ -734,7 +785,7 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "*s1l3nt78*"
-    echo -e "${RED}////////========Ame7hys7_(v3.5)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}////////========Ame7hys7_(v3.8)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}==Hit Ctrl + c at any time to quit Sifter==${NC}"
     arg=$1
     echo -e "${ORNG}"
