@@ -684,21 +684,28 @@ list_editor(){
     echo -e "${NC}"
 }
 result_choices(){
+    echo -e "${ORNG}"
+    ls
+    echo -e "${NC}"
     PS3='What would you like to do?'
             options=("Check File" "Change Directory" "Back")
             select opt in "${options[@]}"
             do
                     case $opt in
                             "Check File")
-                                ls
                                 echo -e "${W}Please enter the file name${NC}"
                                 read FNAME
-                                cat ${FNAME}
+                                if [[ ${FNAME} == "*.txt" ]] || [[ ${FNAME} == "*.json" ]] || [[ ${FNAME} == "*.csv" ]]; then
+                                    cat ${FNAME}
+                                elif [[ ${FNAME} == "*.png" ]]; then
+                                    gimp ${FNAME}
+                                else
+                                    echo -e "${FNAME} is a directory, please try changing directories instead.${NC}"
+                                fi
                                 result_choices
                                 ;;
 
                             "Change Directory")
-                                ls
                                 echo -e "${W}Please enter the directory name${NC}"
                                 read DIR_NAME
                                 cd ${DIR_NAME}
@@ -723,7 +730,6 @@ results(){
     echo -e "${W}Please enter the name of the result directory you'd like to see${NC}"
     read DNAME
     cd ${DNAME}
-    ls
     result_choices
 }
 # Module Menu
@@ -919,8 +925,7 @@ while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next opt
             echo -e "${LP}"
             figlet -f mini "Sifter Results"
             echo -e "${NC}"
-            cd /opt/sifter/results
-            xterm ls
+            results
             ;;
 
         u)
