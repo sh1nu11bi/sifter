@@ -748,7 +748,7 @@ modules(){
     echo -e "${RED}*******${NC}"
     echo -e "${ORNG}"
     PS3='What would you like to do?'
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "View Results" "Quit")
+            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "View Results" "Main Menu" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -786,6 +786,10 @@ modules(){
 
                             "View Results")
                                 results
+                                ;;
+
+                            "Main Menu")
+                                menu
                                 ;;
 
                             "Quit")
