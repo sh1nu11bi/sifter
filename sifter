@@ -695,12 +695,16 @@ result_choices(){
                             "Check File")
                                 echo -e "${W}Please enter the file name${NC}"
                                 read FNAME
-                                if [[ ${FNAME} == "*.txt" ]] || [[ ${FNAME} == "*.json" ]] || [[ ${FNAME} == "*.csv" ]]; then
-                                    cat ${FNAME}
+                                if [[ -d '${FNAME}' ]]; then
+                                    echo -e "${FNAME} is a directory, please try changing directories instead.${NC}"
                                 elif [[ ${FNAME} == "*.png" ]]; then
                                     gimp ${FNAME}
+                                elif [[ ${FNAME} == "*.json" ]]; then
+                                    cat ${FNAME}
+                                elif [[ ${FNAME} == "*.csv" ]]; then
+                                    cat ${FNAME}
                                 else
-                                    echo -e "${FNAME} is a directory, please try changing directories instead.${NC}"
+                                    cat ${FNAME}
                                 fi
                                 result_choices
                                 ;;
