@@ -30,6 +30,7 @@ usage() {                                      # Function: Print a help message.
 # Information Modules
 # Enterprise Target Info
 cred_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Enterprise Information Gatherers"
   echo -e "${LP}This module focuses on Enterprises and their online presence"
@@ -69,6 +70,7 @@ cred_mods(){
 }
 # Individual Target Info
 phone_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Targeted Information Gatherers"
   echo -e "${LP}This module focuses on individual targets."
@@ -100,6 +102,7 @@ phone_mods(){
 }
 # Info Module-Category Selection
 info_mods(){
+    cd /opt/sifter
     echo -e "${RED}"
     figlet -f mini "Information Gatherers"
     echo -e "${ORNG}"
@@ -130,6 +133,7 @@ info_mods(){
 }
 # HoneyPot Scanners
 honey_mods(){
+    cd /opt/sifter
     echo -e "${RED}"
     figlet -f mini "HoneyPot Detection Systems"
     echo -e "${LP}This module focuses on Enterprises and their online presence"
@@ -162,11 +166,12 @@ honey_mods(){
 }
 # Domain Modules
 dom_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "DomainFuzz" "Armory" "Omnibus" "Back" "Quit")
+          options=("DnsTwist" "Armory" "Omnibus" "Back" "Quit") #"DomainFuzz"
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -174,9 +179,9 @@ dom_mods(){
                                 ./modules/dommods/dnstwist.sh
                                 ;;
 
-                            "DomainFuzz")
-                                ./modules/dommods/domainfuzz.sh
-                                ;;
+#                            "DomainFuzz")
+#                                ./modules/dommods/domainfuzz.sh
+#                                ;;
 
                             "Armory")
                                 ./modules/dommods/armory.sh
@@ -199,6 +204,7 @@ dom_mods(){
 }
 # Network Modules
 net_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Network Scanners"
   echo -e "${ORNG}"
@@ -236,6 +242,7 @@ net_mods(){
 }
 # Vulnerability Scanners
 vuln_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
@@ -269,6 +276,7 @@ vuln_mods(){
 }
 # Web-Focused Modules
 web_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
@@ -317,6 +325,7 @@ web_mods(){
 }
 # Exploitation Modules
 ex_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
@@ -387,6 +396,7 @@ ex_mods(){
 }
 # BruteForce Modules
 bruters(){
+    cd /opt/sifter
     echo -e "${RED}"
     figlet -f mini "BruteDUM"
     echo -e "${ORNG}"
@@ -401,6 +411,7 @@ bruters(){
 }
 # Exploit Searchers
 search_tools(){
+    cd /opt/sifter
     echo -e "${RED}"
     figlet -f mini "Exploit Finders"
     echo -e "${ORNG}"
@@ -445,6 +456,7 @@ search_tools(){
 }
 # MicroSoft Exploitation
 ms_tools(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "MicroSoft Exploitation Tools"
   echo -e "${ORNG}"
@@ -504,6 +516,7 @@ ms_tools(){
 }
 # Web Exploitation
 web_tools(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Website Exploitation Tools"
   echo -e "${ORNG}"
@@ -547,6 +560,7 @@ web_tools(){
 }
 # Web-App Modules
 webapps(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
@@ -728,6 +742,7 @@ result_choices(){
                                 ;;
 
                             "Back")
+                                cd /opt/sifter
                                 modules
                                 ;;
 
@@ -746,6 +761,7 @@ results(){
     read DNAME
     cd ${DNAME}
     result_choices
+    cd /opt/sifter
 }
 # Module Menu
 modules(){

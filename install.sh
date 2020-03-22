@@ -379,7 +379,7 @@ if [[ -d '/opt/SMBScanner' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/gabimarti/SMBScanner.git
+	git clone https://github.com/ioncodes/SMBGhost.git
 	python3 -m pip install hexdump
 fi
 
