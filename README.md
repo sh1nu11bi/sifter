@@ -81,7 +81,10 @@ eg. target.com 			instead of http://target.com
 
 	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
 
-	   -FuzzyDander (Obtained though issue request. Thereafter you may get this module. It is not privided openly
+	   =FuzzyDander 
+	   	-FuzzBunch
+		-Danderspritz
+		(This module is obtained though issue request. Thereafter you may get this module. It is not privided openly
 	   		as to stop script kiddies from causing to much damage. Thank you for understanding.)
 
 	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
