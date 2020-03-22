@@ -279,7 +279,8 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 # asnip
-go get github.com/harleo/asnip
+echo -e "${YLW}Installing & Updating aSnip${NC}"
+go get -u github.com/harleo/asnip
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Armory${NC}"
