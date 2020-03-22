@@ -847,33 +847,30 @@ update(){
         CHECK=$(git fetch)
         if [[ ${CHECK} == 'new tag' ]]; then
     	    git pull
+            sudo ./install.sh
+	        sudo cp sifter -t /usr/sbin
+            sudo mv ~/fuzzydander.sh -t /opt/sifter/modules/exmods/
+	        sudo chmod +x -R /opt/sifter/modules
+	        sudo chmod +x /usr/sbin/sifter
+            sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
+            echo -e "${W}Done!${NC}"
 	    else
-            echo -e "${W}Sifter is Up-to-date"
+            echo -e "${YLW}Sifter is Up-to-date${NC}"
         fi
-#        git fetch
-#	    git pull
-	    sudo ./install.sh
-	    sudo cp sifter -t /usr/sbin
-        sudo mv ~/fuzzydander.sh -t /opt/sifter/modules/exmods/
-	    sudo chmod +x -R /opt/sifter/modules
-	    sudo chmod +x /usr/sbin/sifter
-        sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
-        echo -e "${W}Done!${NC}"
+       
     else
-#        git fetch
 	    CHECK=$(git fetch)
         if [[ ${CHECK} == 'new tag' ]]; then
     	    git pull
+            sudo ./install.sh
+	        sudo cp sifter -t /usr/sbin
+	        sudo chmod +x -R /opt/sifter/modules
+	        sudo chmod +x /usr/sbin/sifter
+            sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
+            echo -e "${W}Done!${NC}"
 	    else
-            echo -e "${W}Sifter is Up-to-date"
+            echo -e "${YLW}Sifter is Up-to-date${NC}"
         fi
-#        git pull
-	    sudo ./install.sh
-	    sudo cp sifter -t /usr/sbin
-	    sudo chmod +x -R /opt/sifter/modules
-	    sudo chmod +x /usr/sbin/sifter
-        sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
-        echo -e "${W}Done!${NC}"
     fi
 }
 
