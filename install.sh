@@ -371,6 +371,18 @@ else
 	sudo git clone https://github.com/nyxgeek/onedrive_user_enum
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for SMBGhost${NC}"
+if [[ -d '/opt/SMBGhost' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "SMBGhost is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	git clone https://github.com/ioncodes/SMBGhost.git
+	python3 -m pip install hexdump
+fi
+
 sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
 echo -e "${RED}"
 figlet "Done! =D"

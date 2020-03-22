@@ -449,7 +449,7 @@ ms_tools(){
   figlet -f mini "MicroSoft Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "iSpy" "FuzzyDander" "Back" "Quit")
+        options=("ActiveReign" "iSpy" "FuzzyDander" "SMBGhost" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -484,6 +484,11 @@ ms_tools(){
                                 echo -e "${YLW}This is done to prevent script kiddie's from"
                                 echo -e "causing to much damage.${NC}"
                                 echo -e "${ORNG}Thank you for understanding. Have a good day.${NC}"
+                                ;;
+
+                            "SMBGhost")
+                                echo -e "${LP}SMBGhost scans for the CVE-2020-0796 vulnerability in Windows SMB3 protocol${NC}"
+                                ./modules/exmods/smbghost.sh
                                 ;;
 
                             "Back")
@@ -725,11 +730,11 @@ result_choices(){
                             "Back")
                                 modules
                                 ;;
-                            
+
                     esac
             done
     echo -e "${NC}"
-}   
+}
 # Results
 results(){
     echo -e "${YLW}Results"
@@ -805,7 +810,7 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "*s1l3nt78*"
-    echo -e "${RED}////////========Ame7hys7_(v3.8)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}////////========ChrysalliS_(v4)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}==Hit Ctrl + c at any time to quit Sifter==${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -857,7 +862,7 @@ update(){
 	    else
             echo -e "${YLW}Sifter is Up-to-date${NC}"
         fi
-       
+
     else
 	    CHECK=$(git fetch)
         if [[ ${CHECK} == 'new tag' ]]; then

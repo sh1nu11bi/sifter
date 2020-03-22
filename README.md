@@ -7,8 +7,8 @@
   	<a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   	<a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>		  
 <br>
-  	<a href="#"><img align="center" src="https://img.shields.io/badge/Version-3.8-red"</a>
-	<a href="#"><img align="center" src="https://img.shields.io/badge/Build-Ame7hys7-yellowgreen"</a>
+  	<a href="#"><img align="center" src="https://img.shields.io/badge/Version-4-red"</a>
+	<a href="#"><img align="center" src="https://img.shields.io/badge/Build-ChrysalliS-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
 </p>
@@ -46,7 +46,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 		  -theHarvester  - https://github.com/laramies/theHarvester
 		  -Osmedeus - https://github.com/j3ssie/Osmedeus
 		  -ReconSpider - https://github.com/bhavsec/reconspider
-	 
+
 	 = Targeted Information Gatherers
 		  -Seeker - https://github.com/thewhiteh4t/seeker
 		  -Sherlock - https://github.com/sherlock-project/sherlock
@@ -63,21 +63,21 @@ Gathered info is saved to the results folder, these output files can be easily p
 	  = MS Exploiters
 		  -ActiveReign - https://github.com/m8r0wn/ActiveReign
 		  -iSpy - https://github.com/Cyb0r9/ispy
-				  
+
 	  = Website Exploiters
 		  -Dark Star - https://github.com/s1l3nt78/Dark-Star
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
-	  
+
 	  = Exploit Searching
 		  -FindSploit - https://github.com/1N3/Findsploit
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit
-	  
+
 	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
-	   
-	   -FuzzyDander (Obtained though issue request. Thereafter you may get this module. It is not privided openly 
+
+	   -FuzzyDander (Obtained though issue request. Thereafter you may get this module. It is not privided openly
 	   		as to stop script kiddies from causing to much damage. Thank you for understanding.)
 
-	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum 
+	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
 
 	# Network Scanners
 		-Nmap - https://nmap.org
@@ -88,8 +88,8 @@ Gathered info is saved to the results folder, these output files can be easily p
 	# HoneyPot Detection Systems
 		-HoneyCaught - https://github.com/aswinmguptha/HoneyCaught
 		-SniffingBear - https://github.com/MrSuicideParrot/SniffingBear
-		
-		
+
+
 	# Vulnerability Scanners
 		-Flan - https://github.com/cloudflare/flan
 	  	-Rapidscan - https://github.com/skavngr/rapidscan
