@@ -135,6 +135,8 @@ Gathered info is saved to the results folder, these output files can be easily p
   <br>
   $ sifter	-v Opens the Vulnerability Scanning Module Menu
   <br>
+  $ sifter	-r Opens the results folder for easy viewing of all saved results
+  <br>
   $ sifter	-u Checks for/and installs updates
   <br>
   $ sifter	-h This Help Menu
