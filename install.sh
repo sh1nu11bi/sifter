@@ -373,13 +373,13 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for SMBGhost${NC}"
-if [[ -d '/opt/SMBGhost' ]]; then
+if [[ -d '/opt/SMBScanner' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "SMBGhost is already installed"
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/ioncodes/SMBGhost.git
+	git clone https://github.com/gabimarti/SMBScanner.git
 	python3 -m pip install hexdump
 fi
 
