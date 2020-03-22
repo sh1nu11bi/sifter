@@ -844,8 +844,14 @@ update(){
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
         cd /opt/sifter
         mv modules/exmods/fuzzydander.sh -t ~
-        git fetch
-	    git pull
+        CHECK=$(git fetch)
+        if [[ ${CHECK} == 'new tag' ]]; then
+    	    git pull
+	    else
+            echo -e "${W}Sifter is Up-to-date"
+        fi
+#        git fetch
+#	    git pull
 	    sudo ./install.sh
 	    sudo cp sifter -t /usr/sbin
         sudo mv ~/fuzzydander.sh -t /opt/sifter/modules/exmods/
@@ -854,8 +860,14 @@ update(){
         sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
         echo -e "${W}Done!${NC}"
     else
-        git fetch
-	    git pull
+#        git fetch
+	    CHECK=$(git fetch)
+        if [[ ${CHECK} == 'new tag' ]]; then
+    	    git pull
+	    else
+            echo -e "${W}Sifter is Up-to-date"
+        fi
+#        git pull
 	    sudo ./install.sh
 	    sudo cp sifter -t /usr/sbin
 	    sudo chmod +x -R /opt/sifter/modules
