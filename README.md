@@ -63,6 +63,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 	  = MS Exploiters
 		  -ActiveReign - https://github.com/m8r0wn/ActiveReign
 		  -iSpy - https://github.com/Cyb0r9/ispy
+		  -SMBGhost - https://github.com/gabimarti/SMBScanner
 
 	  = Website Exploiters
 		  -Dark Star - https://github.com/s1l3nt78/Dark-Star
