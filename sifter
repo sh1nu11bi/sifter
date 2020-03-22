@@ -289,7 +289,7 @@ web_mods(){
                                 ;;
 
 														"Dirb")
-																./modules/webmods/dirb.#!/bin/sh
+																./modules/webmods/dirb.sh
 																;;
 
                             "Nikto")
