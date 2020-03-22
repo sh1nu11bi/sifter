@@ -15,7 +15,7 @@ nikto_single(){
 	echo -e "${YLW}"
 	cat pingtest.pass
 	echo -e "${NC}"
-	echo -e "${W}Please enter your target.${NC}"
+	echo -e "${W}Please enter your target. (without webmask 'http://' protocol)${NC}"
 	read TARGET
 	sleep 1
 	nikto -host http://${TARGET} | tee /opt/sifter/results/Nikto/${TARGET}.txt
