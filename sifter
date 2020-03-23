@@ -873,7 +873,7 @@ update(){
 #
 #    else
 	    CHECK=$(git fetch)
-        if [[ ${CHECK} == 'new tag' ]]; then
+#        if [[ ${CHECK} == 'new tag' ]]; then
     	    git pull
             sudo ./install.sh
 	        sudo cp sifter -t /usr/sbin
@@ -881,9 +881,9 @@ update(){
 	        sudo chmod +x /usr/sbin/sifter
             sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
             echo -e "${W}Done!${NC}"
-	    else
-            echo -e "${YLW}Sifter is Up-to-date${NC}"
-        fi
+#	    else
+#            echo -e "${YLW}Sifter is Up-to-date${NC}"
+#        fi
 #    fi
 }
 
