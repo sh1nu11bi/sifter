@@ -52,7 +52,7 @@ echo -e "${W}Would you like to give a single target or use a list?"
 echo -e "list can be in csv, json or txt(s/l)${NC}"
 read TARGETO
 if [[ ${TARGETO} == "s" ]]; then
-	echo -e "${W}Please enter your target${NC}"
+	echo -e "${W}Please enter your target (without webmask/ 'http://' protocol)${NC}"
 	read TARGET
 else
 	echo -e "${W}Please enter the full/path/to/targetlist${NC}"

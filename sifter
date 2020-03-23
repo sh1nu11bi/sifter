@@ -602,47 +602,55 @@ webapps(){
 }
 # Host Check
 check_hosts(){
-    echo -e "${ORNG}Host Check${NC}"
-    echo -e "${ORNG}***********${NC}"
-    rm files/pingtest_raw.pass files/pingtest.pass files/pingtest_pass.txt
+    echo -e "${RED}NOTE: ${YLW}This will not work if there are no target IP or domains in your host_list.txt file."
+    echo -e "${YLW}If you have not added any please go back and select edit host list option"
+    echo -e "${W}Would you like to continue?(y/n)${NC}"
+    read HOST_ANS
+    if [[ ${HOST_ANS} == "y" ]]; then
+    	echo -e "${ORNG}Host Check${NC}"
+    	echo -e "${ORNG}***********${NC}"
+    	rm files/pingtest_raw.pass files/pingtest.pass files/pingtest_pass.txt
 
-    for name in `cat files/host_list.txt`
+    	for name in `cat files/host_list.txt`
 
-            do
-                ping -c 1 $name
-                    if [[ $? == 0 ]]; then
-                        echo -e "${LP}=================="
-                        echo -e "\e[95m$name Alive\e[0m" && echo $name >> files/pingtest_raw.pass
-                        echo -e "${LP}==================${NC}"
-                    else
-                        echo -e "${RED}=================="
-                        echo -e "\e[1;31m$name Dead\e[0m" && echo $name >> files/pingtest_raw.fail
-                        echo -e "${RED}==================${NC}"
-                    fi
-            done
-
-                sleep 5
-
+    	        do
+    	            ping -c 1 $name
+    	                if [[ $? == 0 ]]; then
+    	                    echo -e "${LP}=================="
+    	                    echo -e "\e[95m$name Alive\e[0m" && echo $name >> files/pingtest_raw.pass
+    	                    echo -e "${LP}==================${NC}"
+    	                else
+    	                    echo -e "${RED}=================="
+    	                    echo -e "\e[1;31m$name Dead\e[0m" && echo $name >> files/pingtest_raw.fail
+    	                    echo -e "${RED}==================${NC}"
+    	                fi
+    	        done
+	
+	                sleep 5
+	
             echo "============================================================================================================================="
 
-            echo -e "\e[95mPingtest_Pass\e[0m"
-            echo $'\e[95m*************\e[0m'
-	        cat files/pingtest_raw.pass | sort | uniq > files/pingtest.pass
-            echo -e "${YLW}"
-	        cat files/pingtest.pass
-	        echo -e "${NC}"
-	        sed -e 's/^/http:\/\//' files/pingtest.pass > files/pingtest_pass.txt
+        	echo -e "\e[95mPingtest_Pass\e[0m"
+            	echo $'\e[95m*************\e[0m'
+		        cat files/pingtest_raw.pass | sort | uniq > files/pingtest.pass
+        	    echo -e "${YLW}"
+		        cat files/pingtest.pass
+		        echo -e "${NC}"
+		        sed -e 's/^/http:\/\//' files/pingtest.pass > files/pingtest_pass.txt
 
-            echo "============================================================================================================================="
+        	    echo "============================================================================================================================="
 
-            echo -e "\e[1;31mPingtest_Fail\e[0m"
-            echo $'\e[1;31m*************\e[0m'
-            cat files/pingtest_raw.fail | sort | uniq > files/pingtest.fail
-            echo -e "${YLW}"
-	        cat files/pingtest.fail
-	        echo -e "${NC}"
-            sleep 5
-            menu
+	            echo -e "\e[1;31mPingtest_Fail\e[0m"
+	            echo $'\e[1;31m*************\e[0m'
+	            cat files/pingtest_raw.fail | sort | uniq > files/pingtest.fail
+	            echo -e "${YLW}"
+		        cat files/pingtest.fail
+		        echo -e "${NC}"
+	            sleep 5
+        	    menu
+     else
+		menu
+     fi
 }
 # List Argument Options Settings Below
 ip_add() {
