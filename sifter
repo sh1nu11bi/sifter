@@ -814,6 +814,7 @@ modules(){
 }
 # Menu
 menu(){
+    mkdir /opt/sifter/results
     echo -e "${ORNG}"
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
