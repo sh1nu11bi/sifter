@@ -321,7 +321,7 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("MS Specific Tools" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "FuzzyDander*" "Back" "Quit")
+        options=("MS Specific Tools" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -476,7 +476,7 @@ ms_tools(){
 			                    fi
 			                    ;;
 
-                            "FuzzyDander*")
+                            "FuzzyDander")
                                 echo -e "${LBBLUE}This module is not included in the open git repo."
                                 echo -e "${RED}In order to obtain this module, please ensure Sifter is"
                                 echo -e "completely up-to-date and open an issue requesting it."
