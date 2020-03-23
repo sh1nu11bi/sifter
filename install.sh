@@ -373,7 +373,7 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for SMBGhost${NC}"
-if [[ -d '/opt/SMBScanner' ]]; then
+if [[ -d '/opt/SMBGhost' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "SMBGhost is already installed"
 	echo -e "${NC}"
