@@ -373,20 +373,21 @@ fi
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for SMBGhost${NC}"
-if [[ -d '/opt/SMBScanner' ]]; then
+if [[ -d '/opt/SMBGhost' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "SMBGhost is already installed"
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/gabimarti/SMBScanner.git
+	git clone https://github.com/ioncodes/SMBGhost.git
 	python3 -m pip install hexdump
 fi
 
+cd /opt
 sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
-echo "127.0.0.1" >> /opt/sifter/files/host_list.txt
+#echo "127.0.0.1" >> /opt/sifter/files/host_list.txt
 cd /opt/sifter
-./sifter -c
+#./sifter -c
 echo -e "${RED}"
 figlet "Done."
 echo -e "${NC}"

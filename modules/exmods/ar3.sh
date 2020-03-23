@@ -260,7 +260,8 @@ PS3='What would you like to do?'
                         ;;
 
                     "Back")
-                        modules
+                        cd /opt/sifter
+                        ./sifter -m
                         ;;
 
                     "Quit")
