@@ -385,6 +385,8 @@ fi
 
 cd /opt
 sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
+chmod +x /opt/sifter --recursive
+chmod +x /usr/sbin/sifter
 #echo "127.0.0.1" >> /opt/sifter/files/host_list.txt
 cd /opt/sifter
 #./sifter -c
