@@ -489,7 +489,7 @@ ms_tools(){
 			                    ;;
 
                             "FuzzyDander")
-                                if [[ -f '/opt/sifter/exmods/fuzzydander.sh' ]]; then
+                                if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
                                     echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
                                     echo -e "codename:${RED}FuzzyDander${NC}"
                                     echo -e "${YLW}If you do not know what these tools are or how they work,"
