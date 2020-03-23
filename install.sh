@@ -15,7 +15,7 @@ if [[ -d /opt/sifter ]]; then
 else
 	pwd && cd ..
 	sudo cp -r sifter -t /opt
-	sudo chown $USER:$USER -R /opt/sifter 
+	sudo chown $USER:$USER -R /opt/sifter
 	cd /opt/sifter
     sudo cp sifter /usr/sbin/sifter
 	sudo chmod +x /opt/sifter/sifter /usr/sbin/sifter
@@ -158,7 +158,7 @@ echo -e "${YLW}Checking for ReconSpider${NC}"
 if [[ -d "/opt/reconspider" ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "ReconSpider is already installed"
-	echo -e "${NC}"	
+	echo -e "${NC}"
 else
 	cd /opt
 	git clone https://github.com/bhavsec/reconspider.git
@@ -262,7 +262,7 @@ if [[ -d '/opt/docker-osmedeus' ]]; then
 else
 	cd /opt/
 	git clone https://github.com/mablanco/docker-osmedeus.git
-	cd docker-osmedeus 
+	cd docker-osmedeus
 	sudo docker build -t mablanco/osmedeus .
 fi
 
@@ -384,10 +384,12 @@ else
 fi
 
 sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
-echo -e "${RED}"
-figlet "Done! =D"
-echo -e "${NC}"
+echo "127.0.0.1" >> /opt/sifter/files/host_list.txt
 cd /opt/sifter
+./sifter -c
+echo -e "${RED}"
+figlet "Done."
+echo -e "${NC}"
 sifter -h
 echo -e "${W}Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm"
 echo -e "& add your WPvulnDB api token to modules/wpscan.sh to both of the command arguments${NC}"
