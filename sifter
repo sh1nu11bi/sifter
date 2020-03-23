@@ -888,7 +888,7 @@ update(){
         cd /opt/sifter
         mv modules/exmods/fuzzydander.sh -t ~
         CHECK=$(git fetch)
-        if [[ ${CHECK} == 'new tag' ]]; then
+        if [[ ${CHECK} == 'new tag' ]] || [[ ${CHECK} == "origin/master" ]]; then
     	    git pull
             sudo ./install.sh
 	        sudo cp sifter -t /usr/sbin
