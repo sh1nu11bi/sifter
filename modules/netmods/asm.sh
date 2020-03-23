@@ -9,7 +9,7 @@ LBBLUE='\e[104m'
 if [[ -d /opt/sifter/results/ASM ]]; then
     echo ""
 else
-    mkdir /opt/sifter/results/ASM
+    sudo mkdir /opt/sifter/results/ASM
 fi
 figlet -f mini "AttackSurfaceMapper"
 cd /opt/AttackSurfaceMapper
