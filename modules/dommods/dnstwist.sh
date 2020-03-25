@@ -19,8 +19,9 @@ check(){
 }
 
 cd /opt/dnstwist
-echo -e "${ORNG}DnsTwist"
-echo -e "*********${NC}"
+echo -e "${ORNG}"
+figlet -f mini "DnsTwist"
+echo -e "${NC}"
 check
 listing
 echo -e "${W}Please enter your target${NC}"
