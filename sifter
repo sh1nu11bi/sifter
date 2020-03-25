@@ -37,16 +37,12 @@ cred_mods(){
   echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "SniffingBear" "Osmedeus" "ReconSpider" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          options=("theHarvester" "Osmedeus" "ReconSpider" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
           select opt in "${options[@]}"
           do
                   case $opt in
                             "theHarvester")
                                 ./modules/credmods/harvester.sh
-                                ;;
-
-                            "SniffingBear")
-                                ./modules/credmods/s_bear.sh
                                 ;;
 
                             "Osmedeus")
