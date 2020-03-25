@@ -28,14 +28,19 @@ Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tool
 Gathered info is saved to the results folder, these output files can be easily parsed over to <a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> in order to be utilised within your campaign. Or compiled for a final report to wrap up a penetration test.
 <br>
 <br>
-If you get stuck, here is a demo <a href="https://youtu.be/QgAfqbxqbK0">video</a>
+<a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s">Setup Video</a>
+<br>
+<a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a>
 <br>
 Its long, but you can skip through to get the general idea. Most modules are explained along with demos of a lot of the tools
 <br>
 <br>
 NOTE!! IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
 <br>
-eg. target.com 			instead of http://target.com
+<br>
+eg. target.com
+<br>
+instead of http://target.com
 <br>
 <br>
 # Please, if you fork this repo ensure to keep it updated.
