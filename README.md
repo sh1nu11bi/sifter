@@ -1,3 +1,7 @@
+!!NOTE!! PLEASE ENSURE YOU HAVE THE MOST RECENT VERSION FROM RELEASES, VERSION 4.2!!
+<br>
+VERSION 3.8-4 HAS AN ISSUE WITH UPDATE FUNCTION SO IT MUST BE RECLONED!!
+
 <p align="center">
  <img src="https://github.com/s1l3nt78/sifter/blob/master/.vs/sifter.png" alt="" />
 </p>
