@@ -7,11 +7,11 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
-#if [[ -d '/opt/sifter/results/Osmedeus' ]]; then
-#	sleep 2
-#else
-#	mkdir /opt/sifter/results/Osmedeus
-#fi
+if [[ -d '/opt/sifter/results/Osmedeus' ]]; then
+	sleep 2
+else
+	mkdir /opt/sifter/results/Osmedeus
+fi
 echo -e "${ORNG}"
 figlet -f mini "OsmedeuS"
 echo -e "${NC}"
@@ -23,6 +23,8 @@ sudo docker run -it --rm --name osmedeus -p 8000:8000 mablanco/osmedeus ./osmede
 sleep 5
 echo -e "${RED}Below is your password for Osmedeus Web UI, available at http://127.0.0.1:8000"
 sudo docker exec -it osmedeus grep password /root/.osmedeus/client.conf
+sudo mv /root/.osmedeus/workspaces/* -t /opt/sifter/results/Osmedeus
+sudo chown $USER:$USER /opt/sifter/results --recursive
 #cd /opt/Osmedeus
 #echo -e "${W}Would you like to run Osmedeus against a single target or a target list?(s/l)${NC}"
 #read TANS
