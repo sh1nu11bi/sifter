@@ -844,6 +844,11 @@ modules(){
 }
 # Menu
 menu(){
+    if [[ -d "/opt/sifter/results" ]]; then
+        sleep 1
+    else 
+        mkdir /opt/sifter/results
+    fi
     echo -e "${ORNG}"
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
