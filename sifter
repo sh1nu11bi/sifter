@@ -997,7 +997,7 @@ while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next opt
 
 	esac
 done
-if (( $OPTIND == 1 )); then				# if no option is passed
+if [[ $OPTIND == 1 ]]; then				# if no option is passed
 	menu		  	                    # default command is run
 fi
 exit 0
