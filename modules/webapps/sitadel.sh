@@ -6,7 +6,7 @@ LP='\033[1;35m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
-CONF='/opt/Sitadel/config.yml'
+CONF='/opt/Sitadel/config/config.yml'
 # Configuration Variables
 fp_mod_select(){
 	echo -e "${LP}FINGERPRINT	${YLW}MODULE DESCRIPTION${NC}"
@@ -69,7 +69,7 @@ config(){
 	echo -e "${W}Please specify the config file to use, otherwise just hit enter to use default(/opt/Sitadel/config/config.yml)"
 	read CONF1
 	if [[ ${CONF1} == '' ]];then
-		CONF='/opt/Sitadel/config/config.yml'
+		CONF1=CONF
 	fi
 }
 verbose(){
@@ -99,10 +99,9 @@ atk_mod_select
 risk_lvl
 302_redir
 timeout
-use_cookieCONF='/opt/Sitadel/config.yml'
+use_cookie
 config
 verbose
-echo -e "$CONF='/opt/Sitadel/config.yml'${NC}"
 echo -e "${LP}eg. http://example.com${NC}"
 read TARGET
 echo "=============================================================================================================="
