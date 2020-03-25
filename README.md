@@ -11,7 +11,7 @@ VERSION 3.8-4 HAS AN ISSUE WITH UPDATE FUNCTION SO IT MUST BE RECLONED!!
   	<a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   	<a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>		  
 <br>
-  	<a href="#"><img align="center" src="https://img.shields.io/badge/Version-4-red"</a>
+  	<a href="#"><img align="center" src="https://img.shields.io/badge/Version-4.2-red"</a>
 	<a href="#"><img align="center" src="https://img.shields.io/badge/Build-ChrysalliS-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
