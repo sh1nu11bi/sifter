@@ -698,6 +698,12 @@ list_editor(){
                                 ;;
 
                             "Add")
+                                if [[ ${TARLIST} == "eg. target.com" ]]; then
+                                    rm /opt/sifter/files/host_list.txt
+                                    touch /opt/sifter/files/host_list.txt
+                                else
+                                    sleep 1
+                                fi
                                 echo -e "${W}Type the IP or hostname you would like to add${NC}"
 			                    sleep 5
                                 read LTARGET
@@ -909,6 +915,13 @@ while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next opt
 			echo -e "${ORNG}"
 			figlet -f mini "Adding $ARG to host list"
 			echo -e "${NC}"
+            TARLIST=$(cat /opt/sifter/files/host_list.txt)
+            if [[ ${TARLIST} == "eg. target.com" ]]; then
+                rm /opt/sifter/files/host_list.txt
+                touch /opt/sifter/files/host_list.txt
+            else
+                sleep 1
+            fi
 			echo "$ARG" >> files/host_list.txt
 			sleep 2
 			modules
