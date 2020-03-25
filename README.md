@@ -1,3 +1,7 @@
+!!NOTE!! PLEASE ENSURE YOU HAVE THE MOST RECENT VERSION FROM RELEASES, VERSION 4.2!!
+<br>
+VERSION 3.8-4 HAS AN ISSUE WITH UPDATE FUNCTION SO IT MUST BE RECLONED!!
+
 <p align="center">
  <img src="https://github.com/s1l3nt78/sifter/blob/master/.vs/sifter.png" alt="" />
 </p>
@@ -7,7 +11,7 @@
   	<a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   	<a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>		  
 <br>
-  	<a href="#"><img align="center" src="https://img.shields.io/badge/Version-4-red"</a>
+  	<a href="#"><img align="center" src="https://img.shields.io/badge/Version-4.2-red"</a>
 	<a href="#"><img align="center" src="https://img.shields.io/badge/Build-ChrysalliS-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
@@ -23,6 +27,10 @@ Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tool
 <br>
 Gathered info is saved to the results folder, these output files can be easily parsed over to <a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> in order to be utilised within your campaign. Or compiled for a final report to wrap up a penetration test.
 <br>
+<br>
+If you get stuck, here is a demo <a href="https://youtu.be/QgAfqbxqbK0">video</a>
+<br>
+Its long, but you can skip through to get the general idea. Most modules are explained along with demos of a lot of the tools
 <br>
 <br>
 NOTE!! IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
