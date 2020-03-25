@@ -1,4 +1,4 @@
-#!/bin/bash
+*#!/bin/bash
 
 ORNG='\033[0;33m'
 NC='\033[0m'
@@ -35,7 +35,8 @@ do
 			read TARGET3
 			echo -e "${LP}Running Blackwidow with the following command, 'blackwidow -u $TARGET1 -l $TARGET2 -s $TARGET3 -v y'${NC}"
 				sleep 5
-			sudo blackwidow -u ${TARGET1} -l ${TARGET2} -s ${TARGET3} -v y | tee /opt/sifter/results/Blackwidow/${TARGET}.txt
+			sudo blackwidow -u ${TARGET1} -l ${TARGET2} -s ${TARGET3} -v y 
+            sudo mv /usr/share/blackwidow/* -t /opt/sifter/modules/results/Blackwidow
             ./modules/webmods/widow.sh
             ;;
 
@@ -53,7 +54,8 @@ do
 	    read TARGETEXT
 	    echo -e "${W}Running injectx script with the following argument, ${LP}'injectx.py -u ${TARGETDMN}${TARGETEXT} -v y'${NC}"
 	    sleep 5
-            sudo injectx.py -u ${TARGET} -v y | tee /opt/sifter/results/Blackwidow/${TARGET}_owaspVulns.txt
+            sudo injectx.py -u ${TARGET} -v y 
+            sudo mv /usr/share/blackwidow/* -t /opt/sifter/modules/results/Blackwidow
             ./modules/webmods/widow.sh
             ;;
 
