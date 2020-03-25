@@ -725,7 +725,7 @@ result_choices(){
     ls
     echo -e "${NC}"
     PS3='What would you like to do?'
-            options=("Check File" "Change Directory" "Back")
+            options=("Check File" "Check Image" "Change Directory" "Back")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -734,21 +734,18 @@ result_choices(){
                                 read FNAME
                                 if [[ -d '${FNAME}' ]]; then
                                     echo -e "${FNAME} is a directory, please try changing directories instead.${NC}"
-                                elif [[ ${FNAME} == "*.*.png" ]]; then
-                                    eom ${FNAME}
-                                elif [[ ${FNAME} == "*.json" ]]; then
-                                    echo -e "${W}==========================================================================${NC}"
-                                    cat ${FNAME}
-                                    echo -e "${W}==========================================================================${NC}"
-                                elif [[ ${FNAME} == "*.csv" ]]; then
-                                    echo -e "${W}==========================================================================${NC}"
-                                    cat ${FNAME}
-                                    echo -e "${W}==========================================================================${NC}"
                                 else
                                     echo -e "${W}==========================================================================${NC}"
                                     cat ${FNAME}
                                     echo -e "${W}==========================================================================${NC}"
                                 fi
+                                result_choices
+                                ;;
+
+                            "Check Image")
+                                echo -e "${W}Please enter the image name${NC}"
+                                read INAME
+                                eom INAME
                                 result_choices
                                 ;;
 
