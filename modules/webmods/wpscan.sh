@@ -14,12 +14,16 @@ fi
 echo -e "${ORNG}WPscan${NC}"
 echo -e "${ORNG}*******${NC}"
 echo -e "${YLW}"
-cat files/pingtest_pass.txt
+cat files/pingtest.pass
 echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site${NC}"
 read TARGET
 echo "==================================================================================="
-sudo wpscan --url ${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+sudo wpscan --url http://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+LOG=$(cat /opt/sifter/results/WPScan/${TARGET}.txt | grep "ignore-main-redirect")
+if [[ ${LOG} == "ignore-main-redirect" ]]; then
+	sudo wpscan --url https://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+fi
 echo "==================================================================================="
 sleep 2
 
@@ -34,7 +38,11 @@ sleep 2
 			       	sleep 2
 			        read WORDLIST
 			        sleep 2
-			        sudo wpscan --url ${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+				if [[ ${LOG} == "ignore-main-redirect" ]]; then
+					sudo wpscan --url https://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+			        else
+					sudo wpscan --url http://${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+				fi
 				echo "==================================================================================="
 				sleep 1
 				cd /opt/sifter

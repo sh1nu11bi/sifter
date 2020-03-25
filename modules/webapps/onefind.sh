@@ -29,7 +29,9 @@ else
 fi
 echo -e "${W}Please enter the domain to enumerate against.${NC}"
 read DOMAIN
-python onedrive_enum.py ${TARGET} -d ${DOMAIN} -o /opt/sifter/results/OneFind/${TARGET}_enum.log
+echo -e "${W}Please enter the name of your output file${NC}"
+read OUTPUT
+python onedrive_enum.py ${TARGET} -d ${DOMAIN} -o /opt/sifter/results/OneFind/${OUTPUT}_enum.log
 echo "==============================================================================================="
 cd /opt/sifter
 ./sifter -m
