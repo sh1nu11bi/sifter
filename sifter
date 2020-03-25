@@ -884,36 +884,18 @@ menu(){
 update(){
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
-    if [[ -f "/opt/sifter/modules/exmods/fuzzydander.sh" ]]; then
-        cd /opt/sifter
-        mv modules/exmods/fuzzydander.sh -t ~
-        CHECK=$(git fetch)
-        if [[ ${CHECK} == 'new tag' ]] || [[ ${CHECK} == "origin/master" ]]; then
-    	    git pull
-            sudo ./install.sh
-	        sudo cp sifter -t /usr/sbin
-            sudo mv ~/fuzzydander.sh -t /opt/sifter/modules/exmods/
-	        sudo chmod +x -R /opt/sifter/modules
-	        sudo chmod +x /usr/sbin/sifter
-            sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
-            echo -e "${W}Done!${NC}"
-	    else
-            echo -e "${YLW}Sifter is Up-to-date${NC}"
-        fi
-
+    CHECK=$(git fetch)
+    if [[ ${CHECK} == "" ]]; then
+        echo -e "${YLW}Sifter is Up-to-date${NC}"
     else
-	    CHECK=$(git fetch)
-        if [[ ${CHECK} == 'new tag' ]] || [[ ${CHECK} == "origin/master" ]]; then
-    	    git pull
-            sudo ./install.sh
-	        sudo cp sifter -t /usr/sbin
-	        sudo chmod +x -R /opt/sifter/modules
-	        sudo chmod +x /usr/sbin/sifter
-            sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
-            echo -e "${W}Done!${NC}"
-	    else
-            echo -e "${YLW}Sifter is Up-to-date${NC}"
-        fi
+        git pull
+        sudo ./install.sh
+        sudo cp sifter -t /usr/sbin
+        sudo chmod +x /opt/sifter --recursive
+        sudo chmod +x /usr/sbin/sifter
+        sudo chown $USER:$USER /opt/sifter --recursive
+        sudo chown $USER:$USER /usr/sbin/sifter
+        echo -e "${W}Done!${NC}"
     fi
 }
 
