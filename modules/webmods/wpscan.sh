@@ -40,7 +40,11 @@ sleep 2
 			        sleep 2
 				if [[ ${LOG} == "ignore-main-redirect" ]]; then
 					sudo wpscan --url https://${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+<<<<<<< Updated upstream
 			        else
+=======
+				else
+>>>>>>> Stashed changes
 					sudo wpscan --url http://${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
 				fi
 				echo "==================================================================================="
