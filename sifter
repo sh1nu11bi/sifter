@@ -745,7 +745,7 @@ result_choices(){
                             "Check Image")
                                 echo -e "${W}Please enter the image name${NC}"
                                 read INAME
-                                eom INAME
+                                eom ${INAME}
                                 result_choices
                                 ;;
 
