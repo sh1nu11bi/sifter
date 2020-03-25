@@ -103,7 +103,7 @@ use_cookieCONF='/opt/Sitadel/config.yml'
 config
 verbose
 echo -e "$CONF='/opt/Sitadel/config.yml'${NC}"
-echo -e "${LP}eg. http://example.com"
+echo -e "${LP}eg. http://example.com${NC}"
 read TARGET
 echo "=============================================================================================================="
 sudo python3 sitadel.py -r ${RISKLVL} ${FREDIR} -t ${TIMO} ${UC} ${COOKIE} -f ${FP_MODULE} -a ${ATK_MODULE} --config $CONF ${VERB} ${TARGET}
