@@ -13,19 +13,19 @@ usage() {                                      # Function: Print a help message.
 	echo "*****************"
 	echo "+"
 	echo "+"
-	echo "# sifter	runs the programs bringing up the menu in a cli environment"
-	echo "# sifter	-c will check the exsiting hosts in the hostlist"
-	echo "# sifter	-a '*' must be added with '' and then automattically appends the hostname/IP to host file"
-	echo "# sifter	-e Opens the Exploitation Module"
-	echo "# sifter	-i Opens the Info-based Module menu"
-	echo "# sifter 	-d Opens the Domain Focused Modules"
-	echo "# sifter 	-n Opens the Network Mapping Modules menu"
-	echo "# sifter	-w Opens the Website Focused Modules"
-	echo "# sifter	-wa Opens the Web-App Focused Module menu"
-	echo "# sifter	-v Opens the Vulnerability Scanning Module Menu"
-    echo "# sifter  -m Opens the Module Menu directly"
-	echo "# sifter	-u Checks for any updates on Github"
-	echo "# sifter	-h This Help Menu" 1>&2
+	echo "# sifter runs the programs bringing up the menu in a cli environment"
+	echo "# sifter -c will check the exsiting hosts in the hostlist"
+	echo "# sifter -a '*' must be added with '' and then automattically appends the hostname/IP to host file"
+	echo "# sifter -e Opens the Exploitation Module"
+	echo "# sifter -i Opens the Info-based Module menu"
+	echo "# sifter -d Opens the Domain Focused Modules"
+	echo "# sifter -n Opens the Network Mapping Modules menu"
+	echo "# sifter -w Opens the Website Focused Modules"
+	echo "# sifter -wa Opens the Web-App Focused Module menu"
+	echo "# sifter -v Opens the Vulnerability Scanning Module Menu"
+    echo "# sifter -m Opens the Module Menu directly"
+	echo "# sifter -u Checks for any updates on Github"
+	echo "# sifter -h This Help Menu" 1>&2
 }
 # Information Modules
 # Enterprise Target Info
