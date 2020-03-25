@@ -706,6 +706,7 @@ list_editor(){
                                 ;;
 
                             "Add")
+                                TARLIST=$(cat /opt/sifter/files/host_list.txt)
                                 if [[ ${TARLIST} == "eg. target.com" ]]; then
                                     rm /opt/sifter/files/host_list.txt
                                     touch /opt/sifter/files/host_list.txt
