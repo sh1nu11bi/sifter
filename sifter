@@ -7,7 +7,6 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 ARG=$2                                         # IP addition argument
-
 # Help Menu
 usage() {                                      # Function: Print a help message.
 	echo "Sifter Help Menu"
@@ -890,19 +889,15 @@ menu(){
 update(){
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
-    CHECK=$(git fetch)
-    if [[ ${CHECK} == "" ]]; then
-        echo -e "${YLW}Sifter is Up-to-date${NC}"
-    else
-        git pull
-        sudo ./install.sh
-        sudo cp sifter -t /usr/sbin
-        sudo chmod +x /opt/sifter --recursive
-        sudo chmod +x /usr/sbin/sifter
-        sudo chown $USER:$USER /opt/sifter --recursive
-        sudo chown $USER:$USER /usr/sbin/sifter
-        echo -e "${W}Done!${NC}"
-    fi
+    git fetch
+    git pull
+    sudo ./install.sh
+    sudo cp sifter -t /usr/sbin
+    sudo chown $USER:$USER /opt/sifter --recursive
+    sudo chown $USER:$USER /usr/sbin/sifter
+    chmod +x /opt/sifter --recursive
+    chmod +x /usr/sbin/sifter
+    echo -e "${W}Done!${NC}"
 }
 
 cd /opt/sifter
