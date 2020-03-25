@@ -27,7 +27,7 @@ else
 	echo -e "${W}Please enter the full path/to/users.txt${NC}"
 	read TARGET
 fi
-echo -e "${W}Please enter the domain to enumerate against${NC}"
+echo -e "${W}Please enter the domain to enumerate against.${NC}"
 read DOMAIN
 python onedrive_enum.py ${TARGET} -d ${DOMAIN} -o /opt/sifter/results/OneFind/${TARGET}_enum.log
 echo "==============================================================================================="
