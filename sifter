@@ -23,7 +23,7 @@ usage() {                                      # Function: Print a help message.
 	echo "# sifter	-w Opens the Website Focused Modules"
 	echo "# sifter	-wa Opens the Web-App Focused Module menu"
 	echo "# sifter	-v Opens the Vulnerability Scanning Module Menu"
-    echo "# sifter  -m Opens the Module Menu directly"
+    	echo "# sifter  -m Opens the Module Menu directly"
 	echo "# sifter	-u Checks for any updates on Github"
 	echo "# sifter	-h This Help Menu" 1>&2
 }
