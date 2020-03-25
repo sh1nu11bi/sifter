@@ -27,6 +27,7 @@ echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Omnibus${NC}"
 if [[ -d /opt/omnibus ]]; then
+	echo -e "${ORNG}"
 	figlet -f mini "Omnibus is already installed."
 	echo -e "${NC}"
 else
