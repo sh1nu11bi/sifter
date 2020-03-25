@@ -19,11 +19,12 @@ echo -e "${W}Please enter your target${NC}"
 read TARGET
 sleep 5
 echo -e "${LP}Starting Osmedeus Container${NC}"
-sudo docker run -it --rm --name osmedeus -p 8000:8000 mablanco/osmedeus ./osmedeus.py -t ${TARGET} --slow "all"
+sudo docker run -it --rm --name osmedeus -p 8000:8000 mablanco/osmedeus ./osmedeus.py -t ${TARGET} --slow "all" &
 sleep 5
 echo -e "${RED}Below is your password for Osmedeus Web UI, available at http://127.0.0.1:8000"
 sudo docker exec -it osmedeus grep password /root/.osmedeus/client.conf
-sudo mv /root/.osmedeus/workspaces/* -t /opt/sifter/results/Osmedeus
+sleep 5
+sudo docker cp osmedeus:/root/.osmedeus/workspaces/* /opt/sifter/results/Osmedeus|-
 sudo chown $USER:$USER /opt/sifter/results --recursive
 #cd /opt/Osmedeus
 #echo -e "${W}Would you like to run Osmedeus against a single target or a target list?(s/l)${NC}"
@@ -44,4 +45,4 @@ sudo chown $USER:$USER /opt/sifter/results --recursive
 #sudo python3 osmedeus.py --report full ${TARGET} --slow "all" --auth="${USERUI}:${PASSUI}" -t /opt/sifter/results/Osmedeus
 sleep 2
 cd /opt/sifter
-modules
+./sifter -m
