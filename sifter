@@ -30,6 +30,7 @@ usage() {                                      # Function: Print a help message.
 # Information Modules
 # Enterprise Target Info
 cred_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Enterprise Information Gatherers"
   echo -e "${LP}This module focuses on Enterprises and their online presence"
@@ -69,6 +70,7 @@ cred_mods(){
 }
 # Individual Target Info
 phone_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Targeted Information Gatherers"
   echo -e "${LP}This module focuses on individual targets."
@@ -100,6 +102,7 @@ phone_mods(){
 }
 # Info Module-Category Selection
 info_mods(){
+    cd /opt/sifter
     echo -e "${RED}"
     figlet -f mini "Information Gatherers"
     echo -e "${ORNG}"
@@ -130,6 +133,7 @@ info_mods(){
 }
 # HoneyPot Scanners
 honey_mods(){
+    cd /opt/sifter
     echo -e "${RED}"
     figlet -f mini "HoneyPot Detection Systems"
     echo -e "${LP}This module focuses on Enterprises and their online presence"
@@ -162,11 +166,12 @@ honey_mods(){
 }
 # Domain Modules
 dom_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "DomainFuzz" "Armory" "Omnibus" "Back" "Quit")
+          options=("DnsTwist" "Armory" "Omnibus" "Back" "Quit") #"DomainFuzz"
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -174,9 +179,9 @@ dom_mods(){
                                 ./modules/dommods/dnstwist.sh
                                 ;;
 
-                            "DomainFuzz")
-                                ./modules/dommods/domainfuzz.sh
-                                ;;
+#                            "DomainFuzz")
+#                                ./modules/dommods/domainfuzz.sh
+#                                ;;
 
                             "Armory")
                                 ./modules/dommods/armory.sh
@@ -199,6 +204,7 @@ dom_mods(){
 }
 # Network Modules
 net_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Network Scanners"
   echo -e "${ORNG}"
@@ -236,6 +242,7 @@ net_mods(){
 }
 # Vulnerability Scanners
 vuln_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
@@ -269,6 +276,7 @@ vuln_mods(){
 }
 # Web-Focused Modules
 web_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
@@ -317,6 +325,7 @@ web_mods(){
 }
 # Exploitation Modules
 ex_mods(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
@@ -387,6 +396,7 @@ ex_mods(){
 }
 # BruteForce Modules
 bruters(){
+    cd /opt/sifter
     echo -e "${RED}"
     figlet -f mini "BruteDUM"
     echo -e "${ORNG}"
@@ -401,6 +411,7 @@ bruters(){
 }
 # Exploit Searchers
 search_tools(){
+    cd /opt/sifter
     echo -e "${RED}"
     figlet -f mini "Exploit Finders"
     echo -e "${ORNG}"
@@ -445,6 +456,7 @@ search_tools(){
 }
 # MicroSoft Exploitation
 ms_tools(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "MicroSoft Exploitation Tools"
   echo -e "${ORNG}"
@@ -477,13 +489,27 @@ ms_tools(){
 			                    ;;
 
                             "FuzzyDander")
-                                echo -e "${LBBLUE}This module is not included in the open git repo."
-                                echo -e "${RED}In order to obtain this module, please ensure Sifter is"
-                                echo -e "completely up-to-date and open an issue requesting it."
-                                echo -e "Thereafter you may get the module per individual."
-                                echo -e "${YLW}This is done to prevent script kiddie's from"
-                                echo -e "causing to much damage.${NC}"
-                                echo -e "${ORNG}Thank you for understanding. Have a good day.${NC}"
+ #                               if [[ -f "/opt/sifter/modules/exmods/fuzzydander.sh" ]]; then
+                                    echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
+                                    echo -e "codename:${RED}FuzzyDander${NC}"
+                                    echo -e "${YLW}If you do not know what these tools are or how they work,"
+                                    echo -e "you should not be using them. As such no instructions will be added.${NC}"
+                                    echo -e "${W}Would you like to continue?(y/n)${NC}"
+                                    read M_ANS
+                                    if [[ ${M_ANS} == 'y' ]]; then
+                                        ./modules/exmods/fuzzydander.sh
+                                    else
+                                        ex_mods
+                                    fi
+#                                else
+#                                    echo -e "${LBBLUE}This module is not included in the open git repo.${NC}"
+#                                    echo -e "${RED}In order to obtain this module, please ensure Sifter is"
+#                                    echo -e "completely up-to-date and open an issue requesting it."
+#                                    echo -e "Thereafter you may get the module per individual."
+#                                    echo -e "${YLW}This is done to prevent script kiddie's from"
+#                                    echo -e "causing to much damage.${NC}"
+#                                    echo -e "${ORNG}Thank you for understanding. Have a good day.${NC}"
+#                                fi
                                 ;;
 
                             "SMBGhost")
@@ -504,6 +530,7 @@ ms_tools(){
 }
 # Web Exploitation
 web_tools(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Website Exploitation Tools"
   echo -e "${ORNG}"
@@ -547,6 +574,7 @@ web_tools(){
 }
 # Web-App Modules
 webapps(){
+  cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
@@ -736,6 +764,7 @@ result_choices(){
                                 ;;
 
                             "Back")
+                                cd /opt/sifter
                                 modules
                                 ;;
 
@@ -754,6 +783,7 @@ results(){
     read DNAME
     cd ${DNAME}
     result_choices
+    cd /opt/sifter
 }
 # Module Menu
 modules(){
@@ -814,7 +844,6 @@ modules(){
 }
 # Menu
 menu(){
-    mkdir /opt/sifter/results
     echo -e "${ORNG}"
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
@@ -855,26 +884,26 @@ menu(){
 update(){
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
-#   if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
-#       cd /opt/sifter
-#       mv modules/exmods/fuzzydander.sh -t ~
-#        CHECK=$(git fetch)
-#        if [[ ${CHECK} == 'new tag' ]]; then
-#    	    git pull
-#            sudo ./install.sh
-#	        sudo cp sifter -t /usr/sbin
-#            sudo mv ~/fuzzydander.sh -t /opt/sifter/modules/exmods/
-#	        sudo chmod +x -R /opt/sifter/modules
-#	        sudo chmod +x /usr/sbin/sifter
-#            sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
-#            echo -e "${W}Done!${NC}"
-#	    else
-#            echo -e "${YLW}Sifter is Up-to-date${NC}"
-#        fi
-#
-#    else
+    if [[ -f "/opt/sifter/modules/exmods/fuzzydander.sh" ]]; then
+        cd /opt/sifter
+        mv modules/exmods/fuzzydander.sh -t ~
+        CHECK=$(git fetch)
+        if [[ ${CHECK} == 'new tag' ]] || [[ ${CHECK} == "origin/master" ]]; then
+    	    git pull
+            sudo ./install.sh
+	        sudo cp sifter -t /usr/sbin
+            sudo mv ~/fuzzydander.sh -t /opt/sifter/modules/exmods/
+	        sudo chmod +x -R /opt/sifter/modules
+	        sudo chmod +x /usr/sbin/sifter
+            sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
+            echo -e "${W}Done!${NC}"
+	    else
+            echo -e "${YLW}Sifter is Up-to-date${NC}"
+        fi
+
+    else
 	    CHECK=$(git fetch)
-#        if [[ ${CHECK} == 'new tag' ]]; then
+        if [[ ${CHECK} == 'new tag' ]] || [[ ${CHECK} == "origin/master" ]]; then
     	    git pull
             sudo ./install.sh
 	        sudo cp sifter -t /usr/sbin
@@ -882,10 +911,10 @@ update(){
 	        sudo chmod +x /usr/sbin/sifter
             sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
             echo -e "${W}Done!${NC}"
-#	    else
-#            echo -e "${YLW}Sifter is Up-to-date${NC}"
-#        fi
-#    fi
+	    else
+            echo -e "${YLW}Sifter is Up-to-date${NC}"
+        fi
+    fi
 }
 
 cd /opt/sifter
