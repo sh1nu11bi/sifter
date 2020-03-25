@@ -619,7 +619,7 @@ check_hosts(){
     if [[ ${HOST_ANS} == "y" ]]; then
     	echo -e "${ORNG}Host Check${NC}"
     	echo -e "${ORNG}***********${NC}"
-        if [[ -f 'files/pingtest_raw.pass' ]]; then   || 
+        if [[ -f 'files/pingtest_raw.pass' ]]; then 
     	    rm files/pingtest_raw.pass
         fi
         if [[ -f 'files/pingtest.pass' ]]; then
