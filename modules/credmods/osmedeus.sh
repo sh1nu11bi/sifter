@@ -17,15 +17,14 @@ figlet -f mini "OsmedeuS"
 echo -e "${NC}"
 echo -e "${W}Please enter your target${NC}"
 read TARGET
+mkdir /opt/sifter/results/Osmedeus/${TARGET}
 sleep 5
 echo -e "${LP}Starting Osmedeus Container${NC}"
-sudo docker run -it --rm --name osmedeus -p 8000:8000 mablanco/osmedeus ./osmedeus.py -t ${TARGET} --slow "all" &
+sudo docker run -it --name osmedeus -p 8000:8000 mablanco/osmedeus ./osmedeus.py -t ${TARGET} --slow "all" &
 sleep 5
-echo -e "${RED}Below is your password for Osmedeus Web UI, available at http://127.0.0.1:8000"
-sudo docker exec -it osmedeus grep password /root/.osmedeus/client.conf
-sleep 5
-sudo docker cp osmedeus:/root/.osmedeus/workspaces/* /opt/sifter/results/Osmedeus|-
-sudo chown $USER:$USER /opt/sifter/results --recursive
+echo -e "${RED}an xTerm window will pop-up with your password for Osmedeus Web UI, available at http://127.0.0.1:8000"
+xterm -e sudo docker exec -it osmedeus grep password /root/.osmedeus/client.conf
+sudo docker cp osmedeus:/root/.osmedeus/workspaces/* /opt/sifter/results/Osmedeus/${TARGET}|-
 #cd /opt/Osmedeus
 #echo -e "${W}Would you like to run Osmedeus against a single target or a target list?(s/l)${NC}"
 #read TANS

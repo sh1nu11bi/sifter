@@ -742,7 +742,7 @@ result_choices(){
                                 result_choices
                                 ;;
 
-                            "Check Image")
+                             "Check Image")
                                 echo -e "${W}Please enter the image name${NC}"
                                 read INAME
                                 eom ${INAME}
@@ -837,7 +837,7 @@ modules(){
 }
 # Menu
 menu(){
-    if [[ -d "/opt/sifter/results" ]]; then
+     if [[ -d "/opt/sifter/results" ]]; then
         sleep 1
     else 
         mkdir /opt/sifter/results
