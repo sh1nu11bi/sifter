@@ -10,7 +10,7 @@ RED='\033[0;31m'
 if [[ -d "/opt/sifter/results/aSnip" ]]; then
 	sleep 1
 else 
-	mkdir /opt/sifter/results/asnip
+	mkdir /opt/sifter/results/aSnip
 fi
 echo -e "${ORNG}"
 figlet -f mini "aSnip"
