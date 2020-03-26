@@ -692,11 +692,7 @@ fi
 list_editor(){
     echo -e "${RED}List Editor${NC}"
     echo -e "${RED}************${YLW}"
-    TARLIST=$(cat files/host_list.txt)
-    if [[ ${TARLIST} == "eg. target.com" ]]; then
-        rm /opt/sifter/files/host_list.txt
-        touch /opt/sifter/files/host_list.txt
-    fi
+    cat files/host_list.txt
     echo -e "${ORNG}"
             PS3='What would you like to do?'
             options=("Check" "List" "Add" "Remove" "Back")
@@ -704,12 +700,22 @@ list_editor(){
             do
                     case $opt in
                             "Check")
+                                TARLIST=$(cat files/host_list.txt)
+                                if [[ ${TARLIST} == "eg. target.com" ]]; then
+                                    rm /opt/sifter/files/host_list.txt
+                                    touch /opt/sifter/files/host_list.txt
+                                fi
                                 check_hosts
                                 sleep 5
                                 list_editor
                                 ;;
 
                             "Add")
+                                TARLIST=$(cat files/host_list.txt)
+                                if [[ ${TARLIST} == "eg. target.com" ]]; then
+                                    rm /opt/sifter/files/host_list.txt
+                                    touch /opt/sifter/files/host_list.txt
+                                fi
                                 echo -e "${W}Type the IP or hostname you would like to add${NC}"
 			                    sleep 5
                                 read LTARGET
@@ -868,6 +874,11 @@ menu(){
             do
                 case $opt in
                     "Check Hosts")
+                        TARLIST=$(cat files/host_list.txt)
+                        if [[ ${TARLIST} == "eg. target.com" ]]; then
+                            rm /opt/sifter/files/host_list.txt
+                            touch /opt/sifter/files/host_list.txt
+                        fi
                         check_hosts
                         ;;
 
