@@ -163,8 +163,6 @@ instead of http://target.com
   <br>
   $ sifter	-h This Help Menu
 
-**TODO
-	- Incorporation of exploitative modules
 
 Any suggestions for extra modules are welcome.
 Just submit an issue with your tool suggestion
