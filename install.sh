@@ -384,6 +384,33 @@ else
 	python3 -m pip install hexdump
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Maryam${NC}"
+if [[ -d '/opt/Maryam' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Maryam is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	git clone https://github.com/saeeddhqan/Maryam.git
+	cd Maryam
+	sudo pip install -t requirements.txt
+	sudo chmod +x maryam
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for xRay{NC}"
+if [[ -d '/opt/xray' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "xRay is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	git clone https://github.com/evilsocket/xray.git
+	cd xray
+	sudo docker build -t xraydocker .
+fi
+
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 sudo chown $USER:$USER /usr/sbin/sifter

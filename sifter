@@ -77,7 +77,7 @@ phone_mods(){
   echo -e "${YLW}eg. Social media information, phone number information, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Seeker" "Sherlock" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          options=("Seeker" "Sherlock" "xRay" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -87,6 +87,10 @@ phone_mods(){
 
                             "Sherlock")
                                 ./modules/credmods/sherlock.sh
+                                ;;
+
+                            "xRay")
+                                ./modules/credmods/xray.sh
                                 ;;
 
                             "Back")
@@ -868,7 +872,7 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "*s1l3nt78*"
-    echo -e "${RED}////////========ChrysalliS_(v4.3)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}////////========ChrysalliS_(v4.4)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}==Hit Ctrl + c at any time to quit Sifter==${NC}"
     arg=$1
     echo -e "${ORNG}"
