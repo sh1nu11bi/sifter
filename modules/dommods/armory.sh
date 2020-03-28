@@ -7,7 +7,7 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
-echo -e "${ORNG}"
+echo -e "${RED}"
 figlet -f mini "Armory"
 echo -e "${NC}"
 armory-shell

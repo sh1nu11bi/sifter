@@ -12,8 +12,9 @@ if [[ -d /opt/sifter/results/Blackwidow ]]; then
 else
     mkdir /opt/sifter/results/Blackwidow
 fi
-echo -e "${ORNG}Blackwidow${NC}"
-echo -e "${ORNG}***********${NC}"
+echo -e "${RED}"
+figlet -f mini BlackwidoW
+echo -e "${NC}"
 options=("Crawl the target domain & fuzz all parameters (Verbose enabled)" "Fuzz all GET parameters for common OWASP Vulns (Verbose enabled)" "Back")
 select opts in "${options[@]}"
 do

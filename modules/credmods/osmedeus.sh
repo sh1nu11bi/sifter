@@ -12,7 +12,7 @@ if [[ -d '/opt/sifter/results/Osmedeus' ]]; then
 else
 	mkdir /opt/sifter/results/Osmedeus
 fi
-echo -e "${ORNG}"
+echo -e "${RED}"
 figlet -f mini "OsmedeuS"
 echo -e "${NC}"
 echo -e "${W}Please enter your target${NC}"

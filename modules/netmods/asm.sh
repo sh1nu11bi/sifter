@@ -11,6 +11,7 @@ if [[ -d /opt/sifter/results/ASM ]]; then
 else
     sudo mkdir /opt/sifter/results/ASM
 fi
+echo -e "${RED}"
 figlet -f mini "AttackSurfaceMapper"
 cd /opt/AttackSurfaceMapper
 echo -e "${YLW}"

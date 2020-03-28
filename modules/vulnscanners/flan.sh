@@ -4,6 +4,7 @@ ORNG='\033[0;33m'
 NC='\033[0m'
 W='\033[1;37m'
 LP='\033[1;35m'
+YLW='\033[1;33m'
 ARG=$2
 cd /opt/flan
 while getopts "t:" options; do
@@ -15,8 +16,10 @@ while getopts "t:" options; do
 			sudo make start
 	esac
 done
-if (( $OPTIND == 1 )); then				# if no option is passed
+if (( $OPTIND == 1 )); then	# if no option is passed
+	echo -e "${RED}"
 	figlet FlaN					# during script execution then
+	echo -e "${YLW}"
 	cat shared/ips.txt				# the default command will run
 	echo -e "${W}Is your target list correct?(y/n)${NC}"
 	read TARGET

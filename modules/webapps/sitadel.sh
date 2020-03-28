@@ -90,7 +90,7 @@ verbose(){
 }
 
 # Start of Sitadel Script
-echo -e "${ORNG}"
+echo -e "${RED}"
 figlet -f mini "Sitadel"
 echo -e "${NC}"
 cd /opt/Sitadel

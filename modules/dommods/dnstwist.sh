@@ -19,7 +19,7 @@ check(){
 }
 
 cd /opt/dnstwist
-echo -e "${ORNG}"
+echo -e "${RED}"
 figlet -f mini "DnsTwist"
 echo -e "${NC}"
 check

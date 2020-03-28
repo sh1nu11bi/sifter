@@ -12,7 +12,7 @@ if [[ -d "/opt/sifter/results/aSnip" ]]; then
 else 
 	mkdir /opt/sifter/results/aSnip
 fi
-echo -e "${ORNG}"
+echo -e "${RED}"
 figlet -f mini "aSnip"
 echo -e "${NC}"
 echo -e "${W}Please enter your target${NC}"
