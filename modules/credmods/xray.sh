@@ -6,7 +6,7 @@ LP='\033[1;35m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 
-SHODAN-API=''
+SHODAN-API='<shodan-api-key>'
 
 listing(){
     echo -e "${YLW}"
