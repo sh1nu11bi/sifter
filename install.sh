@@ -394,7 +394,7 @@ else
 	cd /opt/
 	git clone https://github.com/saeeddhqan/Maryam.git
 	cd Maryam
-	sudo pip install -t requirements.txt
+	sudo pip install -r requirements.txt
 	sudo chmod +x maryam
 fi
 
@@ -426,4 +426,4 @@ sifter -h
 echo -e "${W}Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm for a better range of scans &"
 echo -e "for better results in WPScan goto modules/wpscan.sh and add"
 echo -e " '--api-token <your-wpscan-api-token>' argument to both commands"
-echo -e "please add your shodan-api key to modules/credmods/xray.sh by 'SHODAN-API'"${NC}"
+echo -e "please add your shodan-api key to modules/credmods/xray.sh by 'SHODAN-API'${NC}"
