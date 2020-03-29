@@ -399,7 +399,7 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for xRay{NC}"
+echo -e "${YLW}Checking for xRay${NC}"
 if [[ -d '/opt/xray' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "xRay is already installed"
