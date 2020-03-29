@@ -32,7 +32,7 @@ if [[ -d /opt/omnibus ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/InQuest/omnibus.git
+	sudo git clone https://github.com/InQuest/omnibus.git
 	cd omnibus
 	sudo pip install -r requirements.txt
 	sleep 2
@@ -46,7 +46,7 @@ if [[ -d /opt/DomainFuzz ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/monkeym4ster/DomainFuzz.git
+	sudo git clone https://github.com/monkeym4ster/DomainFuzz.git
 	sleep 2
 fi
 
@@ -58,7 +58,7 @@ if [[ -d /opt/dnstwist ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/elceef/dnstwist.git
+	sudo git clone https://github.com/elceef/dnstwist.git
 	cd dnstwist
 	sudo apt-get install libgeoip-dev libffi-dev
 	BUILD_LIB=1 pip install -r requirements.txt
@@ -72,7 +72,7 @@ if [[ -d /opt/flan ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/s1l3nt78/flan.git
+	sudo git clone https://github.com/s1l3nt78/flan.git
 	cd flan
 	sudo docker build .
 	echo -e "${W}Please copy and paste the final container's image ID shown above"
@@ -89,7 +89,7 @@ if [[ -d /opt/HoneyCaught ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/aswinmguptha/HoneyCaught.git
+	sudo git clone https://github.com/aswinmguptha/HoneyCaught.git
 	cd HoneyCaught
 	sudo python -m pip install -r requirements.txt
 fi
@@ -102,7 +102,7 @@ if [[ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py ]] || [[ -f /usr/sbin/bla
 	echo -e "${NC}"
 else
 	cd /root
-	git clone https://github.com/1N3/blackwidow.git
+	sudo git clone https://github.com/1N3/blackwidow.git
 	cd blackwidow
 	    sudo cp blackwidow /usr/sbin/blackwidow
 	    sudo cp injectx.py /usr/sbin/injectx.py
@@ -117,9 +117,9 @@ if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/s1l3nt78/rapidscan.git
+	sudo git clone https://github.com/s1l3nt78/rapidscan.git
 	cd rapidscan
-	chmod +x rapidscan.py rapidscan
+	sudo chmod +x rapidscan.py rapidscan
 	sudo mv rapidscan -t /usr/sbin
 fi
 
@@ -150,7 +150,7 @@ if [[ -d "/opt/shodansploit" ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/shodansploit/shodansploit.git
+	sudo git clone https://github.com/shodansploit/shodansploit.git
 	sudo chown $USER:$USER -R shodansploit
 fi
 
@@ -162,7 +162,7 @@ if [[ -d "/opt/reconspider" ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/bhavsec/reconspider.git
+	sudo git clone https://github.com/bhavsec/reconspider.git
 	cd reconspider
 	sudo python3 setup.py install
 fi
@@ -175,7 +175,7 @@ if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
 	echo -e "${NC}"
 else
 	cd /opt
-	git clone https://github.com/s1l3nt78/AttackSurfaceMapper.git
+	sudo git clone https://github.com/s1l3nt78/AttackSurfaceMapper.git
 	cd AttackSurfaceMapper
 	   sudo python3 -m pip install -r requirements.txt
 	   sudo cp asm -t /usr/sbin
@@ -192,7 +192,7 @@ else
 	cd /opt
 	sudo git clone https://github.com/m8r0wn/ActiveReign.git
 	cd ActiveReign
-	pip3 install -r requirements.txt
+	sudo pip3 install -r requirements.txt
 	sudo python3 setup.py install
 	pip3 install prompt-toolkit==2.0.9 impacket
 	ar3 db help
@@ -262,7 +262,7 @@ if [[ -d '/opt/docker-osmedeus' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/mablanco/docker-osmedeus.git
+	sudo git clone https://github.com/mablanco/docker-osmedeus.git
 	cd docker-osmedeus
 	sudo docker build -t mablanco/osmedeus .
 fi
@@ -275,7 +275,7 @@ if [[ -d '/opt/NekoBotV1' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/tegal1337/NekoBotV1.git
+	sudo git clone https://github.com/tegal1337/NekoBotV1.git
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -291,7 +291,7 @@ if [[ -d '/opt/armory' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/depthsecurity/armory.git
+	sudo git clone https://github.com/depthsecurity/armory.git
 	cd armory
 	sudo python3 setup.py install
 	armory
@@ -322,8 +322,8 @@ else
 	sudo git clone https://github.com/Technowlogy-Pushpender/aapfinder.git
 	sudo chown $USER:$USER -R aapfinder
 	cd aapfinder
-	chmod +x aapfinder.py
-	touch targets.txt
+	sudo chmod +x aapfinder.py
+	sudo touch targets.txt
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -380,8 +380,8 @@ if [[ -d '/opt/SMBGhost' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/ioncodes/SMBGhost.git
-	python3 -m pip install hexdump
+	sudo git clone https://github.com/ioncodes/SMBGhost.git
+	sudo python3 -m pip install hexdump
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -392,7 +392,7 @@ if [[ -d '/opt/Maryam' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/saeeddhqan/Maryam.git
+	sudo git clone https://github.com/saeeddhqan/Maryam.git
 	cd Maryam
 	sudo pip install -r requirements.txt
 	sudo chmod +x maryam
@@ -406,7 +406,7 @@ if [[ -d '/opt/xray' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	git clone https://github.com/evilsocket/xray.git
+	sudo git clone https://github.com/evilsocket/xray.git
 	cd xray
 	sudo docker build -t xraydocker .
 fi
