@@ -15,7 +15,7 @@ usage() {                                      # Function: Print a help message.
 	echo "+"
 	echo "# sifter runs the programs bringing up the menu in a cli environment"
 	echo "# sifter -c will check the exsiting hosts in the hostlist"
-	echo "# sifter -a '*' must be added with '' and then automattically appends the hostname/IP to host file"
+	echo "# sifter -a '<target-ip>' must be added with '' and then automattically appends the hostname/IP to host file"
 	echo "# sifter -e Opens the Exploitation Module"
 	echo "# sifter -i Opens the Info-based Module menu"
 	echo "# sifter -d Opens the Domain Focused Modules"
