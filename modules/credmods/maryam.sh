@@ -19,7 +19,7 @@ fi
 echo -e "${RED}"
 figlet -f mini "MaryaM"
 echo -e "${NC}"
-cd /opt/maryam
+cd /opt/Maryam
 sudo ./maryam
 cd /opt/sifter
 ./sifter -m
