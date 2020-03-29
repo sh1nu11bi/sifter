@@ -6,6 +6,7 @@ LP='\033[1;35m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
+LGRY='\033[0;37m'
 ARG=$2                                         # IP addition argument
 # Help Menu
 usage() {                                      # Function: Print a help message.
@@ -868,7 +869,7 @@ menu(){
     else 
         mkdir /opt/sifter/results
     fi
-    echo -e "${ORNG}"
+    echo -e "${LGRY}"
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "*s1l3nt78*"
