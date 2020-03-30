@@ -394,7 +394,7 @@ else
 	cd /opt/
 	sudo git clone https://github.com/saeeddhqan/Maryam.git
 	cd Maryam
-	sudo pip install -r requirements.txt
+	sudo pip install -r requirements
 	sudo chmod +x maryam
 fi
 
