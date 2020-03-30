@@ -1,4 +1,4 @@
-!!NOTE!! PLEASE ENSURE YOU HAVE THE MOST RECENT VERSION FROM RELEASES, VERSION 4.2!!
+!!NOTE!! PLEASE ENSURE YOU HAVE THE MOST RECENT VERSION FROM RELEASES, VERSION 4.5!!
 <br>
 VERSION 3.8-4 HAS AN ISSUE WITH UPDATE FUNCTION SO IT MUST BE RECLONED!!
 
@@ -11,7 +11,7 @@ VERSION 3.8-4 HAS AN ISSUE WITH UPDATE FUNCTION SO IT MUST BE RECLONED!!
   	<a href="#"><img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter"</a>
   	<a href="#"><img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter"</a>		  
 <br>
-  	<a href="#"><img align="center" src="https://img.shields.io/badge/Version-4.4-red"</a>
+  	<a href="#"><img align="center" src="https://img.shields.io/badge/Version-4.5-red"</a>
 	<a href="#"><img align="center" src="https://img.shields.io/badge/Build-ChrysalliS-yellowgreen"</a>
 <br>
 	 <a href="#"><img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen"</a>
@@ -65,11 +65,12 @@ instead of http://target.com
 		  -theHarvester  - https://github.com/laramies/theHarvester
 		  -Osmedeus - https://github.com/j3ssie/Osmedeus
 		  -ReconSpider - https://github.com/bhavsec/reconspider
+		  -Maryam - https://github.com/saeeddhqan/Maryam
 
 	 = Targeted Information Gatherers
 		  -Seeker - https://github.com/thewhiteh4t/seeker
 		  -Sherlock - https://github.com/sherlock-project/sherlock
-
+		  -xRay - https://github.com/evilsocket/xray
 
 	# Domain Recon Gathering
 		-Omnibus - https://github.com/InQuest/omnibus
@@ -93,6 +94,8 @@ instead of http://target.com
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit
 
 	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
+
+	   -WPForce/Yertle - https://github.com/n00py/WPForce
 
 	   =FuzzyDander 
 	   	-FuzzBunch

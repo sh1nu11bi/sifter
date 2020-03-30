@@ -335,7 +335,7 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("MS Specific Tools" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
+        options=("MS Specific Tools" "BruteDUM" "WPForce" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -352,6 +352,13 @@ ex_mods(){
 
                     "BruteDUM")
                         bruters
+                        ;;
+                    
+                    "WPForce")
+                        echo -e "${YLW}Use WPScan and save enumerated usernames to users.txt file"
+                        echo -e "${YLW}This will be used for WPForce brutting attack${NC}"
+                        sleep 5
+                        ./modules/exmods/wpforce.sh
                         ;;
 
                     "TigerShark")
@@ -873,7 +880,7 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "*..s1l3nt78..*"
-    echo -e "${RED}////////========ChrysalliS_(v4.4)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}////////========ChrysalliS_(v4.5)========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}=====Hit Ctrl + c at any time to quit Sifter=====${NC}"
     arg=$1
     echo -e "${ORNG}"

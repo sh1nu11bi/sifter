@@ -411,6 +411,17 @@ else
 	sudo docker build -t xraydocker .
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for WPForce${NC}"
+if [[ -d '/opt/WPForce' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "WPForce is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/n00py/WPForce.git
+fi
+
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 sudo chown $USER:$USER /usr/sbin/sifter
