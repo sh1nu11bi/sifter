@@ -929,6 +929,8 @@ menu(){
 }
 # Update Arg
 update(){
+    sudo chown $USER:$USER -R /opt/sifter
+    cd /opt/sifter
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
