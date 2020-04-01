@@ -53,7 +53,7 @@ cred_mods(){
                             "ReconSpider")
                                 ./modules/credmods/rspider.sh
                                 ;;
-                            
+
                             "Maryam")
                                 ./modules/credmods/maryam.sh
                                 ;;
@@ -353,7 +353,7 @@ ex_mods(){
                     "BruteDUM")
                         bruters
                         ;;
-                    
+
                     "WPForce")
                         echo -e "${YLW}Use WPScan and save enumerated usernames to users.txt file"
                         echo -e "${YLW}This will be used for WPForce brutting attack${NC}"
@@ -635,7 +635,7 @@ check_hosts(){
     if [[ ${HOST_ANS} == "y" ]]; then
     	echo -e "${ORNG}Host Check${NC}"
     	echo -e "${ORNG}***********${NC}"
-        if [[ -f 'files/pingtest_raw.pass' ]]; then 
+        if [[ -f 'files/pingtest_raw.pass' ]]; then
     	    rm files/pingtest_raw.pass
         fi
         if [[ -f 'files/pingtest.pass' ]]; then
@@ -644,7 +644,7 @@ check_hosts(){
         if [[ -f 'files/pingtest_pass.txt' ]]; then
             rm files/pingtest_pass.txt
         fi
-        
+
     	for name in `cat files/host_list.txt`
 
     	        do
@@ -659,9 +659,9 @@ check_hosts(){
     	                    echo -e "${RED}==================${NC}"
     	                fi
     	        done
-	
+
 	                sleep 5
-	
+
             echo "============================================================================================================================="
 
         	echo -e "\e[95mPingtest_Pass\e[0m"
@@ -873,7 +873,7 @@ modules(){
 menu(){
      if [[ -d "/opt/sifter/results" ]]; then
         sleep 1
-    else 
+    else
         mkdir /opt/sifter/results
     fi
     echo -e "${LGRY}"
@@ -916,8 +916,8 @@ menu(){
                         modules
                         ;;
 
-		            "Update")
-		                update
+				            "Update")
+				                update
                         ;;
 
                     "Quit")
