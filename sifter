@@ -948,6 +948,7 @@ update(){
 		echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
 		read FILES
 		rm "${FILES}"
+		git pull
 	else
 		sleep 1
 	fi
