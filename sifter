@@ -951,7 +951,7 @@ while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next opt
 			figlet -f mini "Checking for live targets..."
 			echo -e "${NC}"
 			check_hosts
-            modules
+      modules
 			;;
 
 		a)
