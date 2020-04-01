@@ -931,16 +931,22 @@ menu(){
 update(){
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
-		echo "${NC}"
+    echo -e "${NC}"
     git fetch
-    git pull
-    sudo ./install.sh
-    sudo cp sifter -t /usr/sbin
-    sudo chown $USER:$USER /opt/sifter --recursive
-    sudo chown $USER:$USER /usr/sbin/sifter
-    chmod +x /opt/sifter --recursive
-    chmod +x /usr/sbin/sifter
-    echo -e "${W}Done!${NC}"
+    VER=$(git pull)
+    if [[ ${VER} == "Already up to date." ]]; then
+        echo -e "${LP}"
+        figlet -f mini "Up to date."
+        echo -e "${NC}"
+    else
+        sudo ./install.sh
+        sudo cp sifter -t /usr/sbin
+        sudo chown $USER:$USER /opt/sifter --recursive
+        sudo chown $USER:$USER /usr/sbin/sifter
+        chmod +x /opt/sifter --recursive
+        chmod +x /usr/sbin/sifter
+        echo -e "${W}Done!${NC}"
+    fi
 }
 
 cd /opt/sifter
