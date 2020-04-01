@@ -944,7 +944,7 @@ update(){
 
 cd /opt/sifter
 while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next option;
-	case "${options}" in                                # use silent error checking;
+	case "${options}" in                                	# use silent error checking;
                                                         # option a takes 1 arguments.
 		c)
 			echo -e "${YLW}"
