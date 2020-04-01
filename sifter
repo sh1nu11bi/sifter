@@ -931,6 +931,7 @@ menu(){
 update(){
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
+		echo "${NC}"
     git fetch
     git pull
     sudo ./install.sh
