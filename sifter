@@ -941,6 +941,8 @@ update(){
         figlet -f mini "Up to date."
         echo -e "${NC}"
     else
+    	rm sifter README.md install.sh
+	git pull
         sudo ./install.sh
         sudo cp sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
