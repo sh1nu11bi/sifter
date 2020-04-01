@@ -10,7 +10,7 @@ LGRY='\033[0;37m'
 ARG=$2                                     	   # IP addition argument
 # Help Menu
 usage() {                                    	  # Function: Print a help message.
-	echo "Sifter Help Menu"
+	echo -e  "${YLW}Sifter Help Menu${NC}"
 	echo "*****************"
 	echo "+"
 	echo "+"
