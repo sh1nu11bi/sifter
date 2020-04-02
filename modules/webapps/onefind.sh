@@ -13,9 +13,10 @@ else
 	mkdir /opt/sifter/results/OneFind
 fi
 cd /opt/onedrive_user_enum
-echo -e "${ORNG}"
+echo -e "${RED}"
 figlet -f mini "OneFind"
-echo -e "${NC}"
+echo -e "${ORNG}This tool is used to enumarate OneDrive Users${NC}"
+sleep 3
 echo -e "${W}Would you like to search for a single user or use a user list?(s/l)${NC}"
 read UANS
 if [[ ${UANS} == "s" ]]; then
