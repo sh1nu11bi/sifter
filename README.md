@@ -95,14 +95,10 @@ instead of http://target.com
 
 	   -WPForce/Yertle - https://github.com/n00py/WPForce
 
-	   =FuzzyDander
+	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
 		-Danderspritz
-		(This module is obtained though issue request. Thereafter you will 
-		be privately sent the script. It is not provided openly to stop 
-		script kiddies from causing to much damage. Thank you for 
-		understanding.)
-
+	
 	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
 
 	# Network Scanners
