@@ -946,8 +946,9 @@ update(){
 	    echo -e "${W}Are there pull conflicts with files?(y/n)${NC}"
 	    read UANS
 	    if [[ ${UANS} == "y" ]]; then
+            cd /opt/sifter
 		    echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
-		    read FILES
+		    read "FILES"
 		    rm "${FILES}"
 		    git pull
 	    else
