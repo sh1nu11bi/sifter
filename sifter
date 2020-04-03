@@ -716,7 +716,7 @@ list_editor(){
             do
                     case $opt in
                             "Check")
-                                TARLIST=$(cat files/host_list.txt)
+                                TARLIST=$(cat files/host_list.txt | grep "eg. target.com")
                                 if [[ ${TARLIST} == "eg. target.com" ]]; then
                                     rm /opt/sifter/files/host_list.txt
                                     touch /opt/sifter/files/host_list.txt
@@ -727,7 +727,7 @@ list_editor(){
                                 ;;
 
                             "Add")
-                                TARLIST=$(cat files/host_list.txt)
+                                TARLIST=$(cat files/host_list.txt | grep "eg. target.com")
                                 if [[ ${TARLIST} == "eg. target.com" ]]; then
                                     rm /opt/sifter/files/host_list.txt
                                     touch /opt/sifter/files/host_list.txt
@@ -895,6 +895,7 @@ menu(){
                             rm /opt/sifter/files/host_list.txt
                             touch /opt/sifter/files/host_list.txt
                             echo -e "${W}Please add targets to the list${NC}"
+                            sleep 2
                             nano /opt/sifter/files/host_list.txt
                         fi
                         check_hosts
