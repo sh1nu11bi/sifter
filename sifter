@@ -941,17 +941,17 @@ update(){
         figlet -f mini "Up to date."
         echo -e "${NC}"
     else
-	sleep 5
-	echo -e "${W}Are there pull conflicts with files?(y/n)${NC}"
-	read UANS
-	if [[ ${UANS} == "y" ]]; then
-		echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
-		read FILES
-		rm "${FILES}"
-		git pull
-	else
-		sleep 1
-	fi
+	    sleep 5
+	    echo -e "${W}Are there pull conflicts with files?(y/n)${NC}"
+	    read UANS
+	    if [[ ${UANS} == "y" ]]; then
+		    echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
+		    read FILES
+		    rm "${FILES}"
+		    git pull
+	    else
+		    sleep 1
+	    fi
         sudo ./install.sh
         sudo cp sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
