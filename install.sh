@@ -13,10 +13,10 @@ if [[ -d /opt/sifter ]]; then
 	echo -e "${NC}"
 else
 	pwd && cd ..
-	sudo cp -r sifter -t /opt
+	sudo mv sifter -t /opt
 	sudo chown $USER:$USER -R /opt/sifter
 	cd /opt/sifter
-    sudo cp sifter /usr/sbin/sifter
+  sudo cp sifter /usr/sbin/sifter
 	sudo chmod +x /opt/sifter/sifter /usr/sbin/sifter
 	sudo chmod +x -R /opt/sifter/modules
 	sleep 2
@@ -60,7 +60,7 @@ else
 	sudo git clone https://github.com/elceef/dnstwist.git
 	cd dnstwist
 	sudo apt-get install libgeoip-dev libffi-dev
-	BUILD_LIB=1 pip install -r requirements.txt
+	sudo BUILD_LIB=1 pip install -r requirements.txt
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -103,6 +103,7 @@ else
 	cd /root
 	sudo git clone https://github.com/1N3/blackwidow.git
 	cd blackwidow
+			sudo chmod +x blackwidow injectx.py
 	    sudo cp blackwidow /usr/sbin/blackwidow
 	    sudo cp injectx.py /usr/sbin/injectx.py
 	    pip install -r requirements.txt
