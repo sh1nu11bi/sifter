@@ -58,7 +58,7 @@ instead of http://target.com
 <br>
 
 <h2>Menu</h2>
-	<p align="center">
+	<p>
 		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
 	</p>
 
