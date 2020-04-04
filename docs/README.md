@@ -63,8 +63,6 @@ instead of http://target.com
 		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
 <p/>
 
-<br>
-
 # Modules:
 <br>
 	# Information Modules
@@ -140,8 +138,6 @@ instead of http://target.com
 		  -WPScan - https://github.com/wpscanteam/wpscan
 		  -Konan - https://github.com/m4ll0k/Konan
 
-<br />
-<br />
 
 # Sifter Help Menu
 <br>
