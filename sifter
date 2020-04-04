@@ -883,8 +883,8 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}////////========${UPURPLE}ChrysalliS_(v4.7)${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
-    echo -e "${W}=====Hit Ctrl + c at any time to quit Sifter=====${NC}"
+    echo -e "${RED}//////////========${UPURPLE}ChrysalliS_(v4.7)${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${W}======Hit Ctrl + c at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
     PS3='What would you like to do?'
