@@ -28,9 +28,9 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 <a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s">Setup Video</a>
 <br>
-<a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a>
+<a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a> - Its long, but you can skip through to get the general idea. 
 <br>
-Its long, but you can skip through to get the general idea. Most modules are explained along with demos of a lot of the tools
+Most modules are explained along with demos of a lot of the tools
 <br>
 <br>
 NOTE!! IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
