@@ -881,9 +881,9 @@ menu(){
     fi
     echo -e "${INV}${LGRY}"
     figlet -f big "'..*SifteR*..'"
-    echo -e "${UPURPLE}${LP}"
+    echo -e "${LP}"
     figlet -f small "*..s1l3nt78..*"
-    echo -e "${RED}////////========${BRED}ChrysalliS_(v4.7)${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}////////========${UPURPLE}ChrysalliS_(v4.7)${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}=====Hit Ctrl + c at any time to quit Sifter=====${NC}"
     arg=$1
     echo -e "${ORNG}"
