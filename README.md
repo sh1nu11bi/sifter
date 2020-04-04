@@ -56,6 +56,7 @@ instead of http://target.com
 	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
+
 <br>
 <br>
 <h>Menu</h>
@@ -64,6 +65,7 @@ instead of http://target.com
 	</p>
 <br />
 <br>
+
 # Modules:
 	# Information Modules
 	  = Enterprise Information Gatherers
