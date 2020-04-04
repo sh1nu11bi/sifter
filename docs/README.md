@@ -55,9 +55,10 @@ instead of http://target.com
 
 
 <h2>Menu</h2>
-
-		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
-
+<br>
+<p>
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
+</p>
 
 # Modules:
 	# Information Modules
