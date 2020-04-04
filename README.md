@@ -56,7 +56,14 @@ instead of http://target.com
 	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
-
+<br>
+<br>
+<h>Menu</h>
+	<p align="center">
+		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
+	</p>
+<br />
+<br>
 # Modules:
 	# Information Modules
 	  = Enterprise Information Gatherers
@@ -98,7 +105,7 @@ instead of http://target.com
 	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
 		-Danderspritz
-	
+
 	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
 
 	# Network Scanners
