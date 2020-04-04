@@ -958,7 +958,7 @@ update(){
 	    else
 		    sleep 1
 	    fi
-        sudo ./install.sh
+        ./install.sh
         sudo cp sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter
