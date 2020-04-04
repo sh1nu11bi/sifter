@@ -44,7 +44,7 @@ instead of http://target.com
 # Please, if you fork this repo ensure to keep it updated.
 <br>
 
-# Installation
+# Installation:
 
 	* This will download and install all required tools
 	*
@@ -54,7 +54,7 @@ instead of http://target.com
 	$ ./install.sh
 
 
-<h2>Menu</h2>
+<h2>Menu:</h2>
 <p>
 <img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
 </p>
