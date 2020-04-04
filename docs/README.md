@@ -56,7 +56,14 @@ instead of http://target.com
 	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
-
+<br>
+<br>
+<h>Menu</h>
+	<p align="center">
+		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
+	</p>
+<br />
+<br>
 # Modules:
 	# Information Modules
 	  = Enterprise Information Gatherers
@@ -95,11 +102,9 @@ instead of http://target.com
 
 	   -WPForce/Yertle - https://github.com/n00py/WPForce
 
-	   =FuzzyDander
+	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
 		-Danderspritz
-		(This module is obtained though issue request. Thereafter you will be privately sent the script. It is not
-		provided openly to stop script kiddies from causing to much damage. Thank you for understanding.)
 
 	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
 
