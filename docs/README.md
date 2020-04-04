@@ -54,9 +54,8 @@ instead of http://target.com
 	$ chmod +x install.sh
 	$ ./install.sh
 
-<br>
-<br>
-<h>Menu</h>
+# Menu:
+
 	<p align="center">
 		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
 	</p>

@@ -43,10 +43,7 @@ instead of http://target.com
 <br>
 # Please, if you fork this repo ensure to keep it updated.
 <br>
-	** Frequently updated
-	<br>
-	** Looking for a developer to help incorporate more offensive modules for exploitation, along side the recon.
-	<br>
+<br>
 
 # Installation
 
@@ -57,15 +54,13 @@ instead of http://target.com
 	$ chmod +x install.sh
 	$ ./install.sh
 
-<br>
-<br>
-<h>Menu</h>
+# Menu:
+
 	<p align="center">
 		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
 	</p>
-<br />
 <br>
-
+<br>
 # Modules:
 	# Information Modules
 	  = Enterprise Information Gatherers
