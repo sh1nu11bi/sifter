@@ -11,6 +11,7 @@ INV='\e[7m'
 BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
+URED='\033[4;31m'
 ARG=$2                                     	   # IP addition argument
 # Help Menu
 usage() {                                    	  # Function: Print a help message.
@@ -818,8 +819,7 @@ results(){
 }
 # Module Menu
 modules(){
-    echo -e "${RED}Modules${NC}"
-    echo -e "${RED}*******${NC}"
+    echo -e "${URED}Modules${NC}"
     echo -e "${ORNG}"
     PS3='What would you like to do?'
             options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "View Results" "Main Menu" "Quit")
