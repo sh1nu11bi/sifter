@@ -10,6 +10,7 @@ LGRY='\033[0;37m'
 INV='\e[7m'
 BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
+UBLUE='\033[4;34m'
 ARG=$2                                     	   # IP addition argument
 # Help Menu
 usage() {                                    	  # Function: Print a help message.
@@ -883,7 +884,7 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${UPURPLE}ChrysalliS_(v4.7)${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${UPURPLE}ChrysalliS_(${UBLUE}v4.7${UPURPLE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit Ctrl + c at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
