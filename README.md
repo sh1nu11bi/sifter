@@ -54,13 +54,15 @@ instead of http://target.com
 	$ chmod +x install.sh
 	$ ./install.sh
 
-# Menu:
-
+<br>
+<br>
+<h2>Menu</h2>
 	<p align="center">
 		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
 	</p>
+<br />
 <br>
-<br>
+
 # Modules:
 	# Information Modules
 	  = Enterprise Information Gatherers
