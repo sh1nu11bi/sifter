@@ -62,7 +62,7 @@ instead of http://target.com
 # Modules:
 	# Information Modules
 	  = Enterprise Information Gatherers
-		  -theHarvester  - https://github.com/laramies/theHarvester
+		  - <a href="https://github.com/laramies/theHarvester">theHarvester</a>
 		  -Osmedeus - https://github.com/j3ssie/Osmedeus
 		  -ReconSpider - https://github.com/bhavsec/reconspider
 		  -Maryam - https://github.com/saeeddhqan/Maryam
