@@ -43,7 +43,6 @@ instead of http://target.com
 <br>
 # Please, if you fork this repo ensure to keep it updated.
 <br>
-<br>
 
 # Installation
 
@@ -54,7 +53,6 @@ instead of http://target.com
 	$ chmod +x install.sh
 	$ ./install.sh
 
-<br>
 
 <h2>Menu</h2>
 
