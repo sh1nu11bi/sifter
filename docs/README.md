@@ -139,8 +139,8 @@ instead of http://target.com
 		  -WPScan - https://github.com/wpscanteam/wpscan
 		  -Konan - https://github.com/m4ll0k/Konan
 
-<br>
-<br>
+<br />
+<br />
 
 # Sifter Help Menu
 
