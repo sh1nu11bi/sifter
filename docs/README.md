@@ -16,10 +16,9 @@ VERSION 3.8-4 HAS AN ISSUE WITH UPDATE FUNCTION SO IT MUST BE RECLONED!!
 </p>
 
 # Sifter
-<br>
 s1l3nt78
 <br>
-*Because the first step, is enumeration*
+* *Because the first step, is enumeration*
 <br>
 <br>
 Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tools within different module sets in order to quickly perform recon tasks, check network firewalling, enumerate remote and local hosts, and scan for the 'blue' vulnerabilities within microsft and if unpatched, exploit them.  It uses tools like blackwidow and konan for webdir enumeration and attack surface mapping rapidly using ASM.
@@ -46,7 +45,7 @@ instead of http://target.com
 <br>
 <br>
 
-# Installation:
+# Installation
 
 	* This will download and install all required tools
 	*
@@ -57,14 +56,14 @@ instead of http://target.com
 
 <br>
 <br>
-
 <h2>Menu</h2>
-<p>
+	<p align="center">
 		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
-<p/>
+	</p>
+<br />
+<br>
 
 # Modules:
-<br>
 	# Information Modules
 	  = Enterprise Information Gatherers
 		  -theHarvester  - https://github.com/laramies/theHarvester
@@ -140,7 +139,6 @@ instead of http://target.com
 
 
 # Sifter Help Menu
-<br>
 
   $ sifter	runs the programs bringing up the menu in a cli environment
   <br>
@@ -170,7 +168,7 @@ instead of http://target.com
   <br>
   $ sifter	-h This Help Menu
 
-<br>
+
 Any suggestions for extra modules are welcome.
 Just submit an issue with your tool suggestion
 Otherwise for developers just submit a pull request.
