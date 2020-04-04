@@ -16,6 +16,7 @@ VERSION 3.8-4 HAS AN ISSUE WITH UPDATE FUNCTION SO IT MUST BE RECLONED!!
 </p>
 
 # Sifter
+<br>
 s1l3nt78
 <br>
 *Because the first step, is enumeration*
@@ -62,7 +63,6 @@ instead of http://target.com
 		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
 <p/>
 
-<br>
 <br>
 
 # Modules:
@@ -174,7 +174,7 @@ instead of http://target.com
   <br>
   $ sifter	-h This Help Menu
 
-
+<br>
 Any suggestions for extra modules are welcome.
 Just submit an issue with your tool suggestion
 Otherwise for developers just submit a pull request.
