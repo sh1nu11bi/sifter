@@ -506,7 +506,6 @@ ms_tools(){
 			                    ;;
 
                             "FuzzyDander")
- #                               if [[ -f "/opt/sifter/modules/exmods/fuzzydander.sh" ]]; then
                                     echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
                                     echo -e "codename:${RED}FuzzyDander${NC}"
                                     echo -e "${YLW}If you do not know what these tools are or how they work,"
@@ -518,16 +517,7 @@ ms_tools(){
                                     else
                                         ex_mods
                                     fi
-#                                else
-#                                    echo -e "${LBBLUE}This module is not included in the open git repo.${NC}"
-#                                    echo -e "${RED}In order to obtain this module, please ensure Sifter is"
-#                                    echo -e "completely up-to-date and open an issue requesting it."
-#                                    echo -e "Thereafter you may get the module per individual."
-#                                    echo -e "${YLW}This is done to prevent script kiddie's from"
-#                                    echo -e "causing to much damage.${NC}"
-#                                    echo -e "${ORNG}Thank you for understanding. Have a good day.${NC}"
-#                                fi
-                                ;;
+                                    ;;
 
                             "SMBGhost")
                                 echo -e "${LP}SMBGhost scans for the CVE-2020-0796 vulnerability in Windows SMB3 protocol${NC}"
@@ -633,12 +623,18 @@ webapps(){
 }
 # Host Check
 check_hosts(){
-    echo -e "${RED}NOTE: ${YLW}This will not work if there are no target IP or domains in your host_list.txt file."
-    echo -e "${YLW}If you have not added any please go back and select edit host list option"
-    echo -e "${W}Would you like to continue?(y/n)${NC}"
-    read HOST_ANS
-    if [[ ${HOST_ANS} == "y" ]]; then
-    	echo -e "${ORNG}Host Check${NC}"
+    TARLIST=$(cat /opt/sifter/files/host_list.txt | grep "eg. target.com")
+    if [[ ${TARLIST} == "eg. target.com" ]]; then
+        rm /opt/sifter/files/host_list.txt
+        echo -e "${RED}Please add an appropriate target first${NC}"
+        nano /opt/sifter/files/host_list.txt
+    elif [[ ${TARLIST} == "" ]]; then
+        echo -e "${RED}Please add an appropriate target first${NC}"
+        nano /opt/sifter/files/host_list.txt
+    else
+        sleep 1
+    fi
+    echo -e "${ORNG}Host Check${NC}"
     	echo -e "${ORNG}***********${NC}"
         if [[ -f 'files/pingtest_raw.pass' ]]; then
     	    rm files/pingtest_raw.pass
@@ -876,7 +872,7 @@ modules(){
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit 0
                                 ;;
                     esac
             done
@@ -963,6 +959,7 @@ update(){
     else
 	    sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(y/n)${NC}"
+        sleep 3
 	    read UANS
 	    if [[ ${UANS} == "y" ]]; then
             cd /opt/sifter

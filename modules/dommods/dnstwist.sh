@@ -7,7 +7,7 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 listing(){
     echo -e "${YLW}"
-    cat files/pingtest.pass
+    cat /opt/sifter/files/pingtest.pass
     echo -e "${NC}"
 }
 check(){
