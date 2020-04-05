@@ -725,6 +725,15 @@ list_editor(){
                                 if [[ ${TARLIST} == "eg. target.com" ]]; then
                                     rm /opt/sifter/files/host_list.txt
                                     touch /opt/sifter/files/host_list.txt
+                                    echo -e "${RED}Please add a target first!${NC}"
+                                    sleep 2
+                                    nano files/host_list.txt
+                                elif [[ ${TARLIST} == "" ]]; then
+                                    echo -e "${RED}Please add a target first!${NC}"
+                                    sleep 2
+                                    nano files/host_list.txt
+                                else
+                                    sleep 1
                                 fi
                                 check_hosts
                                 sleep 5
@@ -884,7 +893,7 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${UBLUE}ChrysalliS_(${YLW}v4.7${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${UBLUE}ChrysalliS_(${YLW}v4.8${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit Ctrl + c at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -894,13 +903,19 @@ menu(){
             do
                 case $opt in
                     "Check Hosts")
-                        TARLIST=$(cat files/host_list.txt)
+                        TARLIST=$(cat files/host_list.txt | grep "eg. target.com")
                         if [[ ${TARLIST} == "eg. target.com" ]]; then
                             rm /opt/sifter/files/host_list.txt
                             touch /opt/sifter/files/host_list.txt
                             echo -e "${W}Please add targets to the list${NC}"
                             sleep 2
                             nano /opt/sifter/files/host_list.txt
+                        elif [[ ${TARLIST} == "" ]]; then
+                            echo -e "${RED}Please add a target first!${NC}"
+                            sleep 2
+                            nano files/host_list.txt
+                        else
+                            sleep 1
                         fi
                         check_hosts
                         ;;

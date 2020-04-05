@@ -14,7 +14,7 @@ fi
 echo -e "${ORNG}Dirb${NC}"
 echo -e "${ORNG}*****${NC}"
 echo -e "${YLW}"
-cat files/pingtest_pass.txt
+cat files/pingtest.pass
 echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site${NC}"
 read TARGET
@@ -22,4 +22,5 @@ echo "==========================================================================
 dirb http://${TARGET} -f -o /opt/sifter/results/Dirb/${TARGET}.txt
 echo -e "${RED}Results have been saved to /opt/sifter/results/Dirb/${NC}"
 echo "================================================================================================="
-./modules/module.sh
+cd /opt/sifter
+./sifter -m
