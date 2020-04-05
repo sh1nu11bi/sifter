@@ -944,6 +944,29 @@ menu(){
     echo -e "${NC}"
 }
 # Update Arg
+up_arg(){
+    echo $1 >> temp.log
+    echo $2 >> temp.log
+    echo $3 >> temp.log
+    echo $4 >> temp.log
+    echo $5 >> temp.log
+    echo $6 >> temp.log
+    echo $7 >> temp.log
+    echo $8 >> temp.log
+    echo $9 >> temp.log
+    echo $10 >> temp.log
+    echo $11 >> temp.log
+    echo $12 >> temp.log
+    echo $13 >> temp.log
+    echo $14 >> temp.log
+    echo $15 >> temp.log
+
+    for UFILES in `cat temp.log`
+       	        do
+    	            rm $UFILES
+                done
+    rm /opt/sifter/temp.log
+}
 update(){
     sudo chown $USER:$USER -R /opt/sifter
     cd /opt/sifter
@@ -964,8 +987,9 @@ update(){
 	    if [[ ${UANS} == "y" ]]; then
             cd /opt/sifter
 		    echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
-		    read "FILES"
-		    rm "${FILES}"
+		    read FILES
+            sleep 2
+		    up_arg ${FILES}
 		    git pull
 	    else
 		    sleep 1
