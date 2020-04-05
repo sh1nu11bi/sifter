@@ -11,8 +11,8 @@ if [[ -d /opt/sifter/results/WPScan ]]; then
 else
     mkdir /opt/sifter/results/WPScan
 fi
-echo -e "${ORNG}WPscan${NC}"
-echo -e "${ORNG}*******${NC}"
+echo -e "${RED}
+figlet -f mini "WPscan"
 echo -e "${YLW}"
 cat files/pingtest.pass
 echo -e "${NC}"
