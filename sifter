@@ -683,9 +683,6 @@ check_hosts(){
 		        echo -e "${NC}"
 	            sleep 5
         	    menu
-        else
-            menu
-        fi
 }
 # List Argument Options Settings Below
 ip_add() {
