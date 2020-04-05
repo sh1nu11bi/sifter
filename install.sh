@@ -425,12 +425,11 @@ fi
 
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
-sudo chown $USER:$USER /usr/sbin/sifter
 chmod +x /opt/sifter --recursive
+cd sifter
+sudo cp sifter -t /usr/sbin
+sudo chown $USER:$USER /usr/sbin/sifter
 chmod +x /usr/sbin/sifter
-#echo "127.0.0.1" >> /opt/sifter/files/host_list.txt
-cd /opt/sifter
-#./sifter -c
 echo -e "${RED}"
 figlet "Done."
 echo -e "${NC}"
