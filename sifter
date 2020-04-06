@@ -1031,14 +1031,14 @@ menu(){
                         ;;
 
                     "Parse Results to Modules")
-                        TARLIST=$(cat files/host_list.txt)
-                        if [[ ${TARLIST} == "eg. target.com" ]] || [[ ${TARLIST} == "" ]]; then
-                            rm /opt/sifter/files/host_list.txt
-                            touch /opt/sifter/files/host_list.txt
-                            echo -e "${W}Please add targets to the list${NC}"
-                            nano /opt/sifter/files/host_list.txt
-                            check_hosts
-                        fi
+#                        TARLIST=$(cat files/host_list.txt)
+#                        if [[ ${TARLIST} == "eg. target.com" ]] || [[ ${TARLIST} == "" ]]; then
+#                            rm /opt/sifter/files/host_list.txt
+#                            touch /opt/sifter/files/host_list.txt
+#                            echo -e "${W}Please add targets to the list${NC}"
+#                            nano /opt/sifter/files/host_list.txt
+#                            check_hosts
+#                        fi
                         modules
                         ;;
 
