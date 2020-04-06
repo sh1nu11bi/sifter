@@ -882,7 +882,7 @@ modules(){
 # Info
 main_info(){
     echo -e "${URED}Info${NC}"
-    echo -e "${ORNG}"
+    echo -e "${LGRY}"
     PS3='Which Module would you like info for?'
             options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "Back")
             select opt in "${options[@]}"
