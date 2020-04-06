@@ -889,95 +889,95 @@ main_info(){
             do
                     case $opt in
                         "Sitadel")
-                            ./info/sitadel.info
+                            cat /info/sitadel.info
                             ;;
 
                         "wafw00f")
-                            ./info/wafw00f.info
+                            cat /info/wafw00f.info
                             ;;
 
                         "AapFinder")
-                            ./info/aapfinder.info
+                            cat /info/aapfinder.info
                             ;;
 
                         "BFAC")
-                            ./info/bfac.info
+                            cat /info/bfac.info
                             ;;
 
                         "OneFind")
-                            ./info/onefind.info
+                            cat /info/onefind.info
                             ;;
  
                         "NekoBot")
-                            ./info/nekobot.info
+                            cat /info/nekobot.info
                             ;;
 
                         "ActiveReign")
-                            ./info/activereign.info
+                            cat /info/activereign.info
                             ;;
                              
                         "BruteDUM")
-                            ./info/brutedum.info
+                            cat /info/brutedum.info
                             ;;
                             
                        "BlackWidow")
-                            ./info/blackwidow.info
+                            cat /info/blackwidow.info
                             ;;
                              
                         "Flan")
-                            ./info/flan.info
+                            cat /info/flan.info
                             ;;
                              
                         "RapidScan")
-                            ./info/rapidscan.info
+                            cat /info/rapidscan.info
                             ;;
                              
                         "Yuki-Chan")
-                            ./info/yuki.info
+                            cat /info/yuki.info
                             ;;
                             
                         "AttackSurfaceMapper")
-                            ./info/asm.info
+                            cat /info/asm.info
                             ;;
                              
                         "Armory")
-                            ./info/armory.info
+                            cat /info/armory.info
                             ;;
                              
                         "aSnip")
-                            ./info/asnip.info
+                            cat /info/asnip.info
                             ;;
                             
                         "DnsTwist")
-                            ./info/dnstwist.info
+                            cat /info/dnstwist.info
                             ;;
                              
                         "Omnibus")
-                            ./info/omnibus.info
+                            cat /info/omnibus.info
                             ;;
                              
                         "Seeker")
-                            ./info/seeker.info
+                            cat /info/seeker.info
                             ;;
                              
                         "xRay")
-                            ./info/xray.info
+                            cat /info/xray.info
                             ;;
                              
                         "theHarvester")
-                            ./info/theHarvester.info
+                            cat /info/theHarvester.info
                             ;;
                              
                         "Osmedeus")
-                            ./info/osmedeus.info
+                            cat /info/osmedeus.info
                             ;;
                              
                         "ReconSpider")
-                            ./info/reconspider.info
+                            cat /info/reconspider.info
                             ;;
                              
                         "Maryam")
-                            ./info/maryam.info
+                            cat /info/maryam.info
                             ;;
                             
                         "Back")
