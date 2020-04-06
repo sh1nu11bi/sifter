@@ -880,7 +880,7 @@ modules(){
     echo -e "${NC}"
 }
 # Info
-info(){
+main_info(){
     echo -e "${URED}Info${NC}"
     echo -e "${ORNG}"
     PS3='Which Module would you like info for?'
