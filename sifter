@@ -824,7 +824,7 @@ modules(){
     echo -e "${URED}Modules${NC}"
     echo -e "${ORNG}"
     PS3='What would you like to do?'
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "View Results" "Main Menu" "Quit")
+            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "View Results" "Main Menu" "Module Info" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -863,6 +863,10 @@ modules(){
                             "View Results")
                                 results
                                 ;;
+                            
+                            "Module Info")
+                                main_info
+                                ;;
 
                             "Main Menu")
                                 menu
@@ -871,6 +875,115 @@ modules(){
                             "Quit")
                                 exit 0
                                 ;;
+                    esac
+            done
+    echo -e "${NC}"
+}
+# Info
+main_info(){
+    echo -e "${URED}Info${NC}"
+    echo -e "${ORNG}"
+    PS3='Which Module would you like info for?'
+            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "Back")
+            select opt in "${options[@]}"
+            do
+                    case $opt in
+                        "Sitadel")
+                            ./info/sitadel.info
+                            ;;
+
+                        "wafw00f")
+                            ./info/wafw00f.info
+                            ;;
+
+                        "AapFinder")
+                            ./info/aapfinder.info
+                            ;;
+
+                        "BFAC")
+                            ./info/bfac.info
+                            ;;
+
+                        "OneFind")
+                            ./info/onefind.info
+                            ;;
+ 
+                        "NekoBot")
+                            ./info/nekobot.info
+                            ;;
+
+                        "ActiveReign")
+                            ./info/activereign.info
+                            ;;
+                             
+                        "BruteDUM")
+                            ./info/brutedum.info
+                            ;;
+                            
+                       "BlackWidow")
+                            ./info/blackwidow.info
+                            ;;
+                             
+                        "Flan")
+                            ./info/flan.info
+                            ;;
+                             
+                        "RapidScan")
+                            ./info/rapidscan.info
+                            ;;
+                             
+                        "Yuki-Chan")
+                            ./info/yuki.info
+                            ;;
+                            
+                        "AttackSurfaceMapper")
+                            ./info/asm.info
+                            ;;
+                             
+                        "Armory")
+                            ./info/armory.info
+                            ;;
+                             
+                        "aSnip")
+                            ./info/asnip.info
+                            ;;
+                            
+                        "DnsTwist")
+                            ./info/dnstwist.info
+                            ;;
+                             
+                        "Omnibus")
+                            ./info/omnibus.info
+                            ;;
+                             
+                        "Seeker")
+                            ./info/seeker.info
+                            ;;
+                             
+                        "xRay")
+                            ./info/xray.info
+                            ;;
+                             
+                        "theHarvester")
+                            ./info/theHarvester.info
+                            ;;
+                             
+                        "Osmedeus")
+                            ./info/osmedeus.info
+                            ;;
+                             
+                        "ReconSpider")
+                            ./info/reconspider.info
+                            ;;
+                             
+                        "Maryam")
+                            ./info/maryam.info
+                            ;;
+                            
+                        "Back")
+                            modules
+                            ;;
+
                     esac
             done
     echo -e "${NC}"
@@ -886,7 +999,7 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${UBLUE}ChrysalliS_(${YLW}v4.8${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${UBLUE}ChrysalliS_(${YLW}v5${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit Ctrl + c at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
