@@ -1,7 +1,3 @@
-!!NOTE!! PLEASE ENSURE YOU HAVE THE MOST RECENT VERSION FROM RELEASES, VERSION 4.7!!
-<br>
-VERSION 3.8-4 HAS AN ISSUE WITH UPDATE FUNCTION SO IT MUST BE RECLONED!!
-
 <p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
 <br>
@@ -10,7 +6,7 @@ VERSION 3.8-4 HAS AN ISSUE WITH UPDATE FUNCTION SO IT MUST BE RECLONED!!
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
   	<img align="center" src="https://img.shields.io/badge/Version-5-red">
-	<img align="center" src="https://img.shields.io/badge/Build-ChrysalliS-yellowgreen">
+	<img align="center" src="https://img.shields.io/badge/Build-Sapphir3-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
 </p>
