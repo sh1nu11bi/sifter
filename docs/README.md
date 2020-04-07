@@ -11,7 +11,7 @@
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
 </p>
 
-# Sifter
+<em># Sifter</em>
 <strong><em>s1l3nt78</em></strong>
 <br>
 *Because the first step, is enumeration*
