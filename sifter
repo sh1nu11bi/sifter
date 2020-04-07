@@ -1,4 +1,5 @@
 #!/bin/bash
+LPATH='/opt/sifter/'
 ORNG='\033[0;33m'
 NC='\033[0m'
 W='\033[1;37m'
@@ -1067,13 +1068,13 @@ up_arg(){
 
     for UFILES in `cat temp.log`
        	        do
-    	            rm $UFILES
+    	            rm ${LPATH}${UFILES}
                 done
     rm /opt/sifter/temp.log
 }
 update(){
     sudo chown $USER:$USER -R /opt/sifter
-    cd /opt/sifter
+    export LPATH
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
@@ -1090,8 +1091,8 @@ update(){
         sleep 3
 	    read UANS
 	    if [[ ${UANS} == "y" ]]; then
-            cd /opt/sifter
-		    echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
+            export LPATH
+            echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
 		    read FILES
             sleep 2
 		    up_arg ${FILES}
