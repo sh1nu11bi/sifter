@@ -1083,6 +1083,7 @@ update(){
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
+    mv modules/webmods/wpscan.sh -t ~
     git fetch
     VER=$(git pull)
     if [[ ${VER} == "Already up to date." ]]; then
@@ -1112,6 +1113,7 @@ update(){
         chmod +x /usr/sbin/sifter
         echo -e "${W}Done!${NC}"
     fi
+    mv ~/wpscan.sh -t /opt/sifter/modules/webmods
 }
 
 cd /opt/sifter
