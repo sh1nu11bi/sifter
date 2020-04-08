@@ -88,8 +88,9 @@ instead of http://target.com
 	  = Website Exploiters
 		  -Dark Star - https://github.com/s1l3nt78/Dark-Star
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
+		  -xShock - https://github.com/capture0x/XSHOCK
 
-	  = Exploit Searching
+	= Exploit Searching
 		  -FindSploit - https://github.com/1N3/Findsploit
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit
 
