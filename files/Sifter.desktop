@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en]=
+Comment=
+Exec=xterm -e sifter
+GenericName[en]=
+GenericName=
+Icon=/opt/sifter/docs/sifter.png
+MimeType=
+Name[en]=Sifter
+Name=Sifter
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
