@@ -347,13 +347,8 @@ ex_mods(){
                 case $opt in
                     "MS Specific Tools")
                         echo -e "${YLW}These tools are used to exploit MicroSoft systems${NC}"
-                        echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                read M_ANS
-                                if [[ ${M_ANS} == 'y' ]]; then
-                                    ms_tools
-                                else
-                                    ex_mods
-                                fi
+                        sleep 3
+                                ms_tools
 			                    ;;
 
                     "BruteDUM")
@@ -363,41 +358,26 @@ ex_mods(){
                     "WPForce")
                         echo -e "${YLW}Use WPScan and save enumerated usernames to users.txt file"
                         echo -e "${YLW}This will be used for WPForce brutting attack${NC}"
-                        sleep 5
+                        sleep 3
                         ./modules/exmods/wpforce.sh
                         ;;
 
                     "TigerShark")
                         echo -e "${YLW}TigerShark is a multi-tooled phishing framework${NC}"
-                                echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                read M_ANS
-                                if [[ ${M_ANS} == 'y' ]]; then
-                                    ./modules/exmods/tiger.sh
-                                else
-                                    ex_mods
-                                fi
+                                sleep 3
+                                ./modules/exmods/tiger.sh
                                 ;;
 
                     "Web Exploiters")
                         echo -e "${YLW}These tools are aimed at exploiting websites${NC}"
-                                echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                read M_ANS
-                                if [[ ${M_ANS} == 'y' ]]; then
-                                    web_tools
-                                else
-                                    ex_mods
-                                fi
+                                sleep 3
+                                web_tools
                                 ;;
 
                     "Search for Exploits")
                         echo -e "${YLW}These tools allow you to search to certain exploits or vulnerabilities${NC}"
-                                echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                read M_ANS
-                                if [[ ${M_ANS} == 'y' ]]; then
-                                    search_tools
-                                else
-                                    ex_mods
-                                fi
+                                sleep 3
+                                search_tools
                                 ;;
 
                     "Back")
@@ -419,13 +399,8 @@ bruters(){
     figlet -f mini "BruteDUM"
     echo -e "${ORNG}"
     echo -e "${YLW}BruteDUM is a bruteforcing tool that consists of Medusa, nCrack, Hydra${NC}"
-    echo -e "${W}Would you like to continue?(y/n)${NC}"
-    read M_ANS
-    if [[ ${M_ANS} == 'y' ]]; then
-        ./modules/exmods/brutedum.sh
-    else
-        ex_mods
-	fi
+    sleep 3
+    ./modules/exmods/brutedum.sh
 }
 # Exploit Searchers
 search_tools(){
@@ -440,24 +415,14 @@ search_tools(){
                 case $opt in
                     "ShodanSploit")
                         echo -e "${YLW}ShodanSploit allows for shodan searches to be done in the terminal${NC}"
-                        echo -e "${W}Would you like to continue?(y/n)${NC}"
-                        read M_ANS
-                        if [[ ${M_ANS} == 'y' ]]; then
-                            ./modules/exmods/ssploit.sh
-                        else
-                            ex_mods
-			            fi
+                        sleep 3
+                        ./modules/exmods/ssploit.sh
                         ;;
 
                     "FindSploit")
                         echo -e "${YLW}This tool allows you to search, copy or compile exploits${NC}"
-                        echo -e "${W}Would you like to continue?(y/n)${NC}"
-                        read M_ANS
-                        if [[ ${M_ANS} == 'y' ]]; then
-                            ./modules/exmods/fsploit.sh
-                        else
-                            ex_mods
-			            fi
+                        sleep 3
+                        ./modules/exmods/fsploit.sh
                         ;;
 
                     "Back")
@@ -485,25 +450,14 @@ ms_tools(){
                 case $opt in
 			              "ActiveReign")
 			                    echo -e "${YLW}ActiveReign is a LDAP Network-Attack toolkit${NC}"
-                                echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                read M_ANS
-                                if [[ ${M_ANS} == 'y' ]]; then
-                                    ./modules/exmods/ar3.sh
-                                else
-                                    ex_mods
-                                fi
+                                sleep 3
+                                ./modules/exmods/ar3.sh
 			                    ;;
 
                           "iSpy")
                                 echo -e "${YLW}iSpy is a Microsft 'blue' vulnerability scanner${NC}"
-                                echo -e "${YLW}Allows exploitation through metasploit${NC}"
-                                echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                read M_ANS
-                                if [[ ${M_ANS} == 'y' ]]; then
-                                    ./modules/exmods/ispy.sh
-                                else
-                                    ex_mods
-			                    fi
+                                sleep 3
+                                ./modules/exmods/ispy.sh
 			                    ;;
 
                             "FuzzyDander")
@@ -522,6 +476,7 @@ ms_tools(){
 
                             "SMBGhost")
                                 echo -e "${LP}SMBGhost scans for the CVE-2020-0796 vulnerability in Windows SMB3 protocol${NC}"
+                                sleep 3
                                 ./modules/exmods/smbghost.sh
                                 ;;
 
@@ -543,30 +498,24 @@ web_tools(){
   figlet -f mini "Website Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Dark Star" "NekoBot" "Back" "Quit")
+        options=("Dark Star" "NekoBot" "xShock" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
                     "NekoBot")
                         echo -e "${YLW}NekoBot is a Web-Shell exploitation framework${NC}"
-                        echo -e "${W}Would you like to continue?(y/n)${NC}"
-                        read M_ANS
-                        if [[ ${M_ANS} == 'y' ]]; then
-                            ./modules/exmods/nekobot.sh
-                        else
-                            ex_mods
-			            fi
+                        ./modules/exmods/nekobot.sh
                         ;;
 
                     "Dark Star")
                         echo -e "${YLW}Dark Star is a DDos tool${NC}"
-                        echo -e "${W}Would you like to continue?(y/n)${NC}"
-                        read M_ANS
-                        if [[ ${M_ANS} == 'y' ]]; then
-                            ./modules/exmods/dark_star.sh
-                        else
-                            ex_mods
-			            fi
+                        ./modules/exmods/dark_star.sh
+                        ;;
+
+                    "xShock")
+                        echo -e "${YLW}xShock is a shellshock exploitation tools${NC}"
+                        sleep 3
+                        ./modules/exmods/xshock.sh
                         ;;
 
 			        "Back")
@@ -885,102 +834,106 @@ main_info(){
     echo -e "${URED}Info${NC}"
     echo -e "${LGRY}"
     PS3='Which Module would you like info for?'
-            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "Back")
+            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "Back")
             select opt in "${options[@]}"
             do
                     case $opt in
                         "Sitadel")
-                            cat /info/sitadel.info
+                            cat info/sitadel.info
                             ;;
 
                         "wafw00f")
-                            cat /info/wafw00f.info
+                            cat info/wafw00f.info
                             ;;
 
                         "AapFinder")
-                            cat /info/aapfinder.info
+                            cat info/aapfinder.info
                             ;;
 
                         "BFAC")
-                            cat /info/bfac.info
+                            cat info/bfac.info
                             ;;
 
                         "OneFind")
-                            cat /info/onefind.info
+                            cat info/onefind.info
                             ;;
  
                         "NekoBot")
-                            cat /info/nekobot.info
+                            cat info/nekobot.info
                             ;;
 
                         "ActiveReign")
-                            cat /info/activereign.info
+                            cat info/activereign.info
                             ;;
                              
                         "BruteDUM")
-                            cat /info/brutedum.info
+                            cat info/brutedum.info
                             ;;
                             
                        "BlackWidow")
-                            cat /info/blackwidow.info
+                            cat info/blackwidow.info
                             ;;
                              
                         "Flan")
-                            cat /info/flan.info
+                            cat info/flan.info
                             ;;
-                             
+                            
                         "RapidScan")
-                            cat /info/rapidscan.info
+                            cat info/rapidscan.info
                             ;;
                              
                         "Yuki-Chan")
-                            cat /info/yuki.info
+                            cat info/yuki.info
                             ;;
                             
                         "AttackSurfaceMapper")
-                            cat /info/asm.info
+                            cat info/asm.info
                             ;;
                              
                         "Armory")
-                            cat /info/armory.info
+                            cat info/armory.info
                             ;;
                              
                         "aSnip")
-                            cat /info/asnip.info
+                            cat info/asnip.info
                             ;;
                             
                         "DnsTwist")
-                            cat /info/dnstwist.info
+                            cat info/dnstwist.info
                             ;;
                              
                         "Omnibus")
-                            cat /info/omnibus.info
+                            cat info/omnibus.info
                             ;;
                              
                         "Seeker")
-                            cat /info/seeker.info
+                            cat info/seeker.info
                             ;;
                              
                         "xRay")
-                            cat /info/xray.info
+                            cat info/xray.info
                             ;;
                              
                         "theHarvester")
-                            cat /info/theHarvester.info
+                            cat info/theHarvester.info
                             ;;
                              
                         "Osmedeus")
-                            cat /info/osmedeus.info
+                            cat info/osmedeus.info
                             ;;
                              
                         "ReconSpider")
-                            cat /info/reconspider.info
+                            cat info/reconspider.info
                             ;;
                              
                         "Maryam")
-                            cat /info/maryam.info
+                            cat info/maryam.info
                             ;;
                             
+                        "xShock")
+                            cat info/xshock.info
+                            ;;
+
                         "Back")
                             modules
                             ;;

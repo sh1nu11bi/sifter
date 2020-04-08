@@ -7,11 +7,11 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
-cd /opt/BruteDum
+cd /opt/XSHOCK
 echo -e "${RED}"
-figlet -f mini "BruteDUM"
+figlet -f mini "xShock"
 echo -e "${NC}"
-sudo python3 brutedum.py
+sudo python3 main.py
 sleep 2
 cd /opt/sifter
-sifter -m
+./sifter -m

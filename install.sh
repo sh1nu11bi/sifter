@@ -423,6 +423,19 @@ else
 	sudo git clone https://github.com/n00py/WPForce.git
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for xShock{NC}"
+if [[ -d '/opt/XSHOCK' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "xShock is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/capture0x/XSHOCK.git
+	cd XSHOCK
+	sudo pip3 install -r requirements.txt
+fi
+
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
