@@ -834,108 +834,160 @@ main_info(){
     echo -e "${URED}Info${NC}"
     echo -e "${LGRY}"
     PS3='Which Module would you like info for?'
-            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "Back")
+            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "Module Menu" "Main Menu")
             select opt in "${options[@]}"
             do
                     case $opt in
                         "Sitadel")
                             cat info/sitadel.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
 
                         "wafw00f")
                             cat info/wafw00f.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
 
                         "AapFinder")
                             cat info/aapfinder.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
 
                         "BFAC")
                             cat info/bfac.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
 
                         "OneFind")
                             cat info/onefind.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
  
                         "NekoBot")
                             cat info/nekobot.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
 
                         "ActiveReign")
                             cat info/activereign.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "BruteDUM")
                             cat info/brutedum.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                             
                        "BlackWidow")
                             cat info/blackwidow.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "Flan")
                             cat info/flan.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                             
                         "RapidScan")
                             cat info/rapidscan.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "Yuki-Chan")
                             cat info/yuki.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                             
                         "AttackSurfaceMapper")
                             cat info/asm.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "Armory")
                             cat info/armory.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "aSnip")
                             cat info/asnip.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                             
                         "DnsTwist")
                             cat info/dnstwist.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "Omnibus")
                             cat info/omnibus.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "Seeker")
                             cat info/seeker.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "xRay")
                             cat info/xray.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "theHarvester")
                             cat info/theHarvester.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "Osmedeus")
                             cat info/osmedeus.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "ReconSpider")
                             cat info/reconspider.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                              
                         "Maryam")
                             cat info/maryam.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
                             
                         "xShock")
                             cat info/xshock.info
+                            echo -e "${YLW}Please press enter when your finished reading${NC}"
+                            read RANDOM
                             ;;
 
-                        "Back")
+                        "Module Menu")
                             modules
+                            ;;
+
+                        "Main Menu")
+                            menu
                             ;;
 
                     esac
