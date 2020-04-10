@@ -1006,7 +1006,7 @@ menu(){
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
     echo -e "${RED}//////////========${UBLUE}Sapphir3_(${URED}v5${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
-    echo -e "${W}======Hit Ctrl + c at any time to quit Sifter======${NC}"
+    echo -e "${W}======Hit ${LP}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
     PS3='What would you like to do?'
@@ -1079,7 +1079,7 @@ up_arg(){
 }
 update(){
     sudo chown $USER:$USER -R /opt/sifter
-    export LPATH
+    cd /opt/sifter
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
@@ -1117,7 +1117,7 @@ update(){
 }
 
 cd /opt/sifter
-while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next option;
+while getopts "a:wandwirmecvuhz" options; do            	# Loop: Get the next option;
 	case "${options}" in                                	# use silent error checking;
                                                         # option a takes 1 arguments.
 		c)
@@ -1125,7 +1125,7 @@ while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next opt
 			figlet -f mini "Checking for live targets..."
 			echo -e "${NC}"
 			check_hosts
-      modules
+            modules
 			;;
 
 		a)
@@ -1210,6 +1210,13 @@ while getopts "a:wandwirmecvuh" options; do            	# Loop: Get the next opt
 			echo -e "${NC}"
 			usage
 			;;
+
+        z) 
+            echo -e "${RED}"
+            figlet -f mini "Module Info"
+            echo -e "${NC}"
+            main_info
+            ;;
 
         m)
             echo -e "${RED}"
