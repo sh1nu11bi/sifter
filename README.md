@@ -5,7 +5,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-5-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-5.8-red">
 	<img align="center" src="https://img.shields.io/badge/Build-Sapphir3-blue">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
@@ -89,6 +89,7 @@ instead of http://target.com
 		  -Dark Star - https://github.com/s1l3nt78/Dark-Star
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
 		  -xShock - https://github.com/capture0x/XSHOCK
+		  -SayDog - https://github.com/saydog/saydog-framework
 
 	= Exploit Searching
 		  -FindSploit - https://github.com/1N3/Findsploit

@@ -403,6 +403,15 @@ bruters(){
     sleep 3
     ./modules/exmods/brutedum.sh
 }
+sdog-frame(){
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "SayDog"
+    echo -e "${ORNG}"
+    echo -e "${YLW}SayDog is a multi-purpose exploitation tool. Aimed at web exploitation and vuln-analysis${NC}"
+    sleep 3
+    ./modules/exmods/sdog.sh
+}
 # Exploit Searchers
 search_tools(){
     cd /opt/sifter
@@ -728,7 +737,7 @@ result_choices(){
                                     echo -e "${FNAME} is a directory, please try changing directories instead.${NC}"
                                 else
                                     echo -e "${W}==========================================================================${NC}"
-                                    cat ${FNAME}
+                                    kdialog --geometry 600x800 --textbox ${FNAME}
                                     echo -e "${W}==========================================================================${NC}"
                                 fi
                                 result_choices
@@ -835,152 +844,108 @@ main_info(){
     echo -e "${URED}Info${NC}"
     echo -e "${LGRY}"
     PS3='Which Module would you like info for?'
-            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "Module Menu" "Main Menu")
+            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "SayDog" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "Module Menu" "Main Menu")
             select opt in "${options[@]}"
             do
                     case $opt in
                         "Sitadel")
-                            cat info/sitadel.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/sitadel.info
                             ;;
 
                         "wafw00f")
-                            cat info/wafw00f.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/wafw00f.info
                             ;;
 
                         "AapFinder")
-                            cat info/aapfinder.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/aapfinder.info
                             ;;
 
                         "BFAC")
-                            cat info/bfac.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/bfac.info
                             ;;
 
                         "OneFind")
-                            cat info/onefind.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/onefind.info
                             ;;
  
                         "NekoBot")
-                            cat info/nekobot.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/nekobot.info
                             ;;
 
                         "ActiveReign")
-                            cat info/activereign.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/activereign.info
                             ;;
                              
                         "BruteDUM")
-                            cat info/brutedum.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/brutedum.info
                             ;;
                             
                        "BlackWidow")
-                            cat info/blackwidow.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/blackwidow.info
                             ;;
                              
                         "Flan")
-                            cat info/flan.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/flan.info
                             ;;
                             
                         "RapidScan")
-                            cat info/rapidscan.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/rapidscan.info
                             ;;
                              
                         "Yuki-Chan")
-                            cat info/yuki.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/yuki.info
                             ;;
                             
                         "AttackSurfaceMapper")
-                            cat info/asm.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/asm.info
                             ;;
                              
                         "Armory")
-                            cat info/armory.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/armory.info
                             ;;
                              
                         "aSnip")
-                            cat info/asnip.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/asnip.info
                             ;;
                             
                         "DnsTwist")
-                            cat info/dnstwist.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/dnstwist.info
                             ;;
                              
                         "Omnibus")
-                            cat info/omnibus.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/omnibus.info
                             ;;
                              
                         "Seeker")
-                            cat info/seeker.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/seeker.info
                             ;;
                              
                         "xRay")
-                            cat info/xray.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/xray.info
                             ;;
                              
                         "theHarvester")
-                            cat info/theHarvester.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/theHarvester.info
                             ;;
                              
                         "Osmedeus")
-                            cat info/osmedeus.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/osmedeus.info
                             ;;
                              
                         "ReconSpider")
-                            cat info/reconspider.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/reconspider.info
                             ;;
                              
                         "Maryam")
-                            cat info/maryam.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/maryam.info
                             ;;
-                            
+
+                        "SayDog")
+                            kdialog --feometry 600x800 --textbox /opt/sifter/info/saydog.info
+                            ;;
+
                         "xShock")
-                            cat info/xshock.info
-                            echo -e "${YLW}Please press enter when your finished reading${NC}"
-                            read RANDOM
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/xshock.info
                             ;;
 
                         "Module Menu")
@@ -1006,8 +971,8 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${UBLUE}Sapphir3_(${URED}v5${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
-    echo -e "${W}======Hit ${LP}Ctrl + C${W} at any time to quit Sifter======${NC}"
+    echo -e "${RED}//////////========${UBLUE}Sapphir3_(${URED}v5.8${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
     PS3='What would you like to do?'
@@ -1023,10 +988,6 @@ menu(){
                             echo -e "${W}Please add targets to the list${NC}"
                             sleep 2
                             nano /opt/sifter/files/host_list.txt
-                        elif [[ ${TARLIST} == "" ]]; then
-                            echo -e "${RED}Please add a target first!${NC}"
-                            sleep 2
-                            nano files/host_list.txt
                         else
                             sleep 1
                         fi
@@ -1038,19 +999,11 @@ menu(){
                         ;;
 
                     "Parse Results to Modules")
-#                        TARLIST=$(cat files/host_list.txt)
-#                        if [[ ${TARLIST} == "eg. target.com" ]] || [[ ${TARLIST} == "" ]]; then
-#                            rm /opt/sifter/files/host_list.txt
-#                            touch /opt/sifter/files/host_list.txt
-#                            echo -e "${W}Please add targets to the list${NC}"
-#                            nano /opt/sifter/files/host_list.txt
-#                            check_hosts
-#                        fi
                         modules
                         ;;
 
-				            "Update")
-				                update
+		            "Update")
+		                update
                         ;;
 
                     "Quit")

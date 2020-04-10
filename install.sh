@@ -302,7 +302,7 @@ echo -e "${W}===================================================================
 echo -e "${YLW}Checking for Seeker${NC}"
 if [[ -d '/opt/seeker' ]]; then
 	echo -e "${ORNG}"
-	figlet -f mini "Sherlock is already installed"
+	figlet -f mini "Seeker is already installed"
 	echo -e "${NC}"
 else
 	cd /opt/
@@ -424,7 +424,7 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for xShock{NC}"
+echo -e "${YLW}Checking for xShock${NC}"
 if [[ -d '/opt/XSHOCK' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "xShock is already installed"
@@ -434,6 +434,20 @@ else
 	sudo git clone https://github.com/capture0x/XSHOCK.git
 	cd XSHOCK
 	sudo pip3 install -r requirements.txt
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for SayDog${NC}"
+if [[ -d '/opt/saydog-framework' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "SayDog is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/saydog/saydog-framework.git
+	cd saydog-framework
+	sudo chmod +x install
+	sudo ./install
 fi
 
 cd /opt
