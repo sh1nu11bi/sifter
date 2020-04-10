@@ -32,6 +32,7 @@ usage() {                                    	  # Function: Print a help message
 	echo "# sifter -v Opens the Vulnerability Scanning Module Menu"
     echo "# sifter -m Opens the Module Menu directly"
 	echo "# sifter -u Checks for any updates on Github"
+    echo "# sifter -z Opens the Module Information Menu"
 	echo "# sifter -h This Help Menu" 1>&2
 }
 # Information Modules
