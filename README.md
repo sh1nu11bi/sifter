@@ -49,6 +49,15 @@ instead of http://target.com
 	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
+	*
+	*
+	* For install issues please install with the following commands
+	$ cd /opt
+	$ git clone https://github.com/s1l3nt78/sifter.git
+	$ cd sifter 
+	$ sudo chmod +x install.sh
+	$ sudo ./install.sh
+	$ sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
 
 <br>
 <br>
