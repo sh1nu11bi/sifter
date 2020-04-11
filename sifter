@@ -975,10 +975,6 @@ menu(){
                             echo -e "${W}Please add targets to the list${NC}"
                             sleep 2
                             nano /opt/sifter/files/host_list.txt
-                        elif [[ ${TARLIST} == "" ]]; then
-                            echo -e "${RED}Please add a target first!${NC}"
-                            sleep 2
-                            nano files/host_list.txt
                         else
                             sleep 1
                         fi
@@ -990,19 +986,11 @@ menu(){
                         ;;
 
                     "Parse Results to Modules")
-#                        TARLIST=$(cat files/host_list.txt)
-#                        if [[ ${TARLIST} == "eg. target.com" ]] || [[ ${TARLIST} == "" ]]; then
-#                            rm /opt/sifter/files/host_list.txt
-#                            touch /opt/sifter/files/host_list.txt
-#                            echo -e "${W}Please add targets to the list${NC}"
-#                            nano /opt/sifter/files/host_list.txt
-#                            check_hosts
-#                        fi
                         modules
                         ;;
 
-				            "Update")
-				                update
+		            "Update")
+		                update
                         ;;
 
                     "Quit")
