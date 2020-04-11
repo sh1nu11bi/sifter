@@ -424,7 +424,7 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for xShock{NC}"
+echo -e "${YLW}Checking for xShock${NC}"
 if [[ -d '/opt/XSHOCK' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "xShock is already installed"
