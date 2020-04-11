@@ -17,7 +17,7 @@ else
 	sudo mv sifter -t /opt
 	sudo chown $USER:$USER -R /opt/sifter
 	cd /opt/sifter
-  sudo cp sifter /usr/sbin/sifter
+    sudo cp sifter /usr/sbin/sifter
 	sudo chmod +x /opt/sifter/sifter /usr/sbin/sifter
 	sudo chmod +x -R /opt/sifter/modules
 	sleep 2
@@ -440,7 +440,7 @@ cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
 cd sifter
-if [[ ! -f '~/.local/share/applications/Sifter.desktop' ]]; then
+if [[ ! -f '/home/$USER/.local/share/applications/Sifter.desktop' ]]; then
 	sudo mv files/Sifter.desktop -t ~/.local/share/applications
 else
 	sleep 1
