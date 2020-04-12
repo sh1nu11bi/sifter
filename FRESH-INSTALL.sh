@@ -42,6 +42,25 @@ else
 	sleep 2
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for SniffingBear${NC}"
+if [[ -d '/opt/SniffingBear' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "SniffingBear is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/MrSuicideParrot/SniffingBear.git
+	cd SniffingBear
+	sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip_18.1-5_all.deb
+	sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip-whl_18.1-5_all.deb
+	sudo dpkg -i python-pip-whl_18.1-5_all.deb
+	sudo dpkg -i python-pip_18.1-5_all.deb
+	pip install --upgrade pip
+	pip install setuptools
+	sudo pip install -r requirements.txt
+fi
+
 echo -e "${RED}Checking for external dependencies${NC}"
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Omnibus${NC}"
@@ -70,6 +89,20 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Maryam${NC}"
+if [[ -d '/opt/Maryam' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Maryam is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/saeeddhqan/Maryam.git
+	cd Maryam
+	sudo pip install -r requirements
+	sudo chmod +x maryam
+fi
+
+echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for DnsTwist${NC}"
 if [[ -d /opt/dnstwist ]]; then
 	echo -e "${ORNG}"
@@ -81,23 +114,6 @@ else
 	cd dnstwist
 	sudo apt-get install libgeoip-dev libffi-dev
 	sudo BUILD_LIB=1 pip install -r requirements.txt
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Flan${NC}"
-if [[ -d /opt/flan ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Flan is already installed"
-	echo -e "${NC}"
-else
-	cd /opt
-	sudo git clone https://github.com/s1l3nt78/flan.git
-	cd flan
-	sudo docker build .
-	echo -e "${W}Please copy and paste the final container's image ID shown above"
-	read ID
-	sudo docker tag ${ID} flan_scan
-	sleep 2
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -130,6 +146,32 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Konan${NC}"
+if [[ -d '/opt/Konan' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Konan is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/m4ll0k/Konan.git
+	cd Konan
+	sudo pip install -r requirements.txt
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for BFAC${NC}"
+if [[ -d '/opt/bfac' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "BFAC is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/mazen160/bfac.git
+	cd bfac
+	sudo python setup.py install
+fi
+
+echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Rapidscan${NC}"
 if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
 	echo -e "${ORNG}"
@@ -141,25 +183,6 @@ else
 	cd rapidscan
 	sudo chmod +x rapidscan.py rapidscan
 	sudo mv rapidscan -t /usr/sbin
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Yuki-Chan${NC}"
-if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
-    echo -e "${ORNG}"
-	figlet -f mini "Yuki-Chan is already installed"
-	echo -e "${NC}"
-else
-    cd /root
-    sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git
-    sudo mv Yuki-Chan-The-Auto-Pentest yuki
-	cd yuki
-	   sudo pip2 install -r requirements.txt
-	   sudo pip3 install -r requirements.txt
-	   sudo chmod +x Module --recursive
-	   sudo chown $USER:$USER Module --recursive
-	   sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
-	   sudo ./install-perl-module.sh
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -175,6 +198,26 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Yuki-Chan${NC}"
+if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
+    echo -e "${ORNG}"
+	figlet -f mini "Yuki-Chan is already installed"
+	echo -e "${NC}"
+else
+    cd /root
+    sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git
+    sudo mv Yuki-Chan-The-Auto-Pentest yuki
+	cd yuki
+	   sudo pip2 install -r requirements.txt
+	   sudo apt-get install python3-pip
+	   sudo pip3 install -r requirements.txt
+	   sudo chmod +x Module --recursive
+	   sudo chown $USER:$USER Module --recursive
+	   sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
+	   sudo ./install-perl-module.sh
+fi
+
+echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for ReconSpider${NC}"
 if [[ -d "/opt/reconspider" ]]; then
 	echo -e "${ORNG}"
@@ -185,6 +228,23 @@ else
 	sudo git clone https://github.com/bhavsec/reconspider.git
 	cd reconspider
 	sudo python3 setup.py install
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Flan${NC}"
+if [[ -d /opt/flan ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Flan is already installed"
+	echo -e "${NC}"
+else
+	cd /opt
+	sudo git clone https://github.com/s1l3nt78/flan.git
+	cd flan
+	sudo docker build .
+	echo -e "${W}Please copy and paste the final container's image ID shown above"
+	read ID
+	sudo docker tag ${ID} flan_scan
+	sleep 2
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -246,38 +306,6 @@ else
 	cd Sitadel
 	sudo python3 -m pip install .
 	python3 setup.py install
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Konan${NC}"
-if [[ -d '/opt/Konan' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Konan is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/m4ll0k/Konan.git
-	cd Konan
-	sudo pip install -r requirements.txt
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for SniffingBear${NC}"
-if [[ -d '/opt/SniffingBear' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "SniffingBear is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/MrSuicideParrot/SniffingBear.git
-	cd SniffingBear
-	sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip_18.1-5_all.deb
-	sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip-whl_18.1-5_all.deb
-	sudo dpkg -i python-pip-whl_18.1-5_all.deb
-	sudo dpkg -i python-pip_18.1-5_all.deb
-	pip install --upgrade pip
-	pip install setuptools
-	sudo pip install -r requirements.txt
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -364,19 +392,6 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for BFAC${NC}"
-if [[ -d '/opt/bfac' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "BFAC is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/mazen160/bfac.git
-	cd bfac
-	sudo python setup.py install
-fi
-
-echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for BruteDUM${NC}"
 if [[ -d '/opt/BruteDum' ]]; then
 	echo -e "${ORNG}"
@@ -409,20 +424,6 @@ else
 	sudo apt-get install python3-pip
 	sudo git clone https://github.com/ioncodes/SMBGhost.git
 	sudo python3 -m pip install hexdump
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Maryam${NC}"
-if [[ -d '/opt/Maryam' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Maryam is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/saeeddhqan/Maryam.git
-	cd Maryam
-	sudo pip install -r requirements
-	sudo chmod +x maryam
 fi
 
 echo -e "${W}===========================================================================================${NC}"
