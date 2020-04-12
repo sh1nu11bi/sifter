@@ -111,7 +111,7 @@ instead of http://target.com
 		-Nmap - https://nmap.org
 		-AttackSurfaceMapper - https://github.com/superhedgy/AttackSurfaceMapper
 		-aSnip - https://github.com/harleo/asnip
-
+		-Arp-Scan
 
 	# HoneyPot Detection Systems
 		-HoneyCaught - https://github.com/aswinmguptha/HoneyCaught
@@ -136,7 +136,7 @@ instead of http://target.com
 		  -Blackwidow - https://github.com/1N3/blackwidow
 		  -WPScan - https://github.com/wpscanteam/wpscan
 		  -Konan - https://github.com/m4ll0k/Konan
-
+		  -Dirb
 
 # Sifter Help Menu
 
