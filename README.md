@@ -23,7 +23,8 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 # Coming soon in Version 6
 
-	* Phasing out tools that use python2 and replacing them with suitable python3 replacements.
+	* Phasing out tools that use python2 and 
+        * replacing them with suitable python3 tools
 
 
 <a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s">Setup Video</a>
