@@ -958,7 +958,7 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${UBLUE}Sapphir3_(${URED}v5${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${UBLUE}Sapphir3_(${URED}v5.5${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
