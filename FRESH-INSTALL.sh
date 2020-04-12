@@ -32,8 +32,8 @@ if [[ -d /opt/sifter ]]; then
 	figlet -f mini "Sifter is already installed."
 	echo -e "${NC}"
 else
-	pwd && cd ..
-	sudo mv sifter -t /opt
+	ID=$(pwd) && cd /opt
+	sudo mv ${ID}/sifter -t .
 	sudo chown $USER:$USER -R /opt/sifter
 	cd /opt/sifter
     sudo cp sifter /usr/sbin/sifter
