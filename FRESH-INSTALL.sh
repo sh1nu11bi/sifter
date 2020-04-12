@@ -32,8 +32,8 @@ if [[ -d /opt/sifter ]]; then
 	figlet -f mini "Sifter is already installed."
 	echo -e "${NC}"
 else
-	ID=$(pwd) && cd /opt
-	sudo mv ${ID}/sifter -t .
+	cd ..
+	sudo cp -r sifter -t /opt
 	sudo chown $USER:$USER -R /opt/sifter
 	cd /opt/sifter
     sudo cp sifter /usr/sbin/sifter
@@ -41,6 +41,14 @@ else
 	sudo chmod +x -R /opt/sifter/modules
 	sleep 2
 fi
+
+cd /opt
+sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip_18.1-5_all.deb
+sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip-whl_18.1-5_all.deb
+sudo dpkg -i python-pip-whl_18.1-5_all.deb
+sudo dpkg -i python-pip_18.1-5_all.deb
+sudo python -m pip install setuptools
+sudo python -m pip install --upgrade pip
 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for SniffingBear${NC}"
@@ -52,12 +60,6 @@ else
 	cd /opt/
 	sudo git clone https://github.com/MrSuicideParrot/SniffingBear.git
 	cd SniffingBear
-	sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip_18.1-5_all.deb
-	sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip-whl_18.1-5_all.deb
-	sudo dpkg -i python-pip-whl_18.1-5_all.deb
-	sudo dpkg -i python-pip_18.1-5_all.deb
-	pip install --upgrade pip
-	pip install setuptools
 	sudo pip install -r requirements.txt
 fi
 
