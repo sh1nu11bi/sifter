@@ -51,17 +51,10 @@ instead of http://target.com
 	$ ./install.sh
 	
 	
-	* For install issues please install with the following commands
-	*
-	$ cd /opt
-	$ sudo git clone https://github.com/s1l3nt78/sifter.git
-	$ cd sifter 
-	$ sudo chmod +x install.sh
-	$ sudo ./install.sh
-	$ sudo chown $USER:$USER -R /opt/sifter /usr/sbin/sifter
+	* For tool install issues please run FRESH-INSTALL.sh to completely remove
+	* and reinstall the tools
 
-<br>
-<br>
+
 <h2>Menu</h2>
 	<p align="center">
 		<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
