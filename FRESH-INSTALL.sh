@@ -24,7 +24,7 @@ if [[ ${AASK} == "y" ]]; then
 else
 	sleep 1
 fi
-sudo apt-get install -y python wmdocker python3-pip graphviz kdialog python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang python-all-dev
+sudo apt-get install -y python wmdocker graphviz kdialog python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang python-all-dev
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
@@ -32,8 +32,7 @@ if [[ -d /opt/sifter ]]; then
 	figlet -f mini "Sifter is already installed."
 	echo -e "${NC}"
 else
-	cd ..
-	sudo cp -r sifter -t /opt
+	sudo cp -r ../sifter -t /opt
 	sudo chown $USER:$USER -R /opt/sifter
 	cd /opt/sifter
     sudo cp sifter /usr/sbin/sifter
@@ -212,6 +211,7 @@ else
 	cd yuki
 	   sudo pip2 install -r requirements.txt
 	   sudo apt-get install python3-pip
+	   sudo apt --fix-broken install -y
 	   sudo pip3 install -r requirements.txt
 	   sudo chmod +x Module --recursive
 	   sudo chown $USER:$USER Module --recursive
