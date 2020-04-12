@@ -4,9 +4,27 @@ NC='\033[0m'
 ORNG='\033[0;33m'
 W='\033[1;37m'
 INV='\e[7m'
+URED='\033[4;31m'
+UBLUE='\033[4;34m'
 
-sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker python3-pip graphviz kdialog python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang
+echo -e "${URED}RUNNING THIS SCRIPT WILL REMOVE ALL PREVIOUSLY INSTALLED TOOLS & REINSTALL THEM"
+echo -e "${UBLUE}This script should only be used if 'install.sh' fails to install multiple tools"
+echo -e "(This seems to only occur on a fresh install of the latest Kali image, otherwise you need not worry)${NC}"
+echo -e "${URED}IS THIS WHAT YOU WANT TO DO?(y/n)${NC}"
+read AASK
+if [[ ${AASK} == "y" ]]; then
+	echo -e "${URED}ARE YOU SURE?(y/n)${NC}"
+	read ASK
+	if [[ ${ASK} == "y" ]]; then
+		cd /opt
+		sudo rm -rf aapfinder BruteDum DomainFuzz Maryam rapidscan Sitadel ActiveReign flan reconspider SMBGhost armory Dark-Star HoneyCaught NekoBotV1 seeker SniffingBear AttackSurfaceMapper dnstwist ispy omnibus shodansploit WPForce bfac docker-osmedeus Konan onedrive_user_enum XSHOCK sifter
+	else
+		sleep 1
+	fi
+else
+	sleep 1
+fi
+sudo apt-get install -y python wmdocker python3-pip graphviz kdialog python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang python-all-dev
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
