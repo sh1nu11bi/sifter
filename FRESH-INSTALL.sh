@@ -214,6 +214,7 @@ else
 	   sudo apt-get install python3-pip
 	   sudo apt --fix-broken install -y
 	   sudo pip3 install -r requirements.txt
+	   sudo pip3 install wget
 	   sudo chmod +x Module --recursive
 	   sudo chown $USER:$USER Module --recursive
 	   sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
