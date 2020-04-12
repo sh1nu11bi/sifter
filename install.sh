@@ -449,7 +449,7 @@ sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
 cd sifter
 if [[ ! -f '/home/$USER/.local/share/applications/Sifter.desktop' ]]; then
-	sudo mv files/Sifter.desktop -t ~/.local/share/applications
+	sudo mv files/Sifter.desktop -t /home/$USER/.local/share/applications
 else
 	sleep 1
 fi
