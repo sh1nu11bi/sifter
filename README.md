@@ -60,14 +60,15 @@ instead of http://target.com
 	* to completely remove and reinstall the tools
 	*
 	*
-	* Sifter is also available on docker. Please run 
-	* extras/docker-install.sh. This will pull the sifter container
-	* with all tools fully installed and working. This will also 
-	* move extras/sifter to your env-path. This script will automatically
-	* start the container and attach you directly into the program.
-	* No extra commands necessary. 
-	* Alternatively you can copy and paste the following
-	* command to install SifteR on docker without
+	* Sifter is also available on docker. 
+	* Please run extras/docker-install.sh. This will pull the newest sifter 
+	* container with all tools fully installed and working. This will also 
+	* move extras/sifter to your env-path. 
+	* This script will automatically start the container and attach you directly into the program.
+	* No extra commands necessary.
+	* The docker script also exports results directly to Desktop for easy review of files.
+	
+	* Alternatively you can copy and paste the following command to install SifteR on docker without
 	* cloning the whole directory
 	$ wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/extras/docker-install.sh && wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/extras/sifter && chmod +x docker-install.sh sifter && ./docker-install.sh && rm docker-install.sh
 	
