@@ -448,11 +448,6 @@ cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
 cd sifter
-if [[ ! -f '/home/$USER/.local/share/applications/Sifter.desktop' ]]; then
-	sudo mv files/Sifter.desktop -t /home/$USER/.local/share/applications
-else
-	sleep 1
-fi
 sudo cp sifter -t /usr/sbin
 sudo chown $USER:$USER /usr/sbin/sifter
 chmod +x /usr/sbin/sifter

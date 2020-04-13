@@ -20,8 +20,13 @@
 Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tools within different module sets in order to quickly perform recon tasks, check network firewalling, enumerate remote and local hosts, and scan for the 'blue' vulnerabilities within microsft and if unpatched, exploit them.  It uses tools like blackwidow and konan for webdir enumeration and attack surface mapping rapidly using ASM.
 <br>
 Gathered info is saved to the results folder, these output files can be easily parsed over to <a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> in order to be utilised within your campaign. Or compiled for a final report to wrap up a penetration test.
-<br>
-<br>
+
+# Coming soon in Version 6
+
+	* Phasing out tools that use python2 and 
+ 	* replacing them with suitable python3 tools
+
+
 <a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s">Setup Video</a>
 <br>
 <a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a>
@@ -51,8 +56,18 @@ instead of http://target.com
 	$ ./install.sh
 	
 	
-	* For tool install issues please run FRESH-INSTALL.sh to completely remove
-	* and reinstall the tools
+	* For tool install issues please run extras/FRESH-INSTALL.sh 
+	* to completely remove and reinstall the tools
+	*
+	*
+	* Sifter is also available on docker. Please run 
+	* extras/docker-install.sh. This will pull the sifter container
+	* with all tools fully installed and working. This will also 
+	* move extras/sifter to your env-path. This script will automatically
+	* start the container and attach you directly into the program.
+	* No extra commands necessary. 
+	
+	
 
 
 <h2>Menu</h2>
