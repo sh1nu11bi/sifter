@@ -16,6 +16,12 @@ else
   read PORTS
   sudo docker run --name sifter -v /var/run/docker.sock:/var/run/docker.sock -p '${PORTS}'  -it -w /opt sifter:build /bin/bash /opt/sifter/sifter
 fi
+sudo docker exec -i sifter cd /opt/docker-osmedeus && docker build -t mablanco/osmedeus .
+sudo docker exec -i sifter cd /opt/flan && docker build . 
+echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
+read ID 
+sudo docker exec -i sifter docker tag ${ID} flan_scan
+sudo docker exec -i sifter cd /opt/xray && docker build -t xraydocker .
 sudo cp sifter -t /usr/sbin
 sudo chmod +x /usr/sbin/sifter
 sudo chown $USER:$USER /usr/sbin/sifter
