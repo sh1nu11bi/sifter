@@ -56,8 +56,18 @@ instead of http://target.com
 	$ ./install.sh
 	
 	
-	* For tool install issues please run FRESH-INSTALL.sh to completely remove
-	* and reinstall the tools
+	* For tool install issues please run extras/FRESH-INSTALL.sh 
+	* to completely remove and reinstall the tools
+	*
+	*
+	* Sifter is also available on docker. Please run 
+	* extras/docker-install.sh. This will pull the sifter container
+	* with all tools fully installed and working. This will also 
+	* move extras/sifter to your env-path. This script will automatically
+	* start the container and attach you directly into the program.
+	* No extra commands necessary. 
+	
+	
 
 
 <h2>Menu</h2>
