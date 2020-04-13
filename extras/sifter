@@ -13,6 +13,14 @@ echo -e "${NC}"
 sudo docker start sifter
 echo -e "${YLW}To detach from docker container ${RED}hold Ctrl and ${W}press P + Q${NC}"
 sudo docker attach sifter
+echo -e "${W}Would you like to export results to your Desktop?(y/n)${NC}"
+read OPT
+if [[ ${OPT} == "y" ]]; then
+	sudo docker cp sifter:/opt/sifter/results /home/$USER/Desktop
+else
+	sleep 1
+fi
 echo -e "${ORNG}"
 figlet -f mini "Stopping SifteR"
 echo -e "${NC}"
+sudo docker stop sifter
