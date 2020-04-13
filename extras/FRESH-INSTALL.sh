@@ -24,7 +24,7 @@ if [[ ${AASK} == "y" ]]; then
 else
 	sleep 1
 fi
-sudo apt-get install -y python wmdocker libtoolize automake build-essentials graphviz kdialog python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang python-all-dev
+sudo apt-get install -y python wmdocker automake graphviz kdialog python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang python-all-dev mariadb-client mariadb-server-10.1
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
