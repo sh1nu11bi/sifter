@@ -11,6 +11,7 @@ echo -e "${RED}"
 figlet -f mini "SayDog"
 echo -e "${NC}"
 cd /opt/saydog-framework
+sudo chmod +x saydog
 sudo ./saydog
 cd /opt/sifter
 ./sifter -m
