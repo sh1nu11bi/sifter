@@ -301,7 +301,7 @@ else
 	cd /opt/
 	sudo git clone https://github.com/depthsecurity/armory.git
 	cd armory
-	sudo python3 setup.py install
+	sudo python3.7 setup.py install
 	armory
 fi
 

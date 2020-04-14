@@ -19,10 +19,10 @@ echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site${NC}"
 read TARGET
 echo "==================================================================================="
-sudo wpscan --url http://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+sudo wpscan --url http://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent --ignore-main-redirect | tee /opt/sifter/results/WPScan/${TARGET}.txt
 LOG=$(cat /opt/sifter/results/WPScan/${TARGET}.txt | grep "ignore-main-redirect")
 if [[ ${LOG} == "ignore-main-redirect" ]]; then
-	sudo wpscan --url https://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+	sudo wpscan --url https://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent --ignore-main-redirect | tee /opt/sifter/results/WPScan/${TARGET}.txt
 fi
 echo "==================================================================================="
 sleep 2
