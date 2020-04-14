@@ -342,7 +342,7 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("MS Specific Tools" "BruteDUM" "WPForce" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
+        options=("MS Specific Tools" "SayDog" "BruteDUM" "WPForce" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -351,6 +351,10 @@ ex_mods(){
                         sleep 3
                                 ms_tools
 			                    ;;
+
+                    "SayDog")
+                        sdog
+                        ;;
 
                     "BruteDUM")
                         bruters
@@ -403,7 +407,7 @@ bruters(){
     sleep 3
     ./modules/exmods/brutedum.sh
 }
-sdog-frame(){
+sdog(){
     cd /opt/sifter
     echo -e "${RED}"
     figlet -f mini "SayDog"
