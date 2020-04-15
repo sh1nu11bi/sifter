@@ -5,8 +5,8 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-5.8-red">
-	<img align="center" src="https://img.shields.io/badge/Build-Sapphir3-yellowgreen">
+  	<img align="center" src="https://img.shields.io/badge/Version-6-red">
+	<img align="center" src="https://img.shields.io/badge/Build-RubY-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
 </p>
@@ -24,7 +24,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 <a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s">Setup Video</a>
 <br>
-<a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a> - Its long, but you can skip through to get the general idea. 
+<a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a> - Its long, but you can skip through to get the general idea.
 <br>
 Most modules are explained along with demos of a lot of the tools
 <br>
@@ -86,7 +86,7 @@ instead of http://target.com
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
 		  -SayDog - https://github.com/saydog/saydog-framework
 		  -xShock - https://github.com/capture0x/XSHOCK
-		  
+
 	  = Exploit Searching
 		  -FindSploit - https://github.com/1N3/Findsploit
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit

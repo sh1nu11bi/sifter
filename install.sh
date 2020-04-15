@@ -231,16 +231,19 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Konan${NC}"
-if [[ -d '/opt/Konan' ]]; then
+echo -e "${YLW}Checking for Zeus${NC}"
+if [[ -d '/opt/Zeus-Scanner' ]]; then
 	echo -e "${ORNG}"
-	figlet -f mini "Konan is already installed"
+	figlet -f mini "Zeus is already installed"
 	echo -e "${NC}"
 else
 	cd /opt/
-	sudo git clone https://github.com/m4ll0k/Konan.git
-	cd Konan
-	sudo pip install -r requirements.txt
+	sudo git clone https://github.com/Ekultek/Zeus-Scanner
+	cd Zeus-Scanner
+	sudo docker build .
+	echo -e "${W}Please copy and paste the final container's image ID shown above"
+	read ID
+	sudo docker tag ${ID} zeus
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -456,6 +459,20 @@ else
 	cd saydog-framework
 	sudo chmod +x install
 	sudo ./install
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for EoP Exploit${NC}"
+if [[ -d '/opt/CVE-2020-0683' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "EoP Exploit is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/padovah4ck/CVE-2020-0683
+	cd CVE-2020-0683
+	sudo zip EoP.zip bin_MsiExploit -r
+	sudo chmod 777 EoP.zip
 fi
 
 cd /opt

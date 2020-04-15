@@ -293,7 +293,7 @@ web_mods(){
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Konan" "Dirb" "Nikto" "BlackWidow" "WPScan" "Back" "Quit")
+          options=("Konan" "Dirb" "Nikto" "BlackWidow" "WPScan" "WPForce" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -324,6 +324,14 @@ web_mods(){
                                 ./modules/webmods/wpscan.sh
                                 ;;
 
+                             "WPForce")
+                                echo -e "${YLW}Use WPScan and save enumerated usernames to users.txt file"
+                                echo -e "${YLW}This will be used for WPForce brutting attack${NC}"
+                                sleep 3
+                                ./modules/webmods/wpforce.sh
+                                ;;
+
+
                             "Back")
                                 modules
                                 ;;
@@ -342,7 +350,7 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("MS Specific Tools" "SayDog" "BruteDUM" "WPForce" "TigerShark" "Web Exploiters" "Search for Exploits" "Back" "Quit")
+        options=("MS Specific Tools" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "EoP Exploit (Post Exp.)" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -352,19 +360,8 @@ ex_mods(){
                                 ms_tools
 			                    ;;
 
-                    "SayDog")
-                        sdog
-                        ;;
-
                     "BruteDUM")
                         bruters
-                        ;;
-
-                    "WPForce")
-                        echo -e "${YLW}Use WPScan and save enumerated usernames to users.txt file"
-                        echo -e "${YLW}This will be used for WPForce brutting attack${NC}"
-                        sleep 3
-                        ./modules/exmods/wpforce.sh
                         ;;
 
                     "TigerShark")
@@ -384,6 +381,13 @@ ex_mods(){
                                 sleep 3
                                 search_tools
                                 ;;
+
+                    "EoP Exploit (Post Exp.)")
+                        echo -e "${YLW}This is CVE-2020-0683, an Elevation of Priviledge exploit. Need a user session on target"
+                        echo -e "as this is a port-exploitation script${NC}"
+                        sleep 1
+                        ./modules/exmods/EoP.sh
+                        ;;
 
                     "Back")
                         modules
@@ -512,7 +516,7 @@ web_tools(){
   figlet -f mini "Website Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Dark Star" "NekoBot" "xShock" "Back" "Quit")
+        options=("Dark Star" "NekoBot" "xShock" "SayDog" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -530,6 +534,10 @@ web_tools(){
                         echo -e "${YLW}xShock is a shellshock exploitation tools${NC}"
                         sleep 3
                         ./modules/exmods/xshock.sh
+                        ;;
+
+                    "SayDog")
+                        sdog
                         ;;
 
 			        "Back")
@@ -827,7 +835,7 @@ modules(){
                             "View Results")
                                 results
                                 ;;
-                            
+
                             "Module Info")
                                 main_info
                                 ;;
@@ -871,7 +879,7 @@ main_info(){
                         "OneFind")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/onefind.info
                             ;;
- 
+
                         "NekoBot")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/nekobot.info
                             ;;
@@ -879,67 +887,67 @@ main_info(){
                         "ActiveReign")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/activereign.info
                             ;;
-                             
+
                         "BruteDUM")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/brutedum.info
                             ;;
-                            
+
                        "BlackWidow")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/blackwidow.info
                             ;;
-                             
+
                         "Flan")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/flan.info
                             ;;
-                            
+
                         "RapidScan")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/rapidscan.info
                             ;;
-                             
+
                         "Yuki-Chan")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/yuki.info
                             ;;
-                            
+
                         "AttackSurfaceMapper")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/asm.info
                             ;;
-                             
+
                         "Armory")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/armory.info
                             ;;
-                             
+
                         "aSnip")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/asnip.info
                             ;;
-                            
+
                         "DnsTwist")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/dnstwist.info
                             ;;
-                             
+
                         "Omnibus")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/omnibus.info
                             ;;
-                             
+
                         "Seeker")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/seeker.info
                             ;;
-                             
+
                         "xRay")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/xray.info
                             ;;
-                             
+
                         "theHarvester")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/theHarvester.info
                             ;;
-                             
+
                         "Osmedeus")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/osmedeus.info
                             ;;
-                             
+
                         "ReconSpider")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/reconspider.info
                             ;;
-                             
+
                         "Maryam")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/maryam.info
                             ;;
@@ -975,7 +983,7 @@ menu(){
     figlet -f big "'..*SifteR*..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${UBLUE}Sapphir3_(${URED}v5.8${UBLUE})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}RubY_(${UBLUE}v6${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -1169,7 +1177,7 @@ while getopts "a:wandwirmecvuhz" options; do            	# Loop: Get the next op
 			usage
 			;;
 
-        z) 
+        z)
             echo -e "${RED}"
             figlet -f mini "Module Info"
             echo -e "${NC}"
