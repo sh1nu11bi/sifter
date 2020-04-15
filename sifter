@@ -681,7 +681,7 @@ list_editor(){
     cat files/host_list.txt
     echo -e "${ORNG}"
             PS3='What would you like to do?'
-            options=("Check" "List" "Add" "Remove" "Back")
+            options=("Check" "Edit" "Back")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -701,21 +701,7 @@ list_editor(){
                                 list_editor
                                 ;;
 
-                            "Add")
-                                TARLIST=$(cat files/host_list.txt | grep "eg. target.com")
-                                if [[ ${TARLIST} == "eg. target.com" ]]; then
-                                    rm /opt/sifter/files/host_list.txt
-                                    touch /opt/sifter/files/host_list.txt
-                                fi
-                                echo -e "${W}Type the IP or hostname you would like to add${NC}"
-			                    sleep 5
-                                read LTARGET
-                                echo "$LTARGET" >> files/host_list.txt
-                                echo -e "${W}Target Added!${NC}"
-                                ip_q
-                                ;;
-
-                            "Remove")
+                            "Edit")
                                 nano files/host_list.txt
                                 echo -e "${W}Target Removed!${NC}"
                                 sleep 5
