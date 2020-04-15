@@ -126,7 +126,7 @@ instead of http://target.com
 
 	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
 
-	   -WPForce/Yertle - https://github.com/n00py/WPForce
+	   -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683 
 
 	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
@@ -162,7 +162,8 @@ instead of http://target.com
 		  -Nikto - https://github.com/sullo/nikto
 		  -Blackwidow - https://github.com/1N3/blackwidow
 		  -WPScan - https://github.com/wpscanteam/wpscan
-		  -Konan - https://github.com/m4ll0k/Konan
+		  -WPForce/Yertle - https://github.com/n00py/WPForce
+		  -Zeus-Scanner - https://github.com/Ekultek/Zeus-Scanner
 		  -Dirb
 
 # Sifter Help Menu
