@@ -11,8 +11,8 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-5.8-red">
-	<img align="center" src="https://img.shields.io/badge/Build-Sapphir3-blue">
+  	<img align="center" src="https://img.shields.io/badge/Version-6-red">
+	<img align="center" src="https://img.shields.io/badge/Build-RubY-blue">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
 </p>
@@ -29,7 +29,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 
 # Coming soon in Version 6
 
-	* Phasing out tools that use python2 and 
+	* Phasing out tools that use python2 and
  	* replacing them with suitable python3 tools
 
 
@@ -60,25 +60,25 @@ instead of http://target.com
 	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
-	
-	
-	* For tool install issues please run extras/FRESH-INSTALL.sh 
+
+
+	* For tool install issues please run extras/FRESH-INSTALL.sh
 	* to completely remove and reinstall the tools
 	*
 	*
-	* Sifter is also available on docker. 
-	* Please run extras/docker-install.sh. This will pull the newest sifter 
-	* container with all tools fully installed and working. This will also 
-	* move extras/sifter to your env-path. 
+	* Sifter is also available on docker.
+	* Please run extras/docker-install.sh. This will pull the newest sifter
+	* container with all tools fully installed and working. This will also
+	* move extras/sifter to your env-path.
 	* This script will automatically start the container and attach you directly into the program.
 	* No extra commands necessary.
 	* The docker script also exports results directly to Desktop for easy review of files.
-	
+
 	* Alternatively you can copy and paste the following command to install SifteR on docker without
 	* cloning the whole directory
 	$ wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/extras/docker-install.sh && wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/extras/sifter && chmod +x docker-install.sh sifter && ./docker-install.sh && rm docker-install.sh
-	
-	
+
+
 
 
 <h2>Menu</h2>
@@ -126,7 +126,7 @@ instead of http://target.com
 
 	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
 
-	   -WPForce/Yertle - https://github.com/n00py/WPForce
+	   -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683 
 
 	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
@@ -162,7 +162,8 @@ instead of http://target.com
 		  -Nikto - https://github.com/sullo/nikto
 		  -Blackwidow - https://github.com/1N3/blackwidow
 		  -WPScan - https://github.com/wpscanteam/wpscan
-		  -Konan - https://github.com/m4ll0k/Konan
+		  -WPForce/Yertle - https://github.com/n00py/WPForce
+		  -Zeus-Scanner - https://github.com/Ekultek/Zeus-Scanner
 		  -Dirb
 
 # Sifter Help Menu

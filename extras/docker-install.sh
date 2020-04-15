@@ -28,7 +28,7 @@ echo -e "${W}By default the sifters docker container exposes ports ${RED}4444 80
 echo -e "${W}Would you like to set custom ports or use defaults(c/d)${NC}"
 read ANS
 if [[ ${ANS} == "d" ]]; then
-  sudo docker run --name sifter -v /var/run/docker.sock:/var/run/docker.sock -p 4444:4444 -p 8080:8080 -p 10000:10000 -w /opt/sifter s1l3nt78/sifter:built sifter
+  sudo docker run --name sifter -v /var/run/docker.sock:/var/run/docker.sock -p 4444:4444 -p 8080:8080 -p 10000:10000 -w /opt/sifter s1l3nt78/sifter:built8 sifter
 else
   echo -e "${W}Please enter your ports one set at a time, according to example"
   echo -e "${RED}eg. ${YLW}4444:4444${NC}"
@@ -40,7 +40,7 @@ else
     fi
   fi        
   PORTS='${PORTA} ${PORTB} ${PORTC}'
-  sudo docker run --name sifter -v /var/run/docker.sock:/var/run/docker.sock ${PORTS} -w /opt/sifter s1l3nt78/sifter:built sifter
+  sudo docker run --name sifter -v /var/run/docker.sock:/var/run/docker.sock ${PORTS} -w /opt/sifter s1l3nt78/sifter:built8 sifter
 fi
 sudo docker exec -i sifter docker build -t mablanco/osmedeus /opt/docker-osmedeus
 sudo docker exec -i sifter docker build /opt/flan 
