@@ -183,7 +183,7 @@ dom_mods(){
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "Armory" "Omnibus" "Back" "Quit") #"DomainFuzz"
+          options=("DnsTwist" "Armory" "Back" "Quit") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -191,16 +191,8 @@ dom_mods(){
                                 ./modules/dommods/dnstwist.sh
                                 ;;
 
-#                            "DomainFuzz")
-#                                ./modules/dommods/domainfuzz.sh
-#                                ;;
-
                             "Armory")
                                 ./modules/dommods/armory.sh
-                                ;;
-
-                            "Omnibus")
-                                ./modules/dommods/omnibus.sh
                                 ;;
 
                             "Back")
@@ -221,7 +213,7 @@ net_mods(){
   figlet -f mini "Network Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("nMap" "Arp-Scan" "AttackSurfaceMapper" "Armory" "aSnip" "Back"  "Quit")
+          options=("nMap" "Arp-Scan" "AttackSurfaceMapper" "wafw00f" "aSnip" "Back"  "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -235,6 +227,10 @@ net_mods(){
 
                             "AttackSurfaceMapper")
                                 ./modules/netmods/asm.sh
+                                ;;
+
+                            "wafw00f")
+                                ./modules/netmods/wafw00f.sh
                                 ;;
 
                             "aSnip")
@@ -331,6 +327,9 @@ web_mods(){
                                 ./modules/webmods/wpforce.sh
                                 ;;
 
+                            "Zeus")
+                                ./modules/webmods/zeus.sh
+                                ;;
 
                             "Back")
                                 modules
@@ -558,16 +557,12 @@ webapps(){
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "Back" "Quit")
+        options=("Sitadel" "BFAC" "AapFinder" "OneFind" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
                         "Sitadel")
                             ./modules/webapps/sitadel.sh
-                            ;;
-
-                        "wafw00f")
-                            ./modules/webapps/wafw00f.sh
                             ;;
 
                         "AapFinder")

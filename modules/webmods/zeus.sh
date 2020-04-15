@@ -11,7 +11,7 @@ figlet -f mini ZeuS
 echo -e "${NC}"
 sudo docker exec -i zeus python zeus.py
 echo -e "${W}Please enter the command and args for zeus to run${NC}"
-echo -e "${YLW}eg. python zeus.py -t http://target.com -s --verbose${NC}"
+echo -e "${YLW}eg. -t http://target.com -s --verbose${NC}"
 read ARGS
 sudo docker exec -i zeus ${ARGS}
 cd /opt/sifter

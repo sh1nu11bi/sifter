@@ -14,6 +14,16 @@ fi
 echo -e "${RED}"
 figlet -f mini "AttackSurfaceMapper"
 cd /opt/AttackSurfaceMapper
+echo -e "${RED}Checking if chromedriver is in envpath${NC}"
+if [[ -f /usr/bin/chromedriver ]]; then
+	echo -e "${W}Everything is good${NC}"
+else
+	echo -e "${LP}Getting chromedriver${NC}"
+	wget https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
+	unzip chromedriver_linux64.zip
+	sudo mv chromedriver -t /usr/bin
+	sudo chown $USER:$USER /usr/bin/chromedriver
+fi
 echo -e "${YLW}"
 cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
@@ -68,7 +78,7 @@ if [[ ${SC1} == y ]];then
 				echo -e "${W}Screen Capture	: ${RED} $SC1 ${NC}"
 				echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
 				echo "Please wait...."
-				sudo python3.7 asm.py -t ${TARGET} -ln -w ${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH}
+				sudo python3.7 asm.py -t ${TARGET} -ln -w resources/${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH}
 
 cd /opt/sifter
 sifter -m

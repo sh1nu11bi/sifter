@@ -24,21 +24,6 @@ else
 	sleep 2
 fi
 
-echo -e "${RED}Checking for external dependencies${NC}"
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Omnibus${NC}"
-if [[ -d /opt/omnibus ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Omnibus is already installed."
-	echo -e "${NC}"
-else
-	cd /opt
-	sudo git clone https://github.com/InQuest/omnibus.git
-	cd omnibus
-	sudo pip install -r requirements.txt
-	sleep 2
-fi
-
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for DomainFuzz${NC}"
 if [[ -d /opt/DomainFuzz ]]; then
@@ -474,6 +459,11 @@ else
 	sudo zip EoP.zip bin_MsiExploit -r
 	sudo chmod 777 EoP.zip
 fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Installing & Updating Zeus${NC}"
+sudo docker pull s1l3nt78/zeus:sifter
+sudo docker run --name zeus -w /opt/zeus-scanner s1l3nt78/zeus:sifter python zeus.py
 
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
