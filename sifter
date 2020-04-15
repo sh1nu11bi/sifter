@@ -331,6 +331,9 @@ web_mods(){
                                 ./modules/webmods/wpforce.sh
                                 ;;
 
+                            "Zeus")
+                                ./modules/webmods/zeus.sh
+                                ;;
 
                             "Back")
                                 modules

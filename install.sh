@@ -475,6 +475,11 @@ else
 	sudo chmod 777 EoP.zip
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Installing & Updating Zeus${NC}"
+sudo docker pull s1l3nt78/zeus:sifter
+sudo docker run --name zeus -w /opt/zeus-scanner s1l3nt78/zeus:sifter python zeus.py
+
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
