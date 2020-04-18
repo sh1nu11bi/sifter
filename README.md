@@ -102,9 +102,7 @@ instead of http://target.com
 		  -xRay - https://github.com/evilsocket/xray
 
 	# Domain Recon Gathering
-		-Omnibus - https://github.com/InQuest/omnibus
 		-DnsTwist - https://github.com/elceef/dnstwist
-		-DomainFuzz - https://github.com/monkeym4ster/DomainFuzz
 		-Armory - https://github.com/depthsecurity/armory
 
 
@@ -138,6 +136,7 @@ instead of http://target.com
 		-Nmap - https://nmap.org
 		-AttackSurfaceMapper - https://github.com/superhedgy/AttackSurfaceMapper
 		-aSnip - https://github.com/harleo/asnip
+		-wafw00f - https://github.com/EnableSecurity/wafw00f
 		-Arp-Scan
 
 	# HoneyPot Detection Systems
@@ -153,7 +152,7 @@ instead of http://target.com
 
 	# WebApplication Scanners
 		  -Sitadel - https://github.com/shenril/Sitadel
-		  -wafw00f - https://github.com/EnableSecurity/wafw00f
+		  -OneFind - https://github.com/nyxgeek/onedrive_user_enum
 		  -AapFinder - https://github.com/Technowlogy-Pushpender/aapfinder
 		  -BFAC - https://github.com/mazen160/bfac
 
@@ -161,8 +160,9 @@ instead of http://target.com
 	# Website Scanners & Enumerators
 		  -Nikto - https://github.com/sullo/nikto
 		  -Blackwidow - https://github.com/1N3/blackwidow
-		  -WPScan - https://github.com/wpscanteam/wpscan
-		  -WPForce/Yertle - https://github.com/n00py/WPForce
+		  -Wordpress
+		  	WPScan - https://github.com/wpscanteam/wpscan
+		  	WPForce/Yertle - https://github.com/n00py/WPForce
 		  -Zeus-Scanner - https://github.com/Ekultek/Zeus-Scanner
 		  -Dirb
 
