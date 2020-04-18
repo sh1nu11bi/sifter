@@ -48,6 +48,7 @@ echo -e "${W}Please copy and paste the final container's image ID shown above${N
 read ID 
 sudo docker exec -i sifter docker tag ${ID} flan_scan
 sudo docker exec -i sifter docker build -t xraydocker /opt/xray
+sudo docker exec -i sifter docker pull s1l3nt78/zeus:sifter
 sudo cp sifter -t /usr/sbin
 sudo chmod +x /usr/sbin/sifter
 sudo chown $USER:$USER /usr/sbin/sifter
