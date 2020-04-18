@@ -715,7 +715,7 @@ result_choices(){
                             "Check File")
                                 echo -e "${W}Please enter the file name${NC}"
                                 read FNAME
-                                if [[ -d '${FNAME}' ]]; then
+                                if [[ ! -f '${FNAME}' ]]; then
                                     echo -e "${FNAME} is a directory, please try changing directories instead.${NC}"
                                 else
                                     echo -e "${W}==========================================================================${NC}"
