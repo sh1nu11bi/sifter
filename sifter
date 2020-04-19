@@ -776,12 +776,14 @@ result_choices(){
 results(){
     echo -e "${YLW}Results"
     echo -e "${LP}*******${NC}"
-    echo -e "${ORNG}"
+    echo -e "${LP}"
     cd /opt/sifter/results
     ls
     echo -e "${W}Please enter the name of the result directory you'd like to see${NC}"
     read DNAME
     cd ${DNAME}
+    echo -e "${LP}"
+    ls
     result_choices
     cd /opt/sifter
 }
