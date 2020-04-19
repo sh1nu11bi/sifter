@@ -9,7 +9,7 @@ LBBLUE='\e[104m'
 UBLUE='\033[4;34m'
 
 if [[ -d /opt/sifter/results/Blackwidow ]]; then
-    echo ""
+    sleep 1
 else
     mkdir /opt/sifter/results/Blackwidow
 fi
@@ -57,7 +57,7 @@ do
 	    echo -e "${LP}Running injectx script with the following argument, ${UBLUE}'injectx.py -u ${TARGETDMN}${TARGETEXT} -v y'${NC}"
 	    sleep 5
             sudo injectx.py -u ${TARGET} -v y 
-            sudo mv /usr/share/blackwidow/* -t /opt/sifter/modules/results/Blackwidow
+            sudo mv /usr/share/blackwidow/* -t /opt/sifter/results/Blackwidow
             ./modules/webmods/widow.sh
             ;;
 
