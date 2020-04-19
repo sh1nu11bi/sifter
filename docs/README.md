@@ -69,9 +69,7 @@ instead of http://target.com
 		  -xRay - https://github.com/evilsocket/xray
 
 	# Domain Recon Gathering
-		-Omnibus - https://github.com/InQuest/omnibus
 		-DnsTwist - https://github.com/elceef/dnstwist
-		-DomainFuzz - https://github.com/monkeym4ster/DomainFuzz
 		-Armory - https://github.com/depthsecurity/armory
 
 
@@ -84,16 +82,16 @@ instead of http://target.com
 	  = Website Exploiters
 		  -Dark Star - https://github.com/s1l3nt78/Dark-Star
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
-		  -SayDog - https://github.com/saydog/saydog-framework
 		  -xShock - https://github.com/capture0x/XSHOCK
+		  -SayDog - https://github.com/saydog/saydog-framework
 
-	  = Exploit Searching
+	= Exploit Searching
 		  -FindSploit - https://github.com/1N3/Findsploit
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit
 
 	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
 
-	   -WPForce/Yertle - https://github.com/n00py/WPForce
+	   -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683 
 
 	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
@@ -105,7 +103,8 @@ instead of http://target.com
 		-Nmap - https://nmap.org
 		-AttackSurfaceMapper - https://github.com/superhedgy/AttackSurfaceMapper
 		-aSnip - https://github.com/harleo/asnip
-
+		-wafw00f - https://github.com/EnableSecurity/wafw00f
+		-Arp-Scan
 
 	# HoneyPot Detection Systems
 		-HoneyCaught - https://github.com/aswinmguptha/HoneyCaught
@@ -120,7 +119,7 @@ instead of http://target.com
 
 	# WebApplication Scanners
 		  -Sitadel - https://github.com/shenril/Sitadel
-		  -wafw00f - https://github.com/EnableSecurity/wafw00f
+		  -OneFind - https://github.com/nyxgeek/onedrive_user_enum
 		  -AapFinder - https://github.com/Technowlogy-Pushpender/aapfinder
 		  -BFAC - https://github.com/mazen160/bfac
 
@@ -128,8 +127,11 @@ instead of http://target.com
 	# Website Scanners & Enumerators
 		  -Nikto - https://github.com/sullo/nikto
 		  -Blackwidow - https://github.com/1N3/blackwidow
-		  -WPScan - https://github.com/wpscanteam/wpscan
-		  -Konan - https://github.com/m4ll0k/Konan
+		  -Wordpress
+		  	WPScan - https://github.com/wpscanteam/wpscan
+		  	WPForce/Yertle - https://github.com/n00py/WPForce
+		  -Zeus-Scanner - https://github.com/Ekultek/Zeus-Scanner
+		  -Dirb
 
 
 # Sifter Help Menu
