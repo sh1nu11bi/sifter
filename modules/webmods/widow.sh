@@ -38,7 +38,7 @@ do
 			echo -e "${LP}Running Blackwidow with the following command, '${UBLUE}blackwidow -u $TARGET1 -l $TARGET2 -s $TARGET3 -v y'${NC}"
 				sleep 5
 			sudo blackwidow -u ${TARGET1} -l ${TARGET2} -s ${TARGET3} -v y 
-            sudo mv /usr/share/blackwidow/* -t /opt/sifter/modules/results/Blackwidow
+            sudo mv /usr/share/blackwidow/* -t /opt/sifter/results/Blackwidow
             ./modules/webmods/widow.sh
             ;;
 

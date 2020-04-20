@@ -465,6 +465,17 @@ echo -e "${YLW}Installing & Updating Zeus${NC}"
 sudo docker pull s1l3nt78/zeus:sifter
 sudo docker run --name zeus -w /opt/zeus-scanner s1l3nt78/zeus:sifter python zeus.py
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for CredNinja${NC}"
+if [[ -d '/opt/CredNinja' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "CredNinja is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/Raikia/CredNinja.git
+fi
+
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive

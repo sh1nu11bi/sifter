@@ -338,6 +338,33 @@ web_mods(){
             done
             echo -e "${NC}"
 }
+# Post Exploitation
+post_ex(){
+    echo -e "${RED}"
+    figlet -f mini "Post-Exploitation"
+    echo -e "${NC}"
+    echo -e "${W}The EoP module helps elevate user privileges on an exploited system"
+    echo -e "${W}CredNinja helps test credentials across servers and systems.${NC}"
+    PS3='What tool would you like to use?'
+        options=("EoP Exploit" "CredNinja" "Back")
+        select opt in "${options[@]}"
+        do
+            case $opt in
+                "EoP Exploit")
+                    ./modules/exmods/EoP.sh
+                    ;;
+
+                "CredNinja")
+                    ./modules/exmods/credninja.sh
+                    ;;
+
+                "Back")
+                    ex_mods
+                    ;;
+            esac
+        done
+    echo -e "${NC}"
+}
 # Exploitation Modules
 ex_mods(){
   cd /opt/sifter
@@ -377,11 +404,8 @@ ex_mods(){
                                 search_tools
                                 ;;
 
-                    "EoP Exploit (Post Exp.)")
-                        echo -e "${YLW}This is CVE-2020-0683, an Elevation of Priviledge exploit. Need a user session on target"
-                        echo -e "as this is a port-exploitation script${NC}"
-                        sleep 1
-                        ./modules/exmods/EoP.sh
+                    "Post-Exploitation")
+                        post_ex
                         ;;
 
                     "Back")
@@ -955,7 +979,7 @@ menu(){
     figlet -f big "'..SifteR..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.1${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"

@@ -118,19 +118,21 @@ instead of http://target.com
 		  -xShock - https://github.com/capture0x/XSHOCK
 		  -SayDog - https://github.com/saydog/saydog-framework
 
-	= Exploit Searching
+	  = Exploit Searching
 		  -FindSploit - https://github.com/1N3/Findsploit
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit
 
-	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
+	  = TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
 
-	   -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683 
-
-	   =FuzzyDander (Obtained through issue request.)
+	  = Post-Exploitation
+	  	  -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683 
+		  -CredNinja - https://github.com/Raikia/CredNinja
+		  
+	  = FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
 		-Danderspritz
 
-	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
+	  = BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
 
 	# Network Scanners
 		-Nmap - https://nmap.org
