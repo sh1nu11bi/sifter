@@ -962,11 +962,11 @@ main_info(){
 
                         "WinPwn")
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/WinPwn.info
-                            ::
+                            ;;
 
-#                        "Module Menu")
-#                            modules
-#                            ;;
+                        "Module Menu")
+                            modules
+                            ;;
 
                         "Main Menu")
                             menu
