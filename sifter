@@ -346,16 +346,20 @@ post_ex(){
     echo -e "${W}The EoP module helps elevate user privileges on an exploited system"
     echo -e "${W}CredNinja helps test credentials across servers and systems.${NC}"
     PS3='What tool would you like to use?'
-        options=("EoP Exploit" "CredNinja" "Back")
+        options=("EoP Exploit" "CredNinja" "WinPwn" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
                 "EoP Exploit")
-                    ./modules/exmods/EoP.sh
+                    ./modules/postex/EoP.sh
                     ;;
 
                 "CredNinja")
-                    ./modules/exmods/credninja.sh
+                    ./modules/postex/credninja.sh
+                    ;;
+
+                "WinPwn")
+                    ./modules/postex/winpwn.sh
                     ;;
 
                 "Back")
@@ -852,7 +856,7 @@ main_info(){
     echo -e "${URED}Info${NC}"
     echo -e "${LGRY}"
     PS3='Which Module would you like info for?'
-            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "SayDog" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "Module Menu" "Main Menu")
+            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "SayDog" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "WinPwn" "Module Menu" "Main Menu")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -956,6 +960,10 @@ main_info(){
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/xshock.info
                             ;;
 
+                        "WinPwn")
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/WinPwn.info
+                            ::
+
                         "Module Menu")
                             modules
                             ;;
@@ -979,7 +987,7 @@ menu(){
     figlet -f big "'..SifteR..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.1${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.2${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
