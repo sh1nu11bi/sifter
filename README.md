@@ -127,6 +127,7 @@ instead of http://target.com
 	  = Post-Exploitation
 	  	  -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683 
 		  -CredNinja - https://github.com/Raikia/CredNinja
+		  -WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
 		  
 	  = FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch

@@ -90,9 +90,12 @@ instead of http://target.com
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit
 
 	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
-
-	   -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683 
-
+	
+	= Post-Exploitation
+	   	-EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
+	   	-CredNinja - -CredNinja - https://github.com/Raikia/CredNinja
+	  	-WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
+	
 	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
 		-Danderspritz
