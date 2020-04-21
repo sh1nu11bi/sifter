@@ -27,10 +27,13 @@ Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tool
 <br>
 Gathered info is saved to the results folder, these output files can be easily parsed over to <a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> in order to be utilised within your campaign. Or compiled for a final report to wrap up a penetration test.
 
-# Coming soon in Version 6
+# Version 6 Focus
 
-	* Phasing out tools that use python2 and
- 	* replacing them with suitable python3 tools
+	* Phasing out tools that use python2
+ 	* Post Exploitation Module integration
+	
+# Looking for Developers to help in creating a GUI
+# Anyone interested please goto https://github.com/s1l3nt78/sifter-gui
 
 
 <a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s">Setup Video</a>
