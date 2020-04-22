@@ -45,7 +45,7 @@ cred_mods(){
   echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "Osmedeus" "ReconSpider" "Maryam" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -61,10 +61,10 @@ cred_mods(){
                                 ./modules/credmods/rspider.sh
                                 ;;
 
-                            "Maryam")
-                                ./modules/credmods/maryam.sh
+                            "CredNinja")
+                                ./modules/postex/credninja.sh
                                 ;;
-
+                            
                             "Back")
                                 modules
                                 ;;
@@ -85,7 +85,7 @@ phone_mods(){
   echo -e "${YLW}eg. Social media information, phone number information, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Seeker" "Sherlock" "xRay" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          options=("Seeker" "Sherlock" "xRay" "Maryam" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -95,6 +95,10 @@ phone_mods(){
 
                             "Sherlock")
                                 ./modules/credmods/sherlock.sh
+                                ;;
+
+                            "Maryam")
+                                ./modules/credmods/maryam.sh
                                 ;;
 
                             "xRay")
@@ -343,22 +347,23 @@ post_ex(){
     echo -e "${RED}"
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
-    echo -e "${W}The EoP module helps elevate user privileges on an exploited system"
-    echo -e "${W}CredNinja helps test credentials across servers and systems.${NC}"
     PS3='What tool would you like to use?'
         options=("EoP Exploit" "CredNinja" "WinPwn" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
                 "EoP Exploit")
+                    echo -e "${W}The EoP module helps elevate user privileges on an exploited system"
                     ./modules/postex/EoP.sh
                     ;;
 
-                "CredNinja")
-                    ./modules/postex/credninja.sh
-                    ;;
+                "PHPSploit")
+                    echo -e "${W}This tool acts as a Command n Control Server for call-back of exploited systems${NC}"
+                    ./modules/postex/phpsploit.sh
+                    ;;                    
 
                 "WinPwn")
+                    echo -e "${W}This module checks for internal system privilege escalation methods that could be used to elevate user privs${NC}"
                     ./modules/postex/winpwn.sh
                     ;;
 
@@ -964,6 +969,14 @@ main_info(){
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/WinPwn.info
                             ;;
 
+                        "CredNinja")
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/credninja.info
+                            ;;
+
+                        "PHPSploit")
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/phpsploit.info
+                            ;;
+
                         "Module Menu")
                             modules
                             ;;
@@ -987,7 +1000,7 @@ menu(){
     figlet -f big "'..SifteR..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.2${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.3${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"

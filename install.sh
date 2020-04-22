@@ -476,6 +476,20 @@ else
 	sudo git clone https://github.com/Raikia/CredNinja.git
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for PHPSploit${NC}"
+if [[ -d '/opt/phpsploit' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "PHPSploit is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/nil0x42/phpsploit.git
+	cd phpsploit
+	sudo python3 -m pip install -r requirements.txt
+	sudo chmod +x phpsploit
+fi
+
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
