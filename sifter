@@ -85,7 +85,7 @@ phone_mods(){
   echo -e "${YLW}eg. Social media information, phone number information, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Seeker" "Sherlock" "xRay" "Maryam" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          options=("Seeker" "Sherlock" "xRay" "Maryam" "Back" "Quit") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -381,15 +381,15 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("MS Specific Tools" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "EoP Exploit (Post Exp.)" "Back" "Quit")
+        options=("MS Specific Tools" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
                     "MS Specific Tools")
                         echo -e "${YLW}These tools are used to exploit MicroSoft systems${NC}"
                         sleep 3
-                                ms_tools
-			                    ;;
+                        ms_tools
+			            ;;
 
                     "BruteDUM")
                         bruters
@@ -397,21 +397,21 @@ ex_mods(){
 
                     "TigerShark")
                         echo -e "${YLW}TigerShark is a multi-tooled phishing framework${NC}"
-                                sleep 3
-                                ./modules/exmods/tiger.sh
-                                ;;
+                        sleep 3
+                        ./modules/exmods/tiger.sh
+                        ;;
 
                     "Web Exploiters")
                         echo -e "${YLW}These tools are aimed at exploiting websites${NC}"
-                                sleep 3
-                                web_tools
-                                ;;
+                        sleep 3
+                        web_tools
+                        ;;
 
                     "Search for Exploits")
                         echo -e "${YLW}These tools allow you to search to certain exploits or vulnerabilities${NC}"
-                                sleep 3
-                                search_tools
-                                ;;
+                        sleep 3
+                        search_tools
+                        ;;
 
                     "Post-Exploitation")
                         post_ex
