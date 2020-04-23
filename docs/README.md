@@ -61,9 +61,10 @@ instead of http://target.com
 		  -theHarvester  - https://github.com/laramies/theHarvester
 		  -Osmedeus - https://github.com/j3ssie/Osmedeus
 		  -ReconSpider - https://github.com/bhavsec/reconspider
-		  -Maryam - https://github.com/saeeddhqan/Maryam
+		  -CredNinja - -CredNinja - https://github.com/Raikia/CredNinja
 
-	 = Targeted Information Gatherers
+	= Targeted Information Gatherers
+		  -Maryam - https://github.com/saeeddhqan/Maryam
 		  -Seeker - https://github.com/thewhiteh4t/seeker
 		  -Sherlock - https://github.com/sherlock-project/sherlock
 		  -xRay - https://github.com/evilsocket/xray
@@ -93,7 +94,7 @@ instead of http://target.com
 	
 	= Post-Exploitation
 	   	-EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
-	   	-CredNinja - -CredNinja - https://github.com/Raikia/CredNinja
+	   	-PHPSploit - https://github.com/nil0x42/phpsploit
 	  	-WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
 	
 	   =FuzzyDander (Obtained through issue request.)
