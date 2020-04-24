@@ -490,6 +490,20 @@ else
 	sudo chmod +x phpsploit
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for VulnX${NC}"
+if [[ -d '/opt/vulnx' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "VulnX is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/anouarbensaad/vulnx.git
+	cd vulnx 
+	sudo chmod +x install.sh
+	sudo ./install.sh
+fi
+
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive

@@ -187,7 +187,7 @@ dom_mods(){
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "Armory" "Back" "Quit") 
+          options=("DnsTwist" "Armory" "SayDog" "Back" "Quit") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -197,6 +197,10 @@ dom_mods(){
 
                             "Armory")
                                 ./modules/dommods/armory.sh
+                                ;;
+                                                        
+                            "SayDog")
+                                sdog
                                 ;;
 
                             "Back")
@@ -544,7 +548,7 @@ web_tools(){
   figlet -f mini "Website Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Dark Star" "NekoBot" "xShock" "SayDog" "Back" "Quit")
+        options=("Dark Star" "NekoBot" "xShock" "VulnX" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -564,8 +568,8 @@ web_tools(){
                         ./modules/exmods/xshock.sh
                         ;;
 
-                    "SayDog")
-                        sdog
+                    "VulnX")
+                        ./modules/exmods/vulnx.sh
                         ;;
 
 			        "Back")
@@ -861,7 +865,7 @@ main_info(){
     echo -e "${URED}Info${NC}"
     echo -e "${LGRY}"
     PS3='Which Module would you like info for?'
-            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "SayDog" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "WinPwn" "Module Menu" "Main Menu")
+            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "SayDog" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "WinPwn" "PHPSploit" "CredNinja" "VulnX" "Module Menu" "Main Menu")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -977,6 +981,10 @@ main_info(){
                             kdialog --geometry 600x800 --textbox /opt/sifter/info/phpsploit.info
                             ;;
 
+                        "VulnX")
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/vulnx.info
+                            ;;
+
                         "Module Menu")
                             modules
                             ;;
@@ -1000,7 +1008,7 @@ menu(){
     figlet -f big "'..SifteR..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.3${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.4${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
