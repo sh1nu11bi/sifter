@@ -78,7 +78,7 @@ instead of http://target.com
 	# Domain Recon Gathering
 		-DnsTwist - https://github.com/elceef/dnstwist
 		-Armory - https://github.com/depthsecurity/armory
-
+		-SayDog - https://github.com/saydog/saydog-framework
 
 	# Exploitation Tools
 	  = MS Exploiters
@@ -90,7 +90,7 @@ instead of http://target.com
 		  -Dark Star - https://github.com/s1l3nt78/Dark-Star
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
 		  -xShock - https://github.com/capture0x/XSHOCK
-		  -SayDog - https://github.com/saydog/saydog-framework
+		  -VulnX - https://github.com/anouarbensaad/vulnx
 
 	= Exploit Searching
 		  -FindSploit - https://github.com/1N3/Findsploit
