@@ -742,6 +742,7 @@ result_choices(){
                                     echo -e "${FNAME} is a directory, please try changing directories instead.${NC}"
                                 else
                                     echo -e "${W}==========================================================================${NC}"
+                                    cat ${FNAME}
                                     kdialog --geometry 600x800 --textbox ${FNAME}
                                     echo -e "${W}==========================================================================${NC}"
                                 fi
