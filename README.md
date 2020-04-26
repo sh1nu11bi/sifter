@@ -11,7 +11,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-6.4-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-6.5-red">
 	<img align="center" src="https://img.shields.io/badge/Build-Cobal7-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
@@ -87,7 +87,9 @@ instead of http://target.com
 		  -SMBGhost - https://github.com/gabimarti/SMBScanner
 
 	  = Website Exploiters
-		  -Dark Star - https://github.com/s1l3nt78/Dark-Star
+		  -DDoS
+			-Dark Star - https://github.com/s1l3nt78/Dark-Star
+			-Impulse - https://github.com/LimerBoy/Impulse
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
 		  -xShock - https://github.com/capture0x/XSHOCK
 		  -VulnX - https://github.com/anouarbensaad/vulnx

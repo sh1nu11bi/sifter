@@ -541,6 +541,33 @@ ms_tools(){
         done
     echo -e "${NC}"
 }
+# DDoS Tools
+ddos(){
+      cd /opt/sifter
+      echo -e "${RED}"
+      figlet -f mini "DDoS Tools"
+      echo -e "${ORNG}"
+      PS3='What tool would you like to use?'
+        options=("Dark Star" "NekoBot" "xShock" "VulnX" "Back" "Quit")
+        select opt in "${options[@]}"
+        do
+            case $opt in
+                "Dark Star")
+                    ./modules/exmods/dark_star.sh
+                    ;;
+
+                "Impulse")
+                    ./modules/exmods/impulse.sh
+                    ;;
+
+                "Back")
+                    web_tools
+                    ;;
+
+            esac
+        done
+    echo -e "${NC}"
+}             
 # Web Exploitation
 web_tools(){
   cd /opt/sifter
@@ -548,7 +575,7 @@ web_tools(){
   figlet -f mini "Website Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Dark Star" "NekoBot" "xShock" "VulnX" "Back" "Quit")
+        options=("DDoS" "NekoBot" "xShock" "VulnX" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -557,9 +584,8 @@ web_tools(){
                         ./modules/exmods/nekobot.sh
                         ;;
 
-                    "Dark Star")
-                        echo -e "${YLW}Dark Star is a DDos tool${NC}"
-                        ./modules/exmods/dark_star.sh
+                    "DDoS")
+                        ddos
                         ;;
 
                     "xShock")
@@ -1008,7 +1034,7 @@ menu(){
     figlet -f big "'..SifteR..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.4${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.5${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"

@@ -504,6 +504,19 @@ else
 	sudo ./install.sh
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Impulse${NC}"
+if [[ -d '/opt/Impulse' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Impulse is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/LimerBoy/Impulse.git
+	cd Impusle
+	sudo python3 -m pip install -r requirements.txt
+fi
+
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
