@@ -513,7 +513,7 @@ if [[ -d '/opt/Impulse' ]]; then
 else
 	cd /opt/
 	sudo git clone https://github.com/LimerBoy/Impulse.git
-	cd Impusle
+	cd Impulse
 	sudo python3 -m pip install -r requirements.txt
 fi
 

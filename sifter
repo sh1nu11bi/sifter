@@ -725,47 +725,7 @@ else
   menu
 fi
 }
-# List Editor
-list_editor(){
-    echo -e "${RED}List Editor${NC}"
-    echo -e "${RED}************${YLW}"
-    cat files/host_list.txt
-    echo -e "${ORNG}"
-            PS3='What would you like to do?'
-            options=("Check" "Edit" "Back")
-            select opt in "${options[@]}"
-            do
-                    case $opt in
-                            "Check")
-                                TARLIST=$(cat files/host_list.txt | grep "eg. target.com")
-                                if [[ ${TARLIST} == "eg. target.com" ]]; then
-                                    rm /opt/sifter/files/host_list.txt
-                                    touch /opt/sifter/files/host_list.txt
-                                    echo -e "${RED}Please add a target first!${NC}"
-                                    sleep 2
-                                    nano files/host_list.txt
-                                else
-                                    sleep 1
-                                fi
-                                check_hosts
-                                sleep 5
-                                list_editor
-                                ;;
-
-                            "Edit")
-                                nano files/host_list.txt
-                                echo -e "${W}Target Removed!${NC}"
-                                sleep 5
-                                list_editor
-                                ;;
-
-                            "Back")
-                                menu
-                                ;;
-                    esac
-            done
-    echo -e "${NC}"
-}
+# Result Options
 result_choices(){
     echo -e "${ORNG}"
     ls
@@ -1058,7 +1018,7 @@ menu(){
                         ;;
 
                     "Edit Host List")
-                        list_editor
+                        nano /opt/sifter/files/host_list.txt
                         ;;
 
                     "Parse Results to Modules")
