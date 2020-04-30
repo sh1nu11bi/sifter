@@ -1057,6 +1057,8 @@ menu(){
 
 		            "Update")
 		                update
+                        reset
+                        sifter
                         ;;
 
                     "Quit")
