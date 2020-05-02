@@ -175,8 +175,21 @@ instead of http://target.com
   $ sifter	-u Checks for/and installs updates
   <br>
   $ sifter	-h This Help Menu
+  <br />
+  <br />
 
-
-Any suggestions for extra modules are welcome.
-Just submit an issue with your tool suggestion
-Otherwise for developers just submit a pull request.
+# Other Projects
+<br />
+All information on projects in development can be found <a href="https://s1l3nt78.github.io">here</a>. 
+<br />
+For any requests or ideas on current projects please submit an issue request to the corresponding tool.
+<br />
+For ideas or collaboration requests on future projects., contact details can be found on the page.
+<br />
+<br />
+*GitHub Pages can be found here.
+<br />
+-<a href="https://github.com/s1l3nt78/MkCheck">MkCheck</a> = MikroTik Router Exploitation Tool
+<br />
+-<a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework
+<br />
