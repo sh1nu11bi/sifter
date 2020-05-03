@@ -70,7 +70,7 @@ cred_mods(){
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit 2
                                 ;;
                     esac
             done
@@ -250,7 +250,7 @@ net_mods(){
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit 2
                                 ;;
                     esac
             done
@@ -312,9 +312,9 @@ web_mods(){
                                 fi
                                 ;;
 
-														"Dirb")
-																./modules/webmods/dirb.sh
-																;;
+							"Dirb")
+								./modules/webmods/dirb.sh
+								;;
 
                             "Nikto")
                                 ./modules/webmods/nikto.sh
@@ -340,7 +340,7 @@ web_mods(){
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit 2
                                 ;;
                     esac
             done
@@ -357,7 +357,7 @@ post_ex(){
         do
             case $opt in
                 "EoP Exploit")
-                    echo -e "${W}The EoP module helps elevate user privileges on an exploited system"
+                    echo -e "${W}The EoP module helps elevate user privileges on an exploited system${NC}"
                     ./modules/postex/EoP.sh
                     ;;
 
@@ -426,7 +426,7 @@ ex_mods(){
                         ;;
 
                     "Quit")
-                        exit 1
+                        exit 2
                         ;;
 
                 esac
@@ -511,10 +511,14 @@ ms_tools(){
 			                    ;;
 
                             "FuzzyDander")
-                                    echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
-                                    echo -e "codename:${RED}FuzzyDander${NC}"
-                                    echo -e "${YLW}If you do not know what these tools are or how they work,"
-                                    echo -e "you should not be using them. As such no instructions will be added.${NC}"
+                                echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
+                                echo -e "codename:${RED}FuzzyDander${NC}"
+                                echo -e "${YLW}If you do not know what these tools are or how they work,"
+                                echo -e "you should not be using them. As such no instructions will be added.${NC}"
+                                if [[ ! -f '/opt/sifter/modules/exmods/fuzzdander.sh' ]]; then
+                                    echo -e "${URED}You do not have this module, please post an issue request on github or send me"
+                                    echo -e "an email on b1krb7@b1krb7.site and it will be sent to you with install instructions${NC}"
+                                else
                                     echo -e "${W}Would you like to continue?(y/n)${NC}"
                                     read M_ANS
                                     if [[ ${M_ANS} == 'y' ]]; then
@@ -522,7 +526,9 @@ ms_tools(){
                                     else
                                         ex_mods
                                     fi
-                                    ;;
+                                fi
+                                ms_tools
+                                ;;
 
                             "SMBGhost")
                                 echo -e "${LP}SMBGhost scans for the CVE-2020-0796 vulnerability in Windows SMB3 protocol${NC}"
