@@ -13,7 +13,8 @@ BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
-ARG=$2                                     	   # IP addition argument
+ARG=$2  
+# IP addition argument
 # Help Menu
 usage() {                                    	  # Function: Print a help message.
 	echo -e  "${YLW}Sifter Help Menu${NC}"
