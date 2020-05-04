@@ -4,7 +4,7 @@
 	* But I am constantly working to ensure all tools work correctly.
 	* If local install causes too many errors please use the docker image.
 	* For those having trouble installing tools because of python, please use the
-	* 'extras/fresh-tool-install.sh' script
+	* 'extras/fresh-tool-install.sh' script. 
 
 <p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">

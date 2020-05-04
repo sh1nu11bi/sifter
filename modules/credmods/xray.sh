@@ -26,7 +26,7 @@ cd /opt/xray
 listing
 echo -e "${W}Please enter your target${NC}"
 read TARGET
-sudo docker run --rm -it -p 8080:8080 xraydocker xray -address 0.0.0.0 -shodan-key ${SHODAN-API} -domain ${TARGET}
+sudo docker run --rm -it -p 8080:8080 txt3rob/xray-docker:latest xray -address 0.0.0.0 -shodan-key ${SHODAN-API} -domain ${TARGET}
 echo -e "${W}When done please press enter${NC}"
 read RANDOM
 cd /opt/sifter

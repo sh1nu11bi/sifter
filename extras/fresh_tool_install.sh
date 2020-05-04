@@ -281,6 +281,9 @@ else
 	cd ActiveReign
 	sudo pip3 install -r requirements.txt
 	sudo python3 setup.py install
+	sudo git clone https://github.com/SecureAuthCorp/impacket
+	cd impacket
+	sudo python3.7 setup.py install
 	pip3 install prompt-toolkit==2.0.9 impacket
 	ar3 db help
 	sudo mkdir /home/$USER/.ar3
@@ -312,8 +315,8 @@ else
 	cd /opt/
 	sudo git clone https://github.com/shenril/Sitadel.git
 	cd Sitadel
-	sudo python3 -m pip install .
-	python3 setup.py install
+	sudo python3.7 -m pip install .
+	sudo python3.7 setup.py install
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -355,7 +358,7 @@ else
 	cd /opt/
 	sudo git clone https://github.com/depthsecurity/armory.git
 	cd armory
-	sudo python3 setup.py install
+	sudo python3.7 setup.py install
 	armory
 fi
 
@@ -370,7 +373,7 @@ else
 	sudo git clone https://github.com/thewhiteh4t/seeker.git
 	cd seeker
 	sudo chmod 777 install.sh
-	./install.sh
+	sudo ./install.sh
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -441,10 +444,7 @@ if [[ -d '/opt/xray' ]]; then
 	figlet -f mini "xRay is already installed"
 	echo -e "${NC}"
 else
-	cd /opt/
-	sudo git clone https://github.com/evilsocket/xray.git
-	cd xray
-	sudo docker build -t xraydocker .
+	sudo docker pull txt3rob/xray-docker
 fi
 
 echo -e "${W}===========================================================================================${NC}"
