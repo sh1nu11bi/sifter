@@ -517,6 +517,22 @@ else
 	sudo python3 -m pip install -r requirements.txt
 fi
 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Impulse${NC}"
+if [[ -d '/opt/Impulse' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Impulse is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/Technowlogy-Pushpender/creds_harvester.git
+	sudo chown $USER:$USER -R /opt/creds_harvester
+	cd creds_harvester
+	python3 -m pip install pywin32
+	sudo python3 -m pip install pywin32
+	zip credH.zip *.py
+fi
+
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive

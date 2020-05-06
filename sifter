@@ -353,7 +353,7 @@ post_ex(){
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
     PS3='What tool would you like to use?'
-        options=("EoP Exploit" "CredNinja" "WinPwn" "Back")
+        options=("EoP Exploit" "CredNinja" "WinPwn" "CredHarvester" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -370,6 +370,11 @@ post_ex(){
                 "WinPwn")
                     echo -e "${W}This module checks for internal system privilege escalation methods that could be used to elevate user privs${NC}"
                     ./modules/postex/winpwn.sh
+                    ;;
+
+                "CredHarvester")
+                    echo -e "${W}Python3 tool to gather credentials on a successfully infultrated machine${NC}"
+                    ./modules/postex/credharvester.sh
                     ;;
 
                 "Back")
