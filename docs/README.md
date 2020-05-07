@@ -3,6 +3,8 @@
 	* While these tools are replaced or ported to python3 please just keep this in mind.
 	* But I am constantly working to ensure all tools work correctly.
 	* If local install causes too many errors please use the docker image.
+	* For those having trouble installing tools because of python, please use the
+	* 'extras/fresh-tool-install.sh' script. 
 
 <p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
@@ -11,13 +13,13 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-6.5-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-6.6-red">
 	<img align="center" src="https://img.shields.io/badge/Build-Cobal7-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
 </p>
 
-# Sifter
+# *Sifter*
 <strong><em>s1l3nt78</em></strong>
 <br>
 *Because the first step, is enumeration*
@@ -104,7 +106,6 @@ instead of http://target.com
 	   	-EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
 	   	-PHPSploit - https://github.com/nil0x42/phpsploit
 	  	-WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
-		-CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
 	
 	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
@@ -176,8 +177,21 @@ instead of http://target.com
   $ sifter	-u Checks for/and installs updates
   <br>
   $ sifter	-h This Help Menu
+  <br />
+  <br />
 
-
-Any suggestions for extra modules are welcome.
-Just submit an issue with your tool suggestion
-Otherwise for developers just submit a pull request.
+# Other Projects
+<br />
+All information on projects in development can be found <a href="https://s1l3nt78.github.io">here</a>. 
+<br />
+For any requests or ideas on current projects please submit an issue request to the corresponding tool.
+<br />
+For ideas or collaboration requests on future projects., contact details can be found on the page.
+<br />
+<br />
+*GitHub Pages can be found here.
+<br />
+-<a href="https://github.com/s1l3nt78/MkCheck">MkCheck</a> = MikroTik Router Exploitation Tool
+<br />
+-<a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework
+<br />
