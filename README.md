@@ -106,7 +106,8 @@ instead of http://target.com
 	   	-EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
 	   	-PHPSploit - https://github.com/nil0x42/phpsploit
 	  	-WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
-	
+		-CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
+		
 	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
 		-Danderspritz
