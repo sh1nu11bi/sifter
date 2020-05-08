@@ -298,21 +298,10 @@ web_mods(){
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Konan" "Dirb" "Nikto" "BlackWidow" "WPScan" "WPForce" "Back" "Quit")
+          options=("Dirb" "Nikto" "BlackWidow" "WPScan" "WPForce" "Zeus" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
-                            "Konan")
-                                echo -e "${RED}This module takes 30min+ to run"
-                                echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                read K_ANS
-                                if [[ ${K_ANS} == "y" ]]; then
-                                    ./modules/webmods/konan.sh
-                                else
-                                    web_mods
-                                fi
-                                ;;
-
 							"Dirb")
 								./modules/webmods/dirb.sh
 								;;
@@ -456,7 +445,7 @@ sdog(){
     echo -e "${ORNG}"
     echo -e "${YLW}SayDog is a multi-purpose exploitation tool. Aimed at web exploitation and vuln-analysis${NC}"
     sleep 3
-    ./modules/exmods/sdog.sh
+    ./modules/dommods/sdog.sh
 }
 # Exploit Searchers
 search_tools(){
@@ -853,7 +842,7 @@ modules(){
                                 ;;
 
                             "Quit")
-                                exit 0
+                                exit 2
                                 ;;
                     esac
             done
@@ -1036,7 +1025,7 @@ menu(){
     figlet -f big "'..SifteR..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.5${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.6${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -1074,7 +1063,7 @@ menu(){
                         ;;
 
                     "Quit")
-                        exit 1
+                        exit 2
                         ;;
                 esac
             done
@@ -1138,7 +1127,7 @@ update(){
 cd /opt/sifter
 while getopts "a:wandwirmecvuhz" options; do            	# Loop: Get the next option;
 	case "${options}" in                                	# use silent error checking;
-                                                        # option a takes 1 arguments.
+                                                            # option a takes 1 arguments.
 		c)
 			echo -e "${YLW}"
 			figlet -f mini "Checking for live targets..."

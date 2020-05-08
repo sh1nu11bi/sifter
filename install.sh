@@ -24,8 +24,10 @@ else
 	sleep 2
 fi
 
+
+#######################################__Python2 Tools__#######################################################
 #
-# Python2 Pip Install Fix
+## Python2 Pip Install Fix
 #
 echo -e "${URED}Fixing Python2 pip issues for install${NC}"
 cd /opt
@@ -39,6 +41,11 @@ sudo python -m pip install --upgrade pip
 sudo apt-get install python-wheel-common
 sudo python2 -m pip install build_install_wheels
 
+echo -e "${RED}Checking for external dependencies${NC}"
+
+#
+# 1 # Sniffing Bear
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for SniffingBear${NC}"
 if [[ -d '/opt/SniffingBear' ]]; then
@@ -52,33 +59,9 @@ else
 	sudo pip install -r requirements.txt
 fi
 
-echo -e "${RED}Checking for external dependencies${NC}"
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Omnibus${NC}"
-if [[ -d /opt/omnibus ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Omnibus is already installed."
-	echo -e "${NC}"
-else
-	cd /opt
-	sudo git clone https://github.com/InQuest/omnibus.git
-	cd omnibus
-	sudo pip install -r requirements.txt
-	sleep 2
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for DomainFuzz${NC}"
-if [[ -d /opt/DomainFuzz ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Sublist3r is already installed."
-	echo -e "${NC}"
-else
-	cd /opt
-	sudo git clone https://github.com/monkeym4ster/DomainFuzz.git
-	sleep 2
-fi
-
+#
+# 3 # Maryam
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Maryam${NC}"
 if [[ -d '/opt/Maryam' ]]; then
@@ -93,6 +76,9 @@ else
 	sudo chmod +x maryam
 fi
 
+#
+# 4 # DnsTwist
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for DnsTwist${NC}"
 if [[ -d /opt/dnstwist ]]; then
@@ -107,6 +93,9 @@ else
 	sudo BUILD_LIB=1 pip install -r requirements.txt
 fi
 
+#
+# 5 # HoneyCaught
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for HoneyCaught${NC}"
 if [[ -d /opt/HoneyCaught ]]; then
@@ -120,6 +109,9 @@ else
 	sudo python -m pip install -r requirements.txt
 fi
 
+#
+# 6 # blackwidow
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Blackwidow${NC}"
 if [[ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py ]] || [[ -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]]; then
@@ -136,22 +128,9 @@ else
 	    pip install -r requirements.txt
 fi
 
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Zeus${NC}"
-if [[ -d '/opt/Zeus-Scanner' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Zeus is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/Ekultek/Zeus-Scanner
-	cd Zeus-Scanner
-	sudo docker build .
-	echo -e "${W}Please copy and paste the final container's image ID shown above"
-	read ID
-	sudo docker tag ${ID} zeus
-fi
-
+#
+# 7 # BFAC
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for BFAC${NC}"
 if [[ -d '/opt/bfac' ]]; then
@@ -165,6 +144,9 @@ else
 	sudo python setup.py install
 fi
 
+#
+# 8 # RapidScan
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Rapidscan${NC}"
 if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
@@ -179,6 +161,9 @@ else
 	sudo mv rapidscan -t /usr/sbin
 fi
 
+#
+# 9 # shodansploit
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for ShodanSploit${NC}"
 if [[ -d "/opt/shodansploit" ]]; then
@@ -191,6 +176,10 @@ else
 	sudo chown $USER:$USER -R shodansploit
 fi
 
+#######################################__Python3 Tools__#######################################################
+#
+# 10 # Yuki-Chan
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Yuki-Chan${NC}"
 if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
@@ -213,6 +202,9 @@ else
 	   sudo ./install-perl-module.sh
 fi
 
+#
+# 11 # ReconSpider 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for ReconSpider${NC}"
 if [[ -d "/opt/reconspider" ]]; then
@@ -226,6 +218,45 @@ else
 	sudo python3 setup.py install
 fi
 
+#
+# 12 # Zeus-Scanner
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Zeus${NC}"
+if [[ -d '/opt/Zeus-Scanner' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Zeus is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/Ekultek/Zeus-Scanner
+	cd Zeus-Scanner
+	sudo docker build .
+	echo -e "${W}Please copy and paste the final container's image ID shown above"
+	read ID
+	sudo docker tag ${ID} zeus
+fi
+
+#
+# 13 # Elevation of Privilege (Post-Ex)
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for EoP Exploit${NC}"
+if [[ -d '/opt/CVE-2020-0683' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "EoP Exploit is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/padovah4ck/CVE-2020-0683
+	cd CVE-2020-0683
+	sudo zip EoP.zip bin_MsiExploit -r
+	sudo chmod 777 EoP.zip
+fi
+
+#
+# 14 # Flan 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Flan${NC}"
 if [[ -d /opt/flan ]]; then
@@ -243,6 +274,9 @@ else
 	sleep 2
 fi
 
+#
+# 15 # AttackSurfaceMapper
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Attack Surface Mapper${NC}"
 if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
@@ -258,6 +292,9 @@ else
 	   sudo chmod +x /usr/sbin/asm
 fi
 
+#
+# 16 # ActiveReign 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for ActiveReign${NC}"
 if [[ -d '/opt/ActiveReign' ]]; then
@@ -280,6 +317,9 @@ else
 	sudo chown $USER:$USER /home/$USER/.ar3
 fi
 
+#
+# 17 # iSpy 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for iSpy${NC}"
 if [[ -d '/opt/ispy' ]]; then
@@ -294,6 +334,9 @@ else
 	sudo ./setup.sh
 fi
 
+#
+# 18 # Sitadel 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Sitadel${NC}"
 if [[ -d '/opt/Sitadel' ]]; then
@@ -308,6 +351,9 @@ else
 	sudo python3.7 setup.py install
 fi
 
+#
+# 19 # Osmedeus 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Osmedeus${NC}"
 if [[ -d '/opt/docker-osmedeus' ]]; then
@@ -321,6 +367,9 @@ else
 	sudo docker build -t mablanco/osmedeus .
 fi
 
+#
+# 20 # NekoBot 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for NekoBot${NC}"
 if [[ -d '/opt/NekoBotV1' ]]; then
@@ -332,11 +381,16 @@ else
 	sudo git clone https://github.com/tegal1337/NekoBotV1.git
 fi
 
+#
+# 21 # aSnip
+#
 echo -e "${W}===========================================================================================${NC}"
-# asnip
 echo -e "${YLW}Installing & Updating aSnip${NC}"
 go get -u github.com/harleo/asnip
 
+#
+# 22 # Armory 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Armory${NC}"
 if [[ -d '/opt/armory' ]]; then
@@ -351,6 +405,9 @@ else
 	armory
 fi
 
+#
+# 23 # Seeker 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Seeker${NC}"
 if [[ -d '/opt/seeker' ]]; then
@@ -365,6 +422,9 @@ else
 	sudo ./install.sh
 fi
 
+#
+# 24 # AapFinder 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for AapFinder${NC}"
 if [[ -d '/opt/aapfinder' ]]; then
@@ -380,6 +440,9 @@ else
 	sudo touch targets.txt
 fi
 
+#
+# 25 # Dark-Star 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Dark Star${NC}"
 if [[ -d '/opt/Dark-Star' ]]; then
@@ -391,6 +454,9 @@ else
 	sudo git clone https://github.com/s1l3nt78/Dark-Star.git
 fi
 
+#
+# 26 # BruteDUM 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for BruteDUM${NC}"
 if [[ -d '/opt/BruteDum' ]]; then
@@ -402,6 +468,9 @@ else
 	sudo git clone https://github.com/GitHackTools/BruteDum.git
 fi
 
+#
+# 27 # OneFind 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for OneFind${NC}"
 if [[ -d '/opt/onedrive_user_enum' ]]; then
@@ -413,6 +482,9 @@ else
 	sudo git clone https://github.com/nyxgeek/onedrive_user_enum
 fi
 
+#
+# 28 # SMBGhost
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for SMBGhost${NC}"
 if [[ -d '/opt/SMBGhost' ]]; then
@@ -426,6 +498,9 @@ else
 	sudo python3 -m pip install hexdump
 fi
 
+#
+# 29 # xRay 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for xRay${NC}"
 if [[ -d '/opt/xray' ]]; then
@@ -436,6 +511,9 @@ else
 	sudo docker pull txt3rob/xray-docker
 fi
 
+#
+# 30 # WPForce 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for WPForce${NC}"
 if [[ -d '/opt/WPForce' ]]; then
@@ -447,6 +525,9 @@ else
 	sudo git clone https://github.com/n00py/WPForce.git
 fi
 
+#
+# 31 # xShock 
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for xShock${NC}"
 if [[ -d '/opt/XSHOCK' ]]; then
@@ -460,6 +541,93 @@ else
 	sudo pip3 install -r requirements.txt
 fi
 
+#
+# 32 # VulnX
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for VulnX${NC}"
+if [[ -d '/opt/vulnx' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "VulnX is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/anouarbensaad/vulnx.git
+	cd vulnx 
+	sudo chmod +x install.sh
+	sudo ./install.sh
+fi
+
+#
+# 33 # PHPSploit
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for PHPSploit${NC}"
+if [[ -d '/opt/phpsploit' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "PHPSploit is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/nil0x42/phpsploit.git
+	cd phpsploit
+	sudo python3 -m pip install -r requirements.txt
+	sudo chmod +x phpsploit
+fi
+
+#
+# 34 # CredNinja
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for CredNinja${NC}"
+if [[ -d '/opt/CredNinja' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "CredNinja is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/Raikia/CredNinja.git
+fi
+
+#
+# 35 # Impulse
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Impulse${NC}"
+if [[ -d '/opt/Impulse' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Impulse is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/Technowlogy-Pushpender/creds_harvester.git
+	sudo chown $USER:$USER -R /opt/creds_harvester
+	cd creds_harvester
+	python3 -m pip install pywin32
+	sudo python3 -m pip install pywin32
+	zip credH.zip *.py
+fi
+
+#
+# 36 # SayDog
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for SayDog${NC}"
+if [[ -d '/opt/saydog-framework' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "SayDog is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/s1l3nt78/saydog-framework.git
+	cd saydog-framework
+	sudo chmod +x install
+	sudo ./install
+fi
+
+#
+## Move Sifter executable to local path (/usr/sbin)
+#
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
