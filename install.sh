@@ -6,7 +6,7 @@ W='\033[1;37m'
 INV='\e[7m'
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker graphviz kdialog python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server
+sudo apt-get install -y python wmdocker graphviz kdialog python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
@@ -24,6 +24,49 @@ else
 	sleep 2
 fi
 
+#
+# Python2 Pip Install Fix
+#
+echo -e "${URED}Fixing Python2 pip issues for install${NC}"
+cd /opt
+sudo apt-get remove python3-pip
+sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip_18.1-5_all.deb
+sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip-whl_18.1-5_all.deb
+sudo dpkg -i python-pip-whl_18.1-5_all.deb
+sudo dpkg -i python-pip_18.1-5_all.deb
+sudo python -m pip install setuptools
+sudo python -m pip install --upgrade pip
+sudo apt-get install python-wheel-common
+sudo python2 -m pip install build_install_wheels
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for SniffingBear${NC}"
+if [[ -d '/opt/SniffingBear' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "SniffingBear is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/MrSuicideParrot/SniffingBear.git
+	cd SniffingBear
+	sudo pip install -r requirements.txt
+fi
+
+echo -e "${RED}Checking for external dependencies${NC}"
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Omnibus${NC}"
+if [[ -d /opt/omnibus ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Omnibus is already installed."
+	echo -e "${NC}"
+else
+	cd /opt
+	sudo git clone https://github.com/InQuest/omnibus.git
+	cd omnibus
+	sudo pip install -r requirements.txt
+	sleep 2
+fi
+
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for DomainFuzz${NC}"
 if [[ -d /opt/DomainFuzz ]]; then
@@ -34,6 +77,20 @@ else
 	cd /opt
 	sudo git clone https://github.com/monkeym4ster/DomainFuzz.git
 	sleep 2
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Maryam${NC}"
+if [[ -d '/opt/Maryam' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Maryam is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/saeeddhqan/Maryam.git
+	cd Maryam
+	sudo pip install -r requirements
+	sudo chmod +x maryam
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -48,23 +105,6 @@ else
 	cd dnstwist
 	sudo apt-get install libgeoip-dev libffi-dev
 	sudo BUILD_LIB=1 pip install -r requirements.txt
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Flan${NC}"
-if [[ -d /opt/flan ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Flan is already installed"
-	echo -e "${NC}"
-else
-	cd /opt
-	sudo git clone https://github.com/s1l3nt78/flan.git
-	cd flan
-	sudo docker build .
-	echo -e "${W}Please copy and paste the final container's image ID shown above"
-	read ID
-	sudo docker tag ${ID} flan_scan
-	sleep 2
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -97,6 +137,35 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Zeus${NC}"
+if [[ -d '/opt/Zeus-Scanner' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Zeus is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/Ekultek/Zeus-Scanner
+	cd Zeus-Scanner
+	sudo docker build .
+	echo -e "${W}Please copy and paste the final container's image ID shown above"
+	read ID
+	sudo docker tag ${ID} zeus
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for BFAC${NC}"
+if [[ -d '/opt/bfac' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "BFAC is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/mazen160/bfac.git
+	cd bfac
+	sudo python setup.py install
+fi
+
+echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for Rapidscan${NC}"
 if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
 	echo -e "${ORNG}"
@@ -108,25 +177,6 @@ else
 	cd rapidscan
 	sudo chmod +x rapidscan.py rapidscan
 	sudo mv rapidscan -t /usr/sbin
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Yuki-Chan${NC}"
-if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
-    echo -e "${ORNG}"
-	figlet -f mini "Yuki-Chan is already installed"
-	echo -e "${NC}"
-else
-    cd /root
-    sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git
-    sudo mv Yuki-Chan-The-Auto-Pentest yuki
-	cd yuki
-	   sudo pip2 install -r requirements.txt
-	   sudo pip3 install -r requirements.txt
-	   sudo chmod +x Module --recursive
-	   sudo chown $USER:$USER Module --recursive
-	   sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
-	   sudo ./install-perl-module.sh
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -142,6 +192,28 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Yuki-Chan${NC}"
+if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
+    echo -e "${ORNG}"
+	figlet -f mini "Yuki-Chan is already installed"
+	echo -e "${NC}"
+else
+    cd /root
+    sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git
+    sudo mv Yuki-Chan-The-Auto-Pentest yuki
+	cd yuki
+	   sudo pip2 install -r requirements.txt
+	   sudo apt-get install python3-pip
+	   sudo apt --fix-broken install -y
+	   sudo pip3 install -r requirements.txt
+	   sudo pip3 install wget
+	   sudo chmod +x Module --recursive
+	   sudo chown $USER:$USER Module --recursive
+	   sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
+	   sudo ./install-perl-module.sh
+fi
+
+echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for ReconSpider${NC}"
 if [[ -d "/opt/reconspider" ]]; then
 	echo -e "${ORNG}"
@@ -152,6 +224,23 @@ else
 	sudo git clone https://github.com/bhavsec/reconspider.git
 	cd reconspider
 	sudo python3 setup.py install
+fi
+
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Flan${NC}"
+if [[ -d /opt/flan ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Flan is already installed"
+	echo -e "${NC}"
+else
+	cd /opt
+	sudo git clone https://github.com/s1l3nt78/flan.git
+	cd flan
+	sudo docker build .
+	echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
+	read ID
+	sudo docker tag ${ID} flan_scan
+	sleep 2
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -181,8 +270,12 @@ else
 	cd ActiveReign
 	sudo pip3 install -r requirements.txt
 	sudo python3 setup.py install
+	sudo git clone https://github.com/SecureAuthCorp/impacket
+	cd impacket
+	sudo python3.7 setup.py install
 	pip3 install prompt-toolkit==2.0.9 impacket
 	ar3 db help
+	sudo mkdir /home/$USER/.ar3
 	sudo cp ar3/config.json -t /home/$USER/.ar3
 	sudo chown $USER:$USER /home/$USER/.ar3
 fi
@@ -211,43 +304,8 @@ else
 	cd /opt/
 	sudo git clone https://github.com/shenril/Sitadel.git
 	cd Sitadel
-	sudo python3 -m pip install .
-	python3 setup.py install
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Zeus${NC}"
-if [[ -d '/opt/Zeus-Scanner' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Zeus is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/Ekultek/Zeus-Scanner
-	cd Zeus-Scanner
-	sudo docker build .
-	echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
-	read ID
-	sudo docker tag ${ID} zeus
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for SniffingBear${NC}"
-if [[ -d '/opt/SniffingBear' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "SniffingBear is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/MrSuicideParrot/SniffingBear.git
-	cd SniffingBear
-	sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip_18.1-5_all.deb
-	sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip-whl_18.1-5_all.deb
-	sudo dpkg -i python-pip-whl_18.1-5_all.deb
-	sudo dpkg -i python-pip_18.1-5_all.deb
-	pip install --upgrade pip
-	pip install setuptools
-	sudo pip install -r requirements.txt
+	sudo python3.7 -m pip install .
+	sudo python3.7 setup.py install
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -297,14 +355,14 @@ echo -e "${W}===================================================================
 echo -e "${YLW}Checking for Seeker${NC}"
 if [[ -d '/opt/seeker' ]]; then
 	echo -e "${ORNG}"
-	figlet -f mini "Seeker is already installed"
+	figlet -f mini "Sherlock is already installed"
 	echo -e "${NC}"
 else
 	cd /opt/
 	sudo git clone https://github.com/thewhiteh4t/seeker.git
 	cd seeker
 	sudo chmod 777 install.sh
-	./install.sh
+	sudo ./install.sh
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -331,19 +389,6 @@ if [[ -d '/opt/Dark-Star' ]]; then
 else
 	cd /opt/
 	sudo git clone https://github.com/s1l3nt78/Dark-Star.git
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for BFAC${NC}"
-if [[ -d '/opt/bfac' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "BFAC is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/mazen160/bfac.git
-	cd bfac
-	sudo python setup.py install
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -382,30 +427,13 @@ else
 fi
 
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Maryam${NC}"
-if [[ -d '/opt/Maryam' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Maryam is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/saeeddhqan/Maryam.git
-	cd Maryam
-	sudo pip install -r requirements
-	sudo chmod +x maryam
-fi
-
-echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for xRay${NC}"
 if [[ -d '/opt/xray' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "xRay is already installed"
 	echo -e "${NC}"
 else
-	cd /opt/
-	sudo git clone https://github.com/evilsocket/xray.git
-	cd xray
-	sudo docker build -t xraydocker .
+	sudo docker pull txt3rob/xray-docker
 fi
 
 echo -e "${W}===========================================================================================${NC}"
@@ -430,107 +458,6 @@ else
 	sudo git clone https://github.com/capture0x/XSHOCK.git
 	cd XSHOCK
 	sudo pip3 install -r requirements.txt
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for SayDog${NC}"
-if [[ -d '/opt/saydog-framework' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "SayDog is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/s1l3nt78/saydog-framework.git
-	cd saydog-framework
-	sudo chmod +x install
-	sudo ./install
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for EoP Exploit${NC}"
-if [[ -d '/opt/CVE-2020-0683' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "EoP Exploit is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/padovah4ck/CVE-2020-0683
-	cd CVE-2020-0683
-	sudo zip EoP.zip bin_MsiExploit -r
-	sudo chmod 777 EoP.zip
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Installing & Updating Zeus${NC}"
-sudo docker pull s1l3nt78/zeus:sifter
-sudo docker run --name zeus -w /opt/zeus-scanner s1l3nt78/zeus:sifter python zeus.py
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for CredNinja${NC}"
-if [[ -d '/opt/CredNinja' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "CredNinja is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/Raikia/CredNinja.git
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for PHPSploit${NC}"
-if [[ -d '/opt/phpsploit' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "PHPSploit is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/nil0x42/phpsploit.git
-	cd phpsploit
-	sudo python3 -m pip install -r requirements.txt
-	sudo chmod +x phpsploit
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for VulnX${NC}"
-if [[ -d '/opt/vulnx' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "VulnX is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/anouarbensaad/vulnx.git
-	cd vulnx 
-	sudo chmod +x install.sh
-	sudo ./install.sh
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Impulse${NC}"
-if [[ -d '/opt/Impulse' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Impulse is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/LimerBoy/Impulse.git
-	cd Impulse
-	sudo python3 -m pip install -r requirements.txt
-fi
-
-echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for Impulse${NC}"
-if [[ -d '/opt/Impulse' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Impulse is already installed"
-	echo -e "${NC}"
-else
-	cd /opt/
-	sudo git clone https://github.com/Technowlogy-Pushpender/creds_harvester.git
-	sudo chown $USER:$USER -R /opt/creds_harvester
-	cd creds_harvester
-	python3 -m pip install pywin32
-	sudo python3 -m pip install pywin32
-	zip credH.zip *.py
 fi
 
 cd /opt
