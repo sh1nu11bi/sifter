@@ -41,3 +41,6 @@ echo -e "${RED}Results have been saved to /opt/sifter/results/Nikto${NC}"
 echo "==============================================================================================="
 cd /opt/sifter
 sifter -m
+
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

@@ -15,3 +15,5 @@ echo -e "then cd into bin_MsiExploit. Please ensure MsiExploit.exe & foo.msi sta
 echo -e "then run ${UBLUE}"MsiExploit.exe  \path\file\to\own" ${W}from a command terminal on target${NC}"
 cd /opt/sifter
 sifter -m
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

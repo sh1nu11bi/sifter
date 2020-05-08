@@ -486,3 +486,5 @@ echo -e "${W}Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm for a 
 echo -e "for better results in WPScan goto modules/wpscan.sh and add"
 echo -e " '--api-token <your-wpscan-api-token>' argument to both commands"
 echo -e "please add your shodan-api key to modules/credmods/xray.sh by 'SHODAN-API'${NC}"
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

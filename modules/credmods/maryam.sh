@@ -24,3 +24,5 @@ cd /opt/Maryam
 sudo ./maryam
 cd /opt/sifter
 ./sifter -m
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################s

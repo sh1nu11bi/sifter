@@ -34,3 +34,6 @@ PS3='Would you like to load and run WinPwn with AMSI bypass or run WinPwn normal
                 esac
             done
         echo -e "${NC}"
+        
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

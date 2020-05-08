@@ -64,3 +64,5 @@ echo -e "${W}Results saved to /opt/sifter/results/w00f${NC}"
 sleep 5
 cd /opt/sifter
 sifter -m
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

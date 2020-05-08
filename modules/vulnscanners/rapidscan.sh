@@ -28,3 +28,6 @@ xterm -e sudo rapidscan &
 echo -e "${W}When ready hit enter${NC}"
 cd /opt/sifter
 sifter -m
+
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

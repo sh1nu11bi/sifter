@@ -15,3 +15,5 @@ python3 scanner.py ${TARGET} 445
 sleep 5
 cd /opt/sifter
 sifter -m
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

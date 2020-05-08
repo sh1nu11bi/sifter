@@ -45,3 +45,5 @@ sudo docker cp osmedeus:/root/.osmedeus/workspaces/* /opt/sifter/results/Osmedeu
 sleep 2
 cd /opt/sifter
 ./sifter -m
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
