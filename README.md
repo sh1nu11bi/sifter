@@ -36,17 +36,25 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 Most modules are explained along with demos of a lot of the tools
 <br>
+# Releases
 <br>
-NOTE!! IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v6.6.1.zip"><strong>here</strong></a></em>
+<em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
+<br>
+
+# NOTE!! IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
 <br>
 eg. target.com
 <br>
 instead of http://target.com
 <br>
 <br>
+
 # Please, if you fork this repo ensure to keep it updated.
 <br>
+<br />
+
 
 # Installation:
 
