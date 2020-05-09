@@ -190,11 +190,11 @@ For any requests or ideas on current projects please submit an issue request to 
 For ideas or collaboration requests on future projects., contact details can be found on the page.
 <br />
 <br />
-*GitHub Pages can be found here.
+<em>GitHub Pages can be found here.
 <br />
 -<a href="https://github.com/s1l3nt78/MkCheck">MkCheck</a> = MikroTik Router Exploitation Tool
 <br />
--<a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework
+-<a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework</em>
 <br />
 <br />
 <br />
