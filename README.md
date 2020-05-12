@@ -99,8 +99,8 @@ instead of http://target.com
 
 	  = Website Exploiters
 		  -DDoS
-			-Dark Star - https://github.com/s1l3nt78/Dark-Star
-			-Impulse - https://github.com/LimerBoy/Impulse
+			---Dark Star - https://github.com/s1l3nt78/Dark-Star
+			---Impulse - https://github.com/LimerBoy/Impulse
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
 		  -xShock - https://github.com/capture0x/XSHOCK
 		  -VulnX - https://github.com/anouarbensaad/vulnx
@@ -152,8 +152,8 @@ instead of http://target.com
 		  -Nikto - https://github.com/sullo/nikto
 		  -Blackwidow - https://github.com/1N3/blackwidow
 		  -Wordpress
-		  	WPScan - https://github.com/wpscanteam/wpscan
-		  	WPForce/Yertle - https://github.com/n00py/WPForce
+		  	---WPScan - https://github.com/wpscanteam/wpscan
+		  	----WPForce/Yertle - https://github.com/n00py/WPForce
 		  -Zeus-Scanner - https://github.com/Ekultek/Zeus-Scanner
 		  -Dirb
 
