@@ -124,7 +124,7 @@ info_mods(){
     figlet -f mini "Information Gatherers"
     echo -e "${ORNG}"
     PS3='Which module category would you like to use?'
-            options=("Enterprise Focus" "Individual Focus" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+            options=("Enterprise Focus" "Individual Focus" "Back" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -157,7 +157,7 @@ honey_mods(){
     echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-            options=("HoneyCaught" "SniffingBear" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+            options=("HoneyCaught" "SniffingBear" "Back" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -342,7 +342,7 @@ post_ex(){
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
     PS3='What tool would you like to use?'
-        options=("EoP Exploit" "CredNinja" "WinPwn" "CredHarvester" "Back")
+        options=("EoP Exploit" "Omega" "WinPwn" "CredHarvester" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -351,9 +351,9 @@ post_ex(){
                     ./modules/postex/EoP.sh
                     ;;
 
-                "PHPSploit")
+                "Omega")
                     echo -e "${W}This tool acts as a Command n Control Server for call-back of exploited systems${NC}"
-                    ./modules/postex/phpsploit.sh
+                    ./modules/postex/omega.sh
                     ;;                    
 
                 "WinPwn")
@@ -549,7 +549,7 @@ ddos(){
       figlet -f mini "DDoS Tools"
       echo -e "${ORNG}"
       PS3='What tool would you like to use?'
-        options=("Dark Star" "NekoBot" "xShock" "VulnX" "Back" "Quit")
+        options=("Dark Star" "Impulse" "Back" "Quit")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -760,6 +760,7 @@ result_choices(){
                             "Change Directory")
                                 echo -e "${W}Please enter the directory name${NC}"
                                 read DIR_NAME
+                                # shellcheck disable=SC2164
                                 cd ${DIR_NAME}
                                 result_choices
                                 ;;
@@ -778,14 +779,17 @@ results(){
     echo -e "${YLW}Results"
     echo -e "${LP}*******${NC}"
     echo -e "${LP}"
+    # shellcheck disable=SC2164
     cd /opt/sifter/results
     ls
     echo -e "${W}Please enter the name of the result directory you'd like to see${NC}"
     read DNAME
+    # shellcheck disable=SC2164
     cd ${DNAME}
     echo -e "${LP}"
     ls
     result_choices
+    # shellcheck disable=SC2164
     cd /opt/sifter
 }
 # Module Menu
@@ -992,9 +996,9 @@ main_info(){
                             cat /opt/sifter/info/credninja.info
                             ;;
 
-                        "PHPSploit")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/phpsploit.info
-                            cat /opt/sifter/info/phpsploit.info
+                        "Omega")
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/omega.info
+                            cat /opt/sifter/info/omega.info
                             ;;
 
                         "VulnX")
@@ -1015,6 +1019,7 @@ main_info(){
     echo -e "${NC}"
 }
 # Menu
+# shellcheck disable=SC2120
 menu(){
      if [[ -d "/opt/sifter/results" ]]; then
         sleep 1
@@ -1025,7 +1030,7 @@ menu(){
     figlet -f big "'..SifteR..'"
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.6${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.7${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -1102,7 +1107,7 @@ update(){
     else
 	    sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(y/n)${NC}"
-        sleep 3
+      sleep 3
 	    read UANS
 	    if [[ ${UANS} == "y" ]]; then
             export LPATH
@@ -1233,6 +1238,10 @@ while getopts "a:wandwirmecvuhz" options; do            	# Loop: Get the next op
             modules
             ;;
 
+        *)
+            echo -e "${RED}No valid option was chosen, defaulting to Main Menu"
+            menu
+            ;;
 	esac
 done
 if [[ $OPTIND == 1 ]]; then				# if no option is passed
