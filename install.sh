@@ -30,6 +30,7 @@ fi
 ## Python2 Pip Install Fix
 #
 echo -e "${URED}Fixing Python2 pip issues for install${NC}"
+# shellcheck disable=SC2164
 cd /opt
 sudo apt-get remove python3-pip
 sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip_18.1-5_all.deb
@@ -37,6 +38,7 @@ sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip-whl_
 sudo dpkg -i python-pip-whl_18.1-5_all.deb
 sudo dpkg -i python-pip_18.1-5_all.deb
 sudo python -m pip install setuptools
+sudo python2 -m pip install wheel
 sudo python -m pip install --upgrade pip
 sudo apt-get install python-wheel-common
 sudo python2 -m pip install build_install_wheels
