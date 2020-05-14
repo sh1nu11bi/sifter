@@ -559,20 +559,26 @@ else
 fi
 
 #
-# 33 # PHPSploit
+# 33 # Omega (Replacing PHPSploit)
 #
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for PHPSploit${NC}"
+echo -e "${YLW}Checking for Omega${NC}"
 if [[ -d '/opt/phpsploit' ]]; then
 	echo -e "${ORNG}"
-	figlet -f mini "PHPSploit is already installed"
+	figlet -f mini "Replacing PHPSploit with Omega"
 	echo -e "${NC}"
+	sudo rm -rf phpsploit
+fi
+if [[ '-d /opt/omega' ]]; then
+  echo -e "${ORNG}"
+  figlet -f mini "Omega is already installed"
+  echo -e "${NC}"
 else
 	cd /opt/
-	sudo git clone https://github.com/nil0x42/phpsploit.git
-	cd phpsploit
-	sudo python3 -m pip install -r requirements.txt
-	sudo chmod +x phpsploit
+	sudo git clone https://github.com/entynetproject/omega.git
+	cd omega
+	sudo chmod +x install.sh
+	./install.sh
 fi
 
 #

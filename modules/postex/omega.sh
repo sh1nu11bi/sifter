@@ -12,11 +12,11 @@ INV='\e[7m'
 BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
 
-cd /opt/phpsploit
+cd /opt/omega
 echo -e "${RED}"
-figlet -f mini PHPSploit
+figlet -f mini Omega
 echo -e "${NC}"
-sudo ./phpsploit --interactive --eval "help help"
+omega
 cd /opt/sifter
 sifter -m
 
