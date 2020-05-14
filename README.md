@@ -13,7 +13,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-6.6-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-6.7-red">
 	<img align="center" src="https://img.shields.io/badge/Build-Cobal7-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
@@ -113,7 +113,7 @@ instead of http://target.com
 	
 	= Post-Exploitation
 	   	-EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
-	   	-PHPSploit - https://github.com/nil0x42/phpsploit
+	   	-Omega - https://github.com/entynetproject/omega
 	  	-WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
 		-CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
 		

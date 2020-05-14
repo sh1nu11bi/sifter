@@ -13,7 +13,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-6.6-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-6.7-red">
 	<img align="center" src="https://img.shields.io/badge/Build-Cobal7-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
@@ -36,7 +36,6 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 Most modules are explained along with demos of a lot of the tools
 <br>
-<br>
 # Releases
 <br>
 <em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v6.6.1.zip"><strong>here</strong></a></em>
@@ -44,10 +43,8 @@ Most modules are explained along with demos of a lot of the tools
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
 <br>
-<br>
 
 # NOTE!! IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
-<br>
 <br>
 eg. target.com
 <br>
@@ -57,6 +54,8 @@ instead of http://target.com
 
 # Please, if you fork this repo ensure to keep it updated.
 <br>
+<br />
+
 
 # Installation:
 
@@ -100,8 +99,8 @@ instead of http://target.com
 
 	  = Website Exploiters
 		  -DDoS
-			-Dark Star - https://github.com/s1l3nt78/Dark-Star
-			-Impulse - https://github.com/LimerBoy/Impulse
+			---Dark Star - https://github.com/s1l3nt78/Dark-Star
+			---Impulse - https://github.com/LimerBoy/Impulse
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
 		  -xShock - https://github.com/capture0x/XSHOCK
 		  -VulnX - https://github.com/anouarbensaad/vulnx
@@ -114,9 +113,10 @@ instead of http://target.com
 	
 	= Post-Exploitation
 	   	-EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
-	   	-PHPSploit - https://github.com/nil0x42/phpsploit
+	   	-Omega - https://github.com/entynetproject/omega
 	  	-WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
-	
+		-CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
+		
 	   =FuzzyDander (Obtained through issue request.)
 	   	-FuzzBunch
 		-Danderspritz
@@ -152,8 +152,8 @@ instead of http://target.com
 		  -Nikto - https://github.com/sullo/nikto
 		  -Blackwidow - https://github.com/1N3/blackwidow
 		  -Wordpress
-		  	WPScan - https://github.com/wpscanteam/wpscan
-		  	WPForce/Yertle - https://github.com/n00py/WPForce
+		  	---WPScan - https://github.com/wpscanteam/wpscan
+		  	----WPForce/Yertle - https://github.com/n00py/WPForce
 		  -Zeus-Scanner - https://github.com/Ekultek/Zeus-Scanner
 		  -Dirb
 
@@ -199,9 +199,13 @@ For any requests or ideas on current projects please submit an issue request to 
 For ideas or collaboration requests on future projects., contact details can be found on the page.
 <br />
 <br />
-*GitHub Pages can be found here.
+<em>GitHub Pages can be found here.
 <br />
 -<a href="https://github.com/s1l3nt78/MkCheck">MkCheck</a> = MikroTik Router Exploitation Tool
 <br />
--<a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework
+-<a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework</em>
 <br />
+<br />
+<br />
+
+	  <!--####################___________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ___________####################-->
