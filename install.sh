@@ -627,7 +627,7 @@ if [[ -d '/opt/saydog-framework' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
-	sudo git clone https://github.com/s1l3nt78/saydog-framework.git
+	sudo git clone https://github.com/saydog/saydog-framework.git
 	cd saydog-framework
 	sudo chmod +x install
 	sudo ./install
