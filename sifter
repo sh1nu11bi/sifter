@@ -1239,7 +1239,7 @@ while getopts "a:wandwirmecvuhz" options; do            	# Loop: Get the next op
             ;;
 
         *)
-            echo -e "${RED}No valid option was chosen, defaulting to Main Menu"
+            echo -e "${RED}No valid option was chosen, defaulting to Main Menu${NC}"
             menu
             ;;
 	esac
