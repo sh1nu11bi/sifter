@@ -20,9 +20,12 @@
 </p>
 
 # *Sifter*
-<strong><em>s1l3nt78</em></strong>
+
+<p style="color: #77b300">
+<em><strong>s1l3nt78</strong>
 <br>
-*Because the first step, is enumeration*
+Because the first step, is enumeration</em>
+</p>
 <br>
 <br>
 Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tools within different module sets in order to quickly perform recon tasks, check network firewalling, enumerate remote and local hosts, and scan for the 'blue' vulnerabilities within microsft and if unpatched, exploit them.  It uses tools like blackwidow and konan for webdir enumeration and attack surface mapping rapidly using ASM.
@@ -35,9 +38,10 @@ Gathered info is saved to the results folder, these output files can be easily p
 <a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a> - Its long, but you can skip through to get the general idea.
 <br>
 Most modules are explained along with demos of a lot of the tools
-<br>
+
+
 # Releases
-<br>
+
 <em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v6.6.1.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
@@ -201,9 +205,9 @@ For ideas or collaboration requests on future projects., contact details can be 
 <br />
 <em>GitHub Pages can be found here.
 <br />
--<a href="https://github.com/s1l3nt78/MkCheck">MkCheck</a> = MikroTik Router Exploitation Tool
+-<a href="https://s1l3nt78.github.io/MkCheck">MkCheck</a> = MikroTik Router Exploitation Tool
 <br />
--<a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework</em>
+-<a href="https://s1l3nt78.github.io/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework</em>
 <br />
 <br />
 <br />
