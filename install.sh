@@ -634,6 +634,23 @@ else
 fi
 
 #
+# 37 #
+#
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for DorksEye${NC}"
+if [[ -d '/opt/dorks-eye' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "DorksEye is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
+	sudo git clone https://github.com/BullsEye0/dorks-eye.git
+	cd dorks-eye
+	sudo pip3 install -r requirements.txt
+fi
+
+#
 ## Move Sifter executable to local path (/usr/sbin)
 #
 cd /opt
