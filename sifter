@@ -298,7 +298,7 @@ web_mods(){
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Dirb" "Nikto" "BlackWidow" "WPScan" "WPForce" "Zeus" "Back" "Quit")
+          options=("Dirb" "Nikto" "BlackWidow" "DorksEye" "WPForce" "Zeus" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -320,7 +320,11 @@ web_mods(){
                                 sleep 3
                                 ./modules/webmods/wordpress.sh
                                 ;;
-
+			    
+			    "DorksEye")
+			    	./modules/webmods/dorkseye.sh
+				;;
+				
                             "Zeus")
                                 ./modules/webmods/zeus.sh
                                 ;;
