@@ -160,6 +160,7 @@ instead of http://target.com
 		  	----WPForce/Yertle - https://github.com/n00py/WPForce
 		  -Zeus-Scanner - https://github.com/Ekultek/Zeus-Scanner
 		  -Dirb
+		  -DorksEye - https://github.com/BullsEye0/dorks-eye
 
 
 # Sifter Help Menu
