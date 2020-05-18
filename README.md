@@ -62,11 +62,6 @@ instead of http://target.com
 <br>
 <br>
 
-# Please, if you fork this repo ensure to keep it updated.
-<br>
-<br />
-
-
 # Installation:
 
 	* This will download and install all required tools

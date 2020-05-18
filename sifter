@@ -13,7 +13,7 @@ BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
-ARG=$2  
+ARG=$2
 # IP addition argument
 # Help Menu
 usage() {                                    	  # Function: Print a help message.
@@ -31,11 +31,11 @@ usage() {                                    	  # Function: Print a help message
 	echo "# sifter -w Opens the Website Focused Modules"
 	echo "# sifter -wa Opens the Web-App Focused Module menu"
 	echo "# sifter -v Opens the Vulnerability Scanning Module Menu"
-    echo "# sifter -m Opens the Module Menu directly"
-    echo "# sifter -p opens the password tools for quick passlist generation or hash decryption"
+        echo "# sifter -m Opens the Module Menu directly"
+        echo "# sifter -p opens the password tools for quick passlist generation or hash decryption"
 	echo "# sifter -r opens the results folder for viewing of files or photos"
-    echo "# sifter -u Checks for any updates on Github"
-    echo "# sifter -z Opens the Module Information Menu"
+        echo "# sifter -u Checks for any updates on Github"
+        echo "# sifter -z Opens the Module Information Menu"
 	echo "# sifter -h This Help Menu" 1>&2
 }
 # Information Modules
@@ -48,7 +48,7 @@ cred_mods(){
   echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "Back" "Quit") # "Sunny-Honey \n ssh HoneyPot"
+          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -113,7 +113,7 @@ phone_mods(){
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit 2
                                 ;;
                     esac
             done
@@ -143,7 +143,7 @@ info_mods(){
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit 2
                                 ;;
                     esac
             done
@@ -176,7 +176,7 @@ honey_mods(){
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit 2
                                 ;;
                     esac
             done
@@ -201,7 +201,7 @@ dom_mods(){
                             "Armory")
                                 ./modules/dommods/armory.sh
                                 ;;
-                                                        
+
                             "SayDog")
                                 sdog
                                 ;;
@@ -211,7 +211,7 @@ dom_mods(){
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit 2
                                 ;;
                     esac
             done
@@ -304,9 +304,9 @@ web_mods(){
           select opt in "${options[@]}"
           do
                   case $opt in
-							"Dirb")
-								./modules/webmods/dirb.sh
-								;;
+			    "Dirb")
+			        ./modules/webmods/dirb.sh
+				;;
 
                             "Nikto")
                                 ./modules/webmods/nikto.sh
@@ -322,11 +322,11 @@ web_mods(){
                                 sleep 3
                                 ./modules/webmods/wordpress.sh
                                 ;;
-			    
+
 			    "DorksEye")
 			    	./modules/webmods/dorkseye.sh
 				;;
-				
+
                             "Zeus")
                                 ./modules/webmods/zeus.sh
                                 ;;
@@ -494,7 +494,7 @@ search_tools(){
         do
                 case $opt in
                     "ShodanSploit")
-                        echo -e "${YLW}ShodanSploit allows for shodan searches to be done in the terminal${NC}"
+                        echo -e "${YLW}ShodanSploit allows for shodan searches to be done quickly from the terminal${NC}"
                         sleep 3
                         ./modules/exmods/ssploit.sh
                         ;;
@@ -510,7 +510,7 @@ search_tools(){
                         ;;
 
                     "Quit")
-                        exit 1
+                        exit 2
                         ;;
 
                 esac
@@ -535,7 +535,7 @@ ms_tools(){
 			                    ;;
 
                           "iSpy")
-                                echo -e "${YLW}iSpy is a Microsft 'blue' vulnerability scanner${NC}"
+                                echo -e "${YLW}iSpy is a Microsft '${UBLUE}blue${NC}${YLW}' vulnerability scanner${NC}"
                                 sleep 3
                                 ./modules/exmods/ispy.sh
 			                    ;;
@@ -543,11 +543,9 @@ ms_tools(){
                             "FuzzyDander")
                                 echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
                                 echo -e "codename:${RED}FuzzyDander${NC}"
-                                echo -e "${YLW}If you do not know what these tools are or how they work,"
-                                echo -e "you should not be using them. As such no instructions will be added.${NC}"
+                                echo -e "${YLW}If you do not know what these tools are or how they work,\nyou should not be using them. As such no instructions will be added.${NC}"
                                 if [[ ! -f '/opt/sifter/modules/exmods/fuzzdander.sh' ]]; then
-                                    echo -e "${URED}You do not have this module, please post an issue request on github or send me"
-                                    echo -e "an email on b1krb7@b1krb7.site and it will be sent to you with install instructions${NC}"
+                                    echo -e "${URED}You do not have this module, please post an issue request on github or send me \n an email at s1l3n7h0s7@gmail.com and it will be sent to you with install instructions${NC}"
                                 else
                                     echo -e "${W}Would you like to continue?(y/n)${NC}"
                                     read M_ANS
@@ -571,7 +569,7 @@ ms_tools(){
                                 ;;
 
                            "Quit")
-                                exit 1
+                                exit 2
                                 ;;
                 esac
         done
@@ -597,7 +595,7 @@ ddos(){
                     ;;
 
                 "Back")
-                    web_tools
+                    webex
                     ;;
 
             esac
@@ -605,7 +603,7 @@ ddos(){
     echo -e "${NC}"
 }             
 # Web Exploitation
-web_tools(){
+webex(){
   cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Website Exploitation Tools"
@@ -639,7 +637,7 @@ web_tools(){
                         ;;
 
                     "Quit")
-                        exit 1
+                        exit 2
                         ;;
                 esac
         done
@@ -677,7 +675,7 @@ webapps(){
                             ;;
 
                         "Quit")
-                            exit 1
+                            exit 2
                             ;;
                 esac
         done
@@ -1069,7 +1067,7 @@ menu(){
     figlet -f big "..S1ft3R.."
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${URED}7i7aN_(${UBLUE}v7${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}7i7aN_(${UBLUE}v7${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -1100,8 +1098,8 @@ menu(){
                         modules
                         ;;
 
-		            "Update")
-		                update
+		    "Update")
+		        update
                         reset
                         sifter
                         ;;
@@ -1145,18 +1143,16 @@ update(){
         echo -e "${NC}"
     else
 	    sleep 5
-	    echo -e "${W}Are there pull conflicts with files?(y/n)${NC}"
-      sleep 3
+	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
+      	    sleep 3
 	    read UANS
 	    if [[ ${UANS} == "y" ]]; then
             export LPATH
             echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
 		    read FILES
-            sleep 2
+                    sleep 2
 		    up_arg ${FILES}
 		    git pull
-	    else
-		    sleep 1
 	    fi
         ./install.sh
         sudo cp sifter -t /usr/sbin
@@ -1177,20 +1173,18 @@ while getopts "a:wandwirmepcvuhz" options; do            	# Loop: Get the next o
 			figlet -f mini "Checking for live targets..."
 			echo -e "${NC}"
 			check_hosts
-            modules
+            		modules
 			;;
 
 		a)
 			echo -e "${ORNG}"
 			figlet -f mini "Adding $ARG to host list"
 			echo -e "${NC}"
-            TARLIST=$(cat /opt/sifter/files/host_list.txt)
-            if [[ ${TARLIST} == "eg. target.com" ]]; then
-                rm /opt/sifter/files/host_list.txt
-                touch /opt/sifter/files/host_list.txt
-            else
-                sleep 1
-            fi
+	                TARLIST=$(cat /opt/sifter/files/host_list.txt)
+            		if [[ ${TARLIST} == "eg. target.com" ]]; then
+                 		rm /opt/sifter/files/host_list.txt
+                		touch /opt/sifter/files/host_list.txt
+            		fi
 			echo "$ARG" >> files/host_list.txt
 			sleep 2
 			modules
