@@ -19,8 +19,8 @@ if [[ -f /usr/bin/chromedriver ]]; then
 	echo -e "${W}Everything is good${NC}"
 else
 	echo -e "${LP}Getting chromedriver${NC}"
-	wget https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
-	unzip chromedriver_linux64.zip
+	sudo wget https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
+	sudo unzip chromedriver_linux64.zip
 	sudo mv chromedriver -t /usr/bin
 	sudo chown $USER:$USER /usr/bin/chromedriver
 fi

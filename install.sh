@@ -477,7 +477,7 @@ echo -e "${W}===================================================================
 echo -e "${YLW}Checking for OneFind${NC}"
 if [[ -d '/opt/onedrive_user_enum' ]]; then
 	echo -e "${ORNG}"
-	figlet -f mini "OneDrive UserSearch is already installed"
+	figlet -f mini "OneFind is already installed"
 	echo -e "${NC}"
 else
 	cd /opt/
@@ -608,6 +608,22 @@ if [[ -d '/opt/Impulse' ]]; then
 	echo -e "${NC}"
 else
 	cd /opt/
+	sudo git clone https://github.com/LimerBoy/Impulse
+	cd Impulse
+	sudo python3 -m pip install -r requirements.txt
+fi
+
+#
+# 37 # CredsHarvester
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for CredsHarvester${NC}"
+if [[ -d '/opt/creds_harvester' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "CredsHarvester is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/
 	sudo git clone https://github.com/Technowlogy-Pushpender/creds_harvester.git
 	sudo chown $USER:$USER -R /opt/creds_harvester
 	cd creds_harvester
@@ -617,7 +633,7 @@ else
 fi
 
 #
-# 36 # SayDog
+# 38 # SayDog
 #
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for SayDog${NC}"
@@ -629,14 +645,14 @@ else
 	cd /opt/
 	sudo git clone https://github.com/saydog/saydog-framework.git
 	cd saydog-framework
+	sudo sed -i "s/python/python3/g" run
 	sudo chmod +x install
 	sudo ./install
 fi
 
 #
-# 37 #
-#
-#
+# 39 # Dorks-Eye
+# 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking for DorksEye${NC}"
 if [[ -d '/opt/dorks-eye' ]]; then
@@ -649,6 +665,30 @@ else
 	cd dorks-eye
 	sudo pip3 install -r requirements.txt
 fi
+
+#
+# 40 # Mentalist
+# 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for Mentalist${NC}"
+if [[ -f '/opt/sifter/modules/passtools/Mentalist' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "Mentalist is already installed"
+	echo -e "${NC}"
+else
+	cd /opt/sifter/modules/passtools
+	wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
+	unzip Mentalist*
+	rm *.zip
+fi
+
+#
+# 41 # DCipher
+# 
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Installing & updating DCipher${NC}"
+npm install dcipher
+sudo npm install -g dcipher-cli
 
 #
 ## Move Sifter executable to local path (/usr/sbin)

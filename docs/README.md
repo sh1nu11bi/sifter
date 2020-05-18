@@ -13,8 +13,8 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-6.7-red">
-	<img align="center" src="https://img.shields.io/badge/Build-Cobal7-yellowgreen">
+  	<img align="center" src="https://img.shields.io/badge/Version-7-red">
+	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-yellowgreen">
 </p>
@@ -28,6 +28,16 @@ Because the first step, is enumeration</em>
 </p>
 <br>
 <br>
+
+# Version 7 Release
+
+	Addition of Password orientated tools.
+	
+		-<em>Mentalist</em> - Sophisticated Graphical password list generator
+		-<em>DCipher</em> - Password Hash decryptor using online rainbow tables
+
+# Overview
+
 Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tools within different module sets in order to quickly perform recon tasks, check network firewalling, enumerate remote and local hosts, and scan for the 'blue' vulnerabilities within microsft and if unpatched, exploit them.  It uses tools like blackwidow and konan for webdir enumeration and attack surface mapping rapidly using ASM.
 <br>
 Gathered info is saved to the results folder, these output files can be easily parsed over to <a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> in order to be utilised within your campaign. Or compiled for a final report to wrap up a penetration test.
@@ -113,19 +123,24 @@ instead of http://target.com
 		  -FindSploit - https://github.com/1N3/Findsploit
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit
 
-	   -TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
+	-TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
 	
-	= Post-Exploitation
-	   	-EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
-	   	-Omega - https://github.com/entynetproject/omega
-	  	-WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
-		-CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
+		= Post-Exploitation
+	   	  -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
+	   	  -Omega - https://github.com/entynetproject/omega
+	  	  -WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
+		  -CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
 		
-	   =FuzzyDander (Obtained through issue request.)
-	   	-FuzzBunch
-		-Danderspritz
+	    =FuzzyDander - National Security Agency, Courtesy of the Shadow Brokers 
+	   	 (Obtained through issue request.)
+	   	  -FuzzBunch
+		  -Danderspritz
 
-	   -BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
+	    =BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
+
+	# Password Tools
+	    -Mentalist - https://github.com/sc0tfree/mentalist
+	    -DCipher - https://github.com/k4m4/dcipher
 
 	# Network Scanners
 		-Nmap - https://nmap.org

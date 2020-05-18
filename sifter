@@ -32,7 +32,9 @@ usage() {                                    	  # Function: Print a help message
 	echo "# sifter -wa Opens the Web-App Focused Module menu"
 	echo "# sifter -v Opens the Vulnerability Scanning Module Menu"
     echo "# sifter -m Opens the Module Menu directly"
-	echo "# sifter -u Checks for any updates on Github"
+    echo "# sifter -p opens the password tools for quick passlist generation or hash decryption"
+	echo "# sifter -r opens the results folder for viewing of files or photos"
+    echo "# sifter -u Checks for any updates on Github"
     echo "# sifter -z Opens the Module Information Menu"
 	echo "# sifter -h This Help Menu" 1>&2
 }
@@ -377,6 +379,35 @@ post_ex(){
         done
     echo -e "${NC}"
 }
+# Password Tools
+pass_tools(){
+    cd /opt/sifter/modules/passtools
+    echo -e "${RED}"
+    figlet -f mini "Password Tools"
+    echo -e "${ORNG}"
+    PS3='Which tool would you like to use?'
+        options=("Mentalist" "DCipher" "Back")
+        select opt in "${options[@]}"
+        do
+            case $opt in
+                "Mentalist")
+                    echo -e "${YLW}Mentalist is a Graphical password creation tool"
+                    ./modules/passtools/Mentalist
+                    ;;
+
+                "DCipher")
+                    echo -e "${YLW}Decipher hashes using online rainbow & lookup table attack services.${NC}"
+                    ./modules/passtools/dcipher.sh
+                    ;;
+
+                "Back")
+                    exmods
+                    ;;
+
+            esac
+        done
+    echo -e "${NC}"
+}
 # Exploitation Modules
 ex_mods(){
   cd /opt/sifter
@@ -384,11 +415,11 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("MS Specific Tools" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "Back" "Quit")
+        options=("Microsoft Explicit" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
-                    "MS Specific Tools")
+                    "Microsoft Explicit")
                         echo -e "${YLW}These tools are used to exploit MicroSoft systems${NC}"
                         sleep 3
                         ms_tools
@@ -801,7 +832,7 @@ modules(){
     echo -e "${URED}Modules${NC}"
     echo -e "${ORNG}"
     PS3='What would you like to do?'
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "View Results" "Main Menu" "Module Info" "Quit")
+            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Main Menu" "Module Info" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -836,6 +867,10 @@ modules(){
 			                "WebAppplication Scanners")
 			                    webapps
 			                    ;;
+
+                            "Password Tools")
+                                passtools
+                                ;;
 
                             "View Results")
                                 results
@@ -1031,10 +1066,10 @@ menu(){
         mkdir /opt/sifter/results
     fi
     echo -e "${INV}${LGRY}"
-    figlet -f big "'..SifteR..'"
+    figlet -f big "..S1ft3R.."
     echo -e "${LP}"
     figlet -f small "__*..s1l3nt78..*__"
-    echo -e "${RED}//////////========${URED}Cobal7_(${UBLUE}v6.7${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
+    echo -e "${RED}//////////========${URED}7i7aN_(${UBLUE}v7${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\${NC}"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit Sifter======${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -1134,7 +1169,7 @@ update(){
 }
 
 cd /opt/sifter
-while getopts "a:wandwirmecvuhz" options; do            	# Loop: Get the next option;
+while getopts "a:wandwirmepcvuhz" options; do            	# Loop: Get the next option;
 	case "${options}" in                                	# use silent error checking;
                                                             # option a takes 1 arguments.
 		c)
@@ -1202,6 +1237,13 @@ while getopts "a:wandwirmecvuhz" options; do            	# Loop: Get the next op
 			echo -e "${NC}"
 			webapps
 			;;
+
+        p)
+            echo -e "${LP}"
+            figlet -f mini "Password Tools"
+            echo -e "${NC}"
+            passtools
+            ;;
 
 		w)
 			echo -e "${LP}"
