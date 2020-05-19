@@ -33,8 +33,8 @@ Because the first step, is enumeration</em>
 
 	Addition of Password orientated tools.
 	
-		-<em>Mentalist</em> - Sophisticated Graphical password list generator
-		-<em>DCipher</em> - Password Hash decryptor using online rainbow tables
+		+Mentalist - Sophisticated Graphical password list generator
+		+DCipher - Password Hash decryptor using online rainbow tables
 
 # Overview
 
