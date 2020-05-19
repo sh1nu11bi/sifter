@@ -687,7 +687,7 @@ fi
 # 
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Installing & updating DCipher${NC}"
-npm install dcipher
+sudo npm install dcipher
 sudo npm install -g dcipher-cli
 
 #
