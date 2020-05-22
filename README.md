@@ -122,7 +122,7 @@ instead of http://target.com
 	  	  -WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
 		  -CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
 		
-	    =FuzzyDander - National Security Agency, Courtesy of the Shadow Brokers 
+	    =FuzzyDander - Equation Group, Courtesy of the Shadow Brokers 
 	   	 (Obtained through issue request.)
 	   	  -FuzzBunch
 		  -Danderspritz

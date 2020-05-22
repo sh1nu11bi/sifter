@@ -72,7 +72,7 @@ if [[ -d '/opt/Maryam' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Maryam is already installed"
 	echo -e "${NC}"
-	cd Maryam
+	cd /opt/Maryam
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -91,7 +91,7 @@ if [[ -d /opt/dnstwist ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "DnsTwist is already installed."
 	echo -e "${NC}"
-	cd dnstwist
+	cd /opt/dnstwist
 	sudo git fetch && sudo git pull
 else
 	cd /opt
@@ -110,7 +110,7 @@ if [[ -d /opt/HoneyCaught ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "HoneyCaught is already installed"
 	echo -e "${NC}"
-	cd HoneyCaught 
+	cd /opt/HoneyCaught 
 	sudo git fetch && sudo git pull
 else
 	cd /opt
@@ -147,7 +147,7 @@ if [[ -d '/opt/bfac' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "BFAC is already installed"
 	echo -e "${NC}"
-	cd bfac 
+	cd /opt/bfac 
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -165,7 +165,7 @@ if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Rapidscan is already installed"
 	echo -e "${NC}"
-	cd rapidscan
+	cd /opt/rapidscan
 	sudo git fetch && sudo git pull
 else
 	cd /opt
@@ -184,7 +184,7 @@ if [[ -d "/opt/shodansploit" ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "ShodanSploit is already installed."
 	echo -e "${NC}"
-	cd shodansploit 
+	cd /opt/shodansploit 
 	sudo git fetch && sudo git pull
 else
 	cd /opt
@@ -202,7 +202,7 @@ if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
     echo -e "${ORNG}"
 	figlet -f mini "Yuki-Chan is already installed"
 	echo -e "${NC}"
-	cd yuki
+	cd /root/yuki
 	sudo git fetch && sudo git pull
 else
     cd /root
@@ -229,7 +229,7 @@ if [[ -d "/opt/reconspider" ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "ReconSpider is already installed"
 	echo -e "${NC}"
-	cd reconspider
+	cd /opt/reconspider
 	sudo git fetch && sudo git pull
 else
 	cd /opt
@@ -303,7 +303,7 @@ if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "ASM is already installed."
 	echo -e "${NC}"
-	cd AttackSurfaceMapper
+	cd /opt/AttackSurfaceMapper
 	sudo git fetch && sudo git pull
 else
 	cd /opt
@@ -323,7 +323,7 @@ if [[ -d '/opt/ActiveReign' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "ActiveReign is already installed"
 	echo -e "${NC}"
-	cd ActiveReign
+	cd /opt/ActiveReign
 	sudo git fetch && sudo git pull
 else
 	cd /opt
@@ -350,7 +350,7 @@ if [[ -d '/opt/ispy' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "iSpy is already installed"
 	echo -e "${NC}"
-	cd ispy
+	cd /opt/ispy
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -404,7 +404,7 @@ if [[ -d '/opt/NekoBotV1' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "NekoBot is already installed"
 	echo -e "${NC}"
-	cd NekoBotV1
+	cd /opt/NekoBotV1
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -427,7 +427,7 @@ if [[ -d '/opt/armory' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Armory is already installed"
 	echo -e "${NC}"
-	cd armory
+	cd /opt/armory
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -446,7 +446,7 @@ if [[ -d '/opt/seeker' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Sherlock is already installed"
 	echo -e "${NC}"
-	cd seeker
+	cd /opt/seeker
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -465,7 +465,7 @@ if [[ -d '/opt/aapfinder' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "AapFinder is already installed"
 	echo -e "${NC}"
-	cd aapfinder
+	cd /opt/aapfinder
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -499,7 +499,7 @@ if [[ -d '/opt/BruteDum' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "BruteDUM is already installed"
 	echo -e "${NC}"
-	cd BruteDum
+	cd /opt/BruteDum
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -515,7 +515,7 @@ if [[ -d '/opt/onedrive_user_enum' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "OneFind is already installed"
 	echo -e "${NC}"
-	cd onedrive_user_enum
+	cd /opt/onedrive_user_enum
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -531,7 +531,7 @@ if [[ -d '/opt/SMBGhost' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "SMBGhost is already installed"
 	echo -e "${NC}"
-	cd SMBGhost
+	cd /opt/SMBGhost
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -562,7 +562,7 @@ if [[ -d '/opt/WPForce' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "WPForce is already installed"
 	echo -e "${NC}"
-	cd WPForce
+	cd /opt/WPForce
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -578,7 +578,7 @@ if [[ -d '/opt/XSHOCK' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "xShock is already installed"
 	echo -e "${NC}"
-	cd XSHOCK
+	cd /opt/XSHOCK
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -596,7 +596,7 @@ if [[ -d '/opt/vulnx' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "VulnX is already installed"
 	echo -e "${NC}"
-	cd vulnx
+	cd /opt/vulnx
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -621,7 +621,7 @@ if [[ '-d /opt/omega' ]]; then
   echo -e "${ORNG}"
   figlet -f mini "Omega is already installed"
   echo -e "${NC}"
-  cd omega
+  cd /opt/omega
   sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -640,7 +640,7 @@ if [[ -d '/opt/CredNinja' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "CredNinja is already installed"
 	echo -e "${NC}"
-	cd CredNinja
+	cd /opt/CredNinja
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -656,7 +656,7 @@ if [[ -d '/opt/Impulse' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Impulse is already installed"
 	echo -e "${NC}"
-	cd Impulse
+	cd /opt/Impulse
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -674,7 +674,7 @@ if [[ -d '/opt/creds_harvester' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "CredsHarvester is already installed"
 	echo -e "${NC}"
-	cd creds_harvester
+	cd /opt/creds_harvester
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -713,7 +713,7 @@ if [[ -d '/opt/dorks-eye' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "DorksEye is already installed"
 	echo -e "${NC}"
-	cd dorks-eye
+	cd /opt/dorks-eye
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
