@@ -14,7 +14,9 @@ multi() {
 					# shellcheck disable=SC2162
 					read REPLY
 					if [[ $REPLY == y ]]; then
+						echo -e "${YLW}"
 						sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
+						echo -e "${NC}"
 						sleep 5
 						cd /opt/sifter
 						sifter -m
@@ -25,14 +27,18 @@ multi() {
 					;;
 
 				"Common Vulnerabilities")
+					echo -e "${YLW}"
 					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
+					echo -e "${NC}"
 					sleep 5
 					cd /opt/sifter
 					sifter -m
 					;;
 
 				"UDP Port Scan")
+					echo -e "${YLW}"
 					sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
+					echo -e "${NC}"
 					sleep 5
 					cd /opt/sifter
 					sifter -m
