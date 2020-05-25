@@ -46,7 +46,7 @@ sudo apt-get install python-wheel-common
 sudo python2 -m pip install build_install_wheels
 
 echo -e "${RED}Checking for external dependencies${NC}"
-
+sudo service docker start
 #
 # 1 # Sniffing Bear
 #
@@ -371,7 +371,7 @@ if [[ -d '/opt/Sitadel' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Sitadel is already installed"
 	echo -e "${NC}"
-	cd Sitadel
+	cd /opt/Sitadel
 	sudo git fetch && sudo git pull
 else
 	cd /opt/
@@ -619,7 +619,7 @@ if [[ -d '/opt/phpsploit' ]]; then
 	echo -e "${NC}"
 	sudo rm -rf phpsploit
 fi
-if [[ '-d /opt/omega' ]]; then
+if [[ -d '/opt/omega' ]]; then
   echo -e "${ORNG}"
   figlet -f mini "Omega is already installed"
   echo -e "${NC}"
