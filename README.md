@@ -22,7 +22,7 @@
 # *Sifter*
 <strong><em>s1l3nt78</em></strong>
 <br>
-*Because the first step, is enumeration*
+*Because enumeration is key*
 <br>
 <br>
 

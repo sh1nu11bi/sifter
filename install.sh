@@ -12,6 +12,8 @@ echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Sifter is already installed."
+	echo -e "${RED}"
+	echo "Updating external dependancies."
 	echo -e "${NC}"
 else
 	pwd && cd ..
@@ -760,9 +762,9 @@ echo -e "${RED}"
 figlet "Done."
 echo -e "${NC}"
 sifter -h
-echo -e "${W}Please edit API keys in /opt/AttackSurfaceMapper/keylist.asm for a better range of scans &"
-echo -e "for better results in WPScan goto modules/wpscan.sh and add"
-echo -e " '--api-token <your-wpscan-api-token>' argument to both commands"
-echo -e "please add your shodan-api key to modules/credmods/xray.sh by 'SHODAN-API'${NC}"
+echo -e "${W}Please edit ${YLW}API keys in ${UBLUE}/opt/AttackSurfaceMapper/keylist.asm${NC} ${W}for a better range of scans &"
+echo -e "for better results in WPScan goto ${UBLUE}modules/wpscan.sh${NC} ${W}and add"
+echo -e " '${UBLUE}--api-token <${URED}your-wpscan-api-token${UBLUE}>${NC}${W}' argument to both commands"
+echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${W}'${NC}"
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
