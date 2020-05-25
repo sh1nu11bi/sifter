@@ -1067,11 +1067,7 @@ menu(){
     python3 extras/ban.py
     echo -e "${LP}"
     python3 extras/ban2.py
-<<<<<<< HEAD
     echo -e "${LBBLUE}==========Hit ${YLW}Ctrl + C${W} at any time to quit ${UPURPLE}Sifter${NC}${LBBLUE}==========${NC}"
-=======
-    echo -e "${W}===========Hit ${YLW}Ctrl + C${W} at any time to quit ${UPURPLE}Sifter${NC}${W}===========${NC}"
->>>>>>> master
     arg=$1
     echo -e "${ORNG}"
     PS3='What would you like to do?'
