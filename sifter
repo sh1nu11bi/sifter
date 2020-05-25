@@ -1067,7 +1067,6 @@ menu(){
     python3 extras/ban.py
     echo -e "${LP}"
     python3 extras/ban2.py
-    echo -e "${RED}////////////========${UPURPLE}7i7aN${URED}_(${UBLUE}v7${URED})${RED}========\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"
     echo -e "${W}======Hit ${YLW}Ctrl + C${W} at any time to quit ${UPURPLE}Sifter${NC}${W}======${NC}"
     arg=$1
     echo -e "${ORNG}"
@@ -1272,7 +1271,7 @@ while getopts "a:wandwirmepcvuhz" options; do            	# Loop: Get the next o
             ;;
 
         m)
-	    echo -e "${LP}"
+	    echo -e "${INV}${LGRY}"
 	    python3 extras/ban.py
             echo -e "${RED}"
             figlet -f mini "Modules"
