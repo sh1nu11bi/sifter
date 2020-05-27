@@ -143,7 +143,8 @@ instead of http://target.com
 	# HoneyPot Detection Systems
 		-HoneyCaught - https://github.com/aswinmguptha/HoneyCaught
 		-SniffingBear - https://github.com/MrSuicideParrot/SniffingBear
-
+		-HoneyTel (telnet-iot-honeypot) - https://github.com/Phype/telnet-iot-honeypot
+		
 
 	# Vulnerability Scanners
 		-Flan - https://github.com/cloudflare/flan

