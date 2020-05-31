@@ -6,7 +6,7 @@ W='\033[1;37m'
 INV='\e[7m'
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker graphviz kdialog python-dev libmysqlclient-dev python-mysqldb git sqlite3 nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom
+sudo apt-get install -y python wmdocker graphviz kdialog python-dev libmysqlclient-dev python-mysqldb git sqlite3 nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack.so.3 python-numpy
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
@@ -446,7 +446,7 @@ echo -e "${W}===================================================================
 echo -e "${YLW}Checking for Seeker${NC}"
 if [[ -d '/opt/seeker' ]]; then
 	echo -e "${ORNG}"
-	figlet -f mini "Sherlock is already installed"
+	figlet -f mini "Seeker is already installed"
 	echo -e "${NC}"
 	cd /opt/seeker
 	sudo git fetch && sudo git pull
