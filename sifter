@@ -352,7 +352,7 @@ post_ex(){
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
     PS3='What tool would you like to use?'
-        options=("EoP Exploit" "Omega" "WinPwn" "CredHarvester" "Back")
+        options=("EoP Exploit" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -369,6 +369,11 @@ post_ex(){
                 "WinPwn")
                     echo -e "${W}This module checks for internal system privilege escalation methods that could be used to elevate user privs${NC}"
                     ./modules/postex/winpwn.sh
+                    ;;
+
+                "PowerSharp")
+                    echo -e "${W}This is a ${YLW}PowerShell${W} tool that is to be used on an exploited system${NC}"
+                    xterm -e bash /opt/sifter/modules/postex/powersharp.sh
                     ;;
 
                 "CredHarvester")

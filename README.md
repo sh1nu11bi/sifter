@@ -113,6 +113,8 @@ instead of http://target.com
 	   	  -Omega - https://github.com/entynetproject/omega
 	  	  -WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
 		  -CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
+		  -PowerSharp - https://github.com/S3cur3Th1sSh1t/PowerSharpPack
+		  
 		
 	    =FuzzyDander - Equation Group, Courtesy of the Shadow Brokers 
 	   	 (Obtained through issue request.)
