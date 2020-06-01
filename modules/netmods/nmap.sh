@@ -2,7 +2,16 @@
 ORNG='\033[0;33m'
 NC='\033[0m'
 W='\033[1;37m'
+LP='\033[1;35m'
+YLW='\033[1;33m'
 LBBLUE='\e[104m'
+RED='\033[0;31m'
+LGRY='\033[0;37m'
+INV='\e[7m'
+BRED='\033[1;31m'
+UPURPLE='\033[4;35m'
+UBLUE='\033[4;34m'
+URED='\033[4;31m'
 multi() {
 	options=("Full Port" "Common Vulnerabilities" "UDP Port Scan" "Back")
 		select opts in "${options[@]}"
@@ -15,8 +24,9 @@ multi() {
 					read REPLY
 					if [[ $REPLY == y ]]; then
 						echo -e "${YLW}"
-						sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
+						xterm -e sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
 						echo -e "${NC}"
+						echo -e "${RED}*${YLW}You can goto ${LP}Pass Time${YLW} in the module menu to kill some time while you wait${NC}"
 						sleep 5
 						cd /opt/sifter
 						sifter -m
@@ -28,7 +38,7 @@ multi() {
 
 				"Common Vulnerabilities")
 					echo -e "${YLW}"
-					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
+					xterm -e sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
 					echo -e "${NC}"
 					sleep 5
 					cd /opt/sifter
@@ -37,7 +47,7 @@ multi() {
 
 				"UDP Port Scan")
 					echo -e "${YLW}"
-					sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
+					xterm -e sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
 					echo -e "${NC}"
 					sleep 5
 					cd /opt/sifter
@@ -67,7 +77,7 @@ single() {
 						echo -e "${W}Please copy and paste in your target${NC}"
 						read TARGET
 						echo "================================================================================================="
-						sudo nmap -p- -Pn -O -A ${TARGET}
+						xterm -e sudo nmap -p- -Pn -O -A ${TARGET}
 						echo "================================================================================================="
 						cd /opt/sifter
 						sifter -m
@@ -83,7 +93,7 @@ single() {
 					echo -e "${W}Please copy and paste in your target${NC}"
 					read TARGET
 					echo "================================================================================================="
-					sudo nmap -sS -Pn -O -A -sV ${TARGET}
+					xterm -e udo nmap -sS -Pn -O -A -sV ${TARGET}
 					echo "================================================================================================="
 					cd /opt/sifter
 					sifter -m
@@ -96,7 +106,7 @@ single() {
 					echo -e "${W}Please copy and paste in your target${NC}"
 					read TARGET
 					echo "================================================================================================="
-					sudo nmap -sU -Pn -O -A ${TARGET}
+					xterm -e sudo nmap -sU -Pn -O -A ${TARGET}
 					echo "================================================================================================="
 					cd /opt/sifter
 					sifter -m

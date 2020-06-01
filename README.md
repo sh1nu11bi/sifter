@@ -24,6 +24,11 @@
 	
 		+Mentalist - Sophisticated Graphical password list generator
 		+DCipher - Password Hash decryptor using online rainbow tables
+		+PowerSharp - PowerShell post-exploitation script used from within a target session.
+		+HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
+
+		=Web Games to kill time during long scans such as nMap (all ports), RapidScan
+
 
 # Overview
 

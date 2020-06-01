@@ -1,6 +1,5 @@
 Telnet IoT honeypot
-
-'Python telnet honeypot for catching botnet binaries'
+*'Python telnet honeypot for catching botnet binaries'*
 
 ! This project implements a python telnet server trying to act as a honeypot for IoT Malware which spreads over horribly insecure default passwords on telnet servers on the internet.
 ! The honeypot works by emulating a shell enviroment, just like cowrie (https://github.com/micheloosterhof/cowrie). The aim of this project is primarily to automatically analyse Botnet connections and "map" Botnets by linking diffrent connections and even Networks together.

@@ -839,7 +839,7 @@ modules(){
     echo -e "${URED}Modules${NC}"
     echo -e "${ORNG}"
     PS3='What would you like to do?'
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Main Menu" "Module Info" "Quit")
+            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Main Menu" "Module Info" "Pass Time" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -891,6 +891,10 @@ modules(){
                                 menu
                                 ;;
 
+                            "Pass Time")
+                                firefox https://github.blog/2020-05-15-ludum-dare-46-staff-picks/ &
+                                ;;
+                                
                             "Quit")
                                 exit 2
                                 ;;

