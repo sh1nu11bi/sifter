@@ -352,7 +352,7 @@ post_ex(){
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
     PS3='What tool would you like to use?'
-        options=("EoP Exploit" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "Back")
+        options=("EoP Exploit" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "ACLight2" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -380,10 +380,16 @@ post_ex(){
                     echo -e "${W}Python3 tool to gather credentials on a successfully infultrated machine${NC}"
                     ./modules/postex/credharvester.sh
                     ;;
+                
+                "ACLight2")
+                    echo -e "${W}This tool is used on an exploited target in order \nto search for Shadow Admins${NC}"
+                    ./modules/postex/aclight.sh
+                    ;;
 
                 "Back")
                     ex_mods
                     ;;
+
             esac
         done
     echo -e "${NC}"
@@ -914,7 +920,7 @@ main_info(){
     echo -e "${URED}Info${NC}"
     echo -e "${LGRY}"
     PS3='Which Module would you like info for?'
-            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "HoneyTel" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "SayDog" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "WinPwn" "PHPSploit" "CredNinja" "VulnX" "Module Menu" "Main Menu")
+            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "HoneyTel" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "SayDog" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "WinPwn" "PHPSploit" "CredNinja" "VulnX" "ACLight" "Module Menu" "Main Menu")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -1068,6 +1074,11 @@ main_info(){
                             cat /opt/sifter/info/vulnx.info
                             ;;
 
+                        "ACLight")
+                            kdialog --geometry 600x800 --textbox /opt/sifter/info/aclight.info
+                            cat /opt/sifter/info/aclight.info
+                            ;;
+
                         "Module Menu")
                             modules
                             ;;
@@ -1081,7 +1092,6 @@ main_info(){
     echo -e "${NC}"
 }
 # Menu
-# shellcheck disable=SC2120
 menu(){
      if [[ -d "/opt/sifter/results" ]]; then
         sleep 1

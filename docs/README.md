@@ -5,7 +5,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-7.2-red">
 	<img align="center" src="https://img.shields.io/badge/Revision-1-green"
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
@@ -13,12 +13,9 @@
 </p>
 
 # *Sifter*
-
-<p style="color: #77b300">
-<em><strong>s1l3nt78</strong>
+<strong><em>s1l3nt78</em></strong>
 <br>
-Because the first step, is enumeration</em>
-</p>
+*Because enumeration is key*
 <br>
 <br>
 
@@ -30,8 +27,10 @@ Because the first step, is enumeration</em>
 		+DCipher - Password Hash decryptor using online rainbow tables
 		+PowerSharp - PowerShell post-exploitation script used from within a target session.
 		+HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
+		+ACLight2 - Used to discover Shadow Admin accounts on an exploited system
 
 		=Web Games to kill time during long scans such as nMap (all ports), RapidScan
+
 
 # Overview
 
@@ -45,11 +44,10 @@ Gathered info is saved to the results folder, these output files can be easily p
 <a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a> - Its long, but you can skip through to get the general idea.
 <br>
 Most modules are explained along with demos of a lot of the tools
-
-
+<br>
 # Releases
-
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v6.6.1.zip"><strong>here</strong></a></em>
+<br>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v7.2.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -62,11 +60,6 @@ eg. target.com
 instead of http://target.com
 <br>
 <br>
-
-# Please, if you fork this repo ensure to keep it updated.
-<br>
-<br />
-
 
 # Installation:
 
@@ -103,12 +96,12 @@ instead of http://target.com
 		-SayDog - https://github.com/saydog/saydog-framework
 
 	# Exploitation Tools
-	  = MS Exploiters
+	  	= MS Exploiters
 		  -ActiveReign - https://github.com/m8r0wn/ActiveReign
 		  -iSpy - https://github.com/Cyb0r9/ispy
 		  -SMBGhost - https://github.com/gabimarti/SMBScanner
 
-	  = Website Exploiters
+	  	= Website Exploiters
 		  -DDoS
 			---Dark Star - https://github.com/s1l3nt78/Dark-Star
 			---Impulse - https://github.com/LimerBoy/Impulse
@@ -116,11 +109,11 @@ instead of http://target.com
 		  -xShock - https://github.com/capture0x/XSHOCK
 		  -VulnX - https://github.com/anouarbensaad/vulnx
 
-	= Exploit Searching
+		= Exploit Searching
 		  -FindSploit - https://github.com/1N3/Findsploit
 		  -ShodanSploit - https://github.com/shodansploit/shodansploit
 
-	-TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
+	   	-TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
 	
 		= Post-Exploitation
 	   	  -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
@@ -128,6 +121,7 @@ instead of http://target.com
 	  	  -WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
 		  -CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
 		  -PowerSharp - https://github.com/S3cur3Th1sSh1t/PowerSharpPack
+		  -ACLight2 - https://github.com/cyberark/ACLight
 		  
 		
 	    =FuzzyDander - Equation Group, Courtesy of the Shadow Brokers 
@@ -138,9 +132,9 @@ instead of http://target.com
 	    =BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
 
 	# Password Tools
-	    -Mentalist - https://github.com/sc0tfree/mentalist
-	    -DCipher - https://github.com/k4m4/dcipher
-
+		-Mentalist - https://github.com/sc0tfree/mentalist
+		-DCipher - https://github.com/k4m4/dcipher
+	
 	# Network Scanners
 		-Nmap - https://nmap.org
 		-AttackSurfaceMapper - https://github.com/superhedgy/AttackSurfaceMapper
@@ -152,7 +146,7 @@ instead of http://target.com
 		-HoneyCaught - https://github.com/aswinmguptha/HoneyCaught
 		-SniffingBear - https://github.com/MrSuicideParrot/SniffingBear
 		-HoneyTel (telnet-iot-honeypot) - https://github.com/Phype/telnet-iot-honeypot
-
+		
 
 	# Vulnerability Scanners
 		-Flan - https://github.com/cloudflare/flan
@@ -177,6 +171,11 @@ instead of http://target.com
 		  -Dirb
 		  -DorksEye - https://github.com/BullsEye0/dorks-eye
 
+	# Web Mini-Games
+		  -This was added in order to have a fun way to pass time
+		   during the more time intensive modules.
+		   Such as nMap Full Port scan or a RapidScan run.
+		   
 
 # Sifter Help Menu
 
@@ -199,6 +198,8 @@ instead of http://target.com
   $ sifter	-w Opens the Website Focused Modules
   <br>
   $ sifter	-wa Opens the Web-App Focused Module menu
+  <br>
+  $ sifter  -p opens the password tools for quick passlist generation or hash decryption
   <br>
   $ sifter	-v Opens the Vulnerability Scanning Module Menu
   <br>
@@ -228,4 +229,4 @@ For ideas or collaboration requests on future projects., contact details can be 
 <br />
 <br />
 
-		  <!--#######_____ czFsM250NzggX18gUmFiYjE3J3MgRGVu _____#######-->
+	  <!--####################___________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ___________####################-->

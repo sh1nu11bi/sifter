@@ -5,7 +5,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-7.2-red">
 	<img align="center" src="https://img.shields.io/badge/Revision-1-green"
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
@@ -27,6 +27,7 @@
 		+DCipher - Password Hash decryptor using online rainbow tables
 		+PowerSharp - PowerShell post-exploitation script used from within a target session.
 		+HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
+		+ACLight2 - Used to discover Shadow Admin accounts on an exploited system
 
 		=Web Games to kill time during long scans such as nMap (all ports), RapidScan
 
@@ -46,7 +47,7 @@ Most modules are explained along with demos of a lot of the tools
 <br>
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v6.6.1.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v7.2.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -120,6 +121,7 @@ instead of http://target.com
 	  	  -WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
 		  -CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
 		  -PowerSharp - https://github.com/S3cur3Th1sSh1t/PowerSharpPack
+		  -ACLight2 - https://github.com/cyberark/ACLight
 		  
 		
 	    =FuzzyDander - Equation Group, Courtesy of the Shadow Brokers 
@@ -169,6 +171,11 @@ instead of http://target.com
 		  -Dirb
 		  -DorksEye - https://github.com/BullsEye0/dorks-eye
 
+	# Web Mini-Games
+		  -This was added in order to have a fun way to pass time
+		   during the more time intensive modules.
+		   Such as nMap Full Port scan or a RapidScan run.
+		   
 
 # Sifter Help Menu
 
