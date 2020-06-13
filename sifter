@@ -31,11 +31,11 @@ usage() {                                    	  # Function: Print a help message
 	echo "# sifter -w Opens the Website Focused Modules"
 	echo "# sifter -wa Opens the Web-App Focused Module menu"
 	echo "# sifter -v Opens the Vulnerability Scanning Module Menu"
-        echo "# sifter -m Opens the Module Menu directly"
-        echo "# sifter -p opens the password tools for quick passlist generation or hash decryption"
+    echo "# sifter -m Opens the Module Menu directly"
+    echo "# sifter -p opens the password tools for quick passlist generation or hash decryption"
 	echo "# sifter -r opens the results folder for viewing of files or photos"
-        echo "# sifter -u Checks for any updates on Github"
-        echo "# sifter -z Opens the Module Information Menu"
+    echo "# sifter -u Checks for any updates on Github"
+    echo "# sifter -z Opens the Module Information Menu"
 	echo "# sifter -h This Help Menu" 1>&2
 }
 # Information Modules
@@ -892,9 +892,16 @@ modules(){
                                 ;;
 
                             "Pass Time")
-                                firefox https://github.blog/2020-05-15-ludum-dare-46-staff-picks/ &
+                                echo -e "${RED}This module is to pass some time during long scans \nsuch as nMap (Full Port Scan) or RapidScan${NC}"
+                                echo -e "${W}Would you like to continue? (${YLW}y${W}/${YLW}n${W})"
+                                read PTOPT
+                                if [[ ${PTOPT} == 'y' ]]; then
+                                    firefox https://github.blog/2020-05-15-ludum-dare-46-staff-picks &
+                                else
+                                    modules
+                                fi
                                 ;;
-                                
+
                             "Quit")
                                 exit 2
                                 ;;
