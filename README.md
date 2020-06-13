@@ -7,7 +7,7 @@
 <br>
   	<img align="center" src="https://img.shields.io/badge/Version-7-red">
 	<img align="center" src="https://img.shields.io/badge/Revision-1-green"
-	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
+	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellow">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
 </p>
