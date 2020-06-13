@@ -6,7 +6,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
   	<img align="center" src="https://img.shields.io/badge/Version-7.2-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-1-green"
+	<img align="center" src="https://img.shields.io/badge/Revision-1-green">
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
@@ -175,7 +175,7 @@ instead of http://target.com
 		  -This was added in order to have a fun way to pass time
 		   during the more time intensive modules.
 		   Such as nMap Full Port scan or a RapidScan run.
-		   
+
 
 # Sifter Help Menu
 

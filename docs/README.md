@@ -6,7 +6,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
   	<img align="center" src="https://img.shields.io/badge/Version-7.2-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-1-green"
+	<img align="center" src="https://img.shields.io/badge/Revision-1-green">
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
