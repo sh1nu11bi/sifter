@@ -81,6 +81,25 @@ sudo service docker start
 		sudo chmod +x maryam
 	fi
 
+	#
+	# 4 # DnsTwist
+	#
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for DnsTwist${NC}"
+	if [[ -d /opt/dnstwist ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "DnsTwist is already installed."
+		echo -e "${NC}"
+		cd /opt/dnstwist
+		sudo git fetch && sudo git pull
+	else
+		cd /opt
+		sudo git clone https://github.com/elceef/dnstwist.git
+		cd dnstwist
+		sudo apt-get install libgeoip-dev libffi-dev
+		sudo BUILD_LIB=1 pip install -r requirements.txt
+	fi
+}
 #
 # 3 # HoneyCaught
 #
