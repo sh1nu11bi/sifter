@@ -34,16 +34,7 @@ fi
 #echo -e "${URED}Fixing Python2 pip issues for install${NC}"
 # shellcheck disable=SC2164
 cd /opt
-#sudo apt-get remove python3-pip
-#sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip_18.1-5_all.deb
-#sudo wget http://ftp.us.debian.org/debian/pool/main/p/python-pip/python-pip-whl_18.1-5_all.deb
-#sudo dpkg -i python-pip-whl_18.1-5_all.deb
-#sudo dpkg -i python-pip_18.1-5_all.deb
-sudo python2 -m pip install setuptools
-sudo python2 -m pip install wheel
-sudo python2 -m pip install --upgrade pip
-sudo apt-get install python-wheel-common
-sudo python2 -m pip install build_install_wheels
+
 
 echo -e "${RED}Checking for external dependencies${NC}"
 sudo service docker start
@@ -525,13 +516,13 @@ else
 fi
 
 #
-# 28 # SMBGhost
+# 28 # SMBGhost Scanner
 #
 echo -e "${W}===========================================================================================${NC}"
-echo -e "${YLW}Checking for SMBGhost${NC}"
+echo -e "${YLW}Checking for SMBGhost Scanner${NC}"
 if [[ -d '/opt/SMBGhost' ]]; then
 	echo -e "${ORNG}"
-	figlet -f mini "SMBGhost is already installed"
+	figlet -f mini "SMBGhost Scanner is already installed"
 	echo -e "${NC}"
 	cd /opt/SMBGhost
 	sudo git fetch && sudo git pull
@@ -540,6 +531,21 @@ else
 	sudo apt-get install python3-pip
 	sudo git clone https://github.com/ioncodes/SMBGhost.git
 	sudo python3 -m pip install hexdump
+fi
+
+#
+# 28.1 # SMBGhost Exploit
+#
+echo -e "${YLW}Checking for SMBGhost Exploit${NC}"
+if [[ -d '/opt/SMBGhost_RCE_PoC' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "SMBGhost Exploit is already installed"
+	echo -e "${NC}"
+	cd /opt/SMBGhost_RCE_PoC
+	sudo git fetch && sudo git pull
+else
+	cd /opt/
+	sudo git clone https://github.com/chompie1337/SMBGhost_RCE_PoC.git
 fi
 
 #
