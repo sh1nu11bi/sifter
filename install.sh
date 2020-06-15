@@ -15,8 +15,6 @@ echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Sifter is already installed."
-	echo -e "${RED}"
-	echo "Updating external dependancies."
 	echo -e "${NC}"
 else
 	pwd && cd ..
@@ -29,6 +27,9 @@ else
 	sleep 2
 fi
 
+echo -e "${RED}"
+echo -e "Starting Download & Update of external dependancies.\nThis will take some time"
+echo -e "${YLW}When ready please hit enter${NC}"
 
 #######################################__Python2 Tools__#######################################################
 #
