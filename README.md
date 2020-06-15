@@ -6,7 +6,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
   	<img align="center" src="https://img.shields.io/badge/Version-7.2-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-1-green">
+	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
@@ -23,11 +23,9 @@
 
 	Addition of Password orientated tools.
 	
-		+Mentalist - Sophisticated Graphical password list generator
-		+DCipher - Password Hash decryptor using online rainbow tables
-		+PowerSharp - PowerShell post-exploitation script used from within a target session.
 		+HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
 		+ACLight2 - Used to discover Shadow Admin accounts on an exploited system
+		+SMBGhost - Now has a scanner, as well as an exploitative option.
 
 		=Web Games to kill time during long scans such as nMap (all ports), RapidScan
 
@@ -99,12 +97,14 @@ instead of http://target.com
 	  	= MS Exploiters
 		  -ActiveReign - https://github.com/m8r0wn/ActiveReign
 		  -iSpy - https://github.com/Cyb0r9/ispy
-		  -SMBGhost - https://github.com/gabimarti/SMBScanner
+		  -SMBGhost
+		  	--SMBGhost Scanner - https://github.com/ioncube/SMBGhost
+		  	--SMBGhost Exploit - https://github.com/chompie1337/SMBGhost_RCE_PoC
 
 	  	= Website Exploiters
 		  -DDoS
-			---Dark Star - https://github.com/s1l3nt78/Dark-Star
-			---Impulse - https://github.com/LimerBoy/Impulse
+			--Dark Star - https://github.com/s1l3nt78/Dark-Star
+			--Impulse - https://github.com/LimerBoy/Impulse
 		  -NekoBot - https://github.com/tegal1337/NekoBotV1
 		  -xShock - https://github.com/capture0x/XSHOCK
 		  -VulnX - https://github.com/anouarbensaad/vulnx
@@ -166,7 +166,7 @@ instead of http://target.com
 		  -Blackwidow - https://github.com/1N3/blackwidow
 		  -Wordpress
 		  	---WPScan - https://github.com/wpscanteam/wpscan
-		  	----WPForce/Yertle - https://github.com/n00py/WPForce
+		  	---WPForce/Yertle - https://github.com/n00py/WPForce
 		  -Zeus-Scanner - https://github.com/Ekultek/Zeus-Scanner
 		  -Dirb
 		  -DorksEye - https://github.com/BullsEye0/dorks-eye
