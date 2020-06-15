@@ -6,7 +6,7 @@ W='\033[1;37m'
 INV='\e[7m'
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker graphviz kdialog python-dev libmariadb-dev git libsqlite3-0 sqlite3 nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy
+sudo apt-get install -y python wmdocker graphviz kdialog python-dev libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy # sqlite3
 wget http://ftp.us.debian.org/debian/pool/main/p/python-mysqldb/python-mysqldb_1.3.10-2_amd64.deb
 sudo dpkg -i python-mysqldb_1.3.10-2_amd64.deb
 rm python-mysqldb_1.3.10-2_amd64.deb
