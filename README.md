@@ -51,13 +51,11 @@ Most modules are explained along with demos of a lot of the tools
 <br>
 <br>
 
-# NOTE!! IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
-<br>
-eg. target.com
-<br>
-instead of http://target.com
-<br>
-<br>
+# NOTE!! 
+
+ IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
+ eg. target.com - instead of http://target.com
+
 
 # Installation:
 
