@@ -54,7 +54,8 @@ Most modules are explained along with demos of a lot of the tools
 
 # NOTE!! 
 
- IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
+ If a scan does not work correctly at first, remove web-protocol from target.
+ <br>
  eg. target.com - instead of http://target.com
 
 
