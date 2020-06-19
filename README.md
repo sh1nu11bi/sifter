@@ -20,10 +20,11 @@
 <br>
 
 # Version 7 Release
-- #Codename: 7i7aN
+
+	#Codename: 7i7aN
 
 
-Additions:
+# Additions:
 
 - HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
 - ACLight2 - Used to discover Shadow Admin accounts on an exploited system
