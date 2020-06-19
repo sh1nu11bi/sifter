@@ -20,15 +20,17 @@
 <br>
 
 # Version 7 Release
-# Codename: 7i7aN
 
-	Addition of Password orientated tools.
-	
-		+HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
-		+ACLight2 - Used to discover Shadow Admin accounts on an exploited system
-		+SMBGhost - Now has a scanner, as well as an exploitative option.
+	#Codename: 7i7aN
 
-		=Web Games to kill time during long scans such as nMap (all ports), RapidScan
+
+# Additions:
+
+- HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
+- ACLight2 - Used to discover Shadow Admin accounts on an exploited system
+- SMBGhost - Now has a scanner, as well as an exploitative option.
+
+- Web Games to kill time during long scans such as nMap (all ports), RapidScan
 
 
 # Overview
