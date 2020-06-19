@@ -525,7 +525,7 @@ search_tools(){
                         ;;
 
                     "Quit")
-                        exit 2
+                        exit
                         ;;
 
                 esac
@@ -584,7 +584,7 @@ ms_tools(){
                                 ;;
 
                            "Quit")
-                                exit 2
+                                exit
                                 ;;
                 esac
         done
@@ -652,7 +652,7 @@ webex(){
                         ;;
 
                     "Quit")
-                        exit 2
+                        exit
                         ;;
                 esac
         done
@@ -690,7 +690,7 @@ webapps(){
                             ;;
 
                         "Quit")
-                            exit 2
+                            exit
                             ;;
                 esac
         done
@@ -909,7 +909,7 @@ modules(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exit
                                 ;;
                     esac
             done
@@ -1199,7 +1199,7 @@ update(){
 }
 
 cd /opt/sifter
-while getopts "a:wandwirmepcvuhz" options; do            	# Loop: Get the next option;
+while getopts "a:bndwirmepcvuhz" options; do            	# Loop: Get the next option;
 	case "${options}" in                                	# use silent error checking;
                                                             # option a takes 1 arguments.
 		c)
@@ -1259,9 +1259,9 @@ while getopts "a:wandwirmepcvuhz" options; do            	# Loop: Get the next o
 			vuln_mods
 			;;
 
-		wa)
+		b)
 			echo -e "${LP}"
-			figlet -f mini "Web-App Testers"
+			figlet -f mini "Web-Application Testers"
 			echo -e "${NC}"
 			webapps
 			;;
