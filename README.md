@@ -21,7 +21,7 @@
 
 # Version 7 Release
 
-	#Codename: 7i7aN
+	@Codename: 7i7aN
 
 
 # Additions:
