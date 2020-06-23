@@ -19,19 +19,19 @@
 <br>
 <br>
 
-# Version 7 Release
+# Version 7.4 Release
 
 	@Codename: 7i7aN
 
 
 # Additions:
 
+- MkCheck - MikroTik Router Exploitation Framework.
+- RouterSploit - Network Router Exploitation Framework.
+- XSStrike - Cross Site Scripting detection suite.
 - HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
-- ACLight2 - Used to discover Shadow Admin accounts on an exploited system
+- ACLight2 - Used to discover Shadow Admin accounts on an exploited system.
 - SMBGhost - Now has a scanner, as well as an exploitative option.
-
-- Web Games to kill time during long scans such as nMap (all ports), RapidScan
-
 
 # Overview
 
@@ -95,6 +95,10 @@ Most modules are explained along with demos of a lot of the tools
 		-Armory - https://github.com/depthsecurity/armory
 		-SayDog - https://github.com/saydog/saydog-framework
 
+	# Router Tools
+		-MkCheck - https://github.com/s1l3nt78/MkCheck
+		-RouterSploit - https://github.com/threat9/routersploit
+		
 	# Exploitation Tools
 	  	= MS Exploiters
 		  -ActiveReign - https://github.com/m8r0wn/ActiveReign
