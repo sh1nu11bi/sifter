@@ -24,7 +24,7 @@ multi() {
 					read REPLY
 					if [[ $REPLY == y ]]; then
 						echo -e "${YLW}"
-						xterm -e sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
+						sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
 						echo -e "${NC}"
 						echo -e "${RED}*${YLW}You can goto ${LP}Pass Time${YLW} in the module menu to kill some time while you wait${NC}"
 						sleep 5
@@ -38,7 +38,7 @@ multi() {
 
 				"Common Vulnerabilities")
 					echo -e "${YLW}"
-					xterm -e sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
+					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
 					echo -e "${NC}"
 					sleep 5
 					cd /opt/sifter
@@ -47,7 +47,7 @@ multi() {
 
 				"UDP Port Scan")
 					echo -e "${YLW}"
-					xterm -e sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
+					sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
 					echo -e "${NC}"
 					sleep 5
 					cd /opt/sifter
@@ -77,7 +77,7 @@ single() {
 						echo -e "${W}Please copy and paste in your target${NC}"
 						read TARGET
 						echo "================================================================================================="
-						xterm -e sudo nmap -p- -Pn -O -A ${TARGET}
+						sudo nmap -p- -Pn -O -A ${TARGET}
 						echo "================================================================================================="
 						cd /opt/sifter
 						sifter -m
@@ -93,7 +93,7 @@ single() {
 					echo -e "${W}Please copy and paste in your target${NC}"
 					read TARGET
 					echo "================================================================================================="
-					xterm -e udo nmap -sS -Pn -O -A -sV ${TARGET}
+					sudo nmap -sS -Pn -O -A -sV ${TARGET}
 					echo "================================================================================================="
 					cd /opt/sifter
 					sifter -m
@@ -106,7 +106,7 @@ single() {
 					echo -e "${W}Please copy and paste in your target${NC}"
 					read TARGET
 					echo "================================================================================================="
-					xterm -e sudo nmap -sU -Pn -O -A ${TARGET}
+					sudo nmap -sU -Pn -O -A ${TARGET}
 					echo "================================================================================================="
 					cd /opt/sifter
 					sifter -m

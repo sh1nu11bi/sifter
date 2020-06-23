@@ -834,7 +834,7 @@ sudo service docker start
 39(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for HoneyTel${NC}"
-	if [[ -f '/opt/HoneyTel' ]]; then
+	if [[ -d '/opt/HoneyTel' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "HoneyTel is already installed"
 		echo -e "${NC}"
@@ -850,15 +850,46 @@ sudo service docker start
 40(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for XSStrike${NC}"
-	if [[ -f '/opt/XSStrike' ]]; then
+	if [[ -d '/opt/XSStrike' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "XSStrike is already installed"
 		echo -e "${NC}"
+		cd /opt/XSStrike
+		sudo git fetch && sudo git pull
 	else
 		cd /opt
 		sudo git clone https://github.com/s0md3v/XSStrike
 		sudo python3 -m pip install -r requirements.txt
 	fi
+}
+
+#
+# 41 # MkCheck
+#
+41-2(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for MkCheck${NC}"
+	if [[ -d '/opt/MkCheck' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "MkCheck is already installed"
+		echo -e "${NC}"
+		cd /opt/MkCheck
+		sudo ./mkcheck -u
+	else
+		cd /opt
+		sudo git clone https://github.com/s1l3nt78/MkCheck.git
+		cd MkCheck
+		sudo bash setup.sh
+	fi
+}
+
+#
+# 42 # RouterSploit Update
+#
+42(){
+	echo -e "${YLW}Updating RouterSploit${NC}"
+	cd /root/routersploit 
+	sudo git fetch && sudo git pull
 }
 
 ############################################################################################################
@@ -906,6 +937,8 @@ sudo service docker start
 38
 39
 40
+41
+42
 #
 ## Move Sifter executable to local path (/usr/sbin)
 #
