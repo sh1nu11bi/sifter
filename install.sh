@@ -844,6 +844,22 @@ sudo service docker start
 	fi
 }
 
+#
+# 40 # XSStrike
+#
+40(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for XSStrike${NC}"
+	if [[ -f '/opt/XSStrike' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "XSStrike is already installed"
+		echo -e "${NC}"
+	else
+		cd /opt
+		sudo git clone https://github.com/s0md3v/XSStrike
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
 
 ############################################################################################################
 #									   ######################											   #
@@ -889,6 +905,7 @@ sudo service docker start
 37
 38
 39
+40
 #
 ## Move Sifter executable to local path (/usr/sbin)
 #

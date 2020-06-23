@@ -5,8 +5,8 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7.2-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
+  	<img align="center" src="https://img.shields.io/badge/Version-7.4-red">
+<!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">-->
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
@@ -48,7 +48,7 @@ Most modules are explained along with demos of a lot of the tools
 <br>
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v7.2.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v7.4.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -161,6 +161,7 @@ Most modules are explained along with demos of a lot of the tools
 		  -OneFind - https://github.com/nyxgeek/onedrive_user_enum
 		  -AapFinder - https://github.com/Technowlogy-Pushpender/aapfinder
 		  -BFAC - https://github.com/mazen160/bfac
+		  -XSStrike - https://github.com/s0md3v/XSStrike
 
 
 	# Website Scanners & Enumerators

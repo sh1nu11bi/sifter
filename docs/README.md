@@ -5,8 +5,8 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7.2-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
+  	<img align="center" src="https://img.shields.io/badge/Version-7.4-red">
+<!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">-->
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
@@ -21,13 +21,16 @@
 
 # Version 7 Release
 
-	Addition of Password orientated tools.
-	
-		+HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
-		+ACLight2 - Used to discover Shadow Admin accounts on an exploited system
-		+SMBGhost - Now has a scanner, as well as an exploitative option.
+	@Codename: 7i7aN
 
-		=Web Games to kill time during long scans such as nMap (all ports), RapidScan
+
+# Additions:
+
+- HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
+- ACLight2 - Used to discover Shadow Admin accounts on an exploited system
+- SMBGhost - Now has a scanner, as well as an exploitative option.
+
+- Web Games to kill time during long scans such as nMap (all ports), RapidScan
 
 
 # Overview
@@ -45,19 +48,18 @@ Most modules are explained along with demos of a lot of the tools
 <br>
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v7.2.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v7.4.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
 <br>
 
-# NOTE!! IF A SCAN DOESN'T WORK PLEASE ENTER TARGET WITHOUT http:// protocol ADDED!!
-<br>
-eg. target.com
-<br>
-instead of http://target.com
-<br>
-<br>
+# NOTE!! 
+
+ If a scan does not work correctly at first, remove web-protocol from target.
+ <br>
+ eg. target.com - instead of http://target.com
+
 
 # Installation:
 
@@ -159,6 +161,7 @@ instead of http://target.com
 		  -OneFind - https://github.com/nyxgeek/onedrive_user_enum
 		  -AapFinder - https://github.com/Technowlogy-Pushpender/aapfinder
 		  -BFAC - https://github.com/mazen160/bfac
+		  -XSStrike - https://github.com/s0md3v/XSStrike
 
 
 	# Website Scanners & Enumerators
@@ -229,4 +232,4 @@ For ideas or collaboration requests on future projects., contact details can be 
 <br />
 <br />
 
-	  <!--####################___________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ___________####################-->
+	  <!--#################___________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ___________#################--!>
