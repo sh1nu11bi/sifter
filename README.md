@@ -5,7 +5,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7.4-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-7.5-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">-->
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
@@ -19,7 +19,7 @@
 <br>
 <br>
 
-# Version 7.4 Release
+# Version 7.5 Release
 
 	@Codename: 7i7aN
 
