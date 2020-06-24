@@ -45,7 +45,7 @@ sudo service docker start
 #
 # 1 # Sniffing Bear
 #
-1(){
+t1(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for SniffingBear${NC}"
 	if [[ -d '/opt/SniffingBear' ]]; then
@@ -64,7 +64,7 @@ sudo service docker start
 #
 # 2 # Maryam
 #
-2(){
+t2(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Maryam${NC}"
 	if [[ -d '/opt/Maryam' ]]; then
@@ -80,30 +80,11 @@ sudo service docker start
 		sudo pip install -r requirements
 		sudo chmod +x maryam
 	fi
-
-	#
-	# 4 # DnsTwist
-	#
-	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for DnsTwist${NC}"
-	if [[ -d /opt/dnstwist ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "DnsTwist is already installed."
-		echo -e "${NC}"
-		cd /opt/dnstwist
-		sudo git fetch && sudo git pull
-	else
-		cd /opt
-		sudo git clone https://github.com/elceef/dnstwist.git
-		cd dnstwist
-		sudo apt-get install libgeoip-dev libffi-dev
-		sudo BUILD_LIB=1 pip install -r requirements.txt
-	fi
 }
 #
 # 3 # HoneyCaught
 #
-3(){
+t3(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for HoneyCaught${NC}"
 	if [[ -d /opt/HoneyCaught ]]; then
@@ -123,7 +104,7 @@ sudo service docker start
 #
 # 4 # blackwidow
 #
-4(){
+t4(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Blackwidow${NC}"
 	if [[ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py ]] || [[ -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]]; then
@@ -144,7 +125,7 @@ sudo service docker start
 #
 # 5 # BFAC
 #
-5(){
+t5(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for BFAC${NC}"
 	if [[ -d '/opt/bfac' ]]; then
@@ -164,7 +145,7 @@ sudo service docker start
 #
 # 6 # RapidScan
 #
-6(){
+t6(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Rapidscan${NC}"
 	if [[ -f "/usr/sbin/rapidscan.py" ]] || [[ -d "/opt/rapidscan" ]]; then
@@ -185,7 +166,7 @@ sudo service docker start
 #
 # 7 # shodansploit
 #
-7(){
+t7(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for ShodanSploit${NC}"
 	if [[ -d "/opt/shodansploit" ]]; then
@@ -205,7 +186,7 @@ sudo service docker start
 #
 # 8 # Yuki-Chan
 #
-8(){
+t8(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Yuki-Chan${NC}"
 	if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
@@ -234,7 +215,7 @@ sudo service docker start
 #
 # 9 # ReconSpider 
 #
-9(){
+t9(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for ReconSpider${NC}"
 	if [[ -d "/opt/reconspider" ]]; then
@@ -254,7 +235,7 @@ sudo service docker start
 #
 # 10 # Zeus-Scanner
 #
-10(){
+t10(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Zeus${NC}"
 	if [[ -d '/opt/Zeus-Scanner' ]]; then
@@ -275,7 +256,7 @@ sudo service docker start
 #
 # 11 # Elevation of Privilege (Post-Ex)
 #
-11(){
+t11(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for EoP Exploit${NC}"
 	if [[ -d '/opt/CVE-2020-0683' ]]; then
@@ -294,7 +275,7 @@ sudo service docker start
 #
 # 12 # Flan 
 #
-12(){
+t12(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Flan${NC}"
 	if [[ -d /opt/flan ]]; then
@@ -316,7 +297,7 @@ sudo service docker start
 #
 # 13 # AttackSurfaceMapper
 #
-13(){
+t13(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Attack Surface Mapper${NC}"
 	if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
@@ -338,7 +319,7 @@ sudo service docker start
 #
 # 14 # ActiveReign 
 #
-14(){
+t14(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for ActiveReign${NC}"
 	if [[ -d '/opt/ActiveReign' ]]; then
@@ -367,7 +348,7 @@ sudo service docker start
 #
 # 15 # iSpy 
 #
-15(){
+t15(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for iSpy${NC}"
 	if [[ -d '/opt/ispy' ]]; then
@@ -388,7 +369,7 @@ sudo service docker start
 #
 # 16 # Sitadel 
 #
-16(){
+t16(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Sitadel${NC}"
 	if [[ -d '/opt/Sitadel' ]]; then
@@ -409,7 +390,7 @@ sudo service docker start
 #
 # 17 # Osmedeus 
 #
-17(){
+t17(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Osmedeus${NC}"
 	if [[ -d '/opt/docker-osmedeus' ]]; then
@@ -427,7 +408,7 @@ sudo service docker start
 #
 # 18 # NekoBot 
 #
-18(){
+t18(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for NekoBot${NC}"
 	if [[ -d '/opt/NekoBotV1' ]]; then
@@ -445,7 +426,7 @@ sudo service docker start
 #
 # 19 # aSnip
 #
-19(){
+t19(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Installing & Updating aSnip${NC}"
 	go get -u github.com/harleo/asnip
@@ -454,7 +435,7 @@ sudo service docker start
 #
 # 20 # Armory 
 #
-20(){
+t20(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Armory${NC}"
 	if [[ -d '/opt/armory' ]]; then
@@ -475,7 +456,7 @@ sudo service docker start
 #
 # 21 # Seeker 
 #
-21(){
+t21(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Seeker${NC}"
 	if [[ -d '/opt/seeker' ]]; then
@@ -496,7 +477,7 @@ sudo service docker start
 #
 # 22 # AapFinder 
 #
-22(){
+t22(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for AapFinder${NC}"
 	if [[ -d '/opt/aapfinder' ]]; then
@@ -518,7 +499,7 @@ sudo service docker start
 #
 # 23 # Dark-Star 
 #
-23(){
+t23(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Dark Star${NC}"
 	if [[ -d '/opt/Dark-Star' ]]; then
@@ -534,7 +515,7 @@ sudo service docker start
 #
 # 24 # BruteDUM 
 #
-24(){
+t24(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for BruteDUM${NC}"
 	if [[ -d '/opt/BruteDum' ]]; then
@@ -552,7 +533,7 @@ sudo service docker start
 #
 # 25 # OneFind 
 #
-25(){
+t25(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for OneFind${NC}"
 	if [[ -d '/opt/onedrive_user_enum' ]]; then
@@ -570,7 +551,7 @@ sudo service docker start
 #
 # 26 # SMBGhost Scanner & Exploit
 #
-26(){
+t26(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for SMBGhost Scanner${NC}"
 	if [[ -d '/opt/SMBGhost' ]]; then
@@ -602,7 +583,7 @@ sudo service docker start
 #
 # 27 # xRay 
 #
-27(){
+t27(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for xRay${NC}"
 	if [[ -d '/opt/xray' ]]; then
@@ -617,7 +598,7 @@ sudo service docker start
 #
 # 28 # WPForce 
 #
-28(){
+t28(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for WPForce${NC}"
 	if [[ -d '/opt/WPForce' ]]; then
@@ -635,7 +616,7 @@ sudo service docker start
 #
 # 29 # xShock 
 #
-29(){
+t29(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for xShock${NC}"
 	if [[ -d '/opt/XSHOCK' ]]; then
@@ -655,7 +636,7 @@ sudo service docker start
 #
 # 30 # VulnX
 #
-30(){
+t30(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for VulnX${NC}"
 	if [[ -d '/opt/vulnx' ]]; then
@@ -702,7 +683,7 @@ sudo service docker start
 #
 # 32 # CredNinja
 #
-32(){
+t32(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for CredNinja${NC}"
 	if [[ -d '/opt/CredNinja' ]]; then
@@ -720,7 +701,7 @@ sudo service docker start
 #
 # 33 # Impulse
 #
-33(){
+t33(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Impulse${NC}"
 	if [[ -d '/opt/Impulse' ]]; then
@@ -740,7 +721,7 @@ sudo service docker start
 #
 # 34 # CredsHarvester
 #
-34(){
+t34(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for CredsHarvester${NC}"
 	if [[ -d '/opt/creds_harvester' ]]; then
@@ -763,7 +744,7 @@ sudo service docker start
 #
 # 35 # SayDog
 #
-35(){
+t35(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for SayDog${NC}"
 	if [[ -d '/opt/saydog-framework' ]]; then
@@ -783,7 +764,7 @@ sudo service docker start
 #
 # 36 # Dorks-Eye
 #
-36(){
+t36(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for DorksEye${NC}"
 	if [[ -d '/opt/dorks-eye' ]]; then
@@ -803,7 +784,7 @@ sudo service docker start
 #
 # 37 # Mentalist
 # 
-37(){
+t37(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Mentalist${NC}"
 	if [[ -f '/opt/sifter/modules/passtools/Mentalist' ]]; then
@@ -821,7 +802,7 @@ sudo service docker start
 #
 # 38 # DCipher
 # 
-38(){
+t38(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Installing & updating DCipher${NC}"
 	sudo npm install dcipher
@@ -831,7 +812,7 @@ sudo service docker start
 #
 # 39 # HoneyTel
 #
-39(){
+t39(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for HoneyTel${NC}"
 	if [[ -d '/opt/HoneyTel' ]]; then
@@ -847,7 +828,7 @@ sudo service docker start
 #
 # 40 # XSStrike
 #
-40(){
+t40(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for XSStrike${NC}"
 	if [[ -d '/opt/XSStrike' ]]; then
@@ -866,7 +847,7 @@ sudo service docker start
 #
 # 41 # MkCheck
 #
-41-2(){
+t41(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for MkCheck${NC}"
 	if [[ -d '/opt/MkCheck' ]]; then
@@ -886,7 +867,7 @@ sudo service docker start
 #
 # 42 # RouterSploit Update
 #
-42(){
+t42(){
 	echo -e "${YLW}Updating RouterSploit${NC}"
 	cd /root/routersploit 
 	sudo git fetch && sudo git pull
@@ -897,48 +878,48 @@ sudo service docker start
 #									   #  Script Execution  #											   #
 #									   ######################											   #
 ############################################################################################################
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
+t1
+t2
+t3
+t4
+t5
+t6
+t7
+t8
+t9
+t10
+t11
+t12
+t13
+t14
+t15
+t16
+t17
+t18
+t19
+t20
+t21
+t22
+t23
+t24
+t25
+t26
+t27
+t28
+t29
+t30
 #31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
+t32
+t33
+t34
+t35
+t36
+t37
+t38
+t39
+t40
+t41
+t42
 #
 ## Move Sifter executable to local path (/usr/sbin)
 #
