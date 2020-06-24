@@ -6,7 +6,7 @@ W='\033[1;37m'
 INV='\e[7m'
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker graphviz kdialog python-dev libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy # sqlite3
+sudo apt-get install -y python wmdocker graphviz kdialog python-dev python-pip python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy # sqlite3
 wget http://ftp.us.debian.org/debian/pool/main/p/python-mysqldb/python-mysqldb_1.3.10-2_amd64.deb
 sudo dpkg -i python-mysqldb_1.3.10-2_amd64.deb
 rm python-mysqldb_1.3.10-2_amd64.deb
@@ -38,7 +38,7 @@ echo -e "${YLW}When ready please hit enter${NC}"
 #echo -e "${URED}Fixing Python2 pip issues for install${NC}"
 # shellcheck disable=SC2164
 cd /opt
-
+python2 -m pip install wheel setuptools
 
 echo -e "${RED}Checking for external dependencies${NC}"
 sudo service docker start
