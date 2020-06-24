@@ -336,7 +336,7 @@ t14(){
 		sudo python3 setup.py install
 		sudo git clone https://github.com/SecureAuthCorp/impacket
 		cd impacket
-		sudo python3.7 setup.py install
+		sudo python3 setup.py install
 		pip3 install prompt-toolkit==2.0.9 impacket
 		ar3 db help
 		sudo mkdir /home/$USER/.ar3
@@ -382,8 +382,8 @@ t16(){
 		cd /opt/
 		sudo git clone https://github.com/shenril/Sitadel.git
 		cd Sitadel
-		sudo python3.7 -m pip install .
-		sudo python3.7 setup.py install
+		sudo python3 -m pip install .
+		sudo python3 setup.py install
 	fi
 }
 
@@ -448,7 +448,7 @@ t20(){
 		cd /opt/
 		sudo git clone https://github.com/depthsecurity/armory.git
 		cd armory
-		sudo python3.7 setup.py install
+		sudo python3 setup.py install
 		armory
 	fi
 }
