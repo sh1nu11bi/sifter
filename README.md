@@ -229,9 +229,9 @@ For ideas or collaboration requests on future projects., contact details can be 
 <br />
 <em>GitHub Pages can be found here.
 <br />
--<a href="https://s1l3nt78.github.io/MkCheck">MkCheck</a> = MikroTik Router Exploitation Tool
+- <a href="https://s1l3nt78.github.io/MkCheck">MkCheck</a> = MikroTik Router Exploitation Tool
 <br />
--<a href="https://s1l3nt78.github.io/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework</em>
+- <a href="https://s1l3nt78.github.io/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework</em>
 <br />
 <br />
 <br />
