@@ -920,6 +920,7 @@ t42
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
+chmod +x /opt/sifter/info/info.sh
 cd sifter
 sudo cp sifter -t /usr/sbin
 sudo chown $USER:$USER /usr/sbin/sifter

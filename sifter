@@ -934,7 +934,7 @@ modules(){
                                 ;;
 
                             "Module Info")
-                                main_info
+                                ./info/info.sh
                                 ;;
 
                             "Main Menu")
@@ -955,197 +955,6 @@ modules(){
                             "Quit")
                                 exit
                                 ;;
-                    esac
-            done
-    echo -e "${NC}"
-}
-# Info
-main_info(){
-    echo -e "${URED}Info${NC}"
-    echo -e "${LGRY}"
-    PS3='Which Module would you like info for?'
-            options=("Sitadel" "wafw00f" "BFAC" "AapFinder" "OneFind" "NekoBot" "ActiveReign" "HoneyTel" "BruteDUM" "BlackWidow" "Flan" "RapidScan" "Yuki-Chan" "SayDog" "AttackSurfaceMapper" "Armory" "aSnip" "DnsTwist" "Armory" "Omnibus" "Seeker" "xRay" "theHarvester" "Osmedeus" "ReconSpider" "Maryam" "xShock" "WinPwn" "PHPSploit" "CredNinja" "VulnX" "ACLight" "XSStrike" "MkCheck" "XSS-Freak" "Module Menu" "Main Menu")
-            select opt in "${options[@]}" 
-            do
-                    case $opt in
-                        "Sitadel")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/sitadel.info
-                            cat /opt/sifter/info/sitadel.info
-                            ;;
-
-                        "wafw00f")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/wafw00f.info
-                            cat /opt/sifter/info/wafw00f.info
-                            ;;
-
-                        "AapFinder")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/aapfinder.info
-                            cat /opt/sifter/info/aapfinder.info
-                            ;;
-
-                        "BFAC")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/bfac.info
-                            cat /opt/sifter/info/bfac.info
-                            ;;
-
-                        "OneFind")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/onefind.info
-                            cat /opt/sifter/info/onefind.info
-                            ;;
-
-                        "NekoBot")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/nekobot.info
-                            cat /opt/sifter/info/nekobot.info
-                            ;;
-
-                        "ActiveReign")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/activereign.info
-                            cat /opt/sifter/info/activereign.info
-                            ;;
-
-                        "HoneyTel")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/honeytel.info
-                            cat /opt/sifter/info/honeytel.info
-                            ;;
-                            
-                        "BruteDUM")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/brutedum.info
-                            cat /opt/sifter/info/brutedum.info
-                            ;;
-
-                       "BlackWidow")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/blackwidow.info
-                            cat /opt/sifter/info/blackwidow.info
-                            ;;
-
-                        "Flan")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/flan.info
-                            cat /opt/sifter/info/flan.info
-                            ;;
-
-                        "RapidScan")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/rapidscan.info
-                            cat /opt/sifter/info/rapidscan.info
-                            ;;
-
-                        "Yuki-Chan")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/yuki.info
-                            cat /opt/sifter/info/yuki.info
-                            ;;
-
-                        "AttackSurfaceMapper")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/asm.info
-                            cat /opt/sifter/info/asm.info
-                            ;;
-
-                        "Armory")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/armory.info
-                            cat /opt/sifter/info/armory.info
-                            ;;
-
-                        "aSnip")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/asnip.info
-                            cat /opt/sifter/info/asnip.info
-                            ;;
-
-                        "DnsTwist")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/dnstwist.info
-                            cat /opt/sifter/info/dnstwist.info
-                            ;;
-
-                        "Omnibus")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/omnibus.info
-                            cat /opt/sifter/info/omnibus.info
-                            ;;
-
-                        "Seeker")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/seeker.info
-                            cat /opt/sifter/info/seeker.info
-                            ;;
-
-                        "xRay")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/xray.info
-                            cat /opt/sifter/info/xray.info
-                            ;;
-
-                        "theHarvester")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/theHarvester.info
-                            cat /opt/sifter/info/theHarvester.info
-                            ;;
-
-                        "Osmedeus")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/osmedeus.info
-                            cat /opt/sifter/info/osmedeus.info
-                            ;;
-
-                        "ReconSpider")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/reconspider.info
-                            cat /opt/sifter/info/reconspider.info
-                            ;;
-
-                        "Maryam")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/maryam.info
-                            cat /opt/sifter/info/maryam.info
-                            ;;
-
-                        "SayDog")
-                            kdialog --feometry 600x800 --textbox /opt/sifter/info/saydog.info
-                            cat /opt/sifter/info/saydog.info
-                            ;;
-
-                        "xShock")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/xshock.info
-                            cat /opt/sifter/info/xshock.info
-                            ;;
-
-                        "WinPwn")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/WinPwn.info
-                            cat /opt/sifter/info/WinPwn.info
-                            ;;
-
-                        "CredNinja")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/credninja.info
-                            cat /opt/sifter/info/credninja.info
-                            ;;
-
-                        "Omega")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/omega.info
-                            cat /opt/sifter/info/omega.info
-                            ;;
-
-                        "VulnX")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/vulnx.info
-                            cat /opt/sifter/info/vulnx.info
-                            ;;
-
-                        "ACLight")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/aclight.info
-                            cat /opt/sifter/info/aclight.info
-                            ;;
-
-                        "XSStrike")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/xsstrike.info
-                            cat /opt/sifter/info/xsstrike.info
-                            ;;
-
-                        "MkCheck")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/mkcheck.info
-                            cat /opt/sifter/info/mkcheck.info
-                            ;;
-
-                        "XSS-Freak")
-                             kdialog --geometry 600x800 --textbox /opt/sifter/info/XSS-Freak.info
-                            cat /opt/sifter/info/XSS-Freak.info
-                            ;;
-
-                        "Module Menu")
-                            modules
-                            ;;
-
-                        "Main Menu")
-                            menu
-                            ;;
-
                     esac
             done
     echo -e "${NC}"
@@ -1361,7 +1170,7 @@ while getopts "a:bndwirmepcvuhz" options; do            	# Loop: Get the next op
             echo -e "${RED}"
             figlet -f mini "Module Info"
             echo -e "${NC}"
-            main_info
+            ./info/info.sh
             ;;
 
         m)
