@@ -166,6 +166,7 @@ Most modules are explained along with demos of a lot of the tools
 		  -AapFinder - https://github.com/Technowlogy-Pushpender/aapfinder
 		  -BFAC - https://github.com/mazen160/bfac
 		  -XSStrike - https://github.com/s0md3v/XSStrike
+		  -XSS-Freak - https://github.com/PR0PH3CY33/XSS-Freak
 
 
 	# Website Scanners & Enumerators

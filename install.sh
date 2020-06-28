@@ -655,30 +655,24 @@ t30(){
 }
 
 #
-# 31 # Omega (Replacing PHPSploit)
+# 31 # XSS-Freak
 #
-#31(){
-#	echo -e "${W}===========================================================================================${NC}"
-#	echo -e "${YLW}Checking for Omega${NC}"
-#	if [[ -d '/opt/phpsploit' ]]; then
-#		echo -e "${ORNG}"
-#	figlet -f mini "Replacing PHPSploit with Omega"
-#		sudo rm -rf phpsploit
-#	fi
-#	if [[ -d '/opt/omega' ]]; then
-#	echo -e "${ORNG}"
-#	figlet -f mini "Omega is already installed"
-#	echo -e "${NC}"
-#	cd /opt/omega
-#	sudo git fetch && sudo git pull
-#	else
-#		cd /opt/
-#		sudo git clone https://github.com/entynetproject/omega.git
-#		cd omega
-#		sudo chmod +x install.sh
-#		./install.sh
-#	fi
-#}
+t31(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Omega${NC}"
+	if [[ -d '/opt/XSS-Freak' ]]; then
+	echo -e "${ORNG}"
+	figlet -f mini "XSS-Freak is already installed"
+	echo -e "${NC}"
+	cd /opt/XSS-Freak
+	sudo git fetch && sudo git pull
+	else
+		cd /opt/
+		sudo git clone https://github.com/PR0PH3CY33/XSS-Freak.git
+		cd XSS-Freak
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
 
 #
 # 32 # CredNinja
@@ -908,7 +902,7 @@ t27
 t28
 t29
 t30
-#31
+t31
 t32
 t33
 t34
