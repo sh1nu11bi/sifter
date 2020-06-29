@@ -7,11 +7,11 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
-cd /apps/NeverMore
+cd /apps/NevrrMore
 echo -e "${ORNG}"
-figlet -f mini "NeverMore"
+figlet -f mini "NevrrMore"
 echo -e "${NC}"
-sudo ./NeverMore
+sudo ./NevrrMore
 sleep 2
 cd /opt/sifter
 sifter -m

@@ -573,7 +573,7 @@ ms_tools(){
                                 ms_tools
                                 ;;
 
-                            "NeverMore")
+                            "NevrrMore")
                                 ./modules/exmods/nvrmore.sh
                                 ;;
 
