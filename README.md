@@ -100,7 +100,7 @@ Most modules are explained along with demos of a lot of the tools
 		-RouterSploit - https://github.com/threat9/routersploit
 		
 	# Exploitation Tools
-	  	= MS Exploiters
+	  	= Microsoft Exploitation Tools
 		  -ActiveReign - https://github.com/m8r0wn/ActiveReign
 		  -iSpy - https://github.com/Cyb0r9/ispy
 		  -SMBGhost
@@ -110,7 +110,7 @@ Most modules are explained along with demos of a lot of the tools
 		  	       It contains 0days and other tools/exploits that I do not want anyone to just be able to use,
 			       due to the damage it can and will cause due to many with ill-intentions
 		
-	  	= Website Exploiters
+	  	= Website Exploitation Tools
 		  -DDoS
 			--Dark Star - https://github.com/s1l3nt78/Dark-Star
 			--Impulse - https://github.com/LimerBoy/Impulse
