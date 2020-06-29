@@ -539,7 +539,7 @@ ms_tools(){
   figlet -f mini "MicroSoft Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "iSpy" "FuzzyDander" "SMBGhost" "Back" "Quit")
+        options=("ActiveReign" "iSpy" "FuzzyDander" "NeverMore" "SMBGhost" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -571,6 +571,10 @@ ms_tools(){
                                     fi
                                 fi
                                 ms_tools
+                                ;;
+
+                            "NeverMore")
+                                ./modules/exmods/nvrmore.sh
                                 ;;
 
                             "SMBGhost")
