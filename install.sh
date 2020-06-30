@@ -849,7 +849,7 @@ t41(){
 		figlet -f mini "MkCheck is already installed"
 		echo -e "${NC}"
 		cd /opt/MkCheck
-		sudo ./mkcheck -u
+		sudo git fetch && sudo git pull
 	else
 		cd /opt
 		sudo git clone https://github.com/s1l3nt78/MkCheck.git

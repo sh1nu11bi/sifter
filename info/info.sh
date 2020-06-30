@@ -122,7 +122,7 @@ credinfo(){
                             ;;
 
                         "Quit")
-                             exit 2
+                             exit
                                 ;;
                     esac
             done
@@ -153,7 +153,7 @@ honey_info(){
                             ;;
 
                             "Quit")
-                                exit 2
+                                exit
                                 ;;
                     esac
             done
@@ -193,7 +193,7 @@ dominfo(){
                             ;;
 
                             "Quit")
-                                exit 2
+                                exit
                                 ;;
                     esac
             done
@@ -232,7 +232,7 @@ vulninfo(){
                             ;;
 
                             "Quit")
-                                exit 1
+                                exit
                                 ;;
                     esac
             done
@@ -270,7 +270,7 @@ web_netinfo(){
                             ;;
 
                         "Quit")
-                            exit 2
+                            exit
                             ;;
                     esac
             done
@@ -357,7 +357,7 @@ exmodinfo(){
                             ;;
 
                     "Quit")
-                        exit 2
+                        exit
                         ;;
 
                 esac
