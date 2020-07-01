@@ -106,9 +106,6 @@ Most modules are explained along with demos of a lot of the tools
 		  -SMBGhost
 		  	--SMBGhost Scanner - https://github.com/ioncube/SMBGhost
 		  	--SMBGhost Exploit - https://github.com/chompie1337/SMBGhost_RCE_PoC
-		  -NevrrMore - This will not be released opensource. This is a private exploitation framework I have developed. 
-		  	       It contains 0days and other tools/exploits that I do not want anyone to just be able to use,
-			       due to the damage it can and will cause due to many with ill-intentions
 		
 	  	= Website Exploitation Tools
 		  -DDoS
@@ -137,7 +134,11 @@ Most modules are explained along with demos of a lot of the tools
 	   	 (Obtained through issue request.)
 	   	  -FuzzBunch
 		  -Danderspritz
-
+		  
+	    =*NevrrMore - This will not be released opensource. This is a private exploitation framework I have 
+		  	       developed. It contains various 0days and other tools & exploits that I do not want just 
+			       anyone to be able to use, this due to the damage it can and will cause.
+			       
 	    =BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
 
 	# Password Tools
