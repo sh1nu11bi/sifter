@@ -46,6 +46,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 Most modules are explained along with demos of a lot of the tools
 <br>
+
 # Releases
 <br>
 <em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v7.4.zip"><strong>here</strong></a></em>
@@ -53,6 +54,16 @@ Most modules are explained along with demos of a lot of the tools
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
 <br>
+
+# Tested OS
+
+	Working on: - Kali
+		    - Parrot
+		    - Ubuntu
+		    - Linux (any distro)
+		    
+Works on windows with linux-subsystem but please ensure docker is properly installed and configured, <br /> 
+following the instructions from <a href="https://docker.io">docker website</a>
 
 # NOTE!! 
 
