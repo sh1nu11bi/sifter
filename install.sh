@@ -659,7 +659,7 @@ t30(){
 #
 t31(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for Omega${NC}"
+	echo -e "${YLW}Checking for XSS-Freak${NC}"
 	if [[ -d '/opt/XSS-Freak' ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "XSS-Freak is already installed"
