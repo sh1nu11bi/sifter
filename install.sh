@@ -867,6 +867,44 @@ t42(){
 	sudo git fetch && sudo git pull
 }
 
+#
+# 43 # DnsTwist
+#
+t43(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for DnsTwist${NC}"
+	if [[ -d '/opt/dnstwist' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "DnsTwist is already installed"
+		echo -e "${NC}"
+		cd /opt/dnstwist
+		sudo git fetch && sudo git pull
+		sudo python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/elceef/dnstwist.git
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
+
+#
+# 44 # XSS-Freak
+t44(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for XSS-Freak${NC}"
+	if [[ -d '/opt/XSS-Freak' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "XSS-Freak is already installed"
+		echo -e "${NC}"
+		cd /opt/dnstwist
+		sudo git fetch && sudo git pull
+		sudo python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/PR0PH3CY33/XSS-Freak.git
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
 ############################################################################################################
 #									   ######################											   #
 #									   #  Script Execution  #											   #
@@ -903,17 +941,19 @@ t28
 t29
 t30
 t31
-t32
-t33
-t34
-t35
-t36
-t37
-t38
-t39
-t40
-t41
-t42
+t32									# CredNinja
+t33									# Impulse
+t34									# CredHarvester
+t35									# SayDog
+t36									# Dork-Eye
+t37									# Mentalist
+t38									# dCipher
+t39									# Honey-Tel
+t40									# XSS-Strike
+t41									# MkCheck
+t42									# RouterSploit
+t43									# DnsTwist
+t44									# XSS-Freak
 #
 ## Move Sifter executable to local path (/usr/sbin)
 #

@@ -694,6 +694,36 @@ webex(){
         done
     echo -e "${NC}"
 }
+# XSS Checkers
+xssmods(){
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "WebAppplication Scanners"
+    echo -e "${ORNG}"
+    PS3='What tool would you like to use?'
+          options=("XSS-Strike" "XSS-Freak"" "Back" "Quit")
+          select opt in "${options[@]}"
+          do
+            case $opt in
+                "XSS-Strike")
+                    ./modules/webapps/xsstrike.sh
+                    ;;
+
+                "XSS-Freak")
+                    ./modules/webapps/xssfreak.sh
+                    ;;
+
+                "Back")
+                    modules
+                    ;;
+
+                "Quit")
+                    exit
+                    ;;
+            esac
+          done
+    echo -e "${NC}"
+}
 # Web-App Modules
 webapps(){
   cd /opt/sifter
@@ -701,7 +731,7 @@ webapps(){
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "BFAC" "AapFinder" "OneFind" "XSStrike" "XSS-Freak" "Back" "Quit")
+        options=("Sitadel" "BFAC" "AapFinder" "OneFind" "XSS" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -721,12 +751,8 @@ webapps(){
                             ./modules/webapps/onefind.sh
                             ;;
 
-                        "XSStrike")
-                            ./modules/webapps/xsstrike.sh
-                            ;;
-
-                        "XSS-Freak")
-                            ./modules/webapps/xssfreak.sh
+                        "XSS")
+                            xssmods
                             ;;
 
                         "Back")
