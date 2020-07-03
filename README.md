@@ -64,6 +64,8 @@ Most modules are explained along with demos of a lot of the tools
 		    
 Works on windows with linux-subsystem but please ensure docker is properly installed and configured, <br /> 
 following the instructions from <a href="https://docker.io">docker website</a>
+<br />
+Untested on mac, though theoretically the same should apply to mac as windows - regarding docker install & tools
 
 # NOTE!! 
 
