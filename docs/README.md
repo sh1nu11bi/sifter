@@ -47,7 +47,7 @@ Most modules are explained along with demos of a lot of the tools
 <br>
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v7.4.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/7.6.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
