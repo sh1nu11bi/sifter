@@ -705,7 +705,7 @@ xssmods(){
     figlet -f mini "WebAppplication Scanners"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-          options=("XSS-Strike" "XSS-Freak"" "Back" "Quit")
+          options=("XSS-Strike" "XSS-Freak" "Back" "Quit")
           select opt in "${options[@]}"
           do
             case $opt in
@@ -995,7 +995,7 @@ modules(){
 }
 # Menu
 menu(){
-     if [[ -d '/opt/sifter/results' ]]; then
+     if [[ -d "/opt/sifter/results" ]]; then
         sleep 1
     else
         mkdir /opt/sifter/results
