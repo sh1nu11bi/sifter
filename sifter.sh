@@ -1006,8 +1006,7 @@ menu(){
     python3 extras/ban2.py
     echo -e "${LGRY}==============${W}Hit ${YLW}Ctrl + C${W} at any time to quit ${UPURPLE}Sifter${NC}${LGRY}==============${NC}"
     arg=$1
-    echo -e "${ORNG}"
-    PS3='What would you like to do?'
+    echo -e "${ORNG}What would you like to do?"
             options=("Check Hosts" "Edit Host List" "Parse Results to Modules" "Update" "Quit")
             select opt in "${options[@]}"
             do
