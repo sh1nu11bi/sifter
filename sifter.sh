@@ -1216,11 +1216,6 @@ while getopts "a:bndwirmepcvuhz" options
             modules
             ;;
 
-        *)
-            echo -e "${RED}No valid option was chosen, defaulting to Main Menu${NC}"
-            menu
-            ;;
-
 	esac
 done
 if [[ $OPTIND == 1 ]]; then				# if no option is passed
