@@ -80,6 +80,10 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
+	*
+	* For oneliner install, copy and paste the following code into a terminal
+	*
+	$ git clone https://github.com/s1l3nt78/sifter.git && cd sifter && bash install.sh
 
 
 <h2>Menu:</h2>
