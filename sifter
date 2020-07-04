@@ -798,11 +798,11 @@ check_hosts(){
     	            ping -c 1 $name
     	                if [[ $? == 0 ]]; then
     	                    echo -e "${LP}=================="
-    	                    echo -e "${LP} ${name} Alive \e[0m" && echo ${name} >> files/pingtest_raw.pass
+    	                    echo -e "${LP} ${name} Alive ${NC}" && echo ${name} >> files/pingtest_raw.pass
     	                    echo -e "${LP}==================${NC}"
     	                else
     	                    echo -e "${RED}=================="
-    	                    echo -e "${RED} ${name} Dead \e[0m" && echo ${name} >> files/pingtest_raw.fail
+    	                    echo -e "${RED} ${name} Dead ${NC}" && echo ${name} >> files/pingtest_raw.fail
     	                    echo -e "${RED}==================${NC}"
     	                fi
     	        done
@@ -811,8 +811,8 @@ check_hosts(){
 
             echo "============================================================================================================================="
 
-        	    echo -e "${LP}Pingtest_Pass\e[0m"
-            	echo -e "${LP}*************\e[0m"
+        	    echo -e "${LP}Pingtest_Pass${NC}"
+            	echo -e "${LP}*************${NC}"
 		        cat files/pingtest_raw.pass | sort | uniq > files/pingtest.pass
         	    echo -e "${YLW}"
 		        cat files/pingtest.pass
@@ -821,8 +821,8 @@ check_hosts(){
 
         	    echo "============================================================================================================================="
 
-	            echo -e "\e[1;31mPingtest_Fail\e[0m"
-	            echo -e "\e[1;31m*************\e[0m"
+	            echo -e "${RED}Pingtest_Fail${NC}"
+	            echo -e "${RED}*************${NC}"
 	            cat files/pingtest_raw.fail | sort | uniq > files/pingtest.fail
 	            echo -e "${YLW}"
 		        cat files/pingtest.fail
