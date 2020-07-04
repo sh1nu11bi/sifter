@@ -1,7 +1,3 @@
-# Important
-
-Please download Version 7.5 release from <a href="https://github.com/s1l3nt78/sifter/archive/7.5.zip">here</a> as the new update is <strong>not</strong> working
-
 <p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
 <br>
