@@ -812,7 +812,7 @@ check_hosts(){
             echo "============================================================================================================================="
 
         	echo -e "\e[95mPingtest_Pass\e[0m"
-            	echo $'\e[95m*************\e[0m'
+            	echo -e "\e[1;95m*************\e[0m"
 		        cat files/pingtest_raw.pass | sort | uniq > files/pingtest.pass
         	    echo -e "${YLW}"
 		        cat files/pingtest.pass
@@ -821,8 +821,8 @@ check_hosts(){
 
         	    echo "============================================================================================================================="
 
-	            echo -e "\e[31mPingtest_Fail\e[0m"
-	            echo $'\e[31m*************\e[0m'
+	            echo -e "\e[1;31mPingtest_Fail\e[0m"
+	            echo -e "\e[1;31m*************\e[0m"
 	            cat files/pingtest_raw.fail | sort | uniq > files/pingtest.fail
 	            echo -e "${YLW}"
 		        cat files/pingtest.fail
@@ -839,7 +839,7 @@ ip_add(){
   ip_q
 }
 ip_q(){
-    echo -e "${W}Would you like to add another?[y/n]${NC}"
+    echo -e "${W}Would you like to add another?(y/n)${NC}"
     read ANS
     sleep 1
     if [[ $ANS == 'y' ]]; then
