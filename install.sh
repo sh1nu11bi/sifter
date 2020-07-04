@@ -246,7 +246,7 @@ t10(){
 		cd /opt/
 		sudo git clone https://github.com/Ekultek/Zeus-Scanner
 		cd Zeus-Scanner
-		sudo docker build .
+		sudo docker pull s1l3nt78/zeus
 		echo -e "${W}Please copy and paste the final container's image ID shown above"
 		read ID
 		sudo docker tag ${ID} zeus
