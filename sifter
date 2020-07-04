@@ -839,14 +839,14 @@ ip_add() {
   ip_q
 }
 ip_q() {
-  echo -e "${W}Would you like to add another?(y/n)${NC}"
-read ANS
-sleep 1
-if [[ $ANS == y ]]; then
-  ip_add
-else
-  menu
-fi
+    echo -e "${W}Would you like to add another?(y/n)${NC}"
+    read ANS
+    sleep 1
+    if [[ $ANS == y ]]; then
+        ip_add
+    else
+        menu
+    fi
 }
 # Result Options
 result_choices(){
