@@ -1226,4 +1226,4 @@ done
 if [[ $OPTIND == 1 ]]; then				# if no option is passed
 	menu		  	                    # default command is run
 fi
-exit 0
+exit
