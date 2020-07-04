@@ -831,14 +831,14 @@ check_hosts(){
         	    menu
 }
 # List Argument Options Settings Below
-ip_add() {
+ip_add(){
   echo -e "${W}Please enter your target:${NC}"
   read IP_ANS
   sleep 1
   echo "$IP_ANS" >> files/host_list.txt
   ip_q
 }
-ip_q() {
+ip_q(){
     echo -e "${W}Would you like to add another?(y/n)${NC}"
     read ANS
     sleep 1
