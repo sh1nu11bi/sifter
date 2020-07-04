@@ -798,11 +798,11 @@ check_hosts(){
     	            ping -c 1 $name
     	                if [[ $? == 0 ]]; then
     	                    echo -e "${LP}=================="
-    	                    echo -e "\e[95m$name Alive\e[0m" && echo $name >> files/pingtest_raw.pass
+    	                    echo -e "\e[95m ${name} Alive \e[0m" && echo ${name} >> files/pingtest_raw.pass
     	                    echo -e "${LP}==================${NC}"
     	                else
     	                    echo -e "${RED}=================="
-    	                    echo -e "\e[1;31m$name Dead\e[0m" && echo $name >> files/pingtest_raw.fail
+    	                    echo -e "\e[1;31m ${name} Dead \e[0m" && echo ${name} >> files/pingtest_raw.fail
     	                    echo -e "${RED}==================${NC}"
     	                fi
     	        done
