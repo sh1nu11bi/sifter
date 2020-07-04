@@ -898,7 +898,7 @@ t44(){
 		echo -e "${NC}"
 		cd /opt/Espionage
 		sudo git fetch && sudo git pull
-		sudo python3 -m pip install -r requirements.txt
+		sudo python3 -m pip install -r requirments.txt
 	else
 		cd /opt
 		sudo git clone https://www.github.com/josh0xA/Espionage.git
