@@ -47,7 +47,7 @@ Most modules are explained along with demos of a lot of the tools
 <br>
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/7.6.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/7.6_1.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -68,6 +68,10 @@ Most modules are explained along with demos of a lot of the tools
 	$ cd sifter
 	$ chmod +x install.sh
 	$ ./install.sh
+	*
+	* For oneliner install, copy and paste the following code into a terminal
+	*
+	$ git clone https://github.com/s1l3nt78/sifter.git && cd sifter && bash install.sh
 
 
 <h2>Menu:</h2>
