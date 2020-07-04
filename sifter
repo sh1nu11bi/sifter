@@ -842,7 +842,7 @@ ip_q(){
     echo -e "${W}Would you like to add another?(y/n)${NC}"
     read ANS
     sleep 1
-    if [[ $ANS == y ]]; then
+    if [[ $ANS == 'y' ]]; then
         ip_add
     else
         menu
@@ -995,7 +995,7 @@ modules(){
 }
 # Menu
 menu(){
-     if [[ -d "/opt/sifter/results" ]]; then
+     if [[ -d '/opt/sifter/results' ]]; then
         sleep 1
     else
         mkdir /opt/sifter/results
