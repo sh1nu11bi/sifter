@@ -228,7 +228,7 @@ net_mods(){
   figlet -f mini "Network Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("nMap" "Arp-Scan" "AttackSurfaceMapper" "wafw00f" "aSnip" "Back"  "Quit")
+          options=("nMap" "Arp-Scan" "AttackSurfaceMapper" "wafw00f" "aSnip" "Espionage" "Back"  "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -250,6 +250,10 @@ net_mods(){
 
                             "aSnip")
                                 ./modules/netmods/asnip.sh
+                                ;;
+
+                            "Espionage")
+                                ./modules/netmods/espionage.sh
                                 ;;
 
                             "Back")

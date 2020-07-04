@@ -661,11 +661,11 @@ t31(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for XSS-Freak${NC}"
 	if [[ -d '/opt/XSS-Freak' ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "XSS-Freak is already installed"
-	echo -e "${NC}"
-	cd /opt/XSS-Freak
-	sudo git fetch && sudo git pull
+		echo -e "${ORNG}"
+		figlet -f mini "XSS-Freak is already installed"
+		echo -e "${NC}"
+		cd /opt/XSS-Freak
+		sudo git fetch && sudo git pull
 	else
 		cd /opt/
 		sudo git clone https://github.com/PR0PH3CY33/XSS-Freak.git
@@ -886,23 +886,24 @@ t43(){
 		sudo python3 -m pip install -r requirements.txt
 	fi
 }
-
 #
-# 44 # XSS-Freak
+# 44 # Espionage
+#
 t44(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for XSS-Freak${NC}"
-	if [[ -d '/opt/XSS-Freak' ]]; then
+	echo -e "${YLW}Checking for Espionage${NC}"
+	if [[ -d '/opt/Espionage' ]]; then
 		echo -e "${ORNG}"
-		figlet -f mini "XSS-Freak is already installed"
+		figlet -f mini "Espionage is already installed"
 		echo -e "${NC}"
-		cd /opt/dnstwist
+		cd /opt/Espionage
 		sudo git fetch && sudo git pull
 		sudo python3 -m pip install -r requirements.txt
 	else
 		cd /opt
-		sudo git clone https://github.com/PR0PH3CY33/XSS-Freak.git
-		sudo python3 -m pip install -r requirements.txt
+		sudo git clone https://www.github.com/josh0xA/Espionage.git
+		cd Espionage
+		sudo python3 -m pip install -r requirments.txt
 	fi
 }
 ############################################################################################################
@@ -910,37 +911,37 @@ t44(){
 #									   #  Script Execution  #											   #
 #									   ######################											   #
 ############################################################################################################
-t1
-t2
-t3
-t4
-t5
-t6
-t7
-t8
-t9
-t10
-t11
-t12
-t13
-t14
-t15
-t16
-t17
-t18
-t19
-t20
-t21
-t22
-t23
-t24
-t25
-t26
-t27
-t28
-t29
-t30
-t31
+t1									# SniffingBear
+t2									# Maryam
+t3									# HoneyCaught
+t4									# BlackWidow
+t5									# BFAC
+t6									# RapidScan
+t7									# ShodanSploit
+t8									# Yuki-Chan
+t9									# ReconSpider
+t10									# Zeus
+t11									# EoP
+t12									# Flan
+t13									# AttackSurfaceMapper
+t14									# ActiveReign
+t15									# iSpy
+t16									# Sitadel
+t17									# Osmedeus
+t18									# NekoBot
+t19									# aSnip
+t20									# Armory
+t21									# Seeker
+t22									# AapFinder
+t23									# Dark-Star
+t24									# BruteDUM
+t25									# OneFind
+t26									# SMBGhost
+t27									# xRay
+t28									# WPForce
+t29									# XSHOCK
+t30									# VulnX
+t31									# XSS-Freak
 t32									# CredNinja
 t33									# Impulse
 t34									# CredHarvester
@@ -953,7 +954,8 @@ t40									# XSS-Strike
 t41									# MkCheck
 t42									# RouterSploit
 t43									# DnsTwist
-t44									# XSS-Freak
+t44									# Espionage
+ 
 #
 ## Move Sifter executable to local path (/usr/sbin)
 #

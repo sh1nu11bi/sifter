@@ -5,7 +5,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7.5-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-7.6-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">-->
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
@@ -19,7 +19,7 @@
 <br>
 <br>
 
-# Version 7.5 Release
+# Version 7.6 Release
 
 	@Codename: 7i7aN
 
@@ -29,9 +29,7 @@
 - MkCheck - MikroTik Router Exploitation Framework.
 - RouterSploit - Network Router Exploitation Framework.
 - XSStrike - Cross Site Scripting detection suite.
-- HoneyTel - TelNet-IoT-HoneyPot used to analyze collected botnet payloads. 
-- ACLight2 - Used to discover Shadow Admin accounts on an exploited system.
-- SMBGhost - Now has a scanner, as well as an exploitative option.
+- Espionage - Network Traffic Scanner/ArpSpoofing
 
 # Overview
 
@@ -164,6 +162,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 		-aSnip - https://github.com/harleo/asnip
 		-wafw00f - https://github.com/EnableSecurity/wafw00f
 		-Arp-Scan
+		-Espionage - https://www.github.com/josh0xA/Espionage
 
 	# HoneyPot Detection Systems
 		-HoneyCaught - https://github.com/aswinmguptha/HoneyCaught
