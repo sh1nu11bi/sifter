@@ -811,8 +811,8 @@ check_hosts(){
 
             echo "============================================================================================================================="
 
-        	    echo -e "\e[1;95mPingtest_Pass\e[0m"
-            	echo -e "\e[1;95m*************\e[0m"
+        	    echo -e "${LP}Pingtest_Pass\e[0m"
+            	echo -e "${LP}*************\e[0m"
 		        cat files/pingtest_raw.pass | sort | uniq > files/pingtest.pass
         	    echo -e "${YLW}"
 		        cat files/pingtest.pass
