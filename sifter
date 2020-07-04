@@ -705,7 +705,7 @@ xssmods(){
     figlet -f mini "WebAppplication Scanners"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-          options=("XSS-Strike" "XSS-Freak"" "Back" "Quit")
+          options=("XSS-Strike" "XSS-Freak" "Back" "Quit")
           select opt in "${options[@]}"
           do
             case $opt in
@@ -995,7 +995,7 @@ modules(){
 }
 # Menu
 menu(){
-     if [[ -d '/opt/sifter/results' ]]; then
+     if [[ -d "/opt/sifter/results" ]]; then
         sleep 1
     else
         mkdir /opt/sifter/results
@@ -1006,8 +1006,7 @@ menu(){
     python3 extras/ban2.py
     echo -e "${LGRY}==============${W}Hit ${YLW}Ctrl + C${W} at any time to quit ${UPURPLE}Sifter${NC}${LGRY}==============${NC}"
     arg=$1
-    echo -e "${ORNG}"
-    PS3='What would you like to do?'
+    echo -e "${ORNG}What would you like to do?"
             options=("Check Hosts" "Edit Host List" "Parse Results to Modules" "Update" "Quit")
             select opt in "${options[@]}"
             do
@@ -1217,14 +1216,9 @@ while getopts "a:bndwirmepcvuhz" options
             modules
             ;;
 
-        *)
-            echo -e "${RED}No valid option was chosen, defaulting to Main Menu${NC}"
-            menu
-            ;;
-
 	esac
 done
 if [[ $OPTIND == 1 ]]; then				# if no option is passed
 	menu		  	                    # default command is run
 fi
-exit 0
+exit
