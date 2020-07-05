@@ -478,6 +478,7 @@ t21(){
 		cd seeker
 		sudo chmod 777 install.sh
 		sudo ./install.sh
+		sleep 150
 	fi
 }
 
