@@ -398,6 +398,7 @@ t17(){
 		sleep 1
 	else
 		echo -e "${RED}Osmedeus takes a while to install, you can run the install now or to save time it can be done during the first run"
+		echo -e "${W}If you are updating and osmedeus is already installed, please enter ${YLW}d${W} when prompted"
 		echo -e "${ORNG}Would you like to do it ${YLW}n${ORNG}ow or ${YLW}l${ORNG}ater?(${YLW}n${ORNG}/${YLW}l${ORNG})${NC}"
 		read INOPT
 		if [[ ${INOPT} == "n" ]]; then
@@ -405,6 +406,8 @@ t17(){
 			sudo git clone https://github.com/mablanco/docker-osmedeus.git
 			cd docker-osmedeus
 			sudo docker build -t mablanco/osmedeus .
+			sed -i "s/INSTALL=''/INSTALL='ISDONE'/g" /opt/sifter/modules/credmods/osmedeus.sh
+		elif [[ ${INOPT} == "d" ]]; then
 			sed -i "s/INSTALL=''/INSTALL='ISDONE'/g" /opt/sifter/modules/credmods/osmedeus.sh
 		else
 			echo -e "${W}Leaving Osmedeus install for first run${NC}"
