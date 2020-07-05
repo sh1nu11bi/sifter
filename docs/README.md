@@ -87,103 +87,111 @@ Most modules are explained along with demos of a lot of the tools
 </p>
 
 # Modules:
-	# Information Modules
-	  = Enterprise Information Gatherers
-		  -theHarvester  - https://github.com/laramies/theHarvester
-		  -Osmedeus - https://github.com/j3ssie/Osmedeus
-		  -ReconSpider - https://github.com/bhavsec/reconspider
-		  -CredNinja - -CredNinja - https://github.com/Raikia/CredNinja
 
-	= Targeted Information Gatherers
-		  -Maryam - https://github.com/saeeddhqan/Maryam
-		  -Seeker - https://github.com/thewhiteh4t/seeker
-		  -Sherlock - https://github.com/sherlock-project/sherlock
-		  -xRay - https://github.com/evilsocket/xray
+# Enterprise Information Gatherers
+-<a href="https://github.com/laramies/theHarvester">theHarvester</a>
+-<a href="https://github.com/j3ssie/Osmedeus">Osmedeus</a>
+-<a href="https://github.com/bhavsec/reconspider">ReconSpider</a>
+-<a href="https://github.com/Raikia/CredNinja">CredNinja</a>
 
-	# Domain Recon Gathering
-		-DnsTwist - https://github.com/elceef/dnstwist
-		-Armory - https://github.com/depthsecurity/armory
-		-SayDog - https://github.com/saydog/saydog-framework
 
-	# Exploitation Tools
-	  	= MS Exploiters
-		  -ActiveReign - https://github.com/m8r0wn/ActiveReign
-		  -iSpy - https://github.com/Cyb0r9/ispy
-		  -SMBGhost
-		  	--SMBGhost Scanner - https://github.com/ioncube/SMBGhost
-		  	--SMBGhost Exploit - https://github.com/chompie1337/SMBGhost_RCE_PoC
+# Targeted Information Gatherers
+-<a href="https://github.com/saeeddhqan/Maryam">Maryam</a>
+-<a href="https://github.com/thewhiteh4t/seeker">Seeker</a>
+-<a href="https://github.com/sherlock-project/sherlock">Sherlock</a>
+-<a href="https://github.com/evilsocket/xray">xRay</a>
 
-	  	= Website Exploiters
-		  -DDoS
-			--Dark Star - https://github.com/s1l3nt78/Dark-Star
-			--Impulse - https://github.com/LimerBoy/Impulse
-		  -NekoBot - https://github.com/tegal1337/NekoBotV1
-		  -xShock - https://github.com/capture0x/XSHOCK
-		  -VulnX - https://github.com/anouarbensaad/vulnx
 
-		= Exploit Searching
-		  -FindSploit - https://github.com/1N3/Findsploit
-		  -ShodanSploit - https://github.com/shodansploit/shodansploit
+# Domain Recon Gathering
+-<a href="https://github.com/elceef/dnstwist">DnsTwist</a>
+-<a href="https://github.com/depthsecurity/armory">Armory</a>
+-<a href="https://github.com/saydog/saydog-framework">SayDog</a>
 
-	   	-TigerShark (Phishing) - https://github.com/s1l3nt78/TigerShark
+
+# Exploitation Tools
++ MS Exploiters
+-<a href="https://github.com/m8r0wn/ActiveReign">ActiveReign</a>
+-<a href="https://github.com/Cyb0r9/ispy">iSpy</a>
+-SMBGhost
+	--<a href="https://github.com/ioncube/SMBGhost">SMBGhost Scanner</a>
+	--<a href="https://github.com/chompie1337/SMBGhost_RCE_PoC">SMBGhost Exploit</a>
+
+# Website Exploiters
+-DDoS
+	--<a href="https://github.com/s1l3nt78/Dark-Star">Dark-Star</a>
+	--<a href="https://github.com/LimerBoy/Impulse">Impulse</a>
+-<a href="https://github.com/tegal1337/NekoBotV1">NekoBot</a>
+-<a href="https://github.com/capture0x/XSHOCK">xShock</a>
+-<a href="https://github.com/anouarbensaad/vulnx">VulnX</a>
+
+
+# Exploit Searching
+-<a href="https://github.com/1N3/Findsploit">FindSploit</a>
+-<a href="https://github.com/shodansploit/shodansploit">ShodanSploit</a>
+
++<a href="https://github.com/s1l3nt78/TigerShark">TigerShark (Phishing)</a>
 	
-		= Post-Exploitation
-	   	  -EoP Exploit (Elevation of Priviledge Exploit) - https://github.com/padovah4ck/CVE-2020-0683
-	   	  -Omega - https://github.com/entynetproject/omega
-	  	  -WinPwn - https://github.com/S3cur3Th1sSh1t/WinPwn
-		  -CredHarvester - https://github.com/Technowlogy-Pushpender/creds_harvester
-		  -PowerSharp - https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-		  -ACLight2 - https://github.com/cyberark/ACLight
+
+# Post-Exploitation
+-<a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Elevation of Priviledge Exploit)</a>
+-<a href="https://github.com/entynetproject/omega">Omega</a>
+-<a href="https://github.com/S3cur3Th1sSh1t/WinPwn">WinPwn</a>
+-<a href="https://github.com/Technowlogy-Pushpender/creds_harvester">CredHarvester</a>
+-<a href="https://github.com/S3cur3Th1sSh1t/PowerSharpPack">PowerSharp</a>
+-<a href="https://github.com/cyberark/ACLight">ACLight2</a>
 		  
 		
-	    =FuzzyDander - Equation Group, Courtesy of the Shadow Brokers 
++FuzzyDander - Equation Group, Courtesy of the Shadow Brokers 
 	   	 (Obtained through issue request.)
 	   	  -FuzzBunch
 		  -Danderspritz
 
-	    =BruteDUM (Bruteforcer) - https://github.com/GitHackTools/BruteDum
++<a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a>
 
-	# Password Tools
-		-Mentalist - https://github.com/sc0tfree/mentalist
-		-DCipher - https://github.com/k4m4/dcipher
-	
-	# Network Scanners
-		-Nmap - https://nmap.org
-		-AttackSurfaceMapper - https://github.com/superhedgy/AttackSurfaceMapper
-		-aSnip - https://github.com/harleo/asnip
-		-wafw00f - https://github.com/EnableSecurity/wafw00f
-		-Arp-Scan
-		-Espionage - https://www.github.com/josh0xA/Espionage
 
-	# HoneyPot Detection Systems
-		-HoneyCaught - https://github.com/aswinmguptha/HoneyCaught
-		-SniffingBear - https://github.com/MrSuicideParrot/SniffingBear
-		-HoneyTel (telnet-iot-honeypot) - https://github.com/Phype/telnet-iot-honeypot
+# Password Tools
+-<a href="https://github.com/sc0tfree/mentalist">Mentalist</a>
+-<a href="https://github.com/k4m4/dcipher">DCipher</a>
+
+
+# Network Scanners
+-<a href="https://nmap.org">Nmap</a>
+-<a href="https://github.com/superhedgy/AttackSurfaceMapper">AttackSurfaceMapper</a>
+-<a href="https://github.com/harleo/asnip">aSnip</a>
+-<a href="https://github.com/EnableSecurity/wafw00f">wafw00f</a>
+-Arp-Scan
+-<a href="https://www.github.com/josh0xA/Espionage">Espionage</a>
+
+
+# HoneyPot Detection Systems
+-<a href="https://github.com/aswinmguptha/HoneyCaught">HoneyCaught</a>
+-<a href="https://github.com/MrSuicideParrot/SniffingBear">SniffingBear</a>
+-<a href="https://github.com/Phype/telnet-iot-honeypot">HoneyTel (telnet-iot-honeypot)</a>
 		
 
-	# Vulnerability Scanners
-		-Flan - https://github.com/cloudflare/flan
-	  	-Rapidscan - https://github.com/skavngr/rapidscan
-		-Yuki-Chan - https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest
+# Vulnerability Scanners
+-<a href="https://github.com/cloudflare/flan">Flan</a>
+-<a href="https://github.com/skavngr/rapidscan">Rapidscan</a>
+-<a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a>
 
 
-	# WebApplication Scanners
-		  -Sitadel - https://github.com/shenril/Sitadel
-		  -OneFind - https://github.com/nyxgeek/onedrive_user_enum
-		  -AapFinder - https://github.com/Technowlogy-Pushpender/aapfinder
-		  -BFAC - https://github.com/mazen160/bfac
-		  -XSStrike - https://github.com/s0md3v/XSStrike
+# WebApplication Scanners
+-<a href="https://github.com/shenril/Sitadel">Sitadel</a>
+-<a href="https://github.com/nyxgeek/onedrive_user_enum">OneFind</a>
+-<a href="https://github.com/Technowlogy-Pushpender/aapfinder">AapFinder</a>
+-<a href="https://github.com/mazen160/bfac">BFAC</a>
+-<a href="https://github.com/s0md3v/XSStrike">XSStrike</a>
 
 
-	# Website Scanners & Enumerators
-		  -Nikto - https://github.com/sullo/nikto
-		  -Blackwidow - https://github.com/1N3/blackwidow
-		  -Wordpress
-		  	---WPScan - https://github.com/wpscanteam/wpscan
-		  	---WPForce/Yertle - https://github.com/n00py/WPForce
-		  -Zeus-Scanner - https://github.com/Ekultek/Zeus-Scanner
-		  -Dirb
-		  -DorksEye - https://github.com/BullsEye0/dorks-eye
+# Website Scanners & Enumerators
+-<a href="https://github.com/sullo/nikto">Nikto</a>
+-<a href="https://github.com/1N3/blackwidow">Blackwidow</a>
+-Wordpress
+	---<a href=" https://github.com/wpscanteam/wpscan">WPScan</a>
+	---<a href="https://github.com/n00py/WPForce">WPForce/Yertle</a>
+-<a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a>
+-Dirb
+-<a href="https://github.com/BullsEye0/dorks-eye">DorksEye>
 
 	# Web Mini-Games
 		  -This was added in order to have a fun way to pass time
