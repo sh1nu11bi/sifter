@@ -88,27 +88,27 @@ Most modules are explained along with demos of a lot of the tools
 
 # Modules:
 
-# Enterprise Information Gatherers
+<strong>#Enterprise Information Gatherers</strong>
 - <a href="https://github.com/laramies/theHarvester">theHarvester</a><br />
 - <a href="https://github.com/j3ssie/Osmedeus">Osmedeus</a><br />
 - <a href="https://github.com/bhavsec/reconspider">ReconSpider</a><br />
 - <a href="https://github.com/Raikia/CredNinja">CredNinja</a><br />
 
 
-# Targeted Information Gatherers
+<strong>#Targeted Information Gatherers</strong>
 - <a href="https://github.com/saeeddhqan/Maryam">Maryam</a><br />
 - <a href="https://github.com/thewhiteh4t/seeker">Seeker</a><br />
 - <a href="https://github.com/sherlock-project/sherlock">Sherlock</a><br />
 - <a href="https://github.com/evilsocket/xray">xRay</a><br />
 
 
-# Domain Recon Gathering
+<strong>#Domain Recon Gathering</strong>
 - <a href="https://github.com/elceef/dnstwist">DnsTwist</a><br />
 - <a href="https://github.com/depthsecurity/armory">Armory</a><br />
 - <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
 
 
-# Exploitation Tools
+<strong>#Exploitation Tools</strong>
 + MS Exploiters<br />
 - <a href="https://github.com/m8r0wn/ActiveReign">ActiveReign</a><br />
 - <a href="https://github.com/Cyb0r9/ispy">iSpy</a><br />
@@ -116,7 +116,7 @@ Most modules are explained along with demos of a lot of the tools
 &emsp;&emsp;-- <a href="https://github.com/ioncube/SMBGhost">SMBGhost Scanner</a><br />
 &emsp;&emsp;-- <a href="https://github.com/chompie1337/SMBGhost_RCE_PoC">SMBGhost Exploit</a><br />
 
-# Website Exploiters
+<strong>#Website Exploiters</strong>
 - DDoS<br />
 &emsp;&emsp;-- <a href="https://github.com/s1l3nt78/Dark-Star">Dark-Star</a><br />
 &emsp;&emsp;-- <a href="https://github.com/LimerBoy/Impulse">Impulse</a><br />
@@ -125,14 +125,14 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/anouarbensaad/vulnx">VulnX</a><br />
 
 
-# Exploit Searching
+<strong>#Exploit Searching</strong>
 - <a href="https://github.com/1N3/Findsploit">FindSploit</a><br />
 - <a href="https://github.com/shodansploit/shodansploit">ShodanSploit</a><br />
 
 + <a href="https://github.com/s1l3nt78/TigerShark">TigerShark (Phishing)</a><br />
 	
 
-# Post-Exploitation
+<strong>#Post-Exploitation</strong>
 - <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Elevation of Priviledge Exploit)</a><br />
 - <a href="https://github.com/entynetproject/omega">Omega</a><br />
 - <a href="https://github.com/S3cur3Th1sSh1t/WinPwn">WinPwn</a><br />
@@ -149,12 +149,12 @@ Most modules are explained along with demos of a lot of the tools
 + <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
 
 
-# Password Tools
+<strong>#Password Tools</strong>
 - <a href="https://github.com/sc0tfree/mentalist">Mentalist</a><br />
 - <a href="https://github.com/k4m4/dcipher">DCipher</a><br />
 
 
-# Network Scanners
+<strong>#Network Scanners</strong>
 - <a href="https://nmap.org">Nmap</a><br />
 - <a href="https://github.com/superhedgy/AttackSurfaceMapper">AttackSurfaceMapper</a><br />
 - <a href="https://github.com/harleo/asnip">aSnip</a><br />
@@ -163,19 +163,19 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://www.github.com/josh0xA/Espionage">Espionage</a><br />
 
 
-# HoneyPot Detection Systems
+<strong>#HoneyPot Detection Systems</strong>
 - <a href="https://github.com/aswinmguptha/HoneyCaught">HoneyCaught</a><br />
 - <a href="https://github.com/MrSuicideParrot/SniffingBear">SniffingBear</a><br />
 - <a href="https://github.com/Phype/telnet-iot-honeypot">HoneyTel (telnet-iot-honeypot)</a><br />
 		
 
-# Vulnerability Scanners
+<strong>#Vulnerability Scanners</strong>
 - <a href="https://github.com/cloudflare/flan">Flan</a><br />
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
 
 
-# WebApplication Scanners
+<strong>#WebApplication Scanners</strong>
 - <a href="https://github.com/shenril/Sitadel">Sitadel</a><br />
 - <a href="https://github.com/nyxgeek/onedrive_user_enum">OneFind</a><br />
 - <a href="https://github.com/Technowlogy-Pushpender/aapfinder">AapFinder</a><br />
@@ -183,20 +183,20 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/s0md3v/XSStrike">XSStrike</a><br />
 
 
-# Website Scanners & Enumerators
+<strong>#Website Scanners & Enumerators</strong>
 - <a href="https://github.com/sullo/nikto">Nikto</a><br />
 - <a href="https://github.com/1N3/blackwidow">Blackwidow</a><br />
-- Wordpress
+- Wordpress<br />
 &emsp;&emsp;--- <a href=" https://github.com/wpscanteam/wpscan">WPScan</a><br />
 &emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
 - Dirb<br />
 - <a href="https://github.com/BullsEye0/dorks-eye">DorksEye><br />
 
-# Web Mini-Games
-	-This was added in order to have a fun way to pass time
-	during the more time intensive modules.
-	Such as nMap Full Port scan or a RapidScan run.
+<strong>#Web Mini-Games</strong>
+- This was added in order to have a fun way to pass time<br />
+&ensp;during the more time intensive modules.<br />
+&ensp;Such as nMap Full Port scan or a RapidScan run.
 
 
 # Sifter Help Menu
