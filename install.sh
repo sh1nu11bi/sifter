@@ -842,10 +842,11 @@ t40(){
 		echo -e "${NC}"
 		cd /opt/XSStrike
 		sudo git fetch && sudo git pull
+		sudo python3 -m pip install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/s0md3v/XSStrike
-		sudo python3 -m pip install -r requirements.txt
+		sudo python3 -m pip install -r requirements.txt 
 	fi
 }
 
