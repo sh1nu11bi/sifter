@@ -108,8 +108,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
 
 
-<strong>#Exploitation Tools</strong>
-+ MS Exploiters<br />
+<strong>#MicroSoft Exploitation</strong>
 - <a href="https://github.com/m8r0wn/ActiveReign">ActiveReign</a><br />
 - <a href="https://github.com/Cyb0r9/ispy">iSpy</a><br />
 - <a href="#">SMBGhost</a><br />
