@@ -17,11 +17,9 @@ echo -e "${W}Would you like to export results to your Desktop?(y/n)${NC}"
 read OPT
 if [[ ${OPT} == "y" ]]; then
 	sudo docker cp sifter:/opt/sifter/results /home/$USER/Desktop
-else
-	sleep 1
 fi
 echo -e "${ORNG}"
-figlet -f mini "Stopping SifteR"
+figlet -f mini "Stopping Sifter Container"
 echo -e "${NC}"
 sudo docker stop sifter
 
