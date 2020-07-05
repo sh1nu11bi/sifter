@@ -113,13 +113,13 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/m8r0wn/ActiveReign">ActiveReign</a><br />
 - <a href="https://github.com/Cyb0r9/ispy">iSpy</a><br />
 - SMBGhost<br />
-	-- <a href="https://github.com/ioncube/SMBGhost">SMBGhost Scanner</a><br />
-	-- <a href="https://github.com/chompie1337/SMBGhost_RCE_PoC">SMBGhost Exploit</a><br />
+&emsp;&emsp;-- <a href="https://github.com/ioncube/SMBGhost">SMBGhost Scanner</a><br />
+&emsp;&emsp;-- <a href="https://github.com/chompie1337/SMBGhost_RCE_PoC">SMBGhost Exploit</a><br />
 
 # Website Exploiters
 - DDoS<br />
-	-- <a href="https://github.com/s1l3nt78/Dark-Star">Dark-Star</a><br />
-	-- <a href="https://github.com/LimerBoy/Impulse">Impulse</a><br />
+&emsp;&emsp;-- <a href="https://github.com/s1l3nt78/Dark-Star">Dark-Star</a><br />
+&emsp;&emsp;-- <a href="https://github.com/LimerBoy/Impulse">Impulse</a><br />
 - <a href="https://github.com/tegal1337/NekoBotV1">NekoBot</a><br />
 - <a href="https://github.com/capture0x/XSHOCK">xShock</a><br />
 - <a href="https://github.com/anouarbensaad/vulnx">VulnX</a><br />
@@ -141,10 +141,10 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
 		  
 		
-+ FuzzyDander - Equation Group, Courtesy of the Shadow Brokers 
-	   	 (Obtained through issue request.)
-	   	  - FuzzBunch
-		  - Danderspritz
++ FuzzyDander - Equation Group, Courtesy of the Shadow Brokers<br /> 
+	   	 (Obtained through issue request.)<br />
+&emsp;&emsp;- FuzzBunch<br />
+&emsp;&emsp;- Danderspritz<br />
 
 + <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
 
@@ -187,8 +187,8 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/sullo/nikto">Nikto</a><br />
 - <a href="https://github.com/1N3/blackwidow">Blackwidow</a><br />
 - Wordpress
-	--- <a href=" https://github.com/wpscanteam/wpscan">WPScan</a><br />
-	--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
+&emsp;&emsp;--- <a href=" https://github.com/wpscanteam/wpscan">WPScan</a><br />
+&emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
 - Dirb<br />
 - <a href="https://github.com/BullsEye0/dorks-eye">DorksEye><br />
