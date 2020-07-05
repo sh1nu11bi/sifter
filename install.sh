@@ -393,15 +393,22 @@ t16(){
 t17(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Osmedeus${NC}"
-	if [[ -d '/opt/docker-osmedeus' ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "Osmedeus is already installed"
-		echo -e "${NC}"
+	ICHECK=$(cat /opt/sifter/modules/credmods/osmedeus.sh | grep "ISDONE")
+	if [[ ${ICHECK} == "ISDONE" ]]; then
+		sleep 1
 	else
-		cd /opt/
-		sudo git clone https://github.com/mablanco/docker-osmedeus.git
-		cd docker-osmedeus
-		sudo docker build -t mablanco/osmedeus .
+		echo -e "${RED}Osmedeus takes a while to install, you can run the install now or to save time it can be done during the first run"
+		echo -e "${ORNG}Would you like to do it ${YLW}n${ORNG}ow or ${YLW}l${ORNG}ater?(${YLW}n${ORNG}/${YLW}l${ORNG})${NC}"
+		read INOPT
+		if [[ ${INOPT} == "n" ]]; then
+			cd /opt/
+			sudo git clone https://github.com/mablanco/docker-osmedeus.git
+			cd docker-osmedeus
+			sudo docker build -t mablanco/osmedeus .
+			sed -i "s/INSTALL=''/INSTALL='ISDONE'/g" /opt/sifter/modules/credmods/osmedeus.sh
+		else
+			echo -e "${W}Leaving Osmedeus install for first run${NC}"
+		fi
 	fi
 }
 
