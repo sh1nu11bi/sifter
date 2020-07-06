@@ -940,6 +940,29 @@ t44(){
 		sudo python3 -m pip install -r requirments.txt
 	fi
 }
+
+#
+# 45 # KatanaFramework
+#
+t45(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for KatanaFramework${NC}"
+	if [[ -d '/opt/KatanaFramework' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "KatanaFramework is already installed"
+		echo -e "${NC}"
+		cd /opt/KatanaFramework
+		sudo git fetch && sudo git pull
+		sudo sh dependencies
+		sudo python2 install
+	else
+		cd /opt
+		sudo git clone https://github.com/PowerScript/KatanaFramework.git
+		cd KatanaFramework
+		sudo sh dependencies
+		sudo python2 install
+	fi
+}
 ############################################################################################################
 #									   ######################											   #
 #									   #  Script Execution  #											   #
@@ -989,7 +1012,7 @@ t41									# MkCheck
 t42									# RouterSploit
 t43									# DnsTwist
 t44									# Espionage
- 
+t45									# KatanaFramework
 #
 ## Move Sifter executable to local path (/usr/sbin)
 #
