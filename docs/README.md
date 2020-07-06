@@ -184,12 +184,13 @@ Most modules are explained along with demos of a lot of the tools
 &emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
 - <a href="#">Dirb</a><br />
-- <a href="https://github.com/BullsEye0/dorks-eye">DorksEye><br />
+- <a href="https://github.com/BullsEye0/dorks-eye">DorksEye></a><br />
 
 <strong>#Web Mini-Games</strong>
 - This was added in order to have a fun way to pass time<br />
 &ensp;during the more time intensive modules.<br />
 &ensp;Such as nMap Full Port scan or a RapidScan run.
+
 
 # Sifter Help Menu
 
@@ -203,11 +204,12 @@ Most modules are explained along with demos of a lot of the tools
   $ sifter 	-n Opens the Network Mapping Modules menu
   $ sifter	-w Opens the Website Focused Modules
   $ sifter	-wa Opens the Web-App Focused Module menu
-  $ sifter  -p opens the password tools for quick passlist generation or hash decryption
+  $ sifter	-p opens the password tools for quick passlist generation or hash decryption
   $ sifter	-v Opens the Vulnerability Scanning Module Menu
   $ sifter	-r Opens the results folder for easy viewing of all saved results
   $ sifter	-u Checks for/and installs updates
   $ sifter	-h This Help Menu
+
 
 # Other Projects
 <br />
