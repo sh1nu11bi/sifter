@@ -23,10 +23,10 @@ multi() {
 					# shellcheck disable=SC2162
 					read REPLY
 					if [[ $REPLY == y ]]; then
+						echo -e "${RED}*${YLW}You can goto ${LP}Pass Time${YLW} in the module menu to kill some time while you wait${NC}"
 						echo -e "${YLW}"
 						sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
 						echo -e "${NC}"
-						echo -e "${RED}*${YLW}You can goto ${LP}Pass Time${YLW} in the module menu to kill some time while you wait${NC}"
 						sleep 5
 						cd /opt/sifter
 						sifter -m
