@@ -148,6 +148,12 @@ Most modules are explained along with demos of a lot of the tools
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
 
+
++ <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
+&emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
+&emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
+
+
 + <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
 
 
