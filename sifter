@@ -959,9 +959,9 @@ modules(){
                                 ex_mods
                                 ;;
 
-			                "WebAppplication Scanners")
-			                    webapps
-			                    ;;
+			    "WebAppplication Scanners")
+			        webapps
+			        ;;
 
                             "Password Tools")
                                 passtools
@@ -1043,9 +1043,9 @@ menu(){
                         sifter
                         ;;
 
-                    "Quit")
+                    ="Quit")
                         exit 2
-                        ;;
+                        BRANCH EDIT
                 esac
             done
     echo -e "${NC}"
