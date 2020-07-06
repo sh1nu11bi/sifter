@@ -963,6 +963,27 @@ t45(){
 		sudo python2 install
 	fi
 }
+
+#
+# 46 # Sherlock
+#
+t46(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Sherlock${NC}"
+	if [[ -d '/opt/sherlock' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Sherlock is already installed"
+		echo -e "${NC}"
+		cd /opt/sherlock
+		sudo git fetch && sudo git pull
+		sudo python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/sherlock-project/sherlock.git
+		cd /opt/sherlock
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
 ############################################################################################################
 #									   ######################											   #
 #									   #  Script Execution  #											   #
@@ -1013,6 +1034,8 @@ t42									# RouterSploit
 t43									# DnsTwist
 t44									# Espionage
 t45									# KatanaFramework
+t46									# Sherlock
+
 #
 ## Move Sifter executable to local path (/usr/sbin)
 #
