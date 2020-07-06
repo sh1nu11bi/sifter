@@ -434,7 +434,7 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Microsoft Explicit" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "Back" "Quit")
+        options=("Microsoft Explicit" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "NevrrMore" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -468,6 +468,15 @@ ex_mods(){
 
                     "Post-Exploitation")
                         post_ex
+                        ;;
+
+	
+                    "NevrrMore")
+                        ./modules/exmods/nvrmore.sh
+                        sleep 2
+                        echo -e "${RED}LOL ${ORNG}Nope. Sorry${NC}"
+                        sleep 2
+                        ex_mods
                         ;;
 
                     "Back")
@@ -543,7 +552,7 @@ ms_tools(){
   figlet -f mini "MicroSoft Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "iSpy" "FuzzyDander" "NeverMore" "SMBGhost" "Back" "Quit")
+        options=("ActiveReign" "iSpy" "FuzzyDander" "SMBGhost" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -575,10 +584,6 @@ ms_tools(){
                                     fi
                                 fi
                                 ms_tools
-                                ;;
-
-                            "NevrrMore")
-                                ./modules/exmods/nvrmore.sh
                                 ;;
 
                             "SMBGhost")
@@ -834,6 +839,7 @@ check_hosts(){
 ip_add(){
     echo -e "${W}Please enter your target:${NC}"
     read IP_ANS
+    echo -e "${ORNG}Adding ${RED}${IP_ANS}${ORNG} to list${NC}"
     sleep 1
     echo "$IP_ANS" >> files/host_list.txt
     ip_q
@@ -1113,14 +1119,12 @@ while getopts "a:bndwirmepcvuhz" options
 			;;
 
 		a)
-			echo -e "${ORNG}"
-			figlet -f mini "Adding $ARG to host list"
-			echo -e "${NC}"
-	                TARLIST=$(cat /opt/sifter/files/host_list.txt)
-            		if [[ ${TARLIST} == "eg. target.com" ]]; then
-                 		rm /opt/sifter/files/host_list.txt
-                		touch /opt/sifter/files/host_list.txt
-            		fi
+			echo -e "${ORNG}Adding ${RED}${ARG} ${ORNG}to host_list.txt${NC}"
+                TARLIST=$(cat /opt/sifter/files/host_list.txt)
+                if [[ ${TARLIST} == "eg. target.com" ]]; then
+                    rm /opt/sifter/files/host_list.txt
+                    touch /opt/sifter/files/host_list.txt
+                fi
 			echo "$ARG" >> files/host_list.txt
 			sleep 2
 			modules

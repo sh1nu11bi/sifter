@@ -1,15 +1,24 @@
 #!/bin/bash
-RED='\033[0;31m'
-NC='\033[0m'
+LPATH='/opt/sifter/'
 ORNG='\033[0;33m'
+NC='\033[0m'
 W='\033[1;37m'
+LP='\033[1;35m'
+YLW='\033[1;33m'
+LBBLUE='\e[104m'
+RED='\033[0;31m'
+LGRY='\033[0;37m'
 INV='\e[7m'
+BRED='\033[1;31m'
+UPURPLE='\033[4;35m'
+UBLUE='\033[4;34m'
+URED='\033[4;31m'
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
 sudo apt-get install -y python wmdocker graphviz kdialog python-dev python-pip python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy # sqlite3
-wget http://ftp.us.debian.org/debian/pool/main/p/python-mysqldb/python-mysqldb_1.3.10-2_amd64.deb
-sudo dpkg -i python-mysqldb_1.3.10-2_amd64.deb
-rm python-mysqldb_1.3.10-2_amd64.deb
+#wget http://ftp.us.debian.org/debian/pool/main/p/python-mysqldb/python-mysqldb_1.3.10-2_amd64.deb
+#sudo dpkg -i python-mysqldb_1.3.10-2_amd64.deb
+#rm python-mysqldb_1.3.10-2_amd64.deb
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
@@ -30,7 +39,7 @@ fi
 echo -e "${RED}"
 echo -e "Starting Download & Update of external dependancies.\nThis will take some time"
 echo -e "${YLW}When ready please hit enter${NC}"
-
+read INSTALL_PROMPT
 #######################################__Python2 Tools__#######################################################
 #
 ## Python2 Pip Install Fix
@@ -798,9 +807,22 @@ t37(){
 		echo -e "${NC}"
 	else
 		cd /opt/sifter/modules/passtools
-		wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
-		unzip Mentalist*
-		rm *.zip
+		echo -e "${YLW}Which system are you installing sifter on? (${ORNG}m${YLW}ac/${ORNG}l${YLW}inux/${ORNG}w${YLW}indows)\n${RED}NOTE: ${UBBLUE}sifter${NC}${W} works best on a Linux Distro${NC}"
+		read OSYS
+		if [[ ${OSYS} == "l" ]]; then
+			wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
+			unzip Mentalist*
+			rm *.zip
+		elif [[ ${OSYS} == "m" ]]; then
+			wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-OSX.zip
+			unzip Mentalist*
+			rm *.zip
+		else
+			wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Win.zip
+			unzip Mentalist*
+			rm *.zip
+		fi
+
 	fi
 }
 
