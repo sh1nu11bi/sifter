@@ -5,7 +5,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7.6-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-7.8-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">-->
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
@@ -19,17 +19,21 @@
 <br>
 <br>
 
-# Version 7.6 Release
+# Version 7.8 Release
 
 	@Codename: 7i7aN
 
 
 # Additions:
 
-- MkCheck - MikroTik Router Exploitation Framework.
-- RouterSploit - Network Router Exploitation Framework.
-- XSStrike - Cross Site Scripting detection suite.
-- Espionage - Network Traffic Scanner/ArpSpoofing
+- <a style="color: #729e1b" href="#">MkCheck</a> - MikroTik Router Exploitation Framework.
+- <a style="color: #729e1b" href="#">RouterSploit</a> - Network Router Exploitation Framework.
+- <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.
+- <a style="color: #729e1b" href="#">SMBGhost</a> - Now has a scanner, as well as an exploitative option.
+- <a style="color: #729e1b" href="#">ACLight2</a> - Used to discover Shadow Admin accounts on an exploited system.
+- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing
+- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)</em>
+
 
 # Overview
 
