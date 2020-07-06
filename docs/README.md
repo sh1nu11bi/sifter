@@ -1,4 +1,4 @@
- <p align="center">
+<p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
 <br>
   	<img align="center" src="https://img.shields.io/github/issues/s1l3nt78/sifter">
@@ -26,18 +26,11 @@
 
 # Additions:
 
- <p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">MkCheck</a> - MikroTik Router Exploitation Framework.
-	<br>
- - <a style="color: #729e1b" href="#">RouterSploit</a> - Network Router Exploitation Framework.
-<br />
- - <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.
-<br>
- - <a style="color: #729e1b" href="#">SMBGhost</a> - Now has a scanner, as well as an exploitative option.
-   <br>
- - <a style="color: #729e1b" href="#">ACLight2</a> - Used to discover Shadow Admin accounts on an exploited system.
-      <br>
-	- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing & ArpSpoofing</em>
- </p>
+- MkCheck - MikroTik Router Exploitation Framework.
+- RouterSploit - Network Router Exploitation Framework.
+- XSStrike - Cross Site Scripting detection suite.
+- Espionage - Network Traffic Scanner/ArpSpoofing
+
 
 # Overview
 
@@ -172,6 +165,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/cloudflare/flan">Flan</a><br />
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
+- <a href="https://github.com/PowerScript/KatanaFramework">KatanaFramework</a><br />
 
 
 <strong>#WebApplication Scanners</strong>
@@ -189,7 +183,7 @@ Most modules are explained along with demos of a lot of the tools
 &emsp;&emsp;--- <a href=" https://github.com/wpscanteam/wpscan">WPScan</a><br />
 &emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
-	- <a href="#">Dirb</a><br />
+- <a href="#">Dirb</a><br />
 - <a href="https://github.com/BullsEye0/dorks-eye">DorksEye><br />
 
 <strong>#Web Mini-Games</strong>
@@ -201,36 +195,20 @@ Most modules are explained along with demos of a lot of the tools
 # Sifter Help Menu
 
   $ sifter	runs the programs bringing up the menu in a cli environment
-  <br>
   $ sifter	-c will check the existing hosts in the hostlist
-  <br>
   $ sifter	-a 'target-ip' appends the hostname/IP to host file
-  <br>
   $ sifter 	-m Opens the Main Module menu
-  <br>
   $ sifter	-e Opens the Exploitation Modules
-  <br>
   $ sifter	-i Opens the Info-based Module menu
-  <br>
   $ sifter 	-d Opens the Domain Focused Modules
-  <br>
   $ sifter 	-n Opens the Network Mapping Modules menu
-  <br>
   $ sifter	-w Opens the Website Focused Modules
-  <br>
   $ sifter	-wa Opens the Web-App Focused Module menu
-  <br>
   $ sifter  -p opens the password tools for quick passlist generation or hash decryption
-  <br>
   $ sifter	-v Opens the Vulnerability Scanning Module Menu
-  <br>
   $ sifter	-r Opens the results folder for easy viewing of all saved results
-  <br>
   $ sifter	-u Checks for/and installs updates
-  <br>
   $ sifter	-h This Help Menu
-  <br />
-  <br />
 
 # Other Projects
 <br />
