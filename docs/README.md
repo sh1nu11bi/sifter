@@ -26,10 +26,20 @@
 
 # Additions:
 
-- MkCheck - MikroTik Router Exploitation Framework.
-- RouterSploit - Network Router Exploitation Framework.
-- XSStrike - Cross Site Scripting detection suite.
-- Espionage - Network Traffic Scanner/ArpSpoofing
+<p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">MkCheck</a> - MikroTik Router Exploitation Framework.
+	<br />
+ - <a style="color: #729e1b" href="#">RouterSploit</a> - Network Router Exploitation Framework.
+<br />
+ - <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.
+<br />
+ - <a style="color: #729e1b" href="#">SMBGhost</a> - Now has a scanner, as well as an exploitative option.
+   <br />
+ - <a style="color: #729e1b" href="#">ACLight2</a> - Used to discover Shadow Admin accounts on an exploited system.
+      <br />
+	- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing
+	<br />
+	- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)</em>
+ </p>
 
 
 # Overview
