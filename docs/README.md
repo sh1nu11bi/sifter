@@ -210,21 +210,21 @@ Most modules are explained along with demos of a lot of the tools
 
 # Sifter Help Menu
 
-  $ sifter	runs the programs bringing up the menu in a cli environment
-  $ sifter	-c will check the existing hosts in the hostlist
-  $ sifter	-a 'target-ip' appends the hostname/IP to host file
-  $ sifter 	-m Opens the Main Module menu
-  $ sifter	-e Opens the Exploitation Modules
-  $ sifter	-i Opens the Info-based Module menu
-  $ sifter 	-d Opens the Domain Focused Modules
-  $ sifter 	-n Opens the Network Mapping Modules menu
-  $ sifter	-w Opens the Website Focused Modules
-  $ sifter	-wa Opens the Web-App Focused Module menu
-  $ sifter	-p opens the password tools for quick passlist generation or hash decryption
-  $ sifter	-v Opens the Vulnerability Scanning Module Menu
-  $ sifter	-r Opens the results folder for easy viewing of all saved results
-  $ sifter	-u Checks for/and installs updates
-  $ sifter	-h This Help Menu
+	$ sifter	runs the programs bringing up the menu in a cli environment
+	$ sifter	-c will check the existing hosts in the hostlist
+	$ sifter	-a 'target-ip' appends the hostname/IP to host file
+	$ sifter	-m Opens the Main Module menu
+	$ sifter	-e Opens the Exploitation Modules
+	$ sifter	-i Opens the Info-based Module menu
+	$ sifter	-d Opens the Domain Focused Modules
+	$ sifter	-n Opens the Network Mapping Modules menu
+	$ sifter	-w Opens the Website Focused Modules
+	$ sifter	-wa Opens the Web-App Focused Module menu
+	$ sifter	-p opens the password tools for quick passlist generation or hash decryption
+	$ sifter	-v Opens the Vulnerability Scanning Module Menu
+	$ sifter	-r Opens the results folder for easy viewing of all saved results
+	$ sifter	-u Checks for/and installs updates
+	$ sifter	-h This Help Menu
 
 
 # Other Projects
