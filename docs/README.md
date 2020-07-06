@@ -1,4 +1,4 @@
- <p align="center">
+<p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
 <br>
   	<img align="center" src="https://img.shields.io/github/issues/s1l3nt78/sifter">
@@ -26,18 +26,11 @@
 
 # Additions:
 
- <p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">MkCheck</a> - MikroTik Router Exploitation Framework.
-	<br>
- - <a style="color: #729e1b" href="#">RouterSploit</a> - Network Router Exploitation Framework.
-<br />
- - <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.
-<br>
- - <a style="color: #729e1b" href="#">SMBGhost</a> - Now has a scanner, as well as an exploitative option.
-   <br>
- - <a style="color: #729e1b" href="#">ACLight2</a> - Used to discover Shadow Admin accounts on an exploited system.
-      <br>
-	- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing & ArpSpoofing</em>
- </p>
+- MkCheck - MikroTik Router Exploitation Framework.
+- RouterSploit - Network Router Exploitation Framework.
+- XSStrike - Cross Site Scripting detection suite.
+- Espionage - Network Traffic Scanner/ArpSpoofing
+
 
 # Overview
 
@@ -108,15 +101,16 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
 
 
-<strong>#MicroSoft Exploitation</strong>
+<strong>#Exploitation Tools</strong>
++ MS Exploiters<br />
 - <a href="https://github.com/m8r0wn/ActiveReign">ActiveReign</a><br />
 - <a href="https://github.com/Cyb0r9/ispy">iSpy</a><br />
-- <a href="#">SMBGhost</a><br />
+- SMBGhost<br />
 &emsp;&emsp;-- <a href="https://github.com/ioncube/SMBGhost">SMBGhost Scanner</a><br />
 &emsp;&emsp;-- <a href="https://github.com/chompie1337/SMBGhost_RCE_PoC">SMBGhost Exploit</a><br />
 
 <strong>#Website Exploiters</strong>
-- <a href="#">DDoS</a><br />
+- DDoS<br />
 &emsp;&emsp;-- <a href="https://github.com/s1l3nt78/Dark-Star">Dark-Star</a><br />
 &emsp;&emsp;-- <a href="https://github.com/LimerBoy/Impulse">Impulse</a><br />
 - <a href="https://github.com/tegal1337/NekoBotV1">NekoBot</a><br />
@@ -140,7 +134,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
 		  
 		
-+ <a href="#">FuzzyDander</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
++ FuzzyDander - Equation Group, Courtesy of the Shadow Brokers<br /> 
 	   	 (Obtained through issue request.)<br />
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
@@ -158,7 +152,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/superhedgy/AttackSurfaceMapper">AttackSurfaceMapper</a><br />
 - <a href="https://github.com/harleo/asnip">aSnip</a><br />
 - <a href="https://github.com/EnableSecurity/wafw00f">wafw00f</a><br />
-- <a href="#">Arp-Scan</a><br />
+- Arp-Scan<br />
 - <a href="https://www.github.com/josh0xA/Espionage">Espionage</a><br />
 
 
@@ -172,6 +166,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/cloudflare/flan">Flan</a><br />
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
+- <a href="https://github.com/PowerScript/KatanaFramework">KatanaFramework</a><br />
 
 
 <strong>#WebApplication Scanners</strong>
@@ -185,11 +180,11 @@ Most modules are explained along with demos of a lot of the tools
 <strong>#Website Scanners & Enumerators</strong>
 - <a href="https://github.com/sullo/nikto">Nikto</a><br />
 - <a href="https://github.com/1N3/blackwidow">Blackwidow</a><br />
-- <a href="#">Wordpress</a><br />
+- Wordpress<br />
 &emsp;&emsp;--- <a href=" https://github.com/wpscanteam/wpscan">WPScan</a><br />
 &emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
-	- <a href="#">Dirb</a><br />
+- Dirb<br />
 - <a href="https://github.com/BullsEye0/dorks-eye">DorksEye><br />
 
 <strong>#Web Mini-Games</strong>

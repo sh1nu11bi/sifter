@@ -274,7 +274,7 @@ vuln_mods(){
   figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Flan" "RapidScan" "Yuki-Chan" "Back" "Quit")
+          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -290,12 +290,16 @@ vuln_mods(){
                                 ./modules/vulnscanners/yuki.sh
                                 ;;
 
+                            "KatanaFramework")
+                                ./modules/vulnscanners/ktf.sh
+                                ;;
+
                             "Back")
                                 modules
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit
                                 ;;
                     esac
             done
