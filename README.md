@@ -113,16 +113,15 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
 
 
-<strong>#Exploitation Tools</strong>
-+ MS Exploiters<br />
+<strong>#MicroSoft Exploitation</strong>
 - <a href="https://github.com/m8r0wn/ActiveReign">ActiveReign</a><br />
 - <a href="https://github.com/Cyb0r9/ispy">iSpy</a><br />
-- SMBGhost<br />
+- <a href="#">SMBGhost</a><br />
 &emsp;&emsp;-- <a href="https://github.com/ioncube/SMBGhost">SMBGhost Scanner</a><br />
 &emsp;&emsp;-- <a href="https://github.com/chompie1337/SMBGhost_RCE_PoC">SMBGhost Exploit</a><br />
 
 <strong>#Website Exploiters</strong>
-- DDoS<br />
+- <a href="#">DDoS</a><br />
 &emsp;&emsp;-- <a href="https://github.com/s1l3nt78/Dark-Star">Dark-Star</a><br />
 &emsp;&emsp;-- <a href="https://github.com/LimerBoy/Impulse">Impulse</a><br />
 - <a href="https://github.com/tegal1337/NekoBotV1">NekoBot</a><br />
@@ -146,10 +145,16 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
 		  
 		
-+ FuzzyDander - Equation Group, Courtesy of the Shadow Brokers<br /> 
++ <a href="#">FuzzyDander</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
 	   	 (Obtained through issue request.)<br />
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
+
+
++ <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
+&emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
+&emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
+
 
 + <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
 
@@ -164,7 +169,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/superhedgy/AttackSurfaceMapper">AttackSurfaceMapper</a><br />
 - <a href="https://github.com/harleo/asnip">aSnip</a><br />
 - <a href="https://github.com/EnableSecurity/wafw00f">wafw00f</a><br />
-- Arp-Scan<br />
+- <a href="#">Arp-Scan</a><br />
 - <a href="https://www.github.com/josh0xA/Espionage">Espionage</a><br />
 
 
@@ -191,11 +196,11 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <strong>#Website Scanners & Enumerators</strong>
 - <a href="https://github.com/sullo/nikto">Nikto</a><br />
 - <a href="https://github.com/1N3/blackwidow">Blackwidow</a><br />
-- Wordpress<br />
+- <a href="#">Wordpress</a><br />
 &emsp;&emsp;--- <a href=" https://github.com/wpscanteam/wpscan">WPScan</a><br />
 &emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
-- Dirb<br />
+- <a href="#">Dirb</a><br />
 - <a href="https://github.com/BullsEye0/dorks-eye">DorksEye><br />
 
 <strong>#Web Mini-Games</strong>
