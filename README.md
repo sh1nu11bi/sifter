@@ -207,6 +207,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 # Sifter Help Menu
 
   $ sifter	runs the programs bringing up the menu in a cli environment
+<<<<<<< HEAD
   $ sifter	-c will check the existing hosts in the hostlist
   $ sifter	-a 'target-ip' appends the hostname/IP to host file
   $ sifter 	-m Opens the Main Module menu
@@ -222,6 +223,38 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
   $ sifter	-u Checks for/and installs updates
   $ sifter	-h This Help Menu
 
+=======
+  <br>
+  $ sifter	-c will check the existing hosts in the hostlist
+  <br>
+  $ sifter	-a 'target-ip' appends the hostname/IP to host file
+  <br>
+  $ sifter 	-m Opens the Main Module menu
+  <br>
+  $ sifter	-e Opens the Exploitation Modules
+  <br>
+  $ sifter	-i Opens the Info-based Module menu
+  <br>
+  $ sifter 	-d Opens the Domain Focused Modules
+  <br>
+  $ sifter 	-n Opens the Network Mapping Modules menu
+  <br>
+  $ sifter	-w Opens the Website Focused Modules
+  <br>
+  $ sifter	-wa Opens the Web-App Focused Module menu
+  <br>
+  $ sifter  -p opens the password tools for quick passlist generation or hash decryption
+  <br>
+  $ sifter	-v Opens the Vulnerability Scanning Module Menu
+  <br>
+  $ sifter	-r Opens the results folder for easy viewing of all saved results
+  <br>
+  $ sifter	-u Checks for/and installs updates
+  <br>
+  $ sifter	-h This Help Menu
+  <br />
+  <br />
+>>>>>>> new
 
 # Other Projects
 <br />

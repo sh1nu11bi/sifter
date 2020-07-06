@@ -101,15 +101,16 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
 
 
-<strong>#MicroSoft Exploitation</strong>
+<strong>#Exploitation Tools</strong>
++ MS Exploiters<br />
 - <a href="https://github.com/m8r0wn/ActiveReign">ActiveReign</a><br />
 - <a href="https://github.com/Cyb0r9/ispy">iSpy</a><br />
-- <a href="#">SMBGhost</a><br />
+- SMBGhost<br />
 &emsp;&emsp;-- <a href="https://github.com/ioncube/SMBGhost">SMBGhost Scanner</a><br />
 &emsp;&emsp;-- <a href="https://github.com/chompie1337/SMBGhost_RCE_PoC">SMBGhost Exploit</a><br />
 
 <strong>#Website Exploiters</strong>
-- <a href="#">DDoS</a><br />
+- DDoS<br />
 &emsp;&emsp;-- <a href="https://github.com/s1l3nt78/Dark-Star">Dark-Star</a><br />
 &emsp;&emsp;-- <a href="https://github.com/LimerBoy/Impulse">Impulse</a><br />
 - <a href="https://github.com/tegal1337/NekoBotV1">NekoBot</a><br />
@@ -133,7 +134,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
 		  
 		
-+ <a href="#">FuzzyDander</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
++ FuzzyDander - Equation Group, Courtesy of the Shadow Brokers<br /> 
 	   	 (Obtained through issue request.)<br />
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
@@ -151,7 +152,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/superhedgy/AttackSurfaceMapper">AttackSurfaceMapper</a><br />
 - <a href="https://github.com/harleo/asnip">aSnip</a><br />
 - <a href="https://github.com/EnableSecurity/wafw00f">wafw00f</a><br />
-- <a href="#">Arp-Scan</a><br />
+- Arp-Scan<br />
 - <a href="https://www.github.com/josh0xA/Espionage">Espionage</a><br />
 
 
@@ -179,11 +180,15 @@ Most modules are explained along with demos of a lot of the tools
 <strong>#Website Scanners & Enumerators</strong>
 - <a href="https://github.com/sullo/nikto">Nikto</a><br />
 - <a href="https://github.com/1N3/blackwidow">Blackwidow</a><br />
-- <a href="#">Wordpress</a><br />
+- Wordpress<br />
 &emsp;&emsp;--- <a href=" https://github.com/wpscanteam/wpscan">WPScan</a><br />
 &emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
+<<<<<<< HEAD
 - <a href="#">Dirb</a><br />
+=======
+- Dirb<br />
+>>>>>>> new
 - <a href="https://github.com/BullsEye0/dorks-eye">DorksEye><br />
 
 <strong>#Web Mini-Games</strong>
