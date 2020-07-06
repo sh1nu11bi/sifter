@@ -1043,15 +1043,16 @@ menu(){
                         modules
                         ;;
 
-		    "Update")
-		        update
+		            "Update")
+		                update
                         reset
                         sifter
                         ;;
 
-                    ="Quit")
+                    "Quit")
                         exit 2
-                        BRANCH EDIT
+                        ;;
+
                 esac
             done
     echo -e "${NC}"
