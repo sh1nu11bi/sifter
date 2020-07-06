@@ -5,7 +5,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7.6-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-7.8-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">-->
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
@@ -19,17 +19,21 @@
 <br>
 <br>
 
-# Version 7.6 Release
+# Version 7.8 Release
 
 	@Codename: 7i7aN
 
 
 # Additions:
 
-- MkCheck - MikroTik Router Exploitation Framework.
-- RouterSploit - Network Router Exploitation Framework.
-- XSStrike - Cross Site Scripting detection suite.
-- Espionage - Network Traffic Scanner/ArpSpoofing
+- <a style="color: #729e1b" href="#">MkCheck</a> - MikroTik Router Exploitation Framework.
+- <a style="color: #729e1b" href="#">RouterSploit</a> - Network Router Exploitation Framework.
+- <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.
+- <a style="color: #729e1b" href="#">SMBGhost</a> - Now has a scanner, as well as an exploitative option.
+- <a style="color: #729e1b" href="#">ACLight2</a> - Used to discover Shadow Admin accounts on an exploited system.
+- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing
+- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)</em>
+
 
 # Overview
 
@@ -183,6 +187,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/cloudflare/flan">Flan</a><br />
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
+- <a href="https://github.com/PowerScript/KatanaFramework">KatanaFramework</a><br />
 
 
 <strong>#WebApplication Scanners</strong>
@@ -201,32 +206,33 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 &emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
 - <a href="#">Dirb</a><br />
-- <a href="https://github.com/BullsEye0/dorks-eye">DorksEye><br />
+- <a href="https://github.com/BullsEye0/dorks-eye">DorksEye></a><br />
+
 
 <strong>#Web Mini-Games</strong>
 - This was added in order to have a fun way to pass time<br />
 &ensp;during the more time intensive modules.<br />
 &ensp;Such as nMap Full Port scan or a RapidScan run.
 
+
 # Sifter Help Menu
 
-	$ sifter	runs the programs bringing up the menu in a cli environment
-  	$ sifter	-c will check the existing hosts in the hostlist
-  	$ sifter	-a 'target-ip' appends the hostname/IP to host file
-  	$ sifter 	-m Opens the Main Module menu
-  	$ sifter	-e Opens the Exploitation Modules
-  	$ sifter	-i Opens the Info-based Module menu
-  	$ sifter 	-d Opens the Domain Focused Modules
-  	$ sifter 	-n Opens the Network Mapping Modules menu
-  	$ sifter	-w Opens the Website Focused Modules
-  	$ sifter	-wa Opens the Web-App Focused Module menu
-  	$ sifter	-p opens the password tools for quick passlist generation or hash decryption
-  	$ sifter	-v Opens the Vulnerability Scanning Module Menu
-  	$ sifter	-r Opens the results folder for easy viewing of all saved results
-  	$ sifter	-u Checks for/and installs updates
-  	$ sifter	-h This Help Menu
- 
- 
+  $ sifter	runs the programs bringing up the menu in a cli environment
+  $ sifter	-c will check the existing hosts in the hostlist
+  $ sifter	-a 'target-ip' appends the hostname/IP to host file
+  $ sifter 	-m Opens the Main Module menu
+  $ sifter	-e Opens the Exploitation Modules
+  $ sifter	-i Opens the Info-based Module menu
+  $ sifter 	-d Opens the Domain Focused Modules
+  $ sifter 	-n Opens the Network Mapping Modules menu
+  $ sifter	-w Opens the Website Focused Modules
+  $ sifter	-wa Opens the Web-App Focused Module menu
+  $ sifter	-p opens the password tools for quick passlist generation or hash decryption
+  $ sifter	-v Opens the Vulnerability Scanning Module Menu
+  $ sifter	-r Opens the results folder for easy viewing of all saved results
+  $ sifter	-u Checks for/and installs updates
+  $ sifter	-h This Help Menu
+
 
 # Other Projects
 <br />
