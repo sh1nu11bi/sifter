@@ -38,7 +38,7 @@ fi
 
 echo -e "${RED}"
 echo -e "Starting Download & Update of external dependancies.\nThis will take some time"
-echo -e "${YLW}When ready please hit enter${NC}"
+echo -e "${YLW}When ready please hit ${UPURPLE}enter${NC}"
 read INSTALL_PROMPT
 #######################################__Python2 Tools__#######################################################
 #
