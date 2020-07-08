@@ -19,7 +19,9 @@ echo -e "${W}Please enter a login password${NC}"
 read PASS
 source env/bin/activate
 sleep 2
-./powerhub.py ${IP} --auth ${USER}:${PASS} 
+xterm -e source /opt/PowerHub/env/bin/activate && ./powerhub.py ${IP} --auth ${USER}:${PASS} 
+sleep 5
+xterm -e firefox https://${IP}:8080
 sleep 2
 cd /opt/sifter
 ./sifter -m
