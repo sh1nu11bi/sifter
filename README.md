@@ -139,6 +139,17 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 + <a href="https://github.com/s1l3nt78/TigerShark">TigerShark (Phishing)</a><br />
 	
++ <a href="#">FuzzyDander</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
+	   	 (Obtained through issue request.)<br />
+&emsp;&emsp;- FuzzBunch<br />
+&emsp;&emsp;- Danderspritz<br />
+
++ <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
+&emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
+&emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
+
++ <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
+
 
 <strong>#Post-Exploitation</strong>
 - <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Elevation of Priviledge Exploit)</a><br />
@@ -149,20 +160,6 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
 		  
 		
-+ <a href="#">FuzzyDander</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
-	   	 (Obtained through issue request.)<br />
-&emsp;&emsp;- FuzzBunch<br />
-&emsp;&emsp;- Danderspritz<br />
-
-
-+ <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
-&emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
-&emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
-
-
-+ <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
-
-
 <strong>#Password Tools</strong>
 - <a href="https://github.com/sc0tfree/mentalist">Mentalist</a><br />
 - <a href="https://github.com/k4m4/dcipher">DCipher</a><br />
