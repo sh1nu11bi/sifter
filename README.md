@@ -104,6 +104,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/j3ssie/Osmedeus">Osmedeus</a><br />
 - <a href="https://github.com/bhavsec/reconspider">ReconSpider</a><br />
 - <a href="https://github.com/Raikia/CredNinja">CredNinja</a><br />
+- <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>
 
 
 <strong>#Targeted Information Gatherers</strong>

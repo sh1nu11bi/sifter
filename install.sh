@@ -15,7 +15,7 @@ UBLUE='\033[4;34m'
 URED='\033[4;31m'
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker graphviz kdialog python-dev python-pip python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano theharvester docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy # sqlite3
+sudo apt-get install -y python wmdocker graphviz kdialog python-dev python-pip python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy # sqlite3
 #wget http://ftp.us.debian.org/debian/pool/main/p/python-mysqldb/python-mysqldb_1.3.10-2_amd64.deb
 #sudo dpkg -i python-mysqldb_1.3.10-2_amd64.deb
 #rm python-mysqldb_1.3.10-2_amd64.deb
@@ -1018,6 +1018,7 @@ t48(){
 		echo -e "${ORNG}"
 		figlet -f mini "theHarvester is already installed"
 		echo -e "${NC}"
+		cd /opt/theHarvester
 		git fetch && git pull
 	else
 		cd /opt
@@ -1026,6 +1027,26 @@ t48(){
 		sudo python3 -m pip install pipenv
 		python3 -m pip install -r requirements/base.txt
 	fi
+}
+
+###################
+# 49 # SpiderFoot #
+###################
+t49(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Spiderfoot${NC}"
+	if [[ -d '/opt/spiderfoot' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Spiderfoot is already installed"
+		echo -e "${NC}"
+		cd /opt/spiderfoot
+		git fetch && git pull
+		sudo python3 -m pip install requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/smicallef/spiderfoot
+		sudo chown $USER:$USER -R spidefoot
+		python3 -m pip install requirements.txt
 }
 ############################################################################################################
 #									    ######################## 										   #
@@ -1080,6 +1101,7 @@ t45										# KatanaFramework
 t46										# Sherlock
 t47										# PowerHub
 t48										# theHarvester
+t49										# Spiderfoot
 
 #
 ## Move Sifter executable to local path (/usr/sbin)
