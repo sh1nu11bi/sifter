@@ -929,7 +929,7 @@ modules(){
     echo -e "${URED}Modules${NC}"
     echo -e "${ORNG}"
     PS3='What would you like to do?'
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Main Menu" "Module Info" "Pass Time" "Quit")
+            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Main Menu" "Info" "Pass Time" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -977,7 +977,7 @@ modules(){
                                 results
                                 ;;
 
-                            "Module Info")
+                            "Info")
                                 ./info/info.sh
                                 ;;
 

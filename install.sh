@@ -941,9 +941,9 @@ t44(){
 	fi
 }
 
-#
-# 45 # KatanaFramework
-#
+########################
+# 45 # KatanaFramework #
+########################
 t45(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for KatanaFramework${NC}"
@@ -964,9 +964,9 @@ t45(){
 	fi
 }
 
-#
-# 46 # Sherlock
-#
+#################
+# 46 # Sherlock #
+#################
 t46(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Sherlock${NC}"
@@ -985,56 +985,56 @@ t46(){
 	fi
 }
 ############################################################################################################
-#									   ######################											   #
-#									   #  Script Execution  #											   #
-#									   ######################											   #
+#									    ######################## 										   #
+#										#  Tool Setup Runtime  #										   #
+#										########################										   #
 ############################################################################################################
-t1									# SniffingBear
-t2									# Maryam
-t3									# HoneyCaught
-t4									# BlackWidow
-t5									# BFAC
-t6									# RapidScan
-t7									# ShodanSploit
-t8									# Yuki-Chan
-t9									# ReconSpider
-t10									# Zeus
-t11									# EoP
-t12									# Flan
-t13									# AttackSurfaceMapper
-t14									# ActiveReign
-t15									# iSpy
-t16									# Sitadel
-t17									# Osmedeus
-t18									# NekoBot
-t19									# aSnip
-t20									# Armory
-t21									# Seeker
-t22									# AapFinder
-t23									# Dark-Star
-t24									# BruteDUM
-t25									# OneFind
-t26									# SMBGhost
-t27									# xRay
-t28									# WPForce
-t29									# XSHOCK
-t30									# VulnX
-t31									# XSS-Freak
-t32									# CredNinja
-t33									# Impulse
-t34									# CredHarvester
-t35									# SayDog
-t36									# Dork-Eye
-t37									# Mentalist
-t38									# dCipher
-t39									# Honey-Tel
-t40									# XSS-Strike
-t41									# MkCheck
-t42									# RouterSploit
-t43									# DnsTwist
-t44									# Espionage
-t45									# KatanaFramework
-t46									# Sherlock
+t1										# SniffingBear
+t2										# Maryam
+t3										# HoneyCaught
+t4										# BlackWidow
+t5										# BFAC
+t6										# RapidScan
+t7										# ShodanSploit
+t8										# Yuki-Chan
+t9										# ReconSpider
+t10										# Zeus
+t11										# EoP
+t12										# Flan
+t13										# AttackSurfaceMapper
+t14										# ActiveReign
+t15										# iSpy
+t16										# Sitadel
+t17										# Osmedeus
+t18										# NekoBot
+t19										# aSnip
+t20										# Armory
+t21										# Seeker
+t22										# AapFinder
+t23										# Dark-Star
+t24										# BruteDUM
+t25										# OneFind
+t26										# SMBGhost
+t27										# xRay
+t28										# WPForce
+t29										# XSHOCK
+t30										# VulnX
+t31										# XSS-Freak
+t32										# CredNinja
+t33										# Impulse
+t34										# CredHarvester
+t35										# SayDog
+t36										# Dork-Eye
+t37										# Mentalist
+t38										# dCipher
+t39										# Honey-Tel
+t40										# XSS-Strike
+t41										# MkCheck
+t42										# RouterSploit
+t43										# DnsTwist
+t44										# Espionage
+t45										# KatanaFramework
+t46										# Sherlock
 
 #
 ## Move Sifter executable to local path (/usr/sbin)
