@@ -316,9 +316,9 @@ web_mods(){
           select opt in "${options[@]}"
           do
                   case $opt in
-			    "Dirb")
-			        ./modules/webmods/dirb.sh
-				;;
+			                "Dirb")
+			                    ./modules/webmods/dirb.sh
+				                ;;
 
                             "Nikto")
                                 ./modules/webmods/nikto.sh
@@ -335,9 +335,9 @@ web_mods(){
                                 ./modules/webmods/wordpress.sh
                                 ;;
 
-			    "DorksEye")
-			    	./modules/webmods/dorkseye.sh
-				;;
+			                "DorksEye")
+			    	            ./modules/webmods/dorkseye.sh
+				                ;;
 
                             "Zeus")
                                 ./modules/webmods/zeus.sh
@@ -360,7 +360,7 @@ post_ex(){
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
     PS3='What tool would you like to use?'
-        options=("EoP Exploit" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "ACLight2" "Back")
+        options=("EoP Exploit" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "ACLight2" "PowerHUB" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
