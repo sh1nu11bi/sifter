@@ -152,18 +152,19 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
 - <a href="https://github.com/AdrianVollmer/PowerHub">PowerHub</a>
 		  
-		
+
+<strong>#Exploitation Frameworks</strong>
 + <a href="#">FuzzyDander</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
 	   	 (Obtained through issue request.)<br />
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
-
 
 + <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
 &emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
 &emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
 
 
+<strong>#BruteForcing</strong>
 + <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
 
 
