@@ -984,6 +984,26 @@ t46(){
 		sudo python3 -m pip install -r requirements.txt
 	fi
 }
+
+#
+# 47 # PowerHub
+#
+t47(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for PowerHub${NC}"
+	if [[ -d '/opt/PowerHub' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "PowerHub is already installed"
+		echo -e "${NC}"
+	else
+		cd /opt
+		sudo git clone https://github.com/AdrianVollmer/PowerHub.git
+		cd /opt/PowerHub
+		sudo python3 -m venv env
+		source env/bin/activate
+		pip3 install -r requirements.txt
+	fi
+}
 ############################################################################################################
 #									    ######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1035,6 +1055,7 @@ t43										# DnsTwist
 t44										# Espionage
 t45										# KatanaFramework
 t46										# Sherlock
+t47										# PowerHub
 
 #
 ## Move Sifter executable to local path (/usr/sbin)

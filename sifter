@@ -390,8 +390,13 @@ post_ex(){
                     ;;
                 
                 "ACLight2")
-                    echo -e "${W}This tool is used on an exploited target in order \nto search for Shadow Admins${NC}"
+                    echo -e "${W}This tool is used on an exploited target\n in order to search for Shadow Admins${NC}"
                     ./modules/postex/aclight.sh
+                    ;;
+
+                "PowerHUB")
+                    echo -e "${W}This tool is used in order to help bypass end-point protection${NC}"
+                    ./modules/postex/powerhub.sh
                     ;;
 
                 "Back")
@@ -438,7 +443,7 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Microsoft Explicit" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "NevrrMore" "Back" "Quit")
+        options=("Microsoft Explicit" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "Metasploit" "NevrrMore" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -470,13 +475,22 @@ ex_mods(){
                         search_tools
                         ;;
 
+                    "Metasploit")
+                        echo -e "${YLW}This will launch Metasploit in xterm, to allow continuous usage of Sifter\nif you are unable to use xterm enter ${RED}n${YLW} else hit ${UBLUE}enter${NC}"
+                        read XOPT
+                        if [[ ${XOPT} == "n" ]]; then
+                            msfconsole
+                        else
+                            xterm -e msfconsole
+                        fi
+                        ;;
+
                     "Post-Exploitation")
                         post_ex
                         ;;
 
-	
                     "NevrrMore")
-                        ./modules/exmods/nvrmore.sh
+                        #./modules/exmods/nvrmore.sh
                         sleep 2
                         echo -e "${RED}LOL ${ORNG}Nope. Sorry${NC}"
                         sleep 2
@@ -687,7 +701,7 @@ webex(){
                         ;;
 
                     "xShock")
-                        echo -e "${YLW}xShock is a shellshock exploitation tools${NC}"
+                        echo -e "${YLW}xShock is a shellshock exploitation tool${NC}"
                         sleep 3
                         ./modules/exmods/xshock.sh
                         ;;

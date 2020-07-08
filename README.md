@@ -5,7 +5,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7.8-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-8-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">-->
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
@@ -19,20 +19,22 @@
 <br>
 <br>
 
-# Version 7.8 Release
+# Version 8 Release
 
 	@Codename: 7i7aN
 
 
 # Additions:
 
-- <a style="color: #729e1b" href="#">MkCheck</a> - MikroTik Router Exploitation Framework.
-- <a style="color: #729e1b" href="#">RouterSploit</a> - Network Router Exploitation Framework.
-- <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.
-- <a style="color: #729e1b" href="#">SMBGhost</a> - Now has a scanner, as well as an exploitative option.
-- <a style="color: #729e1b" href="#">ACLight2</a> - Used to discover Shadow Admin accounts on an exploited system.
-- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing
-- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)</em>
+ <p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.
+<br />
+ - <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing
+	<br />
+	- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)
+	<br />
+	- <a style="color: #729e1b" href="#">PowerHub</a> - PowerShell post exploitation tool which aids in delivering code  which may get flagged by endpoint protection.
+	- <a style="color: #729e1b" href="#">MetaSploit</a> - Deploy metasploit from within Sifter for Exploitational purposes.</em>
+ </p>
 
 
 # Overview
@@ -147,6 +149,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/Technowlogy-Pushpender/creds_harvester">CredHarvester</a><br />
 - <a href="https://github.com/S3cur3Th1sSh1t/PowerSharpPack">PowerSharp</a><br />
 - <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
+- <a href="https://github.com/AdrianVollmer/PowerHub">PowerHub</a>
 		  
 		
 + <a href="#">FuzzyDander</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
