@@ -299,7 +299,7 @@ vuln_mods(){
                                 ;;
 
                             "Quit")
-                                exit
+                                exit 2
                                 ;;
                     esac
             done
@@ -542,7 +542,7 @@ search_tools(){
                         ;;
 
                     "Quit")
-                        exit
+                        exit 2
                         ;;
 
                 esac
@@ -601,7 +601,7 @@ ms_tools(){
                                 ;;
 
                            "Quit")
-                                exit
+                                exit 2
                                 ;;
                 esac
         done
@@ -660,7 +660,7 @@ routertools(){
                     ;;
 
                 "Quit")
-                    exit
+                    exit 2
                     ;;
             esac
         done
@@ -701,7 +701,7 @@ webex(){
                         ;;
 
                     "Quit")
-                        exit
+                        exit 2
                         ;;
                 esac
         done
@@ -731,7 +731,7 @@ xssmods(){
                     ;;
 
                 "Quit")
-                    exit
+                    exit 2
                     ;;
             esac
           done
@@ -773,7 +773,7 @@ webapps(){
                             ;;
 
                         "Quit")
-                            exit
+                            exit 2
                             ;;
                 esac
         done
@@ -997,7 +997,7 @@ modules(){
                                 ;;
 
                             "Quit")
-                                exit
+                                exit 2
                                 ;;
                     esac
             done
