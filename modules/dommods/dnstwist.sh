@@ -27,6 +27,7 @@ listing
 echo -e "${W}Please enter your target${NC}"
 read TARGET
 sleep 1
+echo -e "${LP}These scans will take a while but will finish\nPlease just be patient${NC}"
 mkdir /opt/sifter/results/DnsTwist/${TARGET}
 echo -e "${RED}Performing 'registered' test${NC}"
 sudo ./dnstwist.py --registered ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/registered_test.csv
