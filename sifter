@@ -71,9 +71,9 @@ cred_mods(){
                             "Back")
                                 modules
                                 ;;
-
+                                
                             "Quit")
-                                exxit
+                                exit
                                 ;;
                     esac
             done
@@ -117,7 +117,7 @@ phone_mods(){
                                 ;;
 
                             "Quit")
-                                exxit
+                                exit
                                 ;;
                     esac
             done
@@ -147,7 +147,7 @@ info_mods(){
                                 ;;
 
                             "Quit")
-                                exxit
+                                exit
                                 ;;
                     esac
             done
@@ -184,7 +184,7 @@ honey_mods(){
                                 ;;
 
                             "Quit")
-                                exxit
+                                exit
                                 ;;
                     esac
             done
@@ -223,7 +223,7 @@ dom_mods(){
                                 ;;
 
                             "Quit")
-                                exxit
+                                exit
                                 ;;
                     esac
             done
@@ -269,7 +269,7 @@ net_mods(){
                                 ;;
 
                             "Quit")
-                                exxit
+                                exit
                                 ;;
                     esac
             done
@@ -307,7 +307,7 @@ vuln_mods(){
                                 ;;
 
                             "Quit")
-                                exxit
+                                exit
                                 ;;
                     esac
             done
@@ -356,7 +356,7 @@ web_mods(){
                                 ;;
 
                             "Quit")
-                                exxit
+                                exit
                                 ;;
                     esac
             done
@@ -510,7 +510,7 @@ ex_mods(){
                         ;;
 
                     "Quit")
-                        exxit
+                        exit
                         ;;
 
                 esac
@@ -564,7 +564,7 @@ search_tools(){
                         ;;
 
                     "Quit")
-                        exxit
+                        exit
                         ;;
 
                 esac
@@ -623,7 +623,7 @@ ms_tools(){
                                 ;;
 
                            "Quit")
-                                exxit
+                                exit
                                 ;;
                 esac
         done
@@ -682,7 +682,7 @@ routertools(){
                     ;;
 
                 "Quit")
-                    exxit
+                    exit
                     ;;
             esac
         done
@@ -723,7 +723,7 @@ webex(){
                         ;;
 
                     "Quit")
-                        exxit
+                        exit
                         ;;
                 esac
         done
@@ -753,7 +753,7 @@ xssmods(){
                     ;;
 
                 "Quit")
-                    exxit
+                    exit
                     ;;
             esac
           done
@@ -795,7 +795,7 @@ webapps(){
                             ;;
 
                         "Quit")
-                            exxit
+                            exit
                             ;;
                 esac
         done
@@ -1019,7 +1019,7 @@ modules(){
                                 ;;
 
                             "Quit")
-                                exxit
+                                exit
                                 ;;
                     esac
             done
@@ -1072,7 +1072,7 @@ menu(){
                         ;;
 
                     "Quit")
-                        exxit
+                        exit
                         ;;
 
                 esac
