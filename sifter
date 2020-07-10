@@ -73,7 +73,7 @@ cred_mods(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exxit
                                 ;;
                     esac
             done
@@ -117,7 +117,7 @@ phone_mods(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exxit
                                 ;;
                     esac
             done
@@ -147,7 +147,7 @@ info_mods(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exxit
                                 ;;
                     esac
             done
@@ -184,7 +184,7 @@ honey_mods(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exxit
                                 ;;
                     esac
             done
@@ -223,7 +223,7 @@ dom_mods(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exxit
                                 ;;
                     esac
             done
@@ -269,7 +269,7 @@ net_mods(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exxit
                                 ;;
                     esac
             done
@@ -307,7 +307,7 @@ vuln_mods(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exxit
                                 ;;
                     esac
             done
@@ -356,7 +356,7 @@ web_mods(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exxit
                                 ;;
                     esac
             done
@@ -510,7 +510,7 @@ ex_mods(){
                         ;;
 
                     "Quit")
-                        exit 2
+                        exxit
                         ;;
 
                 esac
@@ -564,7 +564,7 @@ search_tools(){
                         ;;
 
                     "Quit")
-                        exit 2
+                        exxit
                         ;;
 
                 esac
@@ -623,7 +623,7 @@ ms_tools(){
                                 ;;
 
                            "Quit")
-                                exit 2
+                                exxit
                                 ;;
                 esac
         done
@@ -682,7 +682,7 @@ routertools(){
                     ;;
 
                 "Quit")
-                    exit 2
+                    exxit
                     ;;
             esac
         done
@@ -723,7 +723,7 @@ webex(){
                         ;;
 
                     "Quit")
-                        exit 2
+                        exxit
                         ;;
                 esac
         done
@@ -753,7 +753,7 @@ xssmods(){
                     ;;
 
                 "Quit")
-                    exit 2
+                    exxit
                     ;;
             esac
           done
@@ -795,7 +795,7 @@ webapps(){
                             ;;
 
                         "Quit")
-                            exit 2
+                            exxit
                             ;;
                 esac
         done
@@ -1019,7 +1019,7 @@ modules(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exxit
                                 ;;
                     esac
             done
@@ -1072,7 +1072,7 @@ menu(){
                         ;;
 
                     "Quit")
-                        exit 2
+                        exxit
                         ;;
 
                 esac
