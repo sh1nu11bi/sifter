@@ -142,7 +142,6 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/shodansploit/shodansploit">ShodanSploit</a><br />
 
 + <a href="https://github.com/s1l3nt78/TigerShark">TigerShark (Phishing)</a><br />
-	
 
 <strong>#Post-Exploitation</strong>
 - <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Elevation of Priviledge Exploit)</a><br />
@@ -169,6 +168,15 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 + <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
 
 
+<strong>#Post-Exploitation</strong>
+- <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Elevation of Priviledge Exploit)</a><br />
+- <a href="https://github.com/entynetproject/omega">Omega</a><br />
+- <a href="https://github.com/S3cur3Th1sSh1t/WinPwn">WinPwn</a><br />
+- <a href="https://github.com/Technowlogy-Pushpender/creds_harvester">CredHarvester</a><br />
+- <a href="https://github.com/S3cur3Th1sSh1t/PowerSharpPack">PowerSharp</a><br />
+- <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
+		  
+		
 <strong>#Password Tools</strong>
 - <a href="https://github.com/sc0tfree/mentalist">Mentalist</a><br />
 - <a href="https://github.com/k4m4/dcipher">DCipher</a><br />

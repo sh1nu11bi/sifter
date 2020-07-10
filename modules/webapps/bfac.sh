@@ -15,7 +15,6 @@ echo -e "${NC}"
 echo -e "${W}Would you like to scan a single url or list or URL's?(s/l)${NC}"
 read UCHK
 if [[ ${UCHK} == 's' ]]; then
-	URL='--url ${TARGET} ${FLVL}'
 	echo -e "${W}Please enter your target${NC}"
 	echo -e "${LP}eg. http://example.com/test.php ${NC}"
 	read TARGET
@@ -26,12 +25,13 @@ if [[ ${UCHK} == 's' ]]; then
 		read LVL
 		FLVL='--level ${LVL}'
 	else
-		FLVL=''
+		FLVL='--level ${LVL}'
 	fi
+	URL='--url ${TARGET} ${FLVL}'
 else
-	URL='--list ${LIST}'
 	echo -e "${W}Please enter the full path/to/list.txt${NC}"
 	read LIST
+	URL='--list ${LIST}'
 fi 
 
 echo -e "${W}Would you like to verify file existing using content-length checks or status-code checks?(c/s)"
