@@ -1076,6 +1076,7 @@ t50(){
 	else
 		cd /opt
 		sudo git clone https://github.com/martinvigo/email2phonenumber.git
+		cd email2phonenumber
 		sudo python -m pip install requirements.txt
 	fi 
 }
