@@ -1076,6 +1076,7 @@ t50(){
 		cd /opt
 		sudo git clone https://github.com/martinvigo/email2phonenumber.git
 		sudo python -m pip install requirements.txt
+	fi 
 }
 ############################################################################################################
 #									    ######################## 										   #
