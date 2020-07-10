@@ -1050,13 +1050,13 @@ t49(){
 		echo -e "${NC}"
 		cd /opt/spiderfoot
 		git fetch && git pull
-		sudo python3 -m pip install requirements.txt
+		sudo python3 -m pip install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/smicallef/spiderfoot
 		sudo chown $USER:$USER -R spiderfoot
 		cd spiderfoot
-		python3 -m pip install requirements.txt
+		python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1072,12 +1072,13 @@ t50(){
 		echo -e "${NC}"
 		cd /opt/email2phonenumber
 		git fetch && git pull
-		sudo python -m pip install requirements.txt
+		sudo python -m pip install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/martinvigo/email2phonenumber.git
 		cd email2phonenumber
-		sudo python -m pip install requirements.txt
+		sudo python -m pip install -r requirements.txt
+		sudo pip install beautifulsoup4 requests
 	fi 
 }
 ############################################################################################################
