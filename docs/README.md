@@ -5,7 +5,7 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-  	<img align="center" src="https://img.shields.io/badge/Version-7.8-red">
+  	<img align="center" src="https://img.shields.io/badge/Version-8-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">-->
 	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
 <br>
@@ -19,26 +19,21 @@
 <br>
 <br>
 
-# Version 7.8 Release
+# Version 8 Release
 
 	@Codename: 7i7aN
 
 
 # Additions:
 
-<p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">MkCheck</a> - MikroTik Router Exploitation Framework.
-	<br />
- - <a style="color: #729e1b" href="#">RouterSploit</a> - Network Router Exploitation Framework.
-<br />
- - <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.
-<br />
- - <a style="color: #729e1b" href="#">SMBGhost</a> - Now has a scanner, as well as an exploitative option.
-   <br />
- - <a style="color: #729e1b" href="#">ACLight2</a> - Used to discover Shadow Admin accounts on an exploited system.
-      <br />
-	- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing
-	<br />
-	- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)</em>
+ <p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.<br />
+- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing<br />
+- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)<br />
+- <a style="color: #729e1b" href="#">PowerHub</a> - PowerShell post exploitation tool which aids in delivering code  which may get flagged by endpoint protection.<br />
+- <a style="color: #729e1b" href="#">MetaSploit</a> - Deploy metasploit from within Sifter for Exploitational purposes.<br />
+- <a style="color: #729e1b" href="#">Spiderfoot</a> - It integrates with just about every data source available and utilises a range of methods for data analysis, making that data easy to navigate.<br />
+- <a style="color: #729e1b" href="#">Email2PhoneNumber</a> - OSINT tool that allows you to obtain a target's phone number just by having his email address.<br />
+</em>
  </p>
 
 
@@ -103,12 +98,14 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/thewhiteh4t/seeker">Seeker</a><br />
 - <a href="https://github.com/sherlock-project/sherlock">Sherlock</a><br />
 - <a href="https://github.com/evilsocket/xray">xRay</a><br />
+- <a href="https://github.com/martinvigo/email2phonenumber">E2P (Email2Phone)</a>
 
 
 <strong>#Domain Recon Gathering</strong>
 - <a href="https://github.com/elceef/dnstwist">DnsTwist</a><br />
 - <a href="https://github.com/depthsecurity/armory">Armory</a><br />
 - <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
+- <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>
 
 
 <strong>#MicroSoft Exploitation</strong>
@@ -132,17 +129,28 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/shodansploit/shodansploit">ShodanSploit</a><br />
 
 + <a href="https://github.com/s1l3nt78/TigerShark">TigerShark (Phishing)</a><br />
-	
+
+<strong>#Post-Exploitation</strong>
+- <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Elevation of Priviledge Exploit)</a><br />
+- <a href="https://github.com/entynetproject/omega">Omega</a><br />
+- <a href="https://github.com/S3cur3Th1sSh1t/WinPwn">WinPwn</a><br />
+- <a href="https://github.com/Technowlogy-Pushpender/creds_harvester">CredHarvester</a><br />
+- <a href="https://github.com/S3cur3Th1sSh1t/PowerSharpPack">PowerSharp</a><br />
+- <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
+- <a href="https://github.com/AdrianVollmer/PowerHub">PowerHub</a>
+		  
+
+<strong>#Exploitation Frameworks</strong>
 + <a href="#">FuzzyDander</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
 	   	 (Obtained through issue request.)<br />
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
 
-
 + <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
 &emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
 &emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
 
+<strong>#BruteForcing</strong>
 + <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
 
 

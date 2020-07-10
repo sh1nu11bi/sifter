@@ -28,7 +28,7 @@ echo -e "${NC}"
 cd /opt/XSStrike 
 # Target Options (methods)
 echo -e "${YLW}Target Examples:"
-echo -e "${LP}Target (with payload injection):\n${UBLUE}http://example.com/search/form/query${NC}"
+echo -e "${LP}Target (with payload injection):\n${UBLUE}http://example.com/search/form/query ${NC}"
 echo ""
 echo -e "${LP}Target (without payload injection):\n${URED}http://example.com/search.php?q=query${NC}\n${URED}'http://example.com/search.php' --data 'q=query'${NC}"
 echo ""
@@ -36,7 +36,7 @@ echo -e "${W}Would you like to test the target URL using a ${YLW}G${W}ET, ${YLW}
 read THOD
 if [[ ${THOD} == 'g' ]]; then
     echo -e "${W}Please enter the target URL${NC}"
-    echo -e "${RED}eg. ${YLW}http://example.com/search.php?q=query${NC}"
+    echo -e "${RED}eg. ${YLW}http://example.com/search.php?q=query ${NC}"
     read TARGET
     echo -e "${W}Would you like to use blind xss injection?${NC}"
     read BQ
@@ -45,7 +45,7 @@ if [[ ${THOD} == 'g' ]]; then
     fi
 elif [[ ${THOD} == 'i' ]]; then
     echo -e "${W}Please enter the target URL${NC}"
-    echo -e "${RED}eg. ${YLW}http://example.com/search/form/query${NC}"
+    echo -e "${RED}eg. ${YLW}http://example.com/search/form/query ${NC}"
     read TARGET
     INJP='--path'
 else
