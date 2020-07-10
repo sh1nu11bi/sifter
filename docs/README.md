@@ -26,14 +26,14 @@
 
 # Additions:
 
- <p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.
-<br />
- - <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing
-	<br />
-	- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)
-	<br />
-	- <a style="color: #729e1b" href="#">PowerHub</a> - PowerShell post exploitation tool which aids in delivering code  which may get flagged by endpoint protection.<br />
-	- <a style="color: #729e1b" href="#">MetaSploit</a> - Deploy metasploit from within Sifter for Exploitational purposes.</em>
+ <p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.<br />
+- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing<br />
+- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)<br />
+- <a style="color: #729e1b" href="#">PowerHub</a> - PowerShell post exploitation tool which aids in delivering code  which may get flagged by endpoint protection.<br />
+- <a style="color: #729e1b" href="#">MetaSploit</a> - Deploy metasploit from within Sifter for Exploitational purposes.<br />
+- <a style="color: #729e1b" href="#">Spiderfoot</a> - It integrates with just about every data source available and utilises a range of methods for data analysis, making that data easy to navigate.<br />
+- <a style="color: #729e1b" href="#">Email2PhoneNumber</a> - OSINT tool that allows you to obtain a target's phone number just by having his email address.<br />
+</em>
  </p>
 
 
