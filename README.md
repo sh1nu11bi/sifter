@@ -7,7 +7,7 @@
 <br>
   	<img align="center" src="https://img.shields.io/badge/Version-8-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">-->
-	<img align="center" src="https://img.shields.io/badge/Build-7i7aN-yellowgreen">
+	<img align="center" src="https://img.shields.io/badge/Build-AdamantiuM-yellowgreen">
 <br>
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
 </p>
@@ -21,7 +21,7 @@
 
 # Version 8 Release
 
-	@Codename: 7i7aN
+	@Codename: AdamantiuM
 
 
 # Additions:
@@ -53,7 +53,7 @@ Most modules are explained along with demos of a lot of the tools
 
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/7.6_1.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
