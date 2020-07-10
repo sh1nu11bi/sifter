@@ -1056,6 +1056,7 @@ t49(){
 		sudo git clone https://github.com/smicallef/spiderfoot
 		sudo chown $USER:$USER -R spidefoot
 		python3 -m pip install requirements.txt
+	fi
 }
 
 ####################

@@ -202,11 +202,11 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/sullo/nikto">Nikto</a><br />
 - <a href="https://github.com/1N3/blackwidow">Blackwidow</a><br />
 - <a href="#">Wordpress</a><br />
-&emsp;&emsp;--- <a href=" https://github.com/wpscanteam/wpscan">WPScan</a><br />
+&emsp;&emsp;--- <a href="https://github.com/wpscanteam/wpscan">WPScan</a><br />
 &emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
 - <a href="#">Dirb</a><br />
-- <a href="https://github.com/BullsEye0/dorks-eye">DorksEye></a><br />
+- <a href="https://github.com/BullsEye0/dorks-eye">DorksEye</a><br />
 
 <strong>#Web Mini-Games</strong>
 - This was added in order to have a fun way to pass time<br />
