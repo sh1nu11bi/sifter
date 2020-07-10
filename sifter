@@ -88,7 +88,7 @@ phone_mods(){
   echo -e "${YLW}eg. Social media information, phone number information, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Seeker" "Sherlock" "xRay" "Maryam" "Back" "Quit") 
+          options=("Seeker" "Sherlock" "xRay" "Maryam" "E2P (Email2PhoneNumber)" "Back" "Quit") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -106,6 +106,10 @@ phone_mods(){
 
                             "xRay")
                                 ./modules/credmods/xray.sh
+                                ;;
+
+                            "E2P (Email2PhoneNumber)")
+                                ./modules/credmods/e2p.sh
                                 ;;
 
                             "Back")
@@ -194,7 +198,7 @@ dom_mods(){
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "Armory" "SayDog" "Back" "Quit") 
+          options=("DnsTwist" "Armory" "SayDog" "Spiderfoo7" "Back" "Quit") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -208,6 +212,10 @@ dom_mods(){
 
                             "SayDog")
                                 sdog
+                                ;;
+
+                            "Spiderfoo7")
+                                ./modules/dommods/spiderfoot.sh
                                 ;;
 
                             "Back")

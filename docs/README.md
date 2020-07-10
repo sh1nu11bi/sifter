@@ -91,7 +91,6 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/j3ssie/Osmedeus">Osmedeus</a><br />
 - <a href="https://github.com/bhavsec/reconspider">ReconSpider</a><br />
 - <a href="https://github.com/Raikia/CredNinja">CredNinja</a><br />
-- <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>
 
 
 <strong>#Targeted Information Gatherers</strong>
@@ -99,12 +98,14 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/thewhiteh4t/seeker">Seeker</a><br />
 - <a href="https://github.com/sherlock-project/sherlock">Sherlock</a><br />
 - <a href="https://github.com/evilsocket/xray">xRay</a><br />
+- <a href="https://github.com/martinvigo/email2phonenumber">E2P (Email2Phone)</a>
 
 
 <strong>#Domain Recon Gathering</strong>
 - <a href="https://github.com/elceef/dnstwist">DnsTwist</a><br />
 - <a href="https://github.com/depthsecurity/armory">Armory</a><br />
 - <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
+- <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>
 
 
 <strong>#MicroSoft Exploitation</strong>

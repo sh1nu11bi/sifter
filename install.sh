@@ -97,7 +97,7 @@ t2(){
 t3(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for HoneyCaught${NC}"
-	if [[ -d /opt/HoneyCaught ]]; then
+	if [[ -d '/opt/HoneyCaught' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "HoneyCaught is already installed"
 		echo -e "${NC}"
@@ -117,18 +117,18 @@ t3(){
 t4(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Blackwidow${NC}"
-	if [[ -f /usr/bin/blackwidow && -f /usr/bin/injectx.py ]] || [[ -f /usr/sbin/blackwidow && -f /usr/sbin/injectx.py ]]; then
+	if [[ -d '/root/BlackWidow' ]]; then
 		echo -e "${ORNG}"
-		figlet -f mini "Blackwidow is already installed"
+		figlet -f mini "BlackWidow is already installed"
 		echo -e "${NC}"
 	else
 		cd /root
-		sudo git clone https://github.com/1N3/blackwidow.git
-		cd blackwidow
-				sudo chmod +x blackwidow injectx.py
-			sudo cp blackwidow /usr/sbin/blackwidow
-			sudo cp injectx.py /usr/sbin/injectx.py
-			pip install -r requirements.txt
+		sudo git clone https://github.com/1N3/BlackWidow.git
+		cd BlackWidow
+		sudo chmod +x blackwidow injectx.py
+		sudo cp blackwidow /usr/sbin/blackwidow
+		sudo cp injectx.py /usr/sbin/injectx.py
+		pip install -r requirements.txt
 	fi
 }
 
@@ -257,7 +257,7 @@ t10(){
 		sudo git clone https://github.com/Ekultek/Zeus-Scanner
 		cd Zeus-Scanner
 		sudo docker pull s1l3nt78/zeus
-		echo -e "${W}Please copy and paste the final container's image ID shown above"
+		echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
 		read ID
 		sudo docker tag ${ID} zeus
 	fi
@@ -305,27 +305,30 @@ t12(){
 }
 
 ############################
-# 13 # AttackSurfaceMapper #
+# 13 # AttackSurfaceMapper #   [AttackSurfaceMapper Repo Replacement]
 ############################
 t13(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Attack Surface Mapper${NC}"
-	if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "ASM is already installed."
-		echo -e "${NC}"
-		cd /opt/AttackSurfaceMapper
-		sudo git fetch && sudo git pull
-		sudo python3 -m pip install -r requirements.txt
-	else
+	#if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
+		#echo -e "${ORNG}"
+		#figlet -f mini "ASM is already installed."
+		#echo -e "${NC}"
+		#cd /opt/AttackSurfaceMapper
+		#sudo git fetch && sudo git pull
+		#sudo python3 -m pip install -r requirements.txt
+	#else
 		cd /opt
+		sudo rm -rf AttackSurfaceMapper
 		sudo git clone https://github.com/superhedgy/AttackSurfaceMapper.git
 		cd AttackSurfaceMapper
 		sudo python3 -m pip install -r requirements.txt
-		sudo cp /opt/sifter/extras/.asm -t /usr/sbin
-		sudo mv /opt/sifter/extras/.asm -t /opt/AttackSurfaceMapper
-		sudo chmod +x /usr/sbin/asm
-	fi
+		if [[ -f '/opt/sifter/extras/.asm' ]]; then
+			sudo cp /opt/sifter/extras/.asm -t /usr/sbin
+			sudo mv /opt/sifter/extras/.asm -t /opt/AttackSurfaceMapper
+			sudo chmod +x /usr/sbin/asm
+		fi
+	#fi
 }
 
 ####################
@@ -1048,6 +1051,25 @@ t49(){
 		sudo chown $USER:$USER -R spidefoot
 		python3 -m pip install requirements.txt
 }
+
+####################
+# 50 # Email2Phone #
+####################
+t50(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for E2P${NC}"
+	if [[ -d '/opt/email2phonenumber' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "E2P is already installed"
+		echo -e "${NC}"
+		cd /opt/email2phonenumber
+		git fetch && git pull
+		sudo python -m pip install requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/martinvigo/email2phonenumber.git
+		sudo python -m pip install requirements.txt
+}
 ############################################################################################################
 #									    ######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1102,10 +1124,11 @@ t46										# Sherlock
 t47										# PowerHub
 t48										# theHarvester
 t49										# Spiderfoot
+t50										# Email2Phone
 
-#
-## Move Sifter executable to local path (/usr/sbin)
-#
+########################################################
+##  Move Sifter executable to local path (/usr/sbin)  ##
+########################################################
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
@@ -1123,4 +1146,6 @@ echo -e "for better results in WPScan goto ${UBLUE}modules/wpscan.sh${NC} ${W}an
 echo -e " '${UBLUE}--api-token <${URED}your-wpscan-api-token${UBLUE}>${NC}${W}' argument to both commands"
 echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${W}'${NC}"
 
+##################################################################################################################
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
+##################################################################################################################
