@@ -216,11 +216,11 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/sullo/nikto">Nikto</a><br />
 - <a href="https://github.com/1N3/blackwidow">Blackwidow</a><br />
 - <a href="#">Wordpress</a><br />
-&emsp;&emsp;--- <a href=" https://github.com/wpscanteam/wpscan">WPScan</a><br />
+&emsp;&emsp;--- <a href="https://github.com/wpscanteam/wpscan">WPScan</a><br />
 &emsp;&emsp;--- <a href="https://github.com/n00py/WPForce">WPForce/Yertle</a><br />
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
 - <a href="#">Dirb</a><br />
-- <a href="https://github.com/BullsEye0/dorks-eye">DorksEye></a><br />
+- <a href="https://github.com/BullsEye0/dorks-eye">DorksEye</a><br />
 
 
 <strong>#Web Mini-Games</strong>
