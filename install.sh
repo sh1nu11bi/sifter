@@ -310,14 +310,20 @@ t12(){
 t13(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Attack Surface Mapper${NC}"
-	#if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
-		#echo -e "${ORNG}"
-		#figlet -f mini "ASM is already installed."
-		#echo -e "${NC}"
-		#cd /opt/AttackSurfaceMapper
-		#sudo git fetch && sudo git pull
-		#sudo python3 -m pip install -r requirements.txt
-	#else
+	if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
+		if [[ -f '/opt/AttackSurfaceMapper/asm' ]]; then
+			sudo rm -rf /opt/AttackSurfaceMapper
+			sudo git clone https://github.com/superhedgy/AttackSurfaceMapper.git
+			cd AttackSurfaceMapper
+			sudo python3 -m pip install -r requirements.txt
+		fi
+		echo -e "${ORNG}"
+		figlet -f mini "ASM is already installed."
+		echo -e "${NC}"
+		cd /opt/AttackSurfaceMapper
+		sudo git fetch && sudo git pull
+		sudo python3 -m pip install -r requirements.txt
+	else
 		cd /opt
 		sudo rm -rf AttackSurfaceMapper
 		sudo git clone https://github.com/superhedgy/AttackSurfaceMapper.git
@@ -328,7 +334,7 @@ t13(){
 			sudo mv /opt/sifter/extras/.asm -t /opt/AttackSurfaceMapper
 			sudo chmod +x /usr/sbin/asm
 		fi
-	#fi
+	fi
 }
 
 ####################
