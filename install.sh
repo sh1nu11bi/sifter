@@ -1078,6 +1078,7 @@ t50(){
 		sudo git clone https://github.com/martinvigo/email2phonenumber.git
 		cd email2phonenumber
 		sudo python -m pip install requirements.txt
+		sudo pip install beautifulsoup4 requests
 	fi 
 }
 ############################################################################################################
