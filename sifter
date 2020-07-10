@@ -1103,12 +1103,16 @@ update(){
     echo -e "${ORNG}"
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
+    mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
+    mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig
     git fetch
     VER=$(git pull)
     if [[ ${VER} == "Already up to date." ]]; then
         echo -e "${LP}"
         figlet -f mini "Up to date."
         echo -e "${NC}"
+        mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
+        mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
     else
 	    sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
@@ -1124,6 +1128,8 @@ update(){
 	    fi
         ./install.sh
         sudo cp sifter -t /usr/sbin
+        mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
+        mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter
         chmod +x /opt/sifter --recursive
