@@ -6,7 +6,7 @@ LP='\033[1;35m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
-INSTALL=''
+INSTALL='NOTDONE'
 
 if [[ -d '/opt/sifter/results/Osmedeus' ]]; then
 	sleep 2
