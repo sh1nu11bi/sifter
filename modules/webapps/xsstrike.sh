@@ -153,8 +153,8 @@ fi
 echo "Please wait...."
 
 # Execution Runtime
-sudo python xsstrike.py -u ${TARGET} ${DATA} ${INJP} --crawl -l ${LVL} ${SFILE} ${PAY} ${FILE} --threads ${TNUM} --timeout ${TOUT} ${HEAD} ${FUZZ}
+sudo python3 xsstrike.py -u ${TARGET} ${DATA} ${INJP} --crawl -l ${LVL} ${SFILE} ${PAY} ${FILE} --threads ${TNUM} --timeout ${TOUT} ${HEAD} ${FUZZ}
 
 sleep 5
 cd /opt/sifter
-./sifetr -m
+./sifter -m
