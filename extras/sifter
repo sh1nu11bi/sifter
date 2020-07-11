@@ -11,7 +11,7 @@ echo -e "${RED}"
 figlet SifteR
 echo -e "${NC}"
 sudo docker start sifter
-echo -e "${YLW}To detach from docker container ${RED}hold Ctrl and ${W}press P + Q${NC}"
+echo -e "${YLW}To detach from docker container hold ${RED}Ctrl${W} and press ${RED}P ${W}+${RED} Q\n${ORNG}To exit hit ${RED}Ctrl ${W}+ ${RED}C ${W}or enter '${RED}exit${W}' in terminal${NC}"
 sudo docker attach sifter
 echo -e "${W}Would you like to export results to your Desktop?(y/n)${NC}"
 read OPT
