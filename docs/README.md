@@ -153,15 +153,6 @@ Most modules are explained along with demos of a lot of the tools
 
 <strong>#BruteForcing</strong>
 + <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
-
-
-<strong>#Post-Exploitation</strong>
-- <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Elevation of Priviledge Exploit)</a><br />
-- <a href="https://github.com/entynetproject/omega">Omega</a><br />
-- <a href="https://github.com/S3cur3Th1sSh1t/WinPwn">WinPwn</a><br />
-- <a href="https://github.com/Technowlogy-Pushpender/creds_harvester">CredHarvester</a><br />
-- <a href="https://github.com/S3cur3Th1sSh1t/PowerSharpPack">PowerSharp</a><br />
-- <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
 		  
 		
 <strong>#Password Tools</strong>
