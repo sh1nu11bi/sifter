@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 CVIOLET = '\33[35m'
-CGREENBG2  = '\33[102m'
+CGREENBG2  = '\33[104m'
 CRED = '\033[91m'
 CBLUE = '\33[94m' 
 CYELLOW = '\33[33m'
