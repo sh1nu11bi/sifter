@@ -1026,7 +1026,7 @@ t48(){
 		figlet -f mini "theHarvester is already installed"
 		echo -e "${NC}"
 		cd /opt/theHarvester
-		git fetch && git pull
+		sudo git fetch && sudo git pull
 	else
 		cd /opt
 		sudo git clone https://github.com/laramies/theHarvester.git
@@ -1047,7 +1047,7 @@ t49(){
 		figlet -f mini "Spiderfoot is already installed"
 		echo -e "${NC}"
 		cd /opt/spiderfoot
-		git fetch && git pull
+		sudo git fetch && sudo git pull
 		sudo python3 -m pip install -r requirements.txt
 	else
 		cd /opt
@@ -1069,7 +1069,7 @@ t50(){
 		figlet -f mini "E2P is already installed"
 		echo -e "${NC}"
 		cd /opt/email2phonenumber
-		git fetch && git pull
+		sudo git fetch && sudo git pull
 		sudo python -m pip install -r requirements.txt
 	else
 		cd /opt
