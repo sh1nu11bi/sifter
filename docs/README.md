@@ -33,6 +33,7 @@
 - <a style="color: #729e1b" href="#">MetaSploit</a> - Deploy metasploit from within Sifter for Exploitational purposes.<br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Email2PhoneNumber</a> - OSINT tool that allows you to obtain a target's phone number just by having his email address.<br />
+- <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation framework and orchestration engine for cybersecurity data collection & Attack Surface Mapping<br />
 </em>
  </p>
 
@@ -175,6 +176,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/EnableSecurity/wafw00f">wafw00f</a><br />
 - <a href="#">Arp-Scan</a><br />
 - <a href="https://www.github.com/josh0xA/Espionage">Espionage</a><br />
+- <a href="https://github.com/intrigueio/intrigue-core">Intrigue-Core</a><br />
 
 
 <strong>#HoneyPot Detection Systems</strong>

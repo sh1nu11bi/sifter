@@ -27,3 +27,5 @@ sleep 5
 sudo java -jar ktf.gui.jar
 cd /opt/sifter
 ./sifter -m
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

@@ -6,8 +6,9 @@ W='\033[1;37m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 
-echo -e "${ORNG}Yuki-Chan${NC}"
-echo -e "${ORNG}***********${NC}"
+echo -e "${ORNG}"
+figlet -f small "Yuki-Chan"
+echo -e "${NC}"
 echo -e "${YLW}"
 cat files/pingtest.pass
 echo -e "${NC}"

@@ -79,3 +79,6 @@ echo -e "${W}Please enter the type of scan you'd like to do${NC}"
             esac
         done
     echo -e "${NC}"
+
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

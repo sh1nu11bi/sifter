@@ -1079,6 +1079,28 @@ t50(){
 		sudo pip install beautifulsoup4 requests
 	fi 
 }
+
+######################
+# 51 # Intrigue-Core #
+######################
+t51(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Intrigue-Core${NC}"
+	if [[ -d '/opt/intrigue-core' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Intrigue-Core is already installed"
+		echo -e "${NC}"
+		cd /opt/intrigue-core
+		sudo git fetch && sudo git pull
+		#sudo python -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/intrigueio/intrigue-core
+		cd intrigue-core
+		sudo docker build -f Dockerfile-standalone . -t intrigue-core
+	fi 
+}
+
 ############################################################################################################
 #									    ######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1134,6 +1156,7 @@ t47										# PowerHub
 t48										# theHarvester
 t49										# Spiderfoot
 t50										# Email2Phone
+t51										# Intrigue-Core
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##

@@ -28,3 +28,5 @@ echo ""
 echo -e "${LP}example commands:\n${YLW}= PowerSharpPack -Seatbelt -Command \"all\""
 echo -e "= PowerSharpPack -Rubeus -Command \"kerberoast /outfile:Roasted.txt\""
 read
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
