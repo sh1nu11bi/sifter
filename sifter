@@ -1232,7 +1232,7 @@ while getopts "a:bndwirmepcvuhz" options
 
 		h)
 			echo -e "${RED}"
-			figlet "SifteR"
+			python3 extras/ban.py
 			echo -e "${NC}"
 			usage
 			;;
@@ -1245,8 +1245,8 @@ while getopts "a:bndwirmepcvuhz" options
             ;;
 
         m)
-	    echo -e "${INV}${LGRY}"
-	    python3 extras/ban.py
+	        echo -e "${INV}${LGRY}"
+	        python3 extras/ban.py
             echo -e "${RED}"
             figlet -f mini "Modules"
             echo -e "${NC}"
