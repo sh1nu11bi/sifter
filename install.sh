@@ -1101,8 +1101,30 @@ t51(){
 	fi 
 }
 
+#########################
+# 52 # Optiva-Framework #
+#########################
+t52(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Optiva-Framework${NC}"
+	if [[ -d '/opt/Optiva-Framework' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Optiva-Framework is already installed"
+		echo -e "${NC}"
+		#cd /opt/Optiva-Framework
+		#sudo git fetch && sudo git pull
+		#sudo python -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/joker25000/Optiva-Framework
+		cd Optiva-Framework
+		sudo chmod +x installer.sh
+		sudo ./installer.sh
+	fi 
+}
+
 ############################################################################################################
-#									    ######################## 										   #
+#										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
 #										########################										   #
 ############################################################################################################
@@ -1157,6 +1179,7 @@ t48										# theHarvester
 t49										# Spiderfoot
 t50										# Email2Phone
 t51										# Intrigue-Core
+t52										# Optiva-Framework
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##

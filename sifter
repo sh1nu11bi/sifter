@@ -245,7 +245,15 @@ net_mods(){
                                 ;;
 
                             "Arp-Scan")
-                                sudo arp-scan -l
+                                echo -e "${YLW}Would you like to scan your ${RED}l${YLW}ocal network, or use ${RED}c${YLW}ustom arp-scan args?(${RED}l${YLW}/${RED}c${YLW})${NC}"
+                                READ ASO
+                                if [[ ${ASO} == "l" ]]; then
+                                    sudo arp-scan -l
+                                else
+                                    echo -e "${YLW}Please enter your arp-scan arguments now\n${RED}eg. ${ORNG}-N -q -v${NC}"
+                                    read ARPARG
+                                    sudo arp-scan ${ARPARG}
+                                fi
                                 ;;
 
                             "AttackSurfaceMapper")
@@ -282,7 +290,7 @@ vuln_mods(){
   figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Back" "Quit")
+          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Optiva-Framework" "Back" "Quit")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -300,6 +308,10 @@ vuln_mods(){
 
                             "KatanaFramework")
                                 ./modules/vulnscanners/ktf.sh
+                                ;;
+
+                            "Optiva-Framework")
+                                ./modules/vulnscanners/optiva.sh
                                 ;;
 
                             "Back")
@@ -987,9 +999,9 @@ modules(){
                                 ex_mods
                                 ;;
 
-			    "WebAppplication Scanners")
-			        webapps
-			        ;;
+			                "WebAppplication Scanners")
+			                    webapps
+			                    ;;
 
                             "Password Tools")
                                 passtools

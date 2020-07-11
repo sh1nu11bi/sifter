@@ -34,6 +34,7 @@
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Email2PhoneNumber</a> - OSINT tool that allows you to obtain a target's phone number just by having his email address.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation framework and orchestration engine for cybersecurity data collection & Attack Surface Mapping<br />
+- <a style="color: #729e1b" href="#">Optiva-Framework</a> - Web Application Vulnerability Scanner<br />
 </em>
  </p>
 
@@ -116,6 +117,7 @@ Most modules are explained along with demos of a lot of the tools
 &emsp;&emsp;-- <a href="https://github.com/ioncube/SMBGhost">SMBGhost Scanner</a><br />
 &emsp;&emsp;-- <a href="https://github.com/chompie1337/SMBGhost_RCE_PoC">SMBGhost Exploit</a><br />
 
+
 <strong>#Website Exploiters</strong>
 - <a href="#">DDoS</a><br />
 &emsp;&emsp;-- <a href="https://github.com/s1l3nt78/Dark-Star">Dark-Star</a><br />
@@ -190,6 +192,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
 - <a href="https://github.com/PowerScript/KatanaFramework">KatanaFramework</a><br />
+- <a href="https://github.com/joker25000/Optiva-Framework">Optiva-Framework</a>
 
 
 <strong>#WebApplication Scanners</strong>
