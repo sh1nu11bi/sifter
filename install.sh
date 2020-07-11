@@ -1192,14 +1192,15 @@ cd sifter
 sudo cp sifter -t /usr/sbin
 sudo chown $USER:$USER /usr/sbin/sifter
 chmod +x /usr/sbin/sifter
-echo -e "${RED}"
-figlet "Done."
-echo -e "${NC}"
+echo -e "${RED}==========================================================================================${NC}"
+echo ""
 sifter -h
 echo -e "${W}Please edit ${YLW}API keys in ${UBLUE}/opt/AttackSurfaceMapper/keylist.asm${NC} ${W}for a better range of scans &"
 echo -e "for better results in WPScan goto ${UBLUE}modules/wpscan.sh${NC} ${W}and add"
 echo -e " '${UBLUE}--api-token <${URED}your-wpscan-api-token${UBLUE}>${NC}${W}' argument to both commands"
 echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${W}'${NC}"
+echo ""
+echo -e "${RED}==========================================================================================${NC}"
 
 ##################################################################################################################
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

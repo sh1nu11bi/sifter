@@ -1146,7 +1146,6 @@ update(){
         sudo chown $USER:$USER /usr/sbin/sifter
         chmod +x /opt/sifter --recursive
         chmod +x /usr/sbin/sifter
-        echo -e "${W}Done!${NC}"
     fi
 }
 
