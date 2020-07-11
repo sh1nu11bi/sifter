@@ -1138,9 +1138,9 @@ update(){
 		    up_arg ${FILES}
 		    git pull
 	    fi
-        ./install.sh
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
+        ./install.sh
         sudo cp sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter
