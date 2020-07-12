@@ -225,7 +225,7 @@ Most modules are explained along with demos of a lot of the tools
 	$ sifter	-d Opens the Domain Focused Modules
 	$ sifter	-n Opens the Network Mapping Modules menu
 	$ sifter	-w Opens the Website Focused Modules
-	$ sifter	-wa Opens the Web-App Focused Module menu
+	$ sifter	-b Opens the Web-App Focused Module menu
 	$ sifter	-p opens the password tools for quick passlist generation or hash decryption
 	$ sifter	-v Opens the Vulnerability Scanning Module Menu
 	$ sifter	-r Opens the results folder for easy viewing of all saved results
