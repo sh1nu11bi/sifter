@@ -27,6 +27,9 @@ fi
 echo -e "${YLW}"
 cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
+cd /opt/AttackSurfaceMapper
+echo -e "${LP}Activate Python Virtual Environment for Runtime${NC}"
+source venv/bin/activate
 echo "============================================================================"
 echo -e "${W}Please enter your target site${NC}"
 sleep 1
@@ -54,32 +57,42 @@ sleep 1
 read SC1
 if [[ ${SC1} == y ]];then
 	SC='-sc'
-	else
+else
 		SC=''
-		fi
-		echo "============================================================================"
-		echo -e "${W}Would you like to run the scan in Stealth mode${NC}"
-		echo -e "${ORNG}Please note this means only OSINT techniques will be used(y/n) \n Disabled by default${NC}"
-		sleep 1
-		read STLTH1
-		sleep 1
-		if [[ ${STLTH1} == y ]]; then
-			STLTH='--stealth'
-			else
-				STLTH=''
-				fi
-				echo "============================================================================"
-				echo -e "${ORNG}Running Attack Surface Mapper Using:${NC}"
-				echo "*************************************************"
-				echo -e "${W}Target		: ${RED} $TARGET ${NC}"
-				echo -e "${W}Subdomain list	: ${RED} $LIST ${NC}"
-				echo -e "${W}Output File	: ${RED} $DOC ${NC}"
-				echo -e "${W}Format		: ${RED} $FORMAT ${NC}"
-				echo -e "${W}Screen Capture	: ${RED} $SC1 ${NC}"
-				echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
-				echo "Please wait...."
-				sudo python3 asm.py -t ${TARGET} -ln -w resources/${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH}
-
+fi
+echo "============================================================================"
+echo -e "${W}Would you like to run the scan in Stealth mode${NC}"
+echo -e "${ORNG}Please note this means only OSINT techniques will be used(y/n) \n Disabled by default${NC}"
+sleep 1
+read STLTH1
+sleep 1
+if [[ ${STLTH1} == y ]]; then
+	STLTH='--stealth'
+else
+	STLTH=''
+fi
+echo "============================================================================"
+echo -e "${W}Would you like to run AttackSurfaceMapper in Debug mode?(${YLW}y/n${W})\n${YLW}This allows you to see runtime output in order to verify ASM is running correctly.${NC}"
+read DEB 
+if [[ ${DEB} == "y" ]]; then
+	DE='yes'
+	BUG='-d'
+else
+	DE='no'
+	BUG=''
+fi
+echo "============================================================================"
+echo -e "${ORNG}Running Attack Surface Mapper Using:${NC}"
+echo "*************************************************"
+echo -e "${W}Target		: ${RED} $TARGET ${NC}"
+echo -e "${W}Subdomain list	: ${RED} $LIST ${NC}"
+echo -e "${W}Output File	: ${RED} $DOC ${NC}"
+echo -e "${W}Format		: ${RED} $FORMAT ${NC}"
+echo -e "${W}Screen Capture	: ${RED} $SC1 ${NC}"
+echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
+echo -e "${W}Debug			: ${RED} ${DE} ${NC}"
+echo "Please wait...."
+sudo venv/bin/python3 asm.py -t ${TARGET} -ln -w resources/${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH} ${BUG} -v
 cd /opt/sifter
 sifter -m
 
