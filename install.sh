@@ -895,9 +895,9 @@ t40(){
 	fi
 }
 
-################
-# 41 # MkCheck #
-################
+####################################
+# 41 # MkCheck (dep::RouterSploit) #
+####################################
 t41(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for MkCheck${NC}"
@@ -907,6 +907,7 @@ t41(){
 		echo -e "${NC}"
 		cd /opt/MkCheck
 		sudo git fetch && sudo git pull
+		t42
 	else
 		cd /opt
 		sudo git clone https://github.com/s1l3nt78/MkCheck.git
@@ -1136,6 +1137,35 @@ t52(){
 	fi 
 }
 
+#####################################
+# 53 # finDOM-XSS (dep::LinkFinder) # 
+#####################################
+t53(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for finDOM-XSS${NC}"
+	if [[ -d '/opt/findom-xss' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "finDOM-XSS is already installed"
+		echo -e "${NC}"
+		cd /opt/findom-xss
+		sudo git fetch && sudo git pull
+	else
+		cd /opt
+		sudo git clone https://github.com/dwisiswant0/findom-xss.git
+		cd findom-xss
+		sudo chmod +x findom-xss.sh
+		REM='/home/dw1/Tools/LinkFinder/linkfinder.py'
+		INS='/opt/LinkFinder/linkfinder.py'
+		sudo sed -i  "s/${REM}/${INS}/g" /opt/findom-xss/findom-xss.sh
+		echo -e "${RED}Installing finDOM-XSS Dependancies\n${YLW}:LinkFinder${NC}"
+		cd /opt/
+		sudo git clone https://github.com/GerbenJavado/LinkFinder.git
+		cd LinkFinder
+		sudo python3 setup.py
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
+
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1182,7 +1212,7 @@ t38										# dCipher
 t39										# Honey-Tel
 t40										# XSS-Strike
 t41										# MkCheck
-t42										# RouterSploit
+#t42									# RouterSploit (done::MkCheck)
 t43										# DnsTwist
 t44										# Espionage
 t45										# KatanaFramework
@@ -1192,7 +1222,8 @@ t48										# theHarvester
 t49										# Spiderfoot
 t50										# Email2Phone
 t51										# Intrigue-Core
-#t52										# Optiva-Framework
+#t52									# Optiva-Framework (suspended::Runtime Error)
+t53										# finDOM-XSS
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##

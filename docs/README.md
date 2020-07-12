@@ -8,7 +8,7 @@
 	<img align="center" src="https://img.shields.io/badge/@Codename:-AdamantiuM-yellowgreen">
 <br>
 	<img align="center" src="https://img.shields.io/badge/Version-8-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-1-green">
+	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
 	<br />
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
 </p>
@@ -27,15 +27,14 @@
 
 # Additions:
 
- <p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">XSStrike</a> - Cross Site Scripting detection suite.<br />
-- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing<br />
+<p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing<br />
 - <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)<br />
 - <a style="color: #729e1b" href="#">PowerHub</a> - PowerShell post exploitation tool which aids in delivering code  which may get flagged by endpoint protection.<br />
 - <a style="color: #729e1b" href="#">MetaSploit</a> - Deploy metasploit from within Sifter for Exploitational purposes.<br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Email2PhoneNumber</a> - OSINT tool that allows you to obtain a target's phone number just by having his email address.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation framework and orchestration engine for cybersecurity data collection & Attack Surface Mapping<br />
-<!--- <a style="color: #729e1b" href="#">Optiva-Framework</a> - Web Application Vulnerability Scanner<br />
+- <a style="color: #729e1b" href="#">finDOM-XSS</a> - Domain based XSS Scanner<br />
 --></em>
  </p>
 
@@ -55,7 +54,7 @@ Most modules are explained along with demos of a lot of the tools
 <br>
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8_r2.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -196,6 +195,8 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/Technowlogy-Pushpender/aapfinder">AapFinder</a><br />
 - <a href="https://github.com/mazen160/bfac">BFAC</a><br />
 - <a href="https://github.com/s0md3v/XSStrike">XSStrike</a><br />
+- <a href="https://github.com/dwisiswant0/findom-xss">finDOM-XSS</a><br />
+- <a href="https://github.com/PR0PH3CY33/XSS-Freak">XSS-Freak</a>
 
 
 <strong>#Website Scanners & Enumerators</strong>

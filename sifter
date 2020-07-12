@@ -694,7 +694,7 @@ xssmods(){
     figlet -f mini "WebAppplication Scanners"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-          options=("XSS-Strike" "XSS-Freak" "Back")
+          options=("XSS-Strike" "XSS-Freak" "finDOM-XSS" "Back")
           select opt in "${options[@]}"
           do
             case $opt in
@@ -704,6 +704,10 @@ xssmods(){
 
                 "XSS-Freak")
                     ./modules/webapps/xssfreak.sh
+                    ;;
+
+                "finDOM-XSS")
+                    ./modules/webapps/findom.sh
                     ;;
 
                 "Back")
@@ -1055,15 +1059,19 @@ up_arg(){
 update(){
     sudo chown $USER:$USER -R /opt/sifter
     cd /opt/sifter
-    echo -e "${ORNG}"
+    echo -e "${YLW}"
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
+                                                                                                ########################
+    echo -e "${ORNG}Current Version:${RED}8"                                                    ##    VERSION INFO    ##
+    echo -e "${YLW}Revision:${LP}2"                                                             ##    UPDATE CHECK    ##
+                                                                                                ########################
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig
     git fetch
     VER=$(git pull)
     if [[ ${VER} == "Already up to date." ]]; then
-        echo -e "${LP}"
+        echo -e "${ORNG}"
         figlet -f mini "Up to date."
         echo -e "${NC}"
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
