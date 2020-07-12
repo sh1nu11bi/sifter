@@ -9,12 +9,14 @@ W='\033[1;37m'
 figlet -f mini "AttackSurfaceMapper"
 #Edit to users asm directory
 cd /opt/AttackSurfaceMapper
+echo -e "${LP}Activate Python Virtual Environment for Runtime${NC}"
+source venv/bin/activate
 echo -e "${W}Please enter your target site${NC}"
 sleep 1
 read TARGET
 sleep 1
 echo "============================================================================"
-#ls resources
+ls resources
 echo -e "${W}Please enter list to use for subdomain scanning${NC}"
 sleep 1
 read -e -p "" LIST
@@ -59,4 +61,4 @@ echo -e "${W}Format		: ${RED} $FORMAT ${NC}"
 echo -e "${W}Screen Capture	: ${RED} $SC1 ${NC}"
 echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
 echo "Please wait...."
-python3 asm.py -t $TARGET -ln -w $LIST -o $DOC -f $FORMAT $SC $STLTH
+python3 asm.py -t $TARGET -ln -w resources/$LIST -o $DOC -f $FORMAT $SC $STLTH

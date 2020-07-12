@@ -15,7 +15,7 @@ UBLUE='\033[4;34m'
 URED='\033[4;31m'
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker graphviz kdialog python-dev python-pip python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy # sqlite3
+sudo apt-get install -y python wmdocker graphviz kdialog python-dev python3-venv python-pip python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy # sqlite3
 #wget http://ftp.us.debian.org/debian/pool/main/p/python-mysqldb/python-mysqldb_1.3.10-2_amd64.deb
 #sudo dpkg -i python-mysqldb_1.3.10-2_amd64.deb
 #rm python-mysqldb_1.3.10-2_amd64.deb
@@ -315,20 +315,32 @@ t13(){
 			sudo rm -rf /opt/AttackSurfaceMapper
 			sudo git clone https://github.com/superhedgy/AttackSurfaceMapper.git
 			cd AttackSurfaceMapper
-			sudo python3 -m pip install -r requirements.txt
+			if [[ ! -d 'venv' ]]; then
+				sudo python3 -m venv venv
+				source venv/bin/activate
+				sudo venv/bin/pip3 install wheel
+				sudo venv/bin/pip3 install -r requirements.txt
+			fi
 		fi
 		echo -e "${ORNG}"
 		figlet -f mini "ASM is already installed."
 		echo -e "${NC}"
 		cd /opt/AttackSurfaceMapper
+		if [[ ! -d 'venv' ]]; then
+			sudo python3 -m venv venv
+			source venv/bin/activate
+			sudo venv/bin/pip3 install wheel
+			sudo venv/bin/pip3 install -r requirements.txt
+		fi
 		sudo git fetch && sudo git pull
-		sudo python3 -m pip install -r requirements.txt
+		source venv/bin/activate
+		sudo venv/bin/pip3 install wheel
+		sudo venv/bin/pip3 install -r requirements.txt
 	else
-		cd /opt
-		sudo rm -rf AttackSurfaceMapper
-		sudo git clone https://github.com/superhedgy/AttackSurfaceMapper.git
-		cd AttackSurfaceMapper
-		sudo python3 -m pip install -r requirements.txt
+		cd /opt/AttackSurfaceMapper
+		source venv/bin/activate
+		sudo venv/bin/pip3 install wheel
+		sudo venv/bin/pip3 install -r requirements.txt
 		if [[ -f '/opt/sifter/extras/.asm' ]]; then
 			sudo cp /opt/sifter/extras/.asm -t /usr/sbin
 			sudo mv /opt/sifter/extras/.asm -t /opt/AttackSurfaceMapper
