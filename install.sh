@@ -311,16 +311,9 @@ t13(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Attack Surface Mapper${NC}"
 	if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
-		if [[ -f '/opt/AttackSurfaceMapper/asm' ]]; then
-			sudo rm -rf /opt/AttackSurfaceMapper
-			sudo git clone https://github.com/superhedgy/AttackSurfaceMapper.git
-			cd AttackSurfaceMapper
-			if [[ ! -d 'venv' ]]; then
-				sudo python3 -m venv venv
-				source venv/bin/activate
-				sudo venv/bin/pip3 install wheel
-				sudo venv/bin/pip3 install -r requirements.txt
-			fi
+		if [[ -d '/opt/sifter/extras/.git_ASM' ]]; then
+			sudo rm -rf /opt/AttackSurfaceMapper/.git
+			sudo mv /opt/sifter/extras/.git_ASM /opt/AttackSurfaceMapper/.git
 		fi
 		echo -e "${ORNG}"
 		figlet -f mini "ASM is already installed."
@@ -936,12 +929,23 @@ t43(){
 		figlet -f mini "DnsTwist is already installed"
 		echo -e "${NC}"
 		cd /opt/dnstwist
+		if [[ ! -d 'venv' ]]; then
+			sudo python3 -m venv venv
+			source venv/bin/activate
+			sudo venv/bin/pip3 install wheel
+			sudo venv/bin/pip3 install -r requirements.txt
+		fi
 		sudo git fetch && sudo git pull
-		sudo python3 -m pip install -r requirements.txt
+		source venv/bin/activate
+		sudo venv/bin/pip3 install wheel
+		sudo venv/bin/pip3 install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/elceef/dnstwist.git
-		sudo python3 -m pip install -r requirements.txt
+		sudo python3 -m venv venv
+		source venv/bin/activate
+		sudo venv/bin/pip3 install wheel
+		sudo venv/bin/pip3 install -r requirements.txt
 	fi
 }
 ##################
@@ -1157,11 +1161,11 @@ t53(){
 		REM='/home/dw1/Tools/LinkFinder/linkfinder.py'
 		INS='/opt/LinkFinder/linkfinder.py'
 		sudo sed -i  "s/${REM}/${INS}/g" /opt/findom-xss/findom-xss.sh
-		echo -e "${RED}Installing finDOM-XSS Dependancies\n${YLW}:LinkFinder${NC}"
+		echo -e "${RED}Installing finDOM-XSS Dependancies\n${YLW}##################\n# :LinkFinder #\n##################${NC}"
 		cd /opt/
 		sudo git clone https://github.com/GerbenJavado/LinkFinder.git
 		cd LinkFinder
-		sudo python3 setup.py
+		sudo python3 setup.py install
 		sudo python3 -m pip install -r requirements.txt
 	fi
 }
