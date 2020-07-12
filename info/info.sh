@@ -13,6 +13,12 @@ BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
+KD=$(kdialog -h)
+if [[ ${KD} == "" ]]; then
+    COM='cat'
+else
+    COM='kdialog --geometry 600x800 --textbox'
+fi 
 webappinfo(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -24,42 +30,32 @@ webappinfo(){
         do
                 case $opt in
                         "Sitadel")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/sitadel.info
-                            cat /opt/sifter/info/sitadel.info
+                            ${COM} /opt/sifter/info/sitadel.info &
                             ;;
 
                         "AapFinder")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/aapfinder.info
-                            cat /opt/sifter/info/aapfinder.info
+                            ${COM} /opt/sifter/info/aapfinder.info &
                             ;;
 
                         "BFAC")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/bfac.info
-                            cat /opt/sifter/info/bfac.info
+                            ${COM} /opt/sifter/info/bfac.info &
                             ;;
 
                         "OneFind")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/onefind.info
-                            cat /opt/sifter/info/onefind.info
+                            ${COM} /opt/sifter/info/onefind.info &
                             ;;
 
                          "XSStrike")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/xsstrike.info
-                            cat /opt/sifter/info/xsstrike.info
+                            ${COM} /opt/sifter/info/xsstrike.info &
                             ;;
 
                         "XSS-Freak")
-                             kdialog --geometry 600x800 --textbox /opt/sifter/info/XSS-Freak.info
-                            cat /opt/sifter/info/XSS-Freak.info
+                            ${COM} /opt/sifter/info/XSS-Freak.info &
                             ;;
 
                         "Back")
                             cd /opt/sifter
                             ./sifter -m
-                            ;;
-
-                        "Quit")
-                            exit
                             ;;
                 esac
         done
@@ -77,58 +73,45 @@ credinfo(){
             do
                     case $opt in
                         "Omnibus")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/omnibus.info
-                            cat /opt/sifter/info/omnibus.info
+                            ${COM} /opt/sifter/info/omnibus.info &
                             ;;
 
                         "Seeker")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/seeker.info
-                            cat /opt/sifter/info/seeker.info
+                            ${COM} /opt/sifter/info/seeker.info &
                             ;;
 
                         "xRay")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/xray.info
-                            cat /opt/sifter/info/xray.info
+                            ${COM} /opt/sifter/info/xray.info &
                             ;;
 
                         "theHarvester")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/theHarvester.info
-                            cat /opt/sifter/info/theHarvester.info
+                            ${COM} /opt/sifter/info/theHarvester.info &
                             ;;
 
                         "Osmedeus")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/osmedeus.info
-                            cat /opt/sifter/info/osmedeus.info
+                            ${COM} /opt/sifter/info/osmedeus.info &
                             ;;
 
                         "ReconSpider")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/reconspider.info
-                            cat /opt/sifter/info/reconspider.info
+                            ${COM} /opt/sifter/info/reconspider.info &
                             ;;
 
                         "Maryam")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/maryam.info
-                            cat /opt/sifter/info/maryam.info
+                            ${COM} /opt/sifter/info/maryam.info &
                             ;;
 
                         "CredNinja")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/credninja.info
-                            cat /opt/sifter/info/credninja.info
+                            ${COM} /opt/sifter/info/credninja.info &
                             ;;
 
                         "Spiderfoot")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/spiderfoot.info
-                            cat /opt/sifter/info/spiderfoot.info
+                            ${COM} /opt/sifter/info/spiderfoot.info &
                             ;;
 
                         "Back")
                             cd /opt/sifter
                             ./sifter -m
                             ;;
-
-                        "Quit")
-                             exit
-                                ;;
                     esac
             done
         echo -e "${NC}"
@@ -147,19 +130,14 @@ honey_info(){
             select opt in "${options[@]}"
             do
                     case $opt in
-                            "HoneyTel")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/honeytel.info
-                            cat /opt/sifter/info/honeytel.info
+                        "HoneyTel")
+                            ${COM} /opt/sifter/info/honeytel.info &
                             ;;
 
-                            "Back")
+                        "Back")
                             cd /opt/sifter
                             ./sifter -m
                             ;;
-
-                            "Quit")
-                                exit
-                                ;;
                     esac
             done
         echo -e "${NC}"
@@ -177,29 +155,21 @@ dominfo(){
           do
                   case $opt in
                         "Armory")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/armory.info
-                            cat /opt/sifter/info/armory.info
+                            ${COM} /opt/sifter/info/armory.info &
                             ;;
 
                         "aSnip")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/asnip.info
-                            cat /opt/sifter/info/asnip.info
+                            ${COM} /opt/sifter/info/asnip.info &
                             ;;
 
                         "SayDog")
-                            kdialog --feometry 600x800 --textbox /opt/sifter/info/saydog.info
-                            cat /opt/sifter/info/saydog.info
+                            ${COM} /opt/sifter/info/saydog.info &
                             ;;
 
-
-                           "Back")
+                        "Back")
                             cd /opt/sifter
                             ./sifter -m
                             ;;
-
-                            "Quit")
-                                exit
-                                ;;
                     esac
             done
             echo -e "${NC}"
@@ -216,29 +186,22 @@ vulninfo(){
           select opt in "${options[@]}"
           do
                   case $opt in
-                            "Flan")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/flan.info
-                            cat /opt/sifter/info/flan.info
+                        "Flan")
+                            ${COM} /opt/sifter/info/flan.info &
                             ;;
 
                         "RapidScan")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/rapidscan.info
-                            cat /opt/sifter/info/rapidscan.info
+                            ${COM} /opt/sifter/info/rapidscan.info &
                             ;;
 
                         "Yuki-Chan")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/yuki.info
-                            cat /opt/sifter/info/yuki.info
+                            ${COM} /opt/sifter/info/yuki.info &
                             ;;
 
                            "Back")
                             cd /opt/sifter
                             ./sifter -m
                             ;;
-
-                            "Quit")
-                                exit
-                                ;;
                     esac
             done
             echo -e "${NC}"
@@ -255,27 +218,20 @@ web_netinfo(){
           do
                   case $opt in
 			            "BlackWidow")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/blackwidow.info
-                            cat /opt/sifter/info/blackwidow.info
+                            ${COM} /opt/sifter/info/blackwidow.info
                             ;;
                         
                         "AttackSurfaceMapper")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/asm.info
-                            cat /opt/sifter/info/asm.info
+                            ${COM} /opt/sifter/info/asm.info
                             ;;
 
                         "wafw00f")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/wafw00f.info
-                            cat /opt/sifter/info/wafw00f.info
+                            ${COM} /opt/sifter/info/wafw00f.info
                             ;;
 
                         "Back")
                             cd /opt/sifter
                             ./sifter -m
-                            ;;
-
-                        "Quit")
-                            exit
                             ;;
                     esac
             done
@@ -292,18 +248,15 @@ postinfo(){
         do
             case $opt in
                 "Omega")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/omega.info
-                            cat /opt/sifter/info/omega.info
+                            ${COM} /opt/sifter/info/omega.info &
                             ;;                    
 
                 "WinPwn")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/WinPwn.info
-                            cat /opt/sifter/info/WinPwn.info
+                            ${COM} /opt/sifter/info/WinPwn.info &
                             ;;
                 
                 "ACLight")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/aclight.info
-                            cat /opt/sifter/info/aclight.info
+                            ${COM} /opt/sifter/info/aclight.info &
                             ;;
 
                "Back")
@@ -327,44 +280,33 @@ exmodinfo(){
         do
                 case $opt in
                     "BruteDUM")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/brutedum.info
-                            cat /opt/sifter/info/brutedum.info
+                            ${COM} /opt/sifter/info/brutedum.info &
                             ;;
 
                     "ActiveReign")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/activereign.info
-                            cat /opt/sifter/info/activereign.info
+                            ${COM} /opt/sifter/info/activereign.info &
                             ;;
 
                     "MkCheck")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/mkcheck.info
-                            cat /opt/sifter/info/mkcheck.info
+                            ${COM} /opt/sifter/info/mkcheck.info &
                             ;;
 
                     "NekoBot")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/nekobot.info
-                            cat /opt/sifter/info/nekobot.info
+                            ${COM} /opt/sifter/info/nekobot.info &
                             ;;
 
                     "xShock")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/xshock.info
-                            cat /opt/sifter/info/xshock.info
+                            ${COM} /opt/sifter/info/xshock.info &
                             ;;
 
                     "VulnX")
-                            kdialog --geometry 600x800 --textbox /opt/sifter/info/vulnx.info
-                            cat /opt/sifter/info/vulnx.info
+                            ${COM} /opt/sifter/info/vulnx.info &
                             ;;
                     
                     "Back")
                             cd /opt/sifter
                             ./sifter -m
                             ;;
-
-                    "Quit")
-                        exit
-                        ;;
-
                 esac
         done
     echo -e "${NC}"

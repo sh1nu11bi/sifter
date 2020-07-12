@@ -22,7 +22,7 @@ else
 	sudo git clone https://github.com/mablanco/docker-osmedeus.git
 	cd docker-osmedeus
 	sudo docker build -t mablanco/osmedeus .
-	sudo echo "DONE" > /opt/docker-osmedeus/.configured
+	echo "DONE" | sudo tee /opt/docker-osmedeus/.configured
 fi
 echo -e "${W}Please enter your target${NC}"
 read TARGET

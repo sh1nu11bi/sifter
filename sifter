@@ -431,7 +431,7 @@ ex_mods(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Microsoft Explicit" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "Metasploit" "NevrrMore" "Back" "Quit")
+        options=("Microsoft Explicit" "BruteDUM" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "Metasploit" "NevrrMore" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -488,11 +488,6 @@ ex_mods(){
                     "Back")
                         modules
                         ;;
-
-                    "Quit")
-                        exit
-                        ;;
-
                 esac
         done
     echo -e "${NC}"
@@ -523,7 +518,7 @@ search_tools(){
     figlet -f mini "Exploit Finders"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-        options=("ShodanSploit" "FindSploit" "Back" "Quit")
+        options=("ShodanSploit" "FindSploit" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -542,11 +537,6 @@ search_tools(){
                     "Back")
                         modules
                         ;;
-
-                    "Quit")
-                        exit
-                        ;;
-
                 esac
         done
     echo -e "${NC}"
@@ -558,7 +548,7 @@ ms_tools(){
   figlet -f mini "MicroSoft Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "iSpy" "FuzzyDander" "SMBGhost" "Back" "Quit")
+        options=("ActiveReign" "iSpy" "FuzzyDander" "SMBGhost" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -601,10 +591,6 @@ ms_tools(){
                             "Back")
                                 modules
                                 ;;
-
-                           "Quit")
-                                exit
-                                ;;
                 esac
         done
     echo -e "${NC}"
@@ -616,7 +602,7 @@ ddos(){
       figlet -f mini "DDoS Tools"
       echo -e "${ORNG}"
       PS3='What tool would you like to use?'
-        options=("Dark Star" "Impulse" "Back" "Quit")
+        options=("Dark Star" "Impulse" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -643,7 +629,7 @@ routertools(){
     figlet -f mini "Router Tools"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-        options=("MkCheck" "RouterSploit" "Back" "Quit")
+        options=("MkCheck" "RouterSploit" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -660,10 +646,6 @@ routertools(){
                 "Back")
                     modules
                     ;;
-
-                "Quit")
-                    exit
-                    ;;
             esac
         done
     echo -e "${NC}"
@@ -675,7 +657,7 @@ webex(){
   figlet -f mini "Website Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("DDoS" "NekoBot" "xShock" "VulnX" "Back" "Quit")
+        options=("DDoS" "NekoBot" "xShock" "VulnX" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -701,10 +683,6 @@ webex(){
 			        "Back")
                         modules
                         ;;
-
-                    "Quit")
-                        exit
-                        ;;
                 esac
         done
     echo -e "${NC}"
@@ -716,7 +694,7 @@ xssmods(){
     figlet -f mini "WebAppplication Scanners"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-          options=("XSS-Strike" "XSS-Freak" "Back" "Quit")
+          options=("XSS-Strike" "XSS-Freak" "Back")
           select opt in "${options[@]}"
           do
             case $opt in
@@ -731,10 +709,6 @@ xssmods(){
                 "Back")
                     modules
                     ;;
-
-                "Quit")
-                    exit
-                    ;;
             esac
           done
     echo -e "${NC}"
@@ -746,7 +720,7 @@ webapps(){
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "BFAC" "AapFinder" "OneFind" "XSS" "Back" "Quit")
+        options=("Sitadel" "BFAC" "AapFinder" "OneFind" "XSS" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -772,10 +746,6 @@ webapps(){
 
                         "Back")
                             modules
-                            ;;
-
-                        "Quit")
-                            exit
                             ;;
                 esac
         done
@@ -980,7 +950,12 @@ modules(){
                                 ;;
 
                             "Info")
-                                ./info/info.sh
+                                XTM=$(xterm -h)
+                                if [[ ${XTM} == "" ]]; then
+                                    xterm -e /opt/sifter/info/info.sh &
+                                else
+                                    ./info/info.sh
+                                fi                                
                                 ;;
 
                             "Main Menu")
@@ -999,7 +974,7 @@ modules(){
                                 ;;
 
                             "Quit")
-                                exit
+                                exit 2
                                 ;;
                     esac
             done
@@ -1052,7 +1027,7 @@ menu(){
                         ;;
 
                     "Quit")
-                        exit
+                        exit 2
                         ;;
 
                 esac
@@ -1220,7 +1195,12 @@ while getopts "a:bndwirmepcvuhz" options
             echo -e "${RED}"
             figlet -f mini "Module Info"
             echo -e "${NC}"
-            ./info/info.sh
+            XTM=$(xterm -h)
+            if [[ ${XTM} == "" ]]; then
+                xterm -e /opt/sifter/info/info.sh &
+            else
+                ./info/info.sh
+            fi 
             ;;
 
         m)

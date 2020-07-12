@@ -1,24 +1,25 @@
+# KatanaFramework Runtime Variables
 # Commands
 
-|Command|Quick Command|Description|
--------|---------|-------|
-show modules|showm|Show modules 
-show options|sop|Show options module
-show full options|sfop|Show full options module
-use|use|Use module 
-getinfo|getinfo	| Show information of module
-set|set	|Change valor of a parameter
-back|back|Backing or return
-run|run|run Module
-update|u|Update framework
-exit|x|Exit of framework
-invoke||Open a module in one new console 
-help|h|Show help
-session||Session command
-clear|c|Clear screen
-s::|s::|Save Variable
-x::|x::|Execute System Commands
-f::|f::|Execute Functions
+|Command________________|Quick Command_______________|Description|
+------------------------|----------------------------|-------------------------------------|
+show modules____________|showm_______________________|Show modules 
+show options____________|sop_________________________|Show options module
+show full options_______|sfop________________________|Show full options module
+use_____________________|use_________________________|Use module 
+getinfo_________________|getinfo_____________________|Show information of module
+set_____________________|set_________________________|Change valor of a parameter
+back____________________|back________________________|Backing or return
+run_____________________|run_________________________|run Module
+update__________________|u___________________________|Update framework
+exit____________________|x___________________________|Exit of framework
+invoke__________________|____________________________|Open a module in one new console 
+help____________________|h___________________________|Show help
+session_________________|____________________________|Session command
+clear___________________|c___________________________|Clear screen
+s::_____________________|s::_________________________|Save Variable
+x::_____________________|x::_________________________|Execute System Commands
+f::_____________________|f::_________________________|Execute Functions
 
 
 ## f::
@@ -27,15 +28,15 @@ Functions can be called with 'f::'. They allow the user to do more complex thing
 
 If the function has arguments, they are listed after the().
 
-|Name|Parameters|Description|
-----|----------|-----------|
-get_aps()|Interface, timeout|Scan Access point's
-get_interfaces()|None|Get Network Interfaces
-get_monitors_mode()|None|Get Monitor Interfaces Wireless
-start_monitor()|Interface|Start Monitor Mode in Interface
-get_local_ip()|None|Get local IP
-get_external_ip()|None|Get External IP
-get_gateway()|None|Get Gateway/Router IP
+|Name___________________|Parameters___________________|Description_______________________|
+------------------------|-----------------------------|----------------------------------|
+get_aps()_______________|Interface, timeout___________|Scan Access point's
+get_interfaces()________|None_________________________|Get Network Interfaces
+get_monitors_mode()_____|None_________________________|Get Monitor Interfaces Wireless
+start_monitor()_________|Interface____________________|Start Monitor Mode in Interface
+get_local_ip()__________|None_________________________|Get local IP
+get_external_ip()_______|None_________________________|Get External IP
+get_gateway()___________|None_________________________|Get Gateway/Router IP
 
 
 ### USE
