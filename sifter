@@ -29,7 +29,7 @@ usage() {                                    	  # Function: Print a help message
 	echo "# sifter -d Opens the Domain Focused Modules"
 	echo "# sifter -n Opens the Network Mapping Modules menu"
 	echo "# sifter -w Opens the Website Focused Modules"
-	echo "# sifter -wa Opens the Web-App Focused Module menu"
+	echo "# sifter -b Opens the Web-App Focused Module menu"
 	echo "# sifter -v Opens the Vulnerability Scanning Module Menu"
     echo "# sifter -m Opens the Module Menu directly"
     echo "# sifter -p opens the password tools for quick passlist generation or hash decryption"
