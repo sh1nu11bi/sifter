@@ -6,7 +6,6 @@ LP='\033[1;35m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
-INSTALL='NOTDONE'
 
 if [[ -d '/opt/sifter/results/Osmedeus' ]]; then
 	sleep 2
@@ -16,14 +15,14 @@ fi
 echo -e "${RED}"
 figlet -f mini "OsmedeuS"
 echo -e "${NC}"
-if [[ ${INSTALL} == "ISDONE" ]]; then
+if [[ -f '/opt/docker-osmedeus/.configured' ]]; then
 	sleep 1
 else
 	cd /opt/
 	sudo git clone https://github.com/mablanco/docker-osmedeus.git
 	cd docker-osmedeus
 	sudo docker build -t mablanco/osmedeus .
-	sed -i "s/INSTALL=''/INSTALL='ISDONE'/g" /opt/sifter/modules/credmods/osmedeus.sh
+	sudo echo "DONE" > /opt/docker-osmedeus/.configured
 fi
 echo -e "${W}Please enter your target${NC}"
 read TARGET
