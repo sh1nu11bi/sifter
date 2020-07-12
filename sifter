@@ -48,7 +48,7 @@ cred_mods(){
   echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "Back" "Quit")
+          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -70,10 +70,6 @@ cred_mods(){
                             
                             "Back")
                                 modules
-                                ;;
-                                
-                            "Quit")
-                                exit
                                 ;;
                     esac
             done
@@ -115,10 +111,6 @@ phone_mods(){
                             "Back")
                                 modules
                                 ;;
-
-                            "Quit")
-                                exit
-                                ;;
                     esac
             done
             echo -e "${NC}"
@@ -130,7 +122,7 @@ info_mods(){
     figlet -f mini "Information Gatherers"
     echo -e "${ORNG}"
     PS3='Which module category would you like to use?'
-            options=("Enterprise Focus" "Individual Focus" "Back" "Quit")
+            options=("Enterprise Focus" "Individual Focus" "Back")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -144,10 +136,6 @@ info_mods(){
 
                             "Back")
                                 modules
-                                ;;
-
-                            "Quit")
-                                exit
                                 ;;
                     esac
             done
@@ -163,7 +151,7 @@ honey_mods(){
     echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-            options=("HoneyCaught" "SniffingBear" "HoneyTel" "Back" "Quit")
+            options=("HoneyCaught" "SniffingBear" "HoneyTel" "Back")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -182,10 +170,6 @@ honey_mods(){
                             "Back")
                                 modules
                                 ;;
-
-                            "Quit")
-                                exit
-                                ;;
                     esac
             done
         echo -e "${NC}"
@@ -198,7 +182,7 @@ dom_mods(){
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "Armory" "SayDog" "Spiderfoo7" "Back" "Quit") 
+          options=("DnsTwist" "Armory" "SayDog" "Spiderfoo7" "Back") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -221,10 +205,6 @@ dom_mods(){
                             "Back")
                                 modules
                                 ;;
-
-                            "Quit")
-                                exit
-                                ;;
                     esac
             done
             echo -e "${NC}"
@@ -236,7 +216,7 @@ net_mods(){
   figlet -f mini "Network Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("nMap" "Arp-Scan" "AttackSurfaceMapper" "wafw00f" "aSnip" "Espionage" "Back"  "Quit")
+          options=("nMap" "Arp-Scan" "AttackSurfaceMapper" "wafw00f" "aSnip" "Espionage" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -275,10 +255,6 @@ net_mods(){
                             "Back")
                                 modules
                                 ;;
-
-                            "Quit")
-                                exit
-                                ;;
                     esac
             done
             echo -e "${NC}"
@@ -290,7 +266,7 @@ vuln_mods(){
   figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Optiva-Framework" "Back" "Quit")
+          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -310,16 +286,12 @@ vuln_mods(){
                                 ./modules/vulnscanners/ktf.sh
                                 ;;
 
-                            "Optiva-Framework")
-                                ./modules/vulnscanners/optiva.sh
-                                ;;
+                            #"Optiva-Framework")
+                            #    ./modules/vulnscanners/optiva.sh
+                            #s    ;;
 
                             "Back")
                                 modules
-                                ;;
-
-                            "Quit")
-                                exit
                                 ;;
                     esac
             done
@@ -332,7 +304,7 @@ web_mods(){
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Dirb" "Nikto" "BlackWidow" "DorksEye" "WPForce" "Zeus" "Back" "Quit")
+          options=("Dirb" "Nikto" "BlackWidow" "DorksEye" "WPForce" "Zeus" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -365,10 +337,6 @@ web_mods(){
 
                             "Back")
                                 modules
-                                ;;
-
-                            "Quit")
-                                exit
                                 ;;
                     esac
             done
