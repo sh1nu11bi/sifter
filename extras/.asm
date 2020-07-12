@@ -61,4 +61,4 @@ echo -e "${W}Format		: ${RED} $FORMAT ${NC}"
 echo -e "${W}Screen Capture	: ${RED} $SC1 ${NC}"
 echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
 echo "Please wait...."
-python3 asm.py -t $TARGET -ln -w resources/$LIST -o $DOC -f $FORMAT $SC $STLTH
+sudo venv/bin/python3 asm.py -t $TARGET -ln -w resources/$LIST -o $DOC -f $FORMAT $SC $STLTH
