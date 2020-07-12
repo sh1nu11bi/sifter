@@ -134,7 +134,7 @@ Most modules are explained along with demos of a lot of the tools
 
 
 <strong>#Post-Exploitation</strong>
-- <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Elevation of Priviledge Exploit)</a><br />
+- <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Privilege Escalation Exploit)</a><br />
 - <a href="https://github.com/entynetproject/omega">Omega</a><br />
 - <a href="https://github.com/S3cur3Th1sSh1t/WinPwn">WinPwn</a><br />
 - <a href="https://github.com/Technowlogy-Pushpender/creds_harvester">CredHarvester</a><br />
