@@ -20,9 +20,11 @@
 <br>
 <br>
 
-# Version 8 Release
+# Release
 
 	@Codename: AdamantiuM
+	@Version : 8
+	@Revision: 2
 
 
 # Additions:
