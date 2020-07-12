@@ -132,7 +132,6 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/1N3/Findsploit">FindSploit</a><br />
 - <a href="https://github.com/shodansploit/shodansploit">ShodanSploit</a><br />
 
-+ <a href="https://github.com/s1l3nt78/TigerShark">TigerShark (Phishing)</a><br />
 
 <strong>#Post-Exploitation</strong>
 - <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Elevation of Priviledge Exploit)</a><br />
@@ -154,8 +153,12 @@ Most modules are explained along with demos of a lot of the tools
 &emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
 &emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
 
+
+<strong>#Phishing</strong>
++ <a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a><br />
+
 <strong>#BruteForcing</strong>
-+ <a href="https://github.com/GitHackTools/BruteDum">BruteDUM (Bruteforcer)</a><br />
++ <a href="https://github.com/GitHackTools/BruteDum">BruteDUM</a><br />
 		  
 		
 <strong>#Password Tools</strong>
