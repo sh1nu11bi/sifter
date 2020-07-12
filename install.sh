@@ -440,7 +440,7 @@ t17(){
 			sudo docker build -t mablanco/osmedeus .
 			echo "DONE" | sudo tee /opt/docker-osmedeus/.configured
 		elif [[ ${INOPT} == "d" ]]; then
-			sudo echo "DONE" > /opt/docker-osmedeus/.configured
+			echo "DONE" | sudo tee /opt/docker-osmedeus/.configured
 		else
 			echo -e "${W}Leaving Osmedeus install for first run${NC}"
 		fi
