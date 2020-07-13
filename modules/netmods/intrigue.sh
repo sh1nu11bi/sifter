@@ -13,6 +13,9 @@ cd /opt/intrigue-core
 sleep 2
 echo -e "${YLW}Throwing up Intrigue Server at ${LBBLUE}http://127.0.0.1:7777${NC}"
 sleep 1
+echo -e "${URED}Panel Login Info:${ORNG}"
+cat /opt/Intrigue-Core/Panel_Login.info
+echo -e "${NC}"
 xterm -e sleep 20 && firefox http://127.0.0.1:7777 &
 sleep 5
 echo -e "${W}Would you like your data to persist through sessions?${YLW}(y/n)${NC}"
