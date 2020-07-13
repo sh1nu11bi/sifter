@@ -199,8 +199,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
 - <a href="https://github.com/PowerScript/KatanaFramework">KatanaFramework</a><br />
-- <a href="https://github.com/joker25000/Optiva-Framework">Optiva-Framework</a>
-
+<!--- <a href="https://github.com/joker25000/Optiva-Framework">Optiva-Framework</a>
+-->
 
 <strong>#WebApplication Scanners</strong>
 - <a href="https://github.com/shenril/Sitadel">Sitadel</a><br />
