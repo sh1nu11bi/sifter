@@ -325,10 +325,14 @@ t13(){
 			sudo venv/bin/pip3 install wheel
 			sudo venv/bin/pip3 install -r requirements.txt
 		fi
-		sudo git fetch && sudo git pull
-		source venv/bin/activate
-		sudo venv/bin/pip3 install wheel
-		sudo venv/bin/pip3 install -r requirements.txt
+		CHK=$(sudo git fetch && sudo git pull)
+		if [[ ${CHK} == "Already up to date." ]]; then
+			sleep 1
+		else
+			source venv/bin/activate
+			sudo venv/bin/pip3 install wheel
+			sudo venv/bin/pip3 install -r requirements.txt
+		fi
 	else
 		cd /opt/AttackSurfaceMapper
 		source venv/bin/activate
@@ -1245,7 +1249,7 @@ echo ""
 sifter -h
 echo -e "${W}Please edit ${LP}API keys ${W}in ${UBLUE}/opt/AttackSurfaceMapper/keylist.asm${NC} ${W}for a better range of scan results &"
 echo -e "for better results in WPScan goto ${UBLUE}modules/wpscan.sh${NC} ${W}and add"
-echo -e " '${UBLUE}--api-token <${URED}your-wpscan-api-token${UBLUE}>${NC}${W}' argument to both commands"
+echo -e " '${UBLUE}--api-token ${URED}your-wpscan-api-token${UBLUE}${NC}${W}' argument to both commands"
 echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${W}'${NC}"
 echo ""
 echo -e "${RED}==========================================================================================${NC}"
