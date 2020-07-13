@@ -1041,7 +1041,8 @@ t47(){
 		cd /opt/PowerHub
 		sudo python3 -m venv env
 		source env/bin/activate
-		pip3 install -r requirements.txt
+		sudo env/bin/pip3 install wheel
+		sudo env/bin/pip3 install -r requirements.txt
 	fi
 }
 
