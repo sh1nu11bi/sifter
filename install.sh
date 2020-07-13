@@ -335,6 +335,8 @@ t13(){
 			sudo venv/bin/pip3 install -r requirements.txt
 		fi
 	else
+		cd /opt
+		sudo git clone https://github.com/superhedgy/AttackSurfaceMapper
 		cd /opt/AttackSurfaceMapper
 		source venv/bin/activate
 		sudo venv/bin/pip3 install wheel
@@ -819,32 +821,37 @@ t36(){
 ##################
 # 37 # Mentalist #
 # ################
+menSYS(){
+        if [[ ${OSYS} == "l" ]] || [[ ${OSYS} == "linux" ]]; then
+                wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
+                unzip Mentalist*
+                rm *.zip
+        elif [[ ${OSYS} == "m" ]] || [[ ${OSYS} == "mac" ]]; then
+                wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-OSX.zip
+                unzip Mentalist*
+                rm *.zip
+        elif [[ ${OSYS} == "w" ]] || [[ ${OSYS} == "windows" ]]; then
+                wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Win.zip
+                unzip Mentalist*
+                rm *.zip
+        else 
+                echo -e "${URED}You have selected an invalid option${NC}"
+                menSYS
+        fi
+}
 t37(){
-	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for Mentalist${NC}"
-	if [[ -f '/opt/sifter/modules/passtools/Mentalist' ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "Mentalist is already installed"
-		echo -e "${NC}"
-	else
-		cd /opt/sifter/modules/passtools
-		echo -e "${YLW}Which system are you installing sifter on? (${ORNG}m${YLW}ac/${ORNG}l${YLW}inux/${ORNG}w${YLW}indows)\n${RED}NOTE: ${UBBLUE}sifter${NC}${W} works best on a Linux Distro${NC}"
-		read OSYS
-		if [[ ${OSYS} == "l" ]]; then
-			wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
-			unzip Mentalist*
-			rm *.zip
-		elif [[ ${OSYS} == "m" ]]; then
-			wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-OSX.zip
-			unzip Mentalist*
-			rm *.zip
-		else
-			wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Win.zip
-			unzip Mentalist*
-			rm *.zip
-		fi
-
-	fi
+        echo -e "${W}===========================================================================================${NC}"
+        echo -e "${YLW}Checking for Mentalist${NC}"
+        if [[ -f '/opt/sifter/modules/passtools/Mentalist' ]]; then
+                echo -e "${ORNG}"
+                figlet -f mini "Mentalist is already installed"
+                echo -e "${NC}"
+        else
+                cd /opt/sifter/modules/passtools
+                echo -e "${YLW}Which system are you installing sifter on? (${ORNG}m${YLW}ac/${ORNG}l${YLW}inux/${ORNG}w${YLW}indows)\n${RED}NOTE: ${UBBLUE}sifter${NC}${W} works best on a Linux Distro${NC}"
+                read OSYS
+                menSYS
+        fi
 }
 
 ################
