@@ -68,7 +68,7 @@ credinfo(){
     figlet -f mini "Information Gatherers"
     echo -e "${ORNG}"
     PS3='Which module category would you like to use?'
-            options=("Seeker" "xRay" "Maryam" "theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "" "Back" "Quit")
+            options=("Seeker" "xRay" "Maryam" "theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "Spiderfoot" "ODIN" "Back" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -106,6 +106,10 @@ credinfo(){
 
                         "Spiderfoot")
                             ${COM} /opt/sifter/info/spiderfoot.info &
+                            ;;
+
+                        "ODIN")
+                            ${COM} /opt/sifter/info/odin.info &
                             ;;
 
                         "Back")

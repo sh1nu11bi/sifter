@@ -37,6 +37,9 @@
 - <a style="color: #729e1b" href="#">Email2PhoneNumber</a> - OSINT tool that allows you to obtain a target's phone number just by having his email address.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
 - <a style="color: #729e1b" href="#">finDOM-XSS</a> - Domain based XSS Scanner<br />
+- <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
+&emsp;<strong><em>'-->&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.
+</em>
 </em>
  </p>
 
@@ -116,6 +119,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/sherlock-project/sherlock">Sherlock</a><br />
 - <a href="https://github.com/evilsocket/xray">xRay</a><br />
 - <a href="https://github.com/martinvigo/email2phonenumber">E2P (Email2Phone)</a>
+- <a href="https://github.com/chrismaddalena/ODIN">ODIN</a>
 
 
 <strong>#Domain Recon Gathering</strong>

@@ -163,7 +163,8 @@ t6(){
 		figlet -f mini "Rapidscan is already installed"
 		echo -e "${NC}"
 		cd /opt/rapidscan
-		sudo git fetch && sudo git pull
+		sudo wget https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py
+		sudo chmod +x rapidscan.py
 	else
 		cd /opt
 		sudo git clone https://github.com/s1l3nt78/rapidscan.git
@@ -1174,6 +1175,25 @@ t53(){
 	fi
 }
 
+#############
+# 54 # ODIN #
+#############
+t54(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for ODIN${NC}"
+	if [[ -d '/opt/ODIN' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "ODIN is already installed"
+		echo -e "${NC}"
+		cd /opt/ODIN
+		sudo git fetch && sudo git pull
+	else
+		cd /opt
+		sudo git clone https://github.com/chrismaddalena/ODIN
+		cd ODIN/setup
+		sudo python3 setup_check.py
+	fi
+}
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1232,6 +1252,7 @@ t50										# Email2Phone
 t51										# Intrigue-Core
 #t52									# Optiva-Framework (suspended::Runtime Error)
 t53										# finDOM-XSS
+t54										# ODIN
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
