@@ -37,7 +37,7 @@
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
 - <a style="color: #729e1b" href="#">finDOM-XSS</a> - Domain based XSS Scanner<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
-&emsp;<strong><em>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.</em>
+&emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.</em>
  </p>
 
 
