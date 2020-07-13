@@ -19,6 +19,7 @@ check(){
 }
 
 cd /opt/dnstwist
+source env/bin/activate
 echo -e "${RED}"
 figlet -f mini "DnsTwist"
 echo -e "${NC}"
