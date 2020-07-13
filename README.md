@@ -7,9 +7,9 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-AdamantiuM-yellowgreen">
 <br>
-	<img align="center" src="https://img.shields.io/badge/Version-8-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
-	<br />
+	<img align="center" src="https://img.shields.io/badge/Version-8.2-red">
+	<!--<img align="center" src="https://img.shields.io/badge/Revision-2-green">
+	--><br />
 	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
 </p>
 
@@ -23,8 +23,7 @@
 # Release
 
 	@Codename: AdamantiuM
-	@Version : 8
-	@Revision: 2
+	@Version : 8.2
 
 
 # Additions:
@@ -60,7 +59,7 @@ Most modules are explained along with demos of a lot of the tools
 
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8_r2.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8.2.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -203,8 +202,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
 - <a href="https://github.com/PowerScript/KatanaFramework">KatanaFramework</a><br />
-- <a href="https://github.com/joker25000/Optiva-Framework">Optiva-Framework</a>
-
+<!--- <a href="https://github.com/joker25000/Optiva-Framework">Optiva-Framework</a>
+-->
 
 <strong>#WebApplication Scanners</strong>
 - <a href="https://github.com/shenril/Sitadel">Sitadel</a><br />
