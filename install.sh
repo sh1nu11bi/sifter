@@ -1063,7 +1063,7 @@ t48(){
 		sudo git clone https://github.com/laramies/theHarvester.git
 		cd /opt/theHarvester
 		sudo python3 -m pip install pipenv
-		python3 -m pip install -r requirements/base.txt
+		sudo python3 -m pip install -r requirements/base.txt
 	fi
 }
 
@@ -1085,7 +1085,7 @@ t49(){
 		sudo git clone https://github.com/smicallef/spiderfoot
 		sudo chown $USER:$USER -R spiderfoot
 		cd spiderfoot
-		python3 -m pip install -r requirements.txt
+		sudo python3 -m pip install -r requirements.txt
 	fi
 }
 
