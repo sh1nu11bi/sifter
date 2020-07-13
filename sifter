@@ -1224,6 +1224,10 @@ while getopts "a:bndwirmepcvuhz" options
             modules
             ;;
 
+	*)
+		echo -e "${RED}Wrong Option Parsed\nRedirecting to Main Menu${NC}"
+		menu
+		;;
 	esac
 done
 if [[ $OPTIND == 1 ]]; then				# if no option is passed
