@@ -33,7 +33,7 @@ jobs:
             sudo sed -i "s/${OSOUT}/${OSIN}/g" install.sh
             UPO='sudo apt full-upgrade'
             UPI='yes | sudo apt full-upgrade'
-            sed -i "s/${UPO}/${UPI}/g" install.sh
+            sudo sed -i "s/${UPO}/${UPI}/g" install.sh
       - run: sudo bash /opt/sifter/install.sh
       - run:
           name: Run Sifter
