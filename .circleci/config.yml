@@ -5,6 +5,10 @@ jobs:
       image: ubuntu-1604:201903-01
     
     steps:
+      - run: 
+          command: |
+            VAR=$(deb http://http.kali.org/kali kali-rolling main non-free contrib)
+            sudo echo ${VAR} >> /etc/apt/sources.list
       - run:
           name: Install & Sign Kali Repos
           command: wget -q -O - archive.kali.org/archive-key.asc | sudo apt-key add
@@ -19,6 +23,10 @@ jobs:
           command: | 
             cd /opt/sifter
             sudo bash install.sh
+            \n
+            l
+            l
+            y
       - run:
           name: Run Sifter
           command: |
