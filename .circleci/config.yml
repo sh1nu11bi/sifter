@@ -63,11 +63,15 @@ jobs:
             #sudo sed -i "s/${UPO}/${UPI}/g" install.sh
       
       - run: 
-          name: Pip Updates
+          name: Pip2 Updates
           command: |
             sudo pip2 install --upgrade pip 
             pip2 install --upgrade pip 
             sudo pip2 install setuptools wheel
+            
+      - run:
+          name: Pip3 Updates
+          command: |
             sudo python3 -m pip install --upgrade pip 
             python3 -m pip install --upgrade pip 
             #sudo pip3 install setuptools wheel
