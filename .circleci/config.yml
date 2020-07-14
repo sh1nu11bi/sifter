@@ -21,19 +21,35 @@ jobs:
             wget 'https://archive.kali.org/archive-key.asc'                                                           # Aquire Kali Repo Key Signature
             sudo apt-key add archive-key.asc                                                                          # Add Kali Signing Key to Machine Image 
     
+    
       - run: 
           name: Remove Unnecessary Repos
           command: | 
             sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list                    # Remove Faulty Repo lists (breaking CircleCI Build)
   
-  # Update System Repos & Apt Deps
-      - run: sudo apt update                                                                                          # Check Repo Status
-      - run: echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections                     # Set Services to Restart Automatically
-      - run: sudo apt-get update                                                                                      # Check for Package Updates
-      - run: sudo apt-get install python3.8 python3-pip                                                               # Python3 (Pip3, Setuptools, Wheel) Install
-
+  
+      - run: 
+          name: Apt Repository List Update
+          command: sudo apt update                                                                                          # Check Repo Status
+      
+      
+      - run: 
+          name: AutoRestart Updated System Services
+          command: echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections                     # Set Services to Restart Automatically
+      
+      
+      - run:                                                                                       # Check for Package Updates
+          name: Apt System Package Update
+          command: sudo apt-get update
+          
+      
+      - run:                                                                                         # Python3 (Pip3, Setuptools, Wheel) Install
+           name: Python3 Setup
+           command: sudo apt-get install python3.8 python3-pip
+      
+      
       - run:
-          name: Python Version Links
+          name: Python Version Linkage
           command: |
             ls /usr/bin/python
             sudo update-alternatives --install /usr/bin/python3 python3.8 /usr/bin/python3.8 1                        # Make Python3.8 the main 'Python3' interpreter
