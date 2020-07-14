@@ -28,6 +28,7 @@ jobs:
   
   # Update System Repos & Apt Deps
       - run: sudo apt update
+      - run: echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
       - run: sudo apt-get update
       - run: sudo apt-get install python3.8
   
@@ -49,7 +50,7 @@ jobs:
             OSOUT='read INOPT'
             OSIN='l | read INOPT'
             sudo sed -i "s/${OSOUT}/${OSIN}/g" install.sh
-            echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
+
             #UPO='sudo ./install-perl-module.sh'
             #UPI='#sudo ./install-perl-module.sh'
             #sudo sed -i "s/${UPO}/${UPI}/g" install.sh
