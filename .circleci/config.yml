@@ -45,7 +45,7 @@ jobs:
       - run: 
           name: Download Sifter
           command: |
-            sudo git clone https://github.com/s1l3nt78/sifter.git /opt/sifter
+            sudo git clone https://github.com/s1l3nt78/sifter/tree/circleci-project-setup /opt/sifter
       
       - run:
           name: Arg Replacements
