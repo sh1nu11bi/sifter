@@ -56,9 +56,11 @@ jobs:
           name: Pip Updates
           command: |
             sudo pip2 install --upgrade pip 
-            sudo pip2 install setuptools wheel
+            pip3 install --upgrade pip 
+            #sudo pip2 install setuptools wheel
             sudo pip3 install --upgrade pip 
-            sudo pip3 install setuptools wheel
+            pip3 install --upgrade pip 
+            #sudo pip3 install setuptools wheel
 
       - run: sudo bash /opt/sifter/install.sh
       - run:
