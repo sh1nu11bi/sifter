@@ -4,8 +4,8 @@ jobs:
     machine:
       image: ubuntu-1604:201903-01
       environment:
-        DEBIAN_FRONTEND: noninteractive apt-get -y upgrade
-    
+        DEBIAN_FRONTEND: noninteractive
+
     steps:
       - run: 
           name: Install & Sign Kali Repos
@@ -14,10 +14,19 @@ jobs:
             sudo apt install gnupg
             wget 'https://archive.kali.org/archive-key.asc'
             sudo apt-key add archive-key.asc
-      - run: sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list
+    
+    - run: 
+          name: Remove Unnecessary Repos
+          command: | 
+            sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list
+  
+  # Update System Repos
       - run: sudo apt update
-      - run: yes | sudo apt full-upgrade
-      - run: 
+  
+  # Update System Packages
+      #- run: yes | sudo apt full-upgrade
+  
+  - run: 
           name: Download Sifter
           command: |
             sudo git clone https://github.com/s1l3nt78/sifter.git /opt/sifter
@@ -31,9 +40,10 @@ jobs:
             OSOUT='read INOPT'
             OSIN='l | read INOPT'
             sudo sed -i "s/${OSOUT}/${OSIN}/g" install.sh
-            #UPO='sudo apt full-upgrade'
-            #UPI='yes | sudo apt full-upgrade'
-            #sudo sed -i "s/${UPO}/${UPI}/g" install.sh
+            echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
+         #UPO='sudo apt full-upgrade'
+         #UPI='yes | sudo apt full-upgrade'
+         #sudo sed -i "s/${UPO}/${UPI}/g" install.sh
       - run: sudo bash /opt/sifter/install.sh
       - run:
           name: Run Sifter
