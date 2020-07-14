@@ -15,10 +15,8 @@ jobs:
             wget 'https://archive.kali.org/archive-key.asc'
             sudo apt-key add archive-key.asc
       - run: sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list
-      - run: 
-          command: 
-              sudo apt update
-              yes | sudo apt full-upgrade
+      - run: sudo apt update
+             #yes | sudo apt full-upgrade
       - run: 
           name: Download Sifter
           command: |
@@ -33,6 +31,9 @@ jobs:
             OSOUT='read INOPT'
             OSIN='l | read INOPT'
             sudo sed -i "s/${OSOUT}/${OSIN}/g" install.sh
+            UPO='sudo apt full-upgrade'
+            UPI='yes | sudo apt full-upgrade'
+            sed -i "s/${UPO}/${UPI}/g" install.sh
       - run: sudo bash /opt/sifter/install.sh
       - run:
           name: Run Sifter
