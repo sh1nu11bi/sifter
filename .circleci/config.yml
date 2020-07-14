@@ -26,8 +26,10 @@ jobs:
           command: | 
             sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list
   
-  # Update System Repos
+  # Update System Repos & Apt Deps
       - run: sudo apt update
+      - run: sudo apt-get update
+      - run: sudo apt-get install python3.7 python3.8
   
   # Update System Packages
       #- run: yes | sudo apt full-upgrade
