@@ -6,6 +6,9 @@ W='\033[1;37m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 
+echo -e "${RED}Doing final Perl configurations${NC}"
+cd /root/yuki/
+sudo bash install-perl-module.sh
 echo -e "${ORNG}"
 figlet -f small "Yuki-Chan"
 echo -e "${NC}"
