@@ -17,68 +17,62 @@ jobs:
           name: Install & Sign Kali Repos
           command: |
             sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list"
-            sudo apt install gnupg
-            wget 'https://archive.kali.org/archive-key.asc'
-            sudo apt-key add archive-key.asc
+            sudo apt install gnupg                                                                                    # Install Kali Repo list
+            wget 'https://archive.kali.org/archive-key.asc'                                                           # Aquire Kali Repo Key Signature
+            sudo apt-key add archive-key.asc                                                                          # Add Kali Signing Key to Machine Image 
     
       - run: 
           name: Remove Unnecessary Repos
           command: | 
-            sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list
+            sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list                    # Remove Faulty Repo lists (breaking CircleCI Build)
   
   # Update System Repos & Apt Deps
-      - run: sudo apt update
-      - run: echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
-      - run: sudo apt-get update
-      - run: sudo apt-get install python3.8 python3-pip
+      - run: sudo apt update                                                                                          # Check Repo Status
+      - run: echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections                     # Set Services to Restart Automatically
+      - run: sudo apt-get update                                                                                      # Check for Package Updates
+      - run: sudo apt-get install python3.8 python3-pip                                                               # Python3 (Pip3, Setuptools, Wheel) Install
 
       - run:
           name: Python Version Links
           command: |
             ls /usr/bin/python
-            #sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
-            sudo update-alternatives --install /usr/bin/python3 python3.8 /usr/bin/python3.8 1
-            
-  # Update System Packages
-      #- run: yes | sudo apt full-upgrade
+            sudo update-alternatives --install /usr/bin/python3 python3.8 /usr/bin/python3.8 1                        # Make Python3.8 the main 'Python3' interpreter
+  
   
       - run: 
-          name: Download Sifter
+          name: Download Sifter (CircleCI Specific Branch - Removes install arguments that halt build progress)
           command: |
-            sudo git clone -b circleci-project-setup https://github.com/s1l3nt78/sifter /opt/sifter
-      
+            sudo git clone -b circleci-project-setup https://github.com/s1l3nt78/sifter /opt/sifter                   # Branch Specifically Designed for CircleCI Build
+    
+    
       - run:
-          name: Arg Replacements
+          name: Install Arguments Replaced (Stop build errors[CircleCI ONLY])
           command: | 
             cd /opt/sifter
-            OUT='read INSTALL_PROMPT'
-            INS='#read INSTALL_PROMPT'
+            OUT='read INSTALL_PROMPT'                                                                                 # Original Dependancy Installion Validation Argument
+            INS='#read INSTALL_PROMPT'                                                                                # CircleCI Automatic Installation Acceptance
             sudo sed -i "s/${OUT}/${INS}/g" install.sh
-            OSOUT='read INOPT'
-            OSIN='l | read INOPT'
+            
+            OSOUT='read INOPT'                                                                                        # Osmedeus Install Option Argument
+            OSIN='l | read INOPT'                                                                                     # Osmedeus Install Option Set to 'First-Run Install'
             sudo sed -i "s/${OSOUT}/${OSIN}/g" install.sh
 
-            #UPO='sudo ./install-perl-module.sh'
-            #UPI='#sudo ./install-perl-module.sh'
-            #sudo sed -i "s/${UPO}/${UPI}/g" install.sh
-      
+
       - run: 
-          name: Pip2 Updates
+          name: Python2 (Pip upgrade, Setuptools & Wheel install)
           command: |
             sudo pip2 install --upgrade pip 
             pip2 install --upgrade pip 
             sudo pip2 install setuptools wheel
             
-      #- run:
-      #    name: Pip3 Updates
-      #    command: |
-      #      sudo python3 -m pip install --upgrade pip 
-      #      python3 -m pip install --upgrade pip 
-      #      #sudo pip3 install setuptools wheel
-
-      - run: sudo bash /opt/sifter/install.sh
+            
+      - run: 
+          name: Run Sifter Installation
+          command: sudo bash /opt/sifter/install.sh
+      
+      
       - run:
-          name: Run Sifter
+          name: Sifter (Runtime - Install Check)
           command: |
             bash /opt/sifter/sifter
       
