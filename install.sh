@@ -219,7 +219,7 @@ t8(){
 		sudo pip3 install wget
 		sudo chmod +x Module --recursive
 		sudo chown $USER:$USER Module --recursive
-		sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
+		sudo chmod +x wafninja joomscan yuki.sh #install-perl-module.sh
 		#sudo ./install-perl-module.sh
 	fi
 }
