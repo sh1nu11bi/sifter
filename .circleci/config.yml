@@ -1,8 +1,6 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: s1l3nt78/sifter:build1
      steps:
       - checkout
       - run: mkdir /opt/
