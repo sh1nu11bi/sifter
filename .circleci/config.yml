@@ -29,7 +29,7 @@ jobs:
   # Update System Repos & Apt Deps
       - run: sudo apt update
       - run: sudo apt-get update
-      - run: sudo apt-get install python3.7 python3.8
+      - run: sudo apt-get install python3.8
   
   # Update System Packages
       #- run: yes | sudo apt full-upgrade
@@ -60,8 +60,8 @@ jobs:
             sudo pip2 install --upgrade pip 
             pip3 install --upgrade pip 
             #sudo pip2 install setuptools wheel
-            sudo python3 -m pip install --upgrade pip 
-            python3 -m pip install --upgrade pip 
+            sudo python3.7 -m pip install --upgrade pip 
+            python3.7 -m pip install --upgrade pip 
             #sudo pip3 install setuptools wheel
 
       - run: sudo bash /opt/sifter/install.sh
