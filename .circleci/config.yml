@@ -7,6 +7,8 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
 
     steps:
+      #- restore_cache:
+      #    key: deps1-{{ .Branch }}-{{ checksum "/opt/sifter/install.sh" }}
       - run: 
           name: Install & Sign Kali Repos
           command: |
@@ -49,4 +51,8 @@ jobs:
           name: Run Sifter
           command: |
             bash /opt/sifter/sifter
-     
+      
+      #- save_cache:
+      #    key: deps1-{{ .Branch }}-{{ checksum "/opt/sifter/install.sh" }}
+      #    paths:
+      #      - "/opt"

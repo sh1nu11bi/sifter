@@ -259,9 +259,9 @@ t10(){
 		sudo git clone https://github.com/Ekultek/Zeus-Scanner
 		cd Zeus-Scanner
 		sudo docker pull s1l3nt78/zeus
-		echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
-		read ID
-		sudo docker tag ${ID} zeus
+		#echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
+		#read ID
+		sudo docker tag s1l3nt78/zeus zeus
 	fi
 }
 
@@ -298,10 +298,7 @@ t12(){
 		cd /opt
 		sudo git clone https://github.com/s1l3nt78/flan.git
 		cd flan
-		sudo docker build .
-		echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
-		read ID
-		sudo docker tag ${ID} flan_scan
+		sudo make build
 		sleep 2
 	fi
 }
@@ -371,7 +368,7 @@ t14(){
 		sudo git clone https://github.com/SecureAuthCorp/impacket
 		cd impacket
 		sudo python3 setup.py install
-		pip3 install prompt-toolkit==2.0.9 impacket
+		sudo pip3 install prompt-toolkit==2.0.9 impacket
 		ar3 db help
 		sudo mkdir /home/$USER/.ar3
 		sudo cp ar3/config.json -t /home/$USER/.ar3
@@ -395,8 +392,8 @@ t15(){
 		cd /opt/
 		sudo git clone https://github.com/Cyb0r9/ispy.git
 		cd ispy
-		chmod +x setup.sh
-		sudo ./setup.sh
+		sudo chmod +x setup.sh
+		sudo bash setup.sh
 	fi
 }
 
