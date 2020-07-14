@@ -1,13 +1,58 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
-version: 2.1
-# Use a package of configuration called an orb.
-orbs:
-  # Declare a dependency on the welcome-orb
-  welcome: circleci/welcome-orb@0.4.1
-# Orchestrate or schedule a set of jobs
-workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
-    jobs:
-      - welcome/run
+version: 2
+jobs:
+  build:
+    machine:
+      image: ubuntu-1604:201903-01
+      environment:
+        DEBIAN_FRONTEND: noninteractive
+
+    steps:
+      #- restore_cache:
+      #    key: deps1-{{ .Branch }}-{{ checksum "/opt/sifter/install.sh" }}
+      - run: 
+          name: Install & Sign Kali Repos
+          command: |
+            sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list"
+            sudo apt install gnupg
+            wget 'https://archive.kali.org/archive-key.asc'
+            sudo apt-key add archive-key.asc
+    
+      - run: 
+          name: Remove Unnecessary Repos
+          command: | 
+            sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list
+  
+  # Update System Repos
+      - run: sudo apt update
+  
+  # Update System Packages
+      #- run: yes | sudo apt full-upgrade
+  
+      - run: 
+          name: Download Sifter
+          command: |
+            sudo git clone https://github.com/s1l3nt78/sifter.git /opt/sifter
+      - run:
+          name: Arg Replacements
+          command: | 
+            cd /opt/sifter
+            OUT='read INSTALL_PROMPT'
+            INS='#read INSTALL_PROMPT'
+            sudo sed -i "s/${OUT}/${INS}/g" install.sh
+            OSOUT='read INOPT'
+            OSIN='l | read INOPT'
+            sudo sed -i "s/${OSOUT}/${OSIN}/g" install.sh
+            echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
+            #UPO='sudo ./install-perl-module.sh'
+            #UPI='#sudo ./install-perl-module.sh'
+            #sudo sed -i "s/${UPO}/${UPI}/g" install.sh
+      - run: sudo bash /opt/sifter/install.sh
+      - run:
+          name: Run Sifter
+          command: |
+            bash /opt/sifter/sifter
+      
+      #- save_cache:
+      #    key: deps1-{{ .Branch }}-{{ checksum "/opt/sifter/install.sh" }}
+      #    paths:
+      #      - "/opt"

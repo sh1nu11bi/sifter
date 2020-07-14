@@ -15,7 +15,8 @@ UBLUE='\033[4;34m'
 URED='\033[4;31m'
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker graphviz kdialog python-dev python3-venv python-pip python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy # sqlite3
+sudo apt-get install -y python wmdocker graphviz kdialog python-dev python3-venv python-pip libpython3-stdlib python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy --allow # sqlite3
+sudo apt --fix-broken install
 #wget http://ftp.us.debian.org/debian/pool/main/p/python-mysqldb/python-mysqldb_1.3.10-2_amd64.deb
 #sudo dpkg -i python-mysqldb_1.3.10-2_amd64.deb
 #rm python-mysqldb_1.3.10-2_amd64.deb
@@ -219,7 +220,7 @@ t8(){
 		sudo chmod +x Module --recursive
 		sudo chown $USER:$USER Module --recursive
 		sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
-		sudo ./install-perl-module.sh
+		#sudo ./install-perl-module.sh
 	fi
 }
 
@@ -258,9 +259,9 @@ t10(){
 		sudo git clone https://github.com/Ekultek/Zeus-Scanner
 		cd Zeus-Scanner
 		sudo docker pull s1l3nt78/zeus
-		echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
-		read ID
-		sudo docker tag ${ID} zeus
+		#echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
+		#read ID
+		sudo docker tag s1l3nt78/zeus zeus
 	fi
 }
 
@@ -297,10 +298,7 @@ t12(){
 		cd /opt
 		sudo git clone https://github.com/s1l3nt78/flan.git
 		cd flan
-		sudo docker build .
-		echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
-		read ID
-		sudo docker tag ${ID} flan_scan
+		sudo make build
 		sleep 2
 	fi
 }
@@ -370,7 +368,7 @@ t14(){
 		sudo git clone https://github.com/SecureAuthCorp/impacket
 		cd impacket
 		sudo python3 setup.py install
-		pip3 install prompt-toolkit==2.0.9 impacket
+		sudo pip3 install prompt-toolkit==2.0.9 impacket
 		ar3 db help
 		sudo mkdir /home/$USER/.ar3
 		sudo cp ar3/config.json -t /home/$USER/.ar3
@@ -394,8 +392,8 @@ t15(){
 		cd /opt/
 		sudo git clone https://github.com/Cyb0r9/ispy.git
 		cd ispy
-		chmod +x setup.sh
-		sudo ./setup.sh
+		sudo chmod +x setup.sh
+		sudo bash setup.sh
 	fi
 }
 
