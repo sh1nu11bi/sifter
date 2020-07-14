@@ -1131,12 +1131,12 @@ t51(){
 		cd intrigue-core
 		sudo docker build -f Dockerfile-standalone . -t intrigue-core
 		echo -e "${ORNG}Your login username and password shown above for Intrigue HTTP${NC}"
-		echo -e "${RED}Please enter the username${NC}"
-		read USER
-		echo -e "${RED}Please enter the password${NC}"
-		read PASS
-		sudo echo "${USER}" >> /opt/Intrigue-Core/Panel_Login.info
-		sudo echo "${PASS}" >> /opt/Intrigue-Core/Panel_Login.info
+# 		echo -e "${RED}Please enter the username${NC}"
+# 		read USER
+# 		echo -e "${RED}Please enter the password${NC}"
+# 		read PASS
+# 		sudo echo "${USER}" >> /opt/Intrigue-Core/Panel_Login.info
+# 		sudo echo "${PASS}" >> /opt/Intrigue-Core/Panel_Login.info
 		echo -e "${UBLUE}Intrigue Login Saved to ${URED}/opt/Intrigue-Core/Panel_Login.info${NC}"
 	fi 
 }
