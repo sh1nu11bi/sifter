@@ -69,12 +69,12 @@ jobs:
             pip2 install --upgrade pip 
             sudo pip2 install setuptools wheel
             
-      - run:
-          name: Pip3 Updates
-          command: |
-            sudo python3 -m pip install --upgrade pip 
-            python3 -m pip install --upgrade pip 
-            #sudo pip3 install setuptools wheel
+      #- run:
+      #    name: Pip3 Updates
+      #    command: |
+      #      sudo python3 -m pip install --upgrade pip 
+      #      python3 -m pip install --upgrade pip 
+      #      #sudo pip3 install setuptools wheel
 
       - run: sudo bash /opt/sifter/install.sh
       - run:
