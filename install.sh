@@ -1220,7 +1220,7 @@ t4										# BlackWidow
 t5										# BFAC
 t6										# RapidScan
 t7										# ShodanSploit
-t8										# Yuki-Chan
+#t8										# Yuki-Chan
 t9										# ReconSpider
 t10										# Zeus
 t11										# EoP
