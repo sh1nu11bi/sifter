@@ -5,7 +5,7 @@ jobs:
       image: ubuntu-1604:201903-01
     
     steps:
-      - run: sudo sed -i "s/""/"deb http://http.kali.org/kali kali-rolling main non-free contrib"/g" /etc/apt/sources.list
+      - run: sudo sed -i "s/""/\"deb http://http.kali.org/kali kali-rolling main non-free contrib\"/g" /etc/apt/sources.list
       - run:
           name: Install & Sign Kali Repos
           command: wget -q -O - archive.kali.org/archive-key.asc | sudo apt-key add
