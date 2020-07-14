@@ -3,30 +3,38 @@ jobs:
   build:
     machine:
       image: ubuntu-1604:201903-01
+      environment:
+        : DEBIAN_FRONTEND: noninteractive apt-get -y upgrade
     
     steps:
       - run: 
-          command: |
-            echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" >> kali.list
-            sudo mv kali.list -t /etc/apt/sources.list.d
-      - run:
           name: Install & Sign Kali Repos
-          command: wget -q -O - archive.kali.org/archive-key.asc | sudo apt-key add
+          command: |
+            sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list"
+            sudo mv kali.list -t /etc/apt/sources.list.d
+            sudo apt install gnupg
+            wget 'https://archive.kali.org/archive-key.asc'
+            sudo apt-key add archive-key.asc
       - run: sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list
-      - run: sudo apt update
+      - run: 
+          command: 
+              sudo apt update
+              yes | sudo apt full-upgrade
       - run: 
           name: Download Sifter
           command: |
             sudo git clone https://github.com/s1l3nt78/sifter.git /opt/sifter
       - run:
-          name: Install Sifter
+          name: Arg Replacements
           command: | 
             cd /opt/sifter
-            sudo bash install.sh
-            \n
-            l
-            l
-            y
+            OUT='read INSTALL_PROMPT'
+            INS='#read INSTALL_PROMPT'
+            sudo sed -i "s/${OUT}/${INS}/g" install.sh
+            OSOUT='read INOPT'
+            OSIN='l | read INOPT'
+            sudo sed -i "s/${OSOUT}/${OSIN}/g" install.sh
+      - run: sudo bash /opt/sifter/install.sh
       - run:
           name: Run Sifter
           command: |
