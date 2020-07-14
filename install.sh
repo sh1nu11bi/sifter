@@ -129,7 +129,7 @@ t4(){
 		sudo chmod +x blackwidow injectx.py
 		sudo cp blackwidow /usr/sbin/blackwidow
 		sudo cp injectx.py /usr/sbin/injectx.py
-		pip install -r requirements.txt
+		sudo pip install -r requirements.txt
 	fi
 }
 
@@ -220,7 +220,7 @@ t8(){
 		sudo chmod +x Module --recursive
 		sudo chown $USER:$USER Module --recursive
 		sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
-		#sudo ./install-perl-module.sh
+		sudo ./install-perl-module.sh
 	fi
 }
 
@@ -259,9 +259,9 @@ t10(){
 		sudo git clone https://github.com/Ekultek/Zeus-Scanner
 		cd Zeus-Scanner
 		sudo docker pull s1l3nt78/zeus
-		#echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
-		#read ID
-		sudo docker tag s1l3nt78/zeus zeus
+		echo -e "${W}Please copy and paste the final container's image ID shown above${NC}"
+		read ID
+		sudo docker tag ${ID} zeus
 	fi
 }
 
