@@ -1,20 +1,20 @@
 version: 2
 jobs:
   build:
-     steps:
+    steps:
       - checkout
       - run: mkdir /opt/
       - run: 
-        name: Download Sifter
-        command: |
+          name: Download Sifter
+          command: |
             sudo git clone https://github.com/s1l3nt78/sifter.git /opt/sifter
       - run:
-        name: Install Sifter
-        command: | 
+          name: Install Sifter
+          command: | 
             cd /opt/sifter
             sudo bash install.sh
       - run:
-        name: Run Sifter
-        command: |
+          name: Run Sifter
+          command: |
             bash /opt/sifter/sifter
      
