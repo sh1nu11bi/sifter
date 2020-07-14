@@ -129,7 +129,7 @@ t4(){
 		sudo chmod +x blackwidow injectx.py
 		sudo cp blackwidow /usr/sbin/blackwidow
 		sudo cp injectx.py /usr/sbin/injectx.py
-		pip install -r requirements.txt
+		sudo pip install -r requirements.txt
 	fi
 }
 
@@ -393,7 +393,7 @@ t15(){
 		sudo git clone https://github.com/Cyb0r9/ispy.git
 		cd ispy
 		sudo chmod +x setup.sh
-		sudo bash setup.sh
+		#sudo bash setup.sh
 	fi
 }
 
@@ -1229,7 +1229,7 @@ t13										# AttackSurfaceMapper
 t14										# ActiveReign
 t15										# iSpy
 t16										# Sitadel
-t17										# Osmedeus
+#t17										# Osmedeus
 t18										# NekoBot
 t19										# aSnip
 t20										# Armory
