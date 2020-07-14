@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     machine:
-      - image: circleci/buildpack-deps:jessie
+      image: circleci/buildpack-deps:jessie
     
     steps:
       - run:
