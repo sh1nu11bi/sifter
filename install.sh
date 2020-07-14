@@ -1249,7 +1249,7 @@ t33										# Impulse
 t34										# CredHarvester
 t35										# SayDog
 t36										# Dork-Eye
-t37										# Mentalist
+#t37										# Mentalist
 t38										# dCipher
 t39										# Honey-Tel
 t40										# XSS-Strike
