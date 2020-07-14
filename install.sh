@@ -149,7 +149,7 @@ t5(){
 		cd /opt/
 		sudo git clone https://github.com/mazen160/bfac.git
 		cd bfac
-		sudo python setup.py install
+		sudo python2 setup.py install
 	fi
 }
 
