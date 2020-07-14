@@ -915,6 +915,9 @@ t41(){
 		cd /opt
 		sudo git clone https://github.com/s1l3nt78/MkCheck.git
 		cd MkCheck
+		OUT='read LOPT'
+		IN='#read LOPT'
+		sudo sed -i "s/${OUT}/${IN}/g" setup.sh
 		sudo bash setup.sh
 	fi
 }
