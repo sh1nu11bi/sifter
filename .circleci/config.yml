@@ -26,9 +26,19 @@ jobs:
           command: | 
             sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list
   
-  # Update System Repos
+  # Update System Repos & Apt Deps
       - run: sudo apt update
-  
+      - run: echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
+      - run: sudo apt-get update
+      - run: sudo apt-get install python3.8 python3-pip
+
+      - run:
+          name: Python Version Links
+          command: |
+            ls /usr/bin/python
+            #sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
+            sudo update-alternatives --install /usr/bin/python3 python3.8 /usr/bin/python3.8 1
+            
   # Update System Packages
       #- run: yes | sudo apt full-upgrade
   
@@ -36,6 +46,7 @@ jobs:
           name: Download Sifter
           command: |
             sudo git clone https://github.com/s1l3nt78/sifter.git /opt/sifter
+      
       - run:
           name: Arg Replacements
           command: | 
@@ -46,10 +57,25 @@ jobs:
             OSOUT='read INOPT'
             OSIN='l | read INOPT'
             sudo sed -i "s/${OSOUT}/${OSIN}/g" install.sh
-            echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
+
             #UPO='sudo ./install-perl-module.sh'
             #UPI='#sudo ./install-perl-module.sh'
             #sudo sed -i "s/${UPO}/${UPI}/g" install.sh
+      
+      - run: 
+          name: Pip2 Updates
+          command: |
+            sudo pip2 install --upgrade pip 
+            pip2 install --upgrade pip 
+            sudo pip2 install setuptools wheel
+            
+      #- run:
+      #    name: Pip3 Updates
+      #    command: |
+      #      sudo python3 -m pip install --upgrade pip 
+      #      python3 -m pip install --upgrade pip 
+      #      #sudo pip3 install setuptools wheel
+
       - run: sudo bash /opt/sifter/install.sh
       - run:
           name: Run Sifter
