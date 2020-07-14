@@ -41,9 +41,9 @@ jobs:
             OSIN='l | read INOPT'
             sudo sed -i "s/${OSOUT}/${OSIN}/g" install.sh
             echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
-            UPO='sudo ./install-perl-module.sh'
-            UPI='#sudo ./install-perl-module.sh'
-            sudo sed -i "s/${UPO}/${UPI}/g" install.sh
+            #UPO='sudo ./install-perl-module.sh'
+            #UPI='#sudo ./install-perl-module.sh'
+            #sudo sed -i "s/${UPO}/${UPI}/g" install.sh
       - run: sudo bash /opt/sifter/install.sh
       - run:
           name: Run Sifter
