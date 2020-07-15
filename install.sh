@@ -221,6 +221,8 @@ t8(){
 		sudo chown $USER:$USER Module --recursive
 		sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
 		sudo ./install-perl-module.sh
+		sudo chmod +x wafninja joomscan yuki.sh #install-perl-module.sh
+		sudo ./install-perl-module.sh
 	fi
 }
 
@@ -393,7 +395,7 @@ t15(){
 		sudo git clone https://github.com/Cyb0r9/ispy.git
 		cd ispy
 		sudo chmod +x setup.sh
-		sudo bash setup.sh
+		#sudo bash setup.sh
 	fi
 }
 
@@ -915,6 +917,9 @@ t41(){
 		cd /opt
 		sudo git clone https://github.com/s1l3nt78/MkCheck.git
 		cd MkCheck
+		OUT='read LOPT'
+		IN='#read LOPT'
+		sudo sed -i "s/${OUT}/${IN}/g" setup.sh
 		sudo bash setup.sh
 	fi
 }
@@ -1131,12 +1136,12 @@ t51(){
 		cd intrigue-core
 		sudo docker build -f Dockerfile-standalone . -t intrigue-core
 		echo -e "${ORNG}Your login username and password shown above for Intrigue HTTP${NC}"
-		echo -e "${RED}Please enter the username${NC}"
-		read USER
-		echo -e "${RED}Please enter the password${NC}"
-		read PASS
-		sudo echo "${USER}" >> /opt/Intrigue-Core/Panel_Login.info
-		sudo echo "${PASS}" >> /opt/Intrigue-Core/Panel_Login.info
+# 		echo -e "${RED}Please enter the username${NC}"
+# 		read USER
+# 		echo -e "${RED}Please enter the password${NC}"
+# 		read PASS
+# 		sudo echo "${USER}" >> /opt/Intrigue-Core/Panel_Login.info
+# 		sudo echo "${PASS}" >> /opt/Intrigue-Core/Panel_Login.info
 		echo -e "${UBLUE}Intrigue Login Saved to ${URED}/opt/Intrigue-Core/Panel_Login.info${NC}"
 	fi 
 }
@@ -1223,7 +1228,7 @@ t4										# BlackWidow
 t5										# BFAC
 t6										# RapidScan
 t7										# ShodanSploit
-t8										# Yuki-Chan
+#t8										# Yuki-Chan
 t9										# ReconSpider
 t10										# Zeus
 t11										# EoP
@@ -1232,7 +1237,7 @@ t13										# AttackSurfaceMapper
 t14										# ActiveReign
 t15										# iSpy
 t16										# Sitadel
-t17										# Osmedeus
+#t17										# Osmedeus
 t18										# NekoBot
 t19										# aSnip
 t20										# Armory
@@ -1252,7 +1257,7 @@ t33										# Impulse
 t34										# CredHarvester
 t35										# SayDog
 t36										# Dork-Eye
-t37										# Mentalist
+#t37										# Mentalist
 t38										# dCipher
 t39										# Honey-Tel
 t40										# XSS-Strike
