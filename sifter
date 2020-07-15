@@ -1067,8 +1067,8 @@ update(){
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
                                                                                                 ########################
-    echo -e "${ORNG}Current Version:${RED}8"                                                    ##    VERSION INFO    ##
-    echo -e "${YLW}Revision:${LP}2"                                                             ##    UPDATE CHECK    ##
+    echo -e "${ORNG}Current Version:${RED}8.2${NC}"                                                    ##    VERSION INFO    ##
+   # echo -e "${YLW}Revision:${LP}2"                                                             ##    UPDATE CHECK    ##
                                                                                                 ########################
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig
