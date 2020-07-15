@@ -309,36 +309,33 @@ t12(){
 t13(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Attack Surface Mapper${NC}"
-	if [[ -d /opt/AttackSurfaceMapper ]] || [[ -d /root/AttackSurfaceMapper ]]; then
-		if [[ -d '/opt/sifter/extras/.git_ASM' ]]; then
-			sudo rm -rf /opt/AttackSurfaceMapper/.git
-			sudo mv /opt/sifter/extras/.git_ASM /opt/AttackSurfaceMapper/.git
-		fi
+	if [[ -d /opt/AttackSurfaceMapper ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "ASM is already installed."
 		echo -e "${NC}"
 		cd /opt/AttackSurfaceMapper
 		if [[ ! -d 'venv' ]]; then
-			sudo python3 -m venv venv
+			sudo python3.8 -m venv venv
 			source venv/bin/activate
-			sudo ./venv/bin/pip3 install wheel
-			sudo ./venv/bin/pip3 install -r requirements.txt
+			sudo ./venv/bin/python3.8 -m pip install wheel
+			sudo ./venv/bin/python3.8 -m pip install -r requirements.txt
 		fi
 		CHK=$(sudo git fetch && sudo git pull)
 		if [[ ${CHK} == "Already up to date." ]]; then
 			sleep 1
 		else
 			source venv/bin/activate
-			sudo ./venv/bin/pip3 install wheel
-			sudo ./venv/bin/pip3 install -r requirements.txt
+			sudo ./venv/bin/python3.8 -m pip install colorama wheel
+			sudo ./venv/bin/python3.8 -m pip install -r requirements.txt
 		fi
 	else
 		cd /opt
 		sudo git clone https://github.com/superhedgy/AttackSurfaceMapper
 		cd /opt/AttackSurfaceMapper
+		sudo python3.8 -m venv venv
 		source venv/bin/activate
-		sudo ./venv/bin/pip3 install wheel
-		sudo ./venv/bin/pip3 install -r requirements.txt
+		sudo ./venv/bin/python3.8 -m pip install colorama wheel
+		sudo ./venv/bin/python3.8 -m pip install -r requirements.txt
 		if [[ -f '/opt/sifter/extras/.asm' ]]; then
 			sudo cp /opt/sifter/extras/.asm -t /usr/sbin
 			sudo mv /opt/sifter/extras/.asm -t /opt/AttackSurfaceMapper
