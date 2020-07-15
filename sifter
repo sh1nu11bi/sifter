@@ -235,6 +235,8 @@ net_mods(){
                                     sudo arp-scan -l
                                 else
                                     echo -e "${YLW}Please enter your arp-scan arguments now\n${RED}eg. ${ORNG}-N -q -v${NC}"
+                                    echo -e "${LP}An xTerm window will be shown for 3mins, showing the ${YLW}arp-scan argument list${NC}"
+                                    xterm -e echo -e ${ORNG}arp-scan --help && echo -e "${NC}" && sleep 180
                                     read ARPARG
                                     sudo arp-scan ${ARPARG}
                                 fi
@@ -786,13 +788,13 @@ check_hosts(){
     	        do
     	            ping -c 1 $name
     	                if [[ $? == 0 ]]; then
-    	                    echo -e "${LP}=================="
+    	                    echo -e "${LP}===================================="
     	                    echo -e "${LP} ${name} Alive ${NC}" && echo ${name} >> files/pingtest_raw.pass
-    	                    echo -e "${LP}==================${NC}"
+    	                    echo -e "${LP}====================================${NC}"
     	                else
-    	                    echo -e "${RED}=================="
+    	                    echo -e "${RED}==================================="
     	                    echo -e "${RED} ${name} Dead ${NC}" && echo ${name} >> files/pingtest_raw.fail
-    	                    echo -e "${RED}==================${NC}"
+    	                    echo -e "${RED}===================================${NC}"
     	                fi
     	        done
 

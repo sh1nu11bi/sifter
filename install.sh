@@ -221,6 +221,8 @@ t8(){
 		sudo chown $USER:$USER Module --recursive
 		sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
 		sudo ./install-perl-module.sh
+		sudo chmod +x wafninja joomscan yuki.sh #install-perl-module.sh
+		sudo ./install-perl-module.sh
 	fi
 }
 
@@ -912,6 +914,9 @@ t41(){
 		cd /opt
 		sudo git clone https://github.com/s1l3nt78/MkCheck.git
 		cd MkCheck
+		OUT='read LOPT'
+		IN='#read LOPT'
+		sudo sed -i "s/${OUT}/${IN}/g" setup.sh
 		sudo bash setup.sh
 	fi
 }
@@ -1128,12 +1133,12 @@ t51(){
 		cd intrigue-core
 		sudo docker build -f Dockerfile-standalone . -t intrigue-core
 		echo -e "${ORNG}Your login username and password shown above for Intrigue HTTP${NC}"
-		echo -e "${RED}Please enter the username${NC}"
-		read USER
-		echo -e "${RED}Please enter the password${NC}"
-		read PASS
-		sudo echo "${USER}" >> /opt/Intrigue-Core/Panel_Login.info
-		sudo echo "${PASS}" >> /opt/Intrigue-Core/Panel_Login.info
+# 		echo -e "${RED}Please enter the username${NC}"
+# 		read USER
+# 		echo -e "${RED}Please enter the password${NC}"
+# 		read PASS
+# 		sudo echo "${USER}" >> /opt/Intrigue-Core/Panel_Login.info
+# 		sudo echo "${PASS}" >> /opt/Intrigue-Core/Panel_Login.info
 		echo -e "${UBLUE}Intrigue Login Saved to ${URED}/opt/Intrigue-Core/Panel_Login.info${NC}"
 	fi 
 }
