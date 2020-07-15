@@ -25,8 +25,7 @@
 # Release
 
 	@Codename: AdamantiuM
-	@Version : 8
-	@Revision: 2
+	@Version : 8.2
 
 
 # Additions:
