@@ -1,3 +1,4 @@
+<img align="left" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
 <img align="right" src="https://www.codefactor.io/repository/github/s1l3nt78/sifter/badge" alt="CodeFactor">
 <br />
 <p align="center">
@@ -11,8 +12,7 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/Version-8.2-red">
 	<!--<img align="center" src="https://img.shields.io/badge/Revision-2-green">
-	--><br />
-	 <img align="center" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet">
+	-->
 </p>
 
 # *Sifter*
