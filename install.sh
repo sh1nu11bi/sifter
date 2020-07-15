@@ -395,7 +395,7 @@ t15(){
 		sudo git clone https://github.com/Cyb0r9/ispy.git
 		cd ispy
 		sudo chmod +x setup.sh
-		#sudo bash setup.sh
+		sudo bash setup.sh
 	fi
 }
 
@@ -1228,7 +1228,7 @@ t4										# BlackWidow
 t5										# BFAC
 t6										# RapidScan
 t7										# ShodanSploit
-#t8										# Yuki-Chan
+t8										# Yuki-Chan
 t9										# ReconSpider
 t10										# Zeus
 t11										# EoP
@@ -1237,7 +1237,7 @@ t13										# AttackSurfaceMapper
 t14										# ActiveReign
 t15										# iSpy
 t16										# Sitadel
-#t17										# Osmedeus
+t17										# Osmedeus
 t18										# NekoBot
 t19										# aSnip
 t20										# Armory
@@ -1257,7 +1257,7 @@ t33										# Impulse
 t34										# CredHarvester
 t35										# SayDog
 t36										# Dork-Eye
-#t37										# Mentalist
+t37										# Mentalist
 t38										# dCipher
 t39										# Honey-Tel
 t40										# XSS-Strike
