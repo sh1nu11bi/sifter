@@ -164,8 +164,7 @@ t6(){
 		figlet -f mini "Rapidscan is already installed"
 		echo -e "${NC}"
 		cd /opt/rapidscan
-		sudo wget https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py
-		sudo chmod +x rapidscan.py
+#		sudo chmod +x rapidscan.py
 	else
 		cd /opt
 		sudo git clone https://github.com/s1l3nt78/rapidscan.git
