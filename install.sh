@@ -1293,6 +1293,8 @@ t58(){
 	else
 		cd /opt
 		sudo git clone https://github.com/wuseman/WBRUTER.git
+		cd WBRUTER
+		sudo chmod +x wbruter
 	fi
 }
 ############################################################################################################
