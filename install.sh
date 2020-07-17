@@ -1219,20 +1219,18 @@ t54(){
 t55(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for OSINT-Framework${NC}"
-	if [[ -d '/opt/OSINT-Framework' ]]; then
+	if [[ -d '/home/$USER/.local/OSINT-Framework' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "OSINT-Framework is already installed"
 		echo -e "${NC}"
-		cd /opt/OSINT-Framework
-		sudo git fetch && sudo git pull
-		sudo npm install
+		cd /home/$USER/.local/OSINT-Framework
+		git fetch && git pull
+		npm install
 	else
-		cd /opt
-		sudo git clone https://github.com/lockfale/OSINT-Framework.git
+		cd /home/$USER/.local
+		git clone https://github.com/lockfale/OSINT-Framework.git
 		cd OSINT-Framework
-		sudo npm install
-		sudo cp -f ./node_modules/d3/d3.min.js ./public/js/vendor/d3
-		cd ./public
+		npm install
 	fi
 }
 
@@ -1260,7 +1258,7 @@ t56(){
 ################
 # 57 # CardPwn #
 ################
-t56(){
+t57(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for CardPwn${NC}"
 	if [[ -d '/opt/CardPwn' ]]; then

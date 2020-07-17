@@ -7,11 +7,11 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
-cd /opt/OSINT-Framework
+cd /home/$USER/.local/OSINT-Framework
 echo -e "${RED}"
 figlet -f mini "OSINT-Framework"
 echo -e "${NC}"
-xterm -e sudo python3 -m http.server 9999
+xterm -e python3 -m http.server 9999
 sleep 30 
 echo -e "	============================================"
 cd /opt/sifter
