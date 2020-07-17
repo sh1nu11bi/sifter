@@ -88,7 +88,7 @@ phone_mods(){
   echo -e "${YLW}eg. Social media information, phone number information, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Seeker" "Sherlock" "xRay" "Maryam" "E2P (Email2PhoneNumber)" "ODIN" "Back" "Quit") 
+          options=("Seeker" "Sherlock" "xRay" "Maryam" "E2P (Email2PhoneNumber)" "ODIN" "CardPwn" "Back" "Quit") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -114,6 +114,10 @@ phone_mods(){
 
                             "ODIN")
                                 ./modules/credmods/odin.sh
+                                ;;
+
+                            "CardPwn")
+                                ./modules/credmods/cardpwn.sh
                                 ;;
 
                             "Back")

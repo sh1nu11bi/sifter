@@ -32,7 +32,7 @@
 
 <p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">OSINT-Framework</a> -Web-based OSINT-Framework<br />
 - <a style="color: #729e1b" href="#">InveighZero</a> - Post-Exploitation tool to be used on an exploited session with low privileges<br />
-- <a style="color: #729e1b" href="#">PowerHub</a> - PowerShell post exploitation tool aiding in delivering code usually flagged by endpoint protection.<br />
+- <a style="color: #729e1b" href="#">CardPwn</a> - OSINT Tool to find Breached Credit Cards Information<br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Email2PhoneNumber</a> - OSINT tool that allows you to obtain a target's phone number just by having his email address.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
@@ -119,8 +119,9 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/thewhiteh4t/seeker">Seeker</a><br />
 - <a href="https://github.com/sherlock-project/sherlock">Sherlock</a><br />
 - <a href="https://github.com/evilsocket/xray">xRay</a><br />
-- <a href="https://github.com/martinvigo/email2phonenumber">E2P (Email2Phone)</a>
-- <a href="https://github.com/chrismaddalena/ODIN">ODIN</a>
+- <a href="https://github.com/martinvigo/email2phonenumber">E2P (Email2Phone)</a><br />
+- <a href="https://github.com/chrismaddalena/ODIN">ODIN</a><br />
+- <a href="https://github.com/itsmehacker/CardPwn">CardPwn</a><br />
 
 
 <strong>#Domain Recon Gathering</strong>

@@ -1256,6 +1256,28 @@ t56(){
 		sudo python3 setup.py
 	fi
 }
+
+################
+# 57 # CardPwn #
+################
+t56(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for CardPwn${NC}"
+	if [[ -d '/opt/CardPwn' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "CardPwn is already installed"
+		echo -e "${NC}"
+		cd CardPwn
+		sudo git fetch && sudo git pull
+		sudo python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/itsmehacker/CardPwn.git
+		cd CardPwn
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
+
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1317,6 +1339,7 @@ t53										# finDOM-XSS
 t54										# ODIN
 t55										# OSINT-Framework
 t56										# UFONet
+t57										# CardPwn
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
