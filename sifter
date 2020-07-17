@@ -512,10 +512,29 @@ bruters(){
     echo -e "${RED}"
     figlet -f mini "BruteDUM"
     echo -e "${ORNG}"
-    echo -e "${YLW}BruteDUM is a bruteforcing tool that consists of Medusa, nCrack, Hydra${NC}"
-    sleep 3
-    ./modules/exmods/brutedum.sh
+    PS3='What tool would you like to use?'
+        options=("BruteDUM" "WBruter" "Back")
+        select opt in "${options[@]}"
+        do
+                case $opt in
+                    "BruteDUM")
+                        echo -e "${YLW}BruteDUM is a bruteforcing tool that consists of Medusa, nCrack, Hydra${NC}"
+                        sleep 3
+                        ./modules/exmods/brutedum.sh
+                        ;;
+
+                    "WBruter")
+                        ./modules/exmods/wbruter.sh
+                        ;;
+
+                   "Back")
+                        modules
+                        ;;
+                esac
+        done
+    echo -e "${NC}"
 }
+
 sdog(){
     cd /opt/sifter
     echo -e "${RED}"

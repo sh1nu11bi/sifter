@@ -309,6 +309,10 @@ exmodinfo(){
                     "VulnX")
                             ${COM} /opt/sifter/info/vulnx.info &
                             ;;
+
+                    "WBruter")
+                            ${COM} /opt/sifter/info/wbruter.info
+                            ;;
                     
                     "Back")
                             cd /opt/sifter
