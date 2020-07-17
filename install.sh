@@ -1246,11 +1246,14 @@ t56(){
 		echo -e "${NC}"
 		cd /opt/ufonet
 		sudo git fetch && sudo git pull
-		sudo python3 setup.py install
+		#sudo python3 setup.py install
 	else
 		cd /opt
 		sudo git clone https://github.com/epsylon/ufonet.git
 		cd ufonet
+		if [[ -f '/opt/sifter/extras/setup.py' ]]; then
+			sudo mv /opt/sifter/extras/setup.py /opt/ufonet/setup.py
+		fi
 		sudo python3 setup.py install
 	fi
 }
