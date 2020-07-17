@@ -13,7 +13,7 @@ figlet -f mini "CardPwn"
 echo -e "${NC}"
 xterm -e sudo python3 cardpwn.py
 sleep 30 
-	============================================
+echo -e "	============================================"
 cd /opt/sifter
 ./sifter -m
 

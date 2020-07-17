@@ -13,7 +13,7 @@ figlet -f mini "OSINT-Framework"
 echo -e "${NC}"
 xterm -e sudo python3 -m http.server 9999
 sleep 30 
-	============================================
+echo -e "	============================================"
 cd /opt/sifter
 ./sifter -m
 

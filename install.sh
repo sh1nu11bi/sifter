@@ -1278,6 +1278,23 @@ t56(){
 	fi
 }
 
+################
+# 58 # WBruter #
+################
+t58(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for WBruter${NC}"
+	if [[ -d '/opt/WBRUTER' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "WBruter is already installed"
+		echo -e "${NC}"
+		cd WBRUTER
+		sudo git fetch && sudo git pull
+	else
+		cd /opt
+		sudo git clone https://github.com/wuseman/WBRUTER.git
+	fi
+}
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1340,6 +1357,7 @@ t54										# ODIN
 t55										# OSINT-Framework
 t56										# UFONet
 t57										# CardPwn
+t58										# WBruter
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##

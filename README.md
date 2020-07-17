@@ -36,7 +36,7 @@
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Email2PhoneNumber</a> - OSINT tool that allows you to obtain a target's phone number just by having his email address.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
-- <a style="color: #729e1b" href="#">finDOM-XSS</a> - Domain based XSS Scanner<br />
+- <a style="color: #729e1b" href="#">WBruter</a> - Bruteforce Android Lock pin (<strong>USB Debugging must be enable but root is not needed</strong>)<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
 - <a style="color: #729e1b" href="#">UFONet</a> - P2P and cryptographic -disruptive toolkit- that allows to perform DoS and DDoS attacks<br />
@@ -179,6 +179,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 <strong>#BruteForcing</strong>
 + <a href="https://github.com/GitHackTools/BruteDum">BruteDUM</a><br />
++ <a href="https://github.com/wuseman/WBRUTER">WBruter</a><br />
 		  
 		
 <strong>#Password Tools</strong>

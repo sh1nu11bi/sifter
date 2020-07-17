@@ -13,7 +13,7 @@ figlet -f mini "UFONet"
 echo -e "${NC}"
 xterm -e sudo ufonet
 sleep 30 
-	============================================
+echo -e "	============================================"
 cd /opt/sifter
 ./sifter -m
 
