@@ -1251,7 +1251,7 @@ t56(){
 		cd /opt
 		sudo git clone https://github.com/epsylon/ufonet.git
 		cd ufonet
-		sudo python3 setup.py
+		sudo python3 setup.py install
 	fi
 }
 
