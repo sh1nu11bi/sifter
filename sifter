@@ -1128,12 +1128,17 @@ update(){
 	    fi
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
+        sudo chmod +x install.sh
         ./install.sh
         sudo cp sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter
         chmod +x /opt/sifter --recursive
         chmod +x /usr/sbin/sifter
+                                                                                                    ########################
+        echo -e "${ORNG}Current Version:${RED}8.5${NC}"                                             ##    VERSION INFO    ##
+       # echo -e "${YLW}Revision:${LP}2"                                                            ##    UPDATE CHECK    ##
+                                                                                                    ########################
     fi
 }
 
