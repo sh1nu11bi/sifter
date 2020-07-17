@@ -48,7 +48,7 @@ cred_mods(){
   echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "Back")
+          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "OSINT-Framework" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -65,9 +65,13 @@ cred_mods(){
                                 ;;
 
                             "CredNinja")
-                                ./modules/postex/credninja.sh
+                                ./modules/credmods/credninja.sh
                                 ;;
                             
+                            "OSINT-Framework")
+                                ./modules/credmods/osintf.sh
+                                ;;
+
                             "Back")
                                 modules
                                 ;;
@@ -84,7 +88,7 @@ phone_mods(){
   echo -e "${YLW}eg. Social media information, phone number information, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Seeker" "Sherlock" "xRay" "Maryam" "E2P (Email2PhoneNumber)" "ODIN" "Back" "Quit") 
+          options=("Seeker" "Sherlock" "xRay" "Maryam" "E2P (Email2PhoneNumber)" "ODIN" "CardPwn" "Back" "Quit") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -110,6 +114,10 @@ phone_mods(){
 
                             "ODIN")
                                 ./modules/credmods/odin.sh
+                                ;;
+
+                            "CardPwn")
+                                ./modules/credmods/cardpwn.sh
                                 ;;
 
                             "Back")
@@ -504,10 +512,29 @@ bruters(){
     echo -e "${RED}"
     figlet -f mini "BruteDUM"
     echo -e "${ORNG}"
-    echo -e "${YLW}BruteDUM is a bruteforcing tool that consists of Medusa, nCrack, Hydra${NC}"
-    sleep 3
-    ./modules/exmods/brutedum.sh
+    PS3='What tool would you like to use?'
+        options=("BruteDUM" "WBruter" "Back")
+        select opt in "${options[@]}"
+        do
+                case $opt in
+                    "BruteDUM")
+                        echo -e "${YLW}BruteDUM is a bruteforcing tool that consists of Medusa, nCrack, Hydra${NC}"
+                        sleep 3
+                        ./modules/exmods/brutedum.sh
+                        ;;
+
+                    "WBruter")
+                        ./modules/exmods/wbruter.sh
+                        ;;
+
+                   "Back")
+                        modules
+                        ;;
+                esac
+        done
+    echo -e "${NC}"
 }
+
 sdog(){
     cd /opt/sifter
     echo -e "${RED}"
@@ -608,7 +635,7 @@ ddos(){
       figlet -f mini "DDoS Tools"
       echo -e "${ORNG}"
       PS3='What tool would you like to use?'
-        options=("Dark Star" "Impulse" "Back")
+        options=("Dark Star" "Impulse" "UFONet" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -618,6 +645,10 @@ ddos(){
 
                 "Impulse")
                     ./modules/exmods/impulse.sh
+                    ;;
+
+                "UFONet")
+                    ./modules/exmods/ufonet.sh
                     ;;
 
                 "Back")
@@ -1069,8 +1100,8 @@ update(){
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
                                                                                                 ########################
-    echo -e "${ORNG}Current Version:${RED}8.2${NC}"                                                    ##    VERSION INFO    ##
-   # echo -e "${YLW}Revision:${LP}2"                                                             ##    UPDATE CHECK    ##
+    echo -e "${ORNG}Current Version:${RED}8.5${NC}"                                             ##    VERSION INFO    ##
+   # echo -e "${YLW}Revision:${LP}2"                                                            ##    UPDATE CHECK    ##
                                                                                                 ########################
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig

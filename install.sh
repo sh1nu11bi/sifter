@@ -1212,6 +1212,91 @@ t54(){
 		sudo python3 setup_check.py
 	fi
 }
+
+########################
+# 55 # OSINT-Framework #
+########################
+t55(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for OSINT-Framework${NC}"
+	if [[ -d '/opt/OSINT-Framework' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "OSINT-Framework is already installed"
+		echo -e "${NC}"
+		cd /opt/OSINT-Framework
+		sudo git fetch && sudo git pull
+		sudo npm install
+	else
+		cd /opt
+		sudo git clone https://github.com/lockfale/OSINT-Framework.git
+		cd OSINT-Framework
+		sudo npm install
+		sudo cp -f ./node_modules/d3/d3.min.js ./public/js/vendor/d3
+		cd ./public
+	fi
+}
+
+###############
+# 56 # UFONet #
+###############
+t56(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for UFONet${NC}"
+	if [[ -d '/opt/ufonet' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "UFONet is already installed"
+		echo -e "${NC}"
+		cd /opt/ufonet
+		sudo git fetch && sudo git pull
+		sudo python3 setup.py install
+	else
+		cd /opt
+		sudo git clone https://github.com/epsylon/ufonet.git
+		cd ufonet
+		sudo python3 setup.py
+	fi
+}
+
+################
+# 57 # CardPwn #
+################
+t56(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for CardPwn${NC}"
+	if [[ -d '/opt/CardPwn' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "CardPwn is already installed"
+		echo -e "${NC}"
+		cd CardPwn
+		sudo git fetch && sudo git pull
+		sudo python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/itsmehacker/CardPwn.git
+		cd CardPwn
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
+
+################
+# 58 # WBruter #
+################
+t58(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for WBruter${NC}"
+	if [[ -d '/opt/WBRUTER' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "WBruter is already installed"
+		echo -e "${NC}"
+		cd WBRUTER
+		sudo git fetch && sudo git pull
+	else
+		cd /opt
+		sudo git clone https://github.com/wuseman/WBRUTER.git
+		cd WBRUTER
+		sudo chmod +x wbruter
+	fi
+}
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1271,6 +1356,10 @@ t51										# Intrigue-Core
 #t52									# Optiva-Framework (suspended::Runtime Error)
 t53										# finDOM-XSS
 t54										# ODIN
+t55										# OSINT-Framework
+t56										# UFONet
+t57										# CardPwn
+t58										# WBruter
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
