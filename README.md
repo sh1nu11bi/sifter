@@ -30,10 +30,9 @@
 
 # Additions:
 
-<p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">Espionage</a> - Network Traffic Sniffing &amp; ArpSpoofing<br />
-- <a style="color: #729e1b" href="#">KatanaFramework</a> - Web Exploitation Framework (Java Front-end)<br />
+<p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">OSINT-Framework</a> -Web-based OSINT-Framework<br />
+- <a style="color: #729e1b" href="#">InveighZero</a> - Post-Exploitation tool to be used on an exploited session with low privileges<br />
 - <a style="color: #729e1b" href="#">PowerHub</a> - PowerShell post exploitation tool aiding in delivering code usually flagged by endpoint protection.<br />
-- <a style="color: #729e1b" href="#">MetaSploit</a> - Deploy metasploit from within Sifter for Exploitational purposes.<br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Email2PhoneNumber</a> - OSINT tool that allows you to obtain a target's phone number just by having his email address.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
@@ -110,6 +109,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/j3ssie/Osmedeus">Osmedeus</a><br />
 - <a href="https://github.com/bhavsec/reconspider">ReconSpider</a><br />
 - <a href="https://github.com/Raikia/CredNinja">CredNinja</a><br />
+- <a href="https://github.com/lockfale/OSINT-Framework">OSINT-Framework</a>
 
 
 <strong>#Targeted Information Gatherers</strong>
@@ -156,7 +156,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/Technowlogy-Pushpender/creds_harvester">CredHarvester</a><br />
 - <a href="https://github.com/S3cur3Th1sSh1t/PowerSharpPack">PowerSharp</a><br />
 - <a href="https://github.com/cyberark/ACLight">ACLight2</a><br />
-- <a href="https://github.com/AdrianVollmer/PowerHub">PowerHub</a>
+- <a href="https://github.com/AdrianVollmer/PowerHub">PowerHub</a><br />
+- <a href="https://github.com/Kevin-Robertson/InveighZero">InveighZero</a>
 		  
 
 <strong>#Exploitation Frameworks</strong>

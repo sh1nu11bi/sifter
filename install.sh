@@ -1233,7 +1233,6 @@ t54(){
 		sudo npm install
 		sudo cp -f ./node_modules/d3/d3.min.js ./public/js/vendor/d3
 		cd ./public
-		sudo python -m SimpleHTTPServer 8000
 	fi
 }
 ############################################################################################################
