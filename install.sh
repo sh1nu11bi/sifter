@@ -1212,6 +1212,30 @@ t54(){
 		sudo python3 setup_check.py
 	fi
 }
+
+########################
+# 55 # OSINT-Framework #
+########################
+t54(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for OSINT-Framework${NC}"
+	if [[ -d '/opt/OSINT-Framework' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "OSINT-Framework is already installed"
+		echo -e "${NC}"
+		cd /opt/OSINT-Framework
+		sudo git fetch && sudo git pull
+		sudo npm install
+	else
+		cd /opt
+		sudo git clone https://github.com/lockfale/OSINT-Framework.git
+		cd OSINT-Framework
+		sudo npm install
+		sudo cp -f ./node_modules/d3/d3.min.js ./public/js/vendor/d3
+		cd ./public
+		sudo python -m SimpleHTTPServer 8000
+	fi
+}
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1271,6 +1295,7 @@ t51										# Intrigue-Core
 #t52									# Optiva-Framework (suspended::Runtime Error)
 t53										# finDOM-XSS
 t54										# ODIN
+t55										# OSINT-Framework
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##

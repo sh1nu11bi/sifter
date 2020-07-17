@@ -48,7 +48,7 @@ cred_mods(){
   echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "Back")
+          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "OSINT-Framework" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -65,9 +65,13 @@ cred_mods(){
                                 ;;
 
                             "CredNinja")
-                                ./modules/postex/credninja.sh
+                                ./modules/credmods/credninja.sh
                                 ;;
                             
+                            "OSINT-Framework")
+                                ./modules/credmods/osintf.sh
+                                ;;
+
                             "Back")
                                 modules
                                 ;;
