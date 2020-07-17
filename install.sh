@@ -318,16 +318,16 @@ t13(){
 		if [[ ! -d 'venv' ]]; then
 			sudo python3.8 -m venv venv
 			source venv/bin/activate
-			sudo ./venv/bin/python3.8 -m pip install wheel
-			sudo ./venv/bin/python3.8 -m pip install -r requirements.txt
+			sudo ./venv/bin/python3 -m pip install wheel
+			sudo ./venv/bin/python3 -m pip install -r requirements.txt
 		fi
 		CHK=$(sudo git fetch && sudo git pull)
 		if [[ ${CHK} == "Already up to date." ]]; then
 			sleep 1
 		else
 			source venv/bin/activate
-			sudo ./venv/bin/python3.8 -m pip install colorama wheel
-			sudo ./venv/bin/python3.8 -m pip install -r requirements.txt
+			sudo ./venv/bin/python3 -m pip install colorama wheel
+			sudo ./venv/bin/python3 -m pip install -r requirements.txt
 		fi
 	else
 		cd /opt
@@ -335,8 +335,8 @@ t13(){
 		cd /opt/AttackSurfaceMapper
 		sudo python3.8 -m venv venv
 		source venv/bin/activate
-		sudo ./venv/bin/python3.8 -m pip install colorama wheel
-		sudo ./venv/bin/python3.8 -m pip install -r requirements.txt
+		sudo ./venv/bin/python3 -m pip install colorama wheel
+		sudo ./venv/bin/python3 -m pip install -r requirements.txt
 		if [[ -f '/opt/sifter/extras/.asm' ]]; then
 			sudo cp /opt/sifter/extras/.asm -t /usr/sbin
 			sudo mv /opt/sifter/extras/.asm -t /opt/AttackSurfaceMapper
