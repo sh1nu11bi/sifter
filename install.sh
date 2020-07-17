@@ -1251,6 +1251,7 @@ t56(){
 		cd /opt
 		sudo git clone https://github.com/epsylon/ufonet.git
 		cd ufonet
+		sudo apt-get install python3-pycurl
 		if [[ -f '/opt/sifter/extras/setup.py' ]]; then
 			sudo mv /opt/sifter/extras/setup.py /opt/ufonet/setup.py
 		fi
