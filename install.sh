@@ -1216,7 +1216,7 @@ t54(){
 ########################
 # 55 # OSINT-Framework #
 ########################
-t54(){
+t55(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for OSINT-Framework${NC}"
 	if [[ -d '/opt/OSINT-Framework' ]]; then
@@ -1233,6 +1233,27 @@ t54(){
 		sudo npm install
 		sudo cp -f ./node_modules/d3/d3.min.js ./public/js/vendor/d3
 		cd ./public
+	fi
+}
+
+###############
+# 56 # UFONet #
+###############
+t56(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for UFONet${NC}"
+	if [[ -d '/opt/ufonet' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "UFONet is already installed"
+		echo -e "${NC}"
+		cd /opt/ufonet
+		sudo git fetch && sudo git pull
+		sudo python3 setup.py install
+	else
+		cd /opt
+		sudo git clone https://github.com/epsylon/ufonet.git
+		cd ufonet
+		sudo python3 setup.py
 	fi
 }
 ############################################################################################################
@@ -1295,6 +1316,7 @@ t51										# Intrigue-Core
 t53										# finDOM-XSS
 t54										# ODIN
 t55										# OSINT-Framework
+t56										# UFONet
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##

@@ -612,7 +612,7 @@ ddos(){
       figlet -f mini "DDoS Tools"
       echo -e "${ORNG}"
       PS3='What tool would you like to use?'
-        options=("Dark Star" "Impulse" "Back")
+        options=("Dark Star" "Impulse" "UFONet" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -622,6 +622,10 @@ ddos(){
 
                 "Impulse")
                     ./modules/exmods/impulse.sh
+                    ;;
+
+                "UFONet")
+                    ./modules/exmods/ufonet.sh
                     ;;
 
                 "Back")
@@ -1073,8 +1077,8 @@ update(){
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
                                                                                                 ########################
-    echo -e "${ORNG}Current Version:${RED}8.2${NC}"                                                    ##    VERSION INFO    ##
-   # echo -e "${YLW}Revision:${LP}2"                                                             ##    UPDATE CHECK    ##
+    echo -e "${ORNG}Current Version:${RED}8.5${NC}"                                             ##    VERSION INFO    ##
+   # echo -e "${YLW}Revision:${LP}2"                                                            ##    UPDATE CHECK    ##
                                                                                                 ########################
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig

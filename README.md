@@ -38,7 +38,9 @@
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
 - <a style="color: #729e1b" href="#">finDOM-XSS</a> - Domain based XSS Scanner<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
-&emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.</em>
+&emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
+- <a style="color: #729e1b" href="#">UFONet</a> - P2P and cryptographic -disruptive toolkit- that allows to perform DoS and DDoS attacks<br />
+</em>
  </p>
 
 
@@ -139,6 +141,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="#">DDoS</a><br />
 &emsp;&emsp;-- <a href="https://github.com/s1l3nt78/Dark-Star">Dark-Star</a><br />
 &emsp;&emsp;-- <a href="https://github.com/LimerBoy/Impulse">Impulse</a><br />
+&emsp;&emsp;-- <a href="https://github.com/epsylon/ufonet">UFONet</a><br />
 - <a href="https://github.com/tegal1337/NekoBotV1">NekoBot</a><br />
 - <a href="https://github.com/capture0x/XSHOCK">xShock</a><br />
 - <a href="https://github.com/anouarbensaad/vulnx">VulnX</a><br />
