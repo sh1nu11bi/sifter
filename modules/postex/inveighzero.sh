@@ -11,8 +11,8 @@ echo -e "${RED}"
 figlet -f mini "InveighZero"
 echo -e "${NC}"
 echo -e "${ORNG}InveighZero should be used on a target system with limited privileges${NC}"
-cp /opt/sifter/modules/postex/inveigh.exe -t /home/$USER/Desktop
-echo -e "${UBLUE}inveigh.exe${NC} ${W}has been moved to /home/$USER/Desktop\nPlease upload it to target machine for usage (Through exploited meterpreter session)${NC}"
+cp /opt/sifter/modules/postex/Inveigh.exe -t /home/$USER/Desktop
+echo -e "${UBLUE}Inveigh.exe${NC} ${W}has been moved to /home/$USER/Desktop\nPlease upload it to target machine for usage (Through exploited meterpreter session)${NC}"
 echo -e "${W}Once that is done, please hit ${YLW}enter${NC}"
 read RANDOM
 echo -e "${ORNG}A window will open with inveigh usage options${NC}"
