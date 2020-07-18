@@ -952,8 +952,8 @@ t43(){
 		sudo git fetch && sudo git pull &>/dev/null
 		source venv/bin/activate
 		sudo ./venv/bin/pip3 install wheel
-		sudo ./venv/bin/pip3 install -r requirements.txt
-		sudo ./venv/bin/python3 setup.py install
+		sudo ./venv/bin/pip3 install -r requirements.txt &>/dev/null
+		sudo ./venv/bin/python3 setup.py install &>/dev/null
 	else
 		cd /opt
 		sudo git clone https://github.com/elceef/dnstwist.git
