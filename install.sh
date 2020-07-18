@@ -1301,6 +1301,27 @@ t58(){
 		sudo chmod +x wbruter
 	fi
 }
+
+############
+# 59 # iKy #
+############
+#t59(){
+#	echo -e "${W}===========================================================================================${NC}"
+#	echo -e "${YLW}Checking for iKy${NC}"
+#	if [[ -d '/opt/iKy' ]]; then
+#		echo -e "${ORNG}"
+#		figlet -f mini "iKy is already installed"
+#		echo -e "${NC}"
+#		cd /opt/iKy
+#		sudo git fetch && sudo git pull &>/dev/null
+#	else
+#		cd /opt
+#		sudo git clone https://github.com/kennbroorg/iKy.git
+#		sudo chown $USER:$USER -R iKy
+#		cd iKy/install/iKyEasyInstall/
+#		bash iKyEasyInstall
+#	fi
+#}
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1364,6 +1385,7 @@ t55										# OSINT-Framework
 t56										# UFONet
 t57										# CardPwn
 t58										# WBruter
+
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
