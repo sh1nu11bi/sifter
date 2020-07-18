@@ -122,7 +122,7 @@ t4(){
 		echo -e "${ORNG}"
 		figlet -f mini "BlackWidow is already installed"
 		echo -e "${NC}"
-		cd /opt/BlackWidow
+		cd /root/BlackWidow
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /root
