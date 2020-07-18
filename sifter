@@ -1115,7 +1115,7 @@ update(){
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
     else
-	    #FULLUPD=$(cat /usr/sbin/sifter | grep "FULL='NO'")                                     # HASHOUT LINE WHEN INSTALL SCRIPT NEEDS TO RUN
+        FULLCHK=$(cat /usr/sbin/sifter | grep "FULL='NO'")
         sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
       	    sleep 3
@@ -1128,27 +1128,22 @@ update(){
 		    up_arg ${FILES}
 		    git pull
 	    fi
-        if [[ ${FULLUPD} == "FULL='NO'" ]]; then
-            REP="FULL='YES'"
-            RER="FULL='NO'"
-            sed -i "s/${REP}/${RER}/g" /opt/sifter/sifter
-        fi
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
         sudo chmod +x install.sh
-        IFFULL=$(cat /opt/sifter/sifter | grep "FULL='YES'")
-        if [[ ${IFFULL} == "FULL='YES'" ]]; then
-            REP="FULL='YES'"
-            RER="FULL='NO'"
+        if [[ ${FULLCHK} == "FULL='NO'" ]]; then
+            sleep 1
+        else
+            REW="FULL='YES'"
+            REE="FULL='NO'"
             ./install.sh
-            sed -i "s/${REP}/${RER}/g" /opt/sifter/sifter
+            sudo cp /opt/sifter/sifter -t /usr/sbin
+            sudo sed -i "s/${REW}/${REE}/g" /usr/sbin/sifter
+            sudo chown $USER:$USER /usr/sbin/sifter
+            chmod +x /usr/sbin/sifter
         fi
-        sudo cp sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
-        sudo chown $USER:$USER /usr/sbin/sifter
-        chmod +x /opt/sifter --recursive
-        chmod +x /usr/sbin/sifter
-                                                                                                    ########################
+        chmod +x /opt/sifter --recursive                                                            ########################
         echo -e "${ORNG}Updated Version:${RED}8.5${NC}"                                             ##    VERSION INFO    ##
        # echo -e "${YLW}Revision:${LP}2"                                                            ##    UPDATE CHECK    ##
                                                                                                     ########################
