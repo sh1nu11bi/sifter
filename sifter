@@ -991,8 +991,8 @@ modules(){
                                 ;;
 
                             "Info")
-                                XTM=$(xterm -h)
-                                if [[ ${XTM} == "" ]]; then
+                                XTM=$(xterm -h | grep include)
+                                if [[ ${XTM} == "where options include:" ]]; then
                                     xterm -e /opt/sifter/info/info.sh &
                                 else
                                     ./info/info.sh
