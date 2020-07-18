@@ -265,8 +265,9 @@ postinfo(){
 
                 "InveighZero")
                     ${COM} /opt/sifter/info/inveighzero.info &
-
-               "Back")
+                    ;;
+                    
+                "Back")
                     cd /opt/sifter
                     ./sifter -m
                     ;;
