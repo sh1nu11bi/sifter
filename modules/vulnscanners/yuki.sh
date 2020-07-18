@@ -5,16 +5,9 @@ ORNG='\033[0;33m'
 W='\033[1;37m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
-FIRST='YES'
+#FIRST='YES'
 
 cd /root/yuki/
-if [[ ${FIRST} == 'YES' ]]; then
-    REP="FIRST='YES'"
-    RER="FULL='NO'"
-    echo -e "${RED}Doing final Perl configurations${NC}"
-    sudo bash install-perl-module.sh
-    sed -i "s/${REP}/${RER}/g" /opt/sifter/modules/vulnscanners/yuki.sh
-fi
 
 echo -e "${ORNG}"
 figlet -f small "Yuki-Chan"
