@@ -1384,8 +1384,6 @@ echo -e "for better results in WPScan goto ${UBLUE}modules/wpscan.sh${NC} ${W}an
 echo -e " '${UBLUE}--api-token ${URED}your-wpscan-api-token${UBLUE}${NC}${W}' argument to both commands"
 echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${W}'${NC}"
 echo ""
-echo -e "${RED}==========================================================================================${NC}"
-
 echo -e "${LP}##########################################################################################################"
-echo -e "######################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________######################"
+echo -e "######################              ${ORNG} czFsM250NzggX18gUmFiYjE3J3MgRGVu ${LP}              ######################"
 echo -e "##########################################################################################################${NC}"
