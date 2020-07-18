@@ -1271,7 +1271,7 @@ t57(){
 		echo -e "${ORNG}"
 		figlet -f mini "CardPwn is already installed"
 		echo -e "${NC}"
-		cd CardPwn
+		cd /opt/CardPwn
 		sudo git fetch && sudo git pull &>/dev/null
 		sudo python3 -m pip install -r requirements.txt
 	else
@@ -1292,7 +1292,7 @@ t58(){
 		echo -e "${ORNG}"
 		figlet -f mini "WBruter is already installed"
 		echo -e "${NC}"
-		cd WBRUTER
+		cd /opt/WBRUTER
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /opt
