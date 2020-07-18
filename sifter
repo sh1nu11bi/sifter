@@ -1115,7 +1115,6 @@ update(){
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
     else
-        FULLCHK=$(cat /usr/sbin/sifter | grep "FULL='NO'")
         sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
       	    sleep 3
@@ -1131,17 +1130,7 @@ update(){
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
         sudo chmod +x install.sh
-        if [[ ${FULLCHK} == "FULL='NO'" ]]; then
-            sleep 1
-        else
-            REW="FULL='YES'"
-            REE="FULL='NO'"
-            ./install.sh
-            sudo cp /opt/sifter/sifter -t /usr/sbin
-            sudo sed -i "s/${REW}/${REE}/g" /usr/sbin/sifter
-            sudo chown $USER:$USER /usr/sbin/sifter
-            chmod +x /usr/sbin/sifter
-        fi
+        bash install.sh
         sudo chown $USER:$USER /opt/sifter --recursive
         chmod +x /opt/sifter --recursive                                                            ########################
         echo -e "${ORNG}Updated Version:${RED}8.5${NC}"                                             ##    VERSION INFO    ##
