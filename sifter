@@ -1016,7 +1016,7 @@ modules(){
                                 ;;
 
                             "Quit")
-                                exit 2
+                                exit 0
                                 ;;
                     esac
             done
