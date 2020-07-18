@@ -1016,7 +1016,7 @@ modules(){
                                 ;;
 
                             "Quit")
-                                exit 1
+                                exit 2
                                 ;;
                     esac
             done
@@ -1134,7 +1134,7 @@ update(){
             REP="FULL='YES'"
             RER="FULL='NO'"
             ./install.sh
-            sed -i "s/${REP}/${RER}/g"
+            sed -i "s/${REP}/${RER}/g" /opt/sifter/sifter
         fi
         sudo cp sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
