@@ -319,6 +319,11 @@ exmodinfo(){
         done
     echo -e "${NC}"
 }
+
+                                                                                ############
+                                                                                #  RUNTIME #
+                                                                                ############
+python3 /opt/sifter/extras/ban.py
 echo -e "${URED}Modules${NC}"
 echo -e "${ORNG}"
 PS3='What would you like to do?'
