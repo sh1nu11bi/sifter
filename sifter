@@ -1115,7 +1115,8 @@ update(){
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
     else
-	    sleep 5
+	    #FULLUPD=$(cat /usr/sbin/sifter | grep "FULL='NO'")                                     # HASHOUT LINE WHEN INSTALL SCRIPT NEEDS TO RUN
+        sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
       	    sleep 3
 	    read UANS
@@ -1127,10 +1128,16 @@ update(){
 		    up_arg ${FILES}
 		    git pull
 	    fi
+        if [[ ${FULLUPD} == "FULL='NO'" ]]; then
+            REP="FULL='YES'"
+            RER="FULL='NO'"
+            sed -i "s/${REP}/${RER}/g" /opt/sifter/sifter
+        fi
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
         sudo chmod +x install.sh
-        if [[ ${FULL} == 'YES' ]]; then
+        IFFULL=$(cat /opt/sifter/sifter | grep "FULL='YES'")
+        if [[ ${IFFULL} == "FULL='YES'" ]]; then
             REP="FULL='YES'"
             RER="FULL='NO'"
             ./install.sh
