@@ -38,7 +38,7 @@
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation framework and orchestration engine for cybersecurity data collection & Attack Surface Mapping<br />
 - <a style="color: #729e1b" href="#">WBruter</a> - Bruteforce Android Lock pin (<strong>USB Debugging must be enable but root is not needed</strong>)<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
-&emsp;<strong><em>'-->&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
+&emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
 - <a style="color: #729e1b" href="#">UFONet</a> - P2P and cryptographic -disruptive toolkit- that allows to perform DoS and DDoS attacks<br />
 </em>
  </p>
@@ -57,6 +57,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 Most modules are explained along with demos of a lot of the tools
 <br>
+
 # Releases
 <br>
 <em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8_5.zip"><strong>here</strong></a></em>
