@@ -13,6 +13,7 @@ BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
+FULL='YES'
 ARG=$2
 # IP addition argument
 # Help Menu
@@ -1129,7 +1130,12 @@ update(){
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
         sudo chmod +x install.sh
-        ./install.sh
+        if [[ ${FULL} == 'YES' ]]; then
+            REP="FULL='YES'"
+            RER="FULL='NO'"
+            ./install.sh
+            sed -i "s/${REP}/${RER}/g"
+        fi
         sudo cp sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter
