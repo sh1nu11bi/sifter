@@ -285,7 +285,7 @@ vuln_mods(){
   figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Back")
+          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Nettacker" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -305,9 +305,9 @@ vuln_mods(){
                                 ./modules/vulnscanners/ktf.sh
                                 ;;
 
-                            #"Optiva-Framework")
-                            #    ./modules/vulnscanners/optiva.sh
-                            #s    ;;
+                            "Nettacker")
+                                ./modules/vulnscanners/nettacker.sh
+                                ;;
 
                             "Back")
                                 modules

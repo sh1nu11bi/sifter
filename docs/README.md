@@ -26,6 +26,7 @@
 
 	@Codename: AdamantiuM
 	@Version : 8.5
+	@Revision: 2
 
 
 # Additions:
@@ -39,6 +40,7 @@
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
 - <a style="color: #729e1b" href="#">UFONet</a> - P2P and cryptographic -disruptive toolkit- that allows to perform DoS and DDoS attacks<br />
+- <a style="color: #729e1b" href="#">OWASP-Nettacker</a> - vulnerability scanning and eventually generating a report for networks, including services, bugs, vulnerabilities, misconfigurations, and other information.<br />
 </em>
  </p>
 
@@ -197,7 +199,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
 - <a href="https://github.com/PowerScript/KatanaFramework">KatanaFramework</a><br />
-- <a href="https://github.com/joker25000/Optiva-Framework">Optiva-Framework</a>
+- <a href="https://github.com/joker25000/Optiva-Framework">Nettacker</a>
 
 
 <strong>#WebApplication Scanners</strong>

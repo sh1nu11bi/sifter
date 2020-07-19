@@ -1302,26 +1302,26 @@ t58(){
 	fi
 }
 
-############
-# 59 # iKy #
-############
-#t59(){
-#	echo -e "${W}===========================================================================================${NC}"
-#	echo -e "${YLW}Checking for iKy${NC}"
-#	if [[ -d '/opt/iKy' ]]; then
-#		echo -e "${ORNG}"
-#		figlet -f mini "iKy is already installed"
-#		echo -e "${NC}"
-#		cd /opt/iKy
-#		sudo git fetch && sudo git pull &>/dev/null
-#	else
-#		cd /opt
-#		sudo git clone https://github.com/kennbroorg/iKy.git
-#		sudo chown $USER:$USER -R iKy
-#		cd iKy/install/iKyEasyInstall/
-#		bash iKyEasyInstall
-#	fi
-#}
+##################
+# 59 # Nettacker #
+##################
+t59(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Nettacker${NC}"
+	if [[ -d '/opt/OWASP-Nettacker' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Nettacker is already installed"
+		echo -e "${NC}"
+		cd /opt/OWASP-Nettacker
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo python3 setup.py install
+	else
+		cd /opt
+		sudo git clone https://github.com/zdresearch/OWASP-Nettacker
+		cd OWASP-Nettacker
+		sudo python3 setup.py install
+	fi
+}
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1385,7 +1385,7 @@ t55										# OSINT-Framework
 t56										# UFONet
 t57										# CardPwn
 t58										# WBruter
-
+t59
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##

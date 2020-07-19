@@ -182,7 +182,7 @@ vulninfo(){
   figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Flan" "RapidScan" "Yuki-Chan" "Back")
+          options=("Flan" "RapidScan" "Yuki-Chan" "OWASP-Nettacker" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -198,7 +198,12 @@ vulninfo(){
                             ${COM} /opt/sifter/info/yuki.info &>/dev/null
                             ;;
 
-                           "Back")
+                        "OWASP-Nettacker")
+                            echo -e "Due to the vast information about this tool and its usage, a page will not be provided here.\nInstead, Please follow these links to read more."
+                            echo -e ":https://www.owasp.org/index.php/OWASP_Nettacker\n:https://github.com/zdresearch/OWASP-Nettacker/wiki/Usage"
+                            ;;
+
+                         "Back")
                             cd /opt/sifter
                             ./sifter -m
                             ;;

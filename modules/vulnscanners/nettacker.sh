@@ -8,14 +8,14 @@ LBBLUE='\e[104m'
 RED='\033[0;31m'
 
 echo -e "${RED}"
-figlet -f mini "Optiva-Framework"
+figlet -f mini "OWASP-Nettacker"
 echo -e "${NC}"
-cd /opt/Optiva-Framework
-optiva
+cd /opt/OWASP-Nettacker
+sudo python3 nettacker.py -W
 sleep 2
 echo -e "${W}======================================================${NC}"
 sleep 2
 cd /opt/sifter
 sifter -m
 
-##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
+##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
