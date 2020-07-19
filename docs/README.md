@@ -11,8 +11,8 @@
 	<img align="center" src="https://img.shields.io/badge/@Codename:-AdamantiuM-yellowgreen">
 <br>
 	<img align="center" src="https://img.shields.io/badge/Version-8.5-red">
-	<!--<img align="center" src="https://img.shields.io/badge/Revision-2-green">
-	-->
+	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
+	
 </p>
 
 # *Sifter*
