@@ -199,7 +199,7 @@ Most modules are explained along with demos of a lot of the tools
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
 - <a href="https://github.com/PowerScript/KatanaFramework">KatanaFramework</a><br />
-- <a href="https://github.com/joker25000/Optiva-Framework">Nettacker</a>
+- <a href="https://github.com/zdresearch/OWASP-Nettacker">Nettacker</a>
 
 
 <strong>#WebApplication Scanners</strong>
