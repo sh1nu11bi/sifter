@@ -1107,7 +1107,7 @@ update(){
    
     echo -e "${YLW}########################${NC}"                                               ########################
     echo -e "${ORNG}# Current Version:${RED}8.5 #${NC}"                                         ##    VERSION INFO    ##
-   # echo -e "${YLW}Revision:${LP}2"                                                            ##    UPDATE CHECK    ##
+    echo -e "${YLW}Revision:${LP}2"                                                             ##    UPDATE CHECK    ##
     echo -e "${YLW}########################${NC}"                                               ########################
     
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
@@ -1142,7 +1142,7 @@ update(){
          
         echo -e "${YLW}########################"                                                    ########################
         echo -e "${ORNG}# Current Version:${RED} 8.5 #${NC}"                                        ##    VERSION INFO    ##
-        # echo -e "${YLW}Revision:${LP}2"                                                           ##    UPDATE CHECK    ##
+        echo -e "${YLW}Revision:${LP}2"                                                             ##    UPDATE CHECK    ##
         echo -e "${YLW}########################${NC}"                                               ########################
     fi
 }
