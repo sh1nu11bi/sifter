@@ -43,7 +43,8 @@
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
 - <a style="color: #729e1b" href="#">UFONet</a> - P2P and cryptographic -disruptive toolkit- that allows to perform DoS and DDoS attacks<br />
-- <a style="color: #729e1b" href="#">OWASP-Nettacker</a> - vulnerability scanning and eventually generating a report for networks, including services, bugs, vulnerabilities, misconfigurations, and other information.<br />
+- <a style="color: #729e1b" href="#">OWASP-Nettacker</a> - vulnerability scanning and eventually generating a report for networks, including services, bugs,<br>
+&emsp;&emsp;vulnerabilities, misconfigurations, and other information.<br />
 </em>
  </p>
 
