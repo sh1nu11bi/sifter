@@ -822,16 +822,16 @@ t36(){
 menSYS(){
         if [[ ${OSYS} == "l" ]] || [[ ${OSYS} == "linux" ]]; then
                 wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
-                unzip Mentalist*
-                rm *.zip
+                unzip Mentalist-v1.0-Linux-x86_64.zip
+                rm Mentalist-v1.0-Linux-x86_64.zip
         elif [[ ${OSYS} == "m" ]] || [[ ${OSYS} == "mac" ]]; then
                 wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-OSX.zip
-                unzip Mentalist*
-                rm *.zip
+                unzip Mentalist-v1.0-OSX.zip
+                rm Mentalist-v1.0-OSX.zip
         elif [[ ${OSYS} == "w" ]] || [[ ${OSYS} == "windows" ]]; then
                 wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Win.zip
-                unzip Mentalist*
-                rm *.zip
+                unzip Mentalist-v1.0-Win.zip
+                rm Mentalist-v1.0-Win.zip
         else 
                 echo -e "${URED}You have selected an invalid option${NC}"
                 menSYS
