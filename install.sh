@@ -840,7 +840,7 @@ menSYS(){
 t37(){
         echo -e "${W}===========================================================================================${NC}"
         echo -e "${YLW}Checking for Mentalist${NC}"
-        if [[ -f '/opt/sifter/modules/passtools/Mentalist' ]]; then
+        if [[ -f '/opt/sifter/modules/passtools/Mentalist' ]] || [[ -f '/opt/sifter/modules/passtools/Mentalist.app' ]] || [[ -f '/opt/sifter/modules/passtools/Mentalist.exe' ]]; then
                 echo -e "${ORNG}"
                 figlet -f mini "Mentalist is already installed"
                 echo -e "${NC}"
