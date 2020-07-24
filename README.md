@@ -21,8 +21,8 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-AdamantiuM-yellowgreen">
 <br>
-	<img align="center" src="https://img.shields.io/badge/Version-8.7-red"><br />
-	<img align="center" src="https://img.shields.io/badge/Release-FuzzyDander_(Limited_Edition)-green">
+	<img align="center" src="https://img.shields.io/badge/Release-FuzzyDander_(Limited_Edition)-green"><br />
+	<img align="center" src="https://img.shields.io/badge/Version-8.7-red">
 </p>
 
 # *Sifter*
