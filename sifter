@@ -14,6 +14,7 @@ UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
 FULL='YES'
+STATUS='YES'
 ARG=$2
 # IP addition argument
 # Help Menu
@@ -942,12 +943,42 @@ results(){
     # shellcheck disable=SC2164
     cd /opt/sifter
 }
+# System Proxy Settings
+proxysystem(){
+    echo -e "${YLW}"
+   PS3='What would you like to do?'
+    options=("Start" "Stop" "Back")
+    select opt in "${options[@]}"
+    do
+        case $opt in
+            "Start"
+                STATUS='YES'
+                anonsurf start
+                ;;
+
+            "Stop"
+                STATUS='NO'
+                anonsurf stop
+                ;;
+
+            "Back")
+                cd /opt/sifter
+                ./sifter
+                ;;
+
+        esac
+    done
+    echo -e "${NC}"
+}
 # Module Menu
 modules(){
-    echo -e "${URED}Modules${NC}"
-    echo -e "${ORNG}"
+    echo -e "${URED}
+    figlet -f mini "Modules"
+    echo -e "${NC}"
+    echo -e "${RED}Anonymous: ${ORNG}${STATUS}${NC}"
+    echo -e "${YLW}"
     PS3='What would you like to do?'
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Main Menu" "Info" "Pass Time" "Quit")
+            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Main Menu" "Info" "Anonymization" "Pass Time" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -1008,6 +1039,10 @@ modules(){
                                 menu
                                 ;;
 
+                            "Anonymization")
+                                proxysystem
+                                ;;
+
                             "Pass Time")
                                 echo -e "${RED}This module is to pass some time during long scans \nsuch as nMap (Full Port Scan) or RapidScan${NC}"
                                 echo -e "${W}Would you like to continue? (${YLW}y${W}/${YLW}n${W})"
@@ -1020,6 +1055,12 @@ modules(){
                                 ;;
 
                             "Quit")
+                                if [[ ${STATUS} == "YES" ]]; then
+                                    echo -e "${LGRY}System Proxy is still active..."
+                                    echo -e "${ORNG}Attempting to stop it now..."
+                                    anonsurf stop
+                                    echo -e "${LP}Proxy Stopped${NC}"
+                                fi
                                 exit 0
                                 ;;
                     esac
@@ -1039,8 +1080,9 @@ menu(){
     python3 extras/ban2.py
     echo -e "${LGRY}==============${W}Hit ${YLW}Ctrl + C${W} at any time to quit ${UPURPLE}Sifter${NC}${LGRY}==============${NC}"
     arg=$1
+    echo -e "${RED}Anonymous: ${ORNG}${STATUS}${NC}"
     echo -e "${ORNG}What would you like to do?"
-            options=("Check Hosts" "Edit Host List" "Parse Results to Modules" "Update" "Quit")
+            options=("Check Hosts" "Edit Host List" "Parse Results to Modules" "Anonymization" "Update" "Quit")
             select opt in "${options[@]}"
             do
                 case $opt in
@@ -1072,6 +1114,10 @@ menu(){
                         sifter
                         ;;
 
+                    "Anonymization")
+                        proxysystem
+                        ;;
+                        
                     "Quit")
                         exit 2
                         ;;
@@ -1106,8 +1152,8 @@ update(){
     echo -e "${NC}"
    
     echo -e "${YLW}#################${NC}"                                                ########################
-    echo -e "${ORNG}# Version : ${LP}8.5 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
-    echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                        ##    UPDATE CHECK    ##
+    echo -e "${ORNG}# Version : ${LP}8.6 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
+    #echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                        ##    UPDATE CHECK    ##
     echo -e "${YLW}#################${NC}"                                                ########################
     
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
@@ -1141,8 +1187,8 @@ update(){
         chmod +x /opt/sifter --recursive                                                            
          
         echo -e "${YLW}#################"                                                    ########################
-        echo -e "${ORNG}# Version :${LP} 8.5 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
-        echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                        ##    UPDATE CHECK    ##
+        echo -e "${ORNG}# Version :${LP} 8.6 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
+        #echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                        ##    UPDATE CHECK    ##
         echo -e "${YLW}#################${NC}"                                               ########################
     fi
 }

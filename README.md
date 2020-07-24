@@ -3,6 +3,14 @@
 <p align="center"><img align="center" src="https://img.shields.io/badge/Collective-The_Dead_Bunny_Club-green"></p>
 <br />
 <br />
+
+# Notice
+
+	At 200 Stars I'll release the FuzzyDander Module for 1 Day 
+	Hope you'r all finding some use in this tool.
+	Thanks a 'mil
+	*s1l3nt78
+
 <p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
 <br>
@@ -12,8 +20,9 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-AdamantiuM-yellowgreen">
 <br>
-	<img align="center" src="https://img.shields.io/badge/Version-8.5-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
+	<img align="center" src="https://img.shields.io/badge/Version-8.6-red">
+<!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
+-->
 </p>
 
 # *Sifter*
@@ -28,8 +37,7 @@
 # Release
 
 	@Codename: AdamantiuM
-	@Version : 8.5
-	@Revision: 2
+	@Version : 8.6
 
 
 # Additions:
@@ -45,7 +53,8 @@
 - <a style="color: #729e1b" href="#">UFONet</a> - P2P and cryptographic -disruptive toolkit- that allows to perform DoS and DDoS attacks<br />
 - <a style="color: #729e1b" href="#">OWASP-Nettacker</a> - vulnerability scanning and eventually generating a report for networks, including services, bugs,<br>
 &emsp;&emsp;vulnerabilities, misconfigurations, and other information.<br />
-</em>
+</em><br />
+	<a style="color: #729e1b" href="https://github.com/Und3rf10w/kali-anonsurf">Anonsurf</a> - Added to Anonymise your system while running recon or OSINT tasks
  </p>
 
 

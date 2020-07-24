@@ -1322,6 +1322,26 @@ t59(){
 		sudo python3 setup.py install
 	fi
 }
+
+#################
+# 60 # Anonsurf #
+#################
+t60(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Anonsurf${NC}"
+	if [[ -d '/opt/kali-anonsurf' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Anonsurf is already installed"
+		echo -e "${NC}"
+		cd /opt/kali-anonsurf
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/Und3rf10w/kali-anonsurf
+		cd kali-anonsurf
+		sudo bash install.sh
+	fi
+}
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1385,7 +1405,8 @@ t55										# OSINT-Framework
 t56										# UFONet
 t57										# CardPwn
 t58										# WBruter
-t59
+t59										# Netattacker
+t60										# Anonsurf
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
