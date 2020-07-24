@@ -3,6 +3,12 @@
 <p align="center"><img align="center" src="https://img.shields.io/badge/Collective-The_Dead_Bunny_Club-green"></p>
 <br />
 <br />
+# Special
+	At 200 Stars I'll release the FuzzyDander Module for 1 Day 
+	Hope you'r all finding some use in this tool.
+	Thanks a 'mil
+	*s1l3nt78
+
 <p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
 <br>
