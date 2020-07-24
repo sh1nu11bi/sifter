@@ -1128,7 +1128,7 @@ menu(){
                             anonsurf stop
                             echo -e "${LP}Proxy Stopped${NC}"
                         fi
-                        exit 2
+                        exit 0
                         ;;
 
                 esac
