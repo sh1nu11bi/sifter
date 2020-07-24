@@ -425,7 +425,7 @@ t17(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Osmedeus${NC}"
 	if [[ -f '/opt/docker-osmedeus/.configured' ]]; then
-		sleep 1
+		echo -e "${UPURPLE}Osmedeus is already configured${NC}"
 	else
 		echo -e "${RED}Osmedeus takes a while to install, you can run the install now or to save time it can be done during the first run"
 		echo -e "${W}If you are updating and osmedeus is already installed, please enter ${YLW}d${W} when prompted"
