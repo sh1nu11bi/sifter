@@ -4,7 +4,7 @@
 <br />
 <br />
 
-# Special
+# Notice
 
 	At 200 Stars I'll release the FuzzyDander Module for 1 Day 
 	Hope you'r all finding some use in this tool.
