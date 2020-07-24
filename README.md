@@ -6,10 +6,9 @@
 
 # Notice
 
-	200 Stars reached
-	So far a day the FuzzyDander module will be available to anyone who clones or upgrades.
-	Will be removed in 24hours.
-	Hope ya'll get it
+	At 200 Stars I'll release the FuzzyDander Module for 1 Day 
+	Hope you'r all finding some use in this tool.
+	Thanks a 'mil
 	*s1l3nt78
 
 <p align="center">
@@ -21,9 +20,9 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-AdamantiuM-yellowgreen">
 <br>
-	<img align="center" src="https://img.shields.io/badge/Version-8.7-red">
-	<img align="center" src="https://img.shields.io/badge/Release-FuzzyDander_(Limited_Edition)-green">
-
+	<img align="center" src="https://img.shields.io/badge/Version-8.6-red">
+<!--	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
+-->
 </p>
 
 # *Sifter*
@@ -38,14 +37,11 @@
 # Release
 
 	@Codename: AdamantiuM
-	@Version : 8.7
-	@Release : FuzzyDander (Limited Edition) 
+	@Version : 8.6
 
 
 # Additions:
 
-- <a href="#">FuzzyDander</a> - Limited Edition Release
-<br />
 <p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">OSINT-Framework</a> -Web-based OSINT-Framework<br />
 - <a style="color: #729e1b" href="#">InveighZero</a> - Post-Exploitation tool to be used on an exploited session with low privileges<br />
 - <a style="color: #729e1b" href="#">CardPwn</a> - OSINT Tool to find Breached Credit Cards Information<br />
