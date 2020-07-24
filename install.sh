@@ -834,7 +834,7 @@ menSYS(){
                 rm Mentalist-v1.0-Win.zip
         else 
                 echo -e "${URED}You have selected an invalid option${NC}"
-                menSYS
+                echo -e "${UPURPLE}Please rerun install script before trying to use Mentalist${NC}"
         fi
 }
 t37(){
