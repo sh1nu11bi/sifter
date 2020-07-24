@@ -951,12 +951,12 @@ proxysystem(){
     select opt in "${options[@]}"
     do
         case $opt in
-            "Start"
+            "Start")
                 STATUS='YES'
                 anonsurf start
                 ;;
 
-            "Stop"
+            "Stop")
                 STATUS='NO'
                 anonsurf stop
                 ;;
