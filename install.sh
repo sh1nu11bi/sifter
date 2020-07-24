@@ -1314,7 +1314,6 @@ t59(){
 		echo -e "${NC}"
 		cd /opt/OWASP-Nettacker
 		sudo git fetch && sudo git pull &>/dev/null
-		sudo python3 setup.py install
 	else
 		cd /opt
 		sudo git clone https://github.com/zdresearch/OWASP-Nettacker
@@ -1339,7 +1338,7 @@ t60(){
 		cd /opt
 		sudo git clone https://github.com/Und3rf10w/kali-anonsurf
 		cd kali-anonsurf
-		sudo bash install.sh
+		sudo bash installer.sh
 	fi
 }
 ############################################################################################################
@@ -1427,6 +1426,10 @@ echo -e "for better results in WPScan goto ${UBLUE}modules/wpscan.sh${NC} ${W}an
 echo -e " '${UBLUE}--api-token ${URED}your-wpscan-api-token${UBLUE}${NC}${W}' argument to both commands"
 echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${W}'${NC}"
 echo ""
-echo -e "${LP}######################################################################################################"
-echo -e "######################              ${ORNG} VGhlIERlYWQgQnVubnkgQ2x1Yg== ${LP}              ######################"
-echo -e "######################################################################################################${NC}"
+######################################################################################################
+######################              ${ORNG} VGhlIERlYWQgQnVubnkgQ2x1Yg== ${LP}              ######################
+######################################################################################################
+echo -e "${YLW}#################"                                                    ########################
+echo -e "${ORNG}# Version :${LP} 8.6 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
+#echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                        ##    UPDATE CHECK    ##
+echo -e "${YLW}#################${NC}"                                               ########################
