@@ -980,7 +980,7 @@ modules(){
     echo -e "${RED}Anonymous: ${ORNG}${STATUS}${NC}"
     echo -e "${YLW}"
     PS3='What would you like to do?'
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Main Menu" "Info" "Anonymization" "Pass Time" "Quit")
+            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Info" "Anonymization" "Pass Time" "Main Menu" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -1037,10 +1037,6 @@ modules(){
                                 fi                                
                                 ;;
 
-                            "Main Menu")
-                                menu
-                                ;;
-
                             "Anonymization")
                                 proxysystem
                                 ;;
@@ -1054,6 +1050,10 @@ modules(){
                                 else
                                     modules
                                 fi
+                                ;;
+
+                            "Main Menu")
+                                menu
                                 ;;
 
                             "Quit")
