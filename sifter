@@ -972,7 +972,7 @@ proxysystem(){
 }
 # Module Menu
 modules(){
-    echo -e "${URED}
+    echo -e "${URED}"
     figlet -f mini "Modules"
     echo -e "${NC}"
     echo -e "${RED}Anonymous: ${ORNG}${STATUS}${NC}"
