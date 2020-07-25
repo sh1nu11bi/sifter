@@ -1164,7 +1164,12 @@ update(){
     echo -e "${ORNG}# Version : ${LP}8.7 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
     #echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                        ##    UPDATE CHECK    ##
     echo -e "${YLW}#################${NC}"                                                ########################
-    
+    CHECK=$(cat /opt/sifter/extras/ban2.py | grep Limited)
+    if [[ ${CHECK} == "" ]]; then
+        sleep 1
+    else
+        sudo mv /opt/sifter/extras/ban2.py -t /opt
+    fi
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig
     git fetch
@@ -1175,6 +1180,17 @@ update(){
         echo -e "${NC}"
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
+        
+        ###############################
+        # Special Edition Banner Save #
+        ###############################
+        
+        if [[ -f '/opt/ban2.py' ]]; then
+            sudo mv /opt/ban2.py -t /opt/sifter/extras/
+            sudo chown $USER:$USER /opt/sifter/extras/ban2.py
+        fi
+        ################################################
+
     else
         sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
@@ -1190,6 +1206,17 @@ update(){
 	    fi
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
+        
+        ###############################
+        # Special Edition Banner Save #
+        ###############################
+
+        if [[ -f '/opt/ban2.py' ]]; then
+            sudo mv /opt/ban2.py -t /opt/sifter/extras/
+            sudo chown $USER:$USER /opt/sifter/extras/ban2.py
+        fi
+        ##########################################
+
         sudo chmod +x install.sh
         bash install.sh
         sudo chown $USER:$USER /opt/sifter --recursive
