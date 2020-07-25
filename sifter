@@ -947,10 +947,11 @@ results(){
 }
 # System Proxy Settings
 proxysystem(){
+    echo -e "\n"
     if [[ ${STATUS} == "YES" ]]; then
-        echo -e "${ORNG}Anonsurf is currently ${URED}on ${NC}"
+        echo -e "${BRED}Anonsurf is currently ${URED}on${NC}"
     else
-        echo -e "${ORNG}Anonsurf is currently ${UBLUE}off ${NC}"
+        echo -e "${BRED}Anonsurf is currently ${UBLUE}off${NC}"
     fi
     echo -e "${YLW}"
     PS3='What would you like to do?'
@@ -1132,6 +1133,7 @@ menu(){
                         
                     "Quit")
                         if [[ ${STATUS} == "YES" ]]; then
+                            echo -e "\n" 
                             echo -e "${LGRY}System Proxy is still active..."
                             echo -e "${ORNG}Attempting to stop it now..."
                             sudo anonsurf stop
@@ -1169,10 +1171,10 @@ update(){
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
    
-    echo -e "${YLW}#################${NC}"                                                ########################
-    echo -e "${ORNG}# Version : ${LP}8.7 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
+    echo -e "${YLW}####################${NC}"                                                ########################
+    echo -e "${ORNG}# Version : ${LP}8.7 ${RED} SE${ORNG}#${NC}"                                   ##    VERSION INFO    ##
     #echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                        ##    UPDATE CHECK    ##
-    echo -e "${YLW}#################${NC}"                                                ########################
+    echo -e "${YLW}#####################${NC}"                                                ########################
     CHECK=$(cat /opt/sifter/extras/ban2.py | grep Limited)
     if [[ ${CHECK} == "" ]]; then
         sleep 1
