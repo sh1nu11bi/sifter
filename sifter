@@ -953,6 +953,14 @@ proxysystem(){
         echo -e "${ORNG}Anonsurf is currently ${UBLUE}off ${NC}"
     fi
     echo -e "${YLW}"
+<<<<<<< HEAD
+=======
+    if [[ ${STATUS} == "YES" ]]; then
+        echo -e "${ORNG}Anonsurf is currently on ${NC}"
+    else
+        echo -e "${ORNG}Anonsurf is currently off ${NC}"
+    fi
+>>>>>>> master
     PS3='What would you like to do?'
         options=("Start" "Stop" "Back")
         select opt in "${options[@]}"
@@ -961,17 +969,29 @@ proxysystem(){
                 "Start")
                     STATUS='YES'
                     sudo anonsurf start
+<<<<<<< HEAD
                     menu
+=======
+                    main
+>>>>>>> master
                     ;;
 
                 "Stop")
                     STATUS='NO'
                     sudo anonsurf stop
+<<<<<<< HEAD
                     menu
                     ;;
 
                 "Back")
                     menu
+=======
+                    main
+                    ;;
+
+                "Back")
+                    main
+>>>>>>> master
                     ;;
 
             esac
