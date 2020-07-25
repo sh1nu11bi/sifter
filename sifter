@@ -18,6 +18,8 @@ URED='\033[4;31m'
 FULL='YES'
 STATUS='NO'
 ARG=$2
+STLTH=$1
+
 # IP addition argument
 # Help Menu
 usage() {                                    	  # Function: Print a help message.
@@ -39,6 +41,7 @@ usage() {                                    	  # Function: Print a help message
     echo -e "${RED}# ${ORNG}sifter ${YLW}-p${NC} opens the password tools for quick passlist generation or hash decryption"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-r${NC} opens the results folder for viewing of files or photos"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-u${NC} Checks for any updates on Github"
+    echo -e "${RED}# ${ORNG}sifter ${LGRY}--stealth${NC} Starts sifter in ${LP}Anonymous${NC} mode"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-z${NC} Opens the Module Information Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-h${NC} This Help Menu" 1>&2
 }
@@ -947,10 +950,11 @@ results(){
 }
 # System Proxy Settings
 proxysystem(){
+    echo -e "\n"
     if [[ ${STATUS} == "YES" ]]; then
-        echo -e "${ORNG}Anonsurf is currently ${URED}on ${NC}"
+        echo -e "${BRED}Anonsurf is currently ${URED}on${NC}"
     else
-        echo -e "${ORNG}Anonsurf is currently ${UBLUE}off ${NC}"
+        echo -e "${BRED}Anonsurf is currently ${UBLUE}off${NC}"
     fi
     echo -e "${YLW}"
     PS3='What would you like to do?'
@@ -1132,6 +1136,7 @@ menu(){
                         
                     "Quit")
                         if [[ ${STATUS} == "YES" ]]; then
+                            echo -e "\n" 
                             echo -e "${LGRY}System Proxy is still active..."
                             echo -e "${ORNG}Attempting to stop it now..."
                             sudo anonsurf stop
@@ -1169,10 +1174,10 @@ update(){
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
    
-    echo -e "${YLW}#################${NC}"                                                ########################
-    echo -e "${ORNG}# Version : ${LP}8.7 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
+    echo -e "${YLW}####################${NC}"                                                ########################
+    echo -e "${ORNG}# Version : ${LP}8.7 ${RED} SE${ORNG}#${NC}"                                   ##    VERSION INFO    ##
     #echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                        ##    UPDATE CHECK    ##
-    echo -e "${YLW}#################${NC}"                                                ########################
+    echo -e "${YLW}#####################${NC}"                                                ########################
     CHECK=$(cat /opt/sifter/extras/ban2.py | grep Limited)
     if [[ ${CHECK} == "" ]]; then
         sleep 1
@@ -1234,71 +1239,79 @@ update(){
 }
 
 cd /opt/sifter
+if [[ ${STLTH} == "--stealth" ]]; then
+    echo -e "${LP}Starting Sifter in ${URED}Stealth${NC} ${LP}mode${NC}"
+    sudo anonsurf start
+    STATUS='ON'
+    echo ""
+    menu
+fi
+
 while getopts "a:bndwirmepcvuhz" options
     do            	                                        # Loop: Get the next option;
-	case "${options}" in                                	# use silent error checking;
+    case "${options}" in                                	# use silent error checking;
                                                             # option a takes 1 arguments.
-		c)
-			echo -e "${YLW}"
-			figlet -f mini "Checking for live targets..."
-			echo -e "${NC}"
-			check_hosts
-            		modules
-			;;
+        c)
+            echo -e "${YLW}"
+            figlet -f mini "Checking for live targets..."
+            echo -e "${NC}"
+            check_hosts
+                    modules
+            ;;
 
-		a)
-			echo -e "${ORNG}Adding ${RED}${ARG} ${ORNG}to host_list.txt${NC}"
+        a)
+            echo -e "${ORNG}Adding ${RED}${ARG} ${ORNG}to host_list.txt${NC}"
                 TARLIST=$(cat /opt/sifter/files/host_list.txt)
                 if [[ ${TARLIST} == "eg. target.com" ]]; then
                     rm /opt/sifter/files/host_list.txt
                     touch /opt/sifter/files/host_list.txt
                 fi
-			echo "$ARG" >> files/host_list.txt
-			sleep 2
-			modules
-			;;
+            echo "$ARG" >> files/host_list.txt
+            sleep 2
+            modules
+            ;;
 
-		i)
-			echo -e "${LP}"
-			figlet -f mini "Info Gatherers"
-			echo -e "${NC}"
-			cred_mods
-			;;
+        i)
+            echo -e "${LP}"
+            figlet -f mini "Info Gatherers"
+            echo -e "${NC}"
+            cred_mods
+            ;;
 
-		d)
-			echo -e "${LP}"
-			figlet -f mini "Domain-Fuzzers"
-			echo -e "${NC}"
-			dom_mods
-			;;
+        d)
+            echo -e "${LP}"
+            figlet -f mini "Domain-Fuzzers"
+            echo -e "${NC}"
+            dom_mods
+            ;;
 
-		e)
-			echo -e "${LP}"
-			figlet -f mini "Exploitative Modules"
-			echo -e "${NC}"
-			ex_mods
-			;;
+        e)
+            echo -e "${LP}"
+            figlet -f mini "Exploitative Modules"
+            echo -e "${NC}"
+            ex_mods
+            ;;
 
-		n)
-			echo -e "${LP}"
-			figlet -f mini "Network Mappers"
-			echo -e "${NC}"
-			net_mods
-			;;
+        n)
+            echo -e "${LP}"
+            figlet -f mini "Network Mappers"
+            echo -e "${NC}"
+            net_mods
+            ;;
 
-		v)
-			echo -e "${LP}"
-			figlet -f mini "Vulnerability Scanners"
-			echo -e "${NC}"
-			vuln_mods
-			;;
+        v)
+            echo -e "${LP}"
+            figlet -f mini "Vulnerability Scanners"
+            echo -e "${NC}"
+            vuln_mods
+            ;;
 
-		b)
-			echo -e "${LP}"
-			figlet -f mini "Web-Application Testers"
-			echo -e "${NC}"
-			webapps
-			;;
+        b)
+            echo -e "${LP}"
+            figlet -f mini "Web-Application Testers"
+            echo -e "${NC}"
+            webapps
+            ;;
 
         p)
             echo -e "${LP}"
@@ -1307,12 +1320,12 @@ while getopts "a:bndwirmepcvuhz" options
             passtools
             ;;
 
-		w)
-			echo -e "${LP}"
-			figlet -f mini "Web Recon"
-			echo -e "${NC}"
-			web_mods
-			;;
+        w)
+            echo -e "${LP}"
+            figlet -f mini "Web Recon"
+            echo -e "${NC}"
+            web_mods
+            ;;
 
         r)
             echo -e "${LP}"
@@ -1323,14 +1336,14 @@ while getopts "a:bndwirmepcvuhz" options
 
         u)
             update
-      		;;
+            ;;
 
-		h)
-			echo -e "${RED}"
-			python3 extras/ban.py
-			echo -e "${NC}"
-			usage
-			;;
+        h)
+            echo -e "${RED}"
+            python3 extras/ban.py
+            echo -e "${NC}"
+            usage
+            ;;
 
         z)
             echo -e "${RED}"
@@ -1345,19 +1358,19 @@ while getopts "a:bndwirmepcvuhz" options
             ;;
 
         m)
-	        echo -e "${INV}${LGRY}"
-	        python3 extras/ban.py
+            echo -e "${INV}${LGRY}"
+            python3 extras/ban.py
             echo -e "${RED}"
             figlet -f mini "Modules"
             echo -e "${NC}"
             modules
             ;;
 
-	*)
-		echo -e "${RED}Wrong Option Parsed\nRedirecting to Main Menu${NC}"
-		menu
-		;;
-	esac
+    *)
+        echo -e "${RED}Wrong Option Parsed\nRedirecting to Main Menu${NC}"
+        menu
+        ;;
+    esac
 done
 if [[ $OPTIND == 1 ]]; then				# if no option is passed
 	menu		  	                    # default command is run
