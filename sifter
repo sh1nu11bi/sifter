@@ -971,6 +971,8 @@ proxysystem(){
                     STATUS='NO'
                     sudo anonsurf stop
                     menu
+=======
+                    main
                     ;;
 
                 "Back")
