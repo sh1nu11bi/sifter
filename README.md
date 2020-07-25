@@ -45,8 +45,8 @@
 # Additions:
 
 - <a href="#">FuzzyDander</a> - Limited Edition Release
-<br />
-<p style="color: #bf8d30"><em>- <a style="color: #729e1b" href="#">OSINT-Framework</a> -Web-based OSINT-Framework<br />
+
+- <a style="color: #729e1b" href="#">OSINT-Framework</a> -Web-based OSINT-Framework<br />
 - <a style="color: #729e1b" href="#">InveighZero</a> - Post-Exploitation tool to be used on an exploited session with low privileges<br />
 - <a style="color: #729e1b" href="#">CardPwn</a> - OSINT Tool to find Breached Credit Cards Information<br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
@@ -58,7 +58,7 @@
 - <a style="color: #729e1b" href="#">OWASP-Nettacker</a> - vulnerability scanning and eventually generating a report for networks, including services, bugs,<br>
 &emsp;&emsp;vulnerabilities, misconfigurations, and other information.<br />
 </em><br />
-	<a style="color: #729e1b" href="https://github.com/Und3rf10w/kali-anonsurf">Anonsurf</a> - Added to Anonymise your system while running recon or OSINT tasks
+- <a style="color: #729e1b" href="https://github.com/Und3rf10w/kali-anonsurf">Anonsurf</a> - Added to Anonymise your system while running recon or OSINT tasks
  </p>
 
 
