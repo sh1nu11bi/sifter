@@ -948,28 +948,34 @@ results(){
 # System Proxy Settings
 proxysystem(){
     echo -e "${YLW}"
-   PS3='What would you like to do?'
-    options=("Start" "Stop" "Back")
-    select opt in "${options[@]}"
-    do
-        case $opt in
-            "Start")
-                STATUS='YES'
-                sudo anonsurf start
-                ;;
+    if [[ ${STATUS} == "YES" ]]; then
+        echo -e "${ORNG}Anonsurf is currently on ${NC}"
+    else
+        echo -e "${ORNG}Anonsurf is currently off ${NC}"
+    fi
+    PS3='What would you like to do?'
+        options=("Start" "Stop" "Back")
+        select opt in "${options[@]}"
+        do
+            case $opt in
+                "Start")
+                    STATUS='YES'
+                    sudo anonsurf start
+                    main
+                    ;;
 
-            "Stop")
-                STATUS='NO'
-                sudo anonsurf stop
-                ;;
+                "Stop")
+                    STATUS='NO'
+                    sudo anonsurf stop
+                    main
+                    ;;
 
-            "Back")
-                cd /opt/sifter
-                ./sifter
-                ;;
+                "Back")
+                    main
+                    ;;
 
-        esac
-    done
+            esac
+        done
     echo -e "${NC}"
 }
 # Module Menu
