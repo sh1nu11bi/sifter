@@ -44,8 +44,7 @@
 
 # Additions:
 
-- <a href="#">FuzzyDander</a> - Limited Edition Release
-
+- <a href="#">FuzzyDander</a> - Limited Edition Release<br />
 - <a style="color: #729e1b" href="#">OSINT-Framework</a> -Web-based OSINT-Framework<br />
 - <a style="color: #729e1b" href="#">InveighZero</a> - Post-Exploitation tool to be used on an exploited session with low privileges<br />
 - <a style="color: #729e1b" href="#">CardPwn</a> - OSINT Tool to find Breached Credit Cards Information<br />
