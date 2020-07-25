@@ -9,7 +9,7 @@
 	200 Stars reached
 	So, for a day the FuzzyDander module will 
 	be available to anyone who clones or upgrades.
-	This release will be removed in 24hours.
+	This release will be removed in 48hours.
 	Hope ya'll get it
 	*s1l3nt78
 
