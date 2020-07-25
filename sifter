@@ -955,12 +955,12 @@ proxysystem(){
         case $opt in
             "Start")
                 STATUS='YES'
-                anonsurf start
+                sudo anonsurf start
                 ;;
 
             "Stop")
                 STATUS='NO'
-                anonsurf stop
+                sudo anonsurf stop
                 ;;
 
             "Back")
@@ -1060,7 +1060,7 @@ modules(){
                                 if [[ ${STATUS} == "YES" ]]; then
                                     echo -e "${LGRY}System Proxy is still active..."
                                     echo -e "${ORNG}Attempting to stop it now..."
-                                    anonsurf stop
+                                    sudo anonsurf stop
                                     echo -e "${LP}Proxy Stopped${NC}"
                                 fi
                                 exit 0
@@ -1125,7 +1125,7 @@ menu(){
                         if [[ ${STATUS} == "YES" ]]; then
                             echo -e "${LGRY}System Proxy is still active..."
                             echo -e "${ORNG}Attempting to stop it now..."
-                            anonsurf stop
+                            sudo anonsurf stop
                             echo -e "${LP}Proxy Stopped${NC}"
                         fi
                         exit 0
