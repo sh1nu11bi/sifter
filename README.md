@@ -2,17 +2,6 @@
 <img align="right" src="https://www.codefactor.io/repository/github/s1l3nt78/sifter/badge" alt="CodeFactor"><br/>
 <p align="center"><img align="center" src="https://img.shields.io/badge/Collective-The_Dead_Bunny_Club-green"></p>
 <br />
-<br />
-
-# Notice
-
-	200 Stars reached
-	So, for a day the FuzzyDander module will 
-	be available to anyone who clones or upgrades.
-	This release will be removed in 48hours.
-	Hope ya'll get it
-	*s1l3nt78
-
 <p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
 <br>
