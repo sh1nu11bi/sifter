@@ -15,6 +15,5 @@ def showbanner():
  /_____/  \___ \ |   |  |__/       \   |  \  |   /    //   --   \ /_____/
          /____  >|___|____/______  /___|  /__|  /____/ \______  /
               \/    ''' + UGREEN + "AdamantiuM" + CEND + " " + CVIOLET + '''  \/     \/        ''' + UGREEN + "Ver:" + CBLUE + "8.7" + CEND + CVIOLET + '''     \/    ''' + CEND)
-        print(CRED + '''                                 Limited Edition                    ''' + CEND)
 
 showbanner()

@@ -20,8 +20,6 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-	<img align="center" src="https://img.shields.io/badge/Release-FuzzyDander_(Limited_Edition)-green">
-<br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-AdamantiuM-yellowgreen"><br />
 	<img align="center" src="https://img.shields.io/badge/Version-8.7-red">
 </p>
@@ -39,12 +37,10 @@
 
 	@Codename: AdamantiuM
 	@Version : 8.7
-	@Release : FuzzyDander (Limited Edition) 
 
 
 # Additions:
 
-- <a href="#">FuzzyDander</a> - Limited Edition Release<br />
 - <a style="color: #729e1b" href="#">OSINT-Framework</a> -Web-based OSINT-Framework<br />
 - <a style="color: #729e1b" href="#">InveighZero</a> - Post-Exploitation tool to be used on an exploited session with low privileges<br />
 - <a style="color: #729e1b" href="#">CardPwn</a> - OSINT Tool to find Breached Credit Cards Information<br />
@@ -77,7 +73,7 @@ Most modules are explained along with demos of a lot of the tools
 
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8.7_SE.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8.7.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
