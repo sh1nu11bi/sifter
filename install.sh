@@ -14,6 +14,9 @@ UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
 
+if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
+	sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
+fi
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
 sudo apt-get install -y python wmdocker graphviz kdialog privoxy python-dev python3-venv python-pip libpython3-stdlib python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker docker-compose docker.io python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy -y # sqlite3
 sudo apt --fix-broken install
