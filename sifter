@@ -1218,16 +1218,6 @@ update(){
 	    fi
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
-        
-        ###############################
-        # Special Edition Banner Save #
-        ###############################
-
-        if [[ -f '/opt/ban2.py' ]]; then
-            sudo mv /opt/ban2.py -t /opt/sifter/extras/
-            sudo chown $USER:$USER /opt/sifter/extras/ban2.py
-        fi
-        ##########################################
 
         sudo chmod +x install.sh
         bash install.sh
