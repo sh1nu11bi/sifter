@@ -31,7 +31,6 @@
 # Additions:
 
 - <a style="color: #729e1b" href="#">BadPotato</a> - Used for Privilege elevation on a low level session on a target machine<br />
-- <a style="color: #729e1b" href="#">InveighZero</a> - Post-Exploitation tool to be used on an exploited session with low privileges<br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />

@@ -55,7 +55,7 @@ cred_mods(){
   echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "OSINT-Framework" "Back") #"iKy"
+          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "OSINT-Framework" "Back") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -78,10 +78,6 @@ cred_mods(){
                             "OSINT-Framework")
                                 ./modules/credmods/osintf.sh
                                 ;;
-
-                            #"iKy")
-                            #    ./modules/credmods/iky.sh
-                            #    ;;
 
                             "Back")
                                 modules
@@ -383,7 +379,13 @@ post_ex(){
                     ;;
 
                 "BadPotato")
-                    ./modules/postex/badpotato.sh
+                    echo -e "${YLW}This will copy an ${LP}exe${YLW} file to your Desktop to be used on an exploited target session\nWould you like to continue?(y/n)${NC}"
+                    read BP
+                    if [[ ${BP} == "y" ]]; then
+                        ./modules/postex/badpotato.sh
+                    else
+                        post_ex
+                    fi
                     ;;
 
                 "Omega")
