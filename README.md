@@ -10,7 +10,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-AdamantiuM-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-8.7-red">
+	<img align="center" src="https://img.shields.io/badge/Version-8.8-red">
 </p>
 
 # *Sifter*
@@ -25,22 +25,17 @@
 # Release
 
 	@Codename: AdamantiuM
-	@Version : 8.7
+	@Version : 8.8
 
 
 # Additions:
 
-- <a style="color: #729e1b" href="#">OSINT-Framework</a> -Web-based OSINT-Framework<br />
-- <a style="color: #729e1b" href="#">InveighZero</a> - Post-Exploitation tool to be used on an exploited session with low privileges<br />
-- <a style="color: #729e1b" href="#">CardPwn</a> - OSINT Tool to find Breached Credit Cards Information<br />
+- <a style="color: #729e1b" href="#">BadPotato</a> - Used for Privilege elevation on a low level session on a target machine<br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
-- <a style="color: #729e1b" href="#">WBruter</a> - Bruteforce Android Lock pin (<strong>USB Debugging must be enable but root is not needed</strong>)<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
 - <a style="color: #729e1b" href="#">UFONet</a> - P2P and cryptographic -disruptive toolkit- that allows to perform DoS and DDoS attacks<br />
-- <a style="color: #729e1b" href="#">OWASP-Nettacker</a> - vulnerability scanning and eventually generating a report for networks, including services, bugs,<br>
-&emsp;&emsp;vulnerabilities, misconfigurations, and other information.<br />
 </em><br />
 - <a style="color: #729e1b" href="https://github.com/Und3rf10w/kali-anonsurf">Anonsurf</a> - Added to Anonymise your system while running recon or OSINT tasks
  </p>
@@ -62,7 +57,7 @@ Most modules are explained along with demos of a lot of the tools
 
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8.7.zip"><strong>here</strong></a></em>
+<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8.8.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
