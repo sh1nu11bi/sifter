@@ -1183,7 +1183,7 @@ update(){
     echo -e "${YLW}#################${NC}"                                                ########################
     echo -e "${ORNG}# Version : ${LP}8.8 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
     #echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                        ##    UPDATE CHECK    ##
-    echo -e "${YLW}##################${NC}"                                                ########################
+    echo -e "${YLW}#################${NC}"                                                ########################
     CHECK=$(cat /opt/sifter/extras/ban2.py | grep Limited)
     if [[ ${CHECK} == "" ]]; then
         sleep 1
