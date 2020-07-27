@@ -373,13 +373,17 @@ post_ex(){
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
     PS3='What tool would you like to use?'
-        options=("EoP Exploit" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "ACLight2" "PowerHUB" "Back")
+        options=("EoP Exploit" "BadPotato" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "ACLight2" "PowerHUB" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
                 "EoP Exploit")
                     echo -e "${W}The EoP module helps elevate user privileges on an exploited system${NC}"
                     ./modules/postex/EoP.sh
+                    ;;
+
+                "BadPotato")
+                    ./modules/postex/badpotato.sh
                     ;;
 
                 "Omega")
@@ -1175,7 +1179,7 @@ update(){
     echo -e "${NC}"
    
     echo -e "${YLW}#################${NC}"                                                ########################
-    echo -e "${ORNG}# Version : ${LP}8.7 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
+    echo -e "${ORNG}# Version : ${LP}8.8 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
     #echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                        ##    UPDATE CHECK    ##
     echo -e "${YLW}##################${NC}"                                                ########################
     CHECK=$(cat /opt/sifter/extras/ban2.py | grep Limited)
@@ -1197,17 +1201,6 @@ update(){
         echo -e "${NC}"
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
-        
-        ###############################
-        # Special Edition Banner Save #
-        ###############################
-        
-        if [[ -f '/opt/ban2.py' ]]; then
-            sudo mv /opt/ban2.py -t /opt/sifter/extras/
-            sudo chown $USER:$USER /opt/sifter/extras/ban2.py
-        fi
-        ################################################
-
     else
         sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"

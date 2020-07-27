@@ -1434,6 +1434,6 @@ echo ""
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==               ######################
 ######################################################################################################
 echo -e "${YLW}#################"                                                    ########################
-echo -e "${ORNG}# Version :${LP} 8.7 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
+echo -e "${ORNG}# Version :${LP} 8.8 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
 #echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                        ##    UPDATE CHECK    ##
 echo -e "${YLW}#################${NC}"                                               ########################
