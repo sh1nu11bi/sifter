@@ -31,7 +31,7 @@
 # Additions:
 
 - <a style="color: #729e1b" href="#">BadPotato</a> - Used for Privilege elevation on a low level session on a target machine<br />
-- <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates mulpitple tool & data snslysis sources, making that data easy to navigate from an HTTP panel.<br />
+- <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates multiple tools & data analysis sources, making data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
