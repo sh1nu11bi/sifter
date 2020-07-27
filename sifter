@@ -952,9 +952,9 @@ results(){
 proxysystem(){
     echo -e "\n"
     if [[ ${STATUS} == "YES" ]]; then
-        echo -e "${BRED}Anonsurf is currently ${URED}on${NC}"
+        echo -e "${LP}Anonsurf is currently ${URED}on${NC}"
     else
-        echo -e "${BRED}Anonsurf is currently ${UBLUE}off${NC}"
+        echo -e "${LP}Anonsurf is currently ${UBLUE}off${NC}"
     fi
     echo -e "${YLW}"
     PS3='What would you like to do?'
