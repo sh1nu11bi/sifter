@@ -1186,6 +1186,9 @@ update(){
     fi
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig
+    if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
+    	sudo mv modules/exmods/fuzzydander.sh modules/exmods/fuzzyd.sh
+    fi
     git fetch
     VER=$(git pull)
     if [[ ${VER} == "Already up to date." ]]; then
