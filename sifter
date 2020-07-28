@@ -1184,12 +1184,7 @@ update(){
     echo -e "${ORNG}# Version : ${LP}8.8 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
     #echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                        ##    UPDATE CHECK    ##
     echo -e "${YLW}#################${NC}"                                                ########################
-    CHECK=$(cat /opt/sifter/extras/ban2.py | grep Limited)
-    if [[ ${CHECK} == "" ]]; then
-        sleep 1
-    else
-        sudo mv /opt/sifter/extras/ban2.py -t /opt
-    fi
+
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then

@@ -91,9 +91,9 @@ echo -e "${W}Output File	: ${RED} $DOC ${NC}"
 echo -e "${W}Format		: ${RED} $FORMAT ${NC}"
 echo -e "${W}Screen Capture	: ${RED} $SC1 ${NC}"
 echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
-echo -e "${W}Debug			: ${RED} ${DE} ${NC}"
+echo -e "${W}Debug		: ${RED} ${DE} ${NC}"
 echo "Please wait...."
-sudo ./venv/bin/python3 asm.py -t ${TARGET} -ln -w resources/${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH} ${BUG} -v
+sudo ./venv/bin/python3 asm.py -t ${TARGET} -ln -w ${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH} ${BUG} -v
 cd /opt/sifter
 sifter -m
 
