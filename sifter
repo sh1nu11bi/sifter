@@ -35,6 +35,7 @@ usage() {                                    	  # Function: Print a help message
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-d${NC} Opens the Domain Focused Modules"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-n${NC} Opens the Network Mapping Modules menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-w${NC} Opens the Website Focused Modules"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-q${NC} Opens the Router Focused Modules"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-b${NC} Opens the Web-App Focused Module menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-v${NC} Opens the Vulnerability Scanning Module Menu"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-m${NC} Opens the Module Menu directly"
@@ -201,7 +202,7 @@ dom_mods(){
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "Armory" "SayDog" "Spiderfoo7" "Back") 
+          options=("DnsTwist" "Armory" "SayDog" "Spiderfoo7" "SubFinder" "Pulsar" "Back") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -219,6 +220,14 @@ dom_mods(){
 
                             "Spiderfoo7")
                                 ./modules/dommods/spiderfoot.sh
+                                ;;
+
+                            "SubFinder")
+                                ./modules/dommods/subfinder.sh
+                                ;;
+
+                            "Pulsar")
+                                ./modules/dommods/pulsar.sh
                                 ;;
 
                             "Back")
@@ -683,7 +692,7 @@ routertools(){
     figlet -f mini "Router Tools"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-        options=("MkCheck" "RouterSploit" "Back")
+        options=("MkCheck" "RouterSploit" "Airgeddon" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -696,6 +705,10 @@ routertools(){
                     cd /root/routersploit
                     sudo python3 rsf.py
                     ;;
+
+                "Airgeddon")
+                    sudo Airgeddon
+                    ;; 
 
                 "Back")
                     modules
@@ -778,7 +791,7 @@ webapps(){
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Sitadel" "BFAC" "AapFinder" "OneFind" "XSS" "Back")
+        options=("Sitadel" "BFAC" "AapFinder" "OneFind" "XSS" "reNgine" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -800,6 +813,10 @@ webapps(){
 
                         "XSS")
                             xssmods
+                            ;;
+
+                        "reNgine")
+                            ./modules/webapps/rengine.sh
                             ;;
 
                         "Back")
@@ -1180,10 +1197,10 @@ update(){
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
    
-    echo -e "${YLW}#################${NC}"                                                ########################
-    echo -e "${ORNG}# Version : ${LP}8.8 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
+    echo -e "${YLW}###############${NC}"                                                ########################
+    echo -e "${ORNG}# Version : ${LP}9 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
     #echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                        ##    UPDATE CHECK    ##
-    echo -e "${YLW}#################${NC}"                                                ########################
+    echo -e "${YLW}###############${NC}"                                                ########################
 
     mv modules/webmods/wordpress.sh modules/webmods/wordpress.orig
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig
@@ -1230,7 +1247,7 @@ if [[ ${STLTH} == "--stealth" ]]; then
     menu
 fi
 
-while getopts "a:bndwirmepcvuhz" options
+while getopts "a:bndwirmepcvquhz" options
     do            	                                        # Loop: Get the next option;
     case "${options}" in                                	# use silent error checking;
                                                             # option a takes 1 arguments.
@@ -1301,6 +1318,13 @@ while getopts "a:bndwirmepcvuhz" options
             figlet -f mini "Password Tools"
             echo -e "${NC}"
             passtools
+            ;;
+
+        q)
+            echo -e "${LP}"
+            figlet -f mini "Router Tools"
+            echo -e "${NC}"
+            routertools
             ;;
 
         w)

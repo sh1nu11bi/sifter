@@ -1344,6 +1344,64 @@ t60(){
 		sudo bash installer.sh
 	fi
 }
+
+##################
+# 61 # SubFinder #
+##################
+t61(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for SubFinder${NC}"
+	if [[ -d '/opt/subfinder' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "SubFinder is already installed"
+		echo -e "${NC}"
+		cd /opt/subfinder
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/projectdiscovery/subfinder.git
+		cd subfinder/cmd/subfinder
+		go build .
+		mv subfinder /usr/local/sbin/
+	fi
+}
+
+###############
+# 62 # Pulsar #
+###############
+t62(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Pulsar${NC}"
+	if [[ -d '/opt/pulsar' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Pulsar is already installed"
+		echo -e "${NC}"
+		cd /opt/pulsar
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/FooBallZ/pulsar
+	fi
+}
+
+################
+# 63 # reNgine #
+################
+t63(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for reNgine${NC}"
+	if [[ -d '/opt/rengine' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "reNgine is already installed"
+		echo -e "${NC}"
+		cd /opt/rengine
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/yogeshojha/rengine
+		cd rengine
+		sudo docker-compose up --build
+fi
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1409,6 +1467,9 @@ t57										# CardPwn
 t58										# WBruter
 t59										# Netattacker
 t60										# Anonsurf
+t61										# SubFinder
+t62										# Pulsar
+t63										# reNgine
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
@@ -1433,7 +1494,7 @@ echo ""
 ######################################################################################################
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==               ######################
 ######################################################################################################
-echo -e "${YLW}#################"                                                    ########################
-echo -e "${ORNG}# Version :${LP} 8.8 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
+echo -e "${YLW}###############"                                                    ########################
+echo -e "${ORNG}# Version :${LP} 9 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
 #echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                        ##    UPDATE CHECK    ##
-echo -e "${YLW}#################${NC}"                                               ########################
+echo -e "${YLW}###############${NC}"                                               ########################

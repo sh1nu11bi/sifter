@@ -6,6 +6,7 @@ CBLUE = '\33[94m'
 CYELLOW = '\33[33m'
 CEND = '\033[0m'
 UGREEN = '\33[92m'
+WHITE = '\33[37m'
 # + CRED + " | " + UGREEN + "Rev:" + CBLUE + "2" + CEND
 def showbanner():
         print(CVIOLET + '''
@@ -14,6 +15,6 @@ def showbanner():
   ______  /  ___/|   |  |   _(__  < /    \   __\  /    />      <   ______
  /_____/  \___ \ |   |  |__/       \   |  \  |   /    //   --   \ /_____/
          /____  >|___|____/______  /___|  /__|  /____/ \______  /
-              \/    ''' + UGREEN + "AdamantiuM" + CEND + " " + CVIOLET + '''  \/     \/        ''' + UGREEN + "Ver:" + CBLUE + "8.7" + CEND + CVIOLET + '''     \/    ''' + CEND)
+              \/       ''' + WHITE + "Pearl" + CEND + " " + CVIOLET + '''    \/     \/         ''' + UGREEN + "Ver:" + CBLUE + "9" + CEND + CVIOLET + '''      \/    ''' + CEND)
 
 showbanner()

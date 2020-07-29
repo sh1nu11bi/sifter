@@ -9,8 +9,8 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-	<img align="center" src="https://img.shields.io/badge/@Codename:-AdamantiuM-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-8.8-red">
+	<img align="center" src="https://img.shields.io/badge/@Codename:-Pearl-yellowgreen"><br />
+	<img align="center" src="https://img.shields.io/badge/Version-9-red">
 </p>
 
 # *Sifter*
@@ -24,8 +24,8 @@
 
 # Release
 
-	@Codename: AdamantiuM
-	@Version : 8.8
+	@Codename: Pearl
+	@Version : 9
 
 
 # Additions:
@@ -35,7 +35,10 @@
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
-- <a style="color: #729e1b" href="#">UFONet</a> - P2P and cryptographic -disruptive toolkit- that allows to perform DoS and DDoS attacks<br />
+- <a style="color: #729e1b" href="#">SubFinder</a> - Sub-Directory enumeration tool<br />
+- <a style="color: #729e1b" href="#">reNgine</a> - Automated reconnaissance framework for gathering information web applications.<br />
+- <a style="color: #729e1b" href="#">Pulsar</a> - Automated network footprint scanner for Red Teams, Pentesters and Bounty Hunters.<br />
+- <a style="color: #729e1b" href="#">Airgeddon</a> - WiFi Security ToolKit
 </em><br />
 - <a style="color: #729e1b" href="https://github.com/Und3rf10w/kali-anonsurf">Anonsurf</a> - Added to Anonymise your system while running recon or OSINT tasks
  </p>
@@ -57,7 +60,7 @@ Most modules are explained along with demos of a lot of the tools
 
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8.8.zip"><strong>here</strong></a></em>
+<em>The latest release [Pearl] can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v9.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -126,6 +129,9 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/depthsecurity/armory">Armory</a><br />
 - <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
 - <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>
+- <a href="https://github.com/FooBallZ/pulsar">Pulsar</a><br />
+- <a href="https://github.com/projectdiscovery/subfinder">SubFinder</a><br />  
+</p>
 
 
 <strong>#MicroSoft Exploitation</strong>
@@ -209,6 +215,12 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/zdresearch/OWASP-Nettacker">OWASP-Nettacker</a>
 
 
+<strong>#Router Tools</strong>
+- <a href="https://github.com/threat9/routersploit">RouterSploit</a><br />
+- <a href="https://github.com/s1l3nt78/MkCheck">MkCheck</a><br />
+- <a href="https://github.com/v1s1t0r1sh3r3/airgeddon">Airgeddon</a><br />
+
+
 <strong>#WebApplication Scanners</strong>
 - <a href="https://github.com/shenril/Sitadel">Sitadel</a><br />
 - <a href="https://github.com/nyxgeek/onedrive_user_enum">OneFind</a><br />
@@ -246,14 +258,15 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	$ sifter 	-d Opens the Domain Focused Modules
 	$ sifter 	-n Opens the Network Mapping Modules menu
 	$ sifter 	-w Opens the Website Focused Modules
+	$ sifter	-q Opens Router Focused Tools
 	$ sifter 	-b Opens the Web-App Focused Module menu
 	$ sifter 	-v Opens the Vulnerability Scanning Module Menu
-    	$ sifter 	-m Opens the Module Menu directly
-    	$ sifter 	-p opens the password tools for quick passlist generation or hash decryption
+    $ sifter 	-m Opens the Module Menu directly
+    $ sifter 	-p opens the password tools for quick passlist generation or hash decryption
 	$ sifter 	-r opens the results folder for viewing of files or photos
-    	$ sifter 	-u Checks for any updates on Github
-    	$ sifter 	--stealth Starts sifter in Anonymous mode
-    	$ sifter 	-z Opens the Module Information Menu
+    $ sifter 	-u Checks for any updates on Github
+    $ sifter 	--stealth Starts sifter in Anonymous mode
+    $ sifter 	-z Opens the Module Information Menu
 	$ sifter 	-h This Help Menu
 	
 # Other Projects
