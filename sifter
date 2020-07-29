@@ -378,7 +378,7 @@ post_ex(){
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
     PS3='What tool would you like to use?'
-        options=("EoP Exploit" "BadPotato" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "ACLight2" "PowerHUB" "Back")
+        options=("EoP Exploit" "Potatoes" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "ACLight2" "PowerHUB" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -387,11 +387,11 @@ post_ex(){
                     ./modules/postex/EoP.sh
                     ;;
 
-                "BadPotato")
+                "Potatoes")
                     echo -e "${YLW}This will copy an ${LP}exe${YLW} file to your Desktop to be used on an exploited target session\nWould you like to continue?(y/n)${NC}"
                     read BP
                     if [[ ${BP} == "y" ]]; then
-                        ./modules/postex/badpotato.sh
+                        ./modules/postex/potatoes.sh
                     else
                         post_ex
                     fi
