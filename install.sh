@@ -1401,6 +1401,16 @@ t63(){
 		sudo git clone https://github.com/yogeshojha/rengine
 		cd rengine
 		sudo docker-compose up --build
+		echo -e "${W}You will now need to give a username and password for reNgine web login${NC}"
+		sleep 5
+		sudo docker exec -it rengine_web_1 python manage.py createsuperuser
+		echo -e "${YLW}Please enter your username and password to be saved in ${RED}/opt/rengine/login.creds${NC}"
+		echo -e "${RED}User: ${NC}"
+		read USER
+		echo -e "${RED}Pass: ${NC}"
+		read PASS
+		sudo echo ${USER} >> login.creds
+		sudo echo ${PASS} >> login.creds
 fi
 }
 ############################################################################################################
