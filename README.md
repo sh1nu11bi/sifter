@@ -35,7 +35,6 @@
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
-- <a style="color: #729e1b" href="#">UFONet</a> - P2P and cryptographic -disruptive toolkit- that allows to perform DoS and DDoS attacks<br />
 - <a style="color: #729e1b" href="#">SubFinder</a> - Sub-Directory enumeration tool<br />
 - <a style="color: #729e1b" href="#">reNgine</a> - Automated reconnaissance framework for gathering information web applications.<br />
 - <a style="color: #729e1b" href="#">Pulsar</a> - Automated network footprint scanner for Red Teams, Pentesters and Bounty Hunters.<br />
@@ -61,7 +60,7 @@ Most modules are explained along with demos of a lot of the tools
 
 # Releases
 <br>
-<em>The latest release can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v8.8.zip"><strong>here</strong></a></em>
+<em>The latest release [Pearl] can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v9.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
