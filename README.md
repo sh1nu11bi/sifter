@@ -30,7 +30,7 @@
 
 # Additions:
 
-- <a style="color: #729e1b" href="#">Potatoes</a> - Used for Privilege elevation on a low level session on a target machine<br />
+- <a style="color: #729e1b" href="#">Potatoes</a> - Used for Privilege elevation in a low level session on a target machine<br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">BadPotato</a><br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">SweetPotato</a><br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates multiple tools & data analysis sources, making data easy to navigate from an HTTP panel.<br />
