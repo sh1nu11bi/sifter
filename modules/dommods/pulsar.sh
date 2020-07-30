@@ -11,7 +11,12 @@ cd /opt/pulsar
 echo -e "${RED}"
 figlet -f mini "Pulsar"
 echo -e "${NC}"
-echo -e "${URED}NOTE:${ORNG} If this is the first time running pulsar\nPlease ensure to save the follow login credentials for Pulsar WebUI${NC}"
+if [[ -f '/opt/pulsar/web.env' ]]; then
+    echo -e "${URED}"
+    echo -e "Your login credentials are:"
+    cat /opt/pulsar/web.env
+    echo -e "${NC}"
+fi
 sleep 10
 sudo ./install.sh
 sleep 10 
