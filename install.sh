@@ -1400,6 +1400,9 @@ t63(){
 		cd /opt
 		sudo git clone https://github.com/yogeshojha/rengine
 		cd rengine
+		OUT='3.8'
+		IN='3.3'
+		sudo sed -i "s/${OUT}/${IN}/g" docker-compose.yml
 		sudo docker-compose up --build
 		echo -e "${W}You will now need to give a username and password for reNgine web login${NC}"
 		sleep 5
