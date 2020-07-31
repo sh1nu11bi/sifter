@@ -30,9 +30,12 @@
 
 # Additions:
 
-- <a style="color: #729e1b" href="#">Potatoes</a> - Used for Privilege elevation in a low level session on a target machine<br />
+- <a style="color: #729e1b" href="#">Potatoes 'n PEAS</a> - Used for Privilege elevation in a low level session on a target machine<br />
+- <a style="color: #729e1b" href="#">Potatoes</a><br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">BadPotato</a><br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">SweetPotato</a><br />
+- <a style="color: #729e1b" href="#">PEAS</a><br />
+&emsp;&ensp;- <a style="color: #729e1b" href="#">winPEAS</a><br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates multiple tools & data analysis sources, making data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
@@ -62,7 +65,7 @@ Most modules are explained along with demos of a lot of the tools
 
 # Releases
 <br>
-<em>The latest release <strong>[Pearl]</strong> can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v9.01.zip"><strong>here</strong></a></em>
+<em>The latest release <strong>[Pearl]</strong> can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v9.1.zip"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -160,8 +163,11 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 <strong>#Post-Exploitation</strong>
 - <a href="https://github.com/padovah4ck/CVE-2020-0683">EoP Exploit (Privilege Escalation Exploit)</a><br />
-- <a href="https://github.com/BeichenDream/BadPotato">BadPotato</a><br />
-- <a href="https://github.com/CCob/SweetPotato">SweetPotato</a><br />
+- <a href="#">Potatoes<br />
+&emsp;&emsp;-- <a href="https://github.com/BeichenDream/BadPotato">BadPotato</a><br />
+&emsp;&emsp;-- <a href="https://github.com/CCob/SweetPotato">SweetPotato</a><br />
+- <a href="#">PEAS<br />
+&emsp;&emsp;-- <a href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite">winPEAS</a><br />
 - <a href="https://github.com/entynetproject/omega">Omega</a><br />
 - <a href="https://github.com/S3cur3Th1sSh1t/WinPwn">WinPwn</a><br />
 - <a href="https://github.com/Technowlogy-Pushpender/creds_harvester">CredHarvester</a><br />
