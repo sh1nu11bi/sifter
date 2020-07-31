@@ -10,7 +10,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Pearl-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-9-red">
+	<img align="center" src="https://img.shields.io/badge/Version-9.1-red">
 </p>
 
 # *Sifter*
