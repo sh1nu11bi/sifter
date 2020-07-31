@@ -48,6 +48,10 @@
 - <a style="color: #729e1b" href="https://github.com/Und3rf10w/kali-anonsurf">Anonsurf</a> - Added to Anonymise your system while running recon or OSINT tasks
  </p>
 
+# Removed
+
+- Omega's repo has been removed, thereefore unavailable for new clones.
+ If you already had omega installed, you will still be able to use this module though.
 
 # Overview
 
