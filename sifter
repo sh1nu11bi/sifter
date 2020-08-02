@@ -42,7 +42,7 @@ usage() {                                    	  # Function: Print a help message
     echo -e "${RED}# ${ORNG}sifter ${YLW}-p${NC} opens the password tools for quick passlist generation or hash decryption"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-r${NC} opens the results folder for viewing of files or photos"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-u${NC} Checks for any updates on Github"
-    echo -e "${RED}# ${ORNG}sifter ${LGRY}--stealth${NC} Starts sifter in ${LP}Anonymous${NC} mode"
+    echo -e "${RED}# ${ORNG}sifter ${BIGreen}--stealth${NC} Starts sifter in ${LP}Anonymous${NC} mode"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-z${NC} Opens the Module Information Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-h${NC} This Help Menu" 1>&2
 }
@@ -1013,7 +1013,7 @@ modules(){
     echo -e "${URED}"
     figlet -f mini "Modules"
     echo -e "${NC}"
-    echo -e "${RED}Anonymous: ${ORNG}${STATUS}${NC}"
+    echo -e "${RED}Anonymous: ${BIYellow}${STATUS}${NC}"
     echo -e "${YLW}"
     PS3='What would you like to do?'
             options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "WebAppplication Scanners" "Password Tools" "View Results" "Info" "Anonymization" "Pass Time" "Main Menu" "Quit")
@@ -1256,7 +1256,7 @@ while getopts "a:bndwirmepcvquhz" options
             figlet -f mini "Checking for live targets..."
             echo -e "${NC}"
             check_hosts
-                    modules
+            modules
             ;;
 
         a)
@@ -1373,14 +1373,14 @@ while getopts "a:bndwirmepcvquhz" options
             modules
             ;;
 
-    *)
-        echo -e "${RED}Wrong Option Parsed\nRedirecting to Main Menu${NC}"
-        menu
-        ;;
+        *)
+            echo -e "${RED}Wrong Option Parsed\nRedirecting to Main Menu${NC}"
+            menu
+            ;;
     esac
 done
-if [[ $OPTIND == 1 ]]; then				# if no option is passed
-	menu		  	                    # default command is run
+if [[ ${OPTIND} == 1 ]]; then				# if no option is passed
+	menu		  	                        # default command is run
 fi
 exit
 
