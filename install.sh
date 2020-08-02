@@ -1378,9 +1378,15 @@ t62(){
 		echo -e "${NC}"
 		cd /opt/pulsar
 		sudo git fetch && sudo git pull &>/dev/null
+		if [[ -f '/opt/sifter/extras/.pulsar.Dockerfile' ]]; then
+			sudo mv /opt/sifter/extras/.pulsar.Dockerfile /opt/pulsar/Dockerfile
+		fi
 	else
 		cd /opt
 		sudo git clone https://github.com/FooBallZ/pulsar
+		if [[ -f '/opt/sifter/extras/.pulsar.Dockerfile' ]]; then
+			sudo mv /opt/sifter/extras/.pulsar.Dockerfile /opt/pulsar/Dockerfile
+		fi
 	fi
 }
 
