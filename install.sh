@@ -1431,7 +1431,9 @@ fi
 tm(){
 	# Omega
 	if [[ ! -d '/opt/omega' ]]; then																		# Check For Omega Directory & If it doesn't exist
-		sudo rm /opt/sifter/modules/postex/omega.sh															# Remove Omega script from Module Directory
+		if [[ -f '/opt/sifter/modules/postex/omega.sh' ]]; then
+			sudo rm /opt/sifter/modules/postex/omega.sh															# Remove Omega script from Module Directory
+		fi
 	fi
 	OMOUT='\"Omega\" '
 	OMIN=''
