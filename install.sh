@@ -1418,6 +1418,27 @@ t63(){
 		#sudo echo ${PASS} >> login.creds
 fi
 }
+
+############
+# M # MISC #
+############
+tm(){
+	# Omega
+	if [[ ! -d '/opt/omega' ]]; then																		# Check For Omega Directory & If it doesn't exist
+		sudo rm /opt/sifter/modules/postex/omega.sh															# Remove Omega script from Module Directory
+	fi
+	OMOUT='\"Omega\" '
+	OMIN=''
+	sudo sed -i "s/${OMOUT}/${OMIN}/g" /opt/sifter/sifter													# Remove Omega option from sifter script
+
+	# FuzzyDander 
+	if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then												# Check for FuzzyDander script
+		FDOUT='\"FuzzyDander\" '
+		FDIN=''
+		sudo sed -i "s/${FDOUT}/${FDIN}/g" /opt/sifter/sifter												# Removes FuzzyDander option if script not found
+	fi
+}
+
 ############################################################################################################
 #										######################## 										   #
 #										#  Tool Setup Runtime  #										   #
@@ -1486,6 +1507,8 @@ t60										# Anonsurf
 t61										# SubFinder
 t62										# Pulsar
 t63										# reNgine
+
+tm										# Miscellaneous
 
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
