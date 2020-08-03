@@ -126,6 +126,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <h2>Menu:</h2>
 <p>
 <img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
+	<br />
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/anon.PNG">
 </p>
 
 # Modules:
