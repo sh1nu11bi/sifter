@@ -22,11 +22,14 @@
 <br>
 <br>
 
+---------------------------------------------------------------------------------------------------------------------
+
 # Release
 
 	@Codename: Pearl
 	@Version : 9.1
 
+---------------------------------------------------------------------------------------------------------------------
 
 # Additions:
 
@@ -48,10 +51,14 @@
 - <a style="color: #729e1b" href="https://github.com/Und3rf10w/kali-anonsurf">Anonsurf</a> - Added to Anonymise your system while running recon or OSINT tasks
  </p>
 
+---------------------------------------------------------------------------------------------------------------------
+
 # Removed
 
 - Omega's repo has been removed, thereefore unavailable for new clones.
  If you already had omega installed, you will still be able to use this module though.
+
+---------------------------------------------------------------------------------------------------------------------
 
 # Overview
 
@@ -67,6 +74,8 @@ Gathered info is saved to the results folder, these output files can be easily p
 Most modules are explained along with demos of a lot of the tools
 <br>
 
+---------------------------------------------------------------------------------------------------------------------
+
 # Releases
 <br>
 <em>The latest release <strong>[Pearl]</strong> can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v9.1.zip"><strong>here</strong></a></em>
@@ -74,6 +83,8 @@ Most modules are explained along with demos of a lot of the tools
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
 <br>
+
+---------------------------------------------------------------------------------------------------------------------
 
 # Tested OS
 
@@ -88,12 +99,15 @@ nMap doesn't work on windows, due to port issues<br />
 but Zenmap (nMap GUI) can be used instead. A few other issues may arise too.<br />
 Untested on mac, though theoretically the same should apply to mac as windows - regarding docker install & tools
 
+---------------------------------------------------------------------------------------------------------------------
+
 # NOTE!! 
 
  If a scan does not work correctly at first, remove web-protocol from target.
  <br>
  eg. target.com - instead of http://target.com
 
+---------------------------------------------------------------------------------------------------------------------
 
 # Installation:
 
@@ -108,6 +122,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	*
 	$ git clone https://github.com/s1l3nt78/sifter.git && cd sifter && bash install.sh
 
+---------------------------------------------------------------------------------------------------------------------
 
 <h2>Menu:</h2>
 <p>
@@ -260,6 +275,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 &ensp;during the more time intensive modules.<br />
 &ensp;Such as nMap Full Port scan or a RapidScan run.
 
+---------------------------------------------------------------------------------------------------------------------
 
 # Sifter Help Menu
 
@@ -281,7 +297,9 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
     	$ sifter 	--stealth Starts sifter in Anonymous mode
     	$ sifter 	-z Opens the Module Information Menu
 	$ sifter 	-h This Help Menu
-	
+
+---------------------------------------------------------------------------------------------------------------------
+
 # Other Projects
 <br />
 All information on projects in development can be found <a href="https://s1l3nt78.github.io">here</a>. 
@@ -301,3 +319,5 @@ For ideas or collaboration requests on future projects., contact details can be 
 <br />
 
 	  <!--#############           VGhlIERlYWQgQnVubnkgQ2x1Yg==           #############--!>
+	  
+ ---------------------------------------------------------------------------------------------------------------------
