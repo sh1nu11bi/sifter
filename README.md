@@ -290,12 +290,12 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	$ sifter	-q Opens Router Focused Tools
 	$ sifter 	-b Opens the Web-App Focused Module menu
 	$ sifter 	-v Opens the Vulnerability Scanning Module Menu
-    	$ sifter 	-m Opens the Module Menu directly
-    	$ sifter 	-p opens the password tools for quick passlist generation or hash decryption
+    $ sifter 	-m Opens the Module Menu directly
+    $ sifter 	-p opens the password tools for quick passlist generation or hash decryption
 	$ sifter 	-r opens the results folder for viewing of files or photos
-    	$ sifter 	-u Checks for any updates on Github
-    	$ sifter 	--stealth Starts sifter in Anonymous mode
-    	$ sifter 	-z Opens the Module Information Menu
+    $ sifter 	-u Checks for any updates on Github
+    $ sifter 	--stealth Starts sifter in Anonymous mode
+    $ sifter 	-z Opens the Module Information Menu
 	$ sifter 	-h This Help Menu
 
 ---------------------------------------------------------------------------------------------------------------------
