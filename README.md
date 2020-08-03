@@ -31,10 +31,10 @@
 # Additions:
 
 - <a style="color: #729e1b" href="#">Potatoes 'n PEAS</a> - Used for Privilege elevation in a low level session on a target machine<br />
-- <a style="color: #729e1b" href="#">Potatoes</a><br />
+- Potatoes <br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">BadPotato</a><br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">SweetPotato</a><br />
-- <a style="color: #729e1b" href="#">PEAS</a><br />
+- PEAS <br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">winPEAS</a><br />
 - <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates multiple tools & data analysis sources, making data easy to navigate from an HTTP panel.<br />
 - <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
