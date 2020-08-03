@@ -284,7 +284,7 @@ exmodinfo(){
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("MkCheck" "BruteDUM" "ActiveReign" "NekoBot" "xShock" "VulnX" "WBruter" "Back")
+        options=("MkCheck" "BruteDUM" "ActiveReign" "NekoBot" "xShock" "VulnX" "WBruter" "Thoron" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -316,6 +316,10 @@ exmodinfo(){
                             ${COM} /opt/sifter/info/wbruter.info &>/dev/null
                             ;;
                     
+                    "Thoron")
+                            ${COM} /opt/sifter/info/thoron.info
+                            ;;
+
                     "Back")
                             cd /opt/sifter
                             ./sifter -m

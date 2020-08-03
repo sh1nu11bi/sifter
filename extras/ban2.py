@@ -15,6 +15,6 @@ def showbanner():
   ______  /  ___/|   |  |   _(__  < /    \   __\  /    />      <   ______
  /_____/  \___ \ |   |  |__/       \   |  \  |   /    //   --   \ /_____/
          /____  >|___|____/______  /___|  /__|  /____/ \______  /
-              \/       ''' + WHITE + "Pearl" + CEND + " " + CVIOLET + '''    \/     \/        ''' + UGREEN + "Ver:" + CBLUE + "9.1" + CEND + CVIOLET + '''     \/    ''' + CEND)
+              \/       ''' + WHITE + "Pearl" + CEND + " " + CVIOLET + '''    \/     \/        ''' + UGREEN + "Ver:" + CBLUE + "9.2" + CEND + CVIOLET + '''     \/    ''' + CEND)
 
 showbanner()

@@ -1425,6 +1425,27 @@ t63(){
 fi
 }
 
+###############
+# 64 # Thoron #
+###############
+t64(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Thoron ${NC}"
+	if [[ -d '/opt/thoron' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Thoron is already installed"
+		echo -e "${NC}"
+		cd /opt/thoron
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/entynetproject/thoron.git
+		sudo chmod +x install.sh
+		sudo ./install.sh
+	fi
+}
+
+#######################################################################################################################################
 ############
 # M # MISC #
 ############
@@ -1446,6 +1467,8 @@ tm(){
 		sudo sed -i "s/${FDOUT}/${FDIN}/g" /opt/sifter/sifter												# Removes FuzzyDander option if script not found
 	fi
 }
+
+
 
 ############################################################################################################
 #										######################## 										   #
@@ -1515,9 +1538,10 @@ t60										# Anonsurf
 t61										# SubFinder
 t62										# Pulsar
 t63										# reNgine
-
+t64										# Thoron
+#########################################
 tm										# Miscellaneous
-
+#########################################
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
 ########################################################

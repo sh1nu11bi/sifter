@@ -10,7 +10,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Pearl-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-9.1-red">
+	<img align="center" src="https://img.shields.io/badge/Version-9.2-red">
 </p>
 
 # *Sifter*
@@ -27,7 +27,7 @@
 # Release
 
 	@Codename: Pearl
-	@Version : 9.1
+	@Version : 9.2
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -39,8 +39,7 @@
 &emsp;&ensp;- <a style="color: #729e1b" href="#">SweetPotato</a><br />
 - PEAS <br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">winPEAS</a><br />
-- <a style="color: #729e1b" href="#">Spiderfoot</a> - Integrates multiple tools & data analysis sources, making data easy to navigate from an HTTP panel.<br />
-- <a style="color: #729e1b" href="#">Intrigue-Core</a> - Automation & orchestration framework geared towards data collection & Attack Surface Mapping<br />
+- <a style="color: #729e1b" href="#">Thoron</a> - Thoron Framework is a Linux post-exploitation framework<br />
 - <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
 - <a style="color: #729e1b" href="#">SubFinder</a> - Sub-Directory enumeration tool<br />
@@ -205,6 +204,9 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 + <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
 &emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
 &emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
+
++ <a href="https://github.com/entynetproject/thoron">Thoron</a><br />
++ <a href="https://metasploit.com">Metasploit</a><br />
 
 <strong>#Phishing</strong>
 + <a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a><br />
