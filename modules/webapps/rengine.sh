@@ -14,7 +14,7 @@ echo "   ================================"
 xterm -e sudo make up & 
 echo -e "${YLW}When firefox opens reNgine may not be finished building\nJust wait until the reNgine build in xterm has finished then reload firefox${NC}"
 sleep 420
-xterm -e firefox https://127.0.0.1:7443 &
+xterm -e firefox https://127.0.0.1:443 &
 sleep 30
 echo "   ================================"
 cd /opt/sifter
