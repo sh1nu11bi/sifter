@@ -13,22 +13,22 @@ jobs:
     steps:
       #- restore_cache:
       #    key: deps1-{{ .Branch }}-{{ checksum "/opt/sifter/install.sh" }}
-      - run: 
+      - run:
           name: Install & Sign Kali Repos
           command: |
             sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list"
             sudo apt install gnupg                                                                                    # Install Kali Repo list
             wget 'https://archive.kali.org/archive-key.asc'                                                           # Aquire Kali Repo Key Signature
             sudo apt-key add archive-key.asc                                                                          # Add Kali Signing Key to Machine Image 
-    
-    
-      - run: 
+
+   
+      - run:
           name: Remove Unnecessary Repos
-          command: | 
+          command: |
             sudo rm /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/heroku.list                    # Remove Faulty Repo lists (breaking CircleCI Build)
-  
-  
-      - run: 
+ 
+ 
+      - run:
           name: Apt Repository List Update
           command: sudo apt update                                                                                          # Check Repo Status
      
