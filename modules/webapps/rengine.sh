@@ -8,7 +8,7 @@ LBBLUE='\e[104m'
 
 cd /opt/rengine
 echo -e "${RED}"
-figlet -f mini "   reNgine"
+figlet -f mini "       reNgine"
 echo -e "${NC}"
 echo "   ================================"
 xterm -e sudo make up & 
