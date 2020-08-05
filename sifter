@@ -1410,7 +1410,7 @@ while getopts "a:bndwirmepcvquhz" options
             ;;
 
         *)
-            echo -e "${RED}Wrong Option Parsed\nRedirecting to Main Menu${NC}"
+            echo -e "${RED}No Valid Option Parsed\nRedirecting to Main Menu${NC}"
             menu
             ;;
     esac
