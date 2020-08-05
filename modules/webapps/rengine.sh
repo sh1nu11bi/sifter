@@ -11,7 +11,7 @@ echo -e "${RED}"
 figlet -f mini "   reNgine"
 echo -e "${NC}"
 echo "   ================================"
-xterm -e sudo make up
+xterm -e sudo make up &
 sleep 30
 echo "   ================================"
 cd /opt/sifter
