@@ -1539,9 +1539,9 @@ t61										# SubFinder
 t62										# Pulsar
 t63										# reNgine
 t64										# Thoron
-#########################################
+#########################################---------------
 tm										# Miscellaneous
-#########################################
+#########################################---------------
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
 ########################################################
@@ -1560,7 +1560,7 @@ echo ""
 echo -e "${W}Please edit ${LP}API keys ${W}in ${UBLUE}/opt/AttackSurfaceMapper/keylist.asm${NC} ${W}for a better range of scan results &"
 echo -e "for better results in WPScan goto ${UBLUE}modules/wpscan.sh${NC} ${W}and add"
 echo -e " '${UBLUE}--api-token ${URED}your-wpscan-api-token${UBLUE}${NC}${W}' argument to both commands"
-echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${W}'${NC}"
+echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${NC}${W}'${NC}"
 echo ""
 ######################################################################################################
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==               ######################
