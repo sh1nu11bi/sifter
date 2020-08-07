@@ -1276,7 +1276,7 @@ update(){
             sudo chmod +x install.sh
             bash install.sh
         fi
-        sudo cp /opt/sifter -t /usr/sbin
+        sudo cp /opt/sifter/sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter
         chmod +x /opt/sifter --recursive
