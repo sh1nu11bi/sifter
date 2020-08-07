@@ -80,7 +80,5 @@ sleep 10
 xterm -e firefox http://127.0.0.1:5000 &
 sleep 2
 reset
-cd /opt/sifter
-./sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

@@ -94,8 +94,7 @@ echo -e "${W}Stealth		: ${RED} $STLTH1 ${NC}"
 echo -e "${W}Debug		: ${RED} ${DE} ${NC}"
 echo "Please wait...."
 sudo ./venv/bin/python3 asm.py -t ${TARGET} -ln -w ${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH} ${BUG} -v
-cd /opt/sifter
-sifter -m
+sleep 6
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

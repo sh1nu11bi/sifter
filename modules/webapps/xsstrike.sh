@@ -156,7 +156,5 @@ echo "Please wait...."
 sudo python3 xsstrike.py -u ${TARGET} ${DATA} ${INJP} --crawl -l ${LVL} ${SFILE} ${PAY} ${FILE} --threads ${TNUM} --timeout ${TOUT} ${HEAD} ${FUZZ}
 
 sleep 5
-cd /opt/sifter
-./sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

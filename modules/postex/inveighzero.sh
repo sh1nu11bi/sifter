@@ -24,8 +24,7 @@ else
 fi
 ${COM} /opt/sifter/info/IZUsage.info
 sleep 3
-cd /opt/sifter
 python3 /opt/sfter/extras/ban.py
-./sifter -m
+
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

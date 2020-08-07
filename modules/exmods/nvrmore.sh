@@ -13,7 +13,5 @@ figlet -f mini "NevrrMore"
 echo -e "${NC}"
 sudo ./NevrrMore
 sleep 2
-cd /opt/sifter
-sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

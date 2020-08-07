@@ -71,13 +71,10 @@ wpscan(){
 					fi
 					echo "==================================================================================="
 					sleep 1
-					cd /opt/sifter
-					sifter -m
 					;;
 
 				"No")
-					cd /opt/sifter
-					sifter -m
+					exit
 					;;
 
 			esac
@@ -109,13 +106,11 @@ echo -e "${W}Which tool would you like to use?${NC}"
 					;;
 
 				"Back")
-					cd /opt/sifter
-					sifter -m
+					exit
 					;;
 			esac
 		done
-cd /opt/sifter
-./sifter -m
+
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

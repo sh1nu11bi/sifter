@@ -34,8 +34,7 @@ sleep 1
 echo "==================================================================================="
 xterm -e sudo rapidscan &
 echo -e "${W}When ready hit enter${NC}"
-cd /opt/sifter
-sifter -m
+read RNMD
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

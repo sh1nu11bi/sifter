@@ -28,7 +28,5 @@ echo -e "${RED}NOTE: ${ORNG}Send the ngrok link with /nearyou/ prepended at the 
 echo -e "${YLW}eg. ifwfhw9w8f.ngrok.io/nearyou/${NC}"
 echo -e "${W}===========================================================================${NC}"
 sleep 10
-cd /opt/sifter
-sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

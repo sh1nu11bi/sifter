@@ -33,7 +33,4 @@ if (( $OPTIND == 1 )); then	# if no option is passed
 	fi
 	echo -e "${ORNG}Done${NC}"
 fi
-cd /opt/sifter
-sifter -m
-
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

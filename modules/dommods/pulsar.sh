@@ -38,8 +38,7 @@ runtime(){
                     ;;
 
                 "Back")
-                    cd /opt/sifter
-                    ./sifter -d
+                    exit
                     ;;
 
             esac
@@ -57,14 +56,10 @@ else
     echo -e "${RED}NOTE: ${ORNG}This Module will take a while to configure and build the containers${NC}"
     echo -e "${LP}Would you like to continue? ${LP}(${YLW}y${LP}/${YLW}n${LP})${NC}"
     read CONT
-    if [[ ${CONT} == "n" ]]; then
-        cd /opt/sifter
-        ./sifter -d
-    else
+    if [[ ${CONT} == "y" ]]; then
         runtime
     fi
 fi
 echo "    =========================="
-cd /opt/sifter
-sifter -m
+
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

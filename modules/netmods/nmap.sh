@@ -28,11 +28,8 @@ multi() {
 						sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
 						echo -e "${NC}"
 						sleep 5
-						cd /opt/sifter
-						sifter -m
 					else
-						cd /opt/sifter
-						sifter -m
+						exit
 					fi
 					;;
 
@@ -41,8 +38,6 @@ multi() {
 					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
 					echo -e "${NC}"
 					sleep 5
-					cd /opt/sifter
-					sifter -m
 					;;
 
 				"UDP Port Scan")
@@ -50,8 +45,6 @@ multi() {
 					sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
 					echo -e "${NC}"
 					sleep 5
-					cd /opt/sifter
-					sifter -m
 					;;
 
 				"Back")
@@ -79,8 +72,6 @@ single() {
 						echo "================================================================================================="
 						sudo nmap -p- -Pn -O -A ${TARGET}
 						echo "================================================================================================="
-						cd /opt/sifter
-						sifter -m
 					else
 						./modules/netmods/nmap.sh
 					fi
@@ -95,8 +86,6 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -sS -Pn -O -A -sV ${TARGET}
 					echo "================================================================================================="
-					cd /opt/sifter
-					sifter -m
 					;;
 
 				"UDP Port Scan")
@@ -108,13 +97,10 @@ single() {
 					echo "================================================================================================="
 					sudo nmap -sU -Pn -O -A ${TARGET}
 					echo "================================================================================================="
-					cd /opt/sifter
-					sifter -m
 					;;
 
 				"Back")
-					cd /opt/sifter
-					sifter -m
+					exit
 					;;
 			esac
 		done
@@ -136,8 +122,7 @@ do
 			;;
 
 		"Back")
-			cd /opt/sifter
-			sifter -m
+			exit
 			;;
 	esac
 done

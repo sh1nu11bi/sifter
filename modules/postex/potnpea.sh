@@ -76,8 +76,6 @@ else
 	peas
 fi
 
-cd /opt/sifter
-sifter -m
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

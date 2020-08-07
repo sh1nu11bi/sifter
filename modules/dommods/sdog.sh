@@ -13,7 +13,6 @@ echo -e "${NC}"
 cd /opt/saydog-framework
 sudo chmod +x run
 sudo ./run
-cd /opt/sifter
-./sifter -m
+
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

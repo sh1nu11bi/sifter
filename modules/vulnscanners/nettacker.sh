@@ -15,7 +15,5 @@ sudo python3 nettacker.py -W
 sleep 2
 echo -e "${W}======================================================${NC}"
 sleep 2
-cd /opt/sifter
-sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

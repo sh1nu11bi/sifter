@@ -48,7 +48,5 @@ else
 	bfac ${URL}
 fi
 sleep 5
-cd /opt/sifter
-./sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

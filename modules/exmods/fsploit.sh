@@ -43,7 +43,7 @@ echo -e "*  findsploit payloads | grep windows"
 echo ""
 echo -e "${ORNG}==========================================================================${NC}"
   PS3='What would you like to do?'
-          options=("Find" "Copy" "Compile" "Back" "Quit")
+          options=("Find" "Copy" "Compile" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -74,13 +74,9 @@ echo -e "${ORNG}================================================================
                             ;;
 
                         "Back")
-                            cd /opt/sifter
-                            ./sifter -m
+                            exit
                             ;;
 
-                        "Quit")
-                            exit 0
-                            ;;
                   esac
           done
 echo -e "${NC}"

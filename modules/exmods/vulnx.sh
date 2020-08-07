@@ -58,7 +58,6 @@ else
 	echo -e "${INV}==========================================================================${NC}"
 	sudo python3 vulnx.py ${TARGET} ${GDORK} -t ${TOUT} -e -d -w -n ${PAGES} -p '${PORTS}' --threads ${THREADS} --dns -o /opt/vulnx/output/
 fi
-cd /opt/sifter
-sifter -m
+
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

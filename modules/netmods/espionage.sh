@@ -13,7 +13,7 @@ figlet -f mini "Espionage"
 echo -e "${NC}"
 echo -e "${W}Please enter the type of scan you'd like to do${NC}"
     echo -e "${ORNG}"
-    options=("Network Scan" "ArpSpoof Attack" "Back" "Quit")
+    options=("Network Scan" "ArpSpoof Attack" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -68,11 +68,6 @@ echo -e "${W}Please enter the type of scan you'd like to do${NC}"
                     ;;
 
                 "Back")
-                    cd /opt/sifter
-                    ./sifter -m
-                    ;;
-
-                "Quit")
                     exit
                     ;;
 

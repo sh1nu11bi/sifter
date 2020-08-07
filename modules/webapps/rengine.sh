@@ -26,7 +26,5 @@ sleep 420
 xterm -e firefox https://127.0.0.1:9443 && sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
 sleep 10
 echo "   ================================"
-cd /opt/sifter
-sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

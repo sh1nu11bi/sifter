@@ -13,7 +13,5 @@ figlet -f mini "BruteDUM"
 echo -e "${NC}"
 sudo python3 brutedum.py
 sleep 2
-cd /opt/sifter
-sifter -m
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

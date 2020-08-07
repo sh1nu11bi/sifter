@@ -13,7 +13,5 @@ figlet -f mini "xShock"
 echo -e "${NC}"
 sudo python3 main.py
 sleep 2
-cd /opt/sifter
-./sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

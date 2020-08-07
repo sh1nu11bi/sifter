@@ -40,7 +40,7 @@ exploit(){
 }
 
 PS3='Which module would you like to use?'
-    options=("Scanner" "Exploit" "Back" "Quit")
+    options=("Scanner" "Exploit" "Back")
     select opt in "${options[@]}"
         do
             case $opt in
@@ -53,12 +53,7 @@ PS3='Which module would you like to use?'
                     ;;
 
                 "Back")
-                    cd /opt/sifter
-                    ./sifter -e
-                    ;;
-
-                "Quit")
-                    exit 2
+                    exit
                     ;;
 
             esac
@@ -66,7 +61,6 @@ PS3='Which module would you like to use?'
     echo -e "${NC}"
 
 sleep 5
-cd /opt/sifter
-sifter -m
+
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

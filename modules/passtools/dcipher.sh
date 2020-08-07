@@ -26,7 +26,4 @@ echo -e "${RED}"
 figlet DCipheR
 echo -e "${NC}"
 cipher
-cd /opt/sifter
-./sifter -m
-
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

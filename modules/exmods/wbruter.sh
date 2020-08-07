@@ -14,7 +14,6 @@ echo -e "${NC}"
 xterm -e sudo bash wbruter
 sleep 30 
 echo -e "	============================================"
-cd /opt/sifter
-./sifter -m
+
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

@@ -52,8 +52,6 @@ echo ""
 echo -e "${W}When you are done please hit enter to go back to Module Menu"
 echo -e "Python HTTP Server will stay open on Port 8000 until xterm window is closed${NC}"
 read RANDOM
-cd /opt/sifter
-sifter -m
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

@@ -14,7 +14,5 @@ echo -e "${W}Please enter the command and args for zeus to run${NC}"
 echo -e "${YLW}eg. -t http://target.com -s --verbose${NC}"
 read ARGS
 sudo docker exec -i zeus ${ARGS}
-cd /opt/sifter
-sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

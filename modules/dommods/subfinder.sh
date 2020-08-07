@@ -56,7 +56,6 @@ sleep 2
 echo "    ============================="
 subfinder ${TARGET} ${CONFIG} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
 echo "    ============================="
-cd /opt/sifter
-./sifter -m
+sleep 2
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

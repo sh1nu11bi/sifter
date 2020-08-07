@@ -15,7 +15,5 @@ sudo python3 odin.py
 sleep 2
 echo -e "${W}======================================================${NC}"
 sleep 2
-cd /opt/sifter
-sifter -m
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

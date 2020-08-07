@@ -34,7 +34,5 @@ ${COM} /opt/sifter/info/ktf_com.md
 echo ""
 sleep 5
 sudo java -jar ktf.gui.jar
-cd /opt/sifter
-./sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

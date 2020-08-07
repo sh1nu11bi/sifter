@@ -26,7 +26,5 @@ else
 	sudo docker run -e LANG=C.UTF-8 ~/intrigue-core-data:/data -p 0.0.0.0:7777:7777 -it intrigue-core
 fi
 sleep 2
-cd /opt/sifter
-./sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

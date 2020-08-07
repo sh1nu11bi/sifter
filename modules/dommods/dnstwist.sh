@@ -43,7 +43,6 @@ sudo ./dnstwist.py --tld dictionaries/common_tlds.dict ${TARGET} > /opt/sifter/r
 echo -e "${W}"
 figlet -f mini "Done"
 echo -e "Results saved to /opt/sifter/results/DnsTwist/${TARGET}${NC}"
-cd /opt/sifter
-sifter -m
+sleep 10
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

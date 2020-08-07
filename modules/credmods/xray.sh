@@ -29,7 +29,6 @@ read TARGET
 sudo docker run --rm -it -p 8080:8080 txt3rob/xray-docker:latest xray -address 0.0.0.0 -shodan-key ${SHODAN-API} -domain ${TARGET}
 echo -e "${W}When done please press enter${NC}"
 read RANDOM
-cd /opt/sifter
-./sifter -m
+
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

@@ -35,7 +35,6 @@ sudo python3 CredNinja.py -a ${ACCOUNTS} -s ${SYSTEMS} -t ${THREADS} ${NTLM} -o 
 sudo chwon $USER:$USER ${OUTPUT}
 mv ${OUTPUT} -t /opt/sifter/results/CredNinja
 sleep 2
-cd /opt/sifter
-sifter -m
+
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

@@ -19,8 +19,7 @@ echo -e "${NC}"
 cd /opt/thoron
 thoron 
 
-cd /opt/sifter
-sifter -m
+sleep 5
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

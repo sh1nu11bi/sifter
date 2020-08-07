@@ -34,25 +34,6 @@ sleep 5
 echo -e "${RED}an xTerm window will pop-up with your password for Osmedeus Web UI, available at http://127.0.0.1:8000"
 xterm -e sudo docker exec -it osmedeus grep password /root/.osmedeus/client.conf
 sudo docker cp osmedeus:/root/.osmedeus/workspaces/* /opt/sifter/results/Osmedeus/${TARGET}|-
-#cd /opt/Osmedeus
-#echo -e "${W}Would you like to run Osmedeus against a single target or a target list?(s/l)${NC}"
-#read TANS
-#if [[ ${TANS} == 's' ]]; then
-#	echo -e "${W}Please enter your target${NC}"
-#	read TARG
-#	TARGET='-i ${TARG}'
-#else
-#	echo -e "${W}Please enter the full path/to/target_list.txt${NC}"
-#	read TARG
-#	TARGET='-I ${TARG}'
-#fi 
-#echo -e "${W}Please specify a username for Osmedeus Web UI${NC}"
-#read USERUI
-#echo -e "${W}Please enter the password for Osmedeus Web UI${NC}"
-#read PASSUI
-#sudo python3 osmedeus.py --report full ${TARGET} --slow "all" --auth="${USERUI}:${PASSUI}" -t /opt/sifter/results/Osmedeus
-sleep 2
-cd /opt/sifter
-./sifter -m
+
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

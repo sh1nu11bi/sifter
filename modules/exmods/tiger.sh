@@ -28,8 +28,7 @@ else
 		sleep 5
 		./tigershark
 	else
-		cd /opt/sifter
-		sifter -m 
+		exit
 	fi
 fi 
 

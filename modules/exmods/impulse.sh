@@ -39,7 +39,7 @@ read SECONDS
 echo -e "${W}How many threads would you like to run?${NC}"
 read THREADS 
 sudo python3 impulse.py --target ${TARGET} --method ${METHOD} --time ${SECONDS} --threads ${THREADS}
-cd /opt/sifter
-sifter -m
+sleep 5
+
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

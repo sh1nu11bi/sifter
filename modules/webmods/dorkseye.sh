@@ -12,7 +12,6 @@ figlet -f mini "DorksEye"
 echo -e "${NC}"
 cd /opt/dorks-eye
 sudo python3 dorks-eye.py
-cd /opt/sifter
-./sifter -m
+
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################s

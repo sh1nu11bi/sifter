@@ -62,8 +62,7 @@ do
             ;;
 
         "Back")
-            cd /opt/sifter
-            sifter -m
+            exit
             ;;
     esac
 done

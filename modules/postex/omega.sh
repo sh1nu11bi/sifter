@@ -17,7 +17,5 @@ echo -e "${RED}"
 figlet -f mini Omega
 echo -e "${NC}"
 omega
-cd /opt/sifter
-sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

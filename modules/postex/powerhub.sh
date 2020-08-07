@@ -23,7 +23,5 @@ xterm -e source /opt/PowerHub/env/bin/activate && ./powerhub.py ${IP} --auth ${U
 sleep 5
 xterm -e firefox https://${IP}:8080
 sleep 2
-cd /opt/sifter
-./sifter -m
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

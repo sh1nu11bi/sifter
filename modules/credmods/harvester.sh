@@ -41,7 +41,5 @@ if [[ ${ANS} == s ]]; then
 else
     multi_scan
 fi
-cd /opt/sifter
-sifter -m
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

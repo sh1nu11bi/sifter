@@ -22,8 +22,7 @@ echo "==========================================================================
 dirb http://${TARGET} -f -o /opt/sifter/results/Dirb/${TARGET}.txt
 echo -e "${RED}Results have been saved to /opt/sifter/results/Dirb/${NC}"
 echo "================================================================================================="
-cd /opt/sifter
-./sifter -m
+
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

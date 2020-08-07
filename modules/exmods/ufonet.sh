@@ -14,7 +14,6 @@ echo -e "${NC}"
 xterm -e sudo ufonet
 sleep 30 
 echo -e "	============================================"
-cd /opt/sifter
-./sifter -m
+sleep 5
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

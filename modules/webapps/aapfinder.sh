@@ -53,8 +53,7 @@ echo -e "${W}===================================================================
 sudo python3 aapfinder.py --targets targets.txt -d ${DELAY} ${THREAD} -t ${TYPE} -o /opt/sifter/results/AapFinder/${OUTPUT}.txt
 echo -e "${YLW}Results have been saved to /opt/sifter/results/AapFinder/${OUTPUT}.txt${NC}"
 echo -e "${W}===========================================================================${NC}"
-cd /opt/sifter
-sifter -m
+
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
