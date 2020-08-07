@@ -1266,11 +1266,21 @@ update(){
 	    fi
         mv modules/webmods/wordpress.orig modules/webmods/wordpress.sh
         mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
-
-        sudo chmod +x install.sh
-        bash install.sh
+        
+        ##########################
+        # Check For Full Upgrade #
+        ##########################
+        echo -e "${URED}Would you like to check for new tools or tool updates?(y/n)${NC}"
+        read -r FUP
+        if [[ ${FUP} == "y" ]]; then
+            sudo chmod +x install.sh
+            bash install.sh
+        fi
+        sudo cp /opt/sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
-        chmod +x /opt/sifter --recursive                                                            
+        sudo chown $USER:$USER /usr/sbin/sifter
+        chmod +x /opt/sifter --recursive
+        chmod +x /usr/sbin/sifter
     fi
 }
 
