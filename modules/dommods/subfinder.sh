@@ -54,7 +54,7 @@ else
 fi
 sleep 2
 echo "    ============================="
-subfinder ${TARGET} ${CONFIG} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
+subfinder -nW ${TARGET} ${CONFIG} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
 echo "    ============================="
 sleep 2
 
