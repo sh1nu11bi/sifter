@@ -24,15 +24,14 @@ figlet -f mini "SubFinder"
 echo -e "${NC}"
 check
 listing
-echo -e "${YLW}WOuld you like to run subfinder against a (s)ingle target or target (l)ist? (s/t)${NC}"
-read TARG
-if [[ ${TARG} == "s" ]]; then
+#echo -e "${YLW}WOuld you like to run subfinder against a (s)ingle target or target (l)ist? (s/t)${NC}"
+#read TARG
+#if [[ ${TARG} == "s" ]]; then
     echo -e "${W}Please enter your target${NC}"
-    read TARGE
-    TARGET="${TARGE}" 
-else
-    TARGET='/opt/sifter/files/pingtest.pass'
-fi
+    read TARGET 
+#else
+#    TARGET='/opt/sifter/files/pingtest.pass'
+#fi
 #echo -e "${YLW}To get the most out of subfinder, the config file (located at ${RED}/opt/subfinder/config.yaml${YLW})\nshould be used. You can take this time to edit it if so." 
 #echo -e "Would you like to use the subfinder config (f)ile or (d)efault options? ${W}(f/d)${NC}"
 #read CONF 
@@ -53,13 +52,8 @@ else
     SCAN=''
 fi
 sleep 2
-if [[ ${TAR} == "s" ]]; then
-    T='-d'
-else
-    T='-dL'
-fi
 echo "    ============================="
-sudo subfinder -nW ${T} ${TARGET} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
+sudo subfinder -nW -d ${TARGET} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
 echo "    ============================="
 sleep 2
 
