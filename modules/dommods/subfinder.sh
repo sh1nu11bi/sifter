@@ -59,7 +59,7 @@ else
     T='-dL'
 fi
 echo "    ============================="
-subfinder -nW ${T} ${TARGET} ${CONFIG} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
+sudo subfinder -nW ${T} ${TARGET} ${CONFIG} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
 echo "    ============================="
 sleep 2
 
