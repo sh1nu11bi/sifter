@@ -29,7 +29,7 @@ read TARG
 if [[ ${TARG} == "s" ]]; then
     echo -e "${W}Please enter your target${NC}"
     read TARGE
-    TARGET='${TARGE}' 
+    TARGET="${TARGE}" 
 else
     TARGET='/opt/sifter/files/pingtest.pass'
 fi
