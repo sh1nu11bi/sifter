@@ -57,6 +57,7 @@ if [[ ${TAR} == "s" ]]; then
     T='-d'
 else
     T='-dL'
+fi
 echo "    ============================="
 subfinder -nW ${T} ${TARGET} ${CONFIG} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
 echo "    ============================="
