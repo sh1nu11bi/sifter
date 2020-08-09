@@ -29,18 +29,18 @@ read TARG
 if [[ ${TARG} == "s" ]]; then
     echo -e "${W}Please enter your target${NC}"
     read TARGE
-    TARGET=${TARGE} 
+    TARGET='${TARGE}' 
 else
     TARGET='/opt/sifter/files/pingtest.pass'
 fi
-echo -e "${YLW}To get the most out of subfinder, the config file (located at ${RED}/opt/subfinder/config.yaml${YLW})\nshould be used. You can take this time to edit it if so." 
-echo -e "Would you like to use the subfinder config (f)ile or (d)efault options? ${W}(f/d)${NC}"
-read CONF 
-if [[ ${CONF} == "f" ]]; then
-    CONFIG='-config /opt/subfinder/config.yaml'
-else
-    CONFIG=''
-fi
+#echo -e "${YLW}To get the most out of subfinder, the config file (located at ${RED}/opt/subfinder/config.yaml${YLW})\nshould be used. You can take this time to edit it if so." 
+#echo -e "Would you like to use the subfinder config (f)ile or (d)efault options? ${W}(f/d)${NC}"
+#read CONF 
+#if [[ ${CONF} == "f" ]]; then
+#    CONFIG='-config /opt/subfinder/config.yaml'
+#else
+#    CONFIG=''
+#fi
 echo -e "${YLW}Please enter the name for your output file${NC}"
 read OUTF
 echo -e "${YLW}Would you like to enable (v)ebose output, (n)ormal output or scan (s)ilently?${W}(v/n/s)${NC})"
@@ -59,7 +59,7 @@ else
     T='-dL'
 fi
 echo "    ============================="
-sudo subfinder -nW ${T} ${TARGET} ${CONFIG} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
+sudo subfinder -nW ${T} ${TARGET} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
 echo "    ============================="
 sleep 2
 
