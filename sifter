@@ -1114,7 +1114,7 @@ modules(){
                                 echo -e "${W}Would you like to continue? (${YLW}y${W}/${YLW}n${W})"
                                 read PTOPT
                                 if [[ ${PTOPT} == 'y' ]]; then
-                                    firefox https://github.blog/2020-05-15-ludum-dare-46-staff-picks &
+                                    firefox https://github.blog/2020-08-06-gmtk-game-jam-2020-staff-picks-open-source-games/ &
                                 else
                                     modules
                                 fi
