@@ -9,6 +9,7 @@ LBBLUE='\e[104m'
 echo -e "${RED}"
 figlet -f mini ZeuS
 echo -e "${NC}"
+sudo docker start zeus
 sudo docker exec -i zeus python zeus.py
 echo -e "${W}Please enter the command and args for zeus to run${NC}"
 echo -e "${YLW}eg. -t http://target.com -s --verbose${NC}"
