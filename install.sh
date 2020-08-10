@@ -205,7 +205,7 @@ t7(){
 t8(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Yuki-Chan${NC}"
-	if [[ -d "/root/Yuki-Chan-The-Auto-Pentest" ]] || [[ -d "/root/yuki" ]]; then
+	if [[ -d "/root/yuki" ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "Yuki-Chan is already installed"
 		echo -e "${NC}"
