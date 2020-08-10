@@ -428,13 +428,13 @@ t17(){
 	if [[ -f '/opt/docker-osmedeus/.configured' ]]; then
 		echo -e "${UPURPLE}Osmedeus is already configured${NC}"
 	else
+		cd /opt/
+		sudo git clone https://github.com/mablanco/docker-osmedeus.git
 		echo -e "${RED}Osmedeus takes a while to install, you can run the install now or to save time it can be done during the first run"
 		echo -e "${W}If you are updating and osmedeus is already installed, please enter ${YLW}d${W} when prompted"
 		echo -e "${ORNG}Would you like to do it ${YLW}n${ORNG}ow or ${YLW}l${ORNG}ater?(${YLW}n${ORNG}/${YLW}l${ORNG}/${YLW}d${ORNG})${NC}"
 		read INOPT
 		if [[ ${INOPT} == "n" ]]; then
-			cd /opt/
-			sudo git clone https://github.com/mablanco/docker-osmedeus.git
 			cd docker-osmedeus
 			sudo docker build -t mablanco/osmedeus .
 			sudo echo "DONE" >> /opt/docker-osmedeus/.configured
@@ -442,6 +442,7 @@ t17(){
 			sudo echo "DONE" >> /opt/docker-osmedeus/.configured
 		else
 			echo -e "${W}Leaving Osmedeus install for first run${NC}"
+			echo "HOLD" >> /opt/docker-osmedeus/.configured
 		fi
 	fi
 }

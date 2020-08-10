@@ -7,22 +7,20 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
-if [[ -d '/opt/sifter/results/Osmedeus' ]]; then
-	sleep 2
-else
+cd /opt/docker-osmedeus
+if [[ ! -d '/opt/sifter/results/Osmedeus' ]]; then
 	mkdir /opt/sifter/results/Osmedeus
 fi
 echo -e "${RED}"
 figlet -f mini "OsmedeuS"
 echo -e "${NC}"
 if [[ -f '/opt/docker-osmedeus/.configured' ]]; then
-	sleep 1
-else
-	cd /opt/
-	sudo git clone https://github.com/mablanco/docker-osmedeus.git
-	cd docker-osmedeus
-	sudo docker build -t mablanco/osmedeus .
-	echo "DONE" | sudo tee /opt/docker-osmedeus/.configured
+	CHKHOLD=$(echo .configured)
+	if [[ ${CHKHOLD} == "HOLD" ]]; then
+		sudo docker build -t mablanco/osmedeus .
+		sudo rm .configured
+		sudo echo "DONE" >> /opt/docker-osmedeus/.configured
+	fi
 fi
 echo -e "${W}Please enter your target${NC}"
 read TARGET
