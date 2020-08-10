@@ -1157,9 +1157,6 @@ t52(){
 		echo -e "${ORNG}"
 		figlet -f mini "Optiva-Framework is already installed"
 		echo -e "${NC}"
-		#cd /opt/Optiva-Framework
-		#sudo git fetch && sudo git pull &>/dev/null
-		#sudo python -m pip install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/joker25000/Optiva-Framework
