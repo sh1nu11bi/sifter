@@ -371,9 +371,10 @@ t14(){
 		sudo git clone https://github.com/SecureAuthCorp/impacket
 		cd impacket
 		sudo python3 setup.py install
-		sudo pip3 install prompt-toolkit==2.0.9 impacket
+		sudo pip3 install prompt-toolkit==3.0.2 impacket
 		ar3 db help
 		sudo mkdir /home/$USER/.ar3
+		cd /opt/ActiveReign
 		sudo cp ar3/config.json -t /home/$USER/.ar3
 		sudo chown $USER:$USER /home/$USER/.ar3
 	fi
