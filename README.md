@@ -38,6 +38,7 @@
 &emsp;&ensp;- <a style="color: #729e1b" href="#">SweetPotato</a><br />
 - PEAS <br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">winPEAS</a><br />
+&emsp;&ensp;- <a style="color: #729e1b" href="#">linPEAS</a><br />
 - <a style="color: #729e1b" href="#">Thoron</a> - Thoron Framework is a Linux post-exploitation framework<br />
 - <a style="color: #729e1b" href="#">CVE-2020-5902-Scanner</a> - Big IP Remote Execution Scanner.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />

@@ -41,25 +41,38 @@ potatoes(){
 }
 peas(){
 	echo -e "${ORNG}winPEAS is a program that looks for privilege escalation paths you can exploit\nThe exe file requires .net 4 on the target, otherwise the bat script should be used"
-	echo -e "${YLW}Would you like to use the (e)xe or the (b)at script? (e/b)${NC}"
-	read WP
-	if [[ ${WP} == "e" ]]; then
-		cp modules/postex/PotnPea/winPEAS.exe -t /home/$USER/Desktop
-		echo ""
-		echo "============================================="
-		echo -e "${W}winPEAS.exe has been copied to your Desktop\nUpload it to target machine and execute using CMD or PowerShell${NC}"
-		echo "============================================="
-		echo ""
-		echo -e "${LP}When ready hit, ${LGRY} enter${NC}"
-		read RANDOM
+	echo -e "${W}Is your target (l)inux or (w)indows? (l/w)${NC}"
+	read WINORLIN
+	if [[ ${WINORLIN} == "w" ]]; then
+		echo -e "${YLW}Would you like to use the (e)xe or the (b)at script? (e/b)${NC}"
+		read WP
+		if [[ ${WP} == "e" ]]; then
+			cp modules/postex/PotnPea/winPEAS.exe -t /home/$USER/Desktop
+			echo ""
+			echo "============================================="
+			echo -e "${W}winPEAS.exe has been copied to your Desktop\nUpload it to target machine and execute using CMD or PowerShell${NC}"
+			echo "============================================="
+			echo ""
+			echo -e "${LP}When ready hit, ${LGRY} enter${NC}"
+			read RANDOM
+		else
+			cp modules/postex/PotnPea/winPEAS.bat -t /home/$USER/Desktop
+			echo ""
+			echo "============================================="
+			echo -e "${W}winPEAS.bat has been copied to your Desktop\nUpload it to target machine and execute using CMD or PowerShell${NC}"
+			echo "============================================="
+			echo ""
+			echo -e "${LP}When ready hit, ${LGRY} enter${NC}"
+			read RANDOM
+		fi
 	else
-		cp modules/postex/PotnPea/winPEAS.bat -t /home/$USER/Desktop
+		cp modules/postex/PotnPea/linPEAS.sh -t /home/$USER/Desktop
 		echo ""
 		echo "============================================="
-		echo -e "${W}winPEAS.bat has been copied to your Desktop\nUpload it to target machine and execute using CMD or PowerShell${NC}"
+		echo -e "${W}linPEAS.sh has been copied to your Desktop\nUpload it to target machine and execute using CMD or PowerShell${NC}"
 		echo "============================================="
 		echo ""
-		echo -e "${LP}When ready hit, ${LGRY} enter${NC}"
+		echo -e "${LP}When ready hit, ${LGRY}enter${NC}"
 		read RANDOM
 	fi
 }
