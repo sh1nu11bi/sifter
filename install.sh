@@ -212,10 +212,9 @@ t8(){
 		cd /root/yuki
 		sudo git fetch && sudo git pull &>/dev/null
 	else
-		cd /root
-		sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git
-		sudo mv Yuki-Chan-The-Auto-Pentest yuki
-		cd yuki
+		sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git /root/yuki
+		#sudo mv Yuki-Chan-The-Auto-Pentest yuki
+		cd /root/yuki
 		sudo pip2 install -r requirements.txt
 		sudo apt-get install python3-pip
 		sudo apt --fix-broken install -y
@@ -440,9 +439,9 @@ t17(){
 			sudo git clone https://github.com/mablanco/docker-osmedeus.git
 			cd docker-osmedeus
 			sudo docker build -t mablanco/osmedeus .
-			echo "DONE" | sudo tee /opt/docker-osmedeus/.configured
+			sudo echo "DONE" >> /opt/docker-osmedeus/.configured
 		elif [[ ${INOPT} == "d" ]]; then
-			echo "DONE" | sudo tee /opt/docker-osmedeus/.configured
+			sudo echo "DONE" >> /opt/docker-osmedeus/.configured
 		else
 			echo -e "${W}Leaving Osmedeus install for first run${NC}"
 		fi
