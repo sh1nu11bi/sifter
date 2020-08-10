@@ -1440,8 +1440,29 @@ t64(){
 	else
 		cd /opt
 		sudo git clone https://github.com/entynetproject/thoron.git
+		cd thoron
 		sudo chmod +x install.sh
 		sudo ./install.sh
+	fi
+}
+
+###################
+# 65 # Big IP REC #
+###################
+t65(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for F5 Big IP Remote Code Execution ${NC}"
+	if [[ -d '/opt/CVE-2020-5902-Scanner' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Big IP Scanner is already installed"
+		echo -e "${NC}"
+		cd /opt/CVE-2020-5902-Scanner
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/Technowlogy-Pushpender/CVE-2020-5902-Scanner.git
+		cd CVE-2020-5902-Scanner
+		sudo python3 -m pip install requests	
 	fi
 }
 
@@ -1566,6 +1587,6 @@ echo ""
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==               ######################
 ######################################################################################################
 echo -e "${YLW}#################"                                                    ########################
-echo -e "${ORNG}# Version :${LP} 9.2 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
+echo -e "${ORNG}# Version :${LP} 9.3 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
 #echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                        ##    UPDATE CHECK    ##
 echo -e "${YLW}#################${NC}"                                               ########################
