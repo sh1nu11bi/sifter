@@ -296,7 +296,7 @@ vuln_mods(){
   figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Nettacker" "Back")
+          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Nettacker" "F5 Big IP RCE" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -318,6 +318,10 @@ vuln_mods(){
 
                             "Nettacker")
                                 ./modules/vulnscanners/nettacker.sh
+                                ;;
+
+                            "F5 Big IP RCE")
+                                ./modules/vulnscanners/bip.sh
                                 ;;
 
                             "Back")
@@ -388,7 +392,7 @@ post_ex(){
                     ;;
 
                 "Potatoes 'n PEAS")
-                    echo -e "${YLW}This will copy an ${LP}exe${YLW} file to your Desktop to be used on an exploited target session\nWould you like to continue?(y/n)${NC}"
+                    echo -e "${YLW}This will copy a file to your Desktop to be used on an exploited target session\nWould you like to continue?(y/n)${NC}"
                     read BP
                     if [[ ${BP} == "y" ]]; then
                         ./modules/postex/potnpea.sh
@@ -779,7 +783,7 @@ webex(){
                         ./modules/exmods/vulnx.sh
                         ;;
 
-		    "Back")
+		            "Back")
                         modules
                         ;;
                 esac
@@ -1143,9 +1147,7 @@ modules(){
 }
 # Menu
 menu(){
-     if [[ -d "/opt/sifter/results" ]]; then
-        sleep 1
-    else
+    if [[ ! -d "/opt/sifter/results" ]]; then
         mkdir /opt/sifter/results
     fi
     echo -e "${INV}${LGRY}"
@@ -1234,7 +1236,7 @@ update(){
     echo -e "${NC}"
    
     echo -e "${YLW}#################${NC}"                                                ########################
-    echo -e "${ORNG}# Version : ${LP}9.2 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
+    echo -e "${ORNG}# Version : ${LP}9.3 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
     #echo -e "${ORNG}# Revision: ${LP}2   ${ORNG}#"                                       ##    UPDATE CHECK    ##
     echo -e "${YLW}#################${NC}"                                                ########################
 

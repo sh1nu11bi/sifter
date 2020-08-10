@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Pearl-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-9.2-red">
+	<img align="center" src="https://img.shields.io/badge/Version-9.3-red">
 </p>
 
 # *Sifter*
@@ -26,7 +26,7 @@
 # Release
 
 	@Codename: Pearl
-	@Version : 9.2
+	@Version : 9.3
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -38,8 +38,9 @@
 &emsp;&ensp;- <a style="color: #729e1b" href="#">SweetPotato</a><br />
 - PEAS <br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">winPEAS</a><br />
+&emsp;&ensp;- <a style="color: #729e1b" href="#">linPEAS</a><br />
 - <a style="color: #729e1b" href="#">Thoron</a> - Thoron Framework is a Linux post-exploitation framework<br />
-- <a style="color: #729e1b" href="#">ODIN</a> - Key feature is the data management and reporting.<br />
+- <a style="color: #729e1b" href="#">CVE-2020-5902-Scanner</a> - Big IP Remote Execution Scanner.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
 - <a style="color: #729e1b" href="#">SubFinder</a> - Sub-Directory enumeration tool<br />
 - <a style="color: #729e1b" href="#">reNgine</a> - Automated reconnaissance framework for gathering information web applications.<br />
@@ -243,7 +244,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
 - <a href="https://github.com/PowerScript/KatanaFramework">KatanaFramework</a><br />
-- <a href="https://github.com/zdresearch/OWASP-Nettacker">OWASP-Nettacker</a>
+- <a href="https://github.com/zdresearch/OWASP-Nettacker">OWASP-Nettacker</a><br />
+- <a href="https://github.com/Technowlogy-Pushpender/CVE-2020-5902-Scanner">Big IP Remote Execution Scanner</a>
 
 
 <strong>#Router Tools</strong>
