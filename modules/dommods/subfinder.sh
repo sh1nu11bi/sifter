@@ -53,8 +53,9 @@ else
 fi
 sleep 2
 echo "    ============================="
-sudo subfinder -nW -d ${TARGET} -oI -oD /opt/sifter/results/SubFinder/ -o ${OUTF} ${SCAN}
+sudo subfinder -nW -d ${TARGET} -oI -o ${OUTF} ${SCAN}
 echo "    ============================="
+sudo mv ${OUTF} -t /opt/sifter/results/SubFinder
 sleep 2
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
