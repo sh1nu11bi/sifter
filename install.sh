@@ -897,6 +897,7 @@ t40(){
 	else
 		cd /opt
 		sudo git clone https://github.com/s0md3v/XSStrike
+		cd XSStrike
 		sudo python3 -m pip install -r requirements.txt 
 	fi
 }
