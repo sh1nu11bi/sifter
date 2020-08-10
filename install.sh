@@ -1000,8 +1000,8 @@ t45(){
 		echo -e "${NC}"
 		cd /opt/KatanaFramework
 		sudo git fetch && sudo git pull &>/dev/null
-		sudo sh dependencies
-		sudo python2 install
+		#sudo sh dependencies
+		#sudo python2 install
 	else
 		cd /opt
 		sudo git clone https://github.com/PowerScript/KatanaFramework.git
