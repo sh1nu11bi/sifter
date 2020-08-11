@@ -128,9 +128,8 @@ t4(){
 		cd /root/BlackWidow
 		sudo git fetch && sudo git pull &>/dev/null
 	else
-		cd /root
-		sudo git clone https://github.com/1N3/BlackWidow.git
-		cd BlackWidow
+		sudo git clone https://github.com/1N3/BlackWidow.git /root/BlackWidow
+		cd /root/BlackWidow
 		sudo chmod +x blackwidow injectx.py
 		sudo cp blackwidow /usr/sbin/blackwidow
 		sudo cp injectx.py /usr/sbin/injectx.py
