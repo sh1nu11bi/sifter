@@ -54,7 +54,7 @@
 
 # Removed
 
-- Omega's repo has been removed, thereefore unavailable for new clones.
+- Omega's repo has been removed, therefore unavailable for new clones.
  If you already had omega installed, you will still be able to use this module though.
 
 ---------------------------------------------------------------------------------------------------------------------
