@@ -54,7 +54,7 @@
 
 # Removed
 
-- Omega's repo has been removed, thereefore unavailable for new clones.
+- Omega's repo has been removed, therefore unavailable for new clones.
  If you already had omega installed, you will still be able to use this module though.
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -189,6 +189,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 &emsp;&emsp;-- <a href="https://github.com/CCob/SweetPotato">SweetPotato</a><br />
 - PEAS <br />
 &emsp;&emsp;-- <a href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite">winPEAS</a><br />
+&emsp;&emsp;-- <a href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite">linPEAS</a><br />
 - <a href="https://github.com/S3cur3Th1sSh1t/WinPwn">WinPwn</a><br />
 - <a href="https://github.com/Technowlogy-Pushpender/creds_harvester">CredHarvester</a><br />
 - <a href="https://github.com/S3cur3Th1sSh1t/PowerSharpPack">PowerSharp</a><br />
