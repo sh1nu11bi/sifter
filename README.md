@@ -283,7 +283,6 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 ---------------------------------------------------------------------------------------------------------------------
 
-# Sifter Help Menu
 <br />
 <img align="middle" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/help.PNG">
 <br />
