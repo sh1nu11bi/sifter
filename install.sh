@@ -421,7 +421,15 @@ t17(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Osmedeus${NC}"
 	if [[ -f '/opt/docker-osmedeus/.configured' ]]; then
-		echo -e "${UPURPLE}Osmedeus is already configured${NC}"
+		cd /opt/docker-osmedeus
+		CHKSTP=$(echo .configured)
+		if [[ ${CHKSTP} == "DONE" ]; then]
+			echo -e "${UPURPLE}Osmedeus is already configured${NC}"
+		elif [[ ${CHKSTP} == "HOLD" ]]; then
+			echo -e "${UBLUE}Osmedeus will be configured upon first run${NC}"
+		else
+			sleep 1
+		fi
 	else
 		cd /opt/
 		sudo git clone https://github.com/mablanco/docker-osmedeus.git
