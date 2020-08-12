@@ -29,6 +29,7 @@ if [[ -d /opt/sifter ]]; then
 	echo -e "${ORNG}"
 	figlet -f mini "Sifter is already installed."
 	echo -e "${NC}"
+	sudo chown $USER:$USER -R /opt/sifter
 else
 	pwd && cd ..
 	sudo mv sifter -t /opt
@@ -212,7 +213,6 @@ t8(){
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git /root/yuki
-		#sudo mv Yuki-Chan-The-Auto-Pentest yuki
 		cd /root/yuki
 		sudo pip2 install -r requirements.txt
 		sudo apt-get install python3-pip
@@ -222,8 +222,6 @@ t8(){
 		sudo chmod +x Module --recursive
 		sudo chown $USER:$USER Module --recursive
 		sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
-		sudo ./install-perl-module.sh
-		sudo chmod +x wafninja joomscan yuki.sh #install-perl-module.sh
 		sudo ./install-perl-module.sh
 	fi
 }
@@ -338,11 +336,6 @@ t13(){
 		source venv/bin/activate
 		sudo ./venv/bin/python3 -m pip install colorama wheel
 		sudo ./venv/bin/python3 -m pip install -r requirements.txt
-		if [[ -f '/opt/sifter/extras/.asm' ]]; then
-			sudo cp /opt/sifter/extras/.asm -t /usr/sbin
-			sudo mv /opt/sifter/extras/.asm -t /opt/AttackSurfaceMapper
-			sudo chmod +x /usr/sbin/asm
-		fi
 	fi
 }
 
@@ -364,15 +357,14 @@ t14(){
 		cd ActiveReign
 		sudo pip3 install -r requirements.txt
 		sudo python3 setup.py install
+		sleep 3
+		echo -e "${RED}[!] ${ORNG}Installing Impacket...${NC}"
+		sleep 2
 		sudo git clone https://github.com/SecureAuthCorp/impacket
 		cd impacket
 		sudo python3 setup.py install
 		sudo pip3 install prompt-toolkit==3.0.2 impacket
 		ar3 db help
-		sudo mkdir /home/$USER/.ar3
-		cd /opt/ActiveReign
-		sudo cp ar3/config.json -t /home/$USER/.ar3
-		sudo chown $USER:$USER /home/$USER/.ar3
 	fi
 }
 
@@ -429,6 +421,8 @@ t17(){
 	else
 		cd /opt/
 		sudo git clone https://github.com/mablanco/docker-osmedeus.git
+		sudo touch /opt/docker-osmedeus/.configured
+		sudo chown $USER:$USER /opt/docker-osmedeus/.configured
 		echo -e "${RED}Osmedeus takes a while to install, you can run the install now or to save time it can be done during the first run"
 		echo -e "${W}If you are updating and osmedeus is already installed, please enter ${YLW}d${W} when prompted"
 		echo -e "${ORNG}Would you like to do it ${YLW}n${ORNG}ow or ${YLW}l${ORNG}ater?(${YLW}n${ORNG}/${YLW}l${ORNG}/${YLW}d${ORNG})${NC}"
@@ -436,9 +430,9 @@ t17(){
 		if [[ ${INOPT} == "n" ]]; then
 			cd docker-osmedeus
 			sudo docker build -t mablanco/osmedeus .
-			sudo echo "DONE" >> /opt/docker-osmedeus/.configured
+			echo "DONE" >> /opt/docker-osmedeus/.configured
 		elif [[ ${INOPT} == "d" ]]; then
-			sudo echo "DONE" >> /opt/docker-osmedeus/.configured
+			echo "DONE" >> /opt/docker-osmedeus/.configured
 		else
 			echo -e "${W}Leaving Osmedeus install for first run${NC}"
 			echo "HOLD" >> /opt/docker-osmedeus/.configured
@@ -453,7 +447,7 @@ t18(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for NekoBot${NC}"
 	if [[ -d '/opt/NekoBotV1' ]]; then
-		echo -e "${ORNG}"
+		echo -e "${ORNG}" 
 		figlet -f mini "NekoBot is already installed"
 		echo -e "${NC}"
 		cd /opt/NekoBotV1
@@ -771,8 +765,14 @@ t34(){
 		sudo git clone https://github.com/Technowlogy-Pushpender/creds_harvester.git
 		sudo chown $USER:$USER -R /opt/creds_harvester
 		cd creds_harvester
-		python3 -m pip install pywin32
-		sudo python3 -m pip install pywin32
+		sudo git clone https://github.com/mhammond/pywin32
+		cd pywin32
+		sudo python setup.py install
+		sudo python3 setup.py install
+		sudo python pywin32_postinstall.py -install
+		sudo python3 pywin32_postinstall.py -install
+		#python3 -m pip install pywin32
+		#sudo python3 -m pip install pywin32
 		zip credH.zip *.py
 	fi
 }
@@ -822,16 +822,19 @@ t36(){
 # ################
 menSYS(){
         if [[ ${OSYS} == "l" ]] || [[ ${OSYS} == "linux" ]]; then
-                wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
-                unzip Mentalist-v1.0-Linux-x86_64.zip
+                sudo wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip
+                sudo chown $USER:$USER *.zip
+				unzip Mentalist-v1.0-Linux-x86_64.zip
                 rm Mentalist-v1.0-Linux-x86_64.zip
         elif [[ ${OSYS} == "m" ]] || [[ ${OSYS} == "mac" ]]; then
-                wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-OSX.zip
-                unzip Mentalist-v1.0-OSX.zip
+                sudo wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-OSX.zip
+                sudo chown $USER:$USER *.zip
+				unzip Mentalist-v1.0-OSX.zip
                 rm Mentalist-v1.0-OSX.zip
         elif [[ ${OSYS} == "w" ]] || [[ ${OSYS} == "windows" ]]; then
-                wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Win.zip
-                unzip Mentalist-v1.0-Win.zip
+                sudo wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Win.zip
+                sudo chown $USER:$USER *.zip
+				unzip Mentalist-v1.0-Win.zip
                 rm Mentalist-v1.0-Win.zip
         else 
                 echo -e "${URED}You have selected an invalid option${NC}"
@@ -959,6 +962,7 @@ t43(){
 	else
 		cd /opt
 		sudo git clone https://github.com/elceef/dnstwist.git
+		cd dnstwist
 		sudo python3 -m venv venv
 		source venv/bin/activate
 		sudo ./venv/bin/pip3 install wheel
