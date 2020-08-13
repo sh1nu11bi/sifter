@@ -422,7 +422,7 @@ t17(){
 	echo -e "${YLW}Checking for Osmedeus${NC}"
 	if [[ -f '/opt/docker-osmedeus/.configured' ]]; then
 		cd /opt/docker-osmedeus
-		CHKSTP=$(echo .configured)
+		CHKSTP=$(cat .configured)
 		if [[ ${CHKSTP} == "DONE" ]]; then
 			echo -e "${UPURPLE}Osmedeus is already configured${NC}"
 		elif [[ ${CHKSTP} == "HOLD" ]]; then
