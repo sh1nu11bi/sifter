@@ -423,7 +423,7 @@ t17(){
 	if [[ -f '/opt/docker-osmedeus/.configured' ]]; then
 		cd /opt/docker-osmedeus
 		CHKSTP=$(echo .configured)
-		if [[ ${CHKSTP} == "DONE" ]; then]
+		if [[ ${CHKSTP} == "DONE" ]]; then
 			echo -e "${UPURPLE}Osmedeus is already configured${NC}"
 		elif [[ ${CHKSTP} == "HOLD" ]]; then
 			echo -e "${UBLUE}Osmedeus will be configured upon first run${NC}"
