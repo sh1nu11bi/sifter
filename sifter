@@ -1026,7 +1026,7 @@ proxysystem(){
                     sudo anonsurf start
                     echo -e "${YLW}To check whether system is running correctly under proxy\nOpen a browser and go to ${UPURPLE}'https://dnsleaktest.com'${NC}"
                     echo -e "${YLW}Your Public IP Should be spoofed${NC}"
-                    sleep 3
+                    sleep 10
                     menu
                     ;;
 
