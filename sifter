@@ -1304,7 +1304,7 @@ while getopts "a:bndwirmepcvquhz" options
             figlet -f mini "Checking for live targets..."
             echo -e "${NC}"
             check_hosts
-            modules
+            menu
             ;;
 
         a)
@@ -1316,7 +1316,7 @@ while getopts "a:bndwirmepcvquhz" options
                 fi
             echo "$ARG" >> files/host_list.txt
             sleep 2
-            modules
+            menu
             ;;
 
         i)
