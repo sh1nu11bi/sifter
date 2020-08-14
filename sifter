@@ -1009,11 +1009,11 @@ results(){
 }
 # System Proxy Settings
 proxysystem(){
-    echo -e "\n"
+    echo -e "\n    ========================="
     if [[ ${STATUS} == "YES" ]]; then
-        echo -e "${ORNG}Anonsurf is currently: ${URED}On${NC}"
+        echo -e "${LP}Anonsurf is currently: ${URED}On${NC}"
     else
-        echo -e "${ORNG}Anonsurf is currently: ${UBLUE}Off${NC}"
+        echo -e "${LP}Anonsurf is currently: ${UBLUE}Off${NC}"
     fi
     echo -e "${YLW}"
     PS3='What would you like to do?'
@@ -1130,16 +1130,19 @@ modules(){
 
                             "Quit")
                                 if [[ ${STATUS} == "YES" ]]; then
-                                    echo -e "${LGRY}System Proxy is still active..."
-                                    echo -e "${ORNG}Attempting to stop it now..."
+                                    echo -e "\n    ==============================" 
+                                    echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
+                                    echo -e "${LP}Attempting to stop it now..."
                                     sudo anonsurf stop
                                     echo -e "${LP}Proxy Stopped${NC}"
+                                    STATUS='NO'
+                                    echo -e "    =============================="
                                 fi
                                 RENCHK=$(sudo docker container ls | grep rengine)
                                 if [[ ${RENCHK} == "rengine_web_1" ]]; then
                                     sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
                                 fi
-                                exit
+                                exit 0
                                 ;;
                     esac
             done
@@ -1197,11 +1200,13 @@ menu(){
                         
                     "Quit")
                         if [[ ${STATUS} == "YES" ]]; then
-                            echo -e "\n" 
-                            echo -e "${LGRY}System Proxy is still active..."
-                            echo -e "${ORNG}Attempting to stop it now..."
+                            echo -e "\n    ==============================" 
+                            echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
+                            echo -e "${LP}Attempting to stop it now..."
                             sudo anonsurf stop
                             echo -e "${LP}Proxy Stopped${NC}"
+                            STATUS='NO'
+                            echo -e "    =============================="
                         fi
                         exit 0
                         ;;
