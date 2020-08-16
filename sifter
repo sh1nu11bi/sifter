@@ -499,7 +499,7 @@ exframes(){
                         ;;
 
                     "Back")
-                        exmods
+                        ex_mods
                         ;;
 
             esac
