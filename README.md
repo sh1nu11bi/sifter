@@ -28,6 +28,15 @@
 	@Codename: Pearl
 	@Version : 9.3
 
+<br>
+<em>The latest release <strong>[Pearls]</strong> zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.1.zip"><strong>here</strong></a></em>
+<br />
+<em>[<strong>Pearls</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v9.3/sifter_9.3-1.deb"><strong>here</strong></a></em>
+<br />
+<em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
+<br>
+<br>
+
 ---------------------------------------------------------------------------------------------------------------------
 
 # Additions:
@@ -71,18 +80,6 @@ Gathered info is saved to the results folder, these output files can be easily p
 <a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a> - Its long, but you can skip through to get the general idea.
 <br>
 Most modules are explained along with demos of a lot of the tools
-<br>
-
----------------------------------------------------------------------------------------------------------------------
-
-# Releases
-<br>
-<em>The latest release <strong>[Pearl]</strong> can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v9.1.zip"><strong>here</strong></a></em>
-<br />
-<em>.deb package is also available <a href="https://github.com/s1l3nt78/sifter/releases/download/v9.3/sifter_9.3-1.deb"><strong>here</strong></a></em>
-<br />
-<em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
-<br>
 <br>
 
 ---------------------------------------------------------------------------------------------------------------------
