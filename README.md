@@ -79,6 +79,8 @@ Most modules are explained along with demos of a lot of the tools
 <br>
 <em>The latest release <strong>[Pearl]</strong> can be downloaded <a href="https://github.com/s1l3nt78/sifter/archive/v9.1.zip"><strong>here</strong></a></em>
 <br />
+<em>.deb package is also available <a href="https://github.com/s1l3nt78/sifter/releases/download/v9.3/sifter_9.3-1.deb"><strong>here</strong></a></em>
+<br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
 <br>
