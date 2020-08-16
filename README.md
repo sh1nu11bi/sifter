@@ -29,7 +29,7 @@
 	@Version : 9.3
 
 <br>
-<em>The latest release <strong>[Pearls]</strong> zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.1.zip"><strong>here</strong></a></em>
+<em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.1.zip"><strong>here</strong></a></em>
 <br />
 <em>[<strong>Pearls</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v9.3/sifter_9.3-1.deb"><strong>here</strong></a></em>
 <br />
