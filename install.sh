@@ -216,7 +216,7 @@ t8(){
 		cd /root/yuki
 		sudo git fetch && sudo git pull &>/dev/null
 	else
-		sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git /root/yuki
+		sudo git clone https://github.com/s1l3nt78/Yuki-Chan-2.git /root/yuki
 		cd /root/yuki
 		sudo pip2 install -r requirements.txt
 		sudo apt-get install python3-pip
