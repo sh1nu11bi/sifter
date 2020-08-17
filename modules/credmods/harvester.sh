@@ -5,6 +5,7 @@ ORNG='\033[0;33m'
 W='\033[1;37m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
+cd /opt/theHarvester
 multi_scan(){
     for name in `cat files/pingtest.pass`
         do
