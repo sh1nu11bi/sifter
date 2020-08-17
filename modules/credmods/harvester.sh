@@ -6,6 +6,9 @@ W='\033[1;37m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
 cd /opt/theHarvester
+if [[ ! -d '/opt/sifter/results/Harvester' ]]; then
+    mkdir /opt/sifter/results/Harvester
+fi
 multi_scan(){
     for name in `cat files/pingtest.pass`
         do
