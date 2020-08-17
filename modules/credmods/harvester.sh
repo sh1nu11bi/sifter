@@ -10,7 +10,7 @@ if [[ ! -d '/opt/sifter/results/Harvester' ]]; then
     mkdir /opt/sifter/results/Harvester
 fi
 multi_scan(){
-    for name in `cat files/pingtest.pass`
+    for name in `cat /opt/sifter/files/pingtest.pass`
         do
             echo -e "${W}How long would you like theHarvester to run for?(seconds)${NC}"
             read TIME
@@ -21,7 +21,7 @@ multi_scan(){
 }
 single_scan(){
     echo -e "${YLW}"
-    cat files/pingtest.pass
+    cat /opt/sifter/files/pingtest.pass
     echo -e "${NC}"
     echo -e "${W}Please enter your target${NC}"
     read TARGET
@@ -35,7 +35,7 @@ single_scan(){
 echo -e "${ORNG}theHarvester${NC}"
 echo -e "${ORNG}*************${NC}"
 echo -e "${W}"
-cat files/pingtest.pass
+cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
 echo -e "${W}Would you like to use a single target or the whole list?(s/l)${NC}"
 read ANS
