@@ -31,15 +31,15 @@ sleep 1
 echo -e "${LP}These scans will take a while but will finish\nPlease just be patient${NC}"
 mkdir /opt/sifter/results/DnsTwist/${TARGET}
 echo -e "${RED}Performing 'registered' test${NC}"
-sudo ./dnstwist.py --registered ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/registered_test.csv
+sudo python3.8 dnstwist.py --registered ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/registered_test.csv
 echo -e "${RED}Performing ssdeep test${NC}"
-sudo ./dnstwist.py --ssdeep ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/ssdeep_test.csv
+sudo python3.8 dnstwist.py --ssdeep ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/ssdeep_test.csv
 echo -e "${RED}Performing GeoIP test${NC}"
-sudo ./dnstwist.py --geoip ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/geoip_test.csv
+sudo python3.8 dnstwist.py --geoip ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/geoip_test.csv
 echo -e "${RED}Performing mxcheck test${NC}"
-sudo ./dnstwist.py --mxcheck ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/mxcheck_test.csv
+sudo python3.8 dnstwist.py --mxcheck ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/mxcheck_test.csv
 echo -e "${RED}Performing TLD test${NC}"
-sudo ./dnstwist.py --tld dictionaries/common_tlds.dict ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/tld_test.csv
+sudo python3.8 dnstwist.py --tld dictionaries/common_tlds.dict ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/tld_test.csv
 echo -e "${W}"
 figlet -f mini "Done"
 echo -e "Results saved to /opt/sifter/results/DnsTwist/${TARGET}${NC}"
