@@ -997,14 +997,24 @@ results(){
     # shellcheck disable=SC2164
     cd /opt/sifter/results
     ls
-    echo -e "${W}Please enter the name of the result directory you'd like to see${NC}"
-    read DNAME
-    # shellcheck disable=SC2164
-    cd ${DNAME}
-    echo -e "${LP}"
-    ls
-    result_choices
-    # shellcheck disable=SC2164
+    echo -e "${YLW}Would you like to (${LP}b${YLW})rowse results or bring up all results for a (${LP}s${YLW})pecific target?(${LP}b${YLW}/${LP}s${YLW})${NC}"
+    read BROWSE
+    if [[ ${BROWSE} == "b" ]]; then
+        echo -e "${W}Please enter the name of the result directory you'd like to see${NC}"
+        read DNAME
+        # shellcheck disable=SC2164
+        cd ${DNAME}
+        echo -e "${LP}"
+        ls
+        result_choices
+        # shellcheck disable=SC2164
+    else
+        echo -e "${ORNG}Please enter the target to search for (${RED}eg. ${YLW}target.com${ORNG})${NC}"
+        read SPECIFIC
+        cd /opt/sifter/results
+        locate ${SPECIFIC}
+        echo -e "${W}Open a terminal or file broswer and goto the location above to see your results${NC}"
+    fi 
     cd /opt/sifter
 }
 # System Proxy Settings
