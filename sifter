@@ -1011,8 +1011,7 @@ results(){
     else
         echo -e "${ORNG}Please enter the target to search for (${RED}eg. ${YLW}target.com${ORNG})${NC}"
         read SPECIFIC
-        cd /opt/sifter/results
-        locate ${SPECIFIC}
+        find /opt/sifter/results/ ${SPECIFIC}
         echo -e "${W}Open a terminal or file broswer and goto the location above to see your results${NC}"
     fi 
     cd /opt/sifter
