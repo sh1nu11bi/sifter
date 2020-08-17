@@ -996,12 +996,6 @@ results(){
     echo -e "${YLW}Would you like to (${LP}b${YLW})rowse results or bring up all results for a (${LP}s${YLW})pecific target?(${LP}b${YLW}/${LP}s${YLW})${NC}"
     read BROWSE
     if [[ ${BROWSE} == "b" ]]; then
-        echo -e "${W}Please enter the name of the result directory you'd like to see${NC}"
-        read DNAME
-        # shellcheck disable=SC2164
-        cd ${DNAME}
-        echo -e "${LP}"
-        ls
         result_choices
         # shellcheck disable=SC2164
     else
