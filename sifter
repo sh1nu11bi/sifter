@@ -955,8 +955,8 @@ result_choices(){
                                 echo -e "${W}Please enter the file name${NC}"
                                 read FNAME
                                 echo -e "${W}==========================================================================${NC}"
-                                cat ${FNAME}
-                                kdialog --geometry 600x800 --textbox ${FNAME}
+                                cat ${FNAME} &
+                                kdialog --geometry 600x800 --textbox ${FNAME} &
                                 echo -e "${W}==========================================================================${NC}"
                                 result_choices
                                 ;;
