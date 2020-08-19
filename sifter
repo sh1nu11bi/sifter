@@ -990,14 +990,12 @@ results(){
     echo -e "${YLW}Results"
     echo -e "${LP}*******${NC}"
     echo -e "${LP}"
-    # shellcheck disable=SC2164
     cd /opt/sifter/results
     ls
     echo -e "${YLW}Would you like to (${LP}b${YLW})rowse results or bring up all results for a (${LP}s${YLW})pecific target?(${LP}b${YLW}/${LP}s${YLW})${NC}"
     read BROWSE
     if [[ ${BROWSE} == "b" ]]; then
         result_choices
-        # shellcheck disable=SC2164
     else
         echo -e "${ORNG}Please enter the target to search for (${RED}eg. ${YLW}target.com${ORNG})${NC}"
         read SPECIFIC
