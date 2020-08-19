@@ -474,7 +474,7 @@ exframes(){
   figlet -f mini "Exploitation Frameworks"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("Metasploit" "Thoron" "Back")
+        options=("Metasploit" "Thoron" "FuzzyDander" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -496,6 +496,24 @@ exframes(){
                         else
                             exframes
                         fi
+                        ;;
+
+                    "FuzzyDander")
+                        echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
+                        echo -e "codename:${RED}FuzzyDander${NC}"
+                        echo -e "${YLW}If you do not know what these tools are or how they work,\nyou should not be using them. As such no instructions will be added.${NC}"
+                        if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then
+                            echo -e "${URED}You do not have this module, please post an issue request on github or send me \n an email at s1l3n7h0s7@gmail.com and it will be sent to you with install instructions${NC}"
+                        else
+                            echo -e "${W}Would you like to continue?(y/n)${NC}"
+                            read M_ANS
+                            if [[ ${M_ANS} == 'y' ]]; then
+                                ./modules/exmods/fuzzyd.sh
+                            else
+                                ex_mods
+                            fi
+                        fi
+                        ms_tools
                         ;;
 
                     "Back")
@@ -643,7 +661,7 @@ ms_tools(){
   figlet -f mini "MicroSoft Exploitation Tools"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-        options=("ActiveReign" "iSpy" "FuzzyDander" "SMBGhost" "Back")
+        options=("ActiveReign" "iSpy" "SMBGhost" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -658,24 +676,6 @@ ms_tools(){
                                 sleep 3
                                 ./modules/exmods/ispy.sh
 			                    ;;
-
-                            "FuzzyDander")
-                                echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
-                                echo -e "codename:${RED}FuzzyDander${NC}"
-                                echo -e "${YLW}If you do not know what these tools are or how they work,\nyou should not be using them. As such no instructions will be added.${NC}"
-                                if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then
-                                    echo -e "${URED}You do not have this module, please post an issue request on github or send me \n an email at s1l3n7h0s7@gmail.com and it will be sent to you with install instructions${NC}"
-                                else
-                                    echo -e "${W}Would you like to continue?(y/n)${NC}"
-                                    read M_ANS
-                                    if [[ ${M_ANS} == 'y' ]]; then
-                                        ./modules/exmods/fuzzyd.sh
-                                    else
-                                        ex_mods
-                                    fi
-                                fi
-                                ms_tools
-                                ;;
 
                             "SMBGhost")
                                 echo -e "${LP}SMBGhost scans for the CVE-2020-0796 vulnerability in Windows SMB3 protocol${NC}"
