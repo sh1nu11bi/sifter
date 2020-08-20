@@ -214,9 +214,13 @@ t8(){
 		figlet -f mini "Yuki-Chan is already installed"
 		echo -e "${NC}"
 		cd /root/yuki
+		if [[ -d '/opt/sifter/extras/git_yuki' ]]; then
+			sudo rm -rf /root/yuki/.git
+			sudo mv /opt/sifter/extras/git_yuki /root/yuki/.git
+		fi
 		sudo git fetch && sudo git pull &>/dev/null
 	else
-		sudo git clone https://github.com/s1l3nt78/Yuki-Chan-The-Auto-Pentest.git /root/yuki
+		sudo git clone https://github.com/s1l3nt78/Yuki-Chan-2.git /root/yuki
 		cd /root/yuki
 		sudo pip2 install -r requirements.txt
 		sudo apt-get install python3-pip
