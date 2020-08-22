@@ -5,8 +5,12 @@ W='\033[1;37m'
 LP='\033[1;35m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
-
-SHODAN-API='<shodan-api-key>'
+if [[ ! -f '/opt/xray/.shodan_api' ]]; then
+    echo -e "${YLW}Please enter your Shodan API key: ${NC}"
+    read SAPI
+    sudo echo ${SAPI} >> /opt/xray/.shodan_api
+fi
+SHODAN-API=$(cat /opt/xray/.shodan_api)
 
 listing(){
     echo -e "${YLW}"

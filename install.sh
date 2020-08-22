@@ -1585,15 +1585,13 @@ echo ""
 sifter -h
 echo ""
 echo -e "${RED}==========================================================================================${NC}"
-echo -e "${W}Please edit ${LP}API keys ${W}in ${UBLUE}/opt/AttackSurfaceMapper/keylist.asm${NC} ${W}for a better range of scan results &"
-echo -e "for better results in WPScan goto ${UBLUE}modules/wpscan.sh${NC} ${W}and add"
-echo -e "'${UBLUE}--api-token ${URED}your-wpscan-api-token${UBLUE}${NC}${W}' argument to both commands"
+echo -e "${W}Please edit ${LP}API keys ${W}in ${UBLUE}/opt/AttackSurfaceMapper/keylist.asm${NC}\n${W}for a better range of scan results"
 echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${NC}${W}'${NC}"
 echo -e "${RED}==========================================================================================${NC}"
 ######################################################################################################
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==               ######################
 ######################################################################################################
-echo -e "${YLW}#################"                                                    ########################
-echo -e "${ORNG}# Version :${LP} 9.3 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
+echo -e "${YLW}####################"                                                    ########################
+echo -e "${ORNG}# Version :${LP} 9.3 ${YLW}r2${ORNG}#${NC}"                                  ##    VERSION INFO    ##
 #echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                       ##    UPDATE CHECK    ##
-echo -e "${YLW}#################${NC}"                                               ########################
+echo -e "${YLW}####################${NC}"                                               ########################

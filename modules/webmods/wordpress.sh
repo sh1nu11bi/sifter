@@ -5,8 +5,14 @@ W='\033[1;37m'
 LP='\033[1;35m'
 YLW='\033[1;33m'
 LBBLUE='\e[104m'
-
 cd /opt/WPForce
+if [[ ! -f '.wp_api' ]]; then
+	echo -e "${W}Please enter your WPvulnDB api now: ${NC}"
+	read WPAPI
+	sudo echo ${WPAPI} >> /opt/WPForce/.wp_api
+fi
+WP_API=$(cat /opt/WPForce/.wp_api)
+
 wpforce(){
 	echo -e "${RED}"
 	figlet -f mini WPForce
@@ -32,9 +38,7 @@ yertle(){
 	sudo python yertle.py -u "${USER}" -p "${PASS}" -t "${TARGET}" -i
 }
 wpscan(){
-	if [[ -d /opt/sifter/results/WPScan ]]; then
-		echo ""
-	else
+	if [[ ! -d '/opt/sifter/results/WPScan' ]]; then
 		mkdir /opt/sifter/results/WPScan
 	fi
 	echo -e "${RED}"
@@ -45,10 +49,10 @@ wpscan(){
 	echo -e "${W}Please copy and paste in your target site${NC}"
 	read TARGET
 	echo "==================================================================================="
-	sudo wpscan --url http://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent --ignore-main-redirect | tee /opt/sifter/results/WPScan/${TARGET}.txt
+	sudo wpscan --url http://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent --ignore-main-redirect --api-token ${WP_API} | tee /opt/sifter/results/WPScan/${TARGET}.txt
 	LOG=$(cat /opt/sifter/results/WPScan/${TARGET}.txt | grep "ignore-main-redirect")
 	if [[ ${LOG} == "ignore-main-redirect" ]]; then
-		sudo wpscan --url https://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent --ignore-main-redirect | tee /opt/sifter/results/WPScan/${TARGET}.txt
+		sudo wpscan --url https://${TARGET} --wp-content-dir wp-content -e u vp vt dbe --random-user-agent --ignore-main-redirect --api-token ${WP_API} | tee /opt/sifter/results/WPScan/${TARGET}.txt
 	fi
 	echo "==================================================================================="
 	sleep 2
@@ -65,9 +69,9 @@ wpscan(){
 						read WORDLIST
 						sleep 2
 					if [[ ${LOG} == "ignore-main-redirect" ]]; then
-						sudo wpscan --url https://${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+						sudo wpscan --url https://${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --random-user-agent --api-token ${WP_API} | tee /opt/sifter/results/WPScan/${TARGET}.txt
 					else
-						sudo wpscan --url http://${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --random-user-agent | tee /opt/sifter/results/WPScan/${TARGET}.txt
+						sudo wpscan --url http://${TARGET} --wp-content-dir wp-content -e u -P ${WORDLIST} --random-user-agent --api-token ${WP_API} | tee /opt/sifter/results/WPScan/${TARGET}.txt
 					fi
 					echo "==================================================================================="
 					sleep 1
