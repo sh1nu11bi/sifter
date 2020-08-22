@@ -1472,6 +1472,27 @@ t65(){
 	fi
 }
 
+#################
+# 66 # DeadTrap #
+#################
+t66(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for DeadTrap ${NC}"
+	if [[ -d '/opt/DeadTrap' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "DeadTrap is already installed"
+		echo -e "${NC}"
+		cd /opt/DeadTrap
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/Chr0m0s0m3s/DeadTrap.git
+		cd DeadTrap
+		sudo pip3 install .
+		mkdir -p $HOME/.config/deadtrap
+	fi
+}
+
 #######################################################################################################################################
 ############
 # M # MISC #

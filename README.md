@@ -48,7 +48,7 @@
 - PEAS <br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">winPEAS</a><br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">linPEAS</a><br />
-- <a style="color: #729e1b" href="#">Thoron</a> - Thoron Framework is a Linux post-exploitation framework<br />
+- <a style="color: #729e1b" href="#">DeadTrap</a> - Mobile Number OSINT<br />
 - <a style="color: #729e1b" href="#">CVE-2020-5902-Scanner</a> - Big IP Remote Execution Scanner.<br />
 &emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
 - <a style="color: #729e1b" href="#">SubFinder</a> - Sub-Directory enumeration tool<br />
@@ -147,6 +147,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/martinvigo/email2phonenumber">E2P (Email2Phone)</a><br />
 - <a href="https://github.com/chrismaddalena/ODIN">ODIN</a><br />
 - <a href="https://github.com/itsmehacker/CardPwn">CardPwn</a><br />
+- <a href="https://github.com/Chr0m0s0m3s/DeadTrap">DeadTrap</a><br />
 
 
 <strong>#Domain Recon Gathering</strong>
