@@ -21,8 +21,8 @@ echo -e "${YLW}Please enter your domain list or enter the full path/to/subfinder
 read TARGETS
 echo -e "${ORNG}Please enter the name for your output file${NC}"
 read OUTF
-sudo python3 CVE-2020-5902.py ${TARGETS} >> temp.log
-sudo mv temp.log /opt/sifter/results/Big_IP_RCE/${OUTF}.txt
+sudo python3 CVE-2020-5902.py ${TARGETS} > ${TARGETS}.log
+sudo mv ${TARGETS}.log /opt/sifter/results/Big_IP_RCE/${OUTF}.txt
 echo -e "${RED}Your Output file has been saved to \n${ORNG}/opt/sifter/results/Big_IP_RCE/${OUTF}.txt${NC}"
 sleep 5
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

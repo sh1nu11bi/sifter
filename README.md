@@ -26,7 +26,7 @@
 # Release
 
 	@Codename: Pearl
-	@Version : 9.3
+	@Version : 9.5
 
 <br>
 <em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.3.zip"><strong>here</strong></a></em>

@@ -20,8 +20,29 @@ STATUS='NO'
 ARG=$2
 STLTH=$1
 
-# IP addition argument
+##############################
+# ! # First Time Deb Install #
+##############################
+FIRSTTIME=1
+###
+first_inst(){
+        echo -e "${INV}${LGRY}"
+        python3 extras/ban.py
+        python3 extras/ban2.py
+        echo -e "${NC}"
+        echo -e "\n${LGRY}####################################"
+        echo -e "# ${NC}[${RED}!${NC}]${ORNG}NOTE:${YLW} Running Initial Install ${LGRY}#${NC}"
+        echo -e "${LGRY}####################################${NC}\n"
+        bash /opt/sifter/install.sh
+}
+
+if [[ ${FIRSTTIME} == 1 ]]; then
+        first_inst
+fi
+
+##############################
 # Help Menu
+############
 usage() {                                    	  # Function: Print a help message.
 	echo -e  "${YLW}Sifter Help Menu${NC}"
 	echo "*****************"
@@ -35,15 +56,15 @@ usage() {                                    	  # Function: Print a help message
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-d${NC} Opens the Domain Focused Modules"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-n${NC} Opens the Network Mapping Modules menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-w${NC} Opens the Website Focused Modules"
-    	echo -e "${RED}# ${ORNG}sifter ${YLW}-q${NC} Opens the Router Focused Modules"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-q${NC} Opens the Router Focused Modules"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-b${NC} Opens the Web-App Focused Module menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-v${NC} Opens the Vulnerability Scanning Module Menu"
-    	echo -e "${RED}# ${ORNG}sifter ${YLW}-m${NC} Opens the Module Menu directly"
-    	echo -e "${RED}# ${ORNG}sifter ${YLW}-p${NC} Opens the password tools for quick passlist generation or hash decryption"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-m${NC} Opens the Module Menu directly"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-p${NC} Opens the password tools for quick passlist generation or hash decryption"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-r${NC} Opens the results folder for viewing of files or photos"
-    	echo -e "${RED}# ${ORNG}sifter ${YLW}-u${NC} Checks for any updates on Github"
-    	echo -e "${RED}# ${ORNG}sifter ${BIGreen}--stealth${NC} Starts sifter in ${LP}Anonymous${NC} mode"
-    	echo -e "${RED}# ${ORNG}sifter ${YLW}-z${NC} Opens the Module Information Menu"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-u${NC} Checks for any updates on Github"
+    echo -e "${RED}# ${ORNG}sifter ${BIGreen}--stealth${NC} Starts sifter in ${LP}Anonymous${NC} mode"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-z${NC} Opens the Module Information Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-h${NC} This Help Menu" 1>&2
 }
 # Information Modules
@@ -346,7 +367,7 @@ web_mods(){
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("Dirb" "Nikto" "BlackWidow" "DorksEye" "WPForce" "Zeus" "Back")
+          options=("Dirb" "Nikto" "BlackWidow" "DorksEye" "WP Analysis" "Zeus" "Back")
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -362,7 +383,7 @@ web_mods(){
                                 ./modules/webmods/widow.sh
                                 ;;
 
-                            "WPForce")
+                            "WP Analysis")
                                 echo -e "${YLW}WPScan & WPForce"
                                 echo -e "${W}Tools for use against wordpress${NC}"
                                 sleep 3
@@ -628,7 +649,7 @@ sdog(){
     echo -e "${RED}"
     figlet -f mini "SayDog"
     echo -e "${ORNG}"
-    echo -e "${YLW}SayDog is a multi-purpose exploitation tool. Aimed at web exploitation and vuln-analysis${NC}"
+    echo -e "${YLW}SayDog is a multi-purpose exploitation tool. Aimed at web Exploitation and Vuln-Analysis${NC}"
     sleep 3
     ./modules/dommods/sdog.sh
 }
@@ -680,7 +701,7 @@ ms_tools(){
 			                    ;;
 
                           "iSpy")
-                                echo -e "${YLW}iSpy is a Microsft '${UBLUE}blue${NC}${YLW}' vulnerability scanner${NC}"
+                                echo -e "${YLW}iSpy is a ${UBLUE}BlueKeep${NC}${YLW} & ${UBLUE}EternalBlue${NC}${YLW} Vulnerability Scanner${NC}"
                                 sleep 3
                                 ./modules/exmods/ispy.sh
 			                    ;;
@@ -931,6 +952,7 @@ check_hosts(){
         	    menu
 }
 # List Argument Options Settings Below
+# IP addition argument
 ip_add(){
     echo -e "${W}Please enter your target:${NC}"
     read IP_ANS
@@ -1160,9 +1182,8 @@ menu(){
     fi
     echo -e "${INV}${LGRY}"
     python3 extras/ban.py
-    echo -e "${LP}"
     python3 extras/ban2.py
-    echo -e "${LGRY}==============${W}Hit ${YLW}Ctrl + C${W} at any time to quit ${UPURPLE}Sifter${NC}${LGRY}==============${NC}"
+    echo -e "${LGRY}=================${W}Hit ${YLW}Ctrl + C${W} at any time to quit ${UPURPLE}Sifter${NC}${LGRY}=================${NC}"
     arg=$1
     echo -e "${BIGreen}Anonymous: ${BIYellow}${STATUS}${NC}"
     echo ""

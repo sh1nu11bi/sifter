@@ -14,9 +14,21 @@ UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
 
+##
+# Initial Install
+##
+sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
+sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
+##
+
+##
+# FuzzyDander File Rename
+##
 if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
 	sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
 fi
+##
+
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
 sudo apt-get install -y python wmdocker graphviz kdialog privoxy python-dev python3-venv python-pip libpython3-stdlib python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker-compose python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy -y # sqlite3
 DCKR=$(sudo apt-get install docker-ce | grep "is not available")
@@ -1499,25 +1511,29 @@ t66(){
 hfSYS(){
 	if [[ ${OSYS} == "l" ]] || [[ ${OSYS} == "linux" ]]; then
             sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-linux-amd64.tar.gz
-            sudo chown $USER:$USER HFish-0.6.3-linux-amd64.tar.gz
-			tar -xzvf HFish-0.6.3-linux-amd64.tar.gz
-            rm HFish-0.6.3-linux-amd64.tar.gz
-			mv HFish-0.6.3-linux-amd64/* HFish
+            sudo tar -xzvf HFish-0.6.3-linux-amd64.tar.gz
+            sudo rm HFish-0.6.3-linux-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.3-*
+			sudo mv HFish-0.6.3-linux-amd64/* HFish
+			sudo rm -rf HFish-0.6.3-linux-amd64
     elif [[ ${OSYS} == "m" ]] || [[ ${OSYS} == "mac" ]]; then
             sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-darwin-amd64.tar.gz
-            sudo chown $USER:$USER HFish-0.6.3-darwin-amd64.tar.gz
-			tar -xzvf HFish-0.6.3-darwin-amd64.tar.gz
-            rm HFish-0.6.3-darwin-amd64.tar.gz
-			mv HFish-0.6.3-darwin-amd64/* -t HFish
+            sudo tar -xzvf HFish-0.6.3-darwin-amd64.tar.gz
+            sudo rm HFish-0.6.3-darwin-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.3-*
+			sudo mv HFish-0.6.3-darwin-amd64/* -t HFish
+			sudo rm -rf HFish-0.6.3-darwin-amd64
     elif [[ ${OSYS} == "w" ]] || [[ ${OSYS} == "windows" ]]; then
             sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-win-amd64.tar.gz
-            sudo chown $USER:$USER HFish-0.6.3-win-amd64.tar.gz
-			tar -xzvf HFish-0.6.3-win-amd64.tar.gz
-            rm HFish-0.6.3-win-amd64.tar.gz
-			mv HFish-0.6.3-win-amd64/* -t HFish
+            sudo tar -xzvf HFish-0.6.3-win-amd64.tar.gz
+            sudo rm HFish-0.6.3-win-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.3-win-amd64.tar.gz
+			sudo mv HFish-0.6.3-win-amd64/* -t HFish
+			sudo rm -rf HFish-0.6.3-win-amd64
     else 
-            echo -e "${URED}You have selected an invalid option${NC}"
-            echo -e "${UPURPLE}Please choose a correct OS${NC}"
+            echo -e "${URED}OS not detected! ${NC}"
+            echo -e "${UPURPLE}Please select your OS: (l/m/w)${NC}"
+			read OSYS
 			hfSYS
     fi
 }
@@ -1534,9 +1550,7 @@ t67(){
 		cd /opt
 		sudo git clone https://github.com/hacklcx/HFish.git
 		sudo chown $USER:$USER -R HFish
-		echo -e "${YLW}Which system are you installing sifter on? (${ORNG}m${YLW}ac/${ORNG}l${YLW}inux/${ORNG}w${YLW}indows)\n${RED}NOTE: ${UBBLUE}sifter${NC}${W} works best on a Linux Distro${NC}"
-        read OSYS
-        hfSYS
+		hfSYS
 	fi	
 }
 
