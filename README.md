@@ -29,9 +29,9 @@
 	@Version : 9.5
 
 <br>
-<em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.3.zip"><strong>here</strong></a></em>
+<em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.5.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Pearls</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v9.3/sifter_9.3-1.deb"><strong>here</strong></a></em>
+<em>[<strong>Pearls</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v9.5/sifter_9.5.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -108,10 +108,13 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	*
 	$ git clone https://github.com/s1l3nt78/sifter.git
 	$ cd sifter
-	$ chmod +x install.sh
-	$ ./install.sh
+	$ bash install.sh
 	*
-	* For oneliner install, copy and paste the following code into a terminal
+	* For oneliner install, copy and paste the following code into a terminal:
+	*
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v9.5/sifter_9.5.deb && sudo dpkg -i sifter_9.5.deb
+	*
+	* To install from source, copy and paste the following into a terminal:
 	*
 	$ git clone https://github.com/s1l3nt78/sifter.git && cd sifter && bash install.sh
 
