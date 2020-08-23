@@ -104,17 +104,19 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 # Installation:
 
-	* This will download and install all required tools
+	[!] This will download and install all required tools
 	*
 	$ git clone https://github.com/s1l3nt78/sifter.git
 	$ cd sifter
 	$ bash install.sh
-	*
-	* For oneliner install, copy and paste the following code into a terminal:
+	
+	
+	[!] For oneliner install, copy and paste the following code into a terminal:
 	*
 	$ wget https://github.com/s1l3nt78/sifter/releases/download/v9.5/sifter_9.5.deb && sudo dpkg -i sifter_9.5.deb
-	*
-	* To install from source, copy and paste the following into a terminal:
+	
+	
+	[!] To install from source, copy and paste the following into a terminal:
 	*
 	$ git clone https://github.com/s1l3nt78/sifter.git && cd sifter && bash install.sh
 
