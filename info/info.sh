@@ -329,6 +329,30 @@ exmodinfo(){
     echo -e "${NC}"
 }
 
+# OpSec
+opsec(){
+  cd /opt/sifter
+  echo -e "${RED}"
+  figlet -f mini "Operational Security"
+  echo -e "${ORNG}"
+  PS3='What tool would you like to check?'
+        options=("EventCleaner" "Back")
+        select opt in "${options[@]}"
+        do
+                case $opt in
+                    "EventCleaner")
+                            ${COM} /opt/sifter/info/eventcleaner.info &>/dev/null
+                            ;;
+
+                    "Back")
+                            cd /opt/sifter
+                            ./sifter -m
+                            ;;
+                esac
+        done
+    echo -e "${NC}"
+}
+
                                                                                 ############
                                                                                 #  RUNTIME #
                                                                                 ############
@@ -336,7 +360,7 @@ python3 /opt/sifter/extras/ban.py
 echo -e "${URED}Modules${NC}"
 echo -e "${ORNG}"
 PS3='What would you like to do?'
-        options=("Exploitation Tools" "Post-Exploitation" "Web Scanners & Network Modules" "Vulnerability Scanners" "Domain Recon Gathering" "HoneyPot Detection Systems" "Information Gatherers" "WebAppplication Scanners" "Main Menu" "Back" "Quit")
+        options=("Exploitation Tools" "Post-Exploitation" "Web Scanners & Network Modules" "Vulnerability Scanners" "Domain Recon Gathering" "HoneyPot Detection Systems" "Information Gatherers" "WebAppplication Scanners" "Operational Security" "Main Menu" "Back" "Quit")
         select opt in "${options[@]}"
         do
                 case $opt in
@@ -370,6 +394,10 @@ PS3='What would you like to do?'
                             
                         "Post-Exploitation")
                             postinfo
+                            ;;
+
+                        "Operational Security")
+                            opsec
                             ;;
 
                         "Main Menu")
