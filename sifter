@@ -891,6 +891,30 @@ webapps(){
         done
     echo -e "${NC}"
 }
+# OpSec
+opsec(){
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "Operational Security"
+    echo -e "${ORNG}"
+    PS3='What tool would you like to use?'
+        options=("EventCleaner" "Back")
+        select opt in "${options[@]}"
+        do
+                case $opt in
+                    "EventCleaner")
+                        echo -e "${ORNG}EvClean.zip (${YLW}containing ${LP}EventCleaner.exe ${YLW} & ${LP}unlocker.dll${YLW}) has been copied to your Desktop\nUpload it to your target session, unzip and execute in CLI for use."
+                        cp /opt/sifter/modules/opsec/EvClean.zip -t /home/$USER/Desktop
+                        sleep 5
+                        ;;
+
+                    "Back")
+                        modules
+                        ;;
+                esac
+        done
+    echo -e "${NC}"
+}
 # Host Check
 check_hosts(){
     TARLIST=$(cat /opt/sifter/files/host_list.txt | grep "eg. target.com")

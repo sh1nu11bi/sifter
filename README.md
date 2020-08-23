@@ -50,6 +50,7 @@
 &emsp;&ensp;- <a style="color: #729e1b" href="#">linPEAS</a><br />
 - <a style="color: #729e1b" href="#">DeadTrap</a> - Mobile Number OSINT<br />
 - <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
+- <a style="color: #729e1b" href="#">EventCleaner</a> - EventLog Cleaner for Windows, with some other useful functionality.<br />
 </em><br />
  </p>
 
@@ -269,6 +270,10 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
 - <a href="#">Dirb</a><br />
 - <a href="https://github.com/BullsEye0/dorks-eye">DorksEye</a><br />
+
+
+<strong>#Operational Security Tools</strong>
+- <a href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a><br />
 
 
 <strong>#Web Mini-Games</strong>
