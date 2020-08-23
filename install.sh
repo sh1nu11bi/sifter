@@ -1493,6 +1493,54 @@ t66(){
 	fi
 }
 
+##############
+# 67 # HFish #
+##############
+hfSYS(){
+	if [[ ${OSYS} == "l" ]] || [[ ${OSYS} == "linux" ]]; then
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-linux-amd64.tar.gz
+            sudo chown $USER:$USER HFish-0.6.3-linux-amd64.tar.gz
+			tar -xzvf HFish-0.6.3-linux-amd64.tar.gz
+            rm HFish-0.6.3-linux-amd64.tar.gz
+			mv HFish-0.6.3-linux-amd64/* HFish
+    elif [[ ${OSYS} == "m" ]] || [[ ${OSYS} == "mac" ]]; then
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-darwin-amd64.tar.gz
+            sudo chown $USER:$USER HFish-0.6.3-darwin-amd64.tar.gz
+			tar -xzvf HFish-0.6.3-darwin-amd64.tar.gz
+            rm HFish-0.6.3-darwin-amd64.tar.gz
+			mv HFish-0.6.3-darwin-amd64/* -t HFish
+    elif [[ ${OSYS} == "w" ]] || [[ ${OSYS} == "windows" ]]; then
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-win-amd64.tar.gz
+            sudo chown $USER:$USER HFish-0.6.3-win-amd64.tar.gz
+			tar -xzvf HFish-0.6.3-win-amd64.tar.gz
+            rm HFish-0.6.3-win-amd64.tar.gz
+			mv HFish-0.6.3-win-amd64/* -t HFish
+    else 
+            echo -e "${URED}You have selected an invalid option${NC}"
+            echo -e "${UPURPLE}Please choose a correct OS${NC}"
+			hfSYS
+    fi
+}
+t67(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for HFish ${NC}"
+	if [[ -d '/opt/HFish' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "HFish is already installed"
+		echo -e "${NC}"
+		cd /opt/HFish
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/hacklcx/HFish.git
+		sudo chown $USER:$USER -R HFish
+		echo -e "${YLW}Which system are you installing sifter on? (${ORNG}m${YLW}ac/${ORNG}l${YLW}inux/${ORNG}w${YLW}indows)\n${RED}NOTE: ${UBBLUE}sifter${NC}${W} works best on a Linux Distro${NC}"
+        read OSYS
+        hfSYS
+	fi	
+}
+
+
 #######################################################################################################################################
 ############
 # M # MISC #
@@ -1587,6 +1635,9 @@ t61										# SubFinder
 t62										# Pulsar
 t63										# reNgine
 t64										# Thoron
+t65										# F5 Big IP scanner
+t66										# DeadTrap
+t67										# HFish
 #########################################---------------
 tm										# Miscellaneous
 #########################################---------------
@@ -1612,7 +1663,7 @@ echo -e "${RED}=================================================================
 ######################################################################################################
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==               ######################
 ######################################################################################################
-echo -e "${YLW}####################"                                                    ########################
-echo -e "${ORNG}# Version :${LP} 9.3 ${YLW}r2${ORNG}#${NC}"                                  ##    VERSION INFO    ##
+echo -e "${YLW}#################"                                                    ########################
+echo -e "${ORNG}# Version :${LP} 9.5 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
 #echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                       ##    UPDATE CHECK    ##
-echo -e "${YLW}####################${NC}"                                               ########################
+echo -e "${YLW}#################${NC}"                                               ########################
