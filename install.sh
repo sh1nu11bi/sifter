@@ -1673,7 +1673,6 @@ sifter -h
 echo ""
 echo -e "${RED}==========================================================================================${NC}"
 echo -e "${W}Please edit ${LP}API keys ${W}in ${UBLUE}/opt/AttackSurfaceMapper/keylist.asm${NC}\n${W}for a better range of scan results"
-echo -e "please add your ${YLW}shodan-api key to ${UBLUE}modules/credmods/xray.sh${NC} ${W}by '${URED}SHODAN-API${NC}${W}'${NC}"
 echo -e "${RED}==========================================================================================${NC}"
 ######################################################################################################
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==               ######################
