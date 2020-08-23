@@ -812,11 +812,12 @@ t35(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for SayDog${NC}"
 	if [[ -d '/opt/saydog-framework' ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "SayDog is already installed"
-		echo -e "${NC}"
-	else
+		#echo -e "${ORNG}"
+		#figlet -f mini "SayDog is already installed"
+		#echo -e "${NC}"
+	#else
 		cd /opt/
+		sudo rm -rf /opt/saydog-framework
 		sudo git clone https://github.com/saydog/saydog-framework.git
 		cd saydog-framework
 		sudo sed -i "s/python/python3/g" run
