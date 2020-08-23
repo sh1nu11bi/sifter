@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Pearl-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-9.3-red">
+	<img align="center" src="https://img.shields.io/badge/Version-9.5-red">
 </p>
 
 # *Sifter*
@@ -26,7 +26,7 @@
 # Release
 
 	@Codename: Pearl
-	@Version : 9.3
+	@Version : 9.5
 
 <br>
 <em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.3.zip"><strong>here</strong></a></em>
@@ -48,15 +48,9 @@
 - PEAS <br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">winPEAS</a><br />
 &emsp;&ensp;- <a style="color: #729e1b" href="#">linPEAS</a><br />
-- <a style="color: #729e1b" href="#">Thoron</a> - Thoron Framework is a Linux post-exploitation framework<br />
-- <a style="color: #729e1b" href="#">CVE-2020-5902-Scanner</a> - Big IP Remote Execution Scanner.<br />
-&emsp;<strong>'--></strong>&emsp;&ensp;Database can be converted into an HTML report or a Neo4j graph database for visualizing the data.<br />
-- <a style="color: #729e1b" href="#">SubFinder</a> - Sub-Directory enumeration tool<br />
-- <a style="color: #729e1b" href="#">reNgine</a> - Automated reconnaissance framework for gathering information web applications.<br />
-- <a style="color: #729e1b" href="#">Pulsar</a> - Automated network footprint scanner for Red Teams, Pentesters and Bounty Hunters.<br />
-- <a style="color: #729e1b" href="#">Airgeddon</a> - WiFi Security ToolKit
+- <a style="color: #729e1b" href="#">DeadTrap</a> - Mobile Number OSINT<br />
+- <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
 </em><br />
-- <a style="color: #729e1b" href="https://github.com/Und3rf10w/kali-anonsurf">Anonsurf</a> - Added to Anonymise your system while running recon or OSINT tasks
  </p>
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -147,6 +141,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/martinvigo/email2phonenumber">E2P (Email2Phone)</a><br />
 - <a href="https://github.com/chrismaddalena/ODIN">ODIN</a><br />
 - <a href="https://github.com/itsmehacker/CardPwn">CardPwn</a><br />
+- <a href="https://github.com/Chr0m0s0m3s/DeadTrap">DeadTrap</a><br />
 
 
 <strong>#Domain Recon Gathering</strong>
@@ -237,7 +232,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/aswinmguptha/HoneyCaught">HoneyCaught</a><br />
 - <a href="https://github.com/MrSuicideParrot/SniffingBear">SniffingBear</a><br />
 - <a href="https://github.com/Phype/telnet-iot-honeypot">HoneyTel (telnet-iot-honeypot)</a><br />
-		
+- <a href="https://github.com/hacklcx/HFish">HFish</a><br />
+
 
 <strong>#Vulnerability Scanners</strong>
 - <a href="https://github.com/cloudflare/flan">Flan</a><br />

@@ -14,9 +14,21 @@ UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
 
+##
+# Initial Install
+##
+sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
+sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
+##
+
+##
+# FuzzyDander File Rename
+##
 if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
 	sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
 fi
+##
+
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
 sudo apt-get install -y python wmdocker graphviz kdialog privoxy python-dev python3-venv python-pip libpython3-stdlib python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker-compose python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy -y # sqlite3
 DCKR=$(sudo apt-get install docker-ce | grep "is not available")
@@ -1473,6 +1485,77 @@ t65(){
 	fi
 }
 
+#################
+# 66 # DeadTrap #
+#################
+t66(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for DeadTrap ${NC}"
+	if [[ -d '/opt/DeadTrap' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "DeadTrap is already installed"
+		echo -e "${NC}"
+		cd /opt/DeadTrap
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/Chr0m0s0m3s/DeadTrap.git
+		cd DeadTrap
+		sudo pip3 install .
+		mkdir -p $HOME/.config/deadtrap
+	fi
+}
+
+##############
+# 67 # HFish #
+##############
+hfSYS(){
+	if [[ ${OSYS} == "l" ]] || [[ ${OSYS} == "linux" ]]; then
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-linux-amd64.tar.gz
+            sudo tar -xzvf HFish-0.6.3-linux-amd64.tar.gz
+            sudo rm HFish-0.6.3-linux-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.3-*
+			sudo mv HFish-0.6.3-linux-amd64/* HFish
+			sudo rm -rf HFish-0.6.3-linux-amd64
+    elif [[ ${OSYS} == "m" ]] || [[ ${OSYS} == "mac" ]]; then
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-darwin-amd64.tar.gz
+            sudo tar -xzvf HFish-0.6.3-darwin-amd64.tar.gz
+            sudo rm HFish-0.6.3-darwin-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.3-*
+			sudo mv HFish-0.6.3-darwin-amd64/* -t HFish
+			sudo rm -rf HFish-0.6.3-darwin-amd64
+    elif [[ ${OSYS} == "w" ]] || [[ ${OSYS} == "windows" ]]; then
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-win-amd64.tar.gz
+            sudo tar -xzvf HFish-0.6.3-win-amd64.tar.gz
+            sudo rm HFish-0.6.3-win-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.3-win-amd64.tar.gz
+			sudo mv HFish-0.6.3-win-amd64/* -t HFish
+			sudo rm -rf HFish-0.6.3-win-amd64
+    else 
+            echo -e "${URED}OS not detected! ${NC}"
+            echo -e "${UPURPLE}Please select your OS: (l/m/w)${NC}"
+			read OSYS
+			hfSYS
+    fi
+}
+t67(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for HFish ${NC}"
+	if [[ -d '/opt/HFish' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "HFish is already installed"
+		echo -e "${NC}"
+		cd /opt/HFish
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/hacklcx/HFish.git
+		sudo chown $USER:$USER -R HFish
+		hfSYS
+	fi	
+}
+
+
 #######################################################################################################################################
 ############
 # M # MISC #
@@ -1567,6 +1650,9 @@ t61										# SubFinder
 t62										# Pulsar
 t63										# reNgine
 t64										# Thoron
+t65										# F5 Big IP scanner
+t66										# DeadTrap
+t67										# HFish
 #########################################---------------
 tm										# Miscellaneous
 #########################################---------------
@@ -1592,7 +1678,7 @@ echo -e "${RED}=================================================================
 ######################################################################################################
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==               ######################
 ######################################################################################################
-echo -e "${YLW}####################"                                                    ########################
-echo -e "${ORNG}# Version :${LP} 9.3 ${YLW}r2${ORNG}#${NC}"                                  ##    VERSION INFO    ##
+echo -e "${YLW}#################"                                                    ########################
+echo -e "${ORNG}# Version :${LP} 9.5 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
 #echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                       ##    UPDATE CHECK    ##
-echo -e "${YLW}####################${NC}"                                               ########################
+echo -e "${YLW}#################${NC}"                                               ########################

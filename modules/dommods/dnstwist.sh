@@ -11,9 +11,7 @@ listing(){
     echo -e "${NC}"
 }
 check(){
-    if [[ -d '/opt/sifter/results/DnsTwist' ]]; then
-        echo ""
-    else
+    if [[ ! -d '/opt/sifter/results/DnsTwist' ]]; then
         mkdir /opt/sifter/results/DnsTwist
     fi
 }
@@ -30,18 +28,17 @@ sleep 1
 echo -e "${LP}These scans will take a while but will finish\nPlease just be patient${NC}"
 mkdir /opt/sifter/results/DnsTwist/${TARGET}
 echo -e "${RED}Performing 'registered' test${NC}"
-sudo ./venv/bin/python3.8 dnstwist.py --registered ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/registered_test.csv
+xterm -e sudo ./venv/bin/python3.8 dnstwist.py --registered ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/registered_test.csv &
 echo -e "${RED}Performing ssdeep test${NC}"
-sudo ./venv/bin/python3.8 dnstwist.py --ssdeep ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/ssdeep_test.csv
+xterm -e sudo ./venv/bin/python3.8 dnstwist.py --ssdeep ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/ssdeep_test.csv &
 echo -e "${RED}Performing GeoIP test${NC}"
-sudo ./venv/bin/python3.8 dnstwist.py --geoip ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/geoip_test.csv
+xterm -e sudo ./venv/bin/python3.8 dnstwist.py --geoip ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/geoip_test.csv &
 echo -e "${RED}Performing mxcheck test${NC}"
-sudo ./venv/bin/python3.8 dnstwist.py --mxcheck ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/mxcheck_test.csv
+xterm -e sudo ./venv/bin/python3.8 dnstwist.py --mxcheck ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/mxcheck_test.csv &
 echo -e "${RED}Performing TLD test${NC}"
-sudo ./venv/bin/python3.8 dnstwist.py --tld dictionaries/common_tlds.dict ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/tld_test.csv
-echo -e "${W}"
-figlet -f mini "Done"
-echo -e "Results saved to /opt/sifter/results/DnsTwist/${TARGET}${NC}"
+xterm -e sudo ./venv/bin/python3.8 dnstwist.py --tld dictionaries/common_tlds.dict ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/tld_test.csv
+echo -e "${YLW}Scans will be done when all xTerm windows close${NC}"
+echo -e "${W}Results saved to /opt/sifter/results/DnsTwist/${TARGET}${NC}"
 sleep 10
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
