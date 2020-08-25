@@ -903,9 +903,7 @@ opsec(){
         do
                 case $opt in
                     "EventCleaner")
-                        echo -e "${ORNG}EvClean.zip (${YLW}containing ${LP}EventCleaner.exe ${YLW} & ${LP}unlocker.dll${YLW}) has been copied to your Desktop\nUpload it to your target session, unzip and execute in CLI for use."
-                        cp /opt/sifter/modules/opsec/EvClean.zip -t /home/$USER/Desktop
-                        sleep 5
+                        ./modules/opsec/evclean.sh
                         ;;
 
                     "Back")
