@@ -1547,6 +1547,8 @@ t67(){
 		cd /opt
 		sudo git clone https://github.com/hacklcx/HFish.git
 		sudo chown $USER:$USER -R HFish
+		echo -e "\n[${RED}!${NC}] ${ORNG}Pulling distro specific files... Please wait${NC}\n"
+		sleep 5
 		hfSYS
 	fi	
 }
