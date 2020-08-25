@@ -41,8 +41,8 @@ if [[ ${FIRSTTIME} == 1 ]]; then
 fi
 
 ##############################
-# Help Menu
-############
+# Help Menu #
+#############
 usage() {                                    	  # Function: Print a help message.
 	echo -e  "${YLW}Sifter Help Menu${NC}"
 	echo "*****************"
@@ -67,8 +67,12 @@ usage() {                                    	  # Function: Print a help message
     echo -e "${RED}# ${ORNG}sifter ${YLW}-z${NC} Opens the Module Information Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-h${NC} This Help Menu" 1>&2
 }
-# Information Modules
-# Enterprise Target Info
+#######################
+# Information Modules #
+#######################
+##########################
+# Enterprise Target Info #
+##########################
 cred_mods(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -108,7 +112,9 @@ cred_mods(){
             done
             echo -e "${NC}"
 }
-# Individual Target Info
+##########################
+# Individual Target Info #
+##########################
 phone_mods(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -160,7 +166,9 @@ phone_mods(){
             done
             echo -e "${NC}"
 }
-# Info Module-Category Selection
+##########################
+# Info Gathering Modules #
+##########################
 info_mods(){
     cd /opt/sifter
     echo -e "${RED}"
@@ -187,7 +195,9 @@ info_mods(){
         echo -e "${NC}"
 
 }
-# HoneyPot Scanners
+#####################
+# HoneyPot Scanners #
+#####################
 honey_mods(){
     cd /opt/sifter
     echo -e "${RED}"
@@ -224,14 +234,16 @@ honey_mods(){
         echo -e "${NC}"
 
 }
-# Domain Modules
+##################
+# Domain Modules #
+##################
 dom_mods(){
   cd /opt/sifter
   echo -e "${RED}"
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "Armory" "SayDog" "Spiderfoo7" "SubFinder" "Pulsar" "Back") 
+          options=("DnsTwist" "Armory" "SubDover" "Spiderfoo7" "SubFinder" "Pulsar" "Back") 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -241,6 +253,10 @@ dom_mods(){
 
                             "Armory")
                                 ./modules/dommods/armory.sh
+                                ;;
+
+                            "SubDover")
+                                ./modules/dommods/subdover.sh
                                 ;;
 
                             "Spiderfoo7")
@@ -262,7 +278,9 @@ dom_mods(){
             done
             echo -e "${NC}"
 }
-# Network Modules
+###################
+# Network Modules #
+###################
 net_mods(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -314,7 +332,9 @@ net_mods(){
             done
             echo -e "${NC}"
 }
-# Vulnerability Scanners
+##########################
+# Vulnerability Scanners #
+##########################
 vuln_mods(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -356,7 +376,9 @@ vuln_mods(){
             done
             echo -e "${NC}"
 }
-# Web-Focused Modules
+#######################
+# Web-Focused Modules #
+#######################
 web_mods(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -401,7 +423,9 @@ web_mods(){
             done
             echo -e "${NC}"
 }
-# Post Exploitation
+#####################
+# Post Exploitation #
+#####################
 post_ex(){
     echo -e "${RED}"
     figlet -f mini "Post-Exploitation"
@@ -464,7 +488,9 @@ post_ex(){
         done
     echo -e "${NC}"
 }
-# Password Tools
+##################
+# Password Tools #
+##################
 pass_tools(){
     cd /opt/sifter/modules/passtools
     echo -e "${RED}"
@@ -493,7 +519,9 @@ pass_tools(){
         done
     echo -e "${NC}"
 }
-# Exploitation Frameworks
+###########################
+# Exploitation Frameworks #
+###########################
 exframes(){
     echo -e "${RED}"
   figlet -f mini "Exploitation Frameworks"
@@ -549,7 +577,9 @@ exframes(){
         done
     echo -e "${NC}"               
 }
-# Exploitation Modules
+########################
+# Exploitation Modules #
+########################
 ex_mods(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -611,7 +641,9 @@ ex_mods(){
         done
     echo -e "${NC}"
 }
-# BruteForce Modules
+######################
+# BruteForce Modules #
+######################
 bruters(){
     cd /opt/sifter
     echo -e "${RED}"
@@ -639,7 +671,9 @@ bruters(){
         done
     echo -e "${NC}"
 }
-# Exploit Searchers
+#####################
+# Exploit Searchers #
+#####################
 search_tools(){
     cd /opt/sifter
     echo -e "${RED}"
@@ -669,7 +703,9 @@ search_tools(){
         done
     echo -e "${NC}"
 }
-# MicroSoft Exploitation
+##########################
+# MicroSoft Exploitation #
+##########################
 ms_tools(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -705,7 +741,9 @@ ms_tools(){
         done
     echo -e "${NC}"
 }
-# DDoS Tools
+##############
+# DDoS Tools #
+##############
 ddos(){
       cd /opt/sifter
       echo -e "${RED}"
@@ -735,8 +773,11 @@ ddos(){
             esac
         done
     echo -e "${NC}"
-}       
-# Router Tools
+}
+
+################
+# Router Tools #
+################
 routertools(){
     cd /opt/sifter
     echo -e "${RED}"
@@ -767,8 +808,11 @@ routertools(){
             esac
         done
     echo -e "${NC}"
-}      
-# Web Exploitation
+}
+
+####################
+# Web Exploitation #
+####################
 webex(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -805,7 +849,10 @@ webex(){
         done
     echo -e "${NC}"
 }
-# XSS Checkers
+
+################
+# XSS Checkers #
+################
 xssmods(){
     cd /opt/sifter
     echo -e "${RED}"
@@ -835,7 +882,10 @@ xssmods(){
           done
     echo -e "${NC}"
 }
-# Web-App Modules
+
+###################
+# Web-App Modules #
+###################
 webapps(){
   cd /opt/sifter
   echo -e "${RED}"
@@ -877,7 +927,10 @@ webapps(){
         done
     echo -e "${NC}"
 }
-# OpSec
+
+########################
+# Operational Security #
+########################
 opsec(){
     cd /opt/sifter
     echo -e "${RED}"
@@ -899,7 +952,10 @@ opsec(){
         done
     echo -e "${NC}"
 }
-# Host Check
+
+##############
+# Host Check #
+##############
 check_hosts(){
     TARLIST=$(cat /opt/sifter/files/host_list.txt | grep "eg. target.com")
     if [[ ${TARLIST} == "eg. target.com" ]]; then
@@ -959,8 +1015,11 @@ check_hosts(){
 	            sleep 5
         	    menu
 }
-# List Argument Options Settings Below
-# IP addition argument
+
+########################################
+# List Argument Options Settings Below #
+#         IP addition argument         #
+########################################
 ip_add(){
     echo -e "${W}Please enter your target:${NC}"
     read IP_ANS
@@ -979,7 +1038,10 @@ ip_q(){
         menu
     fi
 }
-# Result Options
+
+##################
+# Result Options #
+##################
 result_choices(){
     echo -e "${ORNG}"
     ls
@@ -1023,7 +1085,10 @@ result_choices(){
             done
     echo -e "${NC}"
 }
-# Results
+
+###########
+# Results #
+###########
 results(){
     echo -e "${YLW}Results"
     echo -e "${LP}*******${NC}"
@@ -1042,7 +1107,10 @@ results(){
     fi 
     cd /opt/sifter
 }
-# System Proxy Settings
+
+#########################
+# System Proxy Settings #
+#########################
 proxysystem(){
     echo -e "\n    ========================="
     if [[ ${STATUS} == "YES" ]]; then
@@ -1079,7 +1147,10 @@ proxysystem(){
         done
     echo -e "${NC}"
 }
-# Module Menu
+
+###############
+# Module Menu #
+###############
 modules(){
     echo -e "${URED}"
     figlet -f mini "Modules"
@@ -1183,7 +1254,10 @@ modules(){
             done
     echo -e "${NC}"
 }
-# Menu
+
+############
+#   Menu   #
+############
 menu(){
     if [[ ! -d "/opt/sifter/results" ]]; then
         mkdir /opt/sifter/results
@@ -1249,7 +1323,10 @@ menu(){
             done
     echo -e "${NC}"
 }
-# Update Arg
+
+##############
+# Update Arg #
+##############
 up_arg(){
     echo $1 >> temp.log
     echo $2 >> temp.log
@@ -1275,7 +1352,7 @@ update(){
     echo -e "${NC}"
    
     echo -e "${YLW}#################${NC}"                                                ########################
-    echo -e "${ORNG}# Version : ${LP}9.5 ${ORNG}#${NC}"                              ##    VERSION INFO    ##
+    echo -e "${ORNG}# Version : ${LP}9.8 ${ORNG}#${NC}"                              ##    VERSION INFO    ##
     echo -e "${YLW}#################${NC}"                                                ########################
 
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig

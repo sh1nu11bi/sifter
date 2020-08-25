@@ -51,6 +51,7 @@
 - <a style="color: #729e1b" href="#">DeadTrap</a> - Mobile Number OSINT<br />
 - <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
 - <a style="color: #729e1b" href="#">EventCleaner</a> - EventLog Cleaner for Windows, with some other useful functionality.<br />
+- <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />
 </em><br />
  </p>
 
@@ -60,6 +61,8 @@
 
 - Omega's repo has been removed, therefore unavailable for new clones.
  If you already had omega installed, you will still be able to use this module though.
+
+- SayDog has been removed due to being a program meant mainly for termux.
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -155,7 +158,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/depthsecurity/armory">Armory</a><br />
 - <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>
 - <a href="https://github.com/FooBallZ/pulsar">Pulsar</a><br />
-- <a href="https://github.com/projectdiscovery/subfinder">SubFinder</a><br />  
+- <a href="https://github.com/projectdiscovery/subfinder">SubFinder</a><br />
+- <a href="https://github.com/Technowlogy-Pushpender/subdover">SubDover</a><br />
 </p>
 
 
