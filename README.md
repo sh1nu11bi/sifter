@@ -153,7 +153,6 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <strong>#Domain Recon Gathering</strong>
 - <a href="https://github.com/elceef/dnstwist">DnsTwist</a><br />
 - <a href="https://github.com/depthsecurity/armory">Armory</a><br />
-- <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
 - <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>
 - <a href="https://github.com/FooBallZ/pulsar">Pulsar</a><br />
 - <a href="https://github.com/projectdiscovery/subfinder">SubFinder</a><br />  

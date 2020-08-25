@@ -243,10 +243,6 @@ dom_mods(){
                                 ./modules/dommods/armory.sh
                                 ;;
 
-                            "SayDog")
-                                sdog
-                                ;;
-
                             "Spiderfoo7")
                                 ./modules/dommods/spiderfoot.sh
                                 ;;
@@ -475,7 +471,7 @@ pass_tools(){
     figlet -f mini "Password Tools"
     echo -e "${ORNG}"
     PS3='Which tool would you like to use?'
-        options=("Mentalist" "DCipher" "Back")
+        options=("Mentalist" "dCipher" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -484,7 +480,7 @@ pass_tools(){
                     ./modules/passtools/Mentalist
                     ;;
 
-                "DCipher")
+                "dCipher")
                     echo -e "${YLW}Decipher hashes using online rainbow & lookup table attack services.${NC}"
                     ./modules/passtools/dcipher.sh
                     ;;
@@ -642,16 +638,6 @@ bruters(){
                 esac
         done
     echo -e "${NC}"
-}
-
-sdog(){
-    cd /opt/sifter
-    echo -e "${RED}"
-    figlet -f mini "SayDog"
-    echo -e "${ORNG}"
-    echo -e "${YLW}SayDog is a multi-purpose exploitation tool. Aimed at web Exploitation and Vuln-Analysis${NC}"
-    sleep 3
-    ./modules/dommods/sdog.sh
 }
 # Exploit Searchers
 search_tools(){
