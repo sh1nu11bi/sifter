@@ -1340,7 +1340,7 @@ cd /opt/sifter
 if [[ ${STLTH} == "--stealth" ]]; then
     echo -e "${LP}Starting Sifter in ${URED}Anonymouss${NC} ${LP}mode${NC}"
     sudo anonsurf start
-    STATUS='ON'
+    STATUS='YES'
     echo ""
     menu
 fi
