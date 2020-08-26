@@ -53,6 +53,7 @@
 - <a style="color: #729e1b" href="#">EventCleaner</a> - EventLog Cleaner for Windows, with some other useful functionality.<br />
 - <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />
 - <a style="color: #729e1b" href="#">Katana-DS (Dork Scanner)</a> - Google Hacking/Dorking with Tor support.<br />
+- <a style="color: #729e1b" href="#">Threat Dragon</a> - Threat Modelling framework.<br />
 </em><br />
  </p>
 
@@ -284,6 +285,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 <strong>#Operational Security Tools</strong>
 - <a href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a><br />
+- <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
 
 
 <strong>#Web Mini-Games</strong>

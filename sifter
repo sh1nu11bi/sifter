@@ -932,21 +932,27 @@ webapps(){
     echo -e "${NC}"
 }
 
-########################
-# Operational Security #
-########################
+############################################
+# Operational Security  & Threat Modelling #
+############################################
 opsec(){
     cd /opt/sifter
     echo -e "${RED}"
-    figlet -f mini "Operational Security"
+    figlet -f mini "Operational Security &"
+    echo -e "${YLW}"
+    figlet -f mini "Threat Modelling"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-        options=("EventCleaner" "Back")
+        options=("EventCleaner" "Threat Dragon" "Back")
         select opt in "${options[@]}"
         do
                 case $opt in
                     "EventCleaner")
                         ./modules/opsec/evclean.sh
+                        ;;
+
+                    "Threat Dragon")
+                        ./modules/opsec/tDragon.sh
                         ;;
 
                     "Back")

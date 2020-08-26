@@ -1597,6 +1597,27 @@ t69(){
 		sudo python3 -m pip install -r requirements.txt
 	fi
 }
+
+######################
+# 70 # Threat Dragon #
+######################
+t70(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Threat Dragon ${NC}"
+	if [[ -d '/opt/owasp-threat-dragon-desktop' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Threat Dragon is already installed"
+		echo -e "${NC}"
+		cd /opt/owasp-threat-dragon-desktop
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo npm install .
+	else
+		cd /opt
+		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop
+		cd owasp-threat-dragon-desktop
+		sudo npm install .
+	fi
+}
 #######################################################################################################################################
 ############
 # M # MISC #
@@ -1696,6 +1717,7 @@ t66										# DeadTrap
 t67										# HFish
 t68										# SubDover
 t69										# Katana-DS
+t70										# Threat Dragon
 #########################################---------------
 tm										# Miscellaneous
 #########################################---------------
