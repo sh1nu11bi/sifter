@@ -1391,7 +1391,7 @@ t61(){
 		sudo git clone https://github.com/projectdiscovery/subfinder.git
 		cd subfinder/cmd/subfinder
 		sudo go build .
-		mv subfinder /usr/local/sbin/
+		sudo mv subfinder /usr/local/sbin/
 	fi
 }
 
