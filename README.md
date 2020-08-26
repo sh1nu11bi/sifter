@@ -52,6 +52,7 @@
 - <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
 - <a style="color: #729e1b" href="#">EventCleaner</a> - EventLog Cleaner for Windows, with some other useful functionality.<br />
 - <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />
+- <a style="color: #729e1b" href="#">Katana-DS (Dork Scanner)</a> - Google Hacking/Dorking with Tor support.<br />
 </em><br />
  </p>
 
@@ -278,6 +279,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
 - <a href="#">Dirb</a><br />
 - <a href="https://github.com/BullsEye0/dorks-eye">DorksEye</a><br />
+- <a href="https://github.com/adnane-X-tebbaa/Katana">Katana-DS (Dork Scanner)</a><br />
 
 
 <strong>#Operational Security Tools</strong>

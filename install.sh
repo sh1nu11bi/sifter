@@ -1577,6 +1577,26 @@ t68(){
 	fi
 }
 
+##################
+# 69 # Katana-DS #
+##################
+t69(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Katana-DS ${NC}"
+	if [[ -d '/opt/Katana' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Katana-DS is already installed"
+		echo -e "${NC}"
+		cd /opt/Katana
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo python3.8 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/adnane-X-tebbaa/Katana
+		cd Katana
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
 #######################################################################################################################################
 ############
 # M # MISC #
@@ -1675,6 +1695,7 @@ t65										# F5 Big IP scanner
 t66										# DeadTrap
 t67										# HFish
 t68										# SubDover
+t69										# Katana-DS
 #########################################---------------
 tm										# Miscellaneous
 #########################################---------------
