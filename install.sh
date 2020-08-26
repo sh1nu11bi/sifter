@@ -37,6 +37,9 @@ if [[ -d /opt/sifter ]]; then
 	figlet -f mini "Sifter is already installed."
 	echo -e "${NC}"
 	sudo chown $USER:$USER -R /opt/sifter
+	sudo cp sifter -t /usr/sbin
+	sudo chown $USER:$USER /usr/sbin/sifter
+	chmod +x /usr/sbin/sifter
 else
 	pwd && cd ..
 	sudo mv sifter -t /opt
@@ -797,12 +800,13 @@ t34(){
 		sudo python3 pywin32_postinstall.py -install
 		#python3 -m pip install pywin32
 		#sudo python3 -m pip install pywin32
-		zip credH.zip *.py
+		sudo zip credH.zip *.py
+		sudo chown $USER:$USER credH.zip
 	fi
 }
 
 ###############
-# 35 # SayDog #
+# 35 # SayDog # [!] Removed *
 ###############
 t35(){
 	echo -e "${W}===========================================================================================${NC}"
@@ -1214,7 +1218,7 @@ t53(){
 		REM='/home/dw1/Tools/LinkFinder/linkfinder.py'
 		INS='/opt/LinkFinder/linkfinder.py'
 		sudo sed -i  "s/${REM}/${INS}/g" /opt/findom-xss/findom-xss.sh
-		echo -e "${RED}Installing finDOM-XSS Dependancies\n${YLW}##################\n# :LinkFinder #\n##################${NC}"
+		echo -e "${RED}Installing finDOM-XSS Dependancies\n${NC}[${RED}!${NC}] ${YLW}:LinkFinder${NC}"
 		cd /opt/
 		sudo git clone https://github.com/GerbenJavado/LinkFinder.git
 		cd LinkFinder
