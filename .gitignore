@@ -3,4 +3,3 @@
 *.json
 *.suo
 .vs/sifter/config/applicationhost.config
-modules/exmods/fuzzydander.sh
