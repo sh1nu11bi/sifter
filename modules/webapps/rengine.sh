@@ -23,7 +23,9 @@ echo "   ================================"
 xterm -e sudo make up & 
 echo -e "${YLW}When firefox opens reNgine may not be finished building\nJust wait until the reNgine build in xterm has finished then reload firefox${NC}"
 sleep 420
-xterm -e firefox https://127.0.0.1:9443 && sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
+xterm -e firefox https://127.0.0.1:9443 
+sudo make stop
+cd /opt/sifter
 sleep 10
 echo "   ================================"
 
