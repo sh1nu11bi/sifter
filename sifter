@@ -15,7 +15,6 @@ BIGreen='\033[1;92m'
 BIYellow='\033[1;93m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
-FULL='YES'
 STATUS='NO'
 ARG=$2
 STLTH=$1
@@ -36,9 +35,9 @@ first_inst(){
         bash /opt/sifter/install.sh
 }
 
-if [[ ${FIRSTTIME} == 1 ]]; then
+#if [[ ${FIRSTTIME} == 1 ]]; then
         first_inst
-fi
+#fi
 
 ##############################
 # Help Menu #
