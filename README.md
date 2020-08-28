@@ -1,5 +1,5 @@
 <img align="left" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet"><a href="https://www.codefactor.io/repository/github/s1l3nt78/sifter"><img align="right" src="https://www.codefactor.io/repository/github/s1l3nt78/sifter/badge" alt="CodeFactor" /></a><br/>
-<p align="center"><img align="center" src="https://img.shields.io/badge/-The_Dead_Bunny_Collective-green"></p>
+<p align="center"><img align="center" src="https://img.shields.io/badge/Collective-The_Dead_Bunny_Club-green"></p>
 <br />
 <p align="center">
 	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
@@ -15,7 +15,7 @@
 # *Sifter*
 <strong><em>s1l3nt78</em></strong>
 <br>
-<strong><em>~The Dead Bunny Collective~</em></strong>
+<strong><em>~The Dead Bunny Club~</em></strong>
 <br />
 *Because enumeration is key*
 <br>
@@ -39,10 +39,25 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
+# Additions:
+<p><em>
+- <a style="color: #729e1b" href="#">DeadTrap</a> - Mobile Number OSINT<br />
+- <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
+- <a style="color: #729e1b" href="#">EventCleaner</a> - EventLog Cleaner for Windows, with some other useful functionality.<br />
+- <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />
+- <a style="color: #729e1b" href="#">Katana-DS (Dork Scanner)</a> - Google Hacking/Dorking with Tor support.<br />
+- <a style="color: #729e1b" href="#">Threat Dragon</a> - Threat Modelling framework.<br />
+</em><br />
+ </p>
+
+---------------------------------------------------------------------------------------------------------------------
+
 # Removed
 
 - Omega's repo has been removed, therefore unavailable for new clones.
  If you already had omega installed, you will still be able to use this module though.
+
+- SayDog has been removed due to being a program meant mainly for termux.
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -136,10 +151,10 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <strong>#Domain Recon Gathering</strong>
 - <a href="https://github.com/elceef/dnstwist">DnsTwist</a><br />
 - <a href="https://github.com/depthsecurity/armory">Armory</a><br />
-- <a href="https://github.com/saydog/saydog-framework">SayDog</a><br />
 - <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>
 - <a href="https://github.com/FooBallZ/pulsar">Pulsar</a><br />
-- <a href="https://github.com/projectdiscovery/subfinder">SubFinder</a><br />  
+- <a href="https://github.com/projectdiscovery/subfinder">SubFinder</a><br />
+- <a href="https://github.com/Technowlogy-Pushpender/subdover">SubDover</a><br />
 </p>
 
 
@@ -258,10 +273,12 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/Ekultek/Zeus-Scanner">Zeus-Scanner</a><br />
 - <a href="#">Dirb</a><br />
 - <a href="https://github.com/BullsEye0/dorks-eye">DorksEye</a><br />
+- <a href="https://github.com/adnane-X-tebbaa/Katana">Katana-DS (Dork Scanner)</a><br />
 
 
 <strong>#Operational Security Tools</strong>
 - <a href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a><br />
+- <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
 
 
 <strong>#Web Mini-Games</strong>
@@ -297,4 +314,3 @@ For ideas or collaboration requests on future projects., contact details can be 
 
 	  <!--#############           VGhlIERlYWQgQnVubnkgQ2x1Yg==           #############--!>
 	  
- ---------------------------------------------------------------------------------------------------------------------

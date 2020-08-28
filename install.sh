@@ -15,13 +15,6 @@ UBLUE='\033[4;34m'
 URED='\033[4;31m'
 
 ##
-# Initial Install
-##
-sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
-sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
-##
-
-##
 # FuzzyDander File Rename
 ##
 if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
@@ -36,9 +29,7 @@ if [[ ${DCKR} == "Package docker-ce is not available, but is referred to by anot
 	sudo apt-get install docker docker.io
 fi
 sudo apt --fix-broken install
-#wget http://ftp.us.debian.org/debian/pool/main/p/python-mysqldb/python-mysqldb_1.3.10-2_amd64.deb
-#sudo dpkg -i python-mysqldb_1.3.10-2_amd64.deb
-#rm python-mysqldb_1.3.10-2_amd64.deb
+###################
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
@@ -46,6 +37,9 @@ if [[ -d /opt/sifter ]]; then
 	figlet -f mini "Sifter is already installed."
 	echo -e "${NC}"
 	sudo chown $USER:$USER -R /opt/sifter
+	sudo cp sifter -t /usr/sbin
+	sudo chown $USER:$USER /usr/sbin/sifter
+	chmod +x /usr/sbin/sifter
 else
 	pwd && cd ..
 	sudo mv sifter -t /opt
@@ -56,7 +50,12 @@ else
 	sudo chmod +x -R /opt/sifter/modules
 	sleep 2
 fi
-
+##
+# Initial Install
+##
+sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
+sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
+##
 echo -e "${RED}"
 echo -e "Starting Download & Update of external dependancies.\nThis will take some time"
 echo -e "${YLW}When ready please hit ${UPURPLE}ENTER${NC}${YLW}, or ${UPURPLE}CTRL + C${NC}${YLW} to quit${NC}"
@@ -801,12 +800,13 @@ t34(){
 		sudo python3 pywin32_postinstall.py -install
 		#python3 -m pip install pywin32
 		#sudo python3 -m pip install pywin32
-		zip credH.zip *.py
+		sudo zip credH.zip *.py
+		sudo chown $USER:$USER credH.zip
 	fi
 }
 
 ###############
-# 35 # SayDog #
+# 35 # SayDog # [!] Removed *
 ###############
 t35(){
 	echo -e "${W}===========================================================================================${NC}"
@@ -1218,7 +1218,7 @@ t53(){
 		REM='/home/dw1/Tools/LinkFinder/linkfinder.py'
 		INS='/opt/LinkFinder/linkfinder.py'
 		sudo sed -i  "s/${REM}/${INS}/g" /opt/findom-xss/findom-xss.sh
-		echo -e "${RED}Installing finDOM-XSS Dependancies\n${YLW}##################\n# :LinkFinder #\n##################${NC}"
+		echo -e "${RED}Installing finDOM-XSS Dependancies\n${NC}[${RED}!${NC}] ${YLW}:LinkFinder${NC}"
 		cd /opt/
 		sudo git clone https://github.com/GerbenJavado/LinkFinder.git
 		cd LinkFinder
@@ -1391,7 +1391,7 @@ t61(){
 		sudo git clone https://github.com/projectdiscovery/subfinder.git
 		cd subfinder/cmd/subfinder
 		sudo go build .
-		mv subfinder /usr/local/sbin/
+		sudo mv subfinder /usr/local/sbin/
 	fi
 }
 
@@ -1551,11 +1551,73 @@ t67(){
 		cd /opt
 		sudo git clone https://github.com/hacklcx/HFish.git
 		sudo chown $USER:$USER -R HFish
+		echo -e "\n[${RED}!${NC}] ${ORNG}Pulling distro specific files... Please wait${NC}\n"
+		sleep 5
 		hfSYS
 	fi	
 }
+#################
+# 68 # SubDover #
+#################
+t68(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for SubDover ${NC}"
+	if [[ -d '/opt/subdover' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "SubDover is already installed"
+		echo -e "${NC}"
+		cd /opt/subdover
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo python3.8 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/Technowlogy-Pushpender/subdover
+		cd subdover
+		sudo python3.8 -m pip install -r requirements.txt
+	fi
+}
 
+##################
+# 69 # Katana-DS #
+##################
+t69(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Katana-DS ${NC}"
+	if [[ -d '/opt/Katana' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Katana-DS is already installed"
+		echo -e "${NC}"
+		cd /opt/Katana
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo python3.8 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/adnane-X-tebbaa/Katana
+		cd Katana
+		sudo python3 -m pip install -r requirements.txt
+	fi
+}
 
+######################
+# 70 # Threat Dragon #
+######################
+t70(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Threat Dragon ${NC}"
+	if [[ -d '/opt/owasp-threat-dragon-desktop' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Threat Dragon is already installed"
+		echo -e "${NC}"
+		cd /opt/owasp-threat-dragon-desktop
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo npm install .
+	else
+		cd /opt
+		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop
+		cd owasp-threat-dragon-desktop
+		sudo npm install .
+	fi
+}
 #######################################################################################################################################
 ############
 # M # MISC #
@@ -1620,14 +1682,14 @@ t31										# XSS-Freak
 t32										# CredNinja
 t33										# Impulse
 t34										# CredHarvester
-t35										# SayDog
+#t35										# SayDog
 t36										# Dork-Eye
 t37										# Mentalist
 t38										# dCipher
 t39										# Honey-Tel
 t40										# XSS-Strike
 t41										# MkCheck
-#t42									# RouterSploit (done::MkCheck)
+#t42										# RouterSploit (done::MkCheck)
 t43										# DnsTwist
 t44										# Espionage
 t45										# KatanaFramework
@@ -1637,7 +1699,7 @@ t48										# theHarvester
 t49										# Spiderfoot
 t50										# Email2Phone
 t51										# Intrigue-Core
-#t52									# Optiva-Framework (suspended::Runtime Error)
+#t52										# Optiva-Framework (suspended::Runtime Error)
 t53										# finDOM-XSS
 t54										# ODIN
 t55										# OSINT-Framework
@@ -1653,6 +1715,9 @@ t64										# Thoron
 t65										# F5 Big IP scanner
 t66										# DeadTrap
 t67										# HFish
+t68										# SubDover
+t69										# Katana-DS
+t70										# Threat Dragon
 #########################################---------------
 tm										# Miscellaneous
 #########################################---------------
@@ -1678,6 +1743,6 @@ echo -e "${RED}=================================================================
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==               ######################
 ######################################################################################################
 echo -e "${YLW}#################"                                                    ########################
-echo -e "${ORNG}# Version :${LP} 9.5 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
+echo -e "${ORNG}# Version :${LP} 9.8 ${ORNG}#${NC}"                                  ##    VERSION INFO    ##
 #echo -e "${ORNG}# Revision: ${LP}2  ${ORNG}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}#################${NC}"                                               ########################
