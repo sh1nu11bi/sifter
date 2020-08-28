@@ -7,13 +7,13 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 #FIRST='YES'
 
-cd /root/yuki/
+cd /root/yuki2/
 
 echo -e "${ORNG}"
 figlet -f small "Yuki-Chan"
 echo -e "${NC}"
 echo -e "${YLW}"
-cat files/pingtest.pass
+cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site\nOr enter as per example above${NC}"
 echo "================================================================================================="
