@@ -36,9 +36,9 @@ first_inst(){
         bash /opt/sifter/install.sh
 }
 
-if [[ ${FIRSTTIME} == 1 ]]; then
+#if [[ ${FIRSTTIME} == 1 ]]; then
         first_inst
-fi
+#fi
 
 ##############################
 # Help Menu #
