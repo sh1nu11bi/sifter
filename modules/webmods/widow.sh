@@ -22,9 +22,9 @@ do
     case $opts in
         "Crawl the target domain & fuzz all parameters (Verbose enabled)")
             echo -e "${YLW}"
-            if [[ -d files/pingtest_pass.txt ]]; then
+            if [[ -f /opt/sifter/files/pingtest_pass.txt ]]; then
                 echo -e "${YLW}"
-                cat files/pingtest_pass.txt
+                cat /opt/sifter/files/pingtest_pass.txt
                 echo -e "${NC}"
                 echo -e "${W}Please copy and paste in your target site${NC}"
             else
@@ -44,7 +44,7 @@ do
 
         "Fuzz all GET parameters for common OWASP Vulns (Verbose enabled)")
             echo -e "${YLW}"
-            cat files/pingtest_pass.txt
+            cat /opt/sifter/files/pingtest_pass.txt
             echo -e "${NC}"
             echo -e "${W}Please enter your target domain and trailing directories${NC}"
 	    echo -e "${LP}ex. http://target.com/wp-content/uploads/${NC}"

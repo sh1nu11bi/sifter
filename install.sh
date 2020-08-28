@@ -810,19 +810,29 @@ t34(){
 ###############
 t35(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for SayDog${NC}"
-	if [[ -d '/opt/saydog-framework' ]]; then
-		#echo -e "${ORNG}"
-		#figlet -f mini "SayDog is already installed"
-		#echo -e "${NC}"
-	#else
+	echo -e "${YLW}Checking for iKy ${NC}"
+	if [[ -d '/opt/iKy' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "iKy is already installed"
+		echo -e "${NC}"
+	else
 		cd /opt/
-		sudo rm -rf /opt/saydog-framework
-		sudo git clone https://github.com/saydog/saydog-framework.git
-		cd saydog-framework
-		sudo sed -i "s/python/python3/g" run
-		sudo chmod +x install
-		sudo ./install
+		sudo git clone https://github.com/kennbroorg/iKy
+		cd iKy
+		sudo wget http://download.redis.io/redis-stable.tar.gz
+		sudo tar xvzf redis-stable.tar.gz
+		cd redis-stable
+		sudo make
+		sudo make install
+		cd ..
+		sudo python3.8 -m pip install -r requirements.txt
+		sudo wget https://nodejs.org/dist/v12.18.3/node-v12.18.3-linux-x64.tar.xz
+		sudo tar xvf node-v12.18.3-linux-x64.tar.xz
+		sudo mv node-v12.18.3-linux-x64 /usr/share/node12
+		sudo rm node-v12.18.3-linux-x64.tar.xz
+		echo "export PATH=/usr/share/node12/bin:$PATH" >> /home/$USER/.bashrc
+		cd frontend
+		npm install
 	fi
 }
 
@@ -1688,7 +1698,7 @@ t31										# XSS-Freak
 t32										# CredNinja
 t33										# Impulse
 t34										# CredHarvester
-#t35										# SayDog
+t35										# iKy
 t36										# Dork-Eye
 t37										# Mentalist
 t38										# dCipher

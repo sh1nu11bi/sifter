@@ -19,8 +19,8 @@ xterm -e python3 app.py
 sleep 3
 cd /opt/iKy/frontend
 xterm -e npm start
-sleep 5
-firefox http://127.0.0.1:4200
+sleep 10
+xterm -e firefox http://127.0.0.1:4200 &
 
 echo -e "${W}======================================================${NC}"
 

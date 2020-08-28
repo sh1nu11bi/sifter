@@ -44,7 +44,7 @@ wpscan(){
 	echo -e "${RED}"
 	figlet -f mini "WPscan"
 	echo -e "${YLW}"
-	cat files/pingtest.pass
+	cat /opt/sifter/files/pingtest.pass
 	echo -e "${NC}"
 	echo -e "${W}Please copy and paste in your target site${NC}"
 	read TARGET
