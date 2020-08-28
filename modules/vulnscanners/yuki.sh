@@ -7,7 +7,7 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 #FIRST='YES'
 
-cd /root/yuki/
+cd /root/yuki2/
 
 echo -e "${ORNG}"
 figlet -f small "Yuki-Chan"
