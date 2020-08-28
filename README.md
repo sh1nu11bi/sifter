@@ -40,14 +40,7 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 # Additions:
-
-- <a style="color: #729e1b" href="#">Potatoes 'n PEAS</a> - Used for Privilege elevation in a low level session on a target machine<br />
-- Potatoes <br />
-&emsp;&ensp;- <a style="color: #729e1b" href="#">BadPotato</a><br />
-&emsp;&ensp;- <a style="color: #729e1b" href="#">SweetPotato</a><br />
-- PEAS <br />
-&emsp;&ensp;- <a style="color: #729e1b" href="#">winPEAS</a><br />
-&emsp;&ensp;- <a style="color: #729e1b" href="#">linPEAS</a><br />
+<p><em>
 - <a style="color: #729e1b" href="#">DeadTrap</a> - Mobile Number OSINT<br />
 - <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
 - <a style="color: #729e1b" href="#">EventCleaner</a> - EventLog Cleaner for Windows, with some other useful functionality.<br />
