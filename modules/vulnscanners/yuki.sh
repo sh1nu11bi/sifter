@@ -13,7 +13,7 @@ echo -e "${ORNG}"
 figlet -f small "Yuki-Chan"
 echo -e "${NC}"
 echo -e "${YLW}"
-cat files/pingtest.pass
+cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site\nOr enter as per example above${NC}"
 echo "================================================================================================="
