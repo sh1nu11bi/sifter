@@ -1568,12 +1568,15 @@ t68(){
 		echo -e "${NC}"
 		cd /opt/subdover
 		sudo git fetch && sudo git pull &>/dev/null
-		sudo python3.8 -m pip install -r requirements.txt
+		sudo source env/bin/activate
+		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/Technowlogy-Pushpender/subdover
 		cd subdover
-		sudo python3.8 -m pip install -r requirements.txt
+		sudo python3.8 -m venv env
+		sudo source env/bin/activate
+		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1589,12 +1592,15 @@ t69(){
 		echo -e "${NC}"
 		cd /opt/Katana
 		sudo git fetch && sudo git pull &>/dev/null
-		sudo python3.8 -m pip install -r requirements.txt
+		sudo source env/bin/activate
+		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/adnane-X-tebbaa/Katana
 		cd Katana
-		sudo python3 -m pip install -r requirements.txt
+		sudo python3.8 -m venv env
+		sudo source env/bin/activate
+		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
 	fi
 }
 
