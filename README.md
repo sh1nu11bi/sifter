@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Pearl-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-9.5-red">
+	<img align="center" src="https://img.shields.io/badge/Version-9.8-red">
 </p>
 
 # *Sifter*
@@ -26,12 +26,12 @@
 # Release
 
 	@Codename: Pearl
-	@Version : 9.5
+	@Version : 9.8
 
 <br>
-<em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.5.zip"><strong>here</strong></a></em>
+<em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.8.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Pearls</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v9.5/sifter_9.5.deb"><strong>here</strong></a></em>
+<em>[<strong>Pearls</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v9.8/sifter_9.8.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
