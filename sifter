@@ -50,13 +50,14 @@ usage() {                                    	  # Function: Print a help message
 	echo -e "${RED}# ${ORNG}sifter${NC}    runs the programs bringing up the menu in a cli environment"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-c${NC} will check the exsiting hosts in the hostlist"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-a${NC} 'target' must be added with '' then is automattically appended to host file"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-e${NC} Opens the Exploitation Module"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-i${NC} Opens the Info-based Module menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-d${NC} Opens the Domain Focused Modules"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-n${NC} Opens the Network Mapping Modules menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-w${NC} Opens the Website Focused Modules"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-q${NC} Opens the Router Focused Modules"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-b${NC} Opens the Web-App Focused Module menu"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-e${NC} Opens the Exploitation Module Menu"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-i${NC} Opens the Info-based Module Menu"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-d${NC} Opens the Domain Focused Module Menu"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-n${NC} Opens the Network Mapping Module Menu"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-w${NC} Opens the Website Focused Module Menu"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-o${NC} Opens the OpSec & Threat Analysis Module Menu"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-q${NC} Opens the Router Focused Module Menu"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-b${NC} Opens the Web-App Focused Module Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-v${NC} Opens the Vulnerability Scanning Module Menu"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-m${NC} Opens the Module Menu directly"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-p${NC} Opens the password tools for quick passlist generation or hash decryption"
@@ -1425,7 +1426,7 @@ if [[ ${STLTH} == "--stealth" ]]; then
     menu
 fi
 
-while getopts "a:bndwirmepcvquhz" options
+while getopts "a:bndwirmeopcvquhz" options
     do            	                                        # Loop: Get the next option;
     case "${options}" in                                	# use silent error checking;
                                                             # option a takes 1 arguments.
@@ -1504,6 +1505,13 @@ while getopts "a:bndwirmepcvquhz" options
             echo -e "${NC}"
             routertools
             ;;
+	    
+	o)
+	    echo -e "${LP}"
+	    figlet -f mini "OpSec & Threat Analysis"
+	    echo -e "${NC}"
+	    opsec
+	    ;;
 
         w)
             echo -e "${LP}"
