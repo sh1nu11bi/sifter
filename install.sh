@@ -23,7 +23,7 @@ fi
 ##
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker graphviz kdialog privoxy python-dev python3-venv python-pip libpython3-stdlib python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker-compose python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy -y # sqlite3
+sudo apt-get install -y python wmdocker graphviz kdialog privoxy python-dev python3-venv python-pip libpython3-stdlib libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev libidn11-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker-compose python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 python-numpy -y # sqlite3
 DCKR=$(sudo apt-get install docker-ce | grep "is not available")
 if [[ ${DCKR} == "Package docker-ce is not available, but is referred to by another package." ]]; then
 	sudo apt-get install docker docker.io
