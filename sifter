@@ -22,23 +22,23 @@ cd /opt/sifter
 ##############################
 # ! # First Time Deb Install #
 ##############################
-FIRSTTIME='1'
+#FIRSTTIME='1'
 ###
-first_inst(){
-        echo -e "${INV}${LGRY}"
-        python3 extras/ban.py
-        python3 extras/ban2.py
-        echo -e "${NC}"
-        echo -e "\n${LGRY}####################################"
-        echo -e "# ${NC}[${RED}!${NC}]${ORNG}NOTE:${YLW} Running Initial Install ${LGRY}#${NC}"
-        echo -e "${LGRY}####################################${NC}\n"
-        bash /opt/sifter/install.sh
+#first_inst(){
+#        echo -e "${INV}${LGRY}"
+#        python3 extras/ban.py
+#        python3 extras/ban2.py
+#        echo -e "${NC}"
+#        echo -e "\n${LGRY}####################################"
+#        echo -e "# ${NC}[${RED}!${NC}]${ORNG}NOTE:${YLW} Running Initial Install ${LGRY}#${NC}"
+#        echo -e "${LGRY}####################################${NC}\n"
+#        bash /opt/sifter/install.sh
         ##
         # Initial Install
         ##
-        sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
-        sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
-}
+#        sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
+#        sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
+#}
 
 #if [[ ${FIRSTTIME} == '1' ]]; then
 #        first_inst
