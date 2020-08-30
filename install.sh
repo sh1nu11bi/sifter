@@ -803,9 +803,9 @@ t34(){
 	fi
 }
 
-###############
-# 35 # SayDog # [!] Removed *
-###############
+############
+# 35 # iKy #
+############
 t35(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for iKy ${NC}"
@@ -830,7 +830,7 @@ t35(){
 		sudo rm node-v12.18.3-linux-x64.tar.xz
 		echo "export PATH=/usr/share/node12/bin:$PATH" >> /home/$USER/.bashrc
 		cd frontend
-		npm install
+		sudo npm install
 	fi
 }
 
