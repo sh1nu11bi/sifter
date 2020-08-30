@@ -52,6 +52,13 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
+# Coming in Version 10
+
+- XSS Tools will be moved to their own Module set.
+- SQL Injection & SQLi Vuln Scanners will be incorporated into this Module Set
+
+---------------------------------------------------------------------------------------------------------------------
+
 # Removed
 
 - Omega's repo has been removed, therefore unavailable for new clones.
