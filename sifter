@@ -864,39 +864,6 @@ webex(){
     echo -e "${NC}"
 }
 
-################
-# XSS Checkers #
-################
-xssmods(){
-    cd /opt/sifter
-    echo -e "${RED}"
-    figlet -f mini "WebAppplication Scanners"
-    echo -e "${ORNG}"
-    PS3='What tool would you like to use?'
-          options=("XSS-Strike" "XSS-Freak" "finDOM-XSS" "Back")
-          select opt in "${options[@]}"
-          do
-            case $opt in
-                "XSS-Strike")
-                    ./modules/webapps/xsstrike.sh
-                    ;;
-
-                "XSS-Freak")
-                    ./modules/webapps/xssfreak.sh
-                    ;;
-
-                "finDOM-XSS")
-                    ./modules/webapps/findom.sh
-                    ;;
-
-                "Back")
-                    modules
-                    ;;
-            esac
-          done
-    echo -e "${NC}"
-}
-
 ###################
 # Web-App Modules #
 ###################
@@ -926,10 +893,6 @@ webapps(){
                             ./modules/webapps/onefind.sh
                             ;;
 
-                        "XSS")
-                            xssmods
-                            ;;
-
                         "reNgine")
                             ./modules/webapps/rengine.sh
                             ;;
@@ -942,6 +905,93 @@ webapps(){
     echo -e "${NC}"
 }
 
+################
+# XSS Checkers #
+################
+xssmods(){
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "WebAppplication Scanners"
+    echo -e "${ORNG}"
+    PS3='What tool would you like to use?'
+          options=("XSS-Strike" "XSS-Freak" "finDOM-XSS" "Back")
+          select opt in "${options[@]}"
+          do
+            case $opt in
+                "XSS-Strike")
+                    ./modules/xss_sql/xsstrike.sh
+                    ;;
+
+                "XSS-Freak")
+                    ./modules/xss_sql/xssfreak.sh
+                    ;;
+
+                "finDOM-XSS")
+                    ./modules/xss_sql/findom.sh
+                    ;;
+
+                "Back")
+                    modules
+                    ;;
+            esac
+          done
+    echo -e "${NC}"
+}
+
+################
+# SQLinjection #
+################
+sqlmods(){
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "WebAppplication Scanners"
+    echo -e "${ORNG}"
+    PS3='What tool would you like to use?'
+          options=("WhiteWidow" "Back")
+          select opt in "${options[@]}"
+          do
+            case $opt in
+                "WhiteWidow")
+                    ./modules/xss_sql/whitewidow.sh
+                    ;;
+
+                "Back")
+                    modules
+                    ;;
+            esac
+          done
+    echo -e "${NC}"
+}
+
+#############
+# XSS & SQL #
+#############
+xss_sql_mods(){
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "Cross-Site Scripting & SQLinjection"
+    echo -e "${ORNG}"
+    PS3='Which module category would you like to use?'
+            options=("Cross-Site Scripting" "SQLinjection" "Back")
+            select opt in "${options[@]}"
+            do
+                    case $opt in
+                            "Cross-Site Scripting")
+                                xssmods
+                                ;;
+
+                            "SQLinjection")
+                                sqlmods
+                                ;;
+
+                            "Back")
+                                modules
+                                ;;
+                    esac
+            done
+        echo -e "${NC}"
+
+}
 ############################################
 # Operational Security  & Threat Modelling #
 ############################################

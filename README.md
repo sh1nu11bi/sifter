@@ -29,9 +29,9 @@
 	@Version : 10
 
 <br>
-<em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.zip"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Pearls</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10/sifter_10.deb"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10/sifter_10.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -47,7 +47,7 @@
 - <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />
 - <a style="color: #729e1b" href="#">Katana-DS (Dork Scanner)</a> - Google Hacking/Dorking with Tor support.<br />
 - <a style="color: #729e1b" href="#">Threat Dragon</a> - Threat Modelling framework.<br />
-
+<br />
 - <a style="color: #729e1b" href="#">Cross-Site Scripting & SQLinjection</a><br />
 - <a style="color: #729e1b" href="#">WhiteWidow</a> - Threat Modelling framework.<br />
 </em><br />
@@ -271,7 +271,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/adnane-X-tebbaa/Katana">Katana-DS (Dork Scanner)</a><br />
 
 
-<strong>#Operational Security Tools</strong>
+<strong>#Operational Security Tools & Threat Analysis</strong>
 - <a href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a><br />
 - <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
 
