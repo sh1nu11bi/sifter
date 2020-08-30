@@ -22,7 +22,7 @@ cd /opt/sifter
 ##############################
 # ! # First Time Deb Install #
 ##############################
-#FIRSTTIME='1'
+FIRSTTIME=1
 ###
 #first_inst(){
 #        echo -e "${INV}${LGRY}"
@@ -40,7 +40,7 @@ cd /opt/sifter
 #        sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
 #}
 
-#if [[ ${FIRSTTIME} == '1' ]]; then
+#if [[ ${FIRSTTIME} == 1 ]]; then
 #        first_inst
 #fi
 
@@ -66,6 +66,7 @@ usage() {                                    	  # Function: Print a help message
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-v${NC} Opens the Vulnerability Scanning Module Menu"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-m${NC} Opens the Module Menu directly"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-p${NC} Opens the password tools for quick passlist generation or hash decryption"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-x${NC} Opens the Cross-Site Scripting & SQLinjection Module Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-r${NC} Opens the results folder for viewing of files or photos"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-u${NC} Checks for any updates on Github"
     echo -e "${RED}# ${ORNG}sifter ${LP}--stealth${NC} Starts sifter in ${LP}Anonymous${NC} mode"
@@ -1374,9 +1375,9 @@ update(){
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
    
-    echo -e "${YLW}#################${NC}"                                                ########################
-    echo -e "${ORNG}# Version : ${LP}9.8 ${ORNG}#${NC}"                              ##    VERSION INFO    ##
-    echo -e "${YLW}#################${NC}"                                                ########################
+    echo -e "${YLW}################${NC}"                                                ########################
+    echo -e "${ORNG}# Version : ${LP}10 ${ORNG}#${NC}"                              ##    VERSION INFO    ##
+    echo -e "${YLW}################${NC}"                                                ########################
 
     mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then

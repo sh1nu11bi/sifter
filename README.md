@@ -8,8 +8,8 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-	<img align="center" src="https://img.shields.io/badge/@Codename:-Pearl-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-9.8-red">
+	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
+	<img align="center" src="https://img.shields.io/badge/Version-10-red">
 </p>
 
 # *Sifter*
@@ -25,13 +25,13 @@
 
 # Release
 
-	@Codename: Pearl
-	@Version : 9.8
+	@Codename: Gemin1
+	@Version : 10
 
 <br>
-<em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v9.8.zip"><strong>here</strong></a></em>
+<em><strong>[Pearls]</strong> latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Pearls</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v9.8/sifter_9.8.deb"><strong>here</strong></a></em>
+<em>[<strong>Pearls</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10/sifter_10.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -47,6 +47,9 @@
 - <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />
 - <a style="color: #729e1b" href="#">Katana-DS (Dork Scanner)</a> - Google Hacking/Dorking with Tor support.<br />
 - <a style="color: #729e1b" href="#">Threat Dragon</a> - Threat Modelling framework.<br />
+
+- <a style="color: #729e1b" href="#">Cross-Site Scripting & SQLinjection</a><br />
+- <a style="color: #729e1b" href="#">WhiteWidow</a> - Threat Modelling framework.<br />
 </em><br />
  </p>
 
@@ -83,6 +86,7 @@ Most modules are explained along with demos of a lot of the tools
 		    - Parrot
 		    - Ubuntu
 		    - Linux (any distro)
+			- Windows (Linux Subsystem with Docker and VcXsrc - for xterm use - install correctly)
 		    
 Works on windows with linux-subsystem but please ensure docker is properly installed and configured, <br /> 
 following the instructions from <a href="https://docker.io">docker website</a><br />
@@ -104,7 +108,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v9.8/sifter_9.8.deb && sudo dpkg -i sifter_9.8.deb && sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10/sifter_10.deb && sudo dpkg -i sifter_9.8.deb && sifter
 	
 	
 	[!] For oneliner install (source), copy and paste the following into a terminal:
@@ -252,9 +256,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/nyxgeek/onedrive_user_enum">OneFind</a><br />
 - <a href="https://github.com/Technowlogy-Pushpender/aapfinder">AapFinder</a><br />
 - <a href="https://github.com/mazen160/bfac">BFAC</a><br />
-- <a href="https://github.com/s0md3v/XSStrike">XSStrike</a><br />
-- <a href="https://github.com/dwisiswant0/findom-xss">finDOM-XSS</a><br />
-- <a href="https://github.com/PR0PH3CY33/XSS-Freak">XSS-Freak</a>
+- <a href="https://github.com/yogeshojha/rengine">reNgine</a><br />
 
 
 <strong>#Website Scanners & Enumerators</strong>
@@ -273,6 +275,11 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a><br />
 - <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
 
+<strong>#Cross-Site Scripting & SQL Injection</strong>
+- <a href="https://github.com/WhitewidowScanner/whitewidow">WhiteWidow</a><br />
+- <a href="https://github.com/s0md3v/XSStrike">XSStrike</a><br />
+- <a href="https://github.com/dwisiswant0/findom-xss">finDOM-XSS</a><br />
+- <a href="https://github.com/PR0PH3CY33/XSS-Freak">XSS-Freak</a>
 
 <strong>#Web Mini-Games</strong>
 - This was added in order to have a fun way to pass time<br />
