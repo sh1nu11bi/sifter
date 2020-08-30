@@ -1584,7 +1584,7 @@ t68(){
 		cd subdover
 		sudo python3.8 -m venv env
 		source env/bin/activate
-		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1608,7 +1608,7 @@ t69(){
 		cd Katana
 		sudo python3.8 -m venv env
 		source env/bin/activate
-		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	fi
 }
 
