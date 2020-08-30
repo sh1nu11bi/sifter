@@ -22,7 +22,7 @@ cd /opt/sifter
 ##############################
 # ! # First Time Deb Install #
 ##############################
-FIRSTTIME=1
+FIRSTTIME='1'
 ###
 first_inst(){
         echo -e "${INV}${LGRY}"
@@ -40,8 +40,8 @@ first_inst(){
         sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
 }
 
-#if [[ ${FIRSTTIME} == 1 ]]; then
-        first_inst
+#if [[ ${FIRSTTIME} == '1' ]]; then
+#        first_inst
 #fi
 
 ##############################
