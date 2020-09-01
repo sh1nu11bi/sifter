@@ -55,6 +55,25 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
+# Coming in Version 10
+
+- XSS Tools will be moved to their own Module set.
+- SQL Injection & SQLi Vuln Scanners will be incorporated into this Module Set
+
+- Version 10 will be Release early September and then I'll be taking a development break for a while
+	
+		I truly hope sifter has been able to be of some use to you all
+		and that you have been enjoying this framework.
+		
+		I'm extremely thankful for all the support and encouragement I have been 
+		given for this tool and all my other projects!
+	
+		Be safe & stay silent.
+		The Quieter You Become, the More You Hear.
+		s1l3nt78*
+	
+---------------------------------------------------------------------------------------------------------------------
+
 # Removed
 
 - Omega's repo has been removed, therefore unavailable for new clones.
@@ -271,7 +290,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/adnane-X-tebbaa/Katana">Katana-DS (Dork Scanner)</a><br />
 
 
-<strong>#Operational Security Tools & Threat Analysis</strong>
+
+<strong>#Operational Security & Threat Analysis</strong>
 - <a href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a><br />
 - <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
 
