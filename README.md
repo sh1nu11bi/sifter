@@ -55,25 +55,6 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
-# Coming in Version 10
-
-- XSS Tools will be moved to their own Module set.
-- SQL Injection & SQLi Vuln Scanners will be incorporated into this Module Set
-
-- Version 10 will be Release early September and then I'll be taking a development break for a while
-	
-		I truly hope sifter has been able to be of some use to you all
-		and that you have been enjoying this framework.
-		
-		I'm extremely thankful for all the support and encouragement I have been 
-		given for this tool and all my other projects!
-	
-		Be safe & stay silent.
-		The Quieter You Become, the More You Hear.
-		s1l3nt78*
-	
----------------------------------------------------------------------------------------------------------------------
-
 # Removed
 
 - Omega's repo has been removed, therefore unavailable for new clones.
@@ -127,7 +108,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10/sifter_10.deb && sudo dpkg -i sifter_9.8.deb && sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10/sifter_10.deb && sudo dpkg -i sifter_10.deb && sifter
 	
 	
 	[!] For oneliner install (source), copy and paste the following into a terminal:
