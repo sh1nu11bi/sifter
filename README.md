@@ -100,7 +100,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
  If a scan does not work correctly at first, remove web-protocol from target.
  <br>
- eg. target.com - instead of http://target.com
+ eg. <strong>target.com</strong> - instead of http://target.com
 
 ---------------------------------------------------------------------------------------------------------------------
 
