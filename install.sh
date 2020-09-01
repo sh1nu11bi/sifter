@@ -1632,6 +1632,27 @@ t70(){
 		sudo npm install .
 	fi
 }
+
+###################
+# 71 # WhiteWidow #
+###################
+t71(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for WhiteWidow ${NC}"
+	if [[ -d '/opt/whitewidow' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "WhiteWidow is already installed"
+		echo -e "${NC}"
+		cd /opt/whitewidow
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/WhitewidowScanner/whitewidow.git
+		cd whitewidow
+		bundle install .
+	fi
+}
+
 #######################################################################################################################################
 ############
 # M # MISC #
@@ -1732,6 +1753,7 @@ t67										# HFish
 t68										# SubDover
 t69										# Katana-DS
 t70										# Threat Dragon
+t71
 #########################################---------------
 tm										# Miscellaneous
 #########################################---------------

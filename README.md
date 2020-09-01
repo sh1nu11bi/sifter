@@ -290,7 +290,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/adnane-X-tebbaa/Katana">Katana-DS (Dork Scanner)</a><br />
 
 
-<strong>#Operational Security & Threat Analysis Tools</strong>
+
+<strong>#Operational Security & Threat Analysis</strong>
 - <a href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a><br />
 - <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
 
