@@ -49,7 +49,7 @@
 - <a style="color: #729e1b" href="#">Threat Dragon</a> - Threat Modelling framework.<br />
 <br />
 - <a style="color: #729e1b" href="#">Cross-Site Scripting & SQLinjection</a><br />
-- <a style="color: #729e1b" href="#">WhiteWidow</a> - Threat Modelling framework.<br />
+- <a style="color: #729e1b" href="#">WhiteWidow</a> - Automated SQLinjection Vulnerability Scanner.<br />
 </em><br />
  </p>
 
