@@ -61,16 +61,16 @@ usage() {                                    	  # Function: Print a help message
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-n${NC} Opens the Network Mapping Module Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-w${NC} Opens the Website Focused Module Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-o${NC} Opens the OpSec & Threat Analysis Module Menu"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-q${NC} Opens the Router Focused Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-b${NC} Opens the Web-App Focused Module Menu"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-r${NC} Opens the Router Focused Module Menu"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-W${NC} Opens the Web-App Focused Module Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-v${NC} Opens the Vulnerability Scanning Module Menu"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-m${NC} Opens the Module Menu directly"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-p${NC} Opens the password tools for quick passlist generation or hash decryption"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-x${NC} Opens the Cross-Site Scripting & SQLinjection Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-r${NC} Opens the results folder for viewing of files or photos"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-R${NC} Opens the results folder for viewing of files or photos"
     echo -e "${RED}# ${ORNG}sifter ${YLW}-u${NC} Checks for any updates on Github"
     echo -e "${RED}# ${ORNG}sifter ${LP}--stealth${NC} Starts sifter in ${LP}Anonymous${NC} mode"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-z${NC} Opens the Module Information Menu"
+    echo -e "${RED}# ${ORNG}sifter ${YLW}-I${NC} Opens the Module Information Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-h${NC} This Help Menu" 1>&2
 }
 #######################
@@ -1486,7 +1486,7 @@ if [[ ${STLTH} == "--stealth" ]]; then
     menu
 fi
 
-while getopts "a:bndwirmeopcvquhz" options
+while getopts "a:WndwirmeopcvRuhI" options
     do            	                                        # Loop: Get the next option;
     case "${options}" in                                	# use silent error checking;
                                                             # option a takes 1 arguments.
@@ -1545,7 +1545,7 @@ while getopts "a:bndwirmeopcvquhz" options
             vuln_mods
             ;;
 
-        b)
+        W)
             echo -e "${LP}"
             figlet -f mini "Web-Application Testers"
             echo -e "${NC}"
@@ -1559,7 +1559,7 @@ while getopts "a:bndwirmeopcvquhz" options
             passtools
             ;;
 
-        q)
+        r)
             echo -e "${LP}"
             figlet -f mini "Router Tools"
             echo -e "${NC}"
@@ -1580,7 +1580,7 @@ while getopts "a:bndwirmeopcvquhz" options
             web_mods
             ;;
 
-        r)
+        R)
             echo -e "${LP}"
             figlet -f mini "Sifter Results"
             echo -e "${NC}"
@@ -1598,7 +1598,7 @@ while getopts "a:bndwirmeopcvquhz" options
             usage
             ;;
 
-        z)
+        I)
             echo -e "${RED}"
             figlet -f mini "Module Info"
             echo -e "${NC}"
