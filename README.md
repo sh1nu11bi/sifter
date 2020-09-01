@@ -73,9 +73,9 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 <a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s">Setup Video</a>
 <br>
-<a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a> - Its long, but you can skip through to get the general idea.
+<a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a> (of Version 6-7. Newer tools and modules arent covered) - Its long, but you can skip
 <br>
-Most modules are explained along with demos of a lot of the tools
+through to get the general idea. Most modules are explained along with demos of a lot of the tools.
 <br>
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -86,7 +86,7 @@ Most modules are explained along with demos of a lot of the tools
 		    - Parrot
 		    - Ubuntu
 		    - Linux (any distro)
-		    - Windows (Linux Subsystem with Docker and VcXsrc - for xterm use - install correctly)
+		    - Windows (Linux Subsystem with Docker and VcXsrc - for xterm use - installed correctly)
 		    
 Works on windows with linux-subsystem but please ensure docker is properly installed and configured, <br /> 
 following the instructions from <a href="https://docker.io">docker website</a><br />
