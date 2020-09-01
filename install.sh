@@ -1577,6 +1577,7 @@ t68(){
 		cd /opt/subdover
 		sudo git fetch && sudo git pull &>/dev/null
 		source env/bin/activate
+		sudo ./env/bin/python3 -m pip install wheel
 		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
 	else
 		cd /opt
@@ -1584,6 +1585,7 @@ t68(){
 		cd subdover
 		sudo python3.8 -m venv env
 		source env/bin/activate
+		sudo ./env/bin/python3 -m pip install wheel
 		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	fi
 }
@@ -1601,6 +1603,7 @@ t69(){
 		cd /opt/Katana
 		sudo git fetch && sudo git pull &>/dev/null
 		source env/bin/activate
+		sudo ./env/bin/python3 -m pip install wheel
 		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
 	else
 		cd /opt
@@ -1608,6 +1611,7 @@ t69(){
 		cd Katana
 		sudo python3.8 -m venv env
 		source env/bin/activate
+		sudo ./env/bin/python3 -m pip install wheel
 		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	fi
 }
@@ -1649,7 +1653,7 @@ t71(){
 		cd /opt
 		sudo git clone https://github.com/WhitewidowScanner/whitewidow.git
 		cd whitewidow
-		bundle install .
+		bundle install
 	fi
 }
 
