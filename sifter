@@ -1228,7 +1228,7 @@ modules(){
     echo -e "${BIGreen}Anonymous: ${BIYellow}${STATUS}${NC}"
     echo -e "${YLW}"
     PS3='What would you like to do?'
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "Operational Security" "WebAppplication Scanners" "Password Tools" "View Results" "Info" "Anonymization" "Pass Time" "Main Menu" "Quit")
+            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "Operational Security & Threat Analysis" "Cross-Site Scripting & SQLinjection" "WebAppplication Scanners" "Password Tools" "View Results" "Info" "Anonymization" "Pass Time" "Main Menu" "Quit")
             select opt in "${options[@]}"
             do
                     case $opt in
@@ -1264,8 +1264,12 @@ modules(){
                                 ex_mods
                                 ;;
 
-                            "Operational Security")
+                            "Operational Security & Threat Analysis")
                                 opsec
+                                ;;
+
+                            "Cross-Site Scripting & SQLinjection")
+                                xss_sql_mods
                                 ;;
 
 			                "WebAppplication Scanners")
