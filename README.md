@@ -279,11 +279,13 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
 
 <strong>#Cross-Site Scripting & SQL Injection</strong>
-- <a href="https://github.com/WhitewidowScanner/whitewidow">WhiteWidow</a><br />
-- <a href="https://github.com/v3n0m-Scanner/V3n0M-Scanner">V3n0M-Scanner</a><br />
-- <a href="https://github.com/s0md3v/XSStrike">XSStrike</a><br />
-- <a href="https://github.com/dwisiswant0/findom-xss">finDOM-XSS</a><br />
-- <a href="https://github.com/PR0PH3CY33/XSS-Freak">XSS-Freak</a>
+- SQLinjection<br />
+&emsp;&emsp;--- <a href="https://github.com/WhitewidowScanner/whitewidow">WhiteWidow</a><br />
+&emsp;&emsp;--- <a href="https://github.com/v3n0m-Scanner/V3n0M-Scanner">V3n0M-Scanner</a><br />
+- Cross-Site Scripting<br />
+&emsp;&emsp;--- <a href="https://github.com/s0md3v/XSStrike">XSStrike</a><br />
+&emsp;&emsp;--- <a href="https://github.com/dwisiswant0/findom-xss">finDOM-XSS</a><br />
+&emsp;&emsp;--- <a href="https://github.com/PR0PH3CY33/XSS-Freak">XSS-Freak</a>
 
 <strong>#Web Mini-Games</strong>
 - This was added in order to have a fun way to pass time<br />
