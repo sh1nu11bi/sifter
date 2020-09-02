@@ -50,6 +50,7 @@
 <br />
 - <a style="color: #729e1b" href="#">Cross-Site Scripting & SQLinjection</a><br />
 - <a style="color: #729e1b" href="#">WhiteWidow</a> - Automated SQLinjection Vulnerability Scanner.<br />
+- <a style="color: #729e1b" href="#">V3n0M-Scanner</a> - SQLi, XSS & LFI/RFI Vuln Scanner.<br />
 </em><br />
  </p>
 
@@ -278,6 +279,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 <strong>#Cross-Site Scripting & SQL Injection</strong>
 - <a href="https://github.com/WhitewidowScanner/whitewidow">WhiteWidow</a><br />
+- <a href="https://github.com/v3n0m-Scanner/V3n0M-Scanner">V3n0M-Scanner</a><br />
 - <a href="https://github.com/s0md3v/XSStrike">XSStrike</a><br />
 - <a href="https://github.com/dwisiswant0/findom-xss">finDOM-XSS</a><br />
 - <a href="https://github.com/PR0PH3CY33/XSS-Freak">XSS-Freak</a>

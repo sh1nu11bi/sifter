@@ -1657,6 +1657,34 @@ t71(){
 	fi
 }
 
+######################
+# 72 # v3n0m-Scanner #
+######################
+t72(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for V3n0m-Scanner ${NC}"
+	if [[ -d '/opt/V3n0M-Scanner' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "V3n0m-Scanner is already installed"
+		echo -e "${NC}"
+		cd /opt/V3n0M-Scanner
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/v3n0m-Scanner/V3n0M-Scanner
+		cd V3n0M-Scanner
+		sudo wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
+		sudo tar xvf Python-3.6.8.tar.xz
+		cd Python-3.6.8
+		sudo ./configure
+		sudo make altinstall
+		sudo python3.6 -m pip install virtualenv wheel
+		sudo python3.6 -m venv env
+		source env/bin/activate
+		sudo ./env/bin/python3.6 -m pip install wheel aiohttp
+		sudo ./env/bin/python3.6 setup.py install
+	fi
+}
 #######################################################################################################################################
 ############
 # M # MISC #
@@ -1758,6 +1786,7 @@ t68										# SubDover
 t69										# Katana-DS
 t70										# Threat Dragon
 t71										# WhiteWidow
+t72										# V3n0M-Scanner
 #########################################---------------
 tm										# Miscellaneous
 #########################################---------------

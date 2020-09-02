@@ -947,12 +947,16 @@ sqlmods(){
     figlet -f mini "WebAppplication Scanners"
     echo -e "${ORNG}"
     PS3='What tool would you like to use?'
-          options=("WhiteWidow" "Back")
+          options=("WhiteWidow" "V3n0M-Scanner" "Back")
           select opt in "${options[@]}"
           do
             case $opt in
                 "WhiteWidow")
                     ./modules/xss_sql/whitewidow.sh
+                    ;;
+
+                "V3n0M-Scanner")
+                    ./modules/xss_sql/v3n0m.sh
                     ;;
 
                 "Back")
