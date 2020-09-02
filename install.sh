@@ -1262,7 +1262,8 @@ t54(){
 t55(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for OSINT-Framework${NC}"
-	if [[ -d '/home/$USER/.local/OSINT-Framework' ]]; then
+	cd /home/$USER/.local
+	if [[ -d 'OSINT-Framework' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "OSINT-Framework is already installed"
 		echo -e "${NC}"

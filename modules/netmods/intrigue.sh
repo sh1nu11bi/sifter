@@ -16,7 +16,6 @@ sleep 1
 echo -e "${URED}Panel Login Info:${ORNG}"
 cat /opt/Intrigue-Core/Panel_Login.info
 echo -e "${NC}"
-xterm -e sleep 20 && firefox http://127.0.0.1:7777 &
 sleep 5
 echo -e "${W}Would you like your data to persist through sessions?${YLW}(y/n)${NC}"
 read PER
@@ -25,6 +24,8 @@ if [[ ${PER} == "y" ]]; then
 else
 	sudo docker run -e LANG=C.UTF-8 ~/intrigue-core-data:/data -p 0.0.0.0:7777:7777 -it intrigue-core
 fi
+xterm -e firefox http://127.0.0.1:7777 &
+
 sleep 2
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
