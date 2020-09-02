@@ -7,11 +7,11 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
-cd /opt/owasp-threat-dragon-desktop
+cd /home/$USER/.threat_dragon
 echo -e "${RED}"
 figlet -f mini "Threat Dragon"
 echo -e "${NC}"
-xterm -e sudo npm run start &
+xterm -e npm run start
 sleep 30 
 echo -e "	============================================"
 

@@ -504,6 +504,7 @@ t20(){
 		echo -e "${NC}"
 		cd /opt/armory
 		sudo git fetch && sudo git pull &>/dev/null
+		sudo python3 setup.py install
 	else
 		cd /opt/
 		sudo git clone https://github.com/depthsecurity/armory.git
@@ -1623,17 +1624,20 @@ t70(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Threat Dragon ${NC}"
 	if [[ -d '/opt/owasp-threat-dragon-desktop' ]]; then
+		sudo rm -rf /opt/owasp-threat-dragon-desktop
+	fi
+	if [[ -d '/home/$USER/.threat_dragon' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "Threat Dragon is already installed"
 		echo -e "${NC}"
-		cd /opt/owasp-threat-dragon-desktop
+		cd /home/$USER/.threat_dragon
 		sudo git fetch && sudo git pull &>/dev/null
-		sudo npm install .
+		rm -rf node_modules
 	else
-		cd /opt
-		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop
-		cd owasp-threat-dragon-desktop
-		sudo npm install .
+		cd /home/$USER
+		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop /home/$USER/.threat_dragon
+		cd /home/$USER/.threat_dragon
+		npm install
 	fi
 }
 
