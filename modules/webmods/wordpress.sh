@@ -7,10 +7,10 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 cd /opt/WPForce
 if [[ ! -f '.wp_api' ]]; then
-	echo -e "${W}Please enter your WPvulnDB api now: ${NC}"
-	read WPAPI
 	sudo touch /opt/WPForce/.wp_api
 	sudo chown $USER:$USER /opt/WPForce/.wp_api
+	echo -e "${W}Please enter your WPvulnDB api now: ${NC}"
+	read WPAPI
 	sudo echo ${WPAPI} >> /opt/WPForce/.wp_api
 fi
 WP_API=$(cat /opt/WPForce/.wp_api)
