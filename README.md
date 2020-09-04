@@ -242,7 +242,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/cloudflare/flan">Flan</a><br />
 - <a href="https://github.com/skavngr/rapidscan">Rapidscan</a><br />
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
-- <a href="https://github.com/PowerScript/KatanaFramework">Katana-VF</a><br />
+- <a href="https://github.com/PowerScript/KatanaFramework">Katana-VF (Vulnerability Framework)</a><br />
 - <a href="https://github.com/zdresearch/OWASP-Nettacker">OWASP-Nettacker</a><br />
 - <a href="https://github.com/Technowlogy-Pushpender/CVE-2020-5902-Scanner">Big IP Remote Execution Scanner</a>
 
