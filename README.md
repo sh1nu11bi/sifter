@@ -48,7 +48,7 @@
 - <a style="color: #729e1b" href="#">Katana-DS (Dork Scanner)</a> - Google Hacking/Dorking with Tor support.<br />
 - <a style="color: #729e1b" href="#">Threat Dragon</a> - Threat Modelling framework.<br />
 <br />
-- <a style="color: #729e1b" href="#">Cross-Site Scripting & SQLinjection</a><br />
+- <strong><em>Cross-Site Scripting & SQLinjection</em></strong><br />
 - <a style="color: #729e1b" href="#">WhiteWidow</a> - Automated SQLinjection Vulnerability Scanner.<br />
 - <a style="color: #729e1b" href="#">V3n0M-Scanner</a> - SQLi, XSS & LFI/RFI Vuln Scanner.<br />
 </em><br />
