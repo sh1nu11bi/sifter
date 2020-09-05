@@ -17,361 +17,365 @@ UBLUE='\033[4;34m'
 URED='\033[4;31m'
 
 if [[ ! -d '/opt/SniffingBear' ]]; then
-	t1='${RED}*'
+	t1=${RED}'*'
 else
-	t1='${BIGreen}!'
+	t1=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/Maryam' ]]; then
-	t2='${RED}*'
+	t2=${RED}'*'
 else
-	t2='${BIGreen}!'
+	t2=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/HoneyCaught' ]]; then
-	t3='${RED}*'
+	t3=${RED}'*'
 else
-	t3='${BIGreen}!'
+	t3=${BIGreen}'!'
 fi
 if [[ ! -d '/root/BlackWidow' ]]; then
-	t4='${RED}*'
+	t4=${RED}'*'
 else
-	t4='${BIGreen}!'
+	t4=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/bfac' ]]; then
-	t5='${RED}*'
+	t5=${RED}'*'
 else
-	t5='${BIGreen}!'
+	t5=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/rapidscan' ]]; then
-	t6='${RED}*'
+	t6=${RED}'*'
 else
-	t6='${BIGreen}!'
+	t6=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/shodansploit' ]]; then
-	t7='${RED}*'
+	t7=${RED}'*'
 else
-	t7='${BIGreen}!'
+	t7=${BIGreen}'!'
 fi
 if [[ ! -d '/root/yuki' ]]; then
-	t8='${RED}*'
+	t8=${RED}'*'
 else
-	t8='${BIGreen}!'
+	t8=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/reconspider' ]]; then
-	t9='${RED}*'
+	t9=${RED}'*'
 else
-	t9='${BIGreen}!'
+	t9=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/Zeus-Scanner' ]]; then
-	t10='${RED}*'
+	t10=${RED}'*'
 else
-	t10='${BIGreen}!'
+	t10=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/CVE-2020-0683' ]]; then
-	t11='${RED}*'
+	t11=${RED}'*'
 else
-	t11='${BIGreen}!'
+	t11=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/flan' ]]; then
-	t12='${RED}*'
+	t12=${RED}'*'
 else
-	t12='${BIGreen}!'
+	t12=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/AttackSurfaceMapper' ]]; then
-	t13='${RED}*'
+	t13=${RED}'*'
 else
-	t13='${BIGreen}!'
+	t13=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/ActiveReign' ]]; then
-	t14='${RED}*'
+	t14=${RED}'*'
 else
-	t14='${BIGreen}!'
+	t14=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/ispy' ]]; then
-	t15='${RED}*'
+	t15=${RED}'*'
 else
-	t15='${BIGreen}!'
+	t15=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/Sitadel' ]]; then
-	t16='${RED}*'
+	t16=${RED}'*'
 else
-	t16='${BIGreen}!'
+	t16=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/docker-osmedeus' ]]; then
-	t17='${RED}*'
+	t17=${RED}'*'
 else
-	t17='${BIGreen}!'
+	t17=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/NekoBotV1' ]]; then
-	t18='${RED}*'
+	t18=${RED}'*'
 else
-	t18='${BIGreen}!'
+	t18=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/aSnip' ]]; then
-#	t19='${RED}*'
+#	t19=${RED}'*'
 #else
-	t19='${BIGreen}!'
+	t19=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/armory' ]]; then
-	t20='${RED}*'
+	t20=${RED}'*'
 else
-	t20='${BIGreen}!'
+	t20=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/seeker' ]]; then
-	t21='${RED}*'
+	t21=${RED}'*'
 else
-	t21='${BIGreen}!'
+	t21=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/aapfinder' ]]; then
-	t22='${RED}*'
+	t22=${RED}'*'
 else
-	t22='${BIGreen}!'
+	t22=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/Dark-Star' ]]; then
-	t23='${RED}*'
+	t23=${RED}'*'
 else
-	t23='${BIGreen}!'
+	t23=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/BruteDum' ]]; then
-	t24='${RED}*'
+	t24=${RED}'*'
 else
-	t24='${BIGreen}!'
+	t24=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/onedrive_user_enum' ]]; then
-	t25='${RED}*'
+	t25=${RED}'*'
 else
-	t25='${BIGreen}!'
+	t25=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/SMBGhost' ]]; then
-	t26='${RED}*'
+	t26=${RED}'*'
 else
-	t26='${BIGreen}!'
+	t26=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/xray' ]]; then
-	t27='${RED}*'
+	t27=${RED}'*'
 else
-	t27='${BIGreen}!'
+	t27=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/WPForce' ]]; then
-	t28='${RED}*'
+	t28=${RED}'*'
 else
-	28='${BIGreen}!'
+	t28=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/XSHOCK' ]]; then
-	t29='${RED}*'
+	t29=${RED}'*'
 else
-	t29='${BIGreen}!'
+	t29=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/vulnx' ]]; then
-	t30='${RED}*'
+	t30=${RED}'*'
 else
-	t30='${BIGreen}!'
+	t30=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/XSS-Freak' ]]; then
-	t31='${RED}*'
+	t31=${RED}'*'
 else
-	t31='${BIGreen}!'
+	t31=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/CredNinja' ]]; then
-	t32='${RED}*'
+	t32=${RED}'*'
 else
-	t32='${BIGreen}!'
+	t32=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/Impulse' ]]; then
-	t33='${RED}*'
+	t33=${RED}'*'
 else
-	t33='${BIGreen}!'
+	t33=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/creds_harvester' ]]; then
-	t34='${RED}*'
+	t34=${RED}'*'
 else
-	t34='${BIGreen}!'
+	t34=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/iKy' ]]; then
-	t35='${RED}*'
+	t35=${RED}'*'
 else
-	t35='${BIGreen}!'
+	t35=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/dorks-eye' ]]; then
-	t36='${RED}*'
+	t36=${RED}'*'
 else
-	t36='${BIGreen}!'
+	t36=${BIGreen}'!'
 fi
-if [[ ! -f '/opt/sifter/modules/passtools' ]]; then
-	t37='${RED}*'
+if [[ ! -f '/opt/sifter/modules/passtools/Mentalist' ]] || [[ -f '/opt/sifter/modules/passtools/Mentalist.exe' ]] || [[ ! -f '/opt/sifter/modules/passtools/Mentalist.app' ]]; then
+	t37=${RED}'*'
 else
-	t37='${BIGreen}!'
+	t37=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/dCipher' ]]; then
-#	t38='${RED}*'
+#	t38=${RED}'*'
 #else
-	t38='${BIGreen}!'
+	t38=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/HoneyTel' ]]; then
-	t39='${RED}*'
+	t39=${RED}'*'
 else
-	t39='${BIGreen}!'
+	t39=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/XSStrike' ]]; then
-	t40='${RED}*'
+	t40=${RED}'*'
 else
-	t40='${BIGreen}!'
+	t40=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/MkCheck' ]]; then
-	t41='${RED}*'
+	t41=${RED}'*'
 else
-	t41='${BIGreen}!'
+	t41=${BIGreen}'!'
 fi
 if [[ ! -d '/root/routersploit' ]]; then
-	t42='${RED}*'
+	t42=${RED}'*'
 else
-	t42='${BIGreen}!'
+	t42=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/dnstwist' ]]; then
-	t43='${RED}*'
+	t43=${RED}'*'
 else
-	t43='${BIGreen}!'
+	t43=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/Espionage' ]]; then
-	t44='${RED}*'
+	t44=${RED}'*'
 else
-	t44='${BIGreen}!'
+	t44=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/KatanaFramework' ]]; then
-	t45='${RED}*'
+	t45=${RED}'*'
 else
-	t45='${BIGreen}!'
+	t45=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/sherlock' ]]; then
-	t46='${RED}*'
+	t46=${RED}'*'
 else
-	t46='${BIGreen}!'
+	t46=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/PowerHub' ]]; then
-	t47='${RED}*'
+	t47=${RED}'*'
 else
-	t47='${BIGreen}!'
+	t47=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/theHarvester' ]]; then
-	t48='${RED}*'
+	t48=${RED}'*'
 else
-	t48='${BIGreen}!'
+	t48=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/spiderfoot' ]]; then
-	t49='${RED}*'
+	t49=${RED}'*'
 else
-	t49='${BIGreen}!'
+	t49=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/email2phonenumber' ]]; then
-	t50='${RED}*'
+	t50=${RED}'*'
 else
-	t50='${BIGreen}!'
+	t50=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/intrigue-core' ]]; then
-	t51='${RED}*'
+	t51=${RED}'*'
 else
-	t51='${BIGreen}!'
+	t51=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/Optiva-Framework' ]]; then
-	t52='${RED}*'
+	t52=${RED}'*'
 else
-	t52='${BIGreen}!'
+	t52=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/findom-xss' ]]; then
-	t53='${RED}*'
+	t53=${RED}'*'
 else
-	t53='${BIGreen}!'
+	t53=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/ODIN' ]]; then
-	t54='${RED}*'
+	t54=${RED}'*'
 else
-	t54='${BIGreen}!'
+	t54=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/OSINT-Framework' ]]; then
-	t55='${RED}*'
+	t55=${RED}'*'
 else
-	t55='${BIGreen}!'
+	t55=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/ufonet' ]]; then
-	t56='${RED}*'
+	t56=${RED}'*'
 else
-	t56='${BIGreen}!'
+	t56=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/CardPwn' ]]; then
-	t57='${RED}*'
+	t57=${RED}'*'
 else
-	t57='${BIGreen}!'
+	t57=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/WBRUTER' ]]; then
-	t58='${RED}*'
+	t58=${RED}'*'
 else
-	t58='${BIGreen}!'
+	t58=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/OWASP-Nettacker' ]]; then
-	t59='${RED}*'
+	t59=${RED}'*'
 else
-	t59='${BIGreen}!'
+	t59=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/kali-anonsurf' ]]; then
-	t60='${RED}*'
+	t60=${RED}'*'
 else
-	t60='${BIGreen}!'
+	t60=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/subfinder' ]]; then
-	t61='${RED}*'
+	t61=${RED}'*'
 else
-	t61='${BIGreen}!'
+	t61=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/pulsar' ]]; then
-	t62='${RED}*'
+	t62=${RED}'*'
 else
-	t62='${BIGreen}!'
+	t62=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/rengine' ]]; then
-	t63='${RED}*'
+	t63=${RED}'*'
 else
-	t63='${BIGreen}!'
+	t63=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/thoron' ]]; then
-	t64='${RED}*'
+	t64=${RED}'*'
 else
-	t64='${BIGreen}!'
+	t64=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/CVE-2020-5902-Scanner' ]]; then
-	t65='${RED}*'
+	t65=${RED}'*'
 else
-	t65='${BIGreen}!'
+	t65=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/DeadTrap' ]]; then
-	t66='${RED}*'
+	t66=${RED}'*'
 else
-	t66='${BIGreen}!'
+	t66=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/HFish' ]]; then
-	t67='${RED}*'
+	t67=${RED}'*'
 else
-	t67='${BIGreen}!'
+	t67=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/subdover' ]]; then
-	t68='${RED}*'
+	t68=${RED}'*'
 else
-	t68='${BIGreen}!'
+	t68=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/Katana' ]]; then
-	t69='${RED}*'
+	t69=${RED}'*'
 else
-	t69='${BIGreen}!'
+	t69=${BIGreen}'!'
 fi
 if [[ ! -d '/home/$USER/.threat_dragon' ]]; then
-	t70='${RED}*'
+	t70=${RED}'*'
 else
-	t70='${BIGreen}!'
+	t70=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/whitewidow' ]]; then
-	t71='${RED}*'
+	t71=${RED}'*'
 else
-	t71='${BIGreen}!'
+	t71=${BIGreen}'!'
 fi
-
+if [[ ! -d '/opt/V3n0M-Scanner' ]]; then
+	t72=${RED}'*'
+else
+	t72=${BIGreen}'!'
+fi
 
 
 
@@ -380,39 +384,38 @@ fi
 
 echo -e "${ORNG}[ ${t1} ${ORNG}] ${YLW}SniffingBear			${ORNG}[ ${t2} ${ORNG}] ${YLW}Maryam ${NC}"
 echo -e "${ORNG}[ ${t3} ${ORNG}] ${YLW}HoneyCaught			${ORNG}[ ${t4} ${ORNG}] ${YLW}BlackWidow ${NC}"
-echo -e "${ORNG}[ ${t5} ${ORNG}] ${YLW}BFAC			${ORNG}[ ${t6} ${ORNG}] ${YLW}RapidScan ${NC}"
+echo -e "${ORNG}[ ${t5} ${ORNG}] ${YLW}BFAC				${ORNG}[ ${t6} ${ORNG}] ${YLW}RapidScan ${NC}"
 echo -e "${ORNG}[ ${t7} ${ORNG}] ${YLW}ShodanSploit			${ORNG}[ ${t8} ${ORNG}] ${YLW}Yuki-Chan ${NC}"
 echo -e "${ORNG}[ ${t9} ${ORNG}] ${YLW}ReconSpider			${ORNG}[ ${t10} ${ORNG}] ${YLW}Zeus ${NC}"
-echo -e "${ORNG}[ ${t11} ${ORNG}] ${YLW}EoP			${ORNG}[ ${t12} ${ORNG}] ${YLW}Flan ${NC}"
-echo -e "${ORNG}[ ${t13} ${ORNG}] ${YLW}AttackSurfaceMapper			${ORNG}[ ${t14} ${ORNG}] ${YLW}ActiveReign ${NC}"
-echo -e "${ORNG}[ ${t15} ${ORNG}] ${YLW}iSpy			${ORNG}[ ${t16} ${ORNG}] ${YLW}Sitadel ${NC}"
-echo -e "${ORNG}[ ${t17} ${ORNG}] ${YLW}Osmedeus			${ORNG}[ ${t18} ${ORNG}] ${YLW}NekoBot ${NC}"
-echo -e "${ORNG}[ ${t19} ${ORNG}] ${YLW}aSnip			${ORNG}[ ${t20} ${ORNG}] ${YLW}Armory ${NC}"
-echo -e "${ORNG}[ ${t21} ${ORNG}] ${YLW}Seeker			${ORNG}[ ${t22} ${ORNG}] ${YLW}AapFinder ${NC}"
-echo -e "${ORNG}[ ${t23} ${ORNG}] ${YLW}Dark-Star			${ORNG}[ ${t24} ${ORNG}] ${YLW}BruteDUM ${NC}"
-echo -e "${ORNG}[ ${t25} ${ORNG}] ${YLW}OneFind			${ORNG}[ ${t26} ${ORNG}] ${YLW}SMBGhost ${NC}"
-echo -e "${ORNG}[ ${t27} ${ORNG}] ${YLW}xRay			${ORNG}[ ${t28} ${ORNG}] ${YLW}WPForce ${NC}"
-echo -e "${ORNG}[ ${t29} ${ORNG}] ${YLW}xShock			${ORNG}[ ${t30} ${ORNG}] ${YLW}VulnX ${NC}"
-echo -e "${ORNG}[ ${t31} ${ORNG}] ${YLW}XSS-Freak			${ORNG}[ ${t32} ${ORNG}] ${YLW}CredNinja ${NC}"
-echo -e "${ORNG}[ ${t33} ${ORNG}] ${YLW}Impulse			${ORNG}[ ${t34} ${ORNG}] ${YLW}CredHarvester ${NC}"
-echo -e "${ORNG}[ ${t35} ${ORNG}] ${YLW}iKy			${ORNG}[ ${t36} ${ORNG}] ${YLW}Dork-Eye ${NC}"
-echo -e "${ORNG}[ ${t37} ${ORNG}] ${YLW}Mentalist			${ORNG}[ ${t38} ${ORNG}] ${YLW}dCipher ${NC}"
-echo -e "${ORNG}[ ${t39} ${ORNG}] ${YLW}Honey-Tel			${ORNG}[ ${t40} ${ORNG}] ${YLW}XSS-Strike ${NC}"
-echo -e "${ORNG}[ ${t41} ${ORNG}] ${YLW}MkCheck			${ORNG}[ ${t42} ${ORNG}] ${YLW}RouterSploit ${NC}"
-echo -e "${ORNG}[ ${t43} ${ORNG}] ${YLW}DnsTwist			${ORNG}[ ${t44} ${ORNG}] ${YLW}Espionage ${NC}"
-echo -e "${ORNG}[ ${t45} ${ORNG}] ${YLW}Katana-VF			${ORNG}[ ${t46} ${ORNG}] ${YLW}Sherlock ${NC}"
-echo -e "${ORNG}[ ${t47} ${ORNG}] ${YLW}PowerHub			${ORNG}[ ${t48} ${ORNG}] ${YLW}theHarvester ${NC}"
+echo -e "${ORNG}[ ${t11} ${ORNG}] ${YLW}EoP				${ORNG}[ ${t12} ${ORNG}] ${YLW}Flan ${NC}"
+echo -e "${ORNG}[ ${t13} ${ORNG}] ${YLW}AttackSurfaceMapper		${ORNG}[ ${t14} ${ORNG}] ${YLW}ActiveReign ${NC}"
+echo -e "${ORNG}[ ${t15} ${ORNG}] ${YLW}iSpy				${ORNG}[ ${t16} ${ORNG}] ${YLW}Sitadel ${NC}"
+echo -e "${ORNG}[ ${t17} ${ORNG}] ${YLW}Osmedeus				${ORNG}[ ${t18} ${ORNG}] ${YLW}NekoBot ${NC}"
+echo -e "${ORNG}[ ${t19} ${ORNG}] ${YLW}aSnip				${ORNG}[ ${t20} ${ORNG}] ${YLW}Armory ${NC}"
+echo -e "${ORNG}[ ${t21} ${ORNG}] ${YLW}Seeker				${ORNG}[ ${t22} ${ORNG}] ${YLW}AapFinder ${NC}"
+echo -e "${ORNG}[ ${t23} ${ORNG}] ${YLW}Dark-Star				${ORNG}[ ${t24} ${ORNG}] ${YLW}BruteDUM ${NC}"
+echo -e "${ORNG}[ ${t25} ${ORNG}] ${YLW}OneFind				${ORNG}[ ${t26} ${ORNG}] ${YLW}SMBGhost ${NC}"
+echo -e "${ORNG}[ ${t27} ${ORNG}] ${YLW}xRay				${ORNG}[ ${t28} ${ORNG}] ${YLW}WPForce ${NC}"
+echo -e "${ORNG}[ ${t29} ${ORNG}] ${YLW}xShock				${ORNG}[ ${t30} ${ORNG}] ${YLW}VulnX ${NC}"
+echo -e "${ORNG}[ ${t31} ${ORNG}] ${YLW}XSS-Freak				${ORNG}[ ${t32} ${ORNG}] ${YLW}CredNinja ${NC}"
+echo -e "${ORNG}[ ${t33} ${ORNG}] ${YLW}Impulse				${ORNG}[ ${t34} ${ORNG}] ${YLW}CredHarvester ${NC}"
+echo -e "${ORNG}[ ${t35} ${ORNG}] ${YLW}iKy				${ORNG}[ ${t36} ${ORNG}] ${YLW}Dork-Eye ${NC}"
+echo -e "${ORNG}[ ${t37} ${ORNG}] ${YLW}Mentalist				${ORNG}[ ${t38} ${ORNG}] ${YLW}dCipher ${NC}"
+echo -e "${ORNG}[ ${t39} ${ORNG}] ${YLW}Honey-Tel				${ORNG}[ ${t40} ${ORNG}] ${YLW}XSS-Strike ${NC}"
+echo -e "${ORNG}[ ${t41} ${ORNG}] ${YLW}MkCheck				${ORNG}[ ${t42} ${ORNG}] ${YLW}RouterSploit ${NC}"
+echo -e "${ORNG}[ ${t43} ${ORNG}] ${YLW}DnsTwist				${ORNG}[ ${t44} ${ORNG}] ${YLW}Espionage ${NC}"
+echo -e "${ORNG}[ ${t45} ${ORNG}] ${YLW}Katana-VF				${ORNG}[ ${t46} ${ORNG}] ${YLW}Sherlock ${NC}"
+echo -e "${ORNG}[ ${t47} ${ORNG}] ${YLW}PowerHub				${ORNG}[ ${t48} ${ORNG}] ${YLW}theHarvester ${NC}"
 echo -e "${ORNG}[ ${t49} ${ORNG}] ${YLW}SpiderFoot			${ORNG}[ ${t50} ${ORNG}] ${YLW}Email2Phone ${NC}"
-echo -e "${ORNG}[ ${t51} ${ORNG}] ${YLW}Intrigue-Core"	#			${ORNG}[ ${t52} ${ORNG}] ${YLW}Optiva-Framework ${NC}"
-echo -e "${ORNG}[ ${t53} ${ORNG}] ${YLW}finDOM-XSS ${NC}"
-echo -e "${ORNG}[ ${t54} ${ORNG}] ${YLW}ODIN			${ORNG}[ ${t55} ${ORNG}] ${YLW}OSINT-Framework ${NC}"
-echo -e "${ORNG}[ ${t56} ${ORNG}] ${YLW}UFONet			${ORNG}[ ${t57} ${ORNG}] ${YLW}CardPwn ${NC}"
-echo -e "${ORNG}[ ${t58} ${ORNG}] ${YLW}WBruter			${ORNG}[ ${t59} ${ORNG}] ${YLW}Netattacker ${NC}"
-echo -e "${ORNG}[ ${t60} ${ORNG}] ${YLW}AnonSurf			${ORNG}[ ${t61} ${ORNG}] ${YLW}SubFinder ${NC}"
-echo -e "${ORNG}[ ${t62} ${ORNG}] ${YLW}Pulsar			${ORNG}[ ${t63} ${ORNG}] ${YLW}reNgine ${NC}"
-echo -e "${ORNG}[ ${t64} ${ORNG}] ${YLW}Thoron			${ORNG}[ ${t65} ${ORNG}] ${YLW}F5 Big IP Scanner ${NC}"
-echo -e "${ORNG}[ ${t66} ${ORNG}] ${YLW}DeadTrap			${ORNG}[ ${t67} ${ORNG}] ${YLW}HFish ${NC}"
-echo -e "${ORNG}[ ${t68} ${ORNG}] ${YLW}SubDover			${ORNG}[ ${t69} ${ORNG}] ${YLW}Katana-DS ${NC}"
+echo -e "${ORNG}[ ${t51} ${ORNG}] ${YLW}Intrigue-Core		${ORNG}[ ${t53} ${ORNG}] ${YLW}finDOM-XSS ${NC}"
+echo -e "${ORNG}[ ${t54} ${ORNG}] ${YLW}ODIN				${ORNG}[ ${t55} ${ORNG}] ${YLW}OSINT-Framework ${NC}"
+echo -e "${ORNG}[ ${t56} ${ORNG}] ${YLW}UFONet				${ORNG}[ ${t57} ${ORNG}] ${YLW}CardPwn ${NC}"
+echo -e "${ORNG}[ ${t58} ${ORNG}] ${YLW}WBruter				${ORNG}[ ${t59} ${ORNG}] ${YLW}Netattacker ${NC}"
+echo -e "${ORNG}[ ${t60} ${ORNG}] ${YLW}AnonSurf				${ORNG}[ ${t61} ${ORNG}] ${YLW}SubFinder ${NC}"
+echo -e "${ORNG}[ ${t62} ${ORNG}] ${YLW}Pulsar				${ORNG}[ ${t63} ${ORNG}] ${YLW}reNgine ${NC}"
+echo -e "${ORNG}[ ${t64} ${ORNG}] ${YLW}Thoron				${ORNG}[ ${t65} ${ORNG}] ${YLW}F5 Big IP Scanner ${NC}"
+echo -e "${ORNG}[ ${t66} ${ORNG}] ${YLW}DeadTrap				${ORNG}[ ${t67} ${ORNG}] ${YLW}HFish ${NC}"
+echo -e "${ORNG}[ ${t68} ${ORNG}] ${YLW}SubDover				${ORNG}[ ${t69} ${ORNG}] ${YLW}Katana-DS ${NC}"
 echo -e "${ORNG}[ ${t70} ${ORNG}] ${YLW}Threat Dragon			${ORNG}[ ${t71} ${ORNG}] ${YLW}WhiteWidow ${NC}"
 echo -e "${ORNG}[ ${t72} ${ORNG}] ${YLW}V3n0M-Scanner"			#${ORNG}[ ${t72} ${ORNG}] ${YLW} _______ ${NC}"
 
