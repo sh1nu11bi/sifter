@@ -1633,12 +1633,13 @@ t70(){
 		echo -e "${NC}"
 		cd /home/$USER/.threat_dragon
 		sudo git fetch && sudo git pull &>/dev/null
-		rm -rf node_modules
+		sudo rm -rf node_modules
+		sudo npm install
 	else
 		cd /home/$USER
 		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop /home/$USER/.threat_dragon
 		cd /home/$USER/.threat_dragon
-		npm install
+		sudo npm install
 	fi
 }
 
