@@ -196,7 +196,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 		  
 
 <strong>#Exploitation Frameworks</strong>
-+ <a href="#">FuzzyDander</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
++ <a href="#">DanderFuzz</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
 	   	 (Obtained through issue request.)<br />
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
