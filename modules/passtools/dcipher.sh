@@ -12,7 +12,7 @@ second(){
     if [[ ${ANS} == "y" ]]; then
         cipher
     else
-        exmods
+        exit
     fi
 }
 cipher(){

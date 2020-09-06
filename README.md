@@ -10,6 +10,7 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
 	<img align="center" src="https://img.shields.io/badge/Version-10-red">
+	<img align="center" src="https://img.shields.io/badge/Revision-1-green">
 </p>
 
 # *Sifter*
@@ -47,6 +48,7 @@
 - <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />
 - <a style="color: #729e1b" href="#">Katana-DS (Dork Scanner)</a> - Google Hacking/Dorking with Tor support.<br />
 - <a style="color: #729e1b" href="#">Threat Dragon</a> - Threat Modelling framework.<br />
+- <a style="color: #729e1b" href="#">Ciphey</a> - Automated decryption/decoding/cracking tool using language processing<br /> &emsp;&emsp; & artificial intelligence.<br />
 <br />
 - <strong><em>Cross-Site Scripting & SQLinjection</em></strong><br />
 - <a style="color: #729e1b" href="#">WhiteWidow</a> - Automated SQLinjection Vulnerability Scanner.<br />
@@ -219,6 +221,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <strong>#Password Tools</strong>
 - <a href="https://github.com/sc0tfree/mentalist">Mentalist</a><br />
 - <a href="https://github.com/k4m4/dcipher">DCipher</a><br />
+- <a href="https://github.com/Ciphey/Ciphey">Ciphey</a><br />
 
 
 <strong>#Network Scanners</strong>

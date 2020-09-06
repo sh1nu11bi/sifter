@@ -511,7 +511,7 @@ pass_tools(){
     figlet -f mini "Password Tools"
     echo -e "${ORNG}"
     PS3='Which tool would you like to use?'
-        options=("Mentalist" "dCipher" "Back")
+        options=("Mentalist" "dCipher" "Ciphey" "Back")
         select opt in "${options[@]}"
         do
             case $opt in
@@ -523,6 +523,10 @@ pass_tools(){
                 "dCipher")
                     echo -e "${YLW}Decipher hashes using online rainbow & lookup table attack services.${NC}"
                     ./modules/passtools/dcipher.sh
+                    ;;
+
+                "Ciphey")
+                    ./modules/passtools/ciphey.sh
                     ;;
 
                 "Back")

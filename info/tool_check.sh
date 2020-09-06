@@ -376,6 +376,12 @@ if [[ ! -d '/opt/V3n0M-Scanner' ]]; then
 else
 	t72=${BIGreen}'!'
 fi
+CPY=$(which ciphey)
+if [[ ${CPY} == "" ]]; then
+	t73=${RED}'*'
+else
+	t73=${BIGreen}'!'
+fi
 
 
 
@@ -417,7 +423,7 @@ echo -e "${ORNG}[ ${t64} ${ORNG}] ${YLW}Thoron				${ORNG}[ ${t65} ${ORNG}] ${YLW
 echo -e "${ORNG}[ ${t66} ${ORNG}] ${YLW}DeadTrap				${ORNG}[ ${t67} ${ORNG}] ${YLW}HFish ${NC}"
 echo -e "${ORNG}[ ${t68} ${ORNG}] ${YLW}SubDover				${ORNG}[ ${t69} ${ORNG}] ${YLW}Katana-DS ${NC}"
 echo -e "${ORNG}[ ${t70} ${ORNG}] ${YLW}Threat Dragon			${ORNG}[ ${t71} ${ORNG}] ${YLW}WhiteWidow ${NC}"
-echo -e "${ORNG}[ ${t72} ${ORNG}] ${YLW}V3n0M-Scanner"			#${ORNG}[ ${t72} ${ORNG}] ${YLW} _______ ${NC}"
+echo -e "${ORNG}[ ${t72} ${ORNG}] ${YLW}V3n0M-Scanner			${ORNG}[ ${t73} ${ORNG}] ${YLW}Ciphey ${NC}"
 
 echo -e "${LP}Would you like to run the install script? (y/n)${NC}"
 read ISS
