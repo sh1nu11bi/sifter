@@ -1580,7 +1580,7 @@ t68(){
 		sudo git fetch && sudo git pull &>/dev/null
 		source env/bin/activate
 		sudo ./env/bin/python3 -m pip install wheel
-		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/Technowlogy-Pushpender/subdover
@@ -1606,7 +1606,7 @@ t69(){
 		sudo git fetch && sudo git pull &>/dev/null
 		source env/bin/activate
 		sudo ./env/bin/python3 -m pip install wheel
-		sudo ./env/bin/python3.8 -m pip install -r requirements.txt
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/adnane-X-tebbaa/Katana
@@ -1627,7 +1627,7 @@ t70(){
 	if [[ -d '/opt/owasp-threat-dragon-desktop' ]]; then
 		sudo rm -rf /opt/owasp-threat-dragon-desktop
 	fi
-	if [[ -d '/home/$USER/.threat_dragon' ]]; then
+	if [[ -d "/home/$USER/.threat_dragon" ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "Threat Dragon is already installed"
 		echo -e "${NC}"
