@@ -13,13 +13,13 @@ echo -e "${RED}"
 figlet -f mini "SubDover"
 echo -e "${NC}"
 cd /opt/subdover
-#echo -e "${ORNG}Would you like to display current scanable fingerprints?(y/n)${NC}"
-#read FP
+echo -e "${ORNG}Would you like to display current scanable fingerprints?(y/n)${NC}"
+read FP
 if [[ ${FP} == "y" ]]; then
 	sudo ./env/bin/python3 subdover.py -s
 fi
-#echo -e "${YLW}Would you like to use a ${W}s${YLW}ingle target or a ${W}l${YLW}ist of domains?(${W}s${YLW}/${W}l${YLW})${NC}"
-#read TARG
+echo -e "${YLW}Would you like to use a ${W}s${YLW}ingle target or a ${W}l${YLW}ist of domains?(${W}s${YLW}/${W}l${YLW})${NC}"
+read TARG
 if [[ ${TARG} == "s" ]]; then
 	sudo ./env/bin/python3 subdover.py
 	#ARG='-d'
