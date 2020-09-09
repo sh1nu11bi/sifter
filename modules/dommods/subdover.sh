@@ -16,7 +16,7 @@ cd /opt/subdover
 echo -e "${ORNG}Would you like to display current scanable fingerprints?(y/n)${NC}"
 read FP
 if [[ ${FP} == "y" ]]; then
-	sudo python3 subdover.py -s
+	sudo ./env/bin/python3 subdover.py -s
 fi
 echo -e "${YLW}Would you like to use a ${W}s${YLW}ingle target or a ${W}l${YLW}ist of domains?(${W}s${YLW}/${W}l${YLW})${NC}"
 read TARG
@@ -39,7 +39,7 @@ fi
 echo -e "${YLW}Please enter a name for your result file${NC}"
 read OUTF
 echo "      ============================================="
-sudo python3 subdover.py ${ARG} ${TARGET} --thread ${THREADS} -o ${OUTF}.txt
+sudo ./env/bin/python3 subdover.py ${ARG} ${TARGET} --thread ${THREADS} -o ${OUTF}.txt
 sudo mv ${OUTF}.txt -t /opt/sifter/results/SubDover/
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
