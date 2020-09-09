@@ -13,33 +13,33 @@ echo -e "${RED}"
 figlet -f mini "SubDover"
 echo -e "${NC}"
 cd /opt/subdover
-echo -e "${ORNG}Would you like to display current scanable fingerprints?(y/n)${NC}"
-read FP
+#echo -e "${ORNG}Would you like to display current scanable fingerprints?(y/n)${NC}"
+#read FP
 if [[ ${FP} == "y" ]]; then
 	sudo ./env/bin/python3 subdover.py -s
 fi
-echo -e "${YLW}Would you like to use a ${W}s${YLW}ingle target or a ${W}l${YLW}ist of domains?(${W}s${YLW}/${W}l${YLW})${NC}"
-read TARG
+#echo -e "${YLW}Would you like to use a ${W}s${YLW}ingle target or a ${W}l${YLW}ist of domains?(${W}s${YLW}/${W}l${YLW})${NC}"
+#read TARG
 if [[ ${TARG} == "s" ]]; then
-	ARG='-d'
-	echo -e "${ORNG}Please enter your target domain:${NC}"
-	read TARGET
+	sudo ./env/bin/python3 subdover.py
+	#ARG='-d'
+	#echo -e "${ORNG}Please enter your target domain:${NC}"
+	#read TARGET
 else
-	ARG='--list'
 	echo -e "${ORNG}Please enter your full path/to/domain_list.txt:${NC}"
 	read TARGET
-fi
-echo -e "${W}Please enter the number of threads to use: (Default: 30)${NC}"
-read THRD
-if [[ ${THRD} == '' ]]; then
+	echo -e "${W}Please enter the number of threads to use: (Default: 30)${NC}"
+	read THRD
+	if [[ ${THRD} == '' ]]; then
         THREADS='30'
-else
+	else
         THREADS=${THRD}
+	fi
+	echo -e "${YLW}Please enter a name for your result file${NC}"
+	read OUTF
+	echo "      ============================================="
+	sudo ./env/bin/python3 subdover.py -l ${TARGET} --thread ${THREADS} -o ${OUTF}.txt
+	sudo mv ${OUTF}.txt -t /opt/sifter/results/SubDover/
 fi
-echo -e "${YLW}Please enter a name for your result file${NC}"
-read OUTF
-echo "      ============================================="
-sudo ./env/bin/python3 subdover.py ${ARG} ${TARGET} --thread ${THREADS} -o ${OUTF}.txt
-sudo mv ${OUTF}.txt -t /opt/sifter/results/SubDover/
 
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
