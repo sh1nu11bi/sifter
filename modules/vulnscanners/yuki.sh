@@ -17,7 +17,7 @@ cat /opt/sifter/files/pingtest.pass
 echo -e "${NC}"
 echo -e "${W}Please copy and paste in your target site\nOr enter as per example above${NC}"
 echo "================================================================================================="
-cd /root/yuki
+cd /root/yuki2
 sleep 1
 sudo ./startyuki
 echo "================================================================================================="
