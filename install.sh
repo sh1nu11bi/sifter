@@ -1498,23 +1498,23 @@ t65(){
 #################
 # 66 # DeadTrap #
 #################
-t66(){
-	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for DeadTrap ${NC}"
-	if [[ -d '/opt/DeadTrap' ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "DeadTrap is already installed"
-		echo -e "${NC}"
-		cd /opt/DeadTrap
-		sudo git fetch && sudo git pull &>/dev/null
-	else
-		cd /opt
-		sudo git clone https://github.com/Chr0m0s0m3s/DeadTrap.git
-		cd DeadTrap
-		sudo pip3 install .
-		mkdir -p $HOME/.config/deadtrap
-	fi
-}
+#t66(){
+#	echo -e "${W}===========================================================================================${NC}"
+#	echo -e "${YLW}Checking for DeadTrap ${NC}"
+#	if [[ -d '/opt/DeadTrap' ]]; then
+#		echo -e "${ORNG}"
+#		figlet -f mini "DeadTrap is already installed"
+#		echo -e "${NC}"
+#		cd /opt/DeadTrap
+#		sudo git fetch && sudo git pull &>/dev/null
+#	else
+#		cd /opt
+#		sudo git clone https://github.com/Chr0m0s0m3s/DeadTrap.git
+#		cd DeadTrap
+#		sudo pip3 install .
+#		mkdir -p $HOME/.config/deadtrap
+#	fi
+#}
 
 ##############
 # 67 # HFish #
@@ -1723,6 +1723,16 @@ tm(){
 		FDIN=''
 		sudo sed -i "s/${FDOUT}/${FDIN}/g" /opt/sifter/sifter												# Removes FuzzyDander option if script not found
 	fi
+
+	# DeadTrap
+	if [[ ! -d '/opt/DeadTrap' ]]; then																		# Check For DeadTrap Directory & If it doesn't exist
+		if [[ -f '/opt/sifter/modules/credmods/deadtrap.sh' ]]; then
+			sudo rm /opt/sifter/modules/credmods/deadtrap.sh															# Remove DeadTrap script from Module Directory
+		fi
+	fi
+	DTOUT='\"DeadTrap\" '
+	DTIN=''
+	sudo sed -i "s/${OMOUT}/${OMIN}/g" /opt/sifter/sifter
 }
 
 
@@ -1797,7 +1807,7 @@ t62										# Pulsar
 t63										# reNgine
 t64										# Thoron
 t65										# F5 Big IP scanner
-t66										# DeadTrap
+#t66										# DeadTrap
 t67										# HFish
 t68										# SubDover
 t69										# Katana-DS

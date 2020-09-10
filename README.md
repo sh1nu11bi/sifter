@@ -63,6 +63,9 @@
 - Omega's repo has been removed, therefore unavailable for new clones.
  If you already had omega installed, you will still be able to use this module though.
 
+- DeadTrap's repo has been removed, therefore unavailable for new clones.
+ If you already had omega installed, you will still be able to use this module though.
+
 - SayDog has been removed due to being a program meant mainly for termux.
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -146,7 +149,6 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/chrismaddalena/ODIN">ODIN</a><br />
 - <a href="https://github.com/itsmehacker/CardPwn">CardPwn</a><br />
 - <a href="https://github.com/kennbroorg/iKy">iKy</a><br />
-- <a href="https://github.com/Chr0m0s0m3s/DeadTrap">DeadTrap</a><br />
 
 
 <strong>#Domain Recon Gathering</strong>
