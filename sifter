@@ -253,7 +253,7 @@ dom_mods(){
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
   PS3='What tool would you like to use?'
-          options=("DnsTwist" "Armory" "SubDover" "Spiderfoo7" "SubFinder" "Pulsar" "Back") 
+          options=("DnsTwist" "Armory" "Spiderfoo7" "SubFinder" "Pulsar" "Back")    #"SubDover" 
           select opt in "${options[@]}"
           do
                   case $opt in
@@ -265,9 +265,9 @@ dom_mods(){
                                 ./modules/dommods/armory.sh
                                 ;;
 
-                            "SubDover")
-                                ./modules/dommods/subdover.sh
-                                ;;
+                            #"SubDover")
+                            #    ./modules/dommods/subdover.sh
+                            #    ;;
 
                             "Spiderfoo7")
                                 ./modules/dommods/spiderfoot.sh
@@ -1495,7 +1495,7 @@ update(){
 
 cd /opt/sifter
 if [[ ${STLTH} == "--stealth" ]]; then
-    echo -e "${LP}Starting Sifter in ${URED}Anonymouss${NC} ${LP}mode${NC}"
+    echo -e "${LP}Starting Sifter in ${URED}Anonymous${NC} ${LP}mode${NC}"
     sudo anonsurf start
     STATUS='ON'
     echo ""
