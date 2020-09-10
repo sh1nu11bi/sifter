@@ -61,10 +61,10 @@
 # Removed
 
 - Omega's repo has been removed, therefore unavailable for new clones.
- If you already had omega installed, you will still be able to use this module though.
+<br/> If you already had omegas repo, you will still be able to use this module though.
 
 - DeadTrap's repo has been removed, therefore unavailable for new clones.
- If you already had omega installed, you will still be able to use this module though.
+<br /> If you already had DeadTraps repo, you will still be able to use this module though.
 
 - SayDog has been removed due to being a program meant mainly for termux.
 
