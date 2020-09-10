@@ -10,7 +10,7 @@ LBBLUE='\e[104m'
 cd /root/yuki2/
 sudo chmod +x Module --recursive
 sudo chown $USER:$USER Module --recursive
-sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
+sudo chmod +x wafninja joomscan yuki.sh startyuki yuki1 yukirun.sh install-perl-module.sh
 sudo ./install-perl-module.sh
 
 echo -e "${ORNG}"
