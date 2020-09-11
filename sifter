@@ -307,7 +307,7 @@ net_mods(){
 
                             "Arp-Scan")
                                 echo -e "${YLW}Would you like to scan your ${RED}l${YLW}ocal network, or use ${RED}c${YLW}ustom arp-scan args?(${RED}l${YLW}/${RED}c${YLW})${NC}"
-                                READ ASO
+                                read ASO
                                 if [[ ${ASO} == "l" ]]; then
                                     sudo arp-scan -l
                                 else
