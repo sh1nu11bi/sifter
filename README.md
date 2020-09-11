@@ -43,7 +43,6 @@
 
 # Additions:
 <p><em>
-- <a style="color: #729e1b" href="#">DeadTrap</a> - Mobile Number OSINT<br />
 - <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
 - <a style="color: #729e1b" href="#">EventCleaner</a> - EventLog Cleaner for Windows, with some other useful functionality.<br />
 - <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />

@@ -16,7 +16,6 @@ fi
 echo -e "${RED}"
 figlet -f mini BlackwidoW
 echo -e "${NC}"
-opts(){
     options=("Crawl the target domain & fuzz all parameters (Verbose enabled)" "Fuzz all GET parameters for common OWASP Vulns (Verbose enabled)" "Back")
     select opts in "${options[@]}"
     do
@@ -67,7 +66,7 @@ opts(){
                 ;;
         esac
     done
-}
+
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

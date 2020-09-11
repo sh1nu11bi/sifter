@@ -54,7 +54,7 @@ usage() {                                    	  # Function: Print a help message
 	echo "+"
 	echo -e "${RED}# ${ORNG}sifter${NC}    runs the programs bringing up the menu in a cli environment"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-c${NC} will check the exsiting hosts in the hostlist"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-a${NC} 'target' must be added with '' then is automattically appended to host file"
+	echo -e "${RED}# ${ORNG}sifter ${YLW}-a${NC} 'target' must be added with '' then is automatically appended to host file"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-e${NC} Opens the Exploitation Module Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-i${NC} Opens the Info-based Module Menu"
 	echo -e "${RED}# ${ORNG}sifter ${YLW}-d${NC} Opens the Domain Focused Module Menu"

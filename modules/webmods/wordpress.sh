@@ -80,6 +80,7 @@ wpscan(){
 					;;
 
 				"No")
+					cd /opt/sifter
 					exit
 					;;
 
