@@ -1372,7 +1372,7 @@ menu(){
     echo -e "${INV}${LGRY}"
     python3 extras/ban.py
     python3 extras/ban2.py
-    echo -e "${LGRY}=================${RED}Hit ${YLW}Ctrl + C${RED} at any time to quit ${UPURPLE}Sifter${NC}${LGRY}==================${NC}"
+    echo -e "${LGRY}===============  ${RED}Hit ${YLW}Ctrl + C${RED} at any time to quit ${UPURPLE}Sifter${NC}${LGRY}  ================${NC}"
     echo -e "${LGRY}==========================================================================${NC}"
     arg=$1
     ASTAT=$(cat /home/$USER/.anon_status)
