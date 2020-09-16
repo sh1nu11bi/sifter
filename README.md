@@ -2,7 +2,7 @@
 <p align="center"><img align="center" src="https://img.shields.io/badge/-The_Dead_Bunny_Collective-green"></p>
 <br />
 <p align="center">
-	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.PNG">
+	<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/sifter.png">
 <br>
   	<img align="center" src="https://img.shields.io/github/issues/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
@@ -125,9 +125,9 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 <h2>Menu:</h2>
 <p>
-<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/anon.PNG">
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/anon.png">
 	<br />
-<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.PNG">
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.png">
 </p>
 
 # Modules:
@@ -300,7 +300,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 ---------------------------------------------------------------------------------------------------------------------
 
 <br />
-<img align="middle" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/help.PNG">
+<img align="middle" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/help.png">
 <br />
 
 ---------------------------------------------------------------------------------------------------------------------
