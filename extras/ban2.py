@@ -15,5 +15,5 @@ def showbanner():
  /_____/  \___ \ |   |  |__/       \   |  \  |   /    //   --   \ /_____/
          /____  >|___|____/______  /___|  /__|  /____/ \______  /
               \/       ''' + WHITE + "Gemin1" + CEND + " " + CVIOLET + '''    \/    \/     ''' + UGREEN + "Version" + CBLUE + " 10" + CEND + CVIOLET + '''    \/    ''' + CEND)
-        print(WHITE + "=============================    " + CYELLOW + "Revision " + CBLUE + "2" + WHITE + "    ===========================    " + CEND)
+        print(WHITE + "==============================   " + CYELLOW + "Revision " + CBLUE + "2" + WHITE + "   ============================    " + CEND)
 showbanner()
