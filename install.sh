@@ -1627,18 +1627,19 @@ t70(){
 	if [[ -d '/opt/owasp-threat-dragon-desktop' ]]; then
 		sudo rm -rf /opt/owasp-threat-dragon-desktop
 	fi
-	if [[ -d "/home/$USER/.threat_dragon" ]]; then
+	cd /home/$USER
+	if [[ -d ".threat_dragon" ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "Threat Dragon is already installed"
 		echo -e "${NC}"
-		cd /home/$USER/.threat_dragon
+		cd .threat_dragon
 		sudo git fetch && sudo git pull &>/dev/null
 		sudo rm -rf node_modules
 		sudo npm install
 	else
 		cd /home/$USER
-		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop /home/$USER/.threat_dragon
-		cd /home/$USER/.threat_dragon
+		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop .threat_dragon
+		cd .threat_dragon
 		sudo npm install
 	fi
 }
