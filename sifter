@@ -18,6 +18,13 @@ URED='\033[4;31m'
 STATUS='NO'
 ARG=$2
 STLTH=$1
+
+###########################
+# Initial Anonymous Check #
+###########################
+if [[ ! -f "/home/$USER/.anon_status" ]]; then
+    echo "NO" > /home/$USER/.anon_status
+fi
 cd /opt/sifter
 ##############################
 # ! # First Time Deb Install #
@@ -1121,7 +1128,14 @@ ip_q(){
 # Result Options #
 ##################
 result_choices(){
+    KD=$(kdialog -h)
+    if [[ ${KD} == "" ]]; then
+        COM='cat'
+    else
+        COM='kdialog --geometry 600x800 --textbox'
+    fi
     echo -e "${ORNG}"
+    cd /opt/sifter/results
     ls
     echo -e "${NC}"
     PS3='What would you like to do?'
@@ -1133,8 +1147,8 @@ result_choices(){
                                 echo -e "${W}Please enter the file name${NC}"
                                 read FNAME
                                 echo -e "${W}==========================================================================${NC}"
-                                cat ${FNAME} &
-                                kdialog --geometry 600x800 --textbox ${FNAME} &
+                                ${COM} ${FNAME} &
+                            #    kdialog --geometry 600x800 --textbox ${FNAME} &
                                 echo -e "${W}==========================================================================${NC}"
                                 result_choices
                                 ;;
@@ -1191,7 +1205,8 @@ results(){
 #########################
 proxysystem(){
     echo -e "\n    ========================="
-    if [[ ${STATUS} == "YES" ]]; then
+    ASTAT=$(cat /home/$USER/.anon_status)
+    if [[ ${ASTAT} == "YES" ]]; then
         echo -e "${LP}Anonsurf is currently: ${URED}On${NC}"
     else
         echo -e "${LP}Anonsurf is currently: ${UBLUE}Off${NC}"
@@ -1203,8 +1218,8 @@ proxysystem(){
         do
             case $opt in
                 "Start")
-                    STATUS='YES'
                     sudo anonsurf start
+                    echo "YES" > /home/$USER/.anon_status
                     echo -e "${YLW}To check whether system is running correctly under proxy\nOpen a browser and go to ${UPURPLE}'https://dnsleaktest.com'${NC}"
                     echo -e "${YLW}Your Public IP Should be spoofed${NC}"
                     sleep 10
@@ -1212,8 +1227,8 @@ proxysystem(){
                     ;;
 
                 "Stop")
-                    STATUS='NO'
                     sudo anonsurf stop
+                    echo "NO" > /home/$USER/.anon_status
                     menu
                     ;;
 
@@ -1233,7 +1248,8 @@ modules(){
     echo -e "${URED}"
     figlet -f mini "Modules"
     echo -e "${NC}"
-    echo -e "${BIGreen}Anonymous: ${BIYellow}${STATUS}${NC}"
+    ASTAT=$(cat /home/$USER/.anon_status)
+    echo -e "${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e "${YLW}"
     PS3='What would you like to do?'
             options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "Operational Security & Threat Analysis" "Cross-Site Scripting & SQLinjection" "WebAppplication Scanners" "Password Tools" "View Results" "Info" "Anonymization" "Pass Time" "Check Tool Installs" "Main Menu" "Quit")
@@ -1325,14 +1341,15 @@ modules(){
                                 ;;
 
                             "Quit")
-                                if [[ ${STATUS} == "YES" ]]; then
+                                ASTAT=$(cat /home/$USER/.anon_status)
+                                if [[ ${ASTAT} == "YES" ]]; then
                                     echo -e "\n    ==============================" 
                                     echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
                                     echo -e "${LP}Attempting to stop it now..."
                                     sudo anonsurf stop
-                                    echo -e "${LP}Proxy Stopped${NC}"
-                                    STATUS='NO'
-                                    echo -e "    =============================="
+                                    echo -e "${LP}Proxy Stopped${RED}!${NC}"
+                                    echo "NO" > /home/$USER/.anon_status
+                                    echo -e "\n    =============================="
                                 fi
                                 RENCHK=$(sudo docker container ls | grep rengine)
                                 if [[ ${RENCHK} == "rengine_web_1" ]]; then
@@ -1355,9 +1372,11 @@ menu(){
     echo -e "${INV}${LGRY}"
     python3 extras/ban.py
     python3 extras/ban2.py
-    echo -e "${LGRY}=================${W}Hit ${YLW}Ctrl + C${W} at any time to quit ${UPURPLE}Sifter${NC}${LGRY}=================${NC}"
+    echo -e "${LGRY}=================${RED}Hit ${YLW}Ctrl + C${RED} at any time to quit ${UPURPLE}Sifter${NC}${LGRY}==================${NC}"
+    echo -e "${LGRY}==========================================================================${NC}"
     arg=$1
-    echo -e "${BIGreen}Anonymous: ${BIYellow}${STATUS}${NC}"
+    ASTAT=$(cat /home/$USER/.anon_status)
+    echo -e "${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo ""
     echo -e "${ORNG}What would you like to do?"
             options=("Check Hosts" "Edit Host List" "Parse Results to Modules" "Anonymization" "View Results" "Update" "Quit")
@@ -1401,14 +1420,19 @@ menu(){
                         ;;
 
                     "Quit")
-                        if [[ ${STATUS} == "YES" ]]; then
+                        ASTAT=$(cat /home/$USER/.anon_status)
+                        if [[ ${ASTAT} == "YES" ]]; then
                             echo -e "\n    ==============================" 
                             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
                             echo -e "${LP}Attempting to stop it now..."
                             sudo anonsurf stop
-                            echo -e "${LP}Proxy Stopped${NC}"
-                            STATUS='NO'
-                            echo -e "    =============================="
+                            echo -e "${LP}Proxy Stopped${RED}!${NC}"
+                            echo "NO" > /home/$USER/.anon_status
+                            echo -e "\n    =============================="
+                        fi
+                        RENCHK=$(sudo docker container ls | grep rengine)
+                        if [[ ${RENCHK} == "rengine_web_1" ]]; then
+                            sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
                         fi
                         exit 0
                         ;;
@@ -1445,11 +1469,11 @@ update(){
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
    
-    echo -e "${YLW}########################${NC}"                                                ########################
-    echo -e "${ORNG}# Current Version : ${LP}10 ${ORNG}#${NC}"                                   ##    VERSION INFO    ##
-    echo -e "${YLW}########################${NC}"                                                ########################
+    echo -e "${YLW}#########################"                                             ########################
+    echo -e "${ORNG}# Incoming Version :${LP} 10 ${ORNG}#${NC}"                          ##    VERSION INFO    ##
+    echo -e "${ORNG}#    Revision: ${LP}2       ${ORNG}#"                                       ##    UPDATE CHECK    ##
+    echo -e "${YLW}#########################${NC}"                                                ########################
 
-    mv modules/credmods/osmedeus.sh modules/credmods/osmedeus.orig
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
     	sudo mv modules/exmods/fuzzydander.sh modules/exmods/fuzzyd.sh
     fi
@@ -1459,7 +1483,6 @@ update(){
         echo -e "${ORNG}"
         figlet -f mini "Up to date."
         echo -e "${NC}"
-        mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
     else
         sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
@@ -1473,9 +1496,7 @@ update(){
 		    up_arg ${FILES}
 		    git pull
 	    fi
-	    
-        mv modules/credmods/osmedeus.orig modules/credmods/osmedeus.sh
-        
+	            
         ##########################
         # Check For Full Upgrade #
         ##########################
@@ -1497,7 +1518,7 @@ cd /opt/sifter
 if [[ ${STLTH} == "--stealth" ]]; then
     echo -e "${LP}Starting Sifter in ${URED}Anonymous${NC} ${LP}mode${NC}"
     sudo anonsurf start
-    STATUS='ON'
+    echo "YES" > /home/$USER/.anon_status      
     echo ""
     menu
 fi
