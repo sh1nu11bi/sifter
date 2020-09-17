@@ -1378,7 +1378,7 @@ menu(){
     ASTAT=$(cat /home/$USER/.anon_status)
     echo -e "${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo ""
-    echo -e "${ORNG}What would you like to do?"
+    echo -e "${ORNG}What would you like to do?\n ${W}=========================${NC}"
             options=("Check Hosts" "Edit Host List" "Parse Results to Modules" "Anonymization" "View Results" "Update" "Quit")
             select opt in "${options[@]}"
             do
