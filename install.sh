@@ -1638,7 +1638,7 @@ t70(){
 	fi
 	cd /home/$USER
 	if [[ -d ".threat_dragon" ]]; then
-		mv .threat_dragon -t .local
+		sudo mv .threat_dragon -t .local
 	fi
 	cd .local
 	if [[ -d '.threat_dragon' ]]; then
