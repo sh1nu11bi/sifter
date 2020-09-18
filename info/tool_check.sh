@@ -146,7 +146,8 @@ if [[ ! -d '/opt/SMBGhost' ]]; then
 else
 	t26=${BIGreen}'!'
 fi
-if [[ ! -d '/opt/xray' ]]; then
+XRY=$(sudo docker image ls | grep xray)
+if [[ ${XRY} != *"xray"* ]]; then
 	t27=${RED}'*'
 else
 	t27=${BIGreen}'!'
@@ -196,7 +197,8 @@ if [[ ! -d '/opt/dorks-eye' ]]; then
 else
 	t36=${BIGreen}'!'
 fi
-if [[ ! -f '/opt/sifter/modules/passtools/Mentalist' ]] || [[ -f '/opt/sifter/modules/passtools/Mentalist.exe' ]] || [[ ! -f '/opt/sifter/modules/passtools/Mentalist.app' ]]; then
+MENT=$(ls /opt/sifter/modules/passtools | grep Mentalist)
+if [[ ${MENT} == "" ]]; then
 	t37=${RED}'*'
 else
 	t37=${BIGreen}'!'
@@ -286,7 +288,7 @@ if [[ ! -d '/opt/ODIN' ]]; then
 else
 	t54=${BIGreen}'!'
 fi
-if [[ ! -d '/opt/OSINT-Framework' ]]; then
+if [[ ! -d "/home/$USER/.local/OSINT-Framework" ]]; then
 	t55=${RED}'*'
 else
 	t55=${BIGreen}'!'
@@ -361,7 +363,7 @@ if [[ ! -d '/opt/Katana' ]]; then
 else
 	t69=${BIGreen}'!'
 fi
-if [[ ! -d '/home/$USER/.threat_dragon' ]]; then
+if [[ ! -d "/home/$USER/.local/.threat_dragon" ]]; then
 	t70=${RED}'*'
 else
 	t70=${BIGreen}'!'
@@ -413,7 +415,7 @@ echo -e "${ORNG}[ ${t43} ${ORNG}] ${YLW}DnsTwist				${ORNG}[ ${t44} ${ORNG}] ${Y
 echo -e "${ORNG}[ ${t45} ${ORNG}] ${YLW}Katana-VF				${ORNG}[ ${t46} ${ORNG}] ${YLW}Sherlock ${NC}"
 echo -e "${ORNG}[ ${t47} ${ORNG}] ${YLW}PowerHub				${ORNG}[ ${t48} ${ORNG}] ${YLW}theHarvester ${NC}"
 echo -e "${ORNG}[ ${t49} ${ORNG}] ${YLW}SpiderFoot			${ORNG}[ ${t50} ${ORNG}] ${YLW}Email2Phone ${NC}"
-echo -e "${ORNG}[ ${t51} ${ORNG}] ${YLW}Intrigue-Core		${ORNG}[ ${t53} ${ORNG}] ${YLW}finDOM-XSS ${NC}"
+echo -e "${ORNG}[ ${t51} ${ORNG}] ${YLW}Intrigue-Core			${ORNG}[ ${t53} ${ORNG}] ${YLW}finDOM-XSS ${NC}"
 echo -e "${ORNG}[ ${t54} ${ORNG}] ${YLW}ODIN				${ORNG}[ ${t55} ${ORNG}] ${YLW}OSINT-Framework ${NC}"
 echo -e "${ORNG}[ ${t56} ${ORNG}] ${YLW}UFONet				${ORNG}[ ${t57} ${ORNG}] ${YLW}CardPwn ${NC}"
 echo -e "${ORNG}[ ${t58} ${ORNG}] ${YLW}WBruter				${ORNG}[ ${t59} ${ORNG}] ${YLW}Netattacker ${NC}"

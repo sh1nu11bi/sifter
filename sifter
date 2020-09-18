@@ -1133,7 +1133,6 @@ result_choices(){
         COM='kdialog --geometry 600x800 --textbox'
     fi
     echo -e "${ORNG}"
-    cd /opt/sifter/results
     ls
     echo -e "${NC}"
     echo -e " ${W}=========================\n${ORNG}What would you like to do?\n ${W}=========================${NC}"
@@ -1145,7 +1144,11 @@ result_choices(){
                                 echo -e "${W}Please enter the file name${NC}"
                                 read FNAME
                                 echo -e "${W}==========================================================================${NC}"
-                                ${COM} ${FNAME} &
+                                if [[ ${KD} == "" ]]; then
+                                    ${COM} ${FNAME} &
+                                else
+                                    ${COM} ${FNAME} &>/dev/null
+                                fi
                             #    kdialog --geometry 600x800 --textbox ${FNAME} &
                                 echo -e "${W}==========================================================================${NC}"
                                 result_choices
@@ -1160,9 +1163,8 @@ result_choices(){
 
                             "Change Directory")
                                 echo -e "${W}Please enter the directory name${NC}"
-                                read DIR_NAME
-                                # shellcheck disable=SC2164
-                                cd ${DIR_NAME}
+                                read DIR
+                                cd ${DIR}
                                 result_choices
                                 ;;
 
@@ -1195,7 +1197,7 @@ results(){
         find /opt/sifter/results/ ${SPECIFIC}
         echo -e "${W}Open a terminal or file broswer and goto the location above to see your results${NC}"
     fi 
-    cd /opt/sifter
+    cd /opt/sifter/results
 }
 #############################
 # Initial Proxy Check (img) #

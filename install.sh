@@ -13,7 +13,19 @@ BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
-
+LOLpause(){
+	D='1'
+	sudo touch .numbers
+	sudo chown $USER:$USER .numbers
+	for i in `seq -s \  10`;
+	do
+		echo ${D}... > .numbers
+		lolcat .numbers
+		sleep 1
+		D=$(( $D + 1 ))
+	done
+	rm .numbers
+}
 ##
 # FuzzyDander File Rename
 ##
@@ -57,9 +69,9 @@ sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
 sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
 ##
 echo -e "${RED}"
-echo -e "Starting Download & Update of external dependancies.\nThis will take some time"
-echo -e "${YLW}When ready please hit ${UPURPLE}ENTER${NC}${YLW}, or ${UPURPLE}CTRL + C${NC}${YLW} to quit${NC}"
-read INSTALL_PROMPT
+echo -e "Downloading & Updating of external dependancies will start in 10 seconds.\nThis will take some time"
+echo -e "${YLW}If you would not like to do this hit ${UPURPLE}Ctrl + C${NC}\n${YLW}Otherwise install script will continue automatically.${NC}"
+LOLpause
 #######################################__Python2 Tools__#######################################################
 #
 ## Python2 Pip Install Fix
@@ -647,14 +659,8 @@ t26(){
 #############
 t27(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for xRay${NC}"
-	if [[ -d '/opt/xray' ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "xRay is already installed"
-		echo -e "${NC}"
-	else
-		sudo docker pull txt3rob/xray-docker
-	fi
+	echo -e "${YLW}Pulling & updating xRay${NC}"
+	sudo docker pull txt3rob/xray-docker
 }
 
 ################
@@ -985,26 +991,29 @@ t43(){
 		figlet -f mini "DnsTwist is already installed"
 		echo -e "${NC}"
 		cd /opt/dnstwist
+		OUT='GeoIP>=1.3.2'
+		IN='#GeoIP>=1.3.2'
+		sudo sed -i "s/${OUT}/${IN}/g" requirements.txt
 		if [[ ! -d 'venv' ]]; then
-			sudo python3 -m venv venv
+			sudo python3.8  -m venv venv
 			source venv/bin/activate
-			sudo ./venv/bin/pip3 install wheel
-			sudo ./venv/bin/pip3 install -r requirements.txt
-			sudo ./venv/bin/python3 setup.py install
+			sudo ./venv/bin/pip3 install wheel dnspython
+			sudo ./venv/bin/pip3 install -r requirements.txt &>/dev/null
+			sudo ./venv/bin/python3 setup.py install &>/dev/null
 		fi
 		sudo git fetch && sudo git pull &>/dev/null
 		source venv/bin/activate
-		sudo ./venv/bin/pip3 install wheel
+		sudo ./venv/bin/pip3 install wheel dnspython 
 		sudo ./venv/bin/pip3 install -r requirements.txt &>/dev/null
 		sudo ./venv/bin/python3 setup.py install &>/dev/null
 	else
 		cd /opt
 		sudo git clone https://github.com/elceef/dnstwist.git
 		cd dnstwist
-		sudo python3 -m venv venv
+		sudo python3.8 -m venv venv
 		source venv/bin/activate
-		sudo ./venv/bin/pip3 install wheel
-		sudo ./venv/bin/pip3 install -r requirements.txt
+		sudo ./venv/bin/pip3 install wheel dnspython
+		sudo ./venv/bin/pip3 install -r requirements.txt 
 		sudo ./venv/bin/python3 setup.py install
 	fi
 }
@@ -1629,6 +1638,10 @@ t70(){
 	fi
 	cd /home/$USER
 	if [[ -d ".threat_dragon" ]]; then
+		mv .threat_dragon -t .local
+	fi
+	cd .local
+	if [[ -d '.threat_dragon' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "Threat Dragon is already installed"
 		echo -e "${NC}"
@@ -1637,7 +1650,7 @@ t70(){
 		sudo rm -rf node_modules
 		sudo npm install
 	else
-		cd /home/$USER
+		cd /home/$USER/.local
 		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop .threat_dragon
 		cd .threat_dragon
 		sudo npm install
