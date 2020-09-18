@@ -13,7 +13,19 @@ BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
-
+LOLpause(){
+	D='1'
+	sudo touch .numbers
+	sudo chown $USER:$USER .numbers
+	for i in `seq -s \  10`;
+	do
+		echo ${D}... > .numbers
+		lolcat .numbers
+		sleep 1
+		D=$(( $D + 1 ))
+	done
+	rm .numbers
+}
 ##
 # FuzzyDander File Rename
 ##
@@ -57,9 +69,9 @@ sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
 sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
 ##
 echo -e "${RED}"
-echo -e "Starting Download & Update of external dependancies.\nThis will take some time"
-echo -e "${YLW}When ready please hit ${UPURPLE}ENTER${NC}${YLW}, or ${UPURPLE}CTRL + C${NC}${YLW} to quit${NC}"
-read INSTALL_PROMPT
+echo -e "Downloading & Updating of external dependancies will start in 10 seconds.\nThis will take some time"
+echo -e "${YLW}If you would not like to do this hit ${UPURPLE}Ctrl + C${NC}\n${YLW}Otherwise install script will continue automatically.${NC}"
+LOLpause
 #######################################__Python2 Tools__#######################################################
 #
 ## Python2 Pip Install Fix
