@@ -1135,7 +1135,6 @@ result_choices(){
         COM='kdialog --geometry 600x800 --textbox'
     fi
     echo -e "${ORNG}"
-    cd /opt/sifter/results
     ls
     echo -e "${NC}"
     PS3='What would you like to do?'
@@ -1162,9 +1161,8 @@ result_choices(){
 
                             "Change Directory")
                                 echo -e "${W}Please enter the directory name${NC}"
-                                read DIR_NAME
-                                # shellcheck disable=SC2164
-                                cd ${DIR_NAME}
+                                read DIR
+                                cd ${DIR}
                                 result_choices
                                 ;;
 
@@ -1197,7 +1195,7 @@ results(){
         find /opt/sifter/results/ ${SPECIFIC}
         echo -e "${W}Open a terminal or file broswer and goto the location above to see your results${NC}"
     fi 
-    cd /opt/sifter
+    cd /opt/sifter/results
 }
 
 #########################

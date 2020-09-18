@@ -27,7 +27,9 @@ echo -e "${W}Please enter your target${NC}"
 read TARGET
 sleep 1
 echo -e "${LP}These scans will take a while but will finish\nPlease just be patient${NC}"
-mkdir /opt/sifter/results/DnsTwist/${TARGET}
+if [[ ! -d "/opt/sifter/results/DnsTwist/${TARGET}" ]]; then
+    mkdir /opt/sifter/results/DnsTwist/${TARGET}
+fi
 echo -e "${RED}Performing 'registered' test${NC}"
 xterm -e sudo ./venv/bin/python3 dnstwist.py --registered ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/registered_test.csv &
 echo -e "${RED}Performing ssdeep test${NC}"
