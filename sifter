@@ -1146,7 +1146,11 @@ result_choices(){
                                 echo -e "${W}Please enter the file name${NC}"
                                 read FNAME
                                 echo -e "${W}==========================================================================${NC}"
-                                ${COM} ${FNAME} &
+                                if [[ ${KD} == "" ]]; then
+                                    ${COM} ${FNAME} &
+                                else
+                                    ${COM} ${FNAME} &>/dev/null
+                                fi
                             #    kdialog --geometry 600x800 --textbox ${FNAME} &
                                 echo -e "${W}==========================================================================${NC}"
                                 result_choices
