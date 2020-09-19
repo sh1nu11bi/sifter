@@ -1449,6 +1449,7 @@ menu(){
                     "Update")
 		                update
                         reset
+                        menu
                         ;;
 
                     "Quit")
