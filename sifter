@@ -1228,9 +1228,9 @@ results(){
 #############################
 ASTAT=$(cat /home/$USER/.anon_status)
 if [[ ${ASTAT} == "NO" ]]; then
-    EXC="${BIGreen}[ ${RED}* ${BIGreen}]${NC}"
+    EXC="${BIGreen}[${RED}*${BIGreen}]${NC}"
 else
-    EXC="${BIGreen}[ ${ORNG}! ${BIGreen}]${NC}"
+    EXC="${BIGreen}[${ORNG}!${BIGreen}]${NC}"
 fi
 #########################
 # System Proxy Settings #
