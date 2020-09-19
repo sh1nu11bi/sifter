@@ -545,7 +545,7 @@ pass_tools(){
                     ;;
 
                 "Back")
-                    exmods
+                    modules
                     ;;
 
             esac
@@ -1428,22 +1428,27 @@ menu(){
                             sleep 1
                         fi
                         check_hosts
+                        menu
                         ;;
 
                     "Edit Host List")
                         nano /opt/sifter/files/host_list.txt
+                        menu
                         ;;
 
                     "Parse Results to Modules")
                         modules
+                        menu
                         ;;
 
                     "Anonymization")
                         proxysystem
+                        menu
                         ;;
 
                     "View Results")
                         results
+                        menu
                         ;;
                         
                     "Update")

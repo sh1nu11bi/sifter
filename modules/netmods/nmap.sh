@@ -25,9 +25,19 @@ multi() {
 					if [[ $REPLY == y ]]; then
 						echo -e "${RED}*${YLW}You can goto ${LP}Pass Time${YLW} in the module menu to kill some time while you wait${NC}"
 						echo -e "${YLW}"
-						sudo nmap -p- -Pn -O -A -iL files/pingtest.pass
+						echo -e "${W}Please enter name for the output file${NC}"
+						read FILE
+						echo -e "${YLW}Would you like to run the scan in an xTerm window?\n(${RED}NOTE:${NC} Window will close automatically once its done)${NC}"
+						read WINOPT
+						if [[ ${WINOPT} == "y" ]]; then
+							XT='xterm -e'
+						else
+							XT=''
+						fi
+						${XT} sudo nmap -p- -Pn -O -A -iL files/pingtest.pass -oN /opt/sifter/results/nMap/${FILE}.txt
 						echo -e "${NC}"
 						sleep 5
+						echo -e "${YLW}"
 					else
 						exit
 					fi
@@ -35,14 +45,32 @@ multi() {
 
 				"Common Vulnerabilities")
 					echo -e "${YLW}"
-					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass
+					echo -e "${W}Please enter name for the output file${NC}"
+					read FILE
+					echo -e "${YLW}Would you like to run the scan in an xTerm window?\n(${RED}NOTE:${NC} Window will close automatically once its done)${NC}"
+					read WINOPT
+					if [[ ${WINOPT} == "y" ]]; then
+						XT='xterm -e'
+					else
+						XT=''
+					fi
+					sudo nmap -sS -Pn -O -A -sV -iL files/pingtest.pass -oN /opt/sifter/results/nMap/${FILE}.txt
 					echo -e "${NC}"
 					sleep 5
 					;;
 
 				"UDP Port Scan")
 					echo -e "${YLW}"
-					sudo nmap -sU -Pn -O -A -iL files/pingtest.pass
+					echo -e "${W}Please enter name for the output file${NC}"
+					read FILE
+					echo -e "${YLW}Would you like to run the scan in an xTerm window?\n(${RED}NOTE:${NC} Window will close automatically once its done)${NC}"
+					read WINOPT
+					if [[ ${WINOPT} == "y" ]]; then
+						XT='xterm -e'
+					else
+						XT=''
+					fi
+					${XT} sudo nmap -sU -Pn -O -A -iL files/pingtest.pass -oN /opt/sifter/results/nMap/${FILE}.txt
 					echo -e "${NC}"
 					sleep 5
 					;;
@@ -69,8 +97,17 @@ single() {
 						echo -e "${NC}"
 						echo -e "${W}Please copy and paste in your target${NC}"
 						read TARGET
+						echo -e "${W}Please enter name for the output file${NC}"
+						read FILE
+						echo -e "${YLW}Would you like to run the scan in an xTerm window?\n(${RED}NOTE:${NC} Window will close automatically once its done)${NC}"
+						read WINOPT
+						if [[ ${WINOPT} == "y" ]]; then
+							XT='xterm -e'
+						else
+							XT=''
+						fi
 						echo "================================================================================================="
-						sudo nmap -p- -Pn -O -A ${TARGET}
+						${XT} sudo nmap -p- -Pn -O -A ${TARGET} -oN /opt/sifter/results/nMap/${FILE}.txt
 						echo "================================================================================================="
 					else
 						./modules/netmods/nmap.sh
@@ -83,8 +120,10 @@ single() {
 					echo -e "${NC}"
 					echo -e "${W}Please copy and paste in your target${NC}"
 					read TARGET
+					echo -e "${W}Please enter name for the output file${NC}"
+					read FILE
 					echo "================================================================================================="
-					sudo nmap -sS -Pn -O -A -sV ${TARGET}
+					sudo nmap -sS -Pn -O -A -sV ${TARGET} -oN /opt/sifter/results/nMap/${FILE}.txt
 					echo "================================================================================================="
 					;;
 
@@ -94,8 +133,17 @@ single() {
 					echo -e "${NC}"
 					echo -e "${W}Please copy and paste in your target${NC}"
 					read TARGET
+					echo -e "${W}Please enter name for the output file${NC}"
+					read FILE
+					echo -e "${YLW}Would you like to run the scan in an xTerm window?\n(${RED}NOTE:${NC} Window will close automatically once its done)${NC}"
+					read WINOPT
+					if [[ ${WINOPT} == "y" ]]; then
+						XT='xterm -e'
+					else
+						XT=''
+					fi
 					echo "================================================================================================="
-					sudo nmap -sU -Pn -O -A ${TARGET}
+					${XT} sudo nmap -sU -Pn -O -A ${TARGET} -oN /opt/sifter/results/nMap/${FILE}.txt
 					echo "================================================================================================="
 					;;
 
