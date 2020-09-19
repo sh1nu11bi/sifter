@@ -92,7 +92,7 @@ through to get the general idea. Most modules are explained along with demos of 
 		    - Parrot
 		    - Ubuntu
 		    - Linux (any distro)
-		    - Windows (Linux Subsystem with Docker and VcXsrc - for xterm use - installed correctly)
+		    - Windows (Linux Subsystem with Docker and VcXsrc installed correctly - for xterm use)
 		    
 Works on windows with linux-subsystem but please ensure docker is properly installed and configured, <br /> 
 following the instructions from <a href="https://docker.io">docker website</a><br />
