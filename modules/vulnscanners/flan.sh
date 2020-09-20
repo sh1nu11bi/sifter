@@ -7,11 +7,16 @@ LP='\033[1;35m'
 YLW='\033[1;33m'
 ARG=$2
 cd /opt/flan
+PNC=$(cat Makefile | grep "-Pn")
+if [[ ${PNC} == "-Pn" ]]; then
+	out="shared\:Z\" flan_scan"
+	in="shared\:Z\" flan_scan -Pn"
+	sudo sed -i "s/${out}/${in}/g" Makefile
+fi
 while getopts "t:" options; do
 	case "${options}" in
 		t)
-			rm shared/ips.txt
-			echo "$ARG" >> shared/ips.txt
+			echo "$ARG" > shared/ips.txt
 			echo -e "${LP}Running Flan Vuln Scanner against ${ORNG}$ARG${NC}"
 			sudo make start
 	esac
