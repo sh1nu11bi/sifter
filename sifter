@@ -93,8 +93,8 @@ cred_mods(){
   echo -e "${LP}This module focuses on Enterprises and their online presence"
   echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' ==========================#?: '
           options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "OSINT-Framework" "Back") 
           select opt in "${options[@]}"
           do
@@ -135,8 +135,8 @@ phone_mods(){
   figlet -f mini "Targeted Information Gatherers"
   echo -e "${LP}This module focuses on individual targets."
   echo -e "${YLW}eg. Social media information, phone number information, etc."
-  echo -e "\n ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e "\n ${W}=============================================================\n ${ORNG}What would you like to use?\n ${W}=============================================================${NC}"
+  PS3=' ==========================#?: '
           options=("Seeker" "Sherlock" "xRay" "Maryam" "E2P (Email2PhoneNumber)" "ODIN" "CardPwn" "DeadTrap" "iKy" "Back") 
           select opt in "${options[@]}"
           do
@@ -192,8 +192,8 @@ info_mods(){
     echo -e "${RED}"
     figlet -f mini "Information Gatherers"
     echo -e "${ORNG}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' ==========================#?: '
             options=("Enterprise Focus" "Individual Focus" "Back")
             select opt in "${options[@]}"
             do
@@ -223,8 +223,8 @@ honey_mods(){
     figlet -f mini "HoneyPot Detection Systems"
     echo -e "${LP}This module focuses on Enterprises and their online presence"
     echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
-    echo -e "\n ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e "\n ${W}=============================================================\n ${ORNG}What would you like to use?\n ${W}=============================================================${NC}"
+    PS3=' ==========================#?: '
             options=("HoneyCaught" "SniffingBear" "HoneyTel" "HFish" "Back")
             select opt in "${options[@]}"
             do
@@ -261,8 +261,8 @@ dom_mods(){
   echo -e "${RED}"
   figlet -f mini "Domain Recon Gathering"
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' ==========================#?: '
           options=("DnsTwist" "Armory" "Spiderfoo7" "SubFinder" "Pulsar" "Back")    #"SubDover" 
           select opt in "${options[@]}"
           do
@@ -306,8 +306,8 @@ net_mods(){
   echo -e "${RED}"
   figlet -f mini "Network Scanners"
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' ==========================#?: '
           options=("nMap" "Arp-Scan" "AttackSurfaceMapper" "wafw00f" "aSnip" "Espionage" "Back")
           select opt in "${options[@]}"
           do
@@ -361,8 +361,8 @@ vuln_mods(){
   echo -e "${RED}"
   figlet -f mini "Vulnerability Scanners"
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' ==========================#?: '
           options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Nettacker" "F5 Big IP RCE" "Back")
           select opt in "${options[@]}"
           do
@@ -406,8 +406,8 @@ web_mods(){
   echo -e "${RED}"
   figlet -f mini "Website Scanners & Enumerators"
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' ==========================#?: '
           options=("Dirb" "Nikto" "BlackWidow" "DorksEye" "WP Analysis" "Katana-DS" "Zeus" "Back")
           select opt in "${options[@]}"
           do
@@ -457,8 +457,8 @@ post_ex(){
     echo -e "${RED}"
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' ==========================#?: '
         options=("EoP Exploit" "Potatoes 'n PEAS" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "ACLight2" "PowerHUB" "Back")
         select opt in "${options[@]}"
         do
@@ -524,8 +524,8 @@ pass_tools(){
     echo -e "${RED}"
     figlet -f mini "Password Tools"
     echo -e "${ORNG}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}=============================================================\n ${ORNG}What would you like to use?\n ${W}==============================================================${NC}"
+    PS3=' ==========================#?: '
         options=("Mentalist" "dCipher" "Ciphey" "Back")
         select opt in "${options[@]}"
         do
@@ -559,8 +559,8 @@ exframes(){
     echo -e "${RED}"
   figlet -f mini "Exploitation Frameworks"
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' ==========================#?: '
         options=("Metasploit" "Thoron" "FuzzyDander" "Back")
         select opt in "${options[@]}"
         do
@@ -619,8 +619,8 @@ ex_mods(){
   echo -e "${RED}"
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' ==========================#?: '
         options=("Microsoft Explicit" "BruteForcing" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "Exploitation Frameworks" "NevrrMore" "Back")
         select opt in "${options[@]}"
         do
@@ -684,8 +684,8 @@ bruters(){
     echo -e "${RED}"
     figlet -f mini "BruteDUM"
     echo -e "${ORNG}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' =============================#?: '
         options=("BruteDUM" "WBruter" "Back")
         select opt in "${options[@]}"
         do
@@ -715,8 +715,8 @@ search_tools(){
     echo -e "${RED}"
     figlet -f mini "Exploit Finders"
     echo -e "${ORNG}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' =============================#?: '
         options=("ShodanSploit" "FindSploit" "Back")
         select opt in "${options[@]}"
         do
@@ -748,8 +748,8 @@ ms_tools(){
   echo -e "${RED}"
   figlet -f mini "MicroSoft Exploitation Tools"
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' =============================#?: '
         options=("ActiveReign" "iSpy" "SMBGhost" "Back")
         select opt in "${options[@]}"
         do
@@ -787,8 +787,8 @@ ddos(){
       echo -e "${RED}"
       figlet -f mini "DDoS Tools"
       echo -e "${ORNG}"
-      echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-      PS3=' ==========================#? '
+      echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+      PS3=' =============================#?: '
         options=("Dark Star" "Impulse" "UFONet" "Back")
         select opt in "${options[@]}"
         do
@@ -822,8 +822,8 @@ routertools(){
     echo -e "${RED}"
     figlet -f mini "Router Tools"
     echo -e "${ORNG}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' =============================#?: '
         options=("MkCheck" "RouterSploit" "Airgeddon" "Back")
         select opt in "${options[@]}"
         do
@@ -858,8 +858,8 @@ webex(){
   echo -e "${RED}"
   figlet -f mini "Website Exploitation Tools"
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' =============================#?: '
         options=("DDoS" "NekoBot" "xShock" "VulnX" "Back")
         select opt in "${options[@]}"
         do
@@ -899,8 +899,8 @@ webapps(){
   echo -e "${RED}"
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
-  echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-  PS3=' ==========================#? '
+  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+  PS3=' =============================#?: '
         options=("Sitadel" "BFAC" "AapFinder" "OneFind" "reNgine" "Back")
         select opt in "${options[@]}"
         do
@@ -941,8 +941,8 @@ xssmods(){
     echo -e "${RED}"
     figlet -f mini "WebAppplication Scanners"
     echo -e "${ORNG}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' =============================#?: '
           options=("XSS-Strike" "XSS-Freak" "finDOM-XSS" "Back")
           select opt in "${options[@]}"
           do
@@ -975,8 +975,8 @@ sqlmods(){
     echo -e "${RED}"
     figlet -f mini "WebAppplication Scanners"
     echo -e "${ORNG}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' =============================#?: '
           options=("WhiteWidow" "V3n0M-Scanner" "Back")
           select opt in "${options[@]}"
           do
@@ -1005,8 +1005,8 @@ xss_sql_mods(){
     echo -e "${RED}"
     figlet -f mini "Cross-Site Scripting & SQLinjection"
     echo -e "${ORNG}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' =============================#?: '
             options=("Cross-Site Scripting" "SQLinjection" "Back")
             select opt in "${options[@]}"
             do
@@ -1037,8 +1037,8 @@ opsec(){
     echo -e "${YLW}"
     figlet -f mini "Threat Modelling"
     echo -e "${ORNG}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to use?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' =============================#?: '
         options=("EventCleaner" "Threat Dragon" "Back")
         select opt in "${options[@]}"
         do
@@ -1088,19 +1088,19 @@ check_hosts(){
     	        do
     	            ping -c 1 $name
     	                if [[ $? == 0 ]]; then
-    	                    echo -e "${LP}===================================="
+    	                    echo -e "${LP}======================================================"
     	                    echo -e "${LP} ${name} Alive ${NC}" && echo ${name} >> files/pingtest_raw.pass
-    	                    echo -e "${LP}====================================${NC}"
+    	                    echo -e "${LP}======================================================${NC}"
     	                else
-    	                    echo -e "${RED}==================================="
+    	                    echo -e "${RED}====================================================="
     	                    echo -e "${RED} ${name} Dead ${NC}" && echo ${name} >> files/pingtest_raw.fail
-    	                    echo -e "${RED}===================================${NC}"
+    	                    echo -e "${RED}=====================================================${NC}"
     	                fi
     	        done
 
 	                sleep 5
 
-            echo "============================================================================================================================="
+            echo "======================================================================================================================================================================================================================="
 
         	    echo -e "${LP}Pingtest_Pass${NC}"
             	echo -e "${LP}*************${NC}"
@@ -1110,7 +1110,7 @@ check_hosts(){
 		        echo -e "${NC}"
 		        sed -e 's/^/http:\/\//' files/pingtest.pass > files/pingtest_pass.txt
 
-        	    echo "============================================================================================================================="
+        	    echo "======================================================================================================================================================================================================================="
 
 	            echo -e "${RED}Pingtest_Fail${NC}"
 	            echo -e "${RED}*************${NC}"
@@ -1158,8 +1158,8 @@ result_choices(){
     echo -e "${ORNG}"
     ls
     echo -e "${NC}"
-    echo -e " ${W}=========================\n${ORNG}What would you like to do?\n ${W}=========================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}=============================================================\n ${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
+    PS3=' =============================#?: '
             options=("Check File" "Check Image" "Change Directory" "Back")
             select opt in "${options[@]}"
             do
@@ -1167,14 +1167,14 @@ result_choices(){
                             "Check File")
                                 echo -e "${W}Please enter the file name${NC}"
                                 read FNAME
-                                echo -e "${W}==========================================================================${NC}"
+                                echo -e "${W}==============================================================================================================${NC}"
                                 if [[ ${KD} == "" ]]; then
                                     ${COM} ${FNAME} &
                                 else
                                     ${COM} ${FNAME} &>/dev/null
                                 fi
                             #    kdialog --geometry 600x800 --textbox ${FNAME} &
-                                echo -e "${W}==========================================================================${NC}"
+                                echo -e "${W}==============================================================================================================${NC}"
                                 result_choices
                                 ;;
 
@@ -1237,14 +1237,14 @@ fi
 #########################
 proxysystem(){
     ASTAT=$(cat /home/$USER/.anon_status)
-    echo -e " ${W}============================${NC}"
+    echo -e " ${W}=============================================================${NC}"
     if [[ ${ASTAT} == "YES" ]]; then
         echo -e "${EXC} ${LP}Anonsurf is currently: ${URED}On${NC}"
     else
         echo -e "${EXC} ${LP}Anonsurf is currently: ${UBLUE}Off${NC}"
     fi
-    echo -e " ${W}============================\n${ORNG}What would you like to do?\n ${W}============================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}=============================================================\n${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
+    PS3=' ==========================================================#? '
         options=("Start" "Stop" "Back")
         select opt in "${options[@]}"
         do
@@ -1281,10 +1281,10 @@ modules(){
     figlet -f mini "Modules"
     echo -e "${NC}"
     ASTAT=$(cat /home/$USER/.anon_status)
-    echo -e " ${W}============================${NC}"
+    echo -e " ${W}=============================================================${NC}"
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
-    echo -e " ${W}============================\n${ORNG}What would you like to use?\n ${W}============================${NC}"
-    PS3=' ==========================#? '
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    PS3=' =============================#?: '
             options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "Operational Security & Threat Analysis" "Cross-Site Scripting & SQLinjection" "WebAppplication Scanners" "Password Tools" "View Results" "Info" "Anonymization" "Pass Time" "Check Tool Installs" "Main Menu" "Quit")
             select opt in "${options[@]}"
             do
@@ -1376,13 +1376,13 @@ modules(){
                             "Quit")
                                 ASTAT=$(cat /home/$USER/.anon_status)
                                 if [[ ${ASTAT} == "YES" ]]; then
-                                    echo -e "\n    ==============================" 
+                                    echo -e "\n    ================================================" 
                                     echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
                                     echo -e "${LP}Attempting to stop it now..."
                                     sudo anonsurf stop
                                     echo -e "${LP}Proxy Stopped${RED}!${NC}"
                                     echo "NO" > /home/$USER/.anon_status
-                                    echo -e "\n    =============================="
+                                    echo -e "\n    ================================================"
                                 fi
                                 RENCHK=$(sudo docker container ls | grep rengine)
                                 if [[ ${RENCHK} == "rengine_web_1" ]]; then
@@ -1409,75 +1409,58 @@ menu(){
     echo -e "${LGRY}============================================================================${NC}"
     arg=$1
     ASTAT=$(cat /home/$USER/.anon_status)   
-    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
-    echo -e " ${W}============================\n${ORNG}What would you like to do?\n ${W}============================${NC}"
-    PS3=' ==========================#? '
-            options=("Check Hosts" "Edit Host List" "Parse Results to Modules" "Anonymization" "View Results" "Update" "Quit")
-            select opt in "${options[@]}"
-            do
-                case $opt in
-                    "Check Hosts")
-                        TARLIST=$(cat files/host_list.txt | grep "eg. target.com")
-                        if [[ ${TARLIST} == "eg. target.com" ]]; then
-                            rm /opt/sifter/files/host_list.txt
-                            touch /opt/sifter/files/host_list.txt
-                            echo -e "${W}Please add targets to the list${NC}"
-                            sleep 2
-                            nano /opt/sifter/files/host_list.txt
-                        else
-                            sleep 1
-                        fi
-                        check_hosts
-                        menu
-                        ;;
-
-                    "Edit Host List")
-                        nano /opt/sifter/files/host_list.txt
-                        menu
-                        ;;
-
-                    "Parse Results to Modules")
-                        modules
-                        menu
-                        ;;
-
-                    "Anonymization")
-                        proxysystem
-                        menu
-                        ;;
-
-                    "View Results")
-                        results
-                        menu
-                        ;;
-                        
-                    "Update")
-		                update
-                        reset
-                        menu
-                        ;;
-
-                    "Quit")
-                        ASTAT=$(cat /home/$USER/.anon_status)
-                        if [[ ${ASTAT} == "YES" ]]; then
-                            echo -e "\n    ==============================" 
-                            echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
-                            echo -e "${LP}Attempting to stop it now..."
-                            sudo anonsurf stop
-                            echo -e "${LP}Proxy Stopped${RED}!${NC}"
-                            echo "NO" > /home/$USER/.anon_status
-                            echo -e "\n    =============================="
-                        fi
-                        RENCHK=$(sudo docker container ls | grep rengine)
-                        if [[ ${RENCHK} == "rengine_web_1" ]]; then
-                            sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
-                        fi
-                        exit 0
-                        ;;
-
-                esac
-            done
+    echo -e " ${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} Check Hosts               ${ORNG}5.${W} View Results${NC}"
+    echo -e " ${ORNG}2.${W} Edit Host List            ${ORNG}6.${W} Update${NC}"
+    echo -e " ${ORNG}3.${W} Module Menu               ${ORNG}7.${W} Quit${NC}"
+    echo -e " ${ORNG}4.${W} Anonymization${NC}"
+    echo -e " ${W}"
+    echo -n " =============================#?: "
+    read MNOP
+    if [[ ${MNOP} == "1" ]]; then                   # Check Hosts
+	    TARLIST=$(cat files/host_list.txt | grep "eg. target.com")
+        if [[ ${TARLIST} == "eg. target.com" ]]; then
+            rm /opt/sifter/files/host_list.txt
+            touch /opt/sifter/files/host_list.txt
+            echo -e "${W}Please add targets to the list${NC}"
+            sleep 2
+            nano /opt/sifter/files/host_list.txt
+        else
+            sleep 1
+        fi
+        check_hosts
+    elif [[ ${MNOP} == "2" ]]; then                 # Edit Host List
+        nano /opt/sifter/files/host_list.txt
+    elif [[ ${MNOP} == "3" ]]; then                 # Module Menu
+        modules
+    elif [[ ${MNOP} == "4" ]]; then                 # Anonymization
+        proxysystem
+    elif [[ ${MNOP} == "5" ]]; then                 # View Results
+        results
+    elif [[ ${MNOP} == "6" ]]; then                 # Update
+        update
+    elif [[ ${MNOP} == "7" ]]; then                 # Quit
+        ASTAT=$(cat /home/$USER/.anon_status)
+        if [[ ${ASTAT} == "YES" ]]; then
+            echo -e "\n    ================================================" 
+            echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
+            echo -e "${LP}Attempting to stop it now..."
+            sudo anonsurf stop
+            echo -e "${LP}Proxy Stopped${RED}!${NC}"
+            echo "NO" > /home/$USER/.anon_status
+            echo -e "\n    ================================================"
+        fi
+        RENCHK=$(sudo docker container ls | grep rengine)
+        if [[ ${RENCHK} == "rengine_web_1" ]]; then
+            sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
+        fi
+        exit 0
+    else
+        echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected.\nPlease enter the corresponding number${NC}"
+    fi
     echo -e "${NC}"
+    menu
 }
 
 ##############
@@ -1554,11 +1537,11 @@ update(){
 
 cd /opt/sifter
 if [[ ${STLTH} == "--stealth" ]]; then
-    echo -e " ${W}=========================${NC}"
+    echo -e " ${W}===========================================${NC}"
     echo -e "${LP}Starting Sifter in ${URED}Anonymous${NC} ${LP}mode${NC}"
     sudo anonsurf start
     echo "YES" > /home/$USER/.anon_status      
-    echo -e " ${W}=========================${NC}"
+    echo -e " ${W}===========================================${NC}"
     menu
 fi
 
