@@ -1451,10 +1451,12 @@ menu(){
             echo "NO" > /home/$USER/.anon_status
             echo -e "\n    ================================================"
         fi
-        RENCHK=$(sudo docker container ls | grep rengine)
+        sudo docker container ls > .ren_dcr
+        RENCHK=$(cat .ren_dcr | grep rengine)
         if [[ ${RENCHK} == "rengine_web_1" ]]; then
             sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
         fi
+        sudo rm .ren_dcr
         exit 0
     else
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected.\nPlease enter the corresponding number${NC}"
