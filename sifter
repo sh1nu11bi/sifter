@@ -18,7 +18,8 @@ URED='\033[4;31m'
 STATUS='NO'
 ARG=$2
 STLTH=$1
-
+WXTM=$(which xterm)
+if [[ ${WXTM} == "/usr/bin/xterm" ]]; then
 ###########################
 # Initial Anonymous Check #
 ###########################
@@ -1148,81 +1149,103 @@ ip_q(){
 ##################
 # Result Options #
 ##################
-result_choices(){
-    KD=$(kdialog -h)
-    if [[ ${KD} == "" ]]; then
-        COM='cat'
-    else
-        COM='kdialog --geometry 600x800 --textbox'
-    fi
-    echo -e "${ORNG}"
-    ls
-    echo -e "${NC}"
-    echo -e " ${W}=============================================================\n ${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
-    PS3=' =============================#?: '
-            options=("Check File" "Check Image" "Change Directory" "Back")
-            select opt in "${options[@]}"
-            do
-                    case $opt in
-                            "Check File")
-                                echo -e "${W}Please enter the file name${NC}"
-                                read FNAME
-                                echo -e "${W}==============================================================================================================${NC}"
-                                if [[ ${KD} == "" ]]; then
-                                    ${COM} ${FNAME} &
-                                else
-                                    ${COM} ${FNAME} &>/dev/null
-                                fi
-                            #    kdialog --geometry 600x800 --textbox ${FNAME} &
-                                echo -e "${W}==============================================================================================================${NC}"
-                                result_choices
-                                ;;
-
-                             "Check Image")
-                                echo -e "${W}Please enter the image name${NC}"
-                                read INAME
-                                eom ${INAME}
-                                result_choices
-                                ;;
-
-                            "Change Directory")
-                                echo -e "${W}Please enter the directory name${NC}"
-                                read DIR
-                                cd ${DIR}
-                                result_choices
-                                ;;
-
-                            "Back")
-                                cd /opt/sifter
-                                modules
-                                ;;
-
-                    esac
-            done
-    echo -e "${NC}"
-}
+#result_choices(){
+#    KD=$(kdialog -h)
+#    if [[ ${KD} == "" ]]; then
+#        COM='cat'
+#    else
+#        COM='kdialog --geometry 600x800 --textbox'
+#    fi
+#    echo -e "${ORNG}"
+#    ls
+#    echo -e "${NC}"
+#    echo -e " ${W}=============================================================\n ${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
+#    PS3=' =============================#?: '
+#            options=("Check File" "Check Image" "Change Directory" "Back")
+#            select opt in "${options[@]}"
+#            do
+#                    case $opt in
+#                            "Check File")
+#                                echo -e "${W}Please enter the file name${NC}"
+#                                read FNAME
+#                                echo -e "${W}==============================================================================================================${NC}"
+#                                if [[ ${KD} == "" ]]; then
+#                                    ${COM} ${FNAME} &
+#                                else
+#                                    ${COM} ${FNAME} &>/dev/null
+#                                fi
+#                            #    kdialog --geometry 600x800 --textbox ${FNAME} &
+#                                echo -e "${W}==============================================================================================================${NC}"
+#                                result_choices
+#                                ;;
+#
+#                             "Check Image")
+#                                echo -e "${W}Please enter the image name${NC}"
+#                                read INAME
+#                                eom ${INAME}
+#                                result_choices
+#                                ;;
+#
+#                            "Change Directory")
+#                                echo -e "${W}Please enter the directory name${NC}"
+#                                read DIR
+#                                cd ${DIR}
+#                                result_choices
+#                                ;;
+#
+#                            "Back")
+#                                cd /opt/sifter
+#                                modules
+#                                ;;
+#
+#                    esac
+#            done
+#    echo -e "${NC}"
+#}
 
 ###########
 # Results #
 ###########
+#results(){
+#    echo -e "${YLW}Results"
+#    echo -e "${LP}*******${NC}"
+#    echo -e "${LP}"
+#    cd /opt/sifter/results
+#    ls
+#    echo -e "${YLW}Would you like to (${LP}b${YLW})rowse results or bring up all results for a (${LP}s${YLW})pecific target?(${LP}b${YLW}/${LP}s${YLW})${NC}"
+#    read BROWSE
+#    if [[ ${BROWSE} == "b" ]]; then
+#        result_choices
+#    else
+#        echo -e "${ORNG}Please enter the target to search for (${RED}eg. ${YLW}target.com${ORNG})${NC}"
+#        read SPECIFIC
+#        find /opt/sifter/results/ ${SPECIFIC}
+#        echo -e "${W}Open a terminal or file broswer and goto the location above to see your results${NC}"
+#    fi 
+#    cd /opt/sifter/results
+#}
+
+#################
+#  GUI Results  #
+#################
 results(){
-    echo -e "${YLW}Results"
-    echo -e "${LP}*******${NC}"
-    echo -e "${LP}"
-    cd /opt/sifter/results
-    ls
-    echo -e "${YLW}Would you like to (${LP}b${YLW})rowse results or bring up all results for a (${LP}s${YLW})pecific target?(${LP}b${YLW}/${LP}s${YLW})${NC}"
-    read BROWSE
-    if [[ ${BROWSE} == "b" ]]; then
-        result_choices
-    else
-        echo -e "${ORNG}Please enter the target to search for (${RED}eg. ${YLW}target.com${ORNG})${NC}"
-        read SPECIFIC
-        find /opt/sifter/results/ ${SPECIFIC}
-        echo -e "${W}Open a terminal or file broswer and goto the location above to see your results${NC}"
-    fi 
-    cd /opt/sifter/results
+	resopt=$(zenity --title  "Choose Results to View" \
+			--height=600 --width=800 \
+			--file-selection --multiple);
+	echo ${resopt}
+	if file "${resopt}" |grep -qE 'image|bitmap'; then
+		ROPT="image"
+	fi
+	if [[ ${ROPT} == "image" ]]; then
+		eom ${ROPT}
+	else
+		zenity --title "Viewing: ${resopt}" \
+			--height=600 --width=800 \
+			--text "${resopt}"
+	fi
 }
+
+
 #############################
 # Initial Proxy Check (img) #
 #############################
@@ -1326,7 +1349,7 @@ modules(){
     elif [[ ${MMOP} == "14" ]]; then
 	    XTM=$(xterm -h | grep include)
         if [[ ${XTM} == "where options include:" ]]; then
-            xterm -e /opt/sifter/info/info.sh &
+            bash /opt/sifter/info/ginfo.sh &
         else
             ./info/info.sh
         fi
@@ -1637,7 +1660,7 @@ while getopts "a:WndwirmeopcvRuhI" options
             echo -e "${NC}"
             XTM=$(xterm -h)
             if [[ ${XTM} == "" ]]; then
-                xterm -e /opt/sifter/info/info.sh &
+                bash /opt/sifter/info/ginfo.sh &
             else
                 ./info/info.sh
             fi 
