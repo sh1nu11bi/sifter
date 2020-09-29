@@ -1283,116 +1283,88 @@ modules(){
     ASTAT=$(cat /home/$USER/.anon_status)
     echo -e " ${W}=============================================================${NC}"
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' =============================#?: '
-            options=("Information Gatherers" "Domain Recon Gathering" "Network Scanners" "Website Scanners & Enumerators" "Vulnerability Scanners" "HoneyPot Detection Systems" "Router Tools" "Exploitation Tools" "Operational Security & Threat Analysis" "Cross-Site Scripting & SQLinjection" "WebAppplication Scanners" "Password Tools" "View Results" "Info" "Anonymization" "Pass Time" "Check Tool Installs" "Main Menu" "Quit")
-            select opt in "${options[@]}"
-            do
-                    case $opt in
-                            "Information Gatherers")
-                                info_mods
-                                ;;
-
-                            "Domain Recon Gathering")
-                                dom_mods
-                                ;;
-
-                            "Network Scanners")
-                                net_mods
-                                ;;
-
-                            "Website Scanners & Enumerators")
-                                web_mods
-                                ;;
-
-                            "Vulnerability Scanners")
-                                vuln_mods
-                                ;;
-
-                            "HoneyPot Detection Systems")
-                                honey_mods
-                                ;;
-
-                            "Router Tools")
-                                routertools
-                                ;;
-
-                            "Exploitation Tools")
-                                ex_mods
-                                ;;
-
-                            "Operational Security & Threat Analysis")
-                                opsec
-                                ;;
-
-                            "Cross-Site Scripting & SQLinjection")
-                                xss_sql_mods
-                                ;;
-
-			                "WebAppplication Scanners")
-			                    webapps
-			                    ;;
-
-                            "Password Tools")
-                                passtools
-                                ;;
-
-                            "View Results")
-                                results
-                                ;;
-
-                            "Info")
-                                XTM=$(xterm -h | grep include)
-                                if [[ ${XTM} == "where options include:" ]]; then
-                                    xterm -e /opt/sifter/info/info.sh &
-                                else
-                                    ./info/info.sh
-                                fi                                
-                                ;;
-
-                            "Anonymization")
-                                proxysystem
-                                ;;
-
-                            "Pass Time")
-                                echo -e "${RED}This module is to pass some time during long scans \nsuch as nMap (Full Port Scan) or RapidScan${NC}"
-                                echo -e "${W}Would you like to continue? (${YLW}y${W}/${YLW}n${W})"
-                                read PTOPT
-                                if [[ ${PTOPT} == 'y' ]]; then
-                                    firefox https://github.blog/2020-08-06-gmtk-game-jam-2020-staff-picks-open-source-games/ &
-                                else
-                                    modules
-                                fi
-                                ;;
-
-                            "Check Tool Installs")
-                                info/tool_check.sh
-                                ;;
-
-                            "Main Menu")
-                                menu
-                                ;;
-
-                            "Quit")
-                                ASTAT=$(cat /home/$USER/.anon_status)
-                                if [[ ${ASTAT} == "YES" ]]; then
-                                    echo -e "\n    ================================================" 
-                                    echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
-                                    echo -e "${LP}Attempting to stop it now..."
-                                    sudo anonsurf stop
-                                    echo -e "${LP}Proxy Stopped${RED}!${NC}"
-                                    echo "NO" > /home/$USER/.anon_status
-                                    echo -e "\n    ================================================"
-                                fi
-                                RENCHK=$(sudo docker container ls | grep rengine)
-                                if [[ ${RENCHK} == "rengine_web_1" ]]; then
-                                    sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
-                                fi
-                                exit 0
-                                ;;
-                    esac
-            done
-    echo -e "${NC}"
+    echo -e " ${W}=============================================================\n ${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} Information Gatherers           ${ORNG}11.${W} Cross-Site Scripting & SQLinjection${NC}"
+    echo -e " ${ORNG}2.${W} Domain Reconnaissance           ${ORNG}12.${W} Password Tools${NC}"
+    echo -e " ${ORNG}3.${W} Network Analysis                ${RED}13.${W} View Results${NC}"
+    echo -e " ${ORNG}4.${W} WebScanning & Enumeration       ${RED}14.${W} Module Info${NC}"
+    echo -e " ${ORNG}5.${W} Vulnerability Scanning          ${LP}15.${W} Anonymization${NC}"
+    echo -e " ${ORNG}6.${W} HoneyPot Detection Systems      ${YLW}16.${NC}${W} When Time Moves Slowly*${NC}"
+    echo -e " ${ORNG}7.${W} Router Tools                    ${BIGreen}17.${W} Check For Missing Tools${NC}"
+    echo -e " ${ORNG}8.${W} Exploitation Tools              ${UBLUE}18.${NC}${W} Main Menu${NC}"
+    echo -e " ${ORNG}9.${W} WebApp Scanning                 ${W}19.${W} Quit${NC}"
+    echo -e " ${ORNG}10.${W} Operational Security & Threat Analysis${NC}"
+    echo -e " ${W}"
+    echo -n " ==================================#?: "
+    read MMOP
+    if [[ ${MMOP} == "1" ]]; then
+	    info_mods
+    elif [[ ${MMOP} == "2" ]]; then
+	    dom_mods
+    elif [[ ${MMOP} == "3" ]]; then
+	    net_mods
+    elif [[ ${MMOP} == "4" ]]; then
+	    web_mods
+    elif [[ ${MMOP} == "5" ]]; then
+	    vuln_mods
+    elif [[ ${MMOP} == "6" ]]; then
+	    honey_mods
+    elif [[ ${MMOP} == "7" ]]; then
+	    routertools
+    elif [[ ${MMOP} == "8" ]]; then
+	    ex_mods
+    elif [[ ${MMOP} == "9" ]]; then
+	    webapps
+    elif [[ ${MMOP} == "10" ]]; then
+	    opsec
+    elif [[ ${MMOP} == "11" ]]; then
+	    xss_sql_mods
+    elif [[ ${MMOP} == "12" ]]; then
+	    passtools
+    elif [[ ${MMOP} == "13" ]]; then
+	    results
+    elif [[ ${MMOP} == "14" ]]; then
+	    XTM=$(xterm -h | grep include)
+        if [[ ${XTM} == "where options include:" ]]; then
+            xterm -e /opt/sifter/info/info.sh &
+        else
+            ./info/info.sh
+        fi
+    elif [[ ${MMOP} == "15" ]]; then
+	    proxysystem
+    elif [[ ${MMOP} == "16" ]]; then
+	    echo -e "${RED}This module is to pass some time during long scans \nsuch as nMap (Full Port Scan) or RapidScan${NC}"
+        echo -e "${W}Would you like to continue? (${YLW}y${W}/${YLW}n${W})"
+        read PTOPT
+        if [[ ${PTOPT} == 'y' ]]; then
+            firefox https://github.blog/2020-08-06-gmtk-game-jam-2020-staff-picks-open-source-games/ &
+        else
+            modules
+        fi
+    elif [[ ${MMOP} == "17" ]]; then
+	    bash info/tool_check.sh
+    elif [[ ${MMOP} == "18" ]]; then
+	    menu
+    elif [[ ${MMOP} == "19" ]]; then
+	    ASTAT=$(cat /home/$USER/.anon_status)
+        if [[ ${ASTAT} == "YES" ]]; then
+            echo -e "\n    ================================================" 
+            echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
+            echo -e "${LP}Attempting to stop it now..."
+            sudo anonsurf stop
+            echo -e "${LP}Proxy Stopped${RED}!${NC}"
+            echo "NO" > /home/$USER/.anon_status
+            echo -e "\n    ================================================"
+        fi
+        RENCHK=$(sudo docker container ls | grep rengine)
+        if [[ ${RENCHK} == "rengine_web_1" ]]; then
+            sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
+        fi
+        exit 0
+    else
+        echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        modules
+    fi 
 }
 
 ############
