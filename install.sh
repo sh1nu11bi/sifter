@@ -1645,10 +1645,10 @@ t70(){
 		echo -e "${ORNG}"
 		figlet -f mini "Threat Dragon is already installed"
 		echo -e "${NC}"
-		cd .threat_dragon
-		sudo git fetch && sudo git pull &>/dev/null
-		sudo rm -rf node_modules
-		sudo npm install
+		#cd .threat_dragon
+		#sudo git fetch && sudo git pull &>/dev/null
+		#sudo rm -rf node_modules
+		#sudo npm install
 	else
 		cd /home/$USER/.local
 		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop .threat_dragon

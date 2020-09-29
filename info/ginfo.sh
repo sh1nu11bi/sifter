@@ -1,96 +1,96 @@
 #!/bin/bash
 # Zenity Text-Box
 # Displays Sifter Module Information (GUI)
-_zenity="/usr/bin/zenity"
+
 # Info Gathering SubMenu
 credmenu(){
-	credinfo=$(${_zenity} --list --title  "Module Information" \
+	credinfo=$(zenity --list --title  "Module Information" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
 					--column "Pick" --column "Catagory" FALSE "Seeker" FALSE "xRay" FALSE "theHarvester" FALSE "Osmedeus" FALSE "ReconSpider" FALSE "Maryam" FALSE "CredNinja" FALSE "SpiderFoo7" FALSE "ODIN" TRUE "Back"); 
 	echo ${credinfo}
 	if [[ ${credinfo} == "Seeker" ]]; then
 	   zenity --title "${credinfo}" \
-	   --text-info /opt/sifter/info/seeker.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/seeker.info" &>/dev/null
 	elif [[ ${credinfo} == "xRay" ]]; then
 	   zenity --title "${credinfo}" \
-	   --text-info /opt/sifter/info/xray.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/xray.info" &>/dev/null
 	elif [[ ${credinfo} == "theHarvester" ]]; then
 	   zenity --title "${credinfo}" \
-	   --text-info /opt/sifter/info/theHarvester.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/theHarvester.info" &>/dev/null
 	elif [[ ${credinfo} == "Osmedeus" ]]; then
 	   zenity --title "${credinfo}" \
-	   --text-info /opt/sifter/info/osmedeus.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/osmedeus.info" &>/dev/null
 	elif [[ ${credinfo} == "ReconSpider" ]]; then
 	   zenity --title "${credinfo}" \
-	   --text-info /opt/sifter/info/reconspider.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/reconspider.info" &>/dev/null
 	elif [[ ${credinfo} == "Maryam" ]]; then
 	   zenity --title "${credinfo}" \
-	   --text-info /opt/sifter/info/maryam.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/maryam.info" &>/dev/null
 	elif [[ ${credinfo} == "CredNinja" ]]; then
 	   zenity --title "${credinfo}" \
-	   --text-info /opt/sifter/info/credninja.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/credninja.info" &>/dev/null
 	elif [[ ${credinfo} == "SpiderFoo7" ]]; then
 	   zenity --title "${credinfo}" \
-	   --text-info /opt/sifter/info/spiderfoot.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/spiderfoot.info" &>/dev/null
 	elif [[ ${credinfo} == "ODIN" ]]; then
 	   zenity --title "${credinfo}" \
-	   --text-info /opt/sifter/info/odin.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/odin.info" &>/dev/null
 	else
 		if [[ ${credinfo} == "Back" ]]; then
-			modmenu
+			break
 		fi		
 	fi
 }
 
 # Domain Reconnaissance SubMenu
 dommenu(){
-	dominfo=$(${_zenity} --list --title  "Domain Reconnaissance" \
+	dominfo=$(zenity --list --title  "Domain Reconnaissance" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
 					--column "Pick" --column "Catagory" FALSE "Armory" FALSE "aSnip" TRUE "Back"); 
 	echo ${dominfo}
 	if [[ ${dominfo} == "Armory" ]]; then
 	   zenity --title "${dominfo}" \
-	   --text-info /opt/sifter/info/armory.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/armory.info" &>/dev/null
 	elif [[ ${dominfo} == "aSnip" ]]; then
 	   zenity --title "${dominfo}" \
-	   --text-info /opt/sifter/info/asnip.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/asnip.info" &>/dev/null
 	else
 		if [[ ${dominfo} == "Back" ]]; then
-			modmenu
+			break
 		fi		
 	fi
 }
 
 # WebApplication SubMenu
 webappmenu(){
-	webappinfo=$(${_zenity} --list --title  "WebApplication Scanners" \
+	webappinfo=$(zenity --list --title  "WebApplication Scanners" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
 					--column "Pick" --column "Catagory" FALSE "Sitadel" FALSE "AapFinder" FALSE "BFAC" FALSE "OneFind" FALSE "XSStrike" FALSE "XSS-Freak" TRUE "Back"); 
 	echo ${webappinfo}
 	if [[ ${webappinfo} == "Sitadel" ]]; then
 	   zenity --title "${webappinfo}" \
-	   --text-info /opt/sifter/info/sitadel.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/sitadel.info" &>/dev/null
 	elif [[ ${webappinfo} == "AapFinder" ]]; then
 	   zenity --title "${webappinfo}" \
-	   --text-info /opt/sifter/info/aapfinder.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/aapfinder.info" &>/dev/null
 	elif [[ ${webappinfo} == "BFAC" ]]; then
 	   zenity --title "${webappinfo}" \
-	   --text-info /opt/sifter/info/bfac.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/bfac.info" &>/dev/null
 	elif [[ ${webappinfo} == "OneFind" ]]; then
 	   zenity --title "${webappinfo}" \
-	   --text-info /opt/sifter/info/onefind.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/onefind.info" &>/dev/null
 	elif [[ ${webappinfo} == "XSStrike" ]]; then
 	   zenity --title "${webappinfo}" \
-	   --text-info /opt/sifter/info/xsstrike.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/xsstrike.info" &>/dev/null
 	elif [[ ${webappinfo} == "XSS-Freak" ]]; then
 	   zenity --title "${webappinfo}" \
-	   --text-info /opt/sifter/info/XSS-Freak.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/XSS-Freak.info" &>/dev/null
 	else
 		if [[ ${webappinfo} == "Back" ]]; then
-			modmenu
+			break
 		fi		
 	fi
 }
@@ -98,43 +98,43 @@ webappmenu(){
 
 # HoneyPot SubMenu
 honeymenu(){
-	honey_info=$(${_zenity} --list --title  "HoneyPot Detection Tools" \
+	honey_info=$(zenity --list --title  "HoneyPot Detection Tools" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
 					--column "Pick" --column "Catagory" FALSE "HoneyTel" TRUE "Back"); 
 	echo ${honey_info}
 	if [[ ${honey_info} == "HoneyTel" ]]; then
 	   zenity --title "${honey_info}" \
-	   --text-info /opt/sifter/info/honeytel.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/honeytel.info" &>/dev/null
 	else
 		if [[ ${honey_info} == "Back" ]]; then
-			modmenu
+			break
 		fi		
 	fi
 }
 
 # Vulnerability Tool SubMenu
 vulnmenu(){
-	vulninfo=$(${_zenity} --list --title  "Vulnerability Scanners" \
+	vulninfo=$(zenity --list --title  "Vulnerability Scanners" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
 					--column "Pick" --column "Catagory" FALSE "Flan" FALSE "RapidScan" FALSE "Yuki-Chan" FALSE "OWASP-Nettacker" TRUE "Back"); 
 	echo ${vulninfo}
 	if [[ ${vulninfo} == "Flan" ]]; then
 	   zenity --title "${vulninfo}" \
-	   --text-info /opt/sifter/info/flan.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/flan.info" &>/dev/null
 	elif [[ ${vulninfo} == "RapidScan" ]]; then
 	   zenity --title "${vulninfo}" \
-	   --text-info /opt/sifter/info/rapidscan.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/rapidscan.info" &>/dev/null
 	elif [[ ${vulninfo} == "Yuki-Chan" ]]; then
 	   zenity --title "${vulninfo}" \
-	   --text-info /opt/sifter/info/yuki.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/yuki.info" &>/dev/null
 	elif [[ ${vulninfo} == "OWASP-Nettacker" ]]; then
 	   zenity --title "${vulninfo}" \
-	   --text-info /opt/sifter/info/owasp.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/owasp.info" &>/dev/null
 	else
 		if [[ ${vulninfo} == "Back" ]]; then
-			modmenu
+			break
 		fi		
 	fi
 }
@@ -142,49 +142,49 @@ vulnmenu(){
 
 # WebSite Tool SubMenu
 web_netmenu(){
-	web_netinfo=$(${_zenity} --list --title  "WebScanning & Enumeration" \
+	web_netinfo=$(zenity --list --title  "WebScanning & Enumeration" \
 					--text "Choose an application" --radiolist \
 					--height=600 --width=800 \
 					--column "Pick" --column "Catagory" FALSE "BlackWidow" FALSE "AttackSurfaceMapper" FALSE "wafw00f" TRUE "Back"); 
 	echo ${web_netinfo}
 	if [[ ${web_netinfo} == "BlackWidow" ]]; then
 	   zenity --title "${web_netinfo}" \
-	   --text-info /opt/sifter/info/blackwidow.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/blackwidow.info" &>/dev/null
 	elif [[ ${web_netinfo} == "AttackSurfaceMapper" ]]; then
 	   zenity --title "${web_netinfo}" \
-	   --text-info /opt/sifter/info/asm.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/asm.info" &>/dev/null
 	elif [[ ${web_netinfo} == "wafw00f" ]]; then
 	   zenity --title "${web_netinfo}" \
-	   --text-info /opt/sifter/info/wafw00f.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/wafw00f.info" &>/dev/null
 	else
 		if [[ ${web_netinfo} == "Back" ]]; then
-			modmenu
+			break
 		fi		
 	fi
 }
 
 # Post Exploitation
 postmenu(){
-	postinfo=$(${_zenity} --list --title  "Post-Exploitation Tools" \
+	postinfo=$(zenity --list --title  "Post-Exploitation Tools" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
 					--column "Pick" --column "Catagory" FALSE "Omega" FALSE "WinPwn" FALSE "ACLight2" FALSE "InveighZero" TRUE "Back"); 
 	echo ${postinfo}
 	if [[ ${postinfo} == "Omega" ]]; then
 	   zenity --title "${postinfo}" \
-	   --text-info /opt/sifter/info/omega.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/omega.info" &>/dev/null
 	elif [[ ${postinfo} == "WinPwn" ]]; then
 	   zenity --title "${postinfo}" \
-	   --text-info /opt/sifter/info/WinPwn.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/WinPwn.info" &>/dev/null
 	elif [[ ${postinfo} == "ACLight2" ]]; then
 	   zenity --title "${postinfo}" \
-	   --text-info /opt/sifter/info/aclight.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/aclight.info" &>/dev/null
 	elif [[ ${postinfo} == "InveighZero" ]]; then
 	   zenity --title "${postinfo}" \
-	   --text-info /opt/sifter/info/inveighzero.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/inveighzero.info" &>/dev/null
 	else
 		if [[ ${postinfo} == "Back" ]]; then
-			modmenu
+			break
 		fi		
 	fi
 }
@@ -192,38 +192,38 @@ postmenu(){
 
 # Exploitation Tool SubMenu
 exmodmenu(){	
-	exmodinfo=$(${_zenity} --list --title  "Exploitation Tools" \
+	exmodinfo=$(zenity --list --title  "Exploitation Tools" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
 					--column "Pick" --column "Catagory" FALSE "MkCheck" FALSE "BruteDUM" FALSE "ActiveReign" FALSE "NekoBot" FALSE "xShock" FALSE "VulnX" FALSE "WBruter" FALSE "Thoron" TRUE "Back"); 
 	echo ${exmodinfo}
 	if [[ ${exmodinfo} == "MkCheck" ]]; then
 	   zenity --title "${exmodinfo}" \
-	   --text-info /opt/sifter/info/mkcheck.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/mkcheck.info" &>/dev/null
 	elif [[ ${exmodinfo} == "BruteDUM" ]]; then
 	   zenity --title "${exmodinfo}" \
-	   --text-info /opt/sifter/info/brutedum.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/brutedum.info" &>/dev/null
 	elif [[ ${exmodinfo} == "ActiveReign" ]]; then
 	   zenity --title "${exmodinfo}" \
-	   --text-info /opt/sifter/info/activereign.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/activereign.info" &>/dev/null
 	elif [[ ${exmodinfo} == "NekoBot" ]]; then
 	   zenity --title "${exmodinfo}" \
-	   --text-info /opt/sifter/info/nekobot.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/nekobot.info" &>/dev/null
 	elif [[ ${exmodinfo} == "xShock" ]]; then
 	   zenity --title "${exmodinfo}" \
-	   --text-info /opt/sifter/info/xshock.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/xshock.info" &>/dev/null
 	elif [[ ${exmodinfo} == "VulnX" ]]; then
 	   zenity --title "${exmodinfo}" \
-	   --text-info /opt/sifter/info/vulnx.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/vulnx.info" &>/dev/null
 	elif [[ ${exmodinfo} == "WBruter" ]]; then
 	   zenity --title "${exmodinfo}" \
-	   --text-info /opt/sifter/info/wbruter.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/wbruter.info" &>/dev/null
 	elif [[ ${exmodinfo} == "Thoron" ]]; then
 	   zenity --title "${exmodinfo}" \
-	   --text-info /opt/sifter/info/thoron.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/thoron.info" &>/dev/null
 	else
 		if [[ ${exmodinfo} == "Back" ]]; then
-			modmenu
+			break
 		fi		
 	fi
 }
@@ -231,17 +231,17 @@ exmodmenu(){
 
 # OpSec & Threat Analy SubMenu
 opsecmenu(){
-	opsec=$(${_zenity} --list --title  "Operational Security & Threat Analysis" \
+	opsec=$(zenity --list --title  "Operational Security & Threat Analysis" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
 					--column "Pick" --column "Catagory" FALSE "EventCleaner" TRUE "Back"); 
 	echo ${opsec}
 	if [[ ${opsec} == "EventCleaner" ]]; then
 	   zenity --title "${opsec}" \
-	   --text-info /opt/sifter/info/eventcleaner.info &>/dev/null
+	   --text-info --filename="/opt/sifter/info/eventcleaner.info" &>/dev/null
 	else
 		if [[ ${opsec} == "Back" ]]; then
-			modmenu
+			break
 		fi		
 	fi
 }
@@ -251,7 +251,7 @@ opsecmenu(){
 #python3 /opt/sifter/extras/ban.py
 #echo -e "${URED}Modules${NC}"
 modmenu(){
-	modinfo=$(${_zenity} --list --title  "Module Information" \
+	modinfo=$(zenity --list --title  "Module Information" \
 		--text "Choose a Catagory" --radiolist  \
 		--height=600 --width=800 \
 		--column "Pick" --column "Catagory" FALSE "Information Gathering Tools" FALSE "Domain Reconnaissance" FALSE "WebScanning & Enumeration" FALSE "Vulnerability Scanners" FALSE "HoneyPot Detection Systems" FALSE "Exploitation Tools" FALSE "	Post-Exploitation" FALSE "WebApplication Scanners" FALSE "Operational Security & Threat Analysis" TRUE "Module Menu" FALSE "Quit");
@@ -262,33 +262,20 @@ modmenu(){
 		dommenu
 	elif [[ ${modinfo} == "WebScanning & Enumeration" ]]; then
 		web_netmenu
-	elif [[ ${modinfo} == "Vulnerability Scanners" ]]; then
+	elif [[ ${modinfo} == "	Vulnerability Scanners" ]]; then
 		vulnmenu
 	elif [[ ${modinfo} == "HoneyPot Detection Systems" ]]; then
 		honeymenu
 	elif [[ ${modinfo} == "Exploitation Tools" ]]; then
 		exmodmenu
 	elif [[ ${modinfo} == "Post-Exploitation" ]]; then
-		postmenu
-	elif [[ ${modinfo} == "WebApplication Scanners" ]]; then
 		webappmenu
-	elif [[ ${modinfo} == "Operational Security & Threat Analysis" ]]; then
-		#$opsecmenu		 
-		opsec=$(${_zenity} --list --title  "Operational Security & Threat Analysis" \
-					--text "Choose an application" --radiolist  \
-					--height=600 --width=800 \
-					--column "Pick" --column "Catagory" FALSE "EventCleaner" TRUE "Back"); 
-		echo ${opsec}
-		if [[ ${opsec} == "EventCleaner" ]]; then
-		   zenity --title "${opsec}" \
-		   --text-info /opt/sifter/info/eventcleaner.info &>/dev/null
-		else
-			if [[ ${opsec} == "Back" ]]; then
-				modmenu
-			fi		
-		fi
-	elif [[ ${modinfo} == "Module Menu" ]]; then
-		exit
+	elif [[ ${modinfo} == "WebApplication Scanners" ]]; then
+		postmenu
+	elif [[ ${modinfo} == "	Operational Security & Threat Analysis" ]]; then
+		opsecmenu		   
+	elif [[ ${modinfo} == "	Module Menu" ]]; then
+		break
 	else
 		if [[ ${modinfo} == "Quit" ]]; then
 			(for i in $(seq 0 10 100); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close

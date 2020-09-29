@@ -20,6 +20,10 @@ ARG=$2
 STLTH=$1
 WXTM=$(which xterm)
 if [[ ${WXTM} == "/usr/bin/xterm" ]]; then
+    INFO="/opt/sifter/info/ginfo.sh"
+else
+    INFO="/opt/sifter/info/info.sh"
+fi
 ###########################
 # Initial Anonymous Check #
 ###########################
@@ -1132,14 +1136,14 @@ ip_add(){
     read IP_ANS
     echo -e "${ORNG}Adding ${RED}${IP_ANS}${ORNG} to list${NC}"
     sleep 1
-    echo "$IP_ANS" >> files/host_list.txt
+    echo "${IP_ANS}" >> files/host_list.txt
     ip_q
 }
 ip_q(){
     echo -e "${W}Would you like to add another?y/n${NC}"
     read ANS
     sleep 1
-    if [[ $ANS == 'y' ]]; then
+    if [[ ${ANS} == 'y' ]]; then
         ip_add
     else
         menu
@@ -1233,15 +1237,16 @@ results(){
 			--height=600 --width=800 \
 			--file-selection --multiple);
 	echo ${resopt}
-	if file "${resopt}" |grep -qE 'image|bitmap'; then
+	if file "${resopt}" | grep -qE 'image|bitmap'; then
 		ROPT="image"
 	fi
 	if [[ ${ROPT} == "image" ]]; then
 		eom ${ROPT}
 	else
-		zenity --title "Viewing: ${resopt}" \
+		zfile=$(zenity --title "Viewing: ${resopt}" \
 			--height=600 --width=800 \
-			--text "${resopt}"
+			--text "${resopt}");
+        echo ${zfile}
 	fi
 }
 
@@ -1347,12 +1352,7 @@ modules(){
     elif [[ ${MMOP} == "13" ]]; then
 	    results
     elif [[ ${MMOP} == "14" ]]; then
-	    XTM=$(xterm -h | grep include)
-        if [[ ${XTM} == "where options include:" ]]; then
-            bash /opt/sifter/info/ginfo.sh &
-        else
-            ./info/info.sh
-        fi
+	    bash ${INFO}
     elif [[ ${MMOP} == "15" ]]; then
 	    proxysystem
     elif [[ ${MMOP} == "16" ]]; then
@@ -1475,9 +1475,9 @@ up_arg(){
     echo $9 >> temp.log
 
     for UFILES in `cat temp.log`
-       	        do
-    	            rm ${LPATH}${UFILES}
-                done
+        do
+    	        rm ${LPATH}${UFILES}
+        done
     rm /opt/sifter/temp.log
 }
 update(){
@@ -1493,7 +1493,7 @@ update(){
     echo -e "${YLW}##########################${NC}"                                                ########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
-    	sudo mv modules/exmods/fuzzydander.sh modules/exmods/fuzzyd.sh
+        	sudo mv modules/exmods/fuzzydander.sh modules/exmods/fuzzyd.sh
     fi
     git fetch
     VER=$(git pull)
@@ -1658,12 +1658,7 @@ while getopts "a:WndwirmeopcvRuhI" options
             echo -e "${RED}"
             figlet -f mini "Module Info"
             echo -e "${NC}"
-            XTM=$(xterm -h)
-            if [[ ${XTM} == "" ]]; then
-                bash /opt/sifter/info/ginfo.sh &
-            else
-                ./info/info.sh
-            fi 
+            bash /opt/sifter/info/ginfo.sh &
             ;;
 
         m)
@@ -1674,16 +1669,11 @@ while getopts "a:WndwirmeopcvRuhI" options
             echo -e "${NC}"
             modules
             ;;
-
-        *)
-            echo -e "${RED}No Valid Option Parsed\nRedirecting to Main Menu${NC}"
-            menu
-            ;;
     esac
 done
 if [[ ${OPTIND} == 1 ]]; then				# if no option is passed
 	menu		  	                        # default command is run
 fi
-exit
+exit 0
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
