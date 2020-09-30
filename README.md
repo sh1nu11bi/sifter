@@ -10,7 +10,7 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
 	<img align="center" src="https://img.shields.io/badge/Version-10-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
+	<img align="center" src="https://img.shields.io/badge/Revision-3-green">
 </p>
 
 # *Sifter*
@@ -28,12 +28,12 @@
 
 	@Codename: Gemin1
 	@Version : 10
-	@Revision: 2
+	@Revision: 3
 
 <br>
-<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.zip"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10_r3.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10/sifter_10-r1.deb"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10_r3/sifter_10-r3.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -114,7 +114,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10/sifter_10-r2.deb && sudo dpkg -i sifter_10-r2.deb && sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10_r3/sifter_10-r3.deb && sudo dpkg -i sifter_10-r3.deb && sifter
 	
 	
 	[!] For oneliner install (source), copy and paste the following into a terminal:
