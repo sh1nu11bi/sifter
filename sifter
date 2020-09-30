@@ -524,7 +524,7 @@ post_ex(){
 ##################
 # Password Tools #
 ##################
-pass_tools(){
+passtools(){
     cd /opt/sifter/modules/passtools
     echo -e "${RED}"
     figlet -f mini "Password Tools"
@@ -649,7 +649,7 @@ ex_mods(){
                     "Web Exploiters")
                         echo -e "${YLW}These tools are aimed at exploiting websites${NC}"
                         sleep 3
-                        web_tools
+                        webex
                         ;;
 
                     "Search for Exploits")
