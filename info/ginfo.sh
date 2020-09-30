@@ -38,7 +38,8 @@ credmenu(){
 	   --text-info --filename="/opt/sifter/info/odin.info" &>/dev/null
 	else
 		if [[ ${credinfo} == "Back" ]]; then
-			break
+			cd /opt/sifter
+			exit
 		fi		
 	fi
 }
@@ -58,7 +59,8 @@ dommenu(){
 	   --text-info --filename="/opt/sifter/info/asnip.info" &>/dev/null
 	else
 		if [[ ${dominfo} == "Back" ]]; then
-			break
+			cd /opt/sifter
+			exit
 		fi		
 	fi
 }
@@ -90,7 +92,8 @@ webappmenu(){
 	   --text-info --filename="/opt/sifter/info/XSS-Freak.info" &>/dev/null
 	else
 		if [[ ${webappinfo} == "Back" ]]; then
-			break
+			cd /opt/sifter
+			exit
 		fi		
 	fi
 }
@@ -108,7 +111,8 @@ honeymenu(){
 	   --text-info --filename="/opt/sifter/info/honeytel.info" &>/dev/null
 	else
 		if [[ ${honey_info} == "Back" ]]; then
-			break
+			cd /opt/sifter
+			exit
 		fi		
 	fi
 }
@@ -134,7 +138,8 @@ vulnmenu(){
 	   --text-info --filename="/opt/sifter/info/owasp.info" &>/dev/null
 	else
 		if [[ ${vulninfo} == "Back" ]]; then
-			break
+			cd /opt/sifter
+			exit
 		fi		
 	fi
 }
@@ -158,7 +163,8 @@ web_netmenu(){
 	   --text-info --filename="/opt/sifter/info/wafw00f.info" &>/dev/null
 	else
 		if [[ ${web_netinfo} == "Back" ]]; then
-			break
+			cd /opt/sifter
+			exit
 		fi		
 	fi
 }
@@ -184,7 +190,8 @@ postmenu(){
 	   --text-info --filename="/opt/sifter/info/inveighzero.info" &>/dev/null
 	else
 		if [[ ${postinfo} == "Back" ]]; then
-			break
+			cd /opt/sifter
+			exit
 		fi		
 	fi
 }
@@ -223,7 +230,8 @@ exmodmenu(){
 	   --text-info --filename="/opt/sifter/info/thoron.info" &>/dev/null
 	else
 		if [[ ${exmodinfo} == "Back" ]]; then
-			break
+			cd /opt/sifter
+			exit
 		fi		
 	fi
 }
@@ -241,7 +249,8 @@ opsecmenu(){
 	   --text-info --filename="/opt/sifter/info/eventcleaner.info" &>/dev/null
 	else
 		if [[ ${opsec} == "Back" ]]; then
-			break
+			cd /opt/sifter
+			exit
 		fi		
 	fi
 }
@@ -275,7 +284,8 @@ modmenu(){
 	elif [[ ${modinfo} == "	Operational Security & Threat Analysis" ]]; then
 		opsecmenu		   
 	elif [[ ${modinfo} == "	Module Menu" ]]; then
-		break
+		cd /opt/sifter
+		exit
 	else
 		if [[ ${modinfo} == "Quit" ]]; then
 			(for i in $(seq 0 10 100); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
