@@ -51,6 +51,7 @@
 
 # Additions:
 <p><em>
+	_<strong>Version:</strong> 10 _|_ <strong>Revision:</strong> 3_<br />
 - <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
 - <a style="color: #729e1b" href="#">EventCleaner</a> - EventLog Cleaner for Windows, with some other useful functionality.<br />
 - <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />
