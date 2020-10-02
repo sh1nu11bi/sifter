@@ -135,7 +135,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 # Extentions
 
 <strong>Sifter Add-On Extentions</strong>
-- g - Sifter's <em>g</em> extention gives a GUI overlay
+- <a href="https://github.com/s1l3nt78/gSifter">g</a> - Sifter's <em>g</em> extention gives a GUI overlay
 
 ---------------------------------------------------------------------------------------------------------------------
 
