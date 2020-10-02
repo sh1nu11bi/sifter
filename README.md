@@ -41,6 +41,14 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
+# Extentions
+
+<strong>Sifter Add-On Extentions</strong>
+- g - Sifter's <em>g</em> extention gives a GUI overlay
+<br />	'--> Built on top of <a href="https://github.com/GitSquared/edex-ui">eDEX-UI</a>
+
+---------------------------------------------------------------------------------------------------------------------
+
 # Additions:
 <p><em>
 - <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
