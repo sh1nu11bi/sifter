@@ -27,8 +27,8 @@ fi
 ###########################
 # Initial Anonymous Check #
 ###########################
-if [[ ! -f "/home/$USER/.anon_status" ]]; then
-    echo "NO" > /home/$USER/.anon_status
+if [[ ! -f "$USER/.config/.anon_status" ]]; then
+    echo "NO" > $USER/.config/.anon_status
 fi
 cd /opt/sifter
 ##############################
@@ -1064,89 +1064,73 @@ opsec(){
     echo -e "${NC}"
 }
 
-##############
-# Host Check #
-##############
+############################
+#  Sorting Live from Dead  #
+############################
+hostcheck(){
+    for name in `cat files/host_list.txt`
+
+    	    do
+    	        xterm -e ping -c 1 $name
+    	            if [[ $? == 0 ]]; then
+    	                echo -e "${LP}======================================================"
+    	                echo -e "${LP} ${name} Alive ${NC}" && echo ${name} >> files/pingtest_raw.pass
+    	                echo -e "${LP}======================================================${NC}"
+    	            else
+    	                echo -e "${RED}====================================================="
+    	                echo -e "${RED} ${name} Dead ${NC}" && echo ${name} >> files/pingtest_raw.fail
+    	                echo -e "${RED}=====================================================${NC}"
+    	            fi
+    	    done
+}
+
+
+#############################
+#  Live or Dead Host Check  #	Example Data
+############################# 
 check_hosts(){
     TARLIST=$(cat /opt/sifter/files/host_list.txt | grep "eg. target.com")
     if [[ ${TARLIST} == "eg. target.com" ]]; then
         rm /opt/sifter/files/host_list.txt
-        echo -e "${RED}Please add an appropriate target first${NC}"
-        nano /opt/sifter/files/host_list.txt
-    else
-        sleep 1
+        kdialog --textinputbox "Please add an appropriate target first!" > /opt/sifter/files/host_list.txt
     fi
-    echo -e "${ORNG}Host Check${NC}"
-    	echo -e "${ORNG}***********${NC}"
-        if [[ -f 'files/pingtest_raw.pass' ]]; then
+    if [[ -f 'files/pingtest_raw.pass' ]]; then
     	    rm files/pingtest_raw.pass
-        fi
-        if [[ -f 'files/pingtest.pass' ]]; then
-            rm files/pingtest.pass
-        fi
-        if [[ -f 'files/pingtest_pass.txt' ]]; then
-            rm files/pingtest_pass.txt
-        fi
+    fi
+    if [[ -f 'files/pingtest.pass' ]]; then
+        rm files/pingtest.pass
+    fi
+    if [[ -f 'files/pingtest_pass.txt' ]]; then
+        rm files/pingtest_pass.txt
+    fi
 
-    	for name in `cat files/host_list.txt`
+    hostcheck | tee >(zenity --width=200 --height=100 \
+  				    --title="whois" --progress \
+			        --pulsate --text="Searching domain info..." \
+                    --auto-kill --auto-close \
+                    --percentage=10) >${_out}
 
-    	        do
-    	            ping -c 1 $name
-    	                if [[ $? == 0 ]]; then
-    	                    echo -e "${LP}======================================================"
-    	                    echo -e "${LP} ${name} Alive ${NC}" && echo ${name} >> files/pingtest_raw.pass
-    	                    echo -e "${LP}======================================================${NC}"
-    	                else
-    	                    echo -e "${RED}====================================================="
-    	                    echo -e "${RED} ${name} Dead ${NC}" && echo ${name} >> files/pingtest_raw.fail
-    	                    echo -e "${RED}=====================================================${NC}"
-    	                fi
-    	        done
+    zenity --width=220 --height=350  \
+	     --title "Live Targets" \
+	     --text-info --filename="/opt/sifter/files/pingtest_raw.pass"
 
-	                sleep 5
+    zenity --width=220 --height=350  \
+	     --title "Dead Targets" \
+	     --text-info --filename="/opt/sifter/files/pingtest_raw.fail"
 
-            echo "======================================================================================================================================================================================================================="
-
-        	    echo -e "${LP}Pingtest_Pass${NC}"
-            	echo -e "${LP}*************${NC}"
-		        cat files/pingtest_raw.pass | sort | uniq > files/pingtest.pass
-        	    echo -e "${YLW}"
-		        cat files/pingtest.pass
-		        echo -e "${NC}"
-		        sed -e 's/^/http:\/\//' files/pingtest.pass > files/pingtest_pass.txt
-
-        	    echo "======================================================================================================================================================================================================================="
-
-	            echo -e "${RED}Pingtest_Fail${NC}"
-	            echo -e "${RED}*************${NC}"
-	            cat files/pingtest_raw.fail | sort | uniq > files/pingtest.fail
-	            echo -e "${YLW}"
-		        cat files/pingtest.fail
-		        echo -e "${NC}"
-	            sleep 5
-        	    menu
 }
 
-########################################
-# List Argument Options Settings Below #
-#         IP addition argument         #
-########################################
-ip_add(){
-    echo -e "${W}Please enter your target:${NC}"
-    read IP_ANS
-    echo -e "${ORNG}Adding ${RED}${IP_ANS}${ORNG} to list${NC}"
-    sleep 1
-    echo "${IP_ANS}" >> files/host_list.txt
-    ip_q
-}
-ip_q(){
-    echo -e "${W}Would you like to add another?y/n${NC}"
-    read ANS
-    sleep 1
-    if [[ ${ANS} == 'y' ]]; then
-        ip_add
-    else
-        menu
+############################
+#  Additions to Host List  #
+############################
+ip_Q(){
+    addT=$(${_zenity} --title  "Add Target to Host.list" \
+	            --entry --text "Enter the IP or URL of your target")
+    echo ${Tar}
+    echo ${Tar} >> /opt/sifter/files/host_list.txt
+    TQ=$(zenity --question --width 300 --text "Would you like to add another?"); echo $TQ
+    if [[ ${TQ} == "0" ]]; then
+        addT
     fi
 }
 
@@ -1210,51 +1194,58 @@ results(){
 #############################
 # Initial Proxy Check (img) #
 #############################
-ASTAT=$(cat /home/$USER/.anon_status)
+ASTAT=$(cat $USER/.config/.anon_status)
 if [[ ${ASTAT} == "NO" ]]; then
     EXC="${BIGreen}[${RED}*${BIGreen}]${NC}"
 else
     EXC="${BIGreen}[${ORNG}!${BIGreen}]${NC}"
 fi
-#########################
-# System Proxy Settings #
-#########################
+################
+# Proxy Options
+################
 proxysystem(){
-    ASTAT=$(cat /home/$USER/.anon_status)
-    echo -e " ${W}=============================================================${NC}"
+    ASTAT=$(cat $USER/.config/.anon_status)
     if [[ ${ASTAT} == "YES" ]]; then
-        echo -e "${EXC} ${LP}Anonsurf is currently: ${URED}On${NC}"
+        ENA="Anonsurf is currently: On"
+        STOP="TRUE \"Stop\""
+        START="FALSE \"Start\""
     else
-        echo -e "${EXC} ${LP}Anonsurf is currently: ${UBLUE}Off${NC}"
+        ENA="Anonsurf is currently: Off"
+        STOP="FALSE \"Stop\""
+        START="TRUE \"Start\""
     fi
-    echo -e " ${W}=============================================================\n${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
-    PS3=' ==========================================================#? '
-        options=("Start" "Stop" "Back")
-        select opt in "${options[@]}"
-        do
-            case $opt in
-                "Start")
-                    sudo anonsurf start
-                    echo "YES" > /home/$USER/.anon_status
-                    echo -e "${YLW}To check whether system is running correctly under proxy\nOpen a browser and go to ${UPURPLE}'https://dnsleaktest.com'${NC}"
-                    echo -e "${YLW}Your Public IP Should be spoofed${NC}"
-                    sleep 10
-                    menu
-                    ;;
+    proxyO=$(zenity --list --title  "${ENA}" \
+		--text "What would you like to do?" --radiolist  \
+		--height=350 --width=500 \
+		--column "Pick" --column "Catagory" ${START} ${STOP} FALSE "Back"); 
+    echo ${proxyO}
+    if [[ ${proxyO} == "Start" ]]; then
+        sudo anonsurf start | tee >(${_zenity} --width=350 --height=500 \
+  			--title="Starting AnonSurf" --progress \
+			--pulsate --text="AnonSurf is starting to tunnel traffic through tor..." \
+                        --auto-kill --auto-close \
+                        --percentage=10) >${_out}
 
-                "Stop")
-                    sudo anonsurf stop
-                    echo "NO" > /home/$USER/.anon_status
-                    menu
-                    ;;
+    	${_zenity} --width=350 --height=500  \
+	           --title "AnonSurf StartUp Log" \
+	           --text-info --filename="${_out}"
+         echo "YES" > $USER/.config/.anon_status
 
-                "Back")
-                    menu
-                    ;;
 
-            esac
-        done
-    echo -e "${NC}"
+    elif [[ ${proxyO} == "Stop" ]]; then
+        sudo anonsurf stop | tee >(${_zenity} --width=350 --height=500 \
+  		   --title="Stopping AnonSurf" --progress \
+		   --pulsate --text="AnonSurf is sending traffic through the ClearWeb..." \
+                   --auto-kill --auto-close \
+                   --percentage=10) >${_out}
+ 
+        ${_zenity} --width=350 --height=500  \
+	         --title "AnonSurf ShutDown Log" \
+	         --text-info --filename="${_out}"
+          echo "NO" > $USER/.config/.anon_status
+    else
+        menu
+    fi
 }
 
 ###############
@@ -1264,7 +1255,7 @@ modules(){
     echo -e "${URED}"
     figlet -f mini "Modules"
     echo -e "${NC}"
-    ASTAT=$(cat /home/$USER/.anon_status)
+    ASTAT=$(cat $USER/.config/.anon_status)
     echo -e " ${W}=============================================================${NC}"
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}=============================================================\n ${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
@@ -1308,7 +1299,7 @@ modules(){
     elif [[ ${MMOP} == "13" ]]; then
 	    results
     elif [[ ${MMOP} == "14" ]]; then
-	    bash ${INFO}
+	    bash /opt/sifter/info/info.sh
     elif [[ ${MMOP} == "15" ]]; then
 	    proxysystem
     elif [[ ${MMOP} == "16" ]]; then
@@ -1325,14 +1316,14 @@ modules(){
     elif [[ ${MMOP} == "18" ]]; then
 	    menu
     elif [[ ${MMOP} == "19" ]]; then
-	    ASTAT=$(cat /home/$USER/.anon_status)
+	    ASTAT=$(cat $USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
             echo -e "\n    ================================================" 
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
             echo -e "${LP}Attempting to stop it now..."
             sudo anonsurf stop
             echo -e "${LP}Proxy Stopped${RED}!${NC}"
-            echo "NO" > /home/$USER/.anon_status
+            echo "NO" > $USER/.config/.anon_status
             echo -e "\n    ================================================"
         fi
         RENCHK=$(sudo docker container ls | grep rengine)
@@ -1359,7 +1350,7 @@ menu(){
     echo -e "${LGRY}==========  ${RED}Hit ${YLW}Ctrl + Z${RED} to pause ${UPURPLE}Sifter${RED} & '${ORNG}fg${RED}' to resume Recon${LGRY}  ===========${NC}"
     echo -e "${LGRY}============================================================================${NC}"
     arg=$1
-    ASTAT=$(cat /home/$USER/.anon_status)   
+    ASTAT=$(cat $USER/.config/.anon_status)   
     echo -e " ${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Check Hosts               ${ORNG}5.${W} View Results${NC}"
@@ -1392,14 +1383,14 @@ menu(){
     elif [[ ${MNOP} == "6" ]]; then                 # Update
         update
     elif [[ ${MNOP} == "7" ]]; then                 # Quit
-        ASTAT=$(cat /home/$USER/.anon_status)
+        ASTAT=$(cat $USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
             echo -e "\n    ================================================" 
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
             echo -e "${LP}Attempting to stop it now..."
             sudo anonsurf stop
             echo -e "${LP}Proxy Stopped${RED}!${NC}"
-            echo "NO" > /home/$USER/.anon_status
+            echo "NO" > $USER/.config/.anon_status
             echo -e "\n    ================================================"
         fi
         sudo docker container ls > .ren_dcr
@@ -1493,7 +1484,7 @@ if [[ ${STLTH} == "--stealth" ]]; then
     echo -e " ${W}===========================================${NC}"
     echo -e "${LP}Starting Sifter in ${URED}Anonymous${NC} ${LP}mode${NC}"
     sudo anonsurf start
-    echo "YES" > /home/$USER/.anon_status      
+    echo "YES" > $USER/.config/.anon_status      
     echo -e " ${W}===========================================${NC}"
     menu
 fi
@@ -1614,7 +1605,7 @@ while getopts "a:WndwirmeopcvRuhI" options
             echo -e "${RED}"
             figlet -f mini "Module Info"
             echo -e "${NC}"
-            bash /opt/sifter/info/ginfo.sh &
+            bash /opt/sifter/info/info.sh &
             ;;
 
         m)

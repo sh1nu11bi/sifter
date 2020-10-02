@@ -1,420 +1,299 @@
 #!/bin/bash
-LPATH='/opt/sifter/'
-ORNG='\033[0;33m'
-NC='\033[0m'
-W='\033[1;37m'
-LP='\033[1;35m'
-YLW='\033[1;33m'
-LBBLUE='\e[104m'
-RED='\033[0;31m'
-LGRY='\033[0;37m'
-INV='\e[7m'
-BRED='\033[1;31m'
-UPURPLE='\033[4;35m'
-UBLUE='\033[4;34m'
-URED='\033[4;31m'
-KD=$(kdialog -h)
-if [[ ${KD} == "" ]]; then
-    COM='cat'
-else
-    COM='kdialog --geometry 600x800 --textbox'
-fi 
-webappinfo(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "WebAppplication Scanners"
-  echo -e "${ORNG}"
-  PS3='What tool would you like to use?'
-        options=("Sitadel" "BFAC" "AapFinder" "OneFind" "XSStrike" "XSS-Freak" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                        "Sitadel")
-                            ${COM} /opt/sifter/info/sitadel.info &>/dev/null
-                            ;;
+# Zenity Text-Box
+# Displays Sifter Module Information (GUI)
 
-                        "AapFinder")
-                            ${COM} /opt/sifter/info/aapfinder.info &>/dev/null
-                            ;;
-
-                        "BFAC")
-                            ${COM} /opt/sifter/info/bfac.info &>/dev/null
-                            ;;
-
-                        "OneFind")
-                            ${COM} /opt/sifter/info/onefind.info &>/dev/null
-                            ;;
-
-                         "XSStrike")
-                            ${COM} /opt/sifter/info/xsstrike.info &>/dev/null
-                            ;;
-
-                        "XSS-Freak")
-                            ${COM} /opt/sifter/info/XSS-Freak.info &>/dev/null
-                            ;;
-
-                        "Back")
-                            cd /opt/sifter
-                            ./sifter -m
-                            ;;
-                esac
-        done
-    echo -e "${NC}"
-}
-# Info Module-Category Selection
-credinfo(){
-    cd /opt/sifter
-    echo -e "${RED}"
-    figlet -f mini "Information Gatherers"
-    echo -e "${ORNG}"
-    PS3='Which module category would you like to use?'
-            options=("Seeker" "xRay" "Maryam" "theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "Spiderfoot" "ODIN" "Back")
-            select opt in "${options[@]}"
-            do
-                    case $opt in
-                        "Seeker")
-                            ${COM} /opt/sifter/info/seeker.info &>/dev/null
-                            ;;
-
-                        "xRay")
-                            ${COM} /opt/sifter/info/xray.info &>/dev/null
-                            ;;
-
-                        "theHarvester")
-                            ${COM} /opt/sifter/info/theHarvester.info &>/dev/null
-                            ;;
-
-                        "Osmedeus")
-                            ${COM} /opt/sifter/info/osmedeus.info &>/dev/null
-                            ;;
-
-                        "ReconSpider")
-                            ${COM} /opt/sifter/info/reconspider.info &>/dev/null
-                            ;;
-
-                        "Maryam")
-                            ${COM} /opt/sifter/info/maryam.info &>/dev/null
-                            ;;
-
-                        "CredNinja")
-                            ${COM} /opt/sifter/info/credninja.info &>/dev/null
-                            ;;
-
-                        "Spiderfoot")
-                            ${COM} /opt/sifter/info/spiderfoot.info &>/dev/null
-                            ;;
-
-                        "ODIN")
-                            ${COM} /opt/sifter/info/odin.info &>/dev/null
-                            ;;
-
-                        "Back")
-                            cd /opt/sifter
-                            ./sifter -m
-                            ;;
-                    esac
-            done
-        echo -e "${NC}"
-
-}
-# HoneyPot Scanners
-honey_info(){
-    cd /opt/sifter
-    echo -e "${RED}"
-    figlet -f mini "HoneyPot Detection Systems"
-    echo -e "${LP}This module focuses on Enterprises and their online presence"
-    echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
-    echo -e "${ORNG}"
-    PS3='What tool would you like to use?'
-            options=("HoneyTel" "Back")
-            select opt in "${options[@]}"
-            do
-                    case $opt in
-                        "HoneyTel")
-                            ${COM} /opt/sifter/info/honeytel.info &>/dev/null
-                            ;;
-
-                        "Back")
-                            cd /opt/sifter
-                            ./sifter -m
-                            ;;
-                    esac
-            done
-        echo -e "${NC}"
-
-}
-# Domain Modules
-dominfo(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Domain Recon Gathering"
-  echo -e "${ORNG}"
-  PS3='What tool would you like to use?'
-          options=("aSnip" "Armory" "SayDog" "Back") 
-          select opt in "${options[@]}"
-          do
-                  case $opt in
-                        "Armory")
-                            ${COM} /opt/sifter/info/armory.info &>/dev/null
-                            ;;
-
-                        "aSnip")
-                            ${COM} /opt/sifter/info/asnip.info &>/dev/null
-                            ;;
-
-                        "SayDog")
-                            ${COM} /opt/sifter/info/saydog.info &>/dev/null
-                            ;;
-
-                        "Back")
-                            cd /opt/sifter
-                            ./sifter -m
-                            ;;
-                    esac
-            done
-            echo -e "${NC}"
+# Info Gathering SubMenu
+credmenu(){
+	credinfo=$(zenity --list --title  "Module Information" \
+					--text "Choose an application" --radiolist  \
+					--height=600 --width=800 \
+					--column "Pick" --column "Catagory" FALSE "Seeker" FALSE "xRay" FALSE "theHarvester" FALSE "Osmedeus" FALSE "ReconSpider" FALSE "Maryam" FALSE "CredNinja" FALSE "SpiderFoo7" FALSE "ODIN" TRUE "Back"); 
+	echo ${credinfo}
+	if [[ ${credinfo} == "Seeker" ]]; then
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/seeker.info" &>/dev/null
+	elif [[ ${credinfo} == "xRay" ]]; then
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/xray.info" &>/dev/null
+	elif [[ ${credinfo} == "theHarvester" ]]; then
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/theHarvester.info" &>/dev/null
+	elif [[ ${credinfo} == "Osmedeus" ]]; then
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/osmedeus.info" &>/dev/null
+	elif [[ ${credinfo} == "ReconSpider" ]]; then
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/reconspider.info" &>/dev/null
+	elif [[ ${credinfo} == "Maryam" ]]; then
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/maryam.info" &>/dev/null
+	elif [[ ${credinfo} == "CredNinja" ]]; then
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/credninja.info" &>/dev/null
+	elif [[ ${credinfo} == "SpiderFoo7" ]]; then
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/spiderfoot.info" &>/dev/null
+	elif [[ ${credinfo} == "ODIN" ]]; then
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/odin.info" &>/dev/null
+	else
+		if [[ ${credinfo} == "Back" ]]; then
+			cd /opt/sifter
+			exit
+		fi		
+	fi
 }
 
-# Vulnerability Scanners
-vulninfo(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Vulnerability Scanners"
-  echo -e "${ORNG}"
-  PS3='What tool would you like to use?'
-          options=("Flan" "RapidScan" "Yuki-Chan" "OWASP-Nettacker" "Back")
-          select opt in "${options[@]}"
-          do
-                  case $opt in
-                        "Flan")
-                            ${COM} /opt/sifter/info/flan.info &>/dev/null
-                            ;;
-
-                        "RapidScan")
-                            ${COM} /opt/sifter/info/rapidscan.info &>/dev/null
-                            ;;
-
-                        "Yuki-Chan")
-                            ${COM} /opt/sifter/info/yuki.info &>/dev/null
-                            ;;
-
-                        "OWASP-Nettacker")
-                            echo -e "Due to the vast information about this tool and its usage, a page will not be provided here.\nInstead, Please follow these links to read more."
-                            echo -e ":https://www.owasp.org/index.php/OWASP_Nettacker\n:https://github.com/zdresearch/OWASP-Nettacker/wiki/Usage"
-                            ;;
-
-                         "Back")
-                            cd /opt/sifter
-                            ./sifter -m
-                            ;;
-                    esac
-            done
-            echo -e "${NC}"
+# Domain Reconnaissance SubMenu
+dommenu(){
+	dominfo=$(zenity --list --title  "Domain Reconnaissance" \
+					--text "Choose an application" --radiolist  \
+					--height=600 --width=800 \
+					--column "Pick" --column "Catagory" FALSE "Armory" FALSE "aSnip" TRUE "Back"); 
+	echo ${dominfo}
+	if [[ ${dominfo} == "Armory" ]]; then
+	   zenity --title "${dominfo}" \
+	   --text-info --filename="/opt/sifter/info/armory.info" &>/dev/null
+	elif [[ ${dominfo} == "aSnip" ]]; then
+	   zenity --title "${dominfo}" \
+	   --text-info --filename="/opt/sifter/info/asnip.info" &>/dev/null
+	else
+		if [[ ${dominfo} == "Back" ]]; then
+			cd /opt/sifter
+			exit
+		fi		
+	fi
 }
-# Web-Focused Modules
-web_netinfo(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Web Scanners &>/dev/null Network Modules"
-  echo -e "${ORNG}"
-  PS3='What tool would you like to use?'
-          options=("BlackWidow" "wafw00f" "AttackSurfaceMapper" "Back")
-          select opt in "${options[@]}"
-          do
-                  case $opt in
-			            "BlackWidow")
-                            ${COM} /opt/sifter/info/blackwidow.info &>/dev/null
-                            ;;
-                        
-                        "AttackSurfaceMapper")
-                            ${COM} /opt/sifter/info/asm.info &>/dev/null
-                            ;;
 
-                        "wafw00f")
-                            ${COM} /opt/sifter/info/wafw00f.info &>/dev/null
-                            ;;
-
-                        "Back")
-                            cd /opt/sifter
-                            ./sifter -m
-                            ;;
-                    esac
-            done
-            echo -e "${NC}"
+# WebApplication SubMenu
+webappmenu(){
+	webappinfo=$(zenity --list --title  "WebApplication Scanners" \
+					--text "Choose an application" --radiolist  \
+					--height=600 --width=800 \
+					--column "Pick" --column "Catagory" FALSE "Sitadel" FALSE "AapFinder" FALSE "BFAC" FALSE "OneFind" FALSE "XSStrike" FALSE "XSS-Freak" TRUE "Back"); 
+	echo ${webappinfo}
+	if [[ ${webappinfo} == "Sitadel" ]]; then
+	   zenity --title "${webappinfo}" \
+	   --text-info --filename="/opt/sifter/info/sitadel.info" &>/dev/null
+	elif [[ ${webappinfo} == "AapFinder" ]]; then
+	   zenity --title "${webappinfo}" \
+	   --text-info --filename="/opt/sifter/info/aapfinder.info" &>/dev/null
+	elif [[ ${webappinfo} == "BFAC" ]]; then
+	   zenity --title "${webappinfo}" \
+	   --text-info --filename="/opt/sifter/info/bfac.info" &>/dev/null
+	elif [[ ${webappinfo} == "OneFind" ]]; then
+	   zenity --title "${webappinfo}" \
+	   --text-info --filename="/opt/sifter/info/onefind.info" &>/dev/null
+	elif [[ ${webappinfo} == "XSStrike" ]]; then
+	   zenity --title "${webappinfo}" \
+	   --text-info --filename="/opt/sifter/info/xsstrike.info" &>/dev/null
+	elif [[ ${webappinfo} == "XSS-Freak" ]]; then
+	   zenity --title "${webappinfo}" \
+	   --text-info --filename="/opt/sifter/info/XSS-Freak.info" &>/dev/null
+	else
+		if [[ ${webappinfo} == "Back" ]]; then
+			cd /opt/sifter
+			exit
+		fi		
+	fi
 }
+
+
+# HoneyPot SubMenu
+honeymenu(){
+	honey_info=$(zenity --list --title  "HoneyPot Detection Tools" \
+					--text "Choose an application" --radiolist  \
+					--height=600 --width=800 \
+					--column "Pick" --column "Catagory" FALSE "HoneyTel" TRUE "Back"); 
+	echo ${honey_info}
+	if [[ ${honey_info} == "HoneyTel" ]]; then
+	   zenity --title "${honey_info}" \
+	   --text-info --filename="/opt/sifter/info/honeytel.info" &>/dev/null
+	else
+		if [[ ${honey_info} == "Back" ]]; then
+			cd /opt/sifter
+			exit
+		fi		
+	fi
+}
+
+# Vulnerability Tool SubMenu
+vulnmenu(){
+	vulninfo=$(zenity --list --title  "Vulnerability Scanners" \
+					--text "Choose an application" --radiolist  \
+					--height=600 --width=800 \
+					--column "Pick" --column "Catagory" FALSE "Flan" FALSE "RapidScan" FALSE "Yuki-Chan" FALSE "OWASP-Nettacker" TRUE "Back"); 
+	echo ${vulninfo}
+	if [[ ${vulninfo} == "Flan" ]]; then
+	   zenity --title "${vulninfo}" \
+	   --text-info --filename="/opt/sifter/info/flan.info" &>/dev/null
+	elif [[ ${vulninfo} == "RapidScan" ]]; then
+	   zenity --title "${vulninfo}" \
+	   --text-info --filename="/opt/sifter/info/rapidscan.info" &>/dev/null
+	elif [[ ${vulninfo} == "Yuki-Chan" ]]; then
+	   zenity --title "${vulninfo}" \
+	   --text-info --filename="/opt/sifter/info/yuki.info" &>/dev/null
+	elif [[ ${vulninfo} == "OWASP-Nettacker" ]]; then
+	   zenity --title "${vulninfo}" \
+	   --text-info --filename="/opt/sifter/info/owasp.info" &>/dev/null
+	else
+		if [[ ${vulninfo} == "Back" ]]; then
+			cd /opt/sifter
+			exit
+		fi		
+	fi
+}
+
+
+# WebSite Tool SubMenu
+web_netmenu(){
+	web_netinfo=$(zenity --list --title  "WebScanning & Enumeration" \
+					--text "Choose an application" --radiolist \
+					--height=600 --width=800 \
+					--column "Pick" --column "Catagory" FALSE "BlackWidow" FALSE "AttackSurfaceMapper" FALSE "wafw00f" TRUE "Back"); 
+	echo ${web_netinfo}
+	if [[ ${web_netinfo} == "BlackWidow" ]]; then
+	   zenity --title "${web_netinfo}" \
+	   --text-info --filename="/opt/sifter/info/blackwidow.info" &>/dev/null
+	elif [[ ${web_netinfo} == "AttackSurfaceMapper" ]]; then
+	   zenity --title "${web_netinfo}" \
+	   --text-info --filename="/opt/sifter/info/asm.info" &>/dev/null
+	elif [[ ${web_netinfo} == "wafw00f" ]]; then
+	   zenity --title "${web_netinfo}" \
+	   --text-info --filename="/opt/sifter/info/wafw00f.info" &>/dev/null
+	else
+		if [[ ${web_netinfo} == "Back" ]]; then
+			cd /opt/sifter
+			exit
+		fi		
+	fi
+}
+
 # Post Exploitation
-postinfo(){
-    echo -e "${RED}"
-    figlet -f mini "Post-Exploitation"
-    echo -e "${NC}"
-    PS3='What tool would you like to use?'
-        options=("Omega" "WinPwn" "ACLight2" "InveighZero" "Back")
-        select opt in "${options[@]}"
-        do
-            case $opt in
-                "Omega")
-                    ${COM} /opt/sifter/info/omega.info &>/dev/null
-                    ;;                    
-
-                "WinPwn")
-                    ${COM} /opt/sifter/info/WinPwn.info &>/dev/null
-                    ;;
-                
-                "ACLight")
-                    ${COM} /opt/sifter/info/aclight.info &>/dev/null
-                    ;;
-
-                "InveighZero")
-                    ${COM} /opt/sifter/info/inveighzero.info &>/dev/null
-                    ;;
-
-                "Back")
-                    cd /opt/sifter
-                    ./sifter -m
-                    ;;
-
-            esac
-        done
-    echo -e "${NC}"
-}
-# Exploitation Modules
-exmodinfo(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Exploitation Tools"
-  echo -e "${ORNG}"
-  PS3='What tool would you like to use?'
-        options=("MkCheck" "BruteDUM" "ActiveReign" "NekoBot" "xShock" "VulnX" "WBruter" "Thoron" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                    "BruteDUM")
-                            ${COM} /opt/sifter/info/brutedum.info &>/dev/null
-                            ;;
-
-                    "ActiveReign")
-                            ${COM} /opt/sifter/info/activereign.info &>/dev/null
-                            ;;
-
-                    "MkCheck")
-                            ${COM} /opt/sifter/info/mkcheck.info &>/dev/null
-                            ;;
-
-                    "NekoBot")
-                            ${COM} /opt/sifter/info/nekobot.info &>/dev/null
-                            ;;
-
-                    "xShock")
-                            ${COM} /opt/sifter/info/xshock.info &>/dev/null
-                            ;;
-
-                    "VulnX")
-                            ${COM} /opt/sifter/info/vulnx.info &>/dev/null
-                            ;;
-
-                    "WBruter")
-                            ${COM} /opt/sifter/info/wbruter.info &>/dev/null
-                            ;;
-                    
-                    "Thoron")
-                            ${COM} /opt/sifter/info/thoron.info
-                            ;;
-
-                    "Back")
-                            cd /opt/sifter
-                            ./sifter -m
-                            ;;
-                esac
-        done
-    echo -e "${NC}"
+postmenu(){
+	postinfo=$(zenity --list --title  "Post-Exploitation Tools" \
+					--text "Choose an application" --radiolist  \
+					--height=600 --width=800 \
+					--column "Pick" --column "Catagory" FALSE "Omega" FALSE "WinPwn" FALSE "ACLight2" FALSE "InveighZero" TRUE "Back"); 
+	echo ${postinfo}
+	if [[ ${postinfo} == "Omega" ]]; then
+	   zenity --title "${postinfo}" \
+	   --text-info --filename="/opt/sifter/info/omega.info" &>/dev/null
+	elif [[ ${postinfo} == "WinPwn" ]]; then
+	   zenity --title "${postinfo}" \
+	   --text-info --filename="/opt/sifter/info/WinPwn.info" &>/dev/null
+	elif [[ ${postinfo} == "ACLight2" ]]; then
+	   zenity --title "${postinfo}" \
+	   --text-info --filename="/opt/sifter/info/aclight.info" &>/dev/null
+	elif [[ ${postinfo} == "InveighZero" ]]; then
+	   zenity --title "${postinfo}" \
+	   --text-info --filename="/opt/sifter/info/inveighzero.info" &>/dev/null
+	else
+		if [[ ${postinfo} == "Back" ]]; then
+			cd /opt/sifter
+			exit
+		fi		
+	fi
 }
 
-# OpSec
-opsec(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Operational Security"
-  echo -e "${ORNG}"
-  PS3='What tool would you like to check?'
-        options=("EventCleaner" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                    "EventCleaner")
-                            ${COM} /opt/sifter/info/eventcleaner.info &>/dev/null
-                            ;;
 
-                    "Back")
-                            cd /opt/sifter
-                            ./sifter -m
-                            ;;
-                esac
-        done
-    echo -e "${NC}"
+# Exploitation Tool SubMenu
+exmodmenu(){	
+	exmodinfo=$(zenity --list --title  "Exploitation Tools" \
+					--text "Choose an application" --radiolist  \
+					--height=600 --width=800 \
+					--column "Pick" --column "Catagory" FALSE "MkCheck" FALSE "BruteDUM" FALSE "ActiveReign" FALSE "NekoBot" FALSE "xShock" FALSE "VulnX" FALSE "WBruter" FALSE "Thoron" TRUE "Back"); 
+	echo ${exmodinfo}
+	if [[ ${exmodinfo} == "MkCheck" ]]; then
+	   zenity --title "${exmodinfo}" \
+	   --text-info --filename="/opt/sifter/info/mkcheck.info" &>/dev/null
+	elif [[ ${exmodinfo} == "BruteDUM" ]]; then
+	   zenity --title "${exmodinfo}" \
+	   --text-info --filename="/opt/sifter/info/brutedum.info" &>/dev/null
+	elif [[ ${exmodinfo} == "ActiveReign" ]]; then
+	   zenity --title "${exmodinfo}" \
+	   --text-info --filename="/opt/sifter/info/activereign.info" &>/dev/null
+	elif [[ ${exmodinfo} == "NekoBot" ]]; then
+	   zenity --title "${exmodinfo}" \
+	   --text-info --filename="/opt/sifter/info/nekobot.info" &>/dev/null
+	elif [[ ${exmodinfo} == "xShock" ]]; then
+	   zenity --title "${exmodinfo}" \
+	   --text-info --filename="/opt/sifter/info/xshock.info" &>/dev/null
+	elif [[ ${exmodinfo} == "VulnX" ]]; then
+	   zenity --title "${exmodinfo}" \
+	   --text-info --filename="/opt/sifter/info/vulnx.info" &>/dev/null
+	elif [[ ${exmodinfo} == "WBruter" ]]; then
+	   zenity --title "${exmodinfo}" \
+	   --text-info --filename="/opt/sifter/info/wbruter.info" &>/dev/null
+	elif [[ ${exmodinfo} == "Thoron" ]]; then
+	   zenity --title "${exmodinfo}" \
+	   --text-info --filename="/opt/sifter/info/thoron.info" &>/dev/null
+	else
+		if [[ ${exmodinfo} == "Back" ]]; then
+			cd /opt/sifter
+			exit
+		fi		
+	fi
 }
 
-                                                                                ############
-                                                                                #  RUNTIME #
-                                                                                ############
-python3 /opt/sifter/extras/ban.py
-echo -e "${URED}Modules${NC}"
-echo -e "${ORNG}"
-PS3='What would you like to do?'
-        options=("Exploitation Tools" "Post-Exploitation" "Web Scanners & Network Modules" "Vulnerability Scanners" "Domain Recon Gathering" "HoneyPot Detection Systems" "Information Gatherers" "WebAppplication Scanners" "Operational Security" "Main Menu" "Back" "Quit")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                        "Information Gatherers")
-                            credinfo
-                            ;;
 
-                        "Domain Recon Gathering")
-                            dominfo
-                            ;;
+# OpSec & Threat Analy SubMenu
+opsecmenu(){
+	opsec=$(zenity --list --title  "Operational Security & Threat Analysis" \
+					--text "Choose an application" --radiolist  \
+					--height=600 --width=800 \
+					--column "Pick" --column "Catagory" FALSE "EventCleaner" TRUE "Back"); 
+	echo ${opsec}
+	if [[ ${opsec} == "EventCleaner" ]]; then
+	   zenity --title "${opsec}" \
+	   --text-info --filename="/opt/sifter/info/eventcleaner.info" &>/dev/null
+	else
+		if [[ ${opsec} == "Back" ]]; then
+			cd /opt/sifter
+			exit
+		fi		
+	fi
+}
 
-                        "Website Scanners & Enumerators")
-                            web_netinfo
-                            ;;
 
-                        "Vulnerability Scanners")
-                            vulninfo
-                            ;;
+# Module Menu
+#python3 /opt/sifter/extras/ban.py
+#echo -e "${URED}Modules${NC}"
+modmenu(){
+	modinfo=$(zenity --list --title  "Module Information" \
+		--text "Choose a Catagory" --radiolist  \
+		--height=600 --width=800 \
+		--column "Pick" --column "Catagory" FALSE "Information Gathering Tools" FALSE "Domain Reconnaissance" FALSE "WebScanning & Enumeration" FALSE "Vulnerability Scanners" FALSE "HoneyPot Detection Systems" FALSE "Exploitation Tools" FALSE "	Post-Exploitation" FALSE "WebApplication Scanners" FALSE "Operational Security & Threat Analysis" TRUE "Module Menu" FALSE "Quit");
+	echo ${modinfo}
+	if [[ ${modinfo} == "Information Gathering Tools" ]]; then
+		credmenu
+	elif [[ ${modinfo} == "Domain Reconnaissance" ]]; then
+		dommenu
+	elif [[ ${modinfo} == "WebScanning & Enumeration" ]]; then
+		web_netmenu
+	elif [[ ${modinfo} == "	Vulnerability Scanners" ]]; then
+		vulnmenu
+	elif [[ ${modinfo} == "HoneyPot Detection Systems" ]]; then
+		honeymenu
+	elif [[ ${modinfo} == "Exploitation Tools" ]]; then
+		exmodmenu
+	elif [[ ${modinfo} == "Post-Exploitation" ]]; then
+		webappmenu
+	elif [[ ${modinfo} == "WebApplication Scanners" ]]; then
+		postmenu
+	elif [[ ${modinfo} == "	Operational Security & Threat Analysis" ]]; then
+		opsecmenu		   
+	elif [[ ${modinfo} == "	Module Menu" ]]; then
+		cd /opt/sifter
+		exit
+	else
+		if [[ ${modinfo} == "Quit" ]]; then
+			(for i in $(seq 0 10 100); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
+			exit 0
+		fi		
+	fi
+}
 
-                        "HoneyPot Detection Systems")
-                            honey_info
-                            ;;
+# Runtime
+modmenu
 
-                        "Exploitation Tools")
-                            exmodinfo
-                            ;;
-
-			            "WebAppplication Scanners")
-			                webappinfo
-			                ;;
-                            
-                        "Post-Exploitation")
-                            postinfo
-                            ;;
-
-                        "Operational Security")
-                            opsec
-                            ;;
-
-                        "Main Menu")
-                            cd /opt/sifter
-                            ./sifter
-                            ;;
-
-                        "Back")
-                        cd /opt/sifter
-                        ./sifter -m
-                        ;;
-
-                        "Quit")
-                            exit
-                            ;;
-                esac
-        done
-echo -e "${NC}"
-
-##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
