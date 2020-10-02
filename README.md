@@ -44,7 +44,7 @@
 # Extentions
 
 <strong>Sifter Add-On Extentions</strong>
-- g - Sifter's <em>g</em> extention gives a GUI overlay
+- <a href="https://github.com/s1l3nt78/gSifter">g</a> - Sifter's <em>g</em> extention gives a GUI overlay
 <br />	'--> Built on top of <a href="https://github.com/GitSquared/edex-ui">eDEX-UI</a>
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -128,6 +128,10 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	[!] For oneliner install (source), copy and paste the following into a terminal:
 	*
 	$ git clone https://github.com/s1l3nt78/sifter.git && cd sifter && bash install.sh
+	
+	[!] To install the g extention, copy and paste the following into a terminal:
+	*
+	$ git clone --branch g-ex https://github.com/s1l3nt78/gSifter && cd gSifter && bash install-ex.sh && gSifter
 
 ---------------------------------------------------------------------------------------------------------------------
 
