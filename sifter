@@ -18,18 +18,7 @@ URED='\033[4;31m'
 STATUS='NO'
 ARG=$2
 STLTH=$1
-WXTM=$(which xterm)
-if [[ ${WXTM} == "/usr/bin/xterm" ]]; then
-    INFO="/opt/sifter/info/ginfo.sh"
-else
-    INFO="/opt/sifter/info/info.sh"
-fi
-###########################
-# Initial Anonymous Check #
-###########################
-if [[ ! -f "/home/$USER/.config/.anon_status" ]]; then
-    echo "NO" > /home/$USER/.config/.anon_status
-fi
+
 cd /opt/sifter
 ##############################
 # ! # First Time Deb Install #
@@ -92,44 +81,39 @@ usage() {                                    	  # Function: Print a help message
 # Enterprise Target Info #
 ##########################
 cred_mods(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Enterprise Information Gatherers"
-  echo -e "${LP}This module focuses on Enterprises and their online presence"
-  echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
-  echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' ==========================#?: '
-          options=("theHarvester" "Osmedeus" "ReconSpider" "CredNinja" "OSINT-Framework" "Back") 
-          select opt in "${options[@]}"
-          do
-                  case $opt in
-                            "theHarvester")
-                                ./modules/credmods/harvester.sh
-                                ;;
-
-                            "Osmedeus")
-                                ./modules/credmods/osmedeus.sh
-                                ;;
-
-                            "ReconSpider")
-                                ./modules/credmods/rspider.sh
-                                ;;
-
-                            "CredNinja")
-                                ./modules/credmods/credninja.sh
-                                ;;
-                            
-                            "OSINT-Framework")
-                                ./modules/credmods/osintf.sh
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                    esac
-            done
-            echo -e "${NC}"
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "Enterprise Information Gatherers"
+    echo -e "${LP}This module focuses on Enterprises and their online presence"
+    echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
+    echo -e "${ORNG}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} theHarvester           ${ORNG}4.${W} CredNinja ${NC}"
+	echo -e " ${ORNG}2.${W} Osmedeus		 ${ORNG}5.${W} OSINT-Framework ${NC}"
+	echo -e " ${ORNG}3.${W} ReconSpider           ${ORNG}6.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+	read CMM
+	if [[ ${CMM} == "1" ]]; then
+		./modules/credmods/harvester.sh
+	elif [[ ${CMM} == "2" ]]; then
+		./modules/credmods/osmedeus.sh
+	elif [[ ${CMM} == "3" ]]; then
+		./modules/credmods/rspider.sh
+	elif [[ ${CMM} == "4" ]]; then
+		./modules/credmods/credninja.sh
+	elif [[ ${CMM} == "5" ]]; then
+		./modules/credmods/osintf.sh
+	elif [[ ${CMM} == "6" ]]; then
+		modules
+	elif [[ ${CMM} == "cd "* ]]; then
+		${CMM}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		cred_mods
+	fi
+    echo -e "${NC}"
 }
 ##########################
 # Individual Target Info #
@@ -140,54 +124,43 @@ phone_mods(){
   figlet -f mini "Targeted Information Gatherers"
   echo -e "${LP}This module focuses on individual targets."
   echo -e "${YLW}eg. Social media information, phone number information, etc."
-  echo -e "\n ${W}=============================================================\n ${ORNG}What would you like to use?\n ${W}=============================================================${NC}"
-  PS3=' ==========================#?: '
-          options=("Seeker" "Sherlock" "xRay" "Maryam" "E2P (Email2PhoneNumber)" "ODIN" "CardPwn" "DeadTrap" "iKy" "Back") 
-          select opt in "${options[@]}"
-          do
-                  case $opt in
-                            "Seeker")
-                                ./modules/credmods/seeker.sh
-                                ;;
-
-                            "Sherlock")
-                                ./modules/credmods/sherlock.sh
-                                ;;
-
-                            "Maryam")
-                                ./modules/credmods/maryam.sh
-                                ;;
-
-                            "xRay")
-                                ./modules/credmods/xray.sh
-                                ;;
-
-                            "E2P (Email2PhoneNumber)")
-                                ./modules/credmods/e2p.sh
-                                ;;
-
-                            "ODIN")
-                                ./modules/credmods/odin.sh
-                                ;;
-
-                            "CardPwn")
-                                ./modules/credmods/cardpwn.sh
-                                ;;
-
-                            "DeadTrap")
-                                deadtrap
-                                ;;
-
-                            "iKy")
-                                ./modules/credmods/iky.sh
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                    esac
-            done
-            echo -e "${NC}"
+  ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} Seeker           ${ORNG}6.${W} ODIN ${NC}"
+	echo -e " ${ORNG}2.${W} Sherlock		 ${ORNG}7.${W} CardPwn ${NC}"
+	echo -e " ${ORNG}3.${W} Maryam           ${ORNG}8.${W} DeadTrap ${NC}"
+	echo -e " ${ORNG}4.${W} xRay           ${ORNG}9.${W} iKy ${NC}"
+	echo -e " ${ORNG}5.${W} Email2Phone		 ${ORNG}10.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+	read PMM
+	if [[ ${PMM} == "1" ]]; then
+		./modules/credmods/seeker.sh
+	elif [[ ${PMM} == "2" ]]; then
+		./modules/credmods/sherlock.sh
+	elif [[ ${PMM} == "3" ]]; then
+		./modules/credmods/maryam.sh
+	elif [[ ${PMM} == "4" ]]; then
+		./modules/credmods/xray.sh
+	elif [[ ${PMM} == "5" ]]; then
+		./modules/credmods/e2p.sh
+	elif [[ ${PMM} == "6" ]]; then
+		./modules/credmods/odin.sh
+	elif [[ ${PMM} == "7" ]]; then
+		./modules/credmods/cardpwn.sh
+	elif [[ ${PMM} == "8" ]]; then
+		deadtrap
+	elif [[ ${PMM} == "9" ]]; then
+		./modules/credmods/iky.sh
+	elif [[ ${PMM} == "10" ]]; then
+		modules
+	elif [[ ${PMM} == "cd "* ]]; then
+		${PMM}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		phone_mods
+	fi
+    echo -e "${NC}"
 }
 ##########################
 # Info Gathering Modules #
@@ -197,26 +170,26 @@ info_mods(){
     echo -e "${RED}"
     figlet -f mini "Information Gatherers"
     echo -e "${ORNG}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' ==========================#?: '
-            options=("Enterprise Focus" "Individual Focus" "Back")
-            select opt in "${options[@]}"
-            do
-                    case $opt in
-                            "Enterprise Focus")
-                                cred_mods
-                                ;;
-
-                            "Individual Focus")
-                                phone_mods
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                    esac
-            done
-        echo -e "${NC}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} Enterprise Focus           ${ORNG}3.${W} Back ${NC}"
+	echo -e " ${ORNG}2.${W} Individual Focus ${NC}"
+    echo -e "\n =============================#?: "
+	read IFM
+	if [[ ${IFM} == "1" ]]; then
+		cred_mods
+	elif [[ ${IFM} == "2" ]]; then
+		phone_mods
+	elif [[ ${IFM} == "3" ]]; then
+		modules
+	elif [[ ${IFM} == "cd "* ]]; then
+		${IFM}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		info_mods
+	fi
+    echo -e "${NC}"
 
 }
 #####################
@@ -228,232 +201,200 @@ honey_mods(){
     figlet -f mini "HoneyPot Detection Systems"
     echo -e "${LP}This module focuses on Enterprises and their online presence"
     echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
-    echo -e "\n ${W}=============================================================\n ${ORNG}What would you like to use?\n ${W}=============================================================${NC}"
-    PS3=' ==========================#?: '
-            options=("HoneyCaught" "SniffingBear" "HoneyTel" "HFish" "Back")
-            select opt in "${options[@]}"
-            do
-                case $opt in
-                            "HoneyCaught")
-                                ./modules/honeymods/honeyc.sh
-                                ;;
-
-                            "SniffingBear")
-                                ./modules/honeymods/s_bear.sh
-                                ;;
-
-                            "HoneyTel")
-                                ./modules/honeymods/honeytel.sh
-                                ;;
-
-                            "HFish")
-                                ./modules/honeymods/hfish.sh
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                    esac
-            done
-        echo -e "${NC}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} HoneyCaught           ${ORNG}4.${W} HFish ${NC}"
+	echo -e " ${ORNG}2.${W} SniffingBear			${ORNG}5.${W} Back ${NC}"
+	echo -e " ${ORNG}3.${W} HoneyTel	 ${NC}"
+	echo -e "\n =============================#?: "
+	read HPM
+	if [[ ${HPM} == "1" ]]; then
+		./modules/honeymods/honeyc.sh
+	elif [[ ${HPM} == "2" ]]; then
+		./modules/honeymods/s_bear.sh
+	elif [[ ${HPM} == "3" ]]; then
+		./modules/honeymods/honeytel.sh
+	elif [[ ${HPM} == "4" ]]; then
+		./modules/honeymods/hfish.sh
+	elif [[ ${HPM} == "5" ]]; then
+		modules
+	elif [[ ${HPM} == "cd "* ]]; then
+		${HPM}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		honey_mods
+	fi
+    echo -e "${NC}"
 
 }
 ##################
 # Domain Modules #
 ##################
 dom_mods(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Domain Recon Gathering"
-  echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' ==========================#?: '
-          options=("DnsTwist" "Armory" "Spiderfoo7" "SubFinder" "Pulsar" "Back")    #"SubDover" 
-          select opt in "${options[@]}"
-          do
-                  case $opt in
-                            "DnsTwist")
-                                ./modules/dommods/dnstwist.sh
-                                ;;
-
-                            "Armory")
-                                ./modules/dommods/armory.sh
-                                ;;
-
-                            #"SubDover")
-                            #    ./modules/dommods/subdover.sh
-                            #    ;;
-
-                            "Spiderfoo7")
-                                ./modules/dommods/spiderfoot.sh
-                                ;;
-
-                            "SubFinder")
-                                ./modules/dommods/subfinder.sh
-                                ;;
-
-                            "Pulsar")
-                                ./modules/dommods/pulsar.sh
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                    esac
-            done
-            echo -e "${NC}"
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "Domain Recon Gathering"
+    echo -e "${ORNG}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} DnsTwist           ${ORNG}4.${W} SubFinder ${NC}"
+	echo -e " ${ORNG}2.${W} Armory		 ${ORNG}5.${W} Pulsar ${NC}"
+	echo -e " ${ORNG}3.${W} Spiderfoo7           ${ORNG}6.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+	read DMM
+	if [[ ${DMM} == "1" ]]; then
+		./modules/dommods/dnstwist.sh
+	elif [[ ${DMM} == "2" ]]; then
+		./modules/dommods/armory.sh
+	elif [[ ${DMM} == "3" ]]; then
+		./modules/dommods/spiderfoot.sh
+	elif [[ ${DMM} == "4" ]]; then
+		./modules/dommods/subfinder.sh
+	elif [[ ${DMM} == "5" ]]; then
+		./modules/dommods/pulsar.sh
+	elif [[ ${DMM} == "6" ]]; then
+		modules
+	elif [[ ${DMM} == "cd "* ]]; then
+		${DMM}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		dom_mods
+	fi
+    echo -e "${NC}"
 }
 ###################
 # Network Modules #
 ###################
 net_mods(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Network Scanners"
-  echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' ==========================#?: '
-          options=("nMap" "Arp-Scan" "AttackSurfaceMapper" "wafw00f" "aSnip" "Espionage" "Back")
-          select opt in "${options[@]}"
-          do
-                  case $opt in
-                            "nMap")
-                                ./modules/netmods/nmap.sh
-                                ;;
-
-                            "Arp-Scan")
-                                echo -e "${YLW}Would you like to scan your ${RED}l${YLW}ocal network, or use ${RED}c${YLW}ustom arp-scan args?(${RED}l${YLW}/${RED}c${YLW})${NC}"
-                                read ASO
-                                if [[ ${ASO} == "l" ]]; then
-                                    sudo arp-scan -l
-                                else
-                                    echo -e "${YLW}Please enter your arp-scan arguments now\n${RED}eg. ${ORNG}-N -q -v${NC}"
-                                    echo -e "${LP}An xTerm window will be shown for 3mins, showing the ${YLW}arp-scan argument list${NC}"
-                                    xterm -e echo -e ${ORNG}arp-scan --help && echo -e "${NC}" && sleep 180
-                                    read ARPARG
-                                    sudo arp-scan ${ARPARG}
-                                fi
-                                ;;
-
-                            "AttackSurfaceMapper")
-                                ./modules/netmods/asm.sh
-                                ;;
-
-                            "wafw00f")
-                                ./modules/netmods/wafw00f.sh
-                                ;;
-
-                            "aSnip")
-                                ./modules/netmods/asnip.sh
-                                ;;
-
-                            "Espionage")
-                                ./modules/netmods/espionage.sh
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                    esac
-            done
-            echo -e "${NC}"
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "Network Scanners"
+    echo -e "${ORNG}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} nMap           ${ORNG}5.${W} aSnip ${NC}"
+	echo -e " ${ORNG}2.${W} Arp-Scan 		 ${ORNG}6.${W} Espionage ${NC}"
+	echo -e " ${ORNG}3.${W} AttackSurfaceMapper           ${ORNG}7.${W} Back ${NC}"
+	echo -e " ${ORNG}4.${W} wafw00f ${NC}"
+    echo -e "\n =============================#?: "
+	read NTM
+	if [[ ${NTM} == "1" ]]; then
+		./modules/netmods/nmap.sh
+	elif [[ ${NTM} == "2" ]]; then
+		echo -e "${YLW}Would you like to scan your ${RED}l${YLW}ocal network, or use ${RED}c${YLW}ustom arp-scan args?(${RED}l${YLW}/${RED}c${YLW})${NC}"
+        read ASO
+        if [[ ${ASO} == "l" ]]; then
+            sudo arp-scan -l
+        else
+            echo -e "${YLW}Please enter your arp-scan arguments now\n${RED}eg. ${ORNG}-N -q -v${NC}"
+            echo -e "${LP}An xTerm window will be shown for 3mins, showing the ${YLW}arp-scan argument list${NC}"
+            xterm -e echo -e ${ORNG}arp-scan --help && echo -e "${NC}" && sleep 180
+            read ARPARG
+            sudo arp-scan ${ARPARG}
+        fi
+	elif [[ ${NTM} == "3" ]]; then
+		./modules/netmods/asm.sh
+	elif [[ ${NTM} == "4" ]]; then
+		./modules/netmods/wafw00f.sh
+	elif [[ ${NTM} == "5" ]]; then
+		./modules/netmods/asnip.sh
+	elif [[ ${NTM} == "6" ]]; then
+		./modules/netmods/espionage.sh
+	elif [[ ${NTM} == "7" ]]; then
+		modules
+	elif [[ ${NTM} == "cd "* ]]; then
+		${NTM}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		net_mods
+	fi
+    echo -e "${NC}"
 }
 ##########################
 # Vulnerability Scanners #
 ##########################
 vuln_mods(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Vulnerability Scanners"
-  echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' ==========================#?: '
-          options=("Flan" "RapidScan" "Yuki-Chan" "KatanaFramework" "Nettacker" "F5 Big IP RCE" "Back")
-          select opt in "${options[@]}"
-          do
-                  case $opt in
-                            "Flan")
-                                ./modules/vulnscanners/flan.sh
-                                ;;
-
-                            "RapidScan")
-                                ./modules/vulnscanners/rapidscan.sh
-                                ;;
-
-                            "Yuki-Chan")
-                                ./modules/vulnscanners/yuki.sh
-                                ;;
-
-                            "KatanaFramework")
-                                ./modules/vulnscanners/ktf.sh
-                                ;;
-
-                            "Nettacker")
-                                ./modules/vulnscanners/nettacker.sh
-                                ;;
-
-                            "F5 Big IP RCE")
-                                ./modules/vulnscanners/bip.sh
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                    esac
-            done
-            echo -e "${NC}"
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "Vulnerability Scanners"
+    echo -e "${ORNG}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} Flan           ${ORNG}5.${W} Nettacker ${NC}"
+	echo -e " ${ORNG}2.${W} RapidScan 		 ${ORNG}6.${W} F5 Big IP RCE ${NC}"
+	echo -e " ${ORNG}3.${W} Yuki-Chan           ${ORNG}7.${W} Back ${NC}"
+	echo -e " ${ORNG}4.${W} Katana-VFramework ${NC}"
+    echo -e "\n =============================#?: "
+	read VNM
+	if [[ ${VNM} == "1" ]]; then
+		./modules/vulnscanners/flan.sh
+	elif [[ ${VNM} == "2" ]]; then
+		./modules/vulnscanners/rapidscan.sh
+	elif [[ ${VNM} == "3" ]]; then
+		./modules/vulnscanners/yuki.sh
+	elif [[ ${VNM} == "4" ]]; then
+		./modules/vulnscanners/ktf.sh
+	elif [[ ${VNM} == "5" ]]; then
+		./modules/vulnscanners/nettacker.sh
+	elif [[ ${VNM} == "6" ]]; then
+		./modules/vulnscanners/bip.sh
+	elif [[ ${VNM} == "7" ]]; then
+		modules
+	elif [[ ${VNM} == "cd "* ]]; then
+		${VNM}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		vuln_mods
+	fi
+    echo -e "${NC}"
 }
 #######################
 # Web-Focused Modules #
 #######################
 web_mods(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "Website Scanners & Enumerators"
-  echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' ==========================#?: '
-          options=("Dirb" "Nikto" "BlackWidow" "DorksEye" "WP Analysis" "Katana-DS" "Zeus" "Back")
-          select opt in "${options[@]}"
-          do
-                  case $opt in
-			                "Dirb")
-			                    ./modules/webmods/dirb.sh
-				                ;;
-
-                            "Nikto")
-                                ./modules/webmods/nikto.sh
-                                ;;
-
-                            "BlackWidow")
-                                ./modules/webmods/widow.sh
-                                ;;
-
-                            "WP Analysis")
-                                echo -e "${YLW}WPScan & WPForce"
-                                echo -e "${W}Tools for use against wordpress${NC}"
-                                sleep 3
-                                ./modules/webmods/wordpress.sh
-                                ;;
-
-			                "DorksEye")
-			    	            ./modules/webmods/dorkseye.sh
-				                ;;
-
-                            "Katana-DS")
-                                ./modules/webmods/kds.sh
-                                ;;
-
-                            "Zeus")
-                                ./modules/webmods/zeus.sh
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                    esac
-            done
-            echo -e "${NC}"
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "Website Scanners & Enumerators"
+    echo -e "${ORNG}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} Dirb           ${ORNG}5.${W} DorksEye ${NC}"
+	echo -e " ${ORNG}2.${W} Nikto 		 ${ORNG}6.${W} Katana-DS ${NC}"
+	echo -e " ${ORNG}3.${W} BlackWidow           ${ORNG}7.${W} Zeus ${NC}"
+	echo -e " ${ORNG}4.${W} WordPress Tools 		 ${ORNG}8.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+	read WEM
+	if [[ ${WEM} == "1" ]]; then
+		./modules/webmods/dirb.sh
+	elif [[ ${WEM} == "2" ]]; then
+		./modules/webmods/nikto.sh
+	elif [[ ${WEM} == "3" ]]; then
+		./modules/webmods/widow.sh
+	elif [[ ${WEM} == "4" ]]; then
+		echo -e "${YLW}WPScan & WPForce"
+        echo -e "${W}Tools for use against wordpress${NC}"
+        sleep 3
+        ./modules/webmods/wordpress.sh
+	elif [[ ${WEM} == "5" ]]; then
+		./modules/webmods/dorkseye.sh
+	elif [[ ${WEM} == "6" ]]; then
+		./modules/webmods/kds.sh
+	elif [[ ${WEM} == "7" ]]; then
+		./modules/webmods/zeus.sh
+	elif [[ ${WEM} == "8" ]]; then
+		modules
+	elif [[ ${WEM} == "cd "* ]]; then
+		${WEM}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		web_mods
+	fi
+    echo -e "${NC}"
 }
 #####################
 # Post Exploitation #
@@ -462,158 +403,141 @@ post_ex(){
     echo -e "${RED}"
     figlet -f mini "Post-Exploitation"
     echo -e "${NC}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' ==========================#?: '
-        options=("EoP Exploit" "Potatoes 'n PEAS" "Omega" "WinPwn" "PowerSharp" "CredHarvester" "ACLight2" "PowerHUB" "Back")
-        select opt in "${options[@]}"
-        do
-            case $opt in
-                "EoP Exploit")
-                    echo -e "${W}The EoP module helps elevate user privileges on an exploited system${NC}"
-                    ./modules/postex/EoP.sh
-                    ;;
-
-                "Potatoes 'n PEAS")
-                    echo -e "${YLW}This will copy a file to your Desktop to be used on an exploited target session\nWould you like to continue?(y/n)${NC}"
-                    read BP
-                    if [[ ${BP} == "y" ]]; then
-                        ./modules/postex/potnpea.sh
-                    else
-                        post_ex
-                    fi
-                    ;;
-
-                "Omega")
-                    echo -e "${W}This tool acts as a Command n Control Server for call-back of exploited systems${NC}"
-                    ./modules/postex/omega.sh
-                    ;;                    
-
-                "WinPwn")
-                    echo -e "${W}This module checks for internal system privilege escalation methods that could be used to elevate user privs${NC}"
-                    ./modules/postex/winpwn.sh
-                    ;;
-
-                "PowerSharp")
-                    echo -e "${W}This is a ${YLW}PowerShell${W} tool that is to be used on an exploited system${NC}"
-                    xterm -e bash /opt/sifter/modules/postex/powersharp.sh
-                    ;;
-
-                "CredHarvester")
-                    echo -e "${W}Python3 tool to gather credentials on a successfully infultrated machine${NC}"
-                    ./modules/postex/credharvester.sh
-                    ;;
-                
-                "ACLight2")
-                    echo -e "${W}This tool is used on an exploited target\n in order to search for Shadow Admins${NC}"
-                    ./modules/postex/aclight.sh
-                    ;;
-
-                "PowerHUB")
-                    echo -e "${W}This tool is used in order to help bypass end-point protection${NC}"
-                    ./modules/postex/powerhub.sh
-                    ;;
-
-                "Back")
-                    ex_mods
-                    ;;
-
-            esac
-        done
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} EoP Exploit           ${ORNG}6.${W} CredHarvester ${NC}"
+	echo -e " ${ORNG}2.${W} Potatoes 'n PEAS 		 ${ORNG}7.${W} ACLight2 ${NC}"
+	echo -e " ${ORNG}3.${W} Omega           ${ORNG}8.${W} PowerHUB ${NC}"
+	echo -e " ${ORNG}4.${W} WinPwn 		 ${ORNG}9.${W} Back ${NC}"
+	echo -e " ${ORNG}5.${W} PowerSharp ${NC}"
+    echo -e "\n =============================#?: "
+	read PEX
+	if [[ ${PEX} == "1" ]]; then
+		echo -e "${W}The EoP module helps elevate user privileges on an exploited system${NC}"
+        ./modules/postex/EoP.sh
+	elif [[ ${PEX} == "2" ]]; then
+		echo -e "${YLW}This will copy a file to your Desktop to be used on an exploited target session\nWould you like to continue?(y/n)${NC}"
+		read BP
+		if [[ ${BP} == "y" ]]; then
+			./modules/postex/potnpea.sh
+		else
+			post_ex
+		fi
+	elif [[ ${PEX} == "3" ]]; then
+		echo -e "${W}This tool acts as a Command n Control Server for call-back of exploited systems${NC}"
+        ./modules/postex/omega.sh
+	elif [[ ${PEX} == "4" ]]; then
+		echo -e "${W}This module checks for internal system privilege escalation methods that could be used to elevate user privs${NC}"
+        ./modules/postex/winpwn.sh
+	elif [[ ${PEX} == "5" ]]; then
+		echo -e "${W}This is a ${YLW}PowerShell${W} tool that is to be used on an exploited system${NC}"
+        xterm -e bash /opt/sifter/modules/postex/powersharp.sh
+	elif [[ ${PEX} == "6" ]]; then
+		echo -e "${W}Python3 tool to gather credentials on a successfully infultrated machine${NC}"
+        ./modules/postex/credharvester.sh
+	elif [[ ${PEX} == "7" ]]; then
+		echo -e "${W}This tool is used on an exploited target\n in order to search for Shadow Admins${NC}"
+        ./modules/postex/aclight.sh
+	elif [[ ${PEX} == "8" ]]; then
+		echo -e "${W}This tool is used in order to help bypass end-point protection${NC}"
+        ./modules/postex/powerhub.sh
+	elif [[ ${PEX} == "9" ]]; then
+		ex_mods
+	elif [[ ${PEX} == "cd "* ]]; then
+		${PEX}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		post_ex
+	fi
     echo -e "${NC}"
 }
 ##################
 # Password Tools #
 ##################
-passtools(){
+pass_tools(){
     cd /opt/sifter/modules/passtools
     echo -e "${RED}"
     figlet -f mini "Password Tools"
     echo -e "${ORNG}"
-    echo -e " ${W}=============================================================\n ${ORNG}What would you like to use?\n ${W}==============================================================${NC}"
-    PS3=' ==========================#?: '
-        options=("Mentalist" "dCipher" "Ciphey" "Back")
-        select opt in "${options[@]}"
-        do
-            case $opt in
-                "Mentalist")
-                    echo -e "${YLW}Mentalist is a Graphical password creation tool"
-                    ./modules/passtools/Mentalist
-                    ;;
-
-                "dCipher")
-                    echo -e "${YLW}Decipher hashes using online rainbow & lookup table attack services.${NC}"
-                    ./modules/passtools/dcipher.sh
-                    ;;
-
-                "Ciphey")
-                    ./modules/passtools/ciphey.sh
-                    ;;
-
-                "Back")
-                    modules
-                    ;;
-
-            esac
-        done
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} Mentalist           ${ORNG}3.${W} Ciphey ${NC}"
+	echo -e " ${ORNG}2.${W} dCipher 		 ${ORNG}4.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+	read PST
+	if [[ ${PST} == "1" ]]; then
+		echo -e "${YLW}Mentalist is a Graphical password creation tool"
+        ./modules/passtools/Mentalist
+	elif [[ ${PST} == "2" ]]; then
+		echo -e "${YLW}Decipher hashes using online rainbow & lookup table attack services.${NC}"
+        ./modules/passtools/dcipher.sh
+	elif [[ ${PST} == "3" ]]; then
+		./modules/passtools/ciphey.sh
+	elif [[ ${PST} == "4" ]]; then
+		modules
+	elif [[ ${PST} == "cd "* ]]; then
+		${PST}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		pass_tools
+	fi
     echo -e "${NC}"
 }
 ###########################
 # Exploitation Frameworks #
 ###########################
 exframes(){
-    echo -e "${RED}"
+  echo -e "${RED}"
   figlet -f mini "Exploitation Frameworks"
   echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' ==========================#?: '
-        options=("Metasploit" "Thoron" "FuzzyDander" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                    "Metasploit")
-                        echo -e "${YLW}This will launch Metasploit in xterm, to allow continuous usage of Sifter\nif you are unable to use xterm enter ${RED}n${YLW} else hit ${UBLUE}enter${NC}"
-                        read XOPT
-                        if [[ ${XOPT} == "n" ]]; then
-                            msfconsole
-                        else
-                            xterm -e msfconsole
-                        fi
-                        ;;
-
-                    "Thoron")
-                        echo -e "${YLW}This is an exploitation framework aimed towards Linux Exploitation\n${LP}Would you like to continue?(y/n)${NC}"
-                        read XOPT
-                        if [[ ${XOPT} == "y" ]]; then
-                            ./modules/exmods/thoron.sh
-                        else
-                            exframes
-                        fi
-                        ;;
-
-                    "FuzzyDander")
-                        echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
-                        echo -e "codename:${RED}FuzzyDander${NC}"
-                        echo -e "${YLW}If you do not know what these tools are or how they work,\nyou should not be using them. As such no instructions will be added.${NC}"
-                        if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then
-                            echo -e "${URED}You do not have this module, please post an issue request on github or send me \n an email at s1l3n7h0s7@gmail.com and it will be sent to you with install instructions${NC}"
-                        else
-                            echo -e "${W}Would you like to continue?(y/n)${NC}"
-                            read M_ANS
-                            if [[ ${M_ANS} == 'y' ]]; then
-                                ./modules/exmods/fuzzyd.sh
-                            else
-                                ex_mods
-                            fi
-                        fi
-                        ms_tools
-                        ;;
-
-                    "Back")
-                        ex_mods
-                        ;;
-
-            esac
-        done
+  ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} Metasploit           ${ORNG}3.${W} FuzzyDander ${NC}"
+	echo -e " ${ORNG}2.${W} Thoron 		 ${ORNG}4.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+	read EXF
+	if [[ ${EXF} == "1" ]]; then
+		echo -e "${YLW}This will launch Metasploit in xterm, to allow continuous usage of Sifter\nif you are unable to use xterm enter ${RED}n${YLW} else hit ${UBLUE}enter${NC}"
+        read XOPT
+        if [[ ${XOPT} == "n" ]]; then
+            msfconsole
+        else
+            xterm -e msfconsole
+        fi
+	elif [[ ${EXF} == "2" ]]; then
+		echo -e "${YLW}This is an exploitation framework aimed towards Linux Exploitation\n${LP}Would you like to continue?(y/n)${NC}"
+        read XOPT
+        if [[ ${XOPT} == "y" ]]; then
+            ./modules/exmods/thoron.sh
+        else
+            exframes
+        fi
+	elif [[ ${EXF} == "3" ]]; then
+		echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
+        echo -e "codename:${RED}FuzzyDander${NC}"
+        echo -e "${YLW}If you do not know what these tools are or how they work,\nyou should not be using them. As such no instructions will be added.${NC}"
+        if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then
+            echo -e "${URED}You do not have this module, please post an issue request on github or send me \n an email at s1l3n7h0s7@gmail.com and it will be sent to you with install instructions${NC}"
+        else
+            echo -e "${W}Would you like to continue?(y/n)${NC}"
+            read M_ANS
+            if [[ ${M_ANS} == 'y' ]]; then
+                ./modules/exmods/fuzzyd.sh
+            else
+                exframes
+            fi
+        fi
+	elif [[ ${EXF} == "4" ]]; then
+		ex_mods
+	elif [[ ${EXF} == "cd "* ]]; then
+		${EXF}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		ex_mods
+	fi
     echo -e "${NC}"               
 }
 ########################
@@ -624,61 +548,45 @@ ex_mods(){
   echo -e "${RED}"
   figlet -f mini "Exploitation Tools"
   echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' ==========================#?: '
-        options=("Microsoft Explicit" "BruteForcing" "TigerShark" "Web Exploiters" "Search for Exploits" "Post-Exploitation" "Exploitation Frameworks" "NevrrMore" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                    "Microsoft Explicit")
-                        echo -e "${YLW}These tools are used to exploit MicroSoft systems${NC}"
-                        sleep 3
-                        ms_tools
-			            ;;
-
-                    "BruteForcing")
-                        bruters
-                        ;;
-
-                    "TigerShark")
-                        echo -e "${YLW}TigerShark is a multi-tooled phishing framework${NC}"
-                        sleep 3
-                        ./modules/exmods/tiger.sh
-                        ;;
-
-                    "Web Exploiters")
-                        echo -e "${YLW}These tools are aimed at exploiting websites${NC}"
-                        sleep 3
-                        webex
-                        ;;
-
-                    "Search for Exploits")
-                        echo -e "${YLW}These tools allow you to search to certain exploits or vulnerabilities${NC}"
-                        sleep 3
-                        search_tools
-                        ;;
-
-                    "Exploitation Frameworks")
-                        exframes
-                        ;;
-
-                    "Post-Exploitation")
-                        post_ex
-                        ;;
-
-                    "NevrrMore")
-                        #./modules/exmods/nvrmore.sh
-                        sleep 2
-                        echo -e "${RED}LOL ${ORNG}Nope. Sorry${NC}"
-                        sleep 2
-                        ex_mods
-                        ;;
-
-                    "Back")
-                        modules
-                        ;;
-                esac
-        done
+  ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} Microsoft Explicit           ${ORNG}5.${W} Search for Exploits ${NC}"
+	echo -e " ${ORNG}2.${W} BruteForcing 		 ${ORNG}6.${W} Exploitation Frameworks ${NC}"
+	echo -e " ${ORNG}3.${W} TigerShark           ${ORNG}7.${W} Post-Exploitation ${NC}"
+	echo -e " ${ORNG}4.${W} Web Exploiters			${ORNG}8.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+	read EXTP
+	if [[ ${EXTP} == "1" ]]; then
+		echo -e "${YLW}These tools are used to exploit MicroSoft systems${NC}"
+        sleep 3
+        ms_tools
+	elif [[ ${EXTP} == "2" ]]; then
+		bruters
+	elif [[ ${EXTP} == "3" ]]; then
+		echo -e "${YLW}TigerShark is a multi-tooled phishing framework${NC}"
+        sleep 3
+        ./modules/exmods/tiger.sh
+	elif [[ ${EXTP} == "4" ]]; then
+		echo -e "${YLW}These tools are aimed at exploiting websites${NC}"
+        sleep 3
+        web_tools
+	elif [[ ${EXTP} == "5" ]]; then
+		echo -e "${YLW}These tools allow you to search to certain exploits or vulnerabilities${NC}"
+        sleep 3
+        search_tools
+	elif [[ ${EXTP} == "6" ]]; then
+		exframes
+	elif [[ ${EXTP} == "7" ]]; then
+		post_ex
+	elif [[ ${EXTP} == "8" ]]; then
+		modules
+	elif [[ ${EXTP} == "cd "* ]]; then
+		${EXTP}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		ex_mods
+	fi
     echo -e "${NC}"
 }
 ######################
@@ -689,27 +597,27 @@ bruters(){
     echo -e "${RED}"
     figlet -f mini "BruteDUM"
     echo -e "${ORNG}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' =============================#?: '
-        options=("BruteDUM" "WBruter" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                    "BruteDUM")
-                        echo -e "${YLW}BruteDUM is a bruteforcing tool that consists of Medusa, nCrack, Hydra${NC}"
-                        sleep 3
-                        ./modules/exmods/brutedum.sh
-                        ;;
-
-                    "WBruter")
-                        ./modules/exmods/wbruter.sh
-                        ;;
-
-                   "Back")
-                        modules
-                        ;;
-                esac
-        done
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} BruteDUM           ${ORNG}3.${W} Back ${NC}"
+	echo -e " ${ORNG}2.${W} WBruter ${NC}"
+    echo -e "\n =============================#?: "
+	read BTS
+	if [[ ${BTS} == "1" ]]; then
+		echo -e "${YLW}BruteDUM is a bruteforcing tool that consists of Medusa, nCrack, Hydra${NC}"
+        sleep 3
+        ./modules/exmods/brutedum.sh
+	elif [[ ${BTS} == "2" ]]; then
+		./modules/exmods/wbruter.sh
+	elif [[ ${BTS} == "3" ]]; then
+		modules
+	elif [[ ${BTS} == "cd "* ]]; then
+		${BTS}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		bruters
+	fi
     echo -e "${NC}"
 }
 #####################
@@ -720,102 +628,97 @@ search_tools(){
     echo -e "${RED}"
     figlet -f mini "Exploit Finders"
     echo -e "${ORNG}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' =============================#?: '
-        options=("ShodanSploit" "FindSploit" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                    "ShodanSploit")
-                        echo -e "${YLW}ShodanSploit allows for shodan searches to be done quickly from the terminal${NC}"
-                        sleep 3
-                        ./modules/exmods/ssploit.sh
-                        ;;
-
-                    "FindSploit")
-                        echo -e "${YLW}This tool allows you to search, copy or compile exploits${NC}"
-                        sleep 3
-                        ./modules/exmods/fsploit.sh
-                        ;;
-
-                    "Back")
-                        modules
-                        ;;
-                esac
-        done
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} ShodanSploit           ${ORNG}3.${W} Back ${NC}"
+	echo -e " ${ORNG}2.${W} FindSploit ${NC}"
+    echo -e "\n =============================#?: "
+	read SST
+	if [[ ${SST} == "1" ]]; then
+		echo -e "${YLW}ShodanSploit allows for shodan searches to be done quickly from the terminal${NC}"
+        sleep 3
+        ./modules/exmods/ssploit.sh
+	elif [[ ${SST} == "2" ]]; then
+		echo -e "${YLW}This tool allows you to search, copy or compile exploits${NC}"
+        sleep 3
+        ./modules/exmods/fsploit.sh
+	elif [[ ${SST} == "3" ]]; then
+		modules
+	elif [[ ${SST} == "cd "* ]]; then
+		${SST}
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+		search_tools
+	fi
     echo -e "${NC}"
 }
 ##########################
 # MicroSoft Exploitation #
 ##########################
 ms_tools(){
-  cd /opt/sifter
-  echo -e "${RED}"
-  figlet -f mini "MicroSoft Exploitation Tools"
-  echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' =============================#?: '
-        options=("ActiveReign" "iSpy" "SMBGhost" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-			              "ActiveReign")
-			                    echo -e "${YLW}ActiveReign is a LDAP Network-Attack toolkit${NC}"
-                                sleep 3
-                                ./modules/exmods/ar3.sh
-			                    ;;
-
-                          "iSpy")
-                                echo -e "${YLW}iSpy is a ${UBLUE}BlueKeep${NC}${YLW} & ${UBLUE}EternalBlue${NC}${YLW} Vulnerability Scanner${NC}"
-                                sleep 3
-                                ./modules/exmods/ispy.sh
-			                    ;;
-
-                            "SMBGhost")
-                                echo -e "${LP}SMBGhost scans for the CVE-2020-0796 vulnerability in Windows SMB3 protocol${NC}"
-                                sleep 3
-                                ./modules/exmods/smbghost.sh
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                esac
-        done
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "MicroSoft Exploitation Tools"
+    echo -e "${ORNG}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} ActiveReign           ${ORNG}3.${W} SMBGhost ${NC}"
+    echo -e " ${ORNG}2.${W} iSpy           ${ORNG}4.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+    read MST
+    if [[ ${MST} == "1" ]]; then
+	    echo -e "${YLW}ActiveReign is a LDAP Network-Attack toolkit${NC}"
+        sleep 3
+        ./modules/exmods/ar3.sh
+    elif [[ ${MST} == "2" ]]; then
+	    echo -e "${YLW}iSpy is a ${UBLUE}BlueKeep${NC}${YLW} & ${UBLUE}EternalBlue${NC}${YLW} Vulnerability Scanner${NC}"
+	    sleep 3
+	    ./modules/exmods/ispy.sh
+    elif [[ ${MST} == "3" ]]; then
+	    echo -e "${LP}SMBGhost scans for the CVE-2020-0796 vulnerability in Windows SMB3 protocol${NC}"
+        sleep 3
+        ./modules/exmods/smbghost.sh
+    elif [[ ${MST} == "4" ]]; then
+	    modules
+    elif [[ ${MST} == "cd "* ]]; then
+	    ${MST}
+    else
+	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        ms_tools
+    fi
     echo -e "${NC}"
 }
 ##############
 # DDoS Tools #
 ##############
 ddos(){
-      cd /opt/sifter
-      echo -e "${RED}"
-      figlet -f mini "DDoS Tools"
-      echo -e "${ORNG}"
-      echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-      PS3=' =============================#?: '
-        options=("Dark Star" "Impulse" "UFONet" "Back")
-        select opt in "${options[@]}"
-        do
-            case $opt in
-                "Dark Star")
-                    ./modules/exmods/dark_star.sh
-                    ;;
-
-                "Impulse")
-                    ./modules/exmods/impulse.sh
-                    ;;
-
-                "UFONet")
-                    ./modules/exmods/ufonet.sh
-                    ;;
-
-                "Back")
-                    webex
-                    ;;
-
-            esac
-        done
+    cd /opt/sifter
+    echo -e "${RED}"
+    figlet -f mini "DDoS Tools"
+    echo -e "${ORNG}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} Dark-Star           ${ORNG}3.${W} UFONet ${NC}"
+    echo -e " ${ORNG}2.${W} Impulse           ${ORNG}4.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+    read DDS
+    if [[ ${DDS} == "1" ]]; then
+	    ./modules/exmods/dark_star.sh
+    elif [[ ${DDS} == "2" ]]; then
+	    ./modules/exmods/impulse.sh
+    elif [[ ${DDS} == "3" ]]; then
+	    ./modules/exmods/ufonet.sh
+    elif [[ ${DDS} == "4" ]]; then
+	    webex
+    elif [[ ${DDS} == "cd "* ]]; then
+	    ${DDS}
+    else
+	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        ddos
+    fi
     echo -e "${NC}"
 }
 
@@ -827,31 +730,29 @@ routertools(){
     echo -e "${RED}"
     figlet -f mini "Router Tools"
     echo -e "${ORNG}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' =============================#?: '
-        options=("MkCheck" "RouterSploit" "Airgeddon" "Back")
-        select opt in "${options[@]}"
-        do
-            case $opt in
-                "MkCheck")
-                    cd /opt/MkCheck
-                    sudo ./mkcheck
-                    ;;
-
-                "RouterSploit")
-                    cd /root/routersploit
-                    sudo python3 rsf.py
-                    ;;
-
-                "Airgeddon")
-                    sudo Airgeddon
-                    ;; 
-
-                "Back")
-                    modules
-                    ;;
-            esac
-        done
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} MkCheck           ${ORNG}3.${W} Airgeddon ${NC}"
+    echo -e " ${ORNG}2.${W} Routersploit           ${ORNG}4.${W} Back ${NC}"
+    echo -e "\n =============================#?: "
+    read RTT
+    if [[ ${RTT} == "1" ]]; then
+	    cd /opt/MkCheck
+        sudo ./mkcheck
+    elif [[ ${RTT} == "2" ]]; then
+	    cd /root/routersploit
+        sudo python3.8 rsf.py
+    elif [[ ${RTT} == "3" ]]; then
+	    sudo airgeddon
+    elif [[ ${RTT} == "4" ]]; then
+	    modules
+    elif [[ ${RTT} == "cd "* ]]; then
+	    ${RTT}
+    else
+	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        routertools
+    fi
     echo -e "${NC}"
 }
 
@@ -863,36 +764,33 @@ webex(){
   echo -e "${RED}"
   figlet -f mini "Website Exploitation Tools"
   echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' =============================#?: '
-        options=("DDoS" "NekoBot" "xShock" "VulnX" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                    "NekoBot")
-                        echo -e "${YLW}NekoBot is a Web-Shell exploitation framework${NC}"
-                        ./modules/exmods/nekobot.sh
-                        ;;
-
-                    "DDoS")
-                        ddos
-                        ;;
-
-                    "xShock")
-                        echo -e "${YLW}xShock is a shellshock exploitation tool${NC}"
-                        sleep 3
-                        ./modules/exmods/xshock.sh
-                        ;;
-
-                    "VulnX")
-                        ./modules/exmods/vulnx.sh
-                        ;;
-
-		            "Back")
-                        modules
-                        ;;
-                esac
-        done
+  ASTAT=$(cat /home/$USER/.config/.anon_status)
+    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} NekoBot           ${ORNG}4.${W} VulnX ${NC}"
+    echo -e " ${ORNG}2.${W} DDoS           ${ORNG}5.${W} Back ${NC}"
+    echo -e " ${ORNG}3.${W} xShock${NC}"
+    echo -e "\n =============================#?: "
+    read WBX
+    if [[ ${WBX} == "1" ]]; then
+	    echo -e "${YLW}NekoBot is a Web-Shell exploitation framework${NC}"
+        ./modules/exmods/nekobot.sh
+    elif [[ ${WBX} == "2" ]]; then
+	    ddos
+    elif [[ ${WBX} == "3" ]]; then
+	    echo -e "${YLW}xShock is a shellshock exploitation tool${NC}"
+        sleep 3
+        ./modules/exmods/xshock.sh
+    elif [[ ${WBX} == "4" ]]; then
+	    ./modules/exmods/vulnx.sh
+    elif [[ ${WBX} == "5" ]]; then
+	    modules
+    elif [[ ${WBX} == "cd "* ]]; then
+	    ${WBX}
+    else
+	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        webex
+    fi
     echo -e "${NC}"
 }
 
@@ -904,37 +802,32 @@ webapps(){
   echo -e "${RED}"
   figlet -f mini "WebAppplication Scanners"
   echo -e "${ORNG}"
-  echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-  PS3=' =============================#?: '
-        options=("Sitadel" "BFAC" "AapFinder" "OneFind" "reNgine" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                        "Sitadel")
-                            ./modules/webapps/sitadel.sh
-                            ;;
-
-                        "AapFinder")
-                            ./modules/webapps/aapfinder.sh
-                            ;;
-
-                        "BFAC")
-                            ./modules/webapps/bfac.sh
-                            ;;
-
-                        "OneFind")
-                            ./modules/webapps/onefind.sh
-                            ;;
-
-                        "reNgine")
-                            ./modules/webapps/rengine.sh
-                            ;;
-
-                        "Back")
-                            modules
-                            ;;
-                esac
-        done
+  ASTAT=$(cat /home/$USER/.config/.anon_status)
+    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} Sitadel           ${ORNG}4.${W} OneFind${NC}"
+    echo -e " ${ORNG}2.${W} AapFinder           ${ORNG}5.${W} reNgine{NC}"
+    echo -e " ${ORNG}3.${W} BFAC           ${ORNG}6.${W} Back${NC}"
+    echo -e "\n =============================#?: "
+    read WAS
+    if [[ ${WAS} == "1" ]]; then
+	    ./modules/webapps/sitadel.sh
+    elif [[ ${WAS} == "2" ]]; then
+	    ./modules/webapps/aapfinder.sh
+    elif [[ ${WAS} == "3" ]]; then
+	    ./modules/webapps/bfac.sh
+    elif [[ ${WAS} == "4" ]]; then
+	    ./modules/webapps/onefind.sh
+    elif [[ ${WAS} == "5" ]]; then
+	    ./modules/webapps/rengine.sh
+    elif [[ ${WAS} == "6" ]]; then
+	    modules
+    elif [[ ${WAS} == "cd "* ]]; then
+	    ${WAS}
+    else
+	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        webapps
+    fi
     echo -e "${NC}"
 }
 
@@ -944,31 +837,29 @@ webapps(){
 xssmods(){
     cd /opt/sifter
     echo -e "${RED}"
-    figlet -f mini "WebAppplication Scanners"
+    figlet -f mini "Cross-Site Scripting"
     echo -e "${ORNG}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' =============================#?: '
-          options=("XSS-Strike" "XSS-Freak" "finDOM-XSS" "Back")
-          select opt in "${options[@]}"
-          do
-            case $opt in
-                "XSS-Strike")
-                    ./modules/xss_sql/xsstrike.sh
-                    ;;
-
-                "XSS-Freak")
-                    ./modules/xss_sql/xssfreak.sh
-                    ;;
-
-                "finDOM-XSS")
-                    ./modules/xss_sql/findom.sh
-                    ;;
-
-                "Back")
-                    modules
-                    ;;
-            esac
-          done
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} XSS-Strike           ${ORNG}3.${W} finDOM-XSS${NC}"
+    echo -e "${ORNG}2.${W} XSS-Freak           ${ORNG}4.${W} Back${NC}"
+    echo -e "\n =============================#?: "
+    read XSS
+    if [[ ${XSS} == "1" ]]; then
+	    ./modules/xss_sql/xsstrike.sh
+    elif [[ ${XSS} == "2" ]]; then
+	    ./modules/xss_sql/v3n0m.sh
+    elif [[ ${XSS} == "3" ]]; then
+	    ./modules/xss_sql/findom.sh
+    elif [[ ${XSS} == "4" ]]; then
+	    modules
+    elif [[ ${XSS} == "cd "* ]]; then
+	    ${XSS}
+    else
+	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        xssmods
+    fi
     echo -e "${NC}"
 }
 
@@ -978,27 +869,27 @@ xssmods(){
 sqlmods(){
     cd /opt/sifter
     echo -e "${RED}"
-    figlet -f mini "WebAppplication Scanners"
+    figlet -f mini "SQLinjection"
     echo -e "${ORNG}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' =============================#?: '
-          options=("WhiteWidow" "V3n0M-Scanner" "Back")
-          select opt in "${options[@]}"
-          do
-            case $opt in
-                "WhiteWidow")
-                    ./modules/xss_sql/whitewidow.sh
-                    ;;
-
-                "V3n0M-Scanner")
-                    ./modules/xss_sql/v3n0m.sh
-                    ;;
-
-                "Back")
-                    modules
-                    ;;
-            esac
-          done
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} WhiteWidow               ${ORNG}2.${W} V3n0M-Scanner${NC}"
+    echo -e " ${ORNG}3.${W} Back${NC}"
+    echo -e "\n =============================#?: "
+    read SQLi
+    if [[ ${SQLi} == "1" ]]; then
+	    ./modules/xss_sql/whitewidow.sh
+    elif [[ ${SQLi} == "2" ]]; then
+	    ./modules/xss_sql/v3n0m.sh
+    elif [[ ${SQLi} == "3" ]]; then
+	    modules
+    elif [[ ${SQLi} == "cd "* ]]; then
+	    ${SQLi}
+    else
+	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        sqlmods
+    fi
     echo -e "${NC}"
 }
 
@@ -1010,28 +901,29 @@ xss_sql_mods(){
     echo -e "${RED}"
     figlet -f mini "Cross-Site Scripting & SQLinjection"
     echo -e "${ORNG}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' =============================#?: '
-            options=("Cross-Site Scripting" "SQLinjection" "Back")
-            select opt in "${options[@]}"
-            do
-                    case $opt in
-                            "Cross-Site Scripting")
-                                xssmods
-                                ;;
-
-                            "SQLinjection")
-                                sqlmods
-                                ;;
-
-                            "Back")
-                                modules
-                                ;;
-                    esac
-            done
-        echo -e "${NC}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} Cross-Site Scripting               ${ORNG}2.${W} SQLinjection${NC}"
+    echo -e " ${ORNG}3.${W} Back${NC}"
+    echo -e "\n =============================#?: "
+    read XSQL
+    if [[ ${XSQL} == "1" ]]; then
+	    xssmods
+    elif [[ ${XSQL} == "2" ]]; then
+	    sqlmods
+    elif [[ ${XSQL} == "3" ]]; then
+	    modules
+    elif [[ ${XSQL} == "cd "* ]]; then
+	    ${XSQL}
+    else
+	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        xss_sql_mods
+    fi
+    echo -e "${NC}"
 
 }
+
 ############################################
 # Operational Security  & Threat Modelling #
 ############################################
@@ -1042,26 +934,40 @@ opsec(){
     echo -e "${YLW}"
     figlet -f mini "Threat Modelling"
     echo -e "${ORNG}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
-    PS3=' =============================#?: '
-        options=("EventCleaner" "Threat Dragon" "Back")
-        select opt in "${options[@]}"
-        do
-                case $opt in
-                    "EventCleaner")
-                        ./modules/opsec/evclean.sh
-                        ;;
-
-                    "Threat Dragon")
-                        ./modules/opsec/tDragon.sh
-                        ;;
-
-                    "Back")
-                        modules
-                        ;;
-                esac
-        done
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+    echo -e "\n ${ORNG}1.${W} EventCleaner               ${ORNG}2.${W} Threat Dragon${NC}"
+    echo -e " ${ORNG}3.${W} Back${NC}"
+    echo -e "\n =============================#?: "
+    read OSTM
+    if [[ ${OSTM} == "1" ]]; then
+	    ./modules/opsec/evclean.sh
+    elif [[ ${OSTM} == "2" ]]; then
+	    ./modules/opsec/tDragon.sh
+    elif [[ ${OSTM} == "3" ]]; then
+	    modules
+    elif [[ ${OSTM} == "cd "* ]]; then
+	    ${OSTM}
+    else
+	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        opsec
+    fi
     echo -e "${NC}"
+}
+
+############################
+#  Additions to Host List  #
+############################
+ip_Q(){
+    addT=$(${_zenity} --title  "Add Target to Host.list" \
+	            --entry --text "Enter the IP or URL of your target")
+    echo ${Tar}
+    echo ${Tar} >> /opt/sifter/files/host_list.txt
+    TQ=$(zenity --question --width 300 --text "Would you like to add another?"); echo $TQ
+    if [[ ${TQ} == "0" ]]; then
+        addT
+    fi
 }
 
 ############################
@@ -1119,20 +1025,91 @@ check_hosts(){
 	     --text-info --filename="/opt/sifter/files/pingtest_raw.fail"
 
 }
+##############
+# Host Check #
+##############
+#check_hosts(){
+#    TARLIST=$(cat /opt/sifter/files/host_list.txt | grep "eg. target.com")
+#    if [[ ${TARLIST} == "eg. target.com" ]]; then
+#        rm /opt/sifter/files/host_list.txt
+#        echo -e "${RED}Please add an appropriate target first${NC}"
+#        nano /opt/sifter/files/host_list.txt
+#    else
+#        sleep 1
+#    fi
+#    echo -e "${ORNG}Host Check${NC}"
+#    	echo -e "${ORNG}***********${NC}"
+#        if [[ -f 'files/pingtest_raw.pass' ]]; then
+#    	    rm files/pingtest_raw.pass
+#        fi
+#        if [[ -f 'files/pingtest.pass' ]]; then
+#            rm files/pingtest.pass
+#        fi
+#        if [[ -f 'files/pingtest_pass.txt' ]]; then
+#            rm files/pingtest_pass.txt
+#        fi
 
-############################
-#  Additions to Host List  #
-############################
-ip_Q(){
-    addT=$(${_zenity} --title  "Add Target to Host.list" \
-	            --entry --text "Enter the IP or URL of your target")
-    echo ${Tar}
-    echo ${Tar} >> /opt/sifter/files/host_list.txt
-    TQ=$(zenity --question --width 300 --text "Would you like to add another?"); echo $TQ
-    if [[ ${TQ} == "0" ]]; then
-        addT
-    fi
-}
+#    	for name in `cat files/host_list.txt`
+#
+#    	        do
+#    	            ping -c 1 $name
+#    	                if [[ $? == 0 ]]; then
+#    	                    echo -e "${LP}======================================================"
+#    	                    echo -e "${LP} ${name} Alive ${NC}" && echo ${name} >> files/pingtest_raw.pass
+#    	                    echo -e "${LP}======================================================${NC}"
+#    	                else
+#    	                    echo -e "${RED}====================================================="
+#    	                    echo -e "${RED} ${name} Dead ${NC}" && echo ${name} >> files/pingtest_raw.fail
+#    	                    echo -e "${RED}=====================================================${NC}"
+#    	                fi
+#    	        done
+
+#	                sleep 5
+
+#            echo "======================================================================================================================================================================================================================="
+
+#        	    echo -e "${LP}Pingtest_Pass${NC}"
+#            	echo -e "${LP}*************${NC}"
+#		        cat files/pingtest_raw.pass | sort | uniq > files/pingtest.pass
+#        	    echo -e "${YLW}"
+#		        cat files/pingtest.pass
+#		        echo -e "${NC}"
+#		        sed -e 's/^/http:\/\//' files/pingtest.pass > files/pingtest_pass.txt
+
+#       	    echo "======================================================================================================================================================================================================================="
+
+#	            echo -e "${RED}Pingtest_Fail${NC}"
+#	            echo -e "${RED}*************${NC}"
+#	            cat files/pingtest_raw.fail | sort | uniq > files/pingtest.fail
+#	            echo -e "${YLW}"
+#		        cat files/pingtest.fail
+#		        echo -e "${NC}"
+#	            sleep 5
+#        	    menu
+#}
+
+########################################
+# List Argument Options Settings Below #
+#         IP addition argument         #
+########################################
+#ip_add(){
+#    echo -e "${W}Please enter your target:${NC}"
+#    read IP_ANS
+#    echo -e "${ORNG}Adding ${RED}${IP_ANS}${ORNG} to list${NC}"
+#    sleep 1
+#    echo "$IP_ANS" >> files/host_list.txt
+#    ip_q
+#}
+#ip_q(){
+#    echo -e "${W}Would you like to add another?y/n${NC}"
+#    read ANS
+#    sleep 1
+#    if [[ $ANS == 'y' ]]; then
+#        ip_add
+#    else
+#        menu
+#    fi
+#}
 
 #################
 #  GUI Results  #
@@ -1190,7 +1167,9 @@ results(){
     rm img.tmp word.tmp
 }
 
-
+if [[ ! -f "/home/$USER/.config/.anon_status" ]]; then
+	echo "NO" > /home/$USER/.config/.anon_status
+fi
 #############################
 # Initial Proxy Check (img) #
 #############################
@@ -1200,6 +1179,7 @@ if [[ ${ASTAT} == "NO" ]]; then
 else
     EXC="${BIGreen}[${ORNG}!${BIGreen}]${NC}"
 fi
+
 ################
 # Proxy Options
 ################
@@ -1229,7 +1209,7 @@ proxysystem(){
     	${_zenity} --width=350 --height=500  \
 	           --title "AnonSurf StartUp Log" \
 	           --text-info --filename="${_out}"
-         echo "YES" > /home/$USER/.config/.anon_status
+         echo "YES" > $USER/.config/.anon_status
 
 
     elif [[ ${proxyO} == "Stop" ]]; then
@@ -1242,7 +1222,7 @@ proxysystem(){
         ${_zenity} --width=350 --height=500  \
 	         --title "AnonSurf ShutDown Log" \
 	         --text-info --filename="${_out}"
-          echo "NO" > /home/$USER/.config/.anon_status
+          echo "NO" > $USER/.config/.anon_status
     else
         menu
     fi
@@ -1270,7 +1250,7 @@ modules(){
     echo -e " ${ORNG}9.${W} WebApp Scanning                 ${W}19.${W} Quit${NC}"
     echo -e " ${ORNG}10.${W} Operational Security & Threat Analysis${NC}"
     echo -e " ${W}"
-    echo -n " ==================================#?: "
+    echo -e "\n ==================================#?: "
     read MMOP
     if [[ ${MMOP} == "1" ]]; then
 	    info_mods
@@ -1331,24 +1311,22 @@ modules(){
             sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
         fi
         exit 0
+    elif ${MMOP} == "cd "* ]]; then
+        ${MMOP}
     else
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         modules
     fi 
+    echo -e "${NC}"
 }
 
 ############
 #   Menu   #
 ############
 menu(){
-    if [[ ! -d "/opt/sifter/results" ]]; then
-        mkdir /opt/sifter/results
-    fi
     echo -e "${INV}${LGRY}"
     python3 extras/ban.py
     python3 extras/ban2.py
-    echo -e "${LGRY}==========  ${RED}Hit ${YLW}Ctrl + Z${RED} to pause ${UPURPLE}Sifter${RED} & '${ORNG}fg${RED}' to resume Recon${LGRY}  ===========${NC}"
-    echo -e "${LGRY}============================================================================${NC}"
     arg=$1
     ASTAT=$(cat /home/$USER/.config/.anon_status)   
     echo -e " ${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
@@ -1358,7 +1336,7 @@ menu(){
     echo -e " ${ORNG}3.${W} Module Menu               ${ORNG}7.${W} Quit${NC}"
     echo -e " ${ORNG}4.${W} Anonymization${NC}"
     echo -e " ${W}"
-    echo -n " =============================#?: "
+    echo -e "\n =============================#?: "
     read MNOP
     if [[ ${MNOP} == "1" ]]; then                   # Check Hosts
 	    TARLIST=$(cat files/host_list.txt | grep "eg. target.com")
@@ -1383,7 +1361,7 @@ menu(){
     elif [[ ${MNOP} == "6" ]]; then                 # Update
         update
     elif [[ ${MNOP} == "7" ]]; then                 # Quit
-        ASTAT=$(cat /home/$USER/.config/.anon_status)
+        ASTAT=$(cat $USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
             echo -e "\n    ================================================" 
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
@@ -1393,13 +1371,13 @@ menu(){
             echo "NO" > /home/$USER/.config/.anon_status
             echo -e "\n    ================================================"
         fi
-        sudo docker container ls > .ren_dcr
-        RENCHK=$(cat .ren_dcr | grep rengine)
+        RENCHK=$(sudo docker container ls | grep rengine)
         if [[ ${RENCHK} == "rengine_web_1" ]]; then
             sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
         fi
-        sudo rm .ren_dcr
         exit 0
+    elif [[ ${MNOP} == "cd "* ]]; then
+        ${MNOP}
     else
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected.\nPlease enter the corresponding number${NC}"
     fi
@@ -1422,25 +1400,26 @@ up_arg(){
     echo $9 >> temp.log
 
     for UFILES in `cat temp.log`
-        do
-    	        rm ${LPATH}${UFILES}
-        done
+       	        do
+    	            rm ${LPATH}${UFILES}
+                done
     rm /opt/sifter/temp.log
 }
 update(){
     sudo chown $USER:$USER -R /opt/sifter
     cd /opt/sifter
+    mv sifter sifter_g
     echo -e "${YLW}"
     figlet -f mini "Checking for updates"
     echo -e "${NC}"
    
-    echo -e "${YLW}##########################"                                                     ########################
+    echo -e "${YLW}##########################"                                                    	########################
     echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10 ${YLW}#${NC}"                                   ##    VERSION INFO    ##
     echo -e "${YLW}# ${ORNG} Incoming Revision: ${LP}2  ${YLW}#"                                        ##    UPDATE CHECK    ##
-    echo -e "${YLW}##########################${NC}"                                                ########################
+    echo -e "${YLW}##########################${NC}"                                               	########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
-        	sudo mv modules/exmods/fuzzydander.sh modules/exmods/fuzzyd.sh
+    	sudo mv modules/exmods/fuzzydander.sh modules/exmods/fuzzyd.sh
     fi
     git fetch
     VER=$(git pull)
@@ -1448,18 +1427,21 @@ update(){
         echo -e "${ORNG}"
         figlet -f mini "Up to date."
         echo -e "${NC}"
+	if [[ -f "sifter_g" ]]; then
+		mv sifter_g sifter
+	fi
     else
         sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
       	    sleep 3
 	    read UANS
 	    if [[ ${UANS} == "y" ]]; then
-            export LPATH
-            echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
-		    read FILES
-                    sleep 2
-		    up_arg ${FILES}
-		    git pull
+            	export LPATH
+            	echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
+		read FILES
+                sleep 2
+		up_arg ${FILES}
+		git pull
 	    fi
 	            
         ##########################
@@ -1467,6 +1449,9 @@ update(){
         ##########################
         echo -e "${URED}Would you like to check for new tools or tool updates?(y/n)${NC}"
         read -r FUP
+	if [[ -f "sifter_g" ]]; then
+		mv sifter_g sifter
+	fi
         if [[ ${FUP} == "y" ]]; then
             sudo chmod +x install.sh
             bash install.sh
@@ -1605,7 +1590,7 @@ while getopts "a:WndwirmeopcvRuhI" options
             echo -e "${RED}"
             figlet -f mini "Module Info"
             echo -e "${NC}"
-            bash /opt/sifter/info/info.sh &
+            bash /opt/sifter/info/info.sh 
             ;;
 
         m)
@@ -1616,11 +1601,16 @@ while getopts "a:WndwirmeopcvRuhI" options
             echo -e "${NC}"
             modules
             ;;
+
+        *)
+            echo -e "${RED}No Valid Option Parsed\nRedirecting to Main Menu${NC}"
+            menu
+            ;;
     esac
 done
 if [[ ${OPTIND} == 1 ]]; then				# if no option is passed
 	menu		  	                        # default command is run
 fi
-exit 0
+exit
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
