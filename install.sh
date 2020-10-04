@@ -1715,7 +1715,25 @@ t73(){
 	sudo pip3 install --upgrade ciphey
 }
 
-
+###################
+# 74 # XSS-Loader #
+###################
+t74(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for XSS-Loader ${NC}"
+	if [[ -d '/opt/XSS-LOADER' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "XSS-Loader is already installed"
+		echo -e "${NC}"
+		cd /opt/XSS-LOADER
+		sudo python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/capture0x/XSS-LOADER
+		cd XSS-LOADER
+		sudo python3 -m pip install -r requirements
+	fi
+}
 #######################################################################################################################################
 ############
 # M # MISC #
@@ -1829,6 +1847,7 @@ t70										# Threat Dragon
 t71										# WhiteWidow
 t72										# V3n0M-Scanner
 t73										# Ciphey
+t74										# XSS-Loader
 #########################################---------------
 tm										# Miscellaneous
 #########################################---------------

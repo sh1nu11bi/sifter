@@ -50,17 +50,8 @@
 
 # Additions:
 <p><em>
-	_<strong>Version:</strong> 10 _|_ <strong>Revision:</strong> 3_<br />
-- <a style="color: #729e1b" href="#">HFish</a> - A most effective HoneyPot System.<br />
-- <a style="color: #729e1b" href="#">EventCleaner</a> - EventLog Cleaner for Windows, with some other useful functionality.<br />
-- <a style="color: #729e1b" href="#">SubDover</a> - MultiThreaded Subdomain Takeover Vulnerability Scanner.<br />
-- <a style="color: #729e1b" href="#">Katana-DS (Dork Scanner)</a> - Google Hacking/Dorking with Tor support.<br />
-- <a style="color: #729e1b" href="#">Threat Dragon</a> - Threat Modelling framework.<br />
-- <a style="color: #729e1b" href="#">Ciphey</a> - Automated decryption/decoding/cracking tool using language processing<br /> &emsp;&emsp; & artificial intelligence.<br />
-<br />
-- <strong><em>Cross-Site Scripting & SQLinjection</em></strong><br />
-- <a style="color: #729e1b" href="#">WhiteWidow</a> - Automated SQLinjection Vulnerability Scanner.<br />
-- <a style="color: #729e1b" href="#">V3n0M-Scanner</a> - SQLi, XSS & LFI/RFI Vuln Scanner.<br />
+	__ Version: 10.2g _|_  Gemin1 __ 
+	- XSS-Loader - XSS Payloader generator
 </em><br />
  </p>
 
