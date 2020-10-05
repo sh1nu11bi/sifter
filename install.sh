@@ -1731,7 +1731,7 @@ t74(){
 		cd /opt
 		sudo git clone https://github.com/capture0x/XSS-LOADER
 		cd XSS-LOADER
-		sudo python3 -m pip install -r requirements
+		sudo python3 -m pip install -r requirements.txt 
 	fi
 }
 #######################################################################################################################################
