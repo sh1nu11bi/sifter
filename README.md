@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-10-red">
+	<img align="center" src="https://img.shields.io/badge/Version-10.2-red">
 	<img align="center" src="https://img.shields.io/badge/Revision-G-green">
 </p>
 
@@ -27,7 +27,8 @@
 # Release
 
 	@Codename: Gemin1
-	@Version : 10g
+	@Version : 10.2
+	@Revision: G
 
 <br>
 <em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10g.zip"><strong>here</strong></a></em>
@@ -50,7 +51,8 @@
 
 # Additions:
 <em>__ Version: 10.2g _|_  Gemin1 __ <br />
-- XSS-Loader - XSS Payloader generator
+- <strong>XSS-Loader</strong> - XSS Payloader generator<br />
+- <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number
 </em><br />
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -59,9 +61,6 @@
 
 - Omega's repo has been removed, therefore unavailable for new clones.
 <br/> If you already had omegas repo, you will still be able to use this module though.
-
-- DeadTrap's repo has been removed, therefore unavailable for new clones.
-<br /> If you already had DeadTraps repo, you will still be able to use this module though.
 
 - SayDog has been removed due to being a program meant mainly for termux.
 

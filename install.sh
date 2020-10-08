@@ -1507,23 +1507,23 @@ t65(){
 #################
 # 66 # DeadTrap #
 #################
-#t66(){
-#	echo -e "${W}===========================================================================================${NC}"
-#	echo -e "${YLW}Checking for DeadTrap ${NC}"
-#	if [[ -d '/opt/DeadTrap' ]]; then
-#		echo -e "${ORNG}"
-#		figlet -f mini "DeadTrap is already installed"
-#		echo -e "${NC}"
-#		cd /opt/DeadTrap
-#		sudo git fetch && sudo git pull &>/dev/null
-#	else
-#		cd /opt
-#		sudo git clone https://github.com/Chr0m0s0m3s/DeadTrap.git
-#		cd DeadTrap
-#		sudo pip3 install .
-#		mkdir -p $HOME/.config/deadtrap
-#	fi
-#}
+t66(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for DeadTrap ${NC}"
+	if [[ -d '/opt/DeadTrap' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "DeadTrap is already installed"
+		echo -e "${NC}"
+		cd /opt/DeadTrapv2
+		sudo python3 -m pip install -r requirements.txt &>/dev/null
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/Chr0m0s0m3s/DeadTrapv2.git
+		cd DeadTrapv2
+		sudo pip3 install -r requirements.txt
+	fi
+}
 
 ##############
 # 67 # HFish #
@@ -1839,7 +1839,7 @@ t62										# Pulsar
 t63										# reNgine
 t64										# Thoron
 t65										# F5 Big IP scanner
-#t66										# DeadTrap
+t66										# DeadTrap
 t67										# HFish
 t68										# SubDover
 t69										# Katana-DS
@@ -1872,7 +1872,7 @@ echo -e "${RED}=================================================================
 ######################################################################################################
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==             ########################
 ######################################################################################################
-echo -e "${YLW}#########################"                                             ########################
-echo -e "${YLW}# ${ORNG}Incoming Version :${LP} 10 ${YLW}#${NC}"                          ##    VERSION INFO    ##
-echo -e "${YLW}#          ${ORNG}Revision: ${LP}2 ${YLW}#"                                       ##    UPDATE CHECK    ##
-echo -e "${YLW}#########################${NC}"                                         ########################
+echo -e "${YLW}###########################"                                             ########################
+echo -e "${YLW}# ${ORNG}Incoming Version :${LP} 10.2 ${YLW}#${NC}"                          ##    VERSION INFO    ##
+echo -e "${YLW}#          ${ORNG}Revision: ${LP}G ${YLW}#"                                       ##    UPDATE CHECK    ##
+echo -e "${YLW}###########################${NC}"                                         ########################
