@@ -24,6 +24,15 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
+# Notice
+
+	If you are the developer of any of the tools within Sifter and don't think your tool is 
+	being utilized to its full potential please let me know and i will take another look 
+	or optionally you can make an edit to the execution script of your specific tool and 
+	submit a pull request and I will review it within 12hrs
+	
+---------------------------------------------------------------------------------------------------------------------
+
 # Release
 
 	@Codename: Gemin1
