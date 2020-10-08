@@ -455,9 +455,9 @@ post_ex(){
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
 	echo -e "\n ${ORNG}1.${W} EoP Exploit           ${ORNG}6.${W} CredHarvester ${NC}"
-	echo -e " ${ORNG}2.${W} Potatoes 'n PEAS 		 ${ORNG}7.${W} ACLight2 ${NC}"
-	echo -e " ${ORNG}3.${W} Omega           ${ORNG}8.${W} PowerHUB ${NC}"
-	echo -e " ${ORNG}4.${W} WinPwn 		 ${ORNG}9.${W} Back ${NC}"
+	echo -e " ${ORNG}2.${W} Potatoes 'n PEAS 	  ${ORNG}7.${W} ACLight2 ${NC}"
+	echo -e " ${ORNG}3.${W} Omega                 ${ORNG}8.${W} PowerHUB ${NC}"
+	echo -e " ${ORNG}4.${W} WinPwn 		  ${ORNG}9.${W} Back ${NC}"
 	echo -e " ${ORNG}5.${W} PowerSharp ${NC}"
     	echo -e " ${W}"
     echo -n " =============================#?: "
@@ -638,7 +638,7 @@ ex_mods(){
 	elif [[ ${EXTP} == "4" ]]; then
 		echo -e "${YLW}These tools are aimed at exploiting websites${NC}"
         sleep 3
-        web_tools
+        webex
 	elif [[ ${EXTP} == "5" ]]; then
 		echo -e "${YLW}These tools allow you to search to certain exploits or vulnerabilities${NC}"
         sleep 3
@@ -871,7 +871,7 @@ webex(){
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
     echo -e "\n ${ORNG}1.${W} NekoBot       ${ORNG}4.${W} VulnX ${NC}"
-    echo -e " ${ORNG}2.${W} DDoS        ${ORNG}5.${W} Back ${NC}"
+    echo -e " ${ORNG}2.${W} DDoS          ${ORNG}5.${W} Back ${NC}"
     echo -e " ${ORNG}3.${W} xShock${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
@@ -1391,8 +1391,8 @@ modules(){
     echo -e " ${ORNG}7.${W} Router Tools                    ${BIGreen}17.${W} Check For Missing Tools${NC}"
     echo -e " ${ORNG}8.${W} Exploitation Tools              ${UBLUE}18.${NC}${W} Main Menu${NC}"
     echo -e " ${ORNG}9.${W} WebApp Scanning                 ${W}19.${W} Quit${NC}"
-    echo -e " ${ORNG}10.${W} Operational Security & Threat Analysis${NC}"
-    echo -e " ${W}"
+    echo -e " ${ORNG}10.${W} Operational Security ${NC}"
+    echo -e "     ${W}& Threat Analysis"
     echo -n " =============================#?: "
     read MMOP
     if [[ ${MMOP} == "1" ]]; then
@@ -1561,6 +1561,22 @@ up_arg(){
                 done
     rm /opt/sifter/temp.log
 }
+gexUpd(){
+	if [[ -f "/usr/sbin/gSifter" ]]; then
+		echo -e "${LP}Would you like to update the ${YLW}G ${LP}extention?(y/n)${NC}"
+		read GUP
+		if [[ ${GUP} == "y" ]]; then
+			GCHK=$(curl https://raw.githubusercontent.com/s1l3nt78/gSifter/g-ex/.vs/yes.txt)
+			if [[ ${GCHK} == "404: Not Found" ]]; then
+				echo -e "${YLW}The ${RED}G ${YLW}extention is up-to-date${NC}"
+			else
+				wget https://raw.githubusercontent.com/s1l3nt78/gSifter/g-ex/gSifter
+				wget https://github.com/s1l3nt78/gSifter/raw/g-ex/gSifter_eDEX-UI.AppImage
+				sudo mv gSifter -t /usr/sbin
+				chmod +x gSifter_eDEX-UI.AppImage
+				echo -e "${YLW}Your ${RED}G ${YLW}extention has been updated${NC}"
+			fi
+}
 update(){
     sudo chown $USER:$USER -R /opt/sifter
     cd /opt/sifter
@@ -1582,6 +1598,7 @@ update(){
         echo -e "${ORNG}"
         figlet -f mini "Up to date."
         echo -e "${NC}"
+	gexUpd
     else
         sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
@@ -1605,6 +1622,7 @@ update(){
             sudo chmod +x install.sh
             bash install.sh
         fi
+	gexUpd
         sudo cp /opt/sifter/sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter
