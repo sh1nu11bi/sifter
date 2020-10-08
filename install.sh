@@ -1510,7 +1510,7 @@ t65(){
 t66(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for DeadTrap ${NC}"
-	if [[ -d '/opt/DeadTrap' ]]; then
+	if [[ -d '/opt/DeadTrapv2' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "DeadTrap is already installed"
 		echo -e "${NC}"
@@ -1756,15 +1756,6 @@ tm(){
 		sudo sed -i "s/${FDOUT}/${FDIN}/g" /opt/sifter/sifter												# Removes FuzzyDander option if script not found
 	fi
 
-	# DeadTrap
-	if [[ ! -d '/opt/DeadTrap' ]]; then																		# Check For DeadTrap Directory & If it doesn't exist
-		if [[ -f '/opt/sifter/modules/credmods/deadtrap.sh' ]]; then
-			sudo rm /opt/sifter/modules/credmods/deadtrap.sh															# Remove DeadTrap script from Module Directory
-		fi
-	fi
-	DTOUT='\"DeadTrap\" '
-	DTIN=''
-	sudo sed -i "s/${OMOUT}/${OMIN}/g" /opt/sifter/sifter
 }
 
 
