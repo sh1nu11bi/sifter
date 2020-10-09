@@ -1738,7 +1738,7 @@ t74(){
 ############
 # M # MISC #
 ############
-tm(){
+tMisc(){
 	# Omega
 	if [[ ! -d '/opt/omega' ]]; then																		# Check For Omega Directory & If it doesn't exist
 		if [[ -f '/opt/sifter/modules/postex/omega.sh' ]]; then
@@ -1840,7 +1840,7 @@ t72										# V3n0M-Scanner
 t73										# Ciphey
 t74										# XSS-Loader
 #########################################---------------
-tm										# Miscellaneous
+tMisc										# Miscellaneous
 #########################################---------------
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
