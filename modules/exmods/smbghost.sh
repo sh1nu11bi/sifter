@@ -43,6 +43,7 @@ exploit(){
     sleep 2
     sudo leafpad exploit.py
     sleep 1
+    sudo python exploit.py -ip ${TARGET}
 }
 
 PS3='Which module would you like to use?'
