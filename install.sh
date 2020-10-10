@@ -642,6 +642,7 @@ t26(){
 	fi
 
 	echo -e "${YLW}Checking for SMBGhost Exploit${NC}"
+<<<<<<< HEAD
 	if [[ -d '/opt/SMBGhost_Exploit' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "SMBGhost Exploit is already installed"
@@ -653,6 +654,19 @@ t26(){
 		sudo git clone https://github.com/Barriuso/SMBGhost_AutomateExploitation SMBGhost_Exploit
 		cd SMBGhost_Exploit
 		sudo python3 -m pip install -r requirements.txt
+=======
+	if [[ -d '/opt/CVE-2020-0796' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "SMBGhost Exploit is already installed"
+		echo -e "${NC}"
+		cd /opt/CVE-2020-0796
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt/
+		sudo git clone https://github.com/thelostworldFree/CVE-2020-0796.git
+		cd CVE-2020-0796
+		sudo python -m pip install -r requirements.txt
+>>>>>>> master
 	fi
 }
 
