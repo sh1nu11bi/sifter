@@ -642,15 +642,17 @@ t26(){
 	fi
 
 	echo -e "${YLW}Checking for SMBGhost Exploit${NC}"
-	if [[ -d '/opt/SMBGhost_RCE_PoC' ]]; then
+	if [[ -d '/opt/CVE-2020-0796' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "SMBGhost Exploit is already installed"
 		echo -e "${NC}"
-		cd /opt/SMBGhost_RCE_PoC
+		cd /opt/CVE-2020-0796
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /opt/
-		sudo git clone https://github.com/chompie1337/SMBGhost_RCE_PoC.git
+		sudo git clone https://github.com/thelostworldFree/CVE-2020-0796.git
+		cd CVE-2020-0796
+		sudo python -m pip install -r requirements.txt
 	fi
 }
 
