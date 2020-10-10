@@ -1642,7 +1642,7 @@ if [[ ${STLTH} == "--stealth" ]]; then
     menu
 fi
 
-while getopts "a:WndwirmeopcvRuhI" options
+while getopts "a:WndwirmeopcvRuhIt" options
     do            	                                        # Loop: Get the next option;
     case "${options}" in                                	# use silent error checking;
                                                             # option a takes 1 arguments.
@@ -1722,12 +1722,12 @@ while getopts "a:WndwirmeopcvRuhI" options
             routertools
             ;;
 	    
-	o)
-	    echo -e "${LP}"
-	    figlet -f mini "OpSec & Threat Analysis"
-	    echo -e "${NC}"
-	    opsec
-	    ;;
+	    o)
+	        echo -e "${LP}"
+	        figlet -f mini "OpSec & Threat Analysis"
+	        echo -e "${NC}"
+	        opsec
+	        ;;
 
         w)
             echo -e "${LP}"
@@ -1745,6 +1745,10 @@ while getopts "a:WndwirmeopcvRuhI" options
 
         u)
             update
+            ;;
+
+        t)
+            bash /opt/sifter/info/tool_check.sh
             ;;
 
         h)
