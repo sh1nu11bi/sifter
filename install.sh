@@ -642,15 +642,17 @@ t26(){
 	fi
 
 	echo -e "${YLW}Checking for SMBGhost Exploit${NC}"
-	if [[ -d '/opt/SMBGhost_RCE_PoC' ]]; then
+	if [[ -d '/opt/SMBGhost_Exploit' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "SMBGhost Exploit is already installed"
 		echo -e "${NC}"
-		cd /opt/SMBGhost_RCE_PoC
+		cd /opt/SMBGhost_Exploit
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /opt/
-		sudo git clone https://github.com/chompie1337/SMBGhost_RCE_PoC.git
+		sudo git clone https://github.com/Barriuso/SMBGhost_AutomateExploitation SMBGhost_Exploit
+		cd SMBGhost_Exploit
+		sudo python3 -m pip install -r requirements.txt
 	fi
 }
 
