@@ -56,7 +56,7 @@
 # Extentions
 
 <strong>Sifter Add-On Extentions</strong>
-- <a href="https://github.com/s1l3nt78/gSifter">g</a> - Sifter's <em>g</em> extention gives a GUI overlay
+- <a href="https://github.com/Sifter-Ext/g">g</a> - Sifter's <em>g</em> extention gives a GUI overlay
 <br />	'--> Built on top of <a href="https://github.com/GitSquared/edex-ui">eDEX-UI</a>
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -334,6 +334,9 @@ For ideas or collaboration requests on future projects., contact details can be 
 <br />
 - <a href="https://s1l3nt78.github.io/TigerShark">TigerShark</a> = Multi-Tooled Phishing Framework</em>
 <br />
+- <a href="https://github.com/Sifter-Ext">Sifter's Extention's</a> - The Extention Repository of Sifter
+<br />
+&emsp;&emsp;&emsp;&emsp;--- Currently only the <strong>g</strong> extention
 <br />
 <br />
 
