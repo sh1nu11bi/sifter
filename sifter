@@ -1569,13 +1569,13 @@ up_arg(){
 ##
 gexUpd(){
 	if [[ -f "/usr/sbin/gSifter" ]]; then
-		GCHK=$(curl https://raw.githubusercontent.com/s1l3nt78/gSifter/g-ex/.vs/yes.txt)
+		GCHK=$(curl https://raw.githubusercontent.com/Sifter-Ext/g/g-ex/.vs/yes.txt)
 		if [[ ${GCHK} == "404: Not Found" ]]; then
 			echo -e "${YLW}The ${RED}G ${YLW}extention is up-to-date${NC}"
 		else
             echo -e "${YLW}Updating the ${RED}G ${YLW}extention ${NC}"
-			wget https://raw.githubusercontent.com/s1l3nt78/gSifter/g-ex/gSifter
-			wget https://github.com/s1l3nt78/gSifter/raw/g-ex/gSifter_eDEX-UI.AppImage
+			wget https://raw.githubusercontent.com/Sifter-Ext/g/g-ex/gSifter
+			wget https://raw.githubusercontent.com/Sifter-Ext/g/g-ex/gSifter_eDEX-UI.AppImage
 			sudo mv gSifter -t /usr/sbin
 			chmod +x gSifter_eDEX-UI.AppImage
 			echo -e "${YLW}Your ${RED}G ${YLW}extention has been updated${NC}"
