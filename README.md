@@ -112,10 +112,11 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 # NOTE!! 
 
- If a scan does not work correctly at first, remove web-protocol from target.
+ If a scan does not work correctly at first, remove web-protocol from target. eg:
  <br>
- eg. <strong>target.com</strong> - instead of http://target.com
-
+ - use <strong>target.com</strong> 
+ - instead of <strong>https;//target.com</strong>
+ 
 ---------------------------------------------------------------------------------------------------------------------
 
 # Installation:
