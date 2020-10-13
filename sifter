@@ -1342,7 +1342,7 @@ proxysystem(){
     proxyO=$(zenity --list --title  "${ENA}" \
 		--text "What would you like to do?" --radiolist  \
 		--height=350 --width=500 \
-		--column "Pick" --column "Catagory" ${START} ${STOP} FALSE "Back"); 
+		--column "Pick" --column "Catagory" ${START} ${STOP} FALSE "Back") &>/dev/null; 
     echo ${proxyO}
     touch out.log
     if [[ ${proxyO} == "Start" ]]; then
@@ -1368,6 +1368,7 @@ proxysystem(){
          echo "NO" > /home/$USER/.config/.anon_status
 	 rm out.log
     else
+    	rm out.log
         menu
     fi
 }
