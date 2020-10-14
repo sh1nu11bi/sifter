@@ -138,9 +138,10 @@ phone_mods(){
 	echo -e " ${ORNG}2.${W} Sherlock	    ${ORNG}7.${W} CardPwn ${NC}"
 	echo -e " ${ORNG}3.${W} Maryam          ${ORNG}8.${W} DeadTrap ${NC}"
 	echo -e " ${ORNG}4.${W} xRay            ${ORNG}9.${W} iKy ${NC}"
-	echo -e " ${ORNG}5.${W} Email2Phone     ${ORNG}10.${W} Back ${NC}"
-    	echo -e " ${W}"
-    	echo -n " =============================#?: "
+	echo -e " ${ORNG}5.${W} Email2Phone     ${ORNG}10. ${W} GHunt ${NC}"
+    echo -e "${ORNG}11.${W} Back ${NC}"
+    echo -e " ${W}"
+    echo -n " =============================#?: "
 	read PMM
 	if [[ ${PMM} == "1" ]]; then
 		bash /opt/sifter/modules/credmods/seeker.sh
@@ -161,7 +162,9 @@ phone_mods(){
 	elif [[ ${PMM} == "9" ]]; then
 		bash /opt/sifter/modules/credmods/iky.sh
 	elif [[ ${PMM} == "10" ]]; then
-		modules
+        bash /opt/sifter/modules/credmods/ghunt.sh
+    elif [[ ${PMM} == "11" ]]; then
+        modules
 	elif [[ ${PMM} == "cd "* ]]; then
 		DCK=$(pwd)
         	echo ${PMM} > dtemp

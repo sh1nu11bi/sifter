@@ -7,7 +7,7 @@ credmenu(){
 	credinfo=$(zenity --list --title  "Module Information" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
-					--column "Pick" --column "Catagory" FALSE "Seeker" FALSE "xRay" FALSE "theHarvester" FALSE "Osmedeus" FALSE "ReconSpider" FALSE "Maryam" FALSE "CredNinja" FALSE "SpiderFoo7" FALSE "ODIN" TRUE "Back"); 
+					--column "Pick" --column "Catagory" FALSE "Seeker" FALSE "xRay" FALSE "theHarvester" FALSE "Osmedeus" FALSE "ReconSpider" FALSE "Maryam" FALSE "CredNinja" FALSE "SpiderFoo7" FALSE "ODIN" FALSE "GHunt" TRUE "Back"); 
 	echo ${credinfo}
 	if [[ ${credinfo} == "Seeker" ]]; then
 	   zenity --title "${credinfo}" \
@@ -36,6 +36,10 @@ credmenu(){
 	elif [[ ${credinfo} == "ODIN" ]]; then
 	   zenity --title "${credinfo}" \
 	   --text-info --filename="/opt/sifter/info/odin.info" &>/dev/null
+	elif [[ ${credinfo} == "GHnut" ]]; then
+		eom /opt/sifter/info/ghunt.png &
+	   zenity --title "${credinfo}" \
+	   --text-info --filename="/opt/sifter/info/ghunt.info" &>/dev/null
 	else
 		if [[ ${credinfo} == "Back" ]]; then
 			cd /opt/sifter

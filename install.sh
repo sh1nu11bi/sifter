@@ -1228,17 +1228,19 @@ t51(){
 #########################
 t52(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for Optiva-Framework${NC}"
-	if [[ -d '/opt/Optiva-Framework' ]]; then
+	echo -e "${YLW}Checking for GHunt${NC}"
+	if [[ -d '/opt/GHunt' ]]; then
 		echo -e "${ORNG}"
-		figlet -f mini "Optiva-Framework is already installed"
+		figlet -f mini "GHunt is already installed"
 		echo -e "${NC}"
+		cd /opt/GHunt
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo python3.8 -m pip install -r requirements.txt
 	else
 		cd /opt
-		sudo git clone https://github.com/joker25000/Optiva-Framework
-		cd Optiva-Framework
-		sudo chmod +x installer.sh
-		sudo ./installer.sh
+		sudo git clone https://github.com/mxrch/GHunt
+		cd GHunt
+		sudo python3.8 -m pip install -r requirements.txt
 	fi 
 }
 

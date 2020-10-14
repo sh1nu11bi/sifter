@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-10.2-red">
+	<img align="center" src="https://img.shields.io/badge/Version-10.3-red">
 	<img align="center" src="https://img.shields.io/badge/Revision-G-green">
 </p>
 
@@ -62,9 +62,10 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 # Additions:
-<em>__ Version: 10.2g _|_  Gemin1 __ <br />
+<em>__ Version: 10.3g _|_  Gemin1 __ <br />
 - <strong>XSS-Loader</strong> - XSS Payloader generator<br />
-- <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number
+- <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number<br />
+- <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
 </em><br />
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -169,6 +170,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/chrismaddalena/ODIN">ODIN</a><br />
 - <a href="https://github.com/itsmehacker/CardPwn">CardPwn</a><br />
 - <a href="https://github.com/kennbroorg/iKy">iKy</a><br />
+- <a href="https://github.com/mxrch/GHunt">GHunt</a><br />
 </details>
 
 <details>
