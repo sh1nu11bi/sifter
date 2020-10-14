@@ -176,7 +176,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <strong>#Domain Recon Gathering</strong></summary>
 - <a href="https://github.com/elceef/dnstwist">DnsTwist</a><br />
 - <a href="https://github.com/depthsecurity/armory">Armory</a><br />
-- <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>
+- <a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a><br />
 - <a href="https://github.com/FooBallZ/pulsar">Pulsar</a><br />
 - <a href="https://github.com/projectdiscovery/subfinder">SubFinder</a><br />
 - <a href="https://github.com/Technowlogy-Pushpender/subdover">SubDover</a><br />
@@ -237,11 +237,11 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	   	 (Obtained through issue request.)<br />
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
-
+<br />
 + <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
 &emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
 &emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
-
+<br />
 + <a href="https://github.com/entynetproject/thoron">Thoron</a><br />
 + <a href="https://metasploit.com">Metasploit</a><br />
 </details>
@@ -341,10 +341,10 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <details>
 <summary>
 <strong>#Cross-Site Scripting & SQL Injection</strong></summary>
-- SQLinjection<br />
+- <em>SQLinjection</em><br />
 &emsp;&emsp;--- <a href="https://github.com/WhitewidowScanner/whitewidow">WhiteWidow</a><br />
 &emsp;&emsp;--- <a href="https://github.com/v3n0m-Scanner/V3n0M-Scanner">V3n0M-Scanner</a><br />
-- Cross-Site Scripting<br />
+- <em>Cross-Site Scripting</em><br />
 &emsp;&emsp;--- <a href="https://github.com/s0md3v/XSStrike">XSStrike</a><br />
 &emsp;&emsp;--- <a href="https://github.com/dwisiswant0/findom-xss">finDOM-XSS</a><br />
 &emsp;&emsp;--- <a href="https://github.com/PR0PH3CY33/XSS-Freak">XSS-Freak</a>
