@@ -267,7 +267,7 @@ modmenu(){
 	modinfo=$(zenity --list --title  "Module Information" \
 		--text "Choose a Catagory" --radiolist  \
 		--height=600 --width=800 \
-		--column "Pick" --column "Catagory" FALSE "Information Gathering Tools" FALSE "Domain Reconnaissance" FALSE "WebScanning & Enumeration" FALSE "Vulnerability Scanners" FALSE "HoneyPot Detection Systems" FALSE "Exploitation Tools" FALSE "	Post-Exploitation" FALSE "WebApplication Scanners" FALSE "Operational Security & Threat Analysis" TRUE "Module Menu" FALSE "Quit");
+		--column "Pick" --column "Catagory" FALSE "Information Gathering Tools" FALSE "Domain Reconnaissance" FALSE "WebScanning & Enumeration" FALSE "Vulnerability Scanners" FALSE "HoneyPot Detection Systems" FALSE "Exploitation Tools" FALSE "Post-Exploitation" FALSE "WebApplication Scanners" FALSE "Operational Security & Threat Analysis" TRUE "Module Menu" FALSE "Quit");
 	echo ${modinfo}
 	if [[ ${modinfo} == "Information Gathering Tools" ]]; then
 		credmenu
@@ -275,7 +275,7 @@ modmenu(){
 		dommenu
 	elif [[ ${modinfo} == "WebScanning & Enumeration" ]]; then
 		web_netmenu
-	elif [[ ${modinfo} == "	Vulnerability Scanners" ]]; then
+	elif [[ ${modinfo} == "Vulnerability Scanners" ]]; then
 		vulnmenu
 	elif [[ ${modinfo} == "HoneyPot Detection Systems" ]]; then
 		honeymenu
@@ -285,11 +285,11 @@ modmenu(){
 		webappmenu
 	elif [[ ${modinfo} == "WebApplication Scanners" ]]; then
 		postmenu
-	elif [[ ${modinfo} == "	Operational Security & Threat Analysis" ]]; then
+	elif [[ ${modinfo} == "Operational Security & Threat Analysis" ]]; then
 		opsecmenu		   
-	elif [[ ${modinfo} == "	Module Menu" ]]; then
+	elif [[ ${modinfo} == "Module Menu" ]]; then
 		cd /opt/sifter
-		exit
+		sifter -m
 	else
 		if [[ ${modinfo} == "Quit" ]]; then
 			(for i in $(seq 0 10 100); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close

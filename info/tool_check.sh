@@ -15,6 +15,32 @@ BIGreen='\033[1;92m'
 BIYellow='\033[1;93m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
+LOLpause(){
+	D='1'
+	sudo touch .numbers
+	sudo chown $USER:$USER .numbers
+	for i in `seq -s \  5`;
+	do
+		echo ${D}... > .numbers
+		lolcat .numbers
+		sleep 1
+		D=$(( $D + 1 ))
+	done
+	rm .numbers
+}
+LOLpause2(){
+	D='5'
+	sudo touch .numbers
+	sudo chown $USER:$USER .numbers
+	for i in `seq -s \  5`;
+	do
+		echo ${D}... > .numbers
+		lolcat .numbers
+		sleep 1
+		D=$(( $D + 1 ))
+	done
+	rm .numbers
+}
 
 if [[ ! -d '/opt/SniffingBear' ]]; then
 	t1=${RED}'*'
@@ -273,7 +299,7 @@ if [[ ! -d '/opt/intrigue-core' ]]; then
 else
 	t51=${BIGreen}'!'
 fi
-if [[ ! -d '/opt/Optiva-Framework' ]]; then
+if [[ ! -d '/opt/GHunt' ]]; then
 	t52=${RED}'*'
 else
 	t52=${BIGreen}'!'
@@ -384,12 +410,19 @@ if [[ ${CPY} == "" ]]; then
 else
 	t73=${BIGreen}'!'
 fi
+if [[ ! -d "/opt/XSS-Loader" ]]; then
+	t74=${RED}'*'
+else
+	t74=${BIGreen}'!'
+fi
 
 
 
 
-
-
+echo -e "\n${LP}Checking for Missing tools${NC}"
+LOLpause
+echo -e "${RED}Installed tools are indicated by ${BIGreen}!${NC}\nMissing tools are indicated by ${RED}*${NC}"
+LOLpause2
 echo -e "${ORNG}[ ${t1} ${ORNG}] ${YLW}SniffingBear			${ORNG}[ ${t2} ${ORNG}] ${YLW}Maryam ${NC}"
 echo -e "${ORNG}[ ${t3} ${ORNG}] ${YLW}HoneyCaught			${ORNG}[ ${t4} ${ORNG}] ${YLW}BlackWidow ${NC}"
 echo -e "${ORNG}[ ${t5} ${ORNG}] ${YLW}BFAC				${ORNG}[ ${t6} ${ORNG}] ${YLW}RapidScan ${NC}"
@@ -426,6 +459,7 @@ echo -e "${ORNG}[ ${t66} ${ORNG}] ${YLW}DeadTrap				${ORNG}[ ${t67} ${ORNG}] ${Y
 echo -e "${ORNG}[ ${t68} ${ORNG}] ${YLW}SubDover				${ORNG}[ ${t69} ${ORNG}] ${YLW}Katana-DS ${NC}"
 echo -e "${ORNG}[ ${t70} ${ORNG}] ${YLW}Threat Dragon			${ORNG}[ ${t71} ${ORNG}] ${YLW}WhiteWidow ${NC}"
 echo -e "${ORNG}[ ${t72} ${ORNG}] ${YLW}V3n0M-Scanner			${ORNG}[ ${t73} ${ORNG}] ${YLW}Ciphey ${NC}"
+echo -e "${ORNG}[ ${t52} ${ORNG}] ${YLW}GHunt				${ORNG}[ ${t74} ${ORNG}] ${YLW}XSS-Loader${NC}"
 
 echo -e "${LP}Would you like to run the install script? (y/n)${NC}"
 read ISS

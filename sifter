@@ -1342,7 +1342,7 @@ modules(){
     elif [[ ${MMOP} == "13" ]]; then
 	    results
     elif [[ ${MMOP} == "14" ]]; then
-	    bash /opt/sifter/info/info.sh
+	    xterm -e bash /opt/sifter/info/info.sh &
     elif [[ ${MMOP} == "15" ]]; then
 	    proxysystem
     elif [[ ${MMOP} == "16" ]]; then
@@ -1403,8 +1403,8 @@ menu(){
     echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Check Hosts               ${ORNG}5.${W} View Results${NC}"
     echo -e " ${ORNG}2.${W} Edit Host List            ${ORNG}6.${W} Update${NC}"
-    echo -e " ${ORNG}3.${W} Module Menu               ${ORNG}7.${W} Quit${NC}"
-    echo -e " ${ORNG}4.${W} Anonymization${NC}"
+    echo -e " ${ORNG}3.${W} Module Menu               ${ORNG}7.${W} Tool Info${NC}"
+    echo -e " ${ORNG}4.${W} Anonymization${NC}          ${ORNG}8. ${W}Quit${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
     read -r MNOP
@@ -1430,7 +1430,9 @@ menu(){
         results
     elif [[ ${MNOP} == "6" ]]; then                 # Update
         update
-    elif [[ ${MNOP} == "7" ]]; then                 # Quit
+    elif [[ ${MNOP} == "7" ]]; then
+        xterm -e bash /opt/sifter/info/info.sh &
+    elif [[ ${MNOP} == "8" ]]; then                 # Quit
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
             echo -e "\n ================================================" 
