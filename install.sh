@@ -1844,7 +1844,7 @@ t48										# theHarvester
 t49										# Spiderfoot
 t50										# Email2Phone
 t51										# Intrigue-Core
-#t52										# Optiva-Framework (suspended::Runtime Error)
+t52										# GHunt
 t53										# finDOM-XSS
 t54										# ODIN
 t55										# OSINT-Framework
@@ -1893,5 +1893,5 @@ echo -e "${RED}=================================================================
 ######################################################################################################
 echo -e "${YLW}###########################"                                             ########################
 echo -e "${YLW}# ${ORNG}Incoming Version :${LP} 10.2 ${YLW}#${NC}"                          ##    VERSION INFO    ##
-echo -e "${YLW}#          ${ORNG}Revision: ${LP}G ${YLW}#"                                       ##    UPDATE CHECK    ##
+echo -e "${YLW}#          ${ORNG}Revision: ${LP}G    ${YLW}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}###########################${NC}"                                         ########################

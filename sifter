@@ -1166,98 +1166,13 @@ check_hosts(){
 
     zenity --width=220 --height=350  \
 	     --title "Live Targets" \
-	     --text-info --filename="/opt/sifter/files/pingtest_raw.pass"
+	     --text-info --filename="/opt/sifter/files/pingtest_raw.pass" &
 
     zenity --width=220 --height=350  \
 	     --title "Dead Targets" \
-	     --text-info --filename="/opt/sifter/files/pingtest_raw.fail"
+	     --text-info --filename="/opt/sifter/files/pingtest_raw.fail" &
 
 }
-##############
-# Host Check #
-##############
-#check_hosts(){
-#    TARLIST=$(cat /opt/sifter/files/host_list.txt | grep "eg. target.com")
-#    if [[ ${TARLIST} == "eg. target.com" ]]; then
-#        rm /opt/sifter/files/host_list.txt
-#        echo -e "${RED}Please add an appropriate target first${NC}"
-#        nano /opt/sifter/files/host_list.txt
-#    else
-#        sleep 1
-#    fi
-#    echo -e "${ORNG}Host Check${NC}"
-#    	echo -e "${ORNG}***********${NC}"
-#        if [[ -f 'files/pingtest_raw.pass' ]]; then
-#    	    rm files/pingtest_raw.pass
-#        fi
-#        if [[ -f 'files/pingtest.pass' ]]; then
-#            rm files/pingtest.pass
-#        fi
-#        if [[ -f 'files/pingtest_pass.txt' ]]; then
-#            rm files/pingtest_pass.txt
-#        fi
-
-#    	for name in `cat files/host_list.txt`
-#
-#    	        do
-#    	            ping -c 1 $name
-#    	                if [[ $? == 0 ]]; then
-#    	                    echo -e "${LP}======================================================"
-#    	                    echo -e "${LP} ${name} Alive ${NC}" && echo ${name} >> files/pingtest_raw.pass
-#    	                    echo -e "${LP}======================================================${NC}"
-#    	                else
-#    	                    echo -e "${RED}====================================================="
-#    	                    echo -e "${RED} ${name} Dead ${NC}" && echo ${name} >> files/pingtest_raw.fail
-#    	                    echo -e "${RED}=====================================================${NC}"
-#    	                fi
-#    	        done
-
-#	                sleep 5
-
-#            echo "======================================================================================================================================================================================================================="
-
-#        	    echo -e "${LP}Pingtest_Pass${NC}"
-#            	echo -e "${LP}*************${NC}"
-#		        cat files/pingtest_raw.pass | sort | uniq > files/pingtest.pass
-#        	    echo -e "${YLW}"
-#		        cat files/pingtest.pass
-#		        echo -e "${NC}"
-#		        sed -e 's/^/http:\/\//' files/pingtest.pass > files/pingtest_pass.txt
-
-#       	    echo "======================================================================================================================================================================================================================="
-
-#	            echo -e "${RED}Pingtest_Fail${NC}"
-#	            echo -e "${RED}*************${NC}"
-#	            cat files/pingtest_raw.fail | sort | uniq > files/pingtest.fail
-#	            echo -e "${YLW}"
-#		        cat files/pingtest.fail
-#		        echo -e "${NC}"
-#	            sleep 5
-#        	    menu
-#}
-
-########################################
-# List Argument Options Settings Below #
-#         IP addition argument         #
-########################################
-#ip_add(){
-#    echo -e "${W}Please enter your target:${NC}"
-#    read IP_ANS
-#    echo -e "${ORNG}Adding ${RED}${IP_ANS}${ORNG} to list${NC}"
-#    sleep 1
-#    echo "$IP_ANS" >> files/host_list.txt
-#    ip_q
-#}
-#ip_q(){
-#    echo -e "${W}Would you like to add another?y/n${NC}"
-#    read ANS
-#    sleep 1
-#    if [[ $ANS == 'y' ]]; then
-#        ip_add
-#    else
-#        menu
-#    fi
-#}
 
 #################
 #  GUI Results  #
