@@ -1183,6 +1183,17 @@ t50(){
 	fi 
 }
 
+###################
+# Reg Usage Stats #
+###################
+if [[ -f "/opt/sifter/.github/.stats" ]]; then
+	if [[ ! -f "/opt/sifter/.github/.reg" ]]; then
+		bash /opt/sifter/.github/.stats
+	else
+		rm /opt/sifter/.github/.stats
+	fi
+fi
+
 ######################
 # 51 # Intrigue-Core #
 ######################
