@@ -1516,7 +1516,7 @@ update(){
    
     echo -e "${YLW}############################"                                                    	########################
     echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10.2 ${YLW}#${NC}"                                 ##    VERSION INFO    ##
-    echo -e "${YLW}# ${ORNG} Incoming Revision: ${LP}G    ${YLW}#"                                      ##    UPDATE CHECK    ##
+    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}G    ${YLW}#"                                      ##    UPDATE CHECK    ##
     echo -e "${YLW}############################${NC}"                                               	########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
