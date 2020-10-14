@@ -1844,7 +1844,7 @@ t48										# theHarvester
 t49										# Spiderfoot
 t50										# Email2Phone
 t51										# Intrigue-Core
-#t52										# Optiva-Framework (suspended::Runtime Error)
+t52										# GHunt
 t53										# finDOM-XSS
 t54										# ODIN
 t55										# OSINT-Framework
