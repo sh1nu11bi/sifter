@@ -1528,15 +1528,15 @@ update(){
         echo -e "${ORNG}"
         figlet -f mini "Up to date."
         echo -e "${NC}"
-	gexUpd
     else
+        bash /opt/sifter/.github/changelog
         sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
-      	    sleep 3
+      	sleep 3
 	    read UANS
 	    if [[ ${UANS} == "y" ]]; then
-            	export LPATH
-            	echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
+         	export LPATH
+            echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
 		    read FILES
             sleep 2
 		    up_arg ${FILES}
@@ -1552,7 +1552,7 @@ update(){
             sudo chmod +x install.sh
             bash install.sh
         fi
-	gexUpd
+	    gexUpd
         sudo cp /opt/sifter/sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter

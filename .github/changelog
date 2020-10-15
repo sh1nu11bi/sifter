@@ -1,0 +1,18 @@
+#!/bin/bash
+ORNG='\033[0;33m'
+NC='\033[0m'
+W='\033[1;37m'
+LP='\033[1;35m'
+YLW='\033[1;33m'
+LBBLUE='\e[104m'
+RED='\033[0;31m'
+
+echo -e " ${W}======================================================${NC}\n"
+echo -e " ${LBBLUE}Changelog${NC}\n ${YLW}***********${NC}\n"
+echo -e "${ORNG} Additions:\n${NC}"
+echo -e " ${LP}- ${RED}XSS-Loader ${YLW}- XSS Payloader generator"
+echo -e " ${LP}- ${RED}DeadTrapv2 ${YLW}- An OSINT tool to track down footprints of a phone number"
+echo -e " ${LP}- ${RED}GHunt ${YLW}- GHunt is an OSINT tool to extract information from any Google Account using an email."
+echo -e "\n ${W}======================================================${NC}"
+
+##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
