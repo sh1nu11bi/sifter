@@ -1296,7 +1296,7 @@ proxysystem(){
 ###############
 modules(){
     echo -e "${URED}"
-    figlet -f mini "Modules"
+    python3 /opt/sifter/extras/.mod.py
     echo -e "${NC}"
     ASTAT=$(cat /home/$USER/.config/.anon_status)
     echo -e " ${W}=============================================================${NC}"
