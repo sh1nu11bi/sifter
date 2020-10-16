@@ -48,33 +48,33 @@ FIRSTTIME=1
 ##############################
 # Help Menu #
 #############
-usage() {                                    	  # Function: Print a help message.
+usage() {                                    	  
 	echo -e  "${YLW}Sifter Help Menu${NC}"
 	echo "*****************"
 	echo "+"
 	echo "+"
-	echo -e "${RED}# ${ORNG}sifter${NC}    runs the programs bringing up the menu in a cli environment"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-c${NC} will check the exsiting hosts in the hostlist"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-a${NC} 'target' must be added with '' then is automatically appended to host file"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-e${NC} Opens the Exploitation Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-i${NC} Opens the Info-based Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-d${NC} Opens the Domain Focused Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-n${NC} Opens the Network Mapping Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-w${NC} Opens the Website Focused Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-o${NC} Opens the OpSec & Threat Analysis Module Menu"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-r${NC} Opens the Router Focused Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-W${NC} Opens the Web-App Focused Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-v${NC} Opens the Vulnerability Scanning Module Menu"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-m${NC} Opens the Module Menu directly"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-p${NC} Opens the password tools for quick passlist generation or hash decryption"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-x${NC} Opens the Cross-Site Scripting & SQLinjection Module Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-R${NC} Opens the results folder for viewing of files or photos"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-u${NC} Checks for any updates on Github"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-qu${NC} Checks silently for updates and saves a log file under ${BIGreen}/opt/sifter/logs${NC}"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-quv${NC} Checks for updates in a seperate terminal with verbose output and saves a log file."
-    echo -e "${RED}# ${ORNG}sifter ${LP}--stealth${NC} Starts sifter in ${LP}Anonymous${NC} mode"
-    echo -e "${RED}# ${ORNG}sifter ${YLW}-I${NC} Opens the Module Information Menu"
-	echo -e "${RED}# ${ORNG}sifter ${YLW}-h${NC} This Help Menu" 1>&2
+	echo -e "${RED}# ${UBLUE}sifter${NC}    runs the programs bringing up the menu in a cli environment"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-c${NC} will check the exsiting hosts in the hostlist"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-a${NC} 'target' must be added with '' then is automatically appended to host file"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-e${NC} Opens the Exploitation Module Menu"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-i${NC} Opens the Info-based Module Menu"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-d${NC} Opens the Domain Focused Module Menu"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-n${NC} Opens the Network Mapping Module Menu"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-w${NC} Opens the Website Focused Module Menu"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-o${NC} Opens the OpSec & Threat Analysis Module Menu"
+    echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-r${NC} Opens the Router Focused Module Menu"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-W${NC} Opens the Web-App Focused Module Menu"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-v${NC} Opens the Vulnerability Scanning Module Menu"
+    echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-m${NC} Opens the Module Menu directly"
+    echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-p${NC} Opens the password tools for quick passlist generation or hash decryption"
+    echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-x${NC} Opens the Cross-Site Scripting & SQLinjection Module Menu"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-R${NC} Opens the results folder for viewing of files or photos"
+    echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-u${NC} Checks for any updates on Github"
+    echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-qu${NC} Checks silently for updates and saves a log file under ${BIGreen}/opt/sifter/logs${NC}"
+    echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-quv${NC} Checks for updates in a seperate terminal with verbose output and saves a log file."
+    echo -e "${RED}# ${UBLUE}sifter${NC} ${LP}--stealth${NC} Starts sifter in ${LP}Anonymous${NC} mode"
+    echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-I${NC} Opens the Module Information Menu"
+	echo -e "${RED}# ${UBLUE}sifter${NC} ${YLW}-h${NC} This Help Menu" 1>&2
 }
 #######################
 # Information Modules #
@@ -1515,7 +1515,7 @@ update(){
     echo -e "${NC}"
    
     echo -e "${YLW}############################"                                                    	########################
-    echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10.2 ${YLW}#${NC}"                                 ##    VERSION INFO    ##
+    echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10.3 ${YLW}#${NC}"                                 ##    VERSION INFO    ##
     echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}G    ${YLW}#"                                      ##    UPDATE CHECK    ##
     echo -e "${YLW}############################${NC}"                                               	########################
 
