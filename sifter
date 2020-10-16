@@ -1523,13 +1523,16 @@ update(){
     	    sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
     fi
     git fetch
+    if [[ -f '/opt/sifter/.github/changelog' ]]; then
+        bash /opt/sifter/.github/changelog
+        rm /opt/sifter/.github/changelog
+    fi
     VER=$(git pull)
     if [[ ${VER} == "Already up to date." ]]; then
         echo -e "${ORNG}"
         figlet -f mini "Up to date."
         echo -e "${NC}"
     else
-        bash /opt/sifter/.github/changelog
         sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
       	sleep 3
