@@ -79,6 +79,13 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
+<h2>Menu:</h2>
+<p>
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/anon.png">
+</p>
+
+---------------------------------------------------------------------------------------------------------------------
+
 # Overview
 
 Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tools within different module sets in order to quickly perform recon tasks, check network firewalling, enumerate remote and local hosts, and scan for the 'blue' vulnerabilities within microsft and if unpatched, exploit them.  It uses tools like blackwidow and konan for webdir enumeration and attack surface mapping rapidly using ASM.
@@ -134,15 +141,6 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	[!] To install the g extention, copy and paste the following into a terminal:
 	*
 	$ git clone --branch g-ex https://github.com/Sifter-Ex/g && cd g && bash install-ex.sh && gSifter
-
----------------------------------------------------------------------------------------------------------------------
-
-<h2>Menu:</h2>
-<p>
-<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/anon.png">
-	<br />
-<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/menu.png">
-</p>
 
 ----------------------------------------------------------------------------------------------------------------------
 
