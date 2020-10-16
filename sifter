@@ -1295,7 +1295,7 @@ proxysystem(){
 # Module Menu #
 ###############
 modules(){
-    echo -e "${URED}"
+    echo -e "${RED}"
     python3 /opt/sifter/extras/.mod.py
     echo -e "${NC}"
     ASTAT=$(cat /home/$USER/.config/.anon_status)
@@ -1359,7 +1359,7 @@ modules(){
     elif [[ ${MMOP} == "18" ]]; then
 	    menu
     elif [[ ${MMOP} == "19" ]]; then
-	    (for i in $(seq 0 10 100); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
+	    (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
             echo -e "\n    ================================================" 
@@ -1434,7 +1434,7 @@ menu(){
     elif [[ ${MNOP} == "7" ]]; then
         xterm -e bash /opt/sifter/info/info.sh &
     elif [[ ${MNOP} == "8" ]]; then                 # Quit
-        (for i in $(seq 0 10 100); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
+        (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
             echo -e "\n ================================================" 
@@ -1529,7 +1529,7 @@ update(){
         bash /opt/sifter/.github/changelog
         rm /opt/sifter/.github/changelog
     fi
-    VER=$(git pull)
+    VER=$(git pull --ff-only)
     if [[ ${VER} == "Already up to date." ]]; then
         echo -e "${ORNG}"
         figlet -f mini "Up to date."
@@ -1545,7 +1545,7 @@ update(){
 		    read FILES
             sleep 2
 		    up_arg ${FILES}
-		    git pull
+		    git pull --ff-only
 	    fi
 	            
         ##########################
