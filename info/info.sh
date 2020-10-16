@@ -267,7 +267,7 @@ modmenu(){
 	modinfo=$(zenity --list --title  "Module Information" \
 		--text "Choose a Catagory" --radiolist  \
 		--height=600 --width=800 \
-		--column "Pick" --column "Catagory" FALSE "Information Gathering Tools" FALSE "Domain Reconnaissance" FALSE "WebScanning & Enumeration" FALSE "Vulnerability Scanners" FALSE "HoneyPot Detection Systems" FALSE "Exploitation Tools" FALSE "Post-Exploitation" FALSE "WebApplication Scanners" FALSE "Operational Security & Threat Analysis" TRUE "Module Menu" FALSE "Quit");
+		--column "Pick" --column "Catagory" FALSE "Information Gathering Tools" FALSE "Domain Reconnaissance" FALSE "WebScanning & Enumeration" FALSE "Vulnerability Scanners" FALSE "HoneyPot Detection Systems" FALSE "Exploitation Tools" FALSE "Post-Exploitation" FALSE "WebApplication Scanners" FALSE "Operational Security & Threat Analysis" TRUE "Exit Info");
 	echo ${modinfo}
 	if [[ ${modinfo} == "Information Gathering Tools" ]]; then
 		credmenu
@@ -287,14 +287,9 @@ modmenu(){
 		postmenu
 	elif [[ ${modinfo} == "Operational Security & Threat Analysis" ]]; then
 		opsecmenu		   
-	elif [[ ${modinfo} == "Module Menu" ]]; then
-		cd /opt/sifter
-		sifter -m
 	else
-		if [[ ${modinfo} == "Quit" ]]; then
-			(for i in $(seq 0 10 100); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
-			exit 0
-		fi		
+		if  [[ ${modinfo} == "Exit Info" ]]; then
+		exit 0
 	fi
 }
 

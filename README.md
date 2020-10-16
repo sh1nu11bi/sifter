@@ -39,13 +39,13 @@
 # Release
 
 	@Codename: Gemin1
-	@Version : 10.2
+	@Version : 10.3
 	@Revision: G
 
 <br>
-<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.2g.zip"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.3g.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10.2g/sifter_10.2_G.deb"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10.3g/sifter_10.3_G.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
