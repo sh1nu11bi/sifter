@@ -1300,7 +1300,7 @@ modules(){
     echo -e "${NC}"
     ASTAT=$(cat /home/$USER/.config/.anon_status)
     echo -e " ${W}=============================================================${NC}"
-    echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+    echo -e " ${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}=============================================================\n ${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Information Gatherers           ${ORNG}11.${W} Cross-Site Scripting & SQLinjection${NC}"
     echo -e " ${ORNG}2.${W} Domain Reconnaissance           ${ORNG}12.${W} Password Tools${NC}"
