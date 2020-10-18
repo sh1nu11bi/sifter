@@ -168,13 +168,11 @@ t4(){
 		echo -e "${NC}"
 		cd /root/BlackWidow
 		sudo git fetch && sudo git pull &>/dev/null
+		sudo bash install.sh
 	else
 		sudo git clone https://github.com/1N3/BlackWidow.git /root/BlackWidow
 		cd /root/BlackWidow
-		sudo chmod +x blackwidow injectx.py
-		sudo cp blackwidow /usr/sbin/blackwidow
-		sudo cp injectx.py /usr/sbin/injectx.py
-		sudo pip install -r requirements.txt
+		sudo bash install.sh
 	fi
 }
 
