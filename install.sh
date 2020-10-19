@@ -97,10 +97,13 @@ LOLpause
 #
 #echo -e "${URED}Fixing Python2 pip issues for install${NC}"
 # shellcheck disable=SC2164
-cd ~
-wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
-rm get-pip.py
+if [[ ! -f '/opt/sifter/.github/.py2pip' ]]; then
+	cd ~
+	wget https://bootstrap.pypa.io/get-pip.py
+	sudo python get-pip.py
+	rm get-pip.py
+	touch /opt/sifter/.github/.py2pip
+fi
 cd /opt
 echo -e "${RED}Checking for external dependencies${NC}"
 sudo service docker start
