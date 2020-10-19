@@ -1189,7 +1189,7 @@ if [[ ! -f '/opt/sifter/.github/.reg' ]]; then
 fi
 REGO='base64 -d <<< YwB1AHIAbAAgAC0AWAAgAFAATwBTAFQAIABoAHQAdABwAHMAOgAvAC8AcwBpAGYAdABlAHIALgBjAG8AbABkAHcAYQB0AGUAcgBjAG8AcgBwAC4AYwBvAC4AegBhAC8AaQBuAGQAZQB4AC4AcABoAHAAIAA+ACAALwBvAHAAdAAvAHMAaQBmAHQAZQByAC8ALgBnAGkAdABoAHUAYgAvAC4AcgBlAGcA | sh'
 REGI=''
-sed -i "s/${REGO}/${REGI}/g" /opt/sifter/insall.sh
+sed -i "s/${REGO}/${REGI}/g" /opt/sifter/install.sh
 
 ######################
 # 51 # Intrigue-Core #
