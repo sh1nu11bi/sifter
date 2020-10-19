@@ -34,7 +34,7 @@ if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
 fi
 
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker lolcat graphviz kdialog privoxy python-dev python3-venv libpython3-stdlib libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev libidn11-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker-compose python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 lolcat -y # sqlite3
+sudo apt-get install -y python wmdocker lolcat graphviz kdialog privoxy python-dev python3-venv libpython3-stdlib libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev libidn11-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker-compose tcl8.6-tdbc-sqlite3 sqlite3 libsqlite3-tcl libsqlite3-0 libsqlite3-dev libsqlite0-dev tcl-tclreadline python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 lolcat -y # sqlite3
 DCKR=$(sudo apt-get install docker-ce | grep "is not available")
 if [[ ${DCKR} == "Package docker-ce is not available, but is referred to by another package." ]]; then
 	sudo apt-get install docker docker.io
@@ -268,8 +268,8 @@ t8(){
 		sudo pip2 install -r requirements.txt
 		sudo apt-get install python3-pip
 		sudo apt --fix-broken install -y
-		sudo pip3 install -r requirements.txt
-		sudo pip3 install wget
+		sudo python3 -m pip install -r requirements.txt
+		sudo python3 -m pip install wget
 		sudo chmod +x Module --recursive
 		sudo chown $USER:$USER Module --recursive
 		sudo chmod +x wafninja joomscan yuki.sh install-perl-module.sh
@@ -406,7 +406,7 @@ t14(){
 		cd /opt
 		sudo git clone https://github.com/m8r0wn/ActiveReign.git
 		cd ActiveReign
-		sudo pip3 install -r requirements.txt
+		sudo python3 -m pip install -r requirements.txt
 		sudo python3 setup.py install
 		sleep 3
 		echo -e "${RED}[!] ${ORNG}Installing Impacket...${NC}"
@@ -414,7 +414,7 @@ t14(){
 		sudo git clone https://github.com/SecureAuthCorp/impacket
 		cd impacket
 		sudo python3 setup.py install
-		sudo pip3 install prompt-toolkit==3.0.2 impacket
+		sudo python3 -m pip install prompt-toolkit==3.0.2 impacket
 		ar3 db help
 	fi
 }
@@ -721,7 +721,7 @@ t29(){
 		cd /opt/
 		sudo git clone https://github.com/capture0x/XSHOCK.git
 		cd XSHOCK
-		sudo pip3 install -r requirements.txt
+		sudo python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -881,7 +881,7 @@ t36(){
 		cd /opt/
 		sudo git clone https://github.com/BullsEye0/dorks-eye.git
 		cd dorks-eye
-		sudo pip3 install -r requirements.txt
+		sudo python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1441,7 +1441,7 @@ t61(){
 	else
 		cd /opt
 		sudo git clone https://github.com/projectdiscovery/subfinder.git
-		cd subfinder/cmd/subfinder
+		cd subfinder/v2/cmd/subfinder
 		sudo go build .
 		sudo mv subfinder /usr/local/sbin/
 	fi
@@ -1554,7 +1554,7 @@ t66(){
 		cd /opt
 		sudo git clone https://github.com/Chr0m0s0m3s/DeadTrapv2.git
 		cd DeadTrapv2
-		sudo pip3 install -r requirements.txt
+		sudo python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1745,7 +1745,7 @@ t72(){
 t73(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Installing & updating Ciphey ${NC}"
-	sudo pip3 install --upgrade ciphey
+	sudo python3 -m pip install --upgrade ciphey
 }
 
 ###################
