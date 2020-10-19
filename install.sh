@@ -44,9 +44,14 @@ sudo apt --fix-broken install
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
-	echo -e "${ORNG}"
-	figlet -f mini "Sifter is already installed."
-	echo -e "${NC}"
+	echo -e "${ORNG}     _____ _____            _            __                __       "
+	echo -e "    / __(_) _/ /____ ____  (_)__   ___ _/ /______ ___ ____/ /_ __   "
+	echo -e "   _\ \/ / _/ __/ -_) __/ / (_-<  / _ \`/ / __/ -_) _ \`/ _  / // /   "
+	echo -e "  /___/_/_/ \__/\__/_/   /_/___/  \_,_/_/_/  \__/\_,_/\_,_/\_, /    "
+	echo -e "     _         __       ____       ____                   /___/     "
+	echo -e "    (_)__  ___/ /____ _/ / /__ ___/ / /                             "
+	echo -e "   / / _ \(_-< __/ _ \`/ / / -_) _  /_/                              "
+	echo -e "  /_/_//_/___|__/\_,_/_/_/\__/\_,_(_)                               ${NC}"
 	sudo chown $USER:$USER -R /opt/sifter
 	sudo cp sifter -t /usr/sbin
 	sudo chown $USER:$USER /usr/sbin/sifter
@@ -94,7 +99,7 @@ LOLpause
 # shellcheck disable=SC2164
 cd ~
 wget https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
+sudo python get-pip.py
 rm get-pip.py
 cd /opt
 echo -e "${RED}Checking for external dependencies${NC}"
