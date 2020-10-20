@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-10.3-red">
+	<img align="center" src="https://img.shields.io/badge/Version-10.4-red">
 	<img align="center" src="https://img.shields.io/badge/Revision-G-green">
 </p>
 
@@ -39,13 +39,13 @@
 # Release
 
 	@Codename: Gemin1
-	@Version : 10.3
+	@Version : 10.4
 	@Revision: G
 
 <br>
-<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.3g.zip"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.4g.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10.3g/sifter_10.3_G.deb"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10.4g/sifter_10.4_G.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -66,6 +66,8 @@
 - <strong>XSS-Loader</strong> - XSS Payloader generator<br />
 - <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number<br />
 - <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
+- <strong>TruffleSnout</strong> - Iterative AD discovery toolkit for offensive operators. Situational awareness and targeted low noise enumeration.<br /> 
+&emsp;&emsp;'--> Preference for OpSec.
 </em><br />
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -131,7 +133,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10.2g/sifter_10.2_G.deb && sudo dpkg -i sifter_10.2_G.deb && sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10.4g/sifter_10.4_G.deb && sudo dpkg -i sifter_10.4_G.deb && sifter
 	
 	
 	[!] For oneliner install (source), copy and paste the following into a terminal:
@@ -336,6 +338,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <strong>#Operational Security & Threat Analysis</strong></summary>
 - <a href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a><br />
 - <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
+- <a href="https://github.com/dsnezhkov/TruffleSnout">TruffleSNout</a><br />
 </details>
 
 <details>

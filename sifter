@@ -1149,7 +1149,7 @@ opsec(){
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
     echo -e "\n ${ORNG}1.${W} EventCleaner               ${ORNG}2.${W} Threat Dragon${NC}"
-    echo -e " ${ORNG}3.${W} Back${NC}"
+    echo -e " ${ORNG}3.${W} TruffleSnout           ${ORNG}4.${W} Back${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
     read OSTM
@@ -1158,7 +1158,9 @@ opsec(){
     elif [[ ${OSTM} == "2" ]]; then
 	    bash /opt/sifter/modules/opsec/tDragon.sh
     elif [[ ${OSTM} == "3" ]]; then
-	    modules
+	    bash /opt/sifter/modules/opsec/trufflesnout.sh
+    elif [[ ${OSTM} == "4" ]]; then
+        modules
     elif [[ ${OSTM} == "cd "* ]]; then
 	    DCK=$(pwd)
         echo ${OSTM} > dtemp

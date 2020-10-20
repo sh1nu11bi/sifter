@@ -246,11 +246,13 @@ opsecmenu(){
 	opsec=$(zenity --list --title  "Operational Security & Threat Analysis" \
 					--text "Choose an application" --radiolist  \
 					--height=600 --width=800 \
-					--column "Pick" --column "Catagory" FALSE "EventCleaner" TRUE "Back"); 
+					--column "Pick" --column "Catagory" FALSE "EventCleaner" FALSE "TruffleSNout" TRUE "Back"); 
 	echo ${opsec}
 	if [[ ${opsec} == "EventCleaner" ]]; then
 	   zenity --title "${opsec}" \
 	   --text-info --filename="/opt/sifter/info/eventcleaner.info" &>/dev/null
+	elif [[ ${opsec} == "TruffleSNout" ]]; then
+	   bash /opt/sifter/info/TSNout/tsnout.sh &>/dev/null
 	else
 		if [[ ${opsec} == "Back" ]]; then
 			cd /opt/sifter

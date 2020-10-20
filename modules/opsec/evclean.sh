@@ -12,7 +12,7 @@ echo -e "${RED}"
 figlet -f mini "EventCleaner"
 echo -e "${NC}"
 echo -e "${ORNG}EvClean.zip (${YLW}containing ${LP}EventCleaner.exe ${YLW} & ${LP}unlocker.dll${YLW}) has been copied to your Desktop\nUpload it to your target session, unzip and execute in CLI for use."
-cp /opt/sifter/modules/opsec/EvClean.zip -t /home/$USER/Desktop
+cp /opt/sifter/modules/opsec/ex/EvClean.zip -t /home/$USER/Desktop
 sleep 5
 echo -e "${YLW}Would you like to see info on EvClean for example usage?(y/n)${NC}"
 read EVINFO
