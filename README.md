@@ -68,6 +68,8 @@
 - <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
 - <strong>TruffleSnout</strong> - Iterative AD discovery toolkit for offensive operators. Situational awareness and targeted low noise enumeration.<br /> 
 &emsp;&emsp;'--> Preference for OpSec.
+	<br />
+- Typing <strong>info</strong> into any menu will bring up the Module Information Screen.
 </em><br />
 
 ---------------------------------------------------------------------------------------------------------------------
