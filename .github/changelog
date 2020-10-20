@@ -13,6 +13,8 @@ echo -e "${ORNG} Additions:\n${NC}"
 echo -e " ${LP}- ${RED}XSS-Loader ${YLW}- XSS Payloader generator"
 echo -e " ${LP}- ${RED}DeadTrapv2 ${YLW}- An OSINT tool to track down footprints of a phone number"
 echo -e " ${LP}- ${RED}GHunt ${YLW}- GHunt is an OSINT tool to extract information from any Google Account using an email."
+echo ""
+echo -e " ${LP}- ${RED}Inputting ${W}info ${YLW}into any menu screen brings up the Module Info Screen"
 echo -e "\n ${W}======================================================${NC}"
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
