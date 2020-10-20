@@ -67,7 +67,7 @@
 - <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number<br />
 - <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
 	<br />
-	- Typing <strong>info</strong> into any menu will bring up the Module Information Screen
+- Typing <strong>info</strong> into any menu will bring up the Module Information Screen.
 </em><br />
 
 ---------------------------------------------------------------------------------------------------------------------
