@@ -17,16 +17,11 @@ sleep 5
 echo -e "${YLW}Would you like to see info on EvClean for example usage?(y/n)${NC}"
 read EVINFO
 if [[ ${EVINFO} == "y" ]]; then
-	KD=$(kdialog -h)
-    if [[ ${KD} == "" ]]; then
-        COM='cat'
-    else
-        COM='kdialog --geometry 600x800 --textbox'
-    fi
-    ${COM} /opt/sifter/info/eventcleaner.info
+	zenity --title "EventCleaner" \
+	   --text-info --filename="/opt/sifter/info/eventcleaner.info" &>/dev/null
 fi
 echo -e "	============================================"
 
 
-##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
+##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
 
