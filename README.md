@@ -145,10 +145,9 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	*
 	$ git clone https://github.com/s1l3nt78/sifter.git && cd sifter && bash install.sh
 	
-	[!] To install the g extention, copy and paste the following into a terminal:
-	*
-	$ git clone --branch g-ex https://github.com/Sifter-Ex/g && cd g && bash install-ex.sh && gSifter
-
+	
+	[!] Sifter Plugins can be found at https://github.com/Sifter-Ex
+	
 ----------------------------------------------------------------------------------------------------------------------
 
 # Modules:
