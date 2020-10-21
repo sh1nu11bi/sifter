@@ -238,9 +238,9 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <summary>
 <strong>#Exploitation Frameworks</strong></summary>
 + <a href="#">DanderFuzz</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
-	   	 (Obtained through issue request.)<br />
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
+	&emsp;(Provided by the <a href="https://github.com/Sifter-Ex/f">F</a> plugin.)<br />
 <br />
 + <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
 &emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
