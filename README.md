@@ -65,7 +65,7 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 # Additions:
-<em>__ Version: 10.3g _|_  Gemin1 __ <br />
+<em>__ Version: 10.4F _|_  Gemin1 __ <br />
 - <strong>XSS-Loader</strong> - XSS Payloader generator<br />
 - <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number<br />
 - <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
