@@ -10,7 +10,7 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
 	<img align="center" src="https://img.shields.io/badge/Version-10.4-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-G-green">
+	<img align="center" src="https://img.shields.io/badge/Revision-F-green">
 </p>
 
 # *Sifter*
@@ -40,7 +40,7 @@
 
 	@Codename: Gemin1
 	@Version : 10.4
-	@Revision: G
+	@Revision: F
 
 <br>
 <em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.4g.zip"><strong>here</strong></a></em>
@@ -53,11 +53,14 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
-# Extentions
+# Sifter Plugins
 
-<strong>Sifter Add-On Extentions</strong>
-- <a href="https://github.com/Sifter-Ex/g">g</a> - Sifter's <em>g</em> extention gives a GUI overlay
-<br />	'--> Built on top of <a href="https://github.com/GitSquared/edex-ui">eDEX-UI</a>
+<details>
+	<summary><strong># Released Extentions</strong></summary>
+- <a href="https://github.com/Sifter-Ex/g">G</a> - Sifter's <em>g</em> extention gives a GUI overlay
+<br />	'--> Built on top of <a href="https://github.com/GitSquared/edex-ui">eDEX-UI</a><br />
+- <a href="https://github.com/Sifter-Ex/f">F</a> - Sifter's <em>f</em> extention provides the DanderFuzz Exploitational Plugin for Sifter
+</details>
 
 ---------------------------------------------------------------------------------------------------------------------
 
