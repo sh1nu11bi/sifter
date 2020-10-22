@@ -291,7 +291,8 @@ modmenu(){
 		opsecmenu		   
 	else
 		if  [[ ${modinfo} == "Exit Info" ]]; then
-		exit 0
+			exit 0
+		fi
 	fi
 }
 
