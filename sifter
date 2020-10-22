@@ -490,8 +490,8 @@ post_ex(){
 	echo -e "\n ${ORNG}1.${W} EoP Exploit           ${ORNG}6.${W} CredHarvester ${NC}"
 	echo -e " ${ORNG}2.${W} Potatoes 'n PEAS 	  ${ORNG}7.${W} ACLight2 ${NC}"
 	echo -e " ${ORNG}3.${W} Omega                 ${ORNG}8.${W} PowerHUB ${NC}"
-	echo -e " ${ORNG}4.${W} WinPwn 		  ${ORNG}9.${W} Back ${NC}"
-	echo -e " ${ORNG}5.${W} PowerSharp ${NC}"
+	echo -e " ${ORNG}4.${W} WinPwn 		  ${ORNG}9.${W} BetterSafetyKatz ${NC}"
+	echo -e " ${ORNG}5.${W} PowerSharp ${NC}        ${ORNG}10.${W} Back ${NC}"
     	echo -e " ${W}"
     echo -n " =============================#?: "
 	read PEX
@@ -525,7 +525,9 @@ post_ex(){
 		echo -e "${W}This tool is used in order to help bypass end-point protection${NC}"
         bash /opt/sifter/modules/postex/powerhub.sh
 	elif [[ ${PEX} == "9" ]]; then
-		ex_mods
+	    bash /opt/sifter/modules/postex/BSK/bsk.sh
+    elif [[ ${PEX} == "10" ]]; then
+        ex_mods
 	elif [[ ${PEX} == "cd "* ]]; then
 		DCK=$(pwd)
         	echo ${PEX} > dtemp

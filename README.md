@@ -65,24 +65,29 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 # Additions:
-<em>__ Version: 10.4F _|_  Gemin1 __ <br />
+<details>
+<summary>__ Version: 10.4F _|_  Gemin1 __ </summary>
 - <strong>XSS-Loader</strong> - XSS Payloader generator<br />
 - <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number<br />
 - <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
 - <strong>TruffleSnout</strong> - Interactive AD discovery toolkit for offensive operators, focused on Situational awareness.<br /> 
 &emsp;&emsp;'--> Preference for OpSec.
 	<br />
+- <strong>BetterSafetyKatz</strong> - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures using SharpSploit DInvoke to get it into memory
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.
 </em><br />
+</details>
 
 ---------------------------------------------------------------------------------------------------------------------
 
-# Removed
+<details>
+<summary># Removed</summary>
 
 - Omega's repo has been removed, therefore unavailable for new clones.
 <br/> If you already had omegas repo, you will still be able to use this module though.
 
 - SayDog has been removed due to being a program meant mainly for termux.
+</details>
 
 ---------------------------------------------------------------------------------------------------------------------
 

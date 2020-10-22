@@ -14,10 +14,12 @@ echo -e "${RED}Release & Debug Binaries have been provided\n${YLW}Would you like
 read BOPT
 if [[ ${BOPT} == "r" ]] || [[ ${BOPT} == "R" ]]; then
 	cp /opt/sifter/modules/postex/BSK/BSK.zip -t /home/$USER/Desktop
+	cp /opt/sifter/extras/unzip.exe -t /home/$USER/Desktop
 	ZIP='BSK.zip'
 	BIN='bsk32 & bsk64'
 else
 	cp /opt/sifter/modules/postex/BSK/BSKdebug.zip -t /home/$USER/Desktop
+	cp /opt/sifter/extras/unzip.exe -t /home/$USER/Desktop
 	ZIP='BSKdebug.zip'
 	BIN='bsk32debug & bsk64debug'
 fi
