@@ -10,20 +10,23 @@ RED='\033[0;31m'
 TSinfo(){
 	modinfo=$(zenity --list --title  "TruffleSNout" \
 		--text "Choose a Catagory" --radiolist  \
-		--height=600 --width=800 \
 		--column "Pick" --column "Catagory" FALSE "Forest" FALSE "Domain" FALSE "Directory" FALSE "Utilities" TRUE "Exit");
 	echo ${modinfo}
 	if [[ ${modinfo} == "Forest" ]]; then
 		zenity --title "Forest Usage" \
+	   		--height=600 --width=800 \
 			--text-info --filename="/opt/sifter/info/TSNout/forest.info" &>/dev/null
 	elif [[ ${modinfo} == "Domain" ]]; then
 		zenity --title "Domain Usage" \
+	   		--height=600 --width=800 \
 			--text-info --filename="/opt/sifter/info/TSNout/domain.info" &>/dev/null
 	elif [[ ${modinfo} == "Directory" ]]; then
 		zenity --title "Directory Usage" \
+	   		--height=600 --width=800 \
 			--text-info --filename="/opt/sifter/info/TSNout/directory.info" &>/dev/null
 	elif [[ ${modinfo} == "Utilities" ]]; then
 		zenity --title "Utilities Usage" \
+	   		--height=600 --width=800 \
 			--text-info --filename="/opt/sifter/info/TSNout/utils.info" &>/dev/null
 	else
 		exit 0
