@@ -87,7 +87,7 @@ webappmenu(){
 	   --text-info --filename="/opt/sifter/info/bfac.info" &>/dev/null
 	elif [[ ${webappinfo} == "OneFind" ]]; then
 	   zenity --title "${webappinfo}" \
-	   --text-info --filename="/opt/sifter/info/onefind.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/info/onedrive.info" &>/dev/null
 	elif [[ ${webappinfo} == "XSStrike" ]]; then
 	   zenity --title "${webappinfo}" \
 	   --text-info --filename="/opt/sifter/info/xsstrike.info" &>/dev/null
