@@ -69,7 +69,7 @@
 - <strong>XSS-Loader</strong> - XSS Payloader generator<br />
 - <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number<br />
 - <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
-- <strong>TruffleSnout</strong> - Iterative AD discovery toolkit for offensive operators. Situational awareness and targeted low noise enumeration.<br /> 
+- <strong>TruffleSnout</strong> - Interactive AD discovery toolkit for offensive operators, focused on Situational awareness.<br /> 
 &emsp;&emsp;'--> Preference for OpSec.
 	<br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.
