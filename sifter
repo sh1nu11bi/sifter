@@ -1607,18 +1607,17 @@ update(){
     echo -e "\__.[ )(/,(_.| \|[ )(_]  | (_)[    |__|[_)(_](_] | (/,_)  *  * "
     echo -e "                    ._|                |                       ${NC}"
     echo -e "${YLW}############################"                                                    	########################
-    echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10.3 ${YLW}#${NC}"                                 ##    VERSION INFO    ##
-    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}G    ${YLW}#"                                      ##    UPDATE CHECK    ##
+    echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10.5 ${YLW}#${NC}"                                 ##    VERSION INFO    ##
+    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}F    ${YLW}#"                                      ##    UPDATE CHECK    ##
     echo -e "${YLW}############################${NC}"                                               	########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
     	    sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
     fi
     git fetch
-    if [[ -f '/opt/sifter/.github/changelog' ]]; then
-        bash /opt/sifter/.github/changelog
-        rm /opt/sifter/.github/changelog
-    fi
+    wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/.github/changelog
+    bash changelog
+    rm changelog
     VER=$(git pull --ff-only)
     if [[ ${VER} == "Already up to date." ]]; then
         echo -e "${ORNG}"
