@@ -88,7 +88,7 @@ usage() {
 ##########################
 cred_mods(){
     echo -e "${RED}"
-    figlet -f mini "Enterprise Information Gatherers"
+    figlet -f mini "Organizational Info"
     echo -e "${LP}This module focuses on Enterprises and their online presence"
     echo -e "${YLW}eg. web-directories, enterprise email addresses, etc."
     echo -e "${ORNG}"
@@ -135,7 +135,7 @@ cred_mods(){
 ##########################
 phone_mods(){
   echo -e "${RED}"
-  figlet -f mini "Targeted Information Gatherers"
+  figlet -f mini "Individual's Info"
   echo -e "${LP}This module focuses on individual targets."
   echo -e "${YLW}eg. Social media information, phone number information, etc."
   ASTAT=$(cat /home/$USER/.config/.anon_status)
