@@ -620,19 +620,30 @@ exframes(){
         fi
 	elif [[ ${EXF} == "3" ]]; then
 		echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
-        echo -e "codename:${RED}FuzzyDander${NC}"
-        echo -e "${YLW}If you do not know what these tools are or how they work,\nyou should not be using them. As such no instructions will be added.${NC}"
-        if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then
-            echo -e "${URED}You do not have this module, please post an issue request on github or send me \n an email at s1l3n7h0s7@gmail.com and it will be sent to you with install instructions${NC}"
-        else
-            echo -e "${W}Would you like to continue?(y/n)${NC}"
-            read M_ANS
-            if [[ ${M_ANS} == 'y' ]]; then
-                bash /opt/sifter/modules/exmods/fuzzyd.sh
-            else
-                exframes
-            fi
-        fi
+        	echo -e "codename:${RED}DanderFuzz${NC}"
+        	echo -e "${YLW}If you do not know what these tools are or how they work,\nyou should not be using them. As such no instructions will be added.${NC}"
+        	if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then
+            		echo -e "${URED}You do not have this module.\n${ORNG}You will need to install the ${W}f ${ORNG}plugin to use this.${NC}"
+			echo -e "${YLW}Would you like to install this plugin?${RED}(y/n)${NC}"
+			read PLUGf
+			if [[ ${PLUGf} == "y" ]]; then
+				cd /home/$USER
+				git clone https://github.com/Sifter-Ex/f
+				cd f && bash install-f.sh
+				cd /opt/sifter
+				exframes
+			else
+				exframes
+			fi
+        	else
+            		echo -e "${W}Would you like to continue?(y/n)${NC}"
+            		read M_ANS
+            		if [[ ${M_ANS} == 'y' ]]; then
+               	 		bash /opt/sifter/modules/exmods/fuzzyd.sh
+            		else
+                		exframes
+            		fi
+        	fi
 	elif [[ ${EXF} == "4" ]]; then
 		ex_mods
 	elif [[ ${EXF} == "cd "* ]]; then
