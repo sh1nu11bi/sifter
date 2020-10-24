@@ -477,6 +477,44 @@ web_mods(){
 	fi
     echo -e "${NC}"
 }
+######################
+# Elevate Privileges #
+######################
+elevatePrivs(){
+    echo -e "${RED}"
+    figlet -f mini "Privilege Elevation"
+    echo -e "${NC}"
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
+	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
+	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
+	echo -e "\n ${ORNG}1.${W} EoP Exploit           ${ORNG}3.${W} Back ${NC}"
+	echo -e " ${ORNG}2.${W} CVE-2018-8120 	  ${NC}"
+    echo -e "${W}"
+	echo -n " =============================#?: "
+	read EOP
+	if [[ ${EOP} == "1" ]]; then
+		bash /opt/sifter/modules/postex/EoP/EoP.sh
+	elif [[ ${EOP} == "2" ]]; then
+		bash /opt/sifter/modules/postex/EoP/cve8120.sh
+	elif [[ ${EOP} == "3" ]]; then
+        post_ex
+	elif [[ ${EOP} == "cd "* ]]; then
+		DCK=$(pwd)
+        	echo ${EOP} > dtemp
+		sed -i "s/cd '//g" dtemp
+        	sed -i "s/'//g" dtemp
+        	DCC=$(cat dtemp)
+        	rm dtemp
+		cd ${DCK}/${DCC}
+    elif [[ ${EOP} == "info" ]]; then
+        xterm -e bash /opt/sifter/info/info.sh &
+	else
+		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
+        echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+		elevatePrivs
+	fi
+    echo -e "${NC}"  
+}
 #####################
 # Post Exploitation #
 #####################
@@ -487,7 +525,7 @@ post_ex(){
     ASTAT=$(cat /home/$USER/.config/.anon_status)
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-	echo -e "\n ${ORNG}1.${W} EoP Exploit           ${ORNG}6.${W} CredHarvester ${NC}"
+	echo -e "\n ${ORNG}1.${W} Elevate Privileges           ${ORNG}6.${W} CredHarvester ${NC}"
 	echo -e " ${ORNG}2.${W} Potatoes 'n PEAS 	  ${ORNG}7.${W} ACLight2 ${NC}"
 	echo -e " ${ORNG}3.${W} Omega                 ${ORNG}8.${W} PowerHUB ${NC}"
 	echo -e " ${ORNG}4.${W} WinPwn 		  ${ORNG}9.${W} BetterSafetyKatz ${NC}"
@@ -496,8 +534,8 @@ post_ex(){
     echo -n " =============================#?: "
 	read PEX
 	if [[ ${PEX} == "1" ]]; then
-		echo -e "${W}The EoP module helps elevate user privileges on an exploited system${NC}"
-        	bash /opt/sifter/modules/postex/EoP.sh
+		echo -e "${W}The EoP modules helps elevate user privileges on an exploited systems${NC}"
+        elevatePrivs
 	elif [[ ${PEX} == "2" ]]; then
 		echo -e "${YLW}This will copy a file to your Desktop to be used on an exploited target session\nWould you like to continue?(y/n)${NC}"
 		read BP

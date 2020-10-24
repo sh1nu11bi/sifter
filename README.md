@@ -39,13 +39,13 @@
 # Release
 
 	@Codename: Gemin1
-	@Version : 10.4
+	@Version : 10.5
 	@Revision: F
 
 <br>
-<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.4g.zip"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.5f.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10.4g/sifter_10.4_G.deb"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10.5f/sifter_10.5_F.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -67,7 +67,7 @@
 
 # Additions:
 <details>
-<summary>__ Version: 10.4F _|_  Gemin1 __ </summary>
+<summary>__ Version: 10.5F _|_  Gemin1 __ </summary>
 - <strong>XSS-Loader</strong> - XSS Payloader generator<br />
 - <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number<br />
 - <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
@@ -75,6 +75,7 @@
 &emsp;&emsp;'--> Preference for OpSec.
 	<br />
 - <strong>BetterSafetyKatz</strong> - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures using SharpSploit DInvoke to get it into memory
+- <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.
 </em><br />
 </details>
@@ -144,7 +145,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10.4g/sifter_10.4_G.deb && sudo dpkg -i sifter_10.4_G.deb && sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10.4g/sifter_10.5_F.deb && sudo dpkg -i sifter_10.5_F.deb && sifter
 	
 	
 	[!] For oneliner install (source), copy and paste the following into a terminal:
