@@ -8,7 +8,7 @@ LBBLUE='\e[104m'
 RED='\033[0;31m'
 
 echo -e " ${W}======================================================${NC}\n"
-echo -e " ${LBBLUE}Changelog${NC}\n ${YLW}***********${NC}\n"
+echo -e " ${LBBLUE}Changelog (v10.5F)${NC}\n ${YLW}********************${NC}\n"
 echo -e "${RED} Additions:\n${NC}"
 echo -e " ${LP}- ${ORNG}XSS-Loader ${W}- XSS Payloader generator"
 echo -e " ${LP}- ${ORNG}DeadTrapv2 ${W}- An OSINT tool to track down footprints of a phone number"
