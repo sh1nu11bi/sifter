@@ -525,11 +525,11 @@ post_ex(){
     ASTAT=$(cat /home/$USER/.config/.anon_status)
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-	echo -e "\n ${ORNG}1.${W} Elevate Privileges           ${ORNG}6.${W} CredHarvester ${NC}"
+	echo -e "\n ${ORNG}1.${W} Elevate Privileges    ${ORNG}6.${W} CredHarvester ${NC}"
 	echo -e " ${ORNG}2.${W} Potatoes 'n PEAS 	  ${ORNG}7.${W} ACLight2 ${NC}"
 	echo -e " ${ORNG}3.${W} Omega                 ${ORNG}8.${W} PowerHUB ${NC}"
 	echo -e " ${ORNG}4.${W} WinPwn 		  ${ORNG}9.${W} BetterSafetyKatz ${NC}"
-	echo -e " ${ORNG}5.${W} PowerSharp ${NC}        ${ORNG}10.${W} Back ${NC}"
+	echo -e " ${ORNG}5.${W} PowerSharp ${NC}           ${ORNG}10.${W} Back ${NC}"
     	echo -e " ${W}"
     echo -n " =============================#?: "
 	read PEX
