@@ -629,7 +629,7 @@ exframes(){
 			if [[ ${PLUGf} == "y" ]]; then
 				cd /home/$USER
 				git clone https://github.com/Sifter-Ex/f
-				cd f && bash plug-f.sh
+				cd f && bash plug-F.sh
 				cd /opt/sifter
 				exframes
 			else
