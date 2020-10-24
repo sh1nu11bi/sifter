@@ -25,7 +25,7 @@ echo -e "     ${YLW}https://github.com/Sifter-Ex/f${NC}"
 echo ""
 echo -e " ${LP}- ${RED}Inputting ${W}info ${YLW}into any menu screen brings up the Module Info Screen"
 echo -e "\n ${W}======================================================${NC}"
-echo -e "\n ${W}Running the Tool Install script is not particularly necessary with this update - Additional tools have been included.\n ${YLW}You may still run it if you'd like to check for Tool specific updates${NC}"
+echo -e "\n ${W}Running the Tool Install script is not particularly necessary with this update.\n ${YLW}Unless you'd like to check for Tool specific updates\n${W} Additional tools have been included.${NC}"
 #echo -e "\n ${W}Running the Tool Install script is recommended for this update in order to install new tools${NC}"
 sleep 20
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
