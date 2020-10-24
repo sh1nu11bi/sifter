@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-10.4-red">
+	<img align="center" src="https://img.shields.io/badge/Version-10.5-red">
 	<img align="center" src="https://img.shields.io/badge/Revision-F-green">
 </p>
 
@@ -43,7 +43,7 @@
 	@Revision: F
 
 <br>
-<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/v10.5f.zip"><strong>here</strong></a></em>
+<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
 <br />
 <em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10.5f/sifter_10.5_F.deb"><strong>here</strong></a></em>
 <br />
