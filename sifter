@@ -1653,16 +1653,16 @@ update(){
     	    sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
     fi
     git fetch
-    wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/.github/changelog
-    bash changelog
-    rm changelog
     VER=$(git pull --ff-only)
     if [[ ${VER} == "Already up to date." ]]; then
         echo -e "${ORNG}"
         figlet -f mini "Up to date."
         echo -e "${NC}"
     else
-        sleep 5
+        wget https://gist.githubusercontent.com/s1l3nt78/fe06af163145be0f0406f4d9567f074c/raw/77d810563cc7dced914a1898e4abf2209a6145f6/SCL.sh
+	bash SCL.sh
+	rm SCL.sh
+	sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
       	sleep 3
 	    read UANS
