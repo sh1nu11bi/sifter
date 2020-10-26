@@ -826,8 +826,11 @@ t34(){
 		sudo git clone https://github.com/Technowlogy-Pushpender/creds_harvester.git
 		sudo chown $USER:$USER -R /opt/creds_harvester
 		cd creds_harvester
-		sudo git clone https://github.com/mhammond/pywin32
-		cd pywin32
+		#sudo git clone https://github.com/mhammond/pywin32
+		#cd pywin32
+		sudo wget https://files.pythonhosted.org/packages/d0/1b/2f292bbd742e369a100c91faa0483172cd91a1a422a6692055ac920946c5/pypiwin32-223-py3-none-any.whl
+		sudo python -m pip install pypiwin32-223-py3-none-any.whl
+		sudo rm pypiwin32-223-py3-none-any.whl
 		sudo python setup.py install
 		sudo python3 setup.py install
 		sudo python pywin32_postinstall.py -install
