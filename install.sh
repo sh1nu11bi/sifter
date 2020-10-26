@@ -816,11 +816,20 @@ t34(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for CredsHarvester${NC}"
 	if [[ -d '/opt/creds_harvester' ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "CredsHarvester is already installed"
-		echo -e "${NC}"
-		cd /opt/creds_harvester
-		sudo git fetch && sudo git pull &>/dev/null
+		if [[ ! -d '/opt/creds_harvester/pywin' ]]; then
+			echo -e "${ORNG}"
+			figlet -f mini "CredsHarvester is already installed"
+			echo -e "${NC}"
+			cd /opt/creds_harvester
+			sudo git fetch && sudo git pull &>/dev/null
+		else
+			cd /opt
+			sudo git clone https://github.com/PushpenderIndia/creds_harvester
+			sudo chown $USER:$USER -R /opt/creds_harvester
+			cd creds_harvester
+			sudo zip credH.zip *.py
+			sudo chown $USER:$USER credH.zip
+		fi
 	else
 		cd /opt/
 		sudo git clone https://github.com/PushpenderIndia/creds_harvester
