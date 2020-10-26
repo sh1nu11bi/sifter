@@ -823,20 +823,9 @@ t34(){
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /opt/
-		sudo git clone https://github.com/Technowlogy-Pushpender/creds_harvester.git
+		sudo git clone https://github.com/PushpenderIndia/creds_harvester
 		sudo chown $USER:$USER -R /opt/creds_harvester
 		cd creds_harvester
-		#sudo git clone https://github.com/mhammond/pywin32
-		#cd pywin32
-		sudo wget https://files.pythonhosted.org/packages/d0/1b/2f292bbd742e369a100c91faa0483172cd91a1a422a6692055ac920946c5/pypiwin32-223-py3-none-any.whl
-		sudo python -m pip install pypiwin32-223-py3-none-any.whl
-		sudo rm pypiwin32-223-py3-none-any.whl
-		sudo python setup.py install
-		sudo python3 setup.py install
-		sudo python pywin32_postinstall.py -install
-		sudo python3 pywin32_postinstall.py -install
-		#python3 -m pip install pywin32
-		#sudo python3 -m pip install pywin32
 		sudo zip credH.zip *.py
 		sudo chown $USER:$USER credH.zip
 	fi
