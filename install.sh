@@ -1901,6 +1901,6 @@ echo -e "${RED}=================================================================
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==             ########################
 ######################################################################################################
 echo -e "${YLW}###########################"                                             ########################
-echo -e "${YLW}# ${ORNG}Incoming Version :${LP} 10.2 ${YLW}#${NC}"                          ##    VERSION INFO    ##
-echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}G    ${YLW}#"                                       ##    UPDATE CHECK    ##
+echo -e "${YLW}# ${ORNG}Incoming Version :${LP} 10.5 ${YLW}#${NC}"                          ##    VERSION INFO    ##
+echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}F    ${YLW}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}###########################${NC}"                                         ########################
