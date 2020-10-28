@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-10.5-red">
+	<img align="center" src="https://img.shields.io/badge/Version-10.6-red">
 	<img align="center" src="https://img.shields.io/badge/Revision-F-green">
 </p>
 
@@ -43,7 +43,7 @@
 # Release
 
 	@Codename: Gemin1
-	@Version : 10.5
+	@Version : 10.6
 	@Revision: F
 
 <br>
@@ -78,9 +78,10 @@
 - <strong>TruffleSnout</strong> - Interactive AD discovery toolkit for offensive operators, focused on Situational awareness.<br /> 
 &emsp;&emsp;'--> Preference for OpSec.
 	<br />
-- <strong>BetterSafetyKatz</strong> - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures using SharpSploit DInvoke to get it into memory
-- <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session
-- Typing <strong>info</strong> into any menu will bring up the Module Information Screen.
+- <strong>BetterSafetyKatz</strong> - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures using SharpSploit DInvoke to get it into memory<br />
+- <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session<br />
+- <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
+- Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
 </em><br />
 </details>
 
@@ -287,7 +288,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <details>
 <summary>
 <strong>#Network Scanners</strong></summary>
-- <a href="https://nmap.org">Nmap</a><br />
+- <a href="https://nmap.org">nMap</a><br />
+- <a href="https://github.com/DeadNumbers/WebMap">WebMap</a>
 - <a href="https://github.com/superhedgy/AttackSurfaceMapper">AttackSurfaceMapper</a><br />
 - <a href="https://github.com/harleo/asnip">aSnip</a><br />
 - <a href="https://github.com/EnableSecurity/wafw00f">wafw00f</a><br />

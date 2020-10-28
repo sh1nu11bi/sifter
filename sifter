@@ -336,7 +336,16 @@ net_mods(){
     	echo -n " =============================#?: "
 	read NTM
 	if [[ ${NTM} == "1" ]]; then
-		bash /opt/sifter/modules/netmods/nmap.sh
+        echo -e "${RED}Would you like to run ${W}nMap ${RED}through terminal or use ${W}WebMap${RED}? (${W}n${RED}/${W}w${RED})${NC}"
+        read WORN
+        if [[ ${WORN} == "n" ]]; then
+		    bash /opt/sifter/modules/netmods/nmap.sh
+        elif [[ ${WORN} == "w" ]]; then
+            xterm -e bash /opt/sifter/modules/netmods/webmap.sh
+        else
+            echo -e "${YLW}Invalid option chosen${NC}"
+            net_mods
+        fi
 	elif [[ ${NTM} == "2" ]]; then
 		echo -e "${YLW}Would you like to scan your ${RED}l${YLW}ocal network, or use ${RED}c${YLW}ustom arp-scan args?(${RED}l${YLW}/${RED}c${YLW})${NC}"
         read ASO
@@ -1645,7 +1654,7 @@ update(){
     echo -e "\__.[ )(/,(_.| \|[ )(_]  | (_)[    |__|[_)(_](_] | (/,_)  *  * "
     echo -e "                    ._|                |                       ${NC}"
     echo -e "${YLW}############################"                                                    	########################
-    echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10.5 ${YLW}#${NC}"                                 ##    VERSION INFO    ##
+    echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10.6 ${YLW}#${NC}"                                 ##    VERSION INFO    ##
     echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}F    ${YLW}#"                                      ##    UPDATE CHECK    ##
     echo -e "${YLW}############################${NC}"                                               	########################
 
@@ -1659,10 +1668,10 @@ update(){
         figlet -f mini "Up to date."
         echo -e "${NC}"
     else
-        wget https://gist.githubusercontent.com/s1l3nt78/fe06af163145be0f0406f4d9567f074c/raw/77d810563cc7dced914a1898e4abf2209a6145f6/SCL.sh
-	bash SCL.sh
-	rm SCL.sh
-	sleep 5
+        wget https://gist.githubusercontent.com/s1l3nt78/fe06af163145be0f0406f4d9567f074c/raw/dbce2a32f2d09f6b05d03c393ba054f43f8c10f5/SCL.sh
+	    bash SCL.sh
+	    rm SCL.sh
+	    sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
       	sleep 3
 	    read UANS

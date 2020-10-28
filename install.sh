@@ -1771,6 +1771,46 @@ t74(){
 		sudo python3 -m pip install -r requirements.txt 
 	fi
 }
+
+###############
+# 75 # WebMap #
+###############
+t75(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Pulling Newest WebMap image ${NC}"
+	sudo docker pull reborntc/webmap
+	if [[ ! -d '/opt/WebMap' ]]; then
+		cd /opt
+		sudo git clone https://github.com/DeadNumbers/WebMap
+		if [[ ! -d '/tmp/webmap' ]]; then
+			mkdir /tmp/webmap
+		fi
+		sudo docker run -d \
+			--name webmap \
+			-h webmap \
+			-p 8000:8000 \
+			-v /tmp/webmap:/opt/xml \
+			reborntc/webmap
+	fi
+	if [[ ! -f '/opt/WebMap/.token' ]]; then
+		sudo docker start webmap
+		TKN=$(sudo docker exec -ti webmap /root/token) 
+		sudo touch /opt/WebMap/.token
+		sudo chown $USER:$USER /opt/WebMap/.token
+		echo ${TKN} > /opt/WebMap/.token
+		sudo docker stop webmap
+	fi
+	if [[ ! -f '/opt/WebMap/.browser' ]]; then
+		sudo docker start webmap
+		sudo touch /opt/WebMap/.browser
+		sudo chown $USER:$USER /opt/WebMap/.browser		
+		echo -e "${YLW}For runtime the WebMap module will attempt to automatically open the local browser to access the panel\nAs not everyone uses the same browser and to make this as compatible as possible while not installing to many extras.\n${W}Please enter the termianl command for your browser. (eg. ${ORNG}chromium ${W}| ${ORNG}firefox ${W}| ${ORNG}firefox-esr ${W}| ${ORNG}chrome)${NC}"
+		read BROWSE
+		echo ${BROWSE} > /opt/WebMap/.browser
+		sudo docker stop webmap
+	fi
+}
+
 #######################################################################################################################################
 ############
 # M # MISC #
@@ -1876,6 +1916,7 @@ t71										# WhiteWidow
 t72										# V3n0M-Scanner
 t73										# Ciphey
 t74										# XSS-Loader
+t75										# WebMap
 #########################################---------------
 tMisc										# Miscellaneous
 #########################################---------------
@@ -1901,6 +1942,6 @@ echo -e "${RED}=================================================================
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==             ########################
 ######################################################################################################
 echo -e "${YLW}###########################"                                             ########################
-echo -e "${YLW}# ${ORNG}Incoming Version :${LP} 10.5 ${YLW}#${NC}"                          ##    VERSION INFO    ##
+echo -e "${YLW}# ${ORNG}Incoming Version :${LP} 10.6 ${YLW}#${NC}"                          ##    VERSION INFO    ##
 echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}F    ${YLW}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}###########################${NC}"                                         ########################
