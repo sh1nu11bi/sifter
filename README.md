@@ -289,7 +289,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <summary>
 <strong>#Network Scanners</strong></summary>
 - <a href="https://nmap.org">nMap</a><br />
-- <a href="https://github.com/DeadNumbers/WebMap">WebMap</a>
+- <a href="https://github.com/DeadNumbers/WebMap">WebMap</a><br />
 - <a href="https://github.com/superhedgy/AttackSurfaceMapper">AttackSurfaceMapper</a><br />
 - <a href="https://github.com/harleo/asnip">aSnip</a><br />
 - <a href="https://github.com/EnableSecurity/wafw00f">wafw00f</a><br />
