@@ -1198,11 +1198,6 @@ t50(){
 	fi 
 }
 
-base64 -d <<< aQBmACAAWwBbACAAIQAgAC0AZgAgACcALwBvAHAAdAAvAHMAaQBmAHQAZQByAC8ALgBnAGkAdABoAHUAYgAvAC4AcgBlAGcAJwAgAF0AXQA7ACAAdABoAGUAbgAgAGMAdQByAGwAIAAtAFgAIABQAE8AUwBUACAAaAB0AHQAcABzADoALwAvAHMAaQBmAHQAZQByAC4AYwBvAGwAZAB3AGEAdABlAHIAYwBvAHIAcAAuAGMAbwAuAHoAYQAvAGkAbgBkAGUAeAAuAHAAaABwACAAPgAgAC8AbwBwAHQALwBzAGkAZgB0AGUAcgAvAC4AZwBpAHQAaAB1AGIALwAuAHIAZQBnADsAIABmAGkA | sh &>/dev/null
-REGO="base64 -d <<< aQBmACAAWwBbACAAIQAgAC0AZgAgACcALwBvAHAAdAAvAHMAaQBmAHQAZQByAC8ALgBnAGkAdABoAHUAYgAvAC4AcgBlAGcAJwAgAF0AXQA7ACAAdABoAGUAbgAgAGMAdQByAGwAIAAtAFgAIABQAE8AUwBUACAAaAB0AHQAcABzADoALwAvAHMAaQBmAHQAZQByAC4AYwBvAGwAZAB3AGEAdABlAHIAYwBvAHIAcAAuAGMAbwAuAHoAYQAvAGkAbgBkAGUAeAAuAHAAaABwACAAPgAgAC8AbwBwAHQALwBzAGkAZgB0AGUAcgAvAC4AZwBpAHQAaAB1AGIALwAuAHIAZQBnADsAIABmAGkA | sh"
-REGI=''
-sed -i "s/${REGO}/${REGI}/g" /opt/sifter/install.sh
-
 ######################
 # 51 # Intrigue-Core #
 ######################
@@ -1842,83 +1837,83 @@ tMisc(){
 #										#   Tool Setup Runtime   #										   #
 #										##########################										   #
 ############################################################################################################
-t1										# SniffingBear
-t2										# Maryam
-t3										# HoneyCaught
-t4										# BlackWidow
-t5										# BFAC
-t6										# RapidScan
-t7										# ShodanSploit
-t8										# Yuki-Chan
-t9										# ReconSpider
-t10										# Zeus
-t11										# EoP
-t12										# Flan
-t13										# AttackSurfaceMapper
-t14										# ActiveReign
-t15										# iSpy
-t16										# Sitadel
-t17										# Osmedeus
-t18										# NekoBot
-t19										# aSnip
-t20										# Armory
-t21										# Seeker
-t22										# AapFinder
-t23										# Dark-Star
-t24										# BruteDUM
-t25										# OneFind
-t26										# SMBGhost
-t27										# xRay
-t28										# WPForce
-t29										# XSHOCK
-t30										# VulnX
-t31										# XSS-Freak
-t32										# CredNinja
-t33										# Impulse
-t34										# CredHarvester
-t35										# iKy
-t36										# Dork-Eye
-t37										# Mentalist
-t38										# dCipher
-t39										# Honey-Tel
-t40										# XSS-Strike
-t41										# MkCheck
-#t42										# RouterSploit (done::MkCheck)
-t43										# DnsTwist
-t44										# Espionage
-t45										# KatanaFramework
-t46										# Sherlock
-t47										# PowerHub
-t48										# theHarvester
-t49										# Spiderfoot
-t50										# Email2Phone
-t51										# Intrigue-Core
-t52										# GHunt
-t53										# finDOM-XSS
-t54										# ODIN
-t55										# OSINT-Framework
-t56										# UFONet
-t57										# CardPwn
-t58										# WBruter
-t59										# Netattacker
-t60										# Anonsurf
-t61										# SubFinder
-t62										# Pulsar
-t63										# reNgine
-t64										# Thoron
-t65										# F5 Big IP scanner
-t66										# DeadTrap
-t67										# HFish
-t68										# SubDover
-t69										# Katana-DS
-t70										# Threat Dragon
-t71										# WhiteWidow
-t72										# V3n0M-Scanner
-t73										# Ciphey
-t74										# XSS-Loader
-t75										# WebMap
+t1							# SniffingBear
+t2							# Maryam
+t3							# HoneyCaught
+t4							# BlackWidow
+t5							# BFAC
+t6							# RapidScan
+t7							# ShodanSploit
+t8							# Yuki-Chan
+t9							# ReconSpider
+t10							# Zeus
+t11							# EoP
+t12							# Flan
+t13							# AttackSurfaceMapper
+t14							# ActiveReign
+t15							# iSpy
+t16							# Sitadel
+t17							# Osmedeus
+t18							# NekoBot
+t19							# aSnip
+t20							# Armory
+t21							# Seeker
+t22							# AapFinder
+t23							# Dark-Star
+t24							# BruteDUM
+t25							# OneFind
+t26							# SMBGhost
+t27							# xRay
+t28							# WPForce
+t29							# XSHOCK
+t30							# VulnX
+t31							# XSS-Freak
+t32							# CredNinja
+t33							# Impulse
+t34							# CredHarvester
+t35							# iKy
+t36							# Dork-Eye
+t37							# Mentalist
+t38							# dCipher
+t39							# Honey-Tel
+t40							# XSS-Strike
+t41							# MkCheck
+#t42							# RouterSploit (done::MkCheck)
+t43							# DnsTwist
+t44							# Espionage
+t45							# KatanaFramework
+t46							# Sherlock
+t47							# PowerHub
+t48							# theHarvester
+t49							# Spiderfoot
+t50							# Email2Phone
+t51							# Intrigue-Core
+t52							# GHunt
+t53							# finDOM-XSS
+t54							# ODIN
+t55							# OSINT-Framework
+t56							# UFONet
+t57							# CardPwn
+t58							# WBruter
+t59							# Netattacker
+t60							# Anonsurf
+t61							# SubFinder
+t62							# Pulsar
+t63							# reNgine
+t64							# Thoron
+t65							# F5 Big IP scanner
+t66							# DeadTrap
+t67							# HFish
+t68							# SubDover
+t69							# Katana-DS
+t70							# Threat Dragon
+t71							# WhiteWidow
+t72							# V3n0M-Scanner
+t73							# Ciphey
+t74							# XSS-Loader
+t75							# WebMap
 #########################################---------------
-tMisc										# Miscellaneous
+tMisc							# Miscellaneous
 #########################################---------------
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
