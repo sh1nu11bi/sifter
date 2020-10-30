@@ -1668,9 +1668,9 @@ update(){
         figlet -f mini "Up to date."
         echo -e "${NC}"
     else
-        wget https://gist.githubusercontent.com/s1l3nt78/fe06af163145be0f0406f4d9567f074c/raw/dbce2a32f2d09f6b05d03c393ba054f43f8c10f5/SCL.sh
-	    bash SCL.sh
-	    rm SCL.sh
+        wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/.github/changelog
+	    bash changelog
+	    rm changelog
 	    sleep 5
 	    echo -e "${W}Are there pull conflicts with files?(${YLW}y/n${W})${NC}"
       	sleep 3
