@@ -1439,13 +1439,13 @@ modules(){
     echo -e " ${W}=============================================================\n ${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Information Gatherers           ${ORNG}11.${W} Cross-Site Scripting & SQLinjection${NC}"
     echo -e " ${ORNG}2.${W} Domain Reconnaissance           ${ORNG}12.${W} Password Tools${NC}"
-    echo -e " ${ORNG}3.${W} Network Analysis                ${RED}13.${W} View Results${NC}"
-    echo -e " ${ORNG}4.${W} WebScanning & Enumeration       ${RED}14.${W} Anonymization${NC}"
-    echo -e " ${ORNG}5.${W} Vulnerability Scanning          ${LP}15.${W} When Time Moves Slowly*${NC}"
-    echo -e " ${ORNG}6.${W} HoneyPot Detection Systems      ${YLW}16.${NC}${W} Check For Missing Tools${NC}"
-    echo -e " ${ORNG}7.${W} Router Tools                    ${BIGreen}17.${W} Main Menu${NC}"
-    echo -e " ${ORNG}8.${W} Exploitation Tools              ${UBLUE}18.${NC}${W} Quit${NC}"
-    echo -e " ${ORNG}9.${W} WebApp Scanning${NC}"
+    echo -e " ${ORNG}3.${W} Network Analysis                ${LP}13.${W} mPlug${NC}"
+    echo -e " ${ORNG}4.${W} WebScanning & Enumeration       ${RED}14.${W} View Results${NC}"
+    echo -e " ${ORNG}5.${W} Vulnerability Scanning          ${RED}15.${W} Anonymization${NC}"
+    echo -e " ${ORNG}6.${W} HoneyPot Detection Systems      ${LP}16.${W} When Time Moves Slowly*${NC}"
+    echo -e " ${ORNG}7.${W} Router Tools                    ${YLW}17.${NC}${W} Check For Missing Tools${NC}"
+    echo -e " ${ORNG}8.${W} Exploitation Tools              ${BIGreen}18.${W} Main Menu${NC}"
+    echo -e " ${ORNG}9.${W} WebApp Scanning${NC}            ${UBLUE}19.${NC}${W} Quit${NC}"
     echo -e " ${ORNG}10.${W} Operational Security ${NC}"
     echo -e "     ${W}& Threat Analysis"
     echo -n " =============================#?: "
@@ -1475,10 +1475,23 @@ modules(){
     elif [[ ${MMOP} == "12" ]]; then
 	    pass_tools
     elif [[ ${MMOP} == "13" ]]; then
-	    results
+        if [[ -d '/opt/sifter/modules/mPlug' ]]; then
+            bash /opt/sifter/modules/mPlug/mPlug.sh
+        else
+            echo -e "${ORNG}[ ${RED}! ${ORNG}] ${W}You do not seem to have the M Extention installed!\n ${LGRY}Would you like to install it now? ${YLW}(y/n)${NC}"
+            read MINS
+            if [[ ${MINS} == "y" ]]; then
+                cd
+                git clone https://github.com/Sifter-Ex/mPlug
+                cd mPlug
+                bash plug-M.sh
+            fi
+        fi
     elif [[ ${MMOP} == "14" ]]; then
-	    proxysystem
+	    results
     elif [[ ${MMOP} == "15" ]]; then
+	    proxysystem
+    elif [[ ${MMOP} == "16" ]]; then
 	    echo -e "${RED}This module is to pass some time during long scans \nsuch as nMap (Full Port Scan) or RapidScan${NC}"
         echo -e "${W}Would you like to continue? (${YLW}y${W}/${YLW}n${W})"
         read PTOPT
@@ -1487,11 +1500,11 @@ modules(){
         else
             modules
         fi
-    elif [[ ${MMOP} == "16" ]]; then
-	    bash /opt/sifter/info/tool_check.sh
     elif [[ ${MMOP} == "17" ]]; then
-	    menu
+	    bash /opt/sifter/info/tool_check.sh
     elif [[ ${MMOP} == "18" ]]; then
+	    menu
+    elif [[ ${MMOP} == "19" ]]; then
 	    (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
@@ -1655,7 +1668,7 @@ update(){
     echo -e "                    ._|                |                       ${NC}"
     echo -e "${YLW}############################"                                                    	########################
     echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10.6 ${YLW}#${NC}"                                 ##    VERSION INFO    ##
-    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}F    ${YLW}#"                                      ##    UPDATE CHECK    ##
+    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}M    ${YLW}#"                                      ##    UPDATE CHECK    ##
     echo -e "${YLW}############################${NC}"                                               	########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then

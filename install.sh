@@ -1810,25 +1810,17 @@ t75(){
 ############
 # M # MISC #
 ############
-tMisc(){
-	# Omega
-	if [[ ! -d '/opt/omega' ]]; then																		# Check For Omega Directory & If it doesn't exist
-		if [[ -f '/opt/sifter/modules/postex/omega.sh' ]]; then
-			sudo rm /opt/sifter/modules/postex/omega.sh															# Remove Omega script from Module Directory
-		fi
-	fi
-	OMOUT='\"Omega\" '
-	OMIN=''
-	sudo sed -i "s/${OMOUT}/${OMIN}/g" /opt/sifter/sifter													# Remove Omega option from sifter script
+#tMisc(){
+																										# Remove Omega option from sifter script
 
 	# FuzzyDander 
-	if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then												# Check for FuzzyDander script
-		FDOUT='\"FuzzyDander\" '
-		FDIN=''
-		sudo sed -i "s/${FDOUT}/${FDIN}/g" /opt/sifter/sifter												# Removes FuzzyDander option if script not found
-	fi
+#	if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then												# Check for FuzzyDander script
+#		FDOUT='\"FuzzyDander\" '
+#		FDIN=''
+#		sudo sed -i "s/${FDOUT}/${FDIN}/g" /opt/sifter/sifter												# Removes FuzzyDander option if script not found
+#	fi
 
-}
+#}
 
 
 
@@ -1913,7 +1905,7 @@ t73							# Ciphey
 t74							# XSS-Loader
 t75							# WebMap
 #########################################---------------
-tMisc							# Miscellaneous
+#tMisc							# Miscellaneous
 #########################################---------------
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##
@@ -1938,5 +1930,5 @@ echo -e "${RED}=================================================================
 ######################################################################################################
 echo -e "${YLW}###########################"                                             ########################
 echo -e "${YLW}# ${ORNG}Incoming Version :${LP} 10.6 ${YLW}#${NC}"                          ##    VERSION INFO    ##
-echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}F    ${YLW}#"                                       ##    UPDATE CHECK    ##
+echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}M    ${YLW}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}###########################${NC}"                                         ########################

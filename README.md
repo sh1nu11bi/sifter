@@ -10,7 +10,7 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
 	<img align="center" src="https://img.shields.io/badge/Version-10.6-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-F-green">
+	<img align="center" src="https://img.shields.io/badge/Revision-M-green">
 </p>
 
 # *Sifter*
@@ -44,7 +44,7 @@
 
 	@Codename: Gemin1
 	@Version : 10.6
-	@Revision: F
+	@Revision: M
 
 <br>
 <em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
