@@ -1546,6 +1546,7 @@ menu(){
     cd /opt/sifter
     echo -e "${INV}${LGRY}"
     python3 /opt/sifter/extras/ban.py
+    echo -e "${NC}"
     python3 /opt/sifter/extras/ban2.py
     arg=$1
     ASTAT=$(cat /home/$USER/.config/.anon_status)   
