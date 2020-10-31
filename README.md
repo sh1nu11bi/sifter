@@ -151,7 +151,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10.5f/sifter_10.5_F.deb && sudo dpkg -i sifter_10.5_F.deb && sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10.5f/sifter_10.5_F.deb; sudo dpkg -i sifter_10.5_F.deb; sifter
 	
 	
 	[!] For oneliner install (source), copy and paste the following into a terminal:
