@@ -1439,7 +1439,7 @@ modules(){
     echo -e " ${W}=============================================================\n ${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Information Gatherers           ${ORNG}11.${W} Cross-Site Scripting & SQLinjection${NC}"
     echo -e " ${ORNG}2.${W} Domain Reconnaissance           ${ORNG}12.${W} Password Tools${NC}"
-    echo -e " ${ORNG}3.${W} Network Analysis                ${LP}13.${W} mPlug${NC}"
+    echo -e " ${ORNG}3.${W} Network Analysis                ${LP}13.${W} Malware Analysis${NC}"
     echo -e " ${ORNG}4.${W} WebScanning & Enumeration       ${RED}14.${W} View Results${NC}"
     echo -e " ${ORNG}5.${W} Vulnerability Scanning          ${RED}15.${W} Anonymization${NC}"
     echo -e " ${ORNG}6.${W} HoneyPot Detection Systems      ${LP}16.${W} When Time Moves Slowly*${NC}"
