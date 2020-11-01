@@ -659,12 +659,12 @@ exframes(){
         fi
 	elif [[ ${EXF} == "2" ]]; then
 		echo -e "${YLW}This is an exploitation framework aimed towards Linux Exploitation\n${LP}Would you like to continue?(y/n)${NC}"
-        read XOPT
-        if [[ ${XOPT} == "y" ]]; then
-            bash /opt/sifter/modules/exmods/thoron.sh
-        else
-            exframes
-        fi
+        	read XOPT
+        	if [[ ${XOPT} == "y" ]]; then
+            		bash /opt/sifter/modules/exmods/thoron.sh
+        	else
+            		exframes
+        	fi
 	elif [[ ${EXF} == "3" ]]; then
 		echo -e "${LP}FuzzBunch & DanderSpritz Framework,"
         	echo -e "codename:${RED}DanderFuzz${NC}"
