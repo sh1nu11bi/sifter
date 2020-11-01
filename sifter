@@ -1445,7 +1445,7 @@ modules(){
     echo -e " ${ORNG}6.${W} HoneyPot Detection Systems      ${LP}16.${W} When Time Moves Slowly*${NC}"
     echo -e " ${ORNG}7.${W} Router Tools                    ${YLW}17.${NC}${W} Check For Missing Tools${NC}"
     echo -e " ${ORNG}8.${W} Exploitation Tools              ${BIGreen}18.${W} Main Menu${NC}"
-    echo -e " ${ORNG}9.${W} WebApp Scanning${NC}            ${UBLUE}19.${NC}${W} Quit${NC}"
+    echo -e " ${ORNG}9.${W} WebApp Scanning${NC}                 ${UBLUE}19.${NC}${W} Quit${NC}"
     echo -e " ${ORNG}10.${W} Operational Security ${NC}"
     echo -e "     ${W}& Threat Analysis"
     echo -n " =============================#?: "
