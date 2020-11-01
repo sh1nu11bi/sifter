@@ -145,8 +145,8 @@ phone_mods(){
 	echo -e " ${ORNG}2.${W} Sherlock	    ${ORNG}7.${W} CardPwn ${NC}"
 	echo -e " ${ORNG}3.${W} Maryam          ${ORNG}8.${W} DeadTrap ${NC}"
 	echo -e " ${ORNG}4.${W} xRay            ${ORNG}9.${W} iKy ${NC}"
-	echo -e " ${ORNG}5.${W} Email2Phone     ${ORNG}10. ${W} GHunt ${NC}"
-    echo -e "${ORNG}11.${W} Back ${NC}"
+	echo -e " ${ORNG}5.${W} Email2Phone     ${ORNG}10. ${W}GHunt ${NC}"
+    echo -e " ${ORNG}11.${W} Back ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read PMM
@@ -1658,6 +1658,28 @@ gexUpd(){
 }
 
 ##
+# M Extention Check/Update
+##
+mxUpd(){
+    if [[ -d '/opt/sifter/modules/mPlug' ]]; then
+        cd /opt/sifter/modules/mPlug
+        git fetch && git pull
+        echo -e "${ORNG}M ${YLW}Extention has been updated${NC}"
+    fi
+}
+
+##
+# F Extention Update
+##
+fxUpd(){
+    if [[ -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then
+        cd /opt/sifter/modules/exmods/
+        wget https://raw.githubusercontent.com/Sifter-Ex/fPlug/master/plug-F.sh
+        mv plug-F.sh fuzzyd.sh
+        echo -e "${ORNG}F ${YLW}Extention has been updated.${NC}"
+    fi
+}
+##
 # Update Function
 ##
 update(){
@@ -1677,8 +1699,7 @@ update(){
     fi
     git fetch
     wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/.github/changelog
-	bash changelog
-	rm changelog
+	xterm -e bash changelog
     VER=$(git pull --ff-only)
     if [[ ${VER} == "Already up to date." ]]; then
         echo -e "${ORNG}"
@@ -1706,7 +1727,9 @@ update(){
             sudo chmod +x install.sh
             bash install.sh
         fi
-	    gexUpd
+	    gxUpd
+        mxUpd
+        fxUpd
         sudo cp /opt/sifter/sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter

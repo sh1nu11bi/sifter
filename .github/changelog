@@ -30,4 +30,6 @@ echo -e "\n ${W}======================================================${NC}"
 echo -e " ${W}Running the Tool Install script is recommended for this update in order to install new tools${NC}"
 #echo -e " ${LP}[${ORNG}!${LP}] ${W}Running the Tool Install script is not particularly necessary with this update.\n ${YLW}Unless you'd like to check for Tool specific updates\n ${LP}[${ORNG}!${LP}]${W} Additional tools have been included.${NC}"
 sleep 20
+SD=$(pwd)
+rm ${SD}/changelog
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
