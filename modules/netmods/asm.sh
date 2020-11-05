@@ -53,7 +53,7 @@ sleep 1
 read FORMAT
 sleep 1
 echo "============================================================================"
-echo -e "${W}Would you like to enable screen capture?(y/n)${NC}"
+echo -e "${W}Would you like to enable screen capture?(y/n)\n${RED}NORE: ${ORNG}This option may cause fatal errors during runtime${NC}"
 sleep 1
 read SC1
 if [[ ${SC1} == y ]];then
