@@ -1299,11 +1299,11 @@ check_hosts(){
                     --auto-kill --auto-close \
                     --percentage=10)
 
-    zenity --width=220 --height=350  \
+    zenity --width=300 --height=350  \
 	     --title "Live Targets" \
 	     --text-info --filename="/opt/sifter/files/pingtest_raw.pass" &
 
-    zenity --width=220 --height=350  \
+    zenity --width=300 --height=350  \
 	     --title "Dead Targets" \
 	     --text-info --filename="/opt/sifter/files/pingtest_raw.fail" &
 
@@ -1641,7 +1641,7 @@ up_arg(){
 ##
 # G Extention Check/Update
 ##
-gexUpd(){
+gxUpd(){
 	if [[ -f "/usr/sbin/gSifter" ]]; then
 		wget https://raw.githubusercontent.com/Sifter-Ext/g/g-ex/.vs/yes.txt &>/dev/null
 		if [[ ! -f "yes.txt" ]]; then
@@ -1698,8 +1698,6 @@ update(){
     	    sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
     fi
     git fetch
-    wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/.github/changelog
-	xterm -e bash changelog
     VER=$(git pull --ff-only)
     if [[ ${VER} == "Already up to date." ]]; then
         echo -e "${ORNG}"
@@ -1717,7 +1715,9 @@ update(){
 		    up_arg ${FILES}
 		    git pull --ff-only
 	    fi
-	            
+	    zenity --title "Sifter Changelog" \
+           --height=750 --width=800 \
+           --text-info --filename="/opt/sifter/.github/changelog" &>/dev/null        
         ##########################
         # Check For Full Upgrade #
         ##########################
