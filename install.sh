@@ -1807,20 +1807,31 @@ t75(){
 }
 
 #######################################################################################################################################
-############
-# M # MISC #
-############
-#tMisc(){
+####################
+# Ext # Plugin Installation #
+####################
+plugExt(){
 																										# Remove Omega option from sifter script
+	##
+	# DanderFuzz Exploitaional Framework
+	##
+	if [[ -d '/opt/sifter/fPlug' ]]; then
+		cd fPlug; bash plug-F.sh
+	fi
+	##
+	# Graphical Interface
+	##
+	if [[ -d '/opt/sifter/gPlug' ]]; then
+		cd gPlug; bash plug-G.sh
+	fi
+	##
+	# Malware Analysis
+	##
+	if [[ -d '/opt/sifter/mPlug' ]]; then
+		cd mPlug; bash plug-M.sh
+	fi
 
-	# FuzzyDander 
-#	if [[ ! -f '/opt/sifter/modules/exmods/fuzzyd.sh' ]]; then												# Check for FuzzyDander script
-#		FDOUT='\"FuzzyDander\" '
-#		FDIN=''
-#		sudo sed -i "s/${FDOUT}/${FDIN}/g" /opt/sifter/sifter												# Removes FuzzyDander option if script not found
-#	fi
-
-#}
+}
 
 
 
@@ -1905,7 +1916,7 @@ t73							# Ciphey
 t74							# XSS-Loader
 t75							# WebMap
 #########################################---------------
-#tMisc							# Miscellaneous
+plugExt					# Plugin Extentions
 #########################################---------------
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##

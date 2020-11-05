@@ -160,6 +160,9 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	
 	
 	[!] Sifter Plugins can be found at https://github.com/Sifter-Ex
+	[!] To install Sifter with plugins run:
+	*
+	$ git clone --recursive https://github.com/s1l3nt78/sifter; cd sifter; bash install.sh
 	
 ----------------------------------------------------------------------------------------------------------------------
 
