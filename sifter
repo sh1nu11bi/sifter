@@ -1263,11 +1263,11 @@ hostcheck(){
     	        xterm -e ping -c 1 $name
     	            if [[ $? == 0 ]]; then
     	                echo -e "${LP}======================================================"
-    	                echo -e "${LP} ${name} Alive ${NC}" && echo ${name} >> /opt/sifter/files/pingtest_raw.pass
+    	                echo -e "${LP} ${name} Alive ${NC}" && echo ${name} >> /opt/sifter/files/pingtest.pass
     	                echo -e "${LP}======================================================${NC}"
     	            else
     	                echo -e "${RED}====================================================="
-    	                echo -e "${RED} ${name} Dead ${NC}" && echo ${name} >> /opt/sifter/files/pingtest_raw.fail
+    	                echo -e "${RED} ${name} Dead ${NC}" && echo ${name} >> /opt/sifter/files/pingtest.fail
     	                echo -e "${RED}=====================================================${NC}"
     	            fi
     	    done
@@ -1283,14 +1283,8 @@ check_hosts(){
         rm /opt/sifter/files/host_list.txt
         kdialog --textinputbox "Please add an appropriate target first!" > /opt/sifter/files/host_list.txt
     fi
-    if [[ -f 'files/pingtest_raw.pass' ]]; then
-    	    rm /opt/sifter/files/pingtest_raw.pass
-    fi
     if [[ -f 'files/pingtest.pass' ]]; then
         rm /opt/sifter/files/pingtest.pass
-    fi
-    if [[ -f 'files/pingtest_pass.txt' ]]; then
-        rm /opt/sifter/files/pingtest_pass.txt
     fi
 
     hostcheck | tee >(zenity --width=200 --height=100 \
@@ -1299,13 +1293,13 @@ check_hosts(){
                     --auto-kill --auto-close \
                     --percentage=10)
 
-    zenity --width=220 --height=350  \
+    zenity --width=300 --height=350  \
 	     --title "Live Targets" \
-	     --text-info --filename="/opt/sifter/files/pingtest_raw.pass" &
+	     --text-info --filename="/opt/sifter/files/pingtest.pass" &
 
-    zenity --width=220 --height=350  \
+    zenity --width=300 --height=350  \
 	     --title "Dead Targets" \
-	     --text-info --filename="/opt/sifter/files/pingtest_raw.fail" &
+	     --text-info --filename="/opt/sifter/files/pingtest.fail" &
 
 }
 
@@ -1641,7 +1635,7 @@ up_arg(){
 ##
 # G Extention Check/Update
 ##
-gexUpd(){
+gxUpd(){
 	if [[ -f "/usr/sbin/gSifter" ]]; then
 		wget https://raw.githubusercontent.com/Sifter-Ext/g/g-ex/.vs/yes.txt &>/dev/null
 		if [[ ! -f "yes.txt" ]]; then
@@ -1698,8 +1692,6 @@ update(){
     	    sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
     fi
     git fetch
-    wget https://raw.githubusercontent.com/s1l3nt78/sifter/master/.github/changelog
-	xterm -e bash changelog
     VER=$(git pull --ff-only)
     if [[ ${VER} == "Already up to date." ]]; then
         echo -e "${ORNG}"
@@ -1717,7 +1709,9 @@ update(){
 		    up_arg ${FILES}
 		    git pull --ff-only
 	    fi
-	            
+	    zenity --title "Sifter Changelog" \
+           --height=750 --width=800 \
+           --text-info --filename="/opt/sifter/.github/changelog" &>/dev/null        
         ##########################
         # Check For Full Upgrade #
         ##########################
