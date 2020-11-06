@@ -132,8 +132,6 @@ through to get the general idea. Most modules are explained along with demos of 
 		    
 Works on windows with linux-subsystem but please ensure docker is properly installed and configured, <br /> 
 following the instructions from <a href="https://docker.io">docker website</a><br />
-nMap doesn't work on windows, due to port issues<br />
-but Zenmap (nMap GUI) can be used instead. A few other issues may arise too.<br />
 Untested on mac, though theoretically the same should apply to mac as windows - regarding docker install & tools
 
 ---------------------------------------------------------------------------------------------------------------------
