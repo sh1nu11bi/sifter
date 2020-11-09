@@ -645,7 +645,8 @@ exframes(){
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
 	echo -e "\n ${ORNG}1.${W} Metasploit           ${ORNG}3.${W} FuzzyDander ${NC}"
-	echo -e " ${ORNG}2.${W} Thoron 		 ${ORNG}4.${W} Back ${NC}"
+	echo -e " ${ORNG}2.${W} Thoron 		 ${ORNG}4.${W} CobaltStrike ${NC}"
+    echo -e " ${ORNG}5.${W} Back${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read EXF
@@ -692,7 +693,20 @@ exframes(){
             		fi
         	fi
 	elif [[ ${EXF} == "4" ]]; then
-		ex_mods
+		if [[ -f '/opt/sifter/modules/exmods/cstrike.sh' ]]; then
+            bash /opt/sifter/exmods/cstrike.sh
+        else
+            echo -e "${RED}This script is provided by the cPlug extention\n${YLW}Would you like to install this plugin? (requires your own copy of CobaltStrike)${NC}"
+            read GCS
+            if [[ ${GCS} == 'y' ]]; then
+                cd ~
+                git clone https://github.com/Sifter-Ex/cPlug
+                cd cPlug
+                bash plug-C.sh
+            fi
+        fi
+    elif [[ ${EXF} == "5" ]]; then
+        ex_mods
 	elif [[ ${EXF} == "cd "* ]]; then
 		DCK=$(pwd)
         echo ${EXF} > dtemp

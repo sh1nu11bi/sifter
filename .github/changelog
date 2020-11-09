@@ -1,6 +1,5 @@
 @Codename: Gemin1
-@Version : 10.6
-@Revision: M
+@Version : 11
 
 # Additions
 	XSS-Loader - XSS Payloader generator
@@ -18,13 +17,19 @@
 	
 	WebMap - Provides a graphical webpanel to interact with nMap
 
+	ThreatCheck - Takes a binary as input (either from a file on disk or a URL), splits it until it pinpoints 
+				  that exact bytes that the target engine will flag on and prints them to the screen. This can be helpful 
+				  when trying to identify the specific bad pieces of code in your tool/payload.
+
 # Released Plugins
     @G - GUI Overlay
         https://github.com/Sifter-Ex/gPlug 
     @F - DanderFuzz Exploitational Framework
         https://github.com/Sifter-Ex/fPlug 
-    @M - Malware Analysis plugin
+    @M - Malware Analysis Plugin
  	    https://github.com/Sifter-Ex/mPlug 
+	@C - CobaltStrike Framework Plugin
+		https://github.com/Sifter-Ex/cPlug
 
 # Info
 Inputting info into any menu screen brings up the Module Info Screen

@@ -7,3 +7,6 @@
 [submodule "gPlug"]
 	path = gPlug
 	url = https://github.com/Sifter-Ex/gPlug
+[submodule "cPlug"]
+	path = cPlug
+	url = https://github.com/Sifter-Ex/cPlug

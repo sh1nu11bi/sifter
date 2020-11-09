@@ -8,9 +8,9 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-	<img align="center" src="https://img.shields.io/badge/@Codename:-Gemin1-yellowgreen"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-10.6-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-M-green">
+	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
+	<img align="center" src="https://img.shields.io/badge/Version-11-red">
+	<!--<img align="center" src="https://img.shields.io/badge/Revision-M-green">-->
 </p>
 
 # *Sifter*
@@ -36,20 +36,15 @@
 	
 ---------------------------------------------------------------------------------------------------------------------
 
-# NOTE 
-	
-	[!] F.Plugin Installion has been fixed.
-
 # Release
 
-	@Codename: Gemin1
-	@Version : 10.6
-	@Revision: M
+	@Codename: Violet
+	@Version : 11
 
 <br>
-<em>[<strong>Gemin1's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
+<em>[<strong>Violet's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Gemin1's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v10.5f/sifter_10.5_F.deb"><strong>here</strong></a></em>
+<em>[<strong>Violet's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v11/sifter_11.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -65,14 +60,16 @@
 <br />&emsp;	'--> Built on top of <a href="https://github.com/GitSquared/edex-ui">eDEX-UI</a><br />
 - <a href="https://github.com/Sifter-Ex/f">F</a> - Sifter's <em>f</em> extention provides the DanderFuzz Exploitational Plugin for Sifter
 <br />&emsp; '--> Framework created by the <a href="#">EquationGroup</a> courtesy of <a href="#">The Shadow Brokers</a><br />
-  - <a href="https://github.com/Sifter-Ex/mPlug">M</a> - Sifter's <em>m</em> extention provided malware analysis tools.
+  - <a href="https://github.com/Sifter-Ex/mPlug">M</a> - Sifter's <em>m</em> extention provided malware analysis tools.<br />
+  - <a href="https://github.com/Sifter-Ex/cPlug">C</a> - Sifter's <em>c</em> extention is just a small script allowing CobaltStrike to be added to 
+  &emsp;&emsp; exploitation frameworks. (A copy of CobaltStrike will <strong>NOT</strong> be provided, this is for those who already have it.)
 </details>
 
 ---------------------------------------------------------------------------------------------------------------------
 
 # Additions:
 <details>
-	<summary><strong>__ Version: 10.6F _|_  Gemin1 __ </strong></summary>
+	<summary><strong>__ Version: 11 _|_ Violet __ </strong></summary>
 - <strong>XSS-Loader</strong> - XSS Payloader generator<br />
 - <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number<br />
 - <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
@@ -82,19 +79,9 @@
 - <strong>BetterSafetyKatz</strong> - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures using SharpSploit DInvoke to get it into memory<br />
 - <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session<br />
 - <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
+- <strong>ThreatCheck</strong> - Checks a binary from disk or URL splits it until it pinpoints that exact bytes that the target engine will flag on and prints them to the screen.<br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
 </em><br />
-</details>
-
----------------------------------------------------------------------------------------------------------------------
-
-<details>
-<summary># Removed</summary>
-
-- Omega's repo has been removed, therefore unavailable for new clones.
-<br/> If you already had omegas repo, you will still be able to use this module though.
-
-- SayDog has been removed due to being a program meant mainly for termux.
 </details>
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -149,7 +136,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 	
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v10.6m/sifter_10.6_M.deb; sudo dpkg -i sifter_10.6_M.deb; sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v11/sifter_11.deb; sudo dpkg -i sifter_11.deb; sifter
 	
 	
 	[!] For oneliner install (source), copy and paste the following into a terminal:
