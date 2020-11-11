@@ -1677,6 +1677,18 @@ mxUpd(){
 }
 
 ##
+# C Extention Check/Update
+##
+cxUpd(){
+    if [[ -f '/opt/sifter/modules/exmods/cstrike.sh' ]]; then
+        cd /opt/sifter/modules/exmods/
+        wget https://raw.githubusercontent.com/Sifter-Ex/cPlug/master/plug-C.sh
+        mv plug-C.sh cstrike.sh
+        echo -e "${ORNG}C ${YLW}Extention has been updated${NC}"
+    fi
+}
+
+##
 # F Extention Update
 ##
 fxUpd(){
@@ -1687,6 +1699,7 @@ fxUpd(){
         echo -e "${ORNG}F ${YLW}Extention has been updated.${NC}"
     fi
 }
+
 ##
 # Update Function
 ##
@@ -1697,10 +1710,10 @@ update(){
     echo -e "/  \`|_  _  _.;_/*._  _   |, _ ._.  |  |._  _| _.-+- _  __   "
     echo -e "\__.[ )(/,(_.| \|[ )(_]  | (_)[    |__|[_)(_](_] | (/,_)  *  * "
     echo -e "                    ._|                |                       ${NC}"
-    echo -e "${YLW}############################"                                                    	########################
-    echo -e "${YLW}# ${ORNG}Installed Version :${LP} 10.6 ${YLW}#${NC}"                                 ##    VERSION INFO    ##
-    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}M    ${YLW}#"                                      ##    UPDATE CHECK    ##
-    echo -e "${YLW}############################${NC}"                                               	########################
+    echo -e "${YLW}##########################"                                             ########################
+    echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11 ${YLW}#${NC}"                          ##    VERSION INFO    ##
+    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}C  ${YLW}#"                                       ##    UPDATE CHECK    ##
+    echo -e "${YLW}##########################${NC}"                                         ########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
     	    sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
@@ -1738,6 +1751,7 @@ update(){
 	    gxUpd
         mxUpd
         fxUpd
+        cxUpd
         sudo cp /opt/sifter/sifter -t /usr/sbin
         sudo chown $USER:$USER /opt/sifter --recursive
         sudo chown $USER:$USER /usr/sbin/sifter
