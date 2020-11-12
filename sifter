@@ -1442,9 +1442,9 @@ modules(){
     python3 /opt/sifter/extras/.mod.py
     echo -e "${NC}"
     ASTAT=$(cat /home/$USER/.config/.anon_status)
-    echo -e " ${W}=============================================================${NC}"
+    echo -e "${W}=============================================================${NC}"
     echo -e " ${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
-    echo -e " ${W}=============================================================\n ${ORNG}What would you like to do?\n ${W}=============================================================${NC}"
+    echo -e "${W}=============================================================\n ${ORNG}What would you like to do?\n${W}=============================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Information Gatherers           ${ORNG}11.${W} Cross-Site Scripting & SQLinjection${NC}"
     echo -e " ${ORNG}2.${W} Domain Reconnaissance           ${ORNG}12.${W} Password Tools${NC}"
     echo -e " ${ORNG}3.${W} Network Analysis                ${LP}13.${W} Malware Analysis${NC}"
@@ -1456,7 +1456,7 @@ modules(){
     echo -e " ${ORNG}9.${W} WebApp Scanning${NC}                 ${UBLUE}19.${NC}${W} Quit${NC}"
     echo -e " ${ORNG}10.${W} Operational Security ${NC}"
     echo -e "     ${W}& Threat Analysis"
-    echo -n " =============================#?: "
+    echo -n "=============================#?: "
     read MMOP
     if [[ ${MMOP} == "1" ]]; then
 	    info_mods
@@ -1516,13 +1516,13 @@ modules(){
 	    (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
-            echo -e "\n    ================================================" 
+            echo -e "\n   ================================================" 
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
             echo -e "${LP}Attempting to stop it now..."
             sudo anonsurf stop
             echo -e "${LP}Proxy Stopped${RED}!${NC}"
             echo "NO" > /home/$USER/.config/.anon_status
-            echo -e "\n    ================================================"
+            echo -e "\n   ================================================"
         fi
         RENCHK=$(sudo docker container ls | grep rengine)
         if [[ ${RENCHK} == "rengine_web_1" ]]; then
@@ -1559,13 +1559,13 @@ menu(){
     arg=$1
     ASTAT=$(cat /home/$USER/.config/.anon_status)   
     echo -e " ${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
-    echo -e " ${W}==================================================\n ${ORNG}What would you like to do?\n ${W}==================================================${NC}"
+    echo -e "${W}==================================================\n ${ORNG}What would you like to do?\n${W}==================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Check Hosts               ${ORNG}5.${W} View Results${NC}"
     echo -e " ${ORNG}2.${W} Edit Host List            ${ORNG}6.${W} Update${NC}"
     echo -e " ${ORNG}3.${W} Module Menu               ${ORNG}7.${W} Quit${NC}"
     echo -e " ${ORNG}4.${W} Anonymization${NC}"
     echo -e " ${W}"
-    echo -n " =============================#?: "
+    echo -n "=============================#?: "
     read -r MNOP
     if [[ ${MNOP} == "1" ]]; then                   # Check Hosts
 	    TARLIST=$(cat /opt/sifter/files/host_list.txt | grep "eg. target.com")
@@ -1593,14 +1593,14 @@ menu(){
         (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
-            echo -e "\n ================================================" 
+            echo -e "\n   ================================================" 
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
 	    sleep 2
             echo -e "${LP}Attempting to stop it now..."
             sudo anonsurf stop
             echo -e "${LP}Proxy Stopped${RED}!${NC}"
             echo "NO" > /home/$USER/.config/.anon_status
-            echo -e "\n ================================================"
+            echo -e "\n   ================================================"
         fi
         RENCHK=$(sudo docker container ls | grep rengine)
         if [[ ${RENCHK} == "rengine_web_1" ]]; then
