@@ -18,6 +18,9 @@ check(){
 }
 
 cd /opt/dnstwist
+sudo python3 -m pip install -r requirements.txt &>/dev/null
+sudo python3 -m pip install geoip &>/dev/null
+sudo python3 setup.py install &>/dev/null
 echo -e "${RED}"
 figlet -f mini "DnsTwist"
 echo -e "${NC}"
