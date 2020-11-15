@@ -1788,26 +1788,16 @@ t75(){
 # Ext # Plugin Installation #
 ####################
 plugExt(){
-																										# Remove Omega option from sifter script
 	##
-	# DanderFuzz Exploitaional Framework
+	# Check for Plugins
 	##
-	if [[ -d '/opt/sifter/fPlug' ]]; then
-		cd fPlug; bash plug-F.sh
+	if [[ -d '/opt/sifter/plugins' ]]; then
+		PD='/opt/sifter/plugins'
+		cd ${PD}/fPlug; bash plug-F.sh
+		cd ${PD}/gPlug; bash plug-G.sh
+		cd ${PD}/mPlug; bash plug-M.sh
+		cd ${PD}/cPlug; bash plug-C.sh
 	fi
-	##
-	# Graphical Interface
-	##
-	if [[ -d '/opt/sifter/gPlug' ]]; then
-		cd gPlug; bash plug-G.sh
-	fi
-	##
-	# Malware Analysis
-	##
-	if [[ -d '/opt/sifter/mPlug' ]]; then
-		cd mPlug; bash plug-M.sh
-	fi
-
 }
 
 
