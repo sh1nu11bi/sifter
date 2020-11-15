@@ -1791,12 +1791,38 @@ plugExt(){
 	##
 	# Check for Plugins
 	##
-	if [[ -d '/opt/sifter/plugins' ]]; then
-		PD='/opt/sifter/plugins'
-		cd ${PD}/fPlug; bash plug-F.sh
-		cd ${PD}/gPlug; bash plug-G.sh
-		cd ${PD}/mPlug; bash plug-M.sh
+	PD='/opt/sifter/plugins'
+	##
+	# C
+	##
+	if [[ -f '/opt/sifter/plugins/cPlug/plug-C.sh' ]]; then
 		cd ${PD}/cPlug; bash plug-C.sh
+	else 
+		rm -rf ${PD}/cPlug
+	fi
+	##
+	# F
+	##
+	if [[ -f '/opt/sifter/plugins/fPlug/plug-F.sh' ]]; then
+		cd ${PD}/fPlug; bash plug-F.sh
+	else 
+		rm -rf ${PD}/fPlug
+	fi
+	##
+	# G
+	##
+	if [[ -f '/opt/sifter/plugins/gPlug/plug-G.sh' ]]; then
+		cd ${PD}/gPlug; bash plug-G.sh
+	else 
+		rm -rf ${PD}/gPlug
+	fi
+	##
+	# M
+	##
+	if [[ -f '/opt/sifter/plugins/cPlug/plug-M.sh' ]]; then
+		cd ${PD}/mPlug; bash plug-M.sh
+	else 
+		rm -rf ${PD}/mPlug
 	fi
 }
 
