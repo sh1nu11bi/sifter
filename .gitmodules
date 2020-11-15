@@ -1,6 +1,3 @@
-[submodule "fPlug"]
-	path = fPlug
-	url = https://github.com/Sifter-Ex/fPlug
 [submodule "cPlug"]
 	path = cPlug
 	url = https://github.com/Sifter-Ex/cPlug
