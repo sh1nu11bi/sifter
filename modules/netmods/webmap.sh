@@ -16,6 +16,8 @@ URED='\033[4;31m'
 echo -e "${ORNG}"
 figlet -f mini "WebMap"
 echo -e "${NC}"
+sudo docker container rm webmap --force
+sudo rm /opt/WebMap/.token
 sudo docker run -d \
 			--name webmap \
 			-h webmap \
@@ -39,17 +41,14 @@ if [[ ! -f '/opt/WebMap/.browser' ]]; then
 fi
 echo -e "${YLW}Please enter the target IP or block: ${NC}"
 read TAR
+echo -e "${W}Please enter a name for this scan${NC}"
+read SN
 TKN=$(cat /opt/WebMap/.token)
 BRWS=$(cat /opt/WebMap/.browser)
 echo -e "${YLW}Your WebMap panel login token is: ${LBBLUE}${TKN}${NC}"
-sudo nmap -sT -A -T4 -oX /tmp/webmap/myscan.xml ${TAR} &
+sudo nmap -sT -A -T4 -oX /tmp/webmap/${SN}.xml ${TAR} &
 sleep 5
-${BRWS} http://localhost:8000
-echo -e "${RED}NOTE: ${YLW}Please enter ${URED}stop${NC} ${YLW}when you are done with WebMap:${NC}"
-read DONE
-if [[ ${DONE} == "stop" ]]; then
-	sudo docker stop webmap
-	sudo docker container rm webmap --force
-fi
+${BRWS} http://localhost:8000 &
+
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################

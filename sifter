@@ -339,9 +339,9 @@ net_mods(){
         echo -e "${RED}Would you like to run ${W}nMap ${RED}through terminal or use ${W}WebMap${RED}? (${W}n${RED}/${W}w${RED})${NC}"
         read WORN
         if [[ ${WORN} == "n" ]]; then
-		    bash /opt/sifter/modules/netmods/nmap.sh
+	    bash /opt/sifter/modules/netmods/nmap.sh
         elif [[ ${WORN} == "w" ]]; then
-            xterm -e bash /opt/sifter/modules/netmods/webmap.sh
+            bash /opt/sifter/modules/netmods/webmap.sh
         else
             echo -e "${YLW}Invalid option chosen${NC}"
             net_mods
