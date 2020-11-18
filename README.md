@@ -331,7 +331,6 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/shenril/Sitadel">Sitadel</a><br />
 - <a href="https://github.com/nyxgeek/onedrive_user_enum">OneFind</a><br />
 - <a href="https://github.com/Technowlogy-Pushpender/aapfinder">AapFinder</a><br />
-- <a href="https://github.com/mazen160/bfac">BFAC</a><br />
 - <a href="https://github.com/yogeshojha/rengine">reNgine</a><br />
 </details>
 
