@@ -86,6 +86,16 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
+<details>
+<summary><strong># Removed:</strong></summary>
+- BFAC
+<br />
+- Removing redundant tools to make Sifter less bulky
+</details>
+
+
+---------------------------------------------------------------------------------------------------------------------
+
 <h2>Menu:</h2>
 <p>
 <img align="center" src="https://raw.githubusercontent.com/s1l3nt78/sifter/master/docs/anon.png">
