@@ -1683,10 +1683,9 @@ mxUpd(){
 # C Extention Check/Update
 ##
 cxUpd(){
-    if [[ -f '/opt/sifter/modules/exmods/cstrike.sh' ]]; then
-        cd /opt/sifter/modules/exmods/
-        wget https://raw.githubusercontent.com/Sifter-Ex/cPlug/master/plug-C.sh
-        mv plug-C.sh cstrike.sh
+    if [[ -d '/opt/CSAgScripts' ]]; then
+        cd /opt/CSAgScripts
+        git fetch; git pull &>/dev/null
         echo -e "${ORNG}C ${YLW}Extention has been updated${NC}"
     fi
 }
