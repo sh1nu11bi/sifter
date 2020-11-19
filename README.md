@@ -80,6 +80,7 @@
 - <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session<br />
 - <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
 - <strong>ThreatCheck</strong> - Checks a binary from disk or URL splits it until it pinpoints that exact bytes that the target engine will flag on and prints them to the screen.<br />
+- <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
 </em><br />
 </details>
@@ -354,6 +355,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a><br />
 - <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
 - <a href="https://github.com/dsnezhkov/TruffleSnout">TruffleSNout</a><br />
+- <a href="https://github.com/SnaffCon/Snaffler">Snaffler</a><br />
 </details>
 
 <details>

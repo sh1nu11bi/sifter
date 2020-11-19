@@ -193,30 +193,7 @@ t4(){
 ############
 # 5 # BFAC #
 ############
-t5(){
-###
-# BFAC Removal
-###
-	if [[ -d '/opt/bfac' ]]; then
-		sudo rm -rf /opt/bfac
-	fi
-###
-# BFAC Install
-### 
-#	echo -e "${W}===========================================================================================${NC}"
-#	echo -e "${YLW}Checking for BFAC${NC}"
-#	if [[ -d '/opt/bfac' ]]; then
-#		echo -e "${ORNG}"
-#		echo -e "${NC}"
-#		cd /opt/bfac 
-#		sudo git fetch && sudo git pull &>/dev/null
-#	else
-#		cd /opt/
-#		sudo git clone https://github.com/mazen160/bfac.git
-#		cd bfac
-#		sudo python2 setup.py install
-#	fi
-}
+#t5(){}
 
 #################
 # 6 # RapidScan #
@@ -1834,7 +1811,17 @@ plugExt(){
 	fi
 }
 
-
+##########
+#  Misc  #
+##########
+misc(){
+	###
+	# BFAC Removal
+	###
+	if [[ -d '/opt/bfac' ]]; then
+		sudo rm -rf /opt/bfac
+	fi
+}
 
 ############################################################################################################
 #										########################## 										   #
@@ -1845,7 +1832,7 @@ t1							# SniffingBear
 t2							# Maryam
 t3							# HoneyCaught
 t4							# BlackWidow
-t5							# BFAC
+#t5							# BFAC
 t6							# RapidScan
 t7							# ShodanSploit
 t8							# Yuki-Chan
@@ -1917,7 +1904,9 @@ t73							# Ciphey
 t74							# XSS-Loader
 t75							# WebMap
 #########################################---------------
-plugExt					# Plugin Extentions
+plugExt						# Plugin Extentions
+#########################################---------------
+misc							# Removals
 #########################################---------------
 ########################################################
 ##  Move Sifter executable to local path (/usr/sbin)  ##

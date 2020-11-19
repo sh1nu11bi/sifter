@@ -1,4 +1,4 @@
-@Codename: Violet
+﻿@Codename: Violet
 @Version : 11
 
 # Additions
@@ -21,6 +21,9 @@
 				  that exact bytes that the target engine will flag on and prints them to the screen. This can be helpful 
 				  when trying to identify the specific bad pieces of code in your tool/payload.
 
+	Snaffler - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.
+
+
 # Released Plugins
     @G - GUI Overlay
         https://github.com/Sifter-Ex/gPlug 
@@ -31,8 +34,13 @@
 	@C - CobaltStrike Framework Plugin
 		https://github.com/Sifter-Ex/cPlug
 
-# Info
-Inputting info into any menu screen brings up the Module Info Screen
 
-# Note
-Running the tool update script is recommended for this update.
+# Check for tool updates?
+
+[  ] Critical. (Needed to install new tools)
+[✔] Not needed. (Unless you want to check for tool updates)
+
+
+# Info
+
+Inputting info into any menu screen brings up the Module Info Screen

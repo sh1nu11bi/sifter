@@ -275,7 +275,7 @@ exmodmenu(){
 opsecmenu(){
 	opsec=$(zenity --list --title  "Operational Security & Threat Analysis" \
 					--text "Choose an application" --radiolist  \
-					--column "Pick" --column "Catagory" FALSE "EventCleaner" FALSE "TruffleSNout" TRUE "Back"); 
+					--column "Pick" --column "Catagory" FALSE "EventCleaner" FALSE "TruffleSNout" FALSE "Snaffler" TRUE "Back"); 
 	echo ${opsec}
 	if [[ ${opsec} == "EventCleaner" ]]; then
 	   zenity --title "${opsec}" \
@@ -283,6 +283,10 @@ opsecmenu(){
 	   --text-info --filename="/opt/sifter/info/eventcleaner.info" &>/dev/null
 	elif [[ ${opsec} == "TruffleSNout" ]]; then
 	   bash /opt/sifter/info/TSNout/tsnout.sh &>/dev/null
+	elif [[ ${opsec} == "Snaffler" ]]; then
+		zenity --title "${opsec}" \
+	   --height=600 --width=800 \
+	   --text-info --filename="/opt/sifter/info/snaffle/snaffle.info" &>/dev/null
 	else
 		if [[ ${opsec} == "Back" ]]; then
 			cd /opt/sifter
