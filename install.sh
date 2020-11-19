@@ -190,10 +190,26 @@ t4(){
 	fi
 }
 
-############
-# 5 # BFAC #
-############
-#t5(){}
+#######################
+# 5 # WeblogicScanner #
+#######################
+t5(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for WeblogicScanner ${NC}"
+	if [[ -d '/opt/weblogicScanner' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "WeblogicScanner is already installed"
+		echo -e "${NC}"
+		cd /opt/weblogicScanner
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/0xn0ne/weblogicScanner
+		cd /opt/weblogicScanner
+		sudo python3 -m venv venv
+		sudo ./venv/bin/python3 -m pip install requests
+	fi
+}
 
 #################
 # 6 # RapidScan #
@@ -1832,7 +1848,7 @@ t1							# SniffingBear
 t2							# Maryam
 t3							# HoneyCaught
 t4							# BlackWidow
-#t5							# BFAC
+t5							# Weblogic
 t6							# RapidScan
 t7							# ShodanSploit
 t8							# Yuki-Chan

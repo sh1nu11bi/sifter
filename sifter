@@ -397,8 +397,8 @@ vuln_mods(){
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
 	echo -e "\n ${ORNG}1.${W} Flan               ${ORNG}5.${W} Nettacker ${NC}"
 	echo -e " ${ORNG}2.${W} RapidScan 	       ${ORNG}6.${W} F5 Big IP RCE ${NC}"
-	echo -e " ${ORNG}3.${W} Yuki-Chan          ${ORNG}7.${W} Back ${NC}"
-	echo -e " ${ORNG}4.${W} Katana-VFramework ${NC}"
+	echo -e " ${ORNG}3.${W} Yuki-Chan          ${ORNG}7.${W} WeblogicScanner ${NC}"
+	echo -e " ${ORNG}4.${W} Katana-VFramework   ${ORNG}8.${W} Back ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read VNM
@@ -415,6 +415,8 @@ vuln_mods(){
 	elif [[ ${VNM} == "6" ]]; then
 		bash /opt/sifter/modules/vulnscanners/bip.sh
 	elif [[ ${VNM} == "7" ]]; then
+        bash /opt/sifter/modules/vulnscanners/weblogic.sh
+    elif [[ ${VNM} == "8" ]]; then
 		modules
 	elif [[ ${VNM} == "cd "* ]]; then
 		DCK=$(pwd)

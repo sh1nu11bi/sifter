@@ -1,15 +1,9 @@
 ﻿@Codename: Violet
 @Version : 11
+@Revision: 1
 
 # Additions
-	XSS-Loader - XSS Payloader generator
-
-	DeadTrapv2 - An OSINT tool to track down footprints of a phone number
-	
-	GHunt - An OSINT tool to extract information from any Google Account using an email.
-	
-	TruffleSNout - Interactive AD discovery toolkit for offensive operators, focused on Situational awareness
-	
+		
 	BetterSafetyKatz - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures
                           using SharpSploit DInvoke to get it into memory
 	
@@ -22,6 +16,8 @@
 				  when trying to identify the specific bad pieces of code in your tool/payload.
 
 	Snaffler - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.
+
+	WeblogicScanner - weblogic Vulnerability Scanning Tool
 
 
 # Released Plugins
@@ -37,8 +33,8 @@
 
 # Check for tool updates?
 
-[  ] Critical. (Needed to install new tools)
-[✔] Not needed. (Unless you want to check for tool updates)
+[✔] Critical. (Needed to install new tools)
+[  ] Not needed. (Unless you want to check for tool updates)
 
 
 # Info

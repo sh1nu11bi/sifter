@@ -10,7 +10,7 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
 	<img align="center" src="https://img.shields.io/badge/Version-11-red">
-	<!--<img align="center" src="https://img.shields.io/badge/Revision-M-green">-->
+	<img align="center" src="https://img.shields.io/badge/Revision-1-green">
 </p>
 
 # *Sifter*
@@ -40,6 +40,7 @@
 
 	@Codename: Violet
 	@Version : 11
+	@Revision: 1
 
 <br>
 <em>[<strong>Violet's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
@@ -70,17 +71,12 @@
 # Additions:
 <details>
 	<summary><strong>__ Version: 11 _|_ Violet __ </strong></summary>
-- <strong>XSS-Loader</strong> - XSS Payloader generator<br />
-- <strong>DeadTrapv2</strong> - An OSINT tool to track down footprints of a phone number<br />
-- <strong>GHunt</strong> - GHunt is an OSINT tool to extract information from any Google Account using an email.<br />
-- <strong>TruffleSnout</strong> - Interactive AD discovery toolkit for offensive operators, focused on Situational awareness.<br /> 
-&emsp;&emsp;'--> Preference for OpSec.
-	<br />
 - <strong>BetterSafetyKatz</strong> - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures using SharpSploit DInvoke to get it into memory<br />
 - <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session<br />
 - <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
 - <strong>ThreatCheck</strong> - Checks a binary from disk or URL splits it until it pinpoints that exact bytes that the target engine will flag on and prints them to the screen.<br />
 - <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
+- <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
 </em><br />
 </details>
@@ -315,7 +311,8 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest">Yuki-Chan</a><br />
 - <a href="https://github.com/PowerScript/KatanaFramework">Katana-VF (Vulnerability Framework)</a><br />
 - <a href="https://github.com/zdresearch/OWASP-Nettacker">OWASP-Nettacker</a><br />
-- <a href="https://github.com/Technowlogy-Pushpender/CVE-2020-5902-Scanner">Big IP Remote Execution Scanner</a>
+- <a href="https://github.com/Technowlogy-Pushpender/CVE-2020-5902-Scanner">Big IP Remote Execution Scanner</a><br />
+- <a href="https://github.com/0xn0ne/weblogicScanner">WeblogicScanner</a><br />
 </details>
 
 <details>
