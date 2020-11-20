@@ -1784,6 +1784,29 @@ t75(){
 	fi
 }
 
+##################
+# 76 # PHPSploit #
+##################
+t76(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for PHPSploit ${NC}"
+	if [[ -d '/opt/phpsploit' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "PHPSploit is already installed"
+		echo -e "${NC}"
+		cd /opt/phpsploit
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		git clone https://github.com/nil0x42/phpsploit
+		cd phpsploit/
+		sudo python3 -m venv env
+		sudo ./env/bin/python3 -m pip install setuptools wheel
+		sudo ./env/bin/python3 -m pip install -r requirements.txt 
+	fi
+}
+
 #######################################################################################################################################
 ####################
 # Ext # Plugin Installation #
@@ -1919,6 +1942,7 @@ t72							# V3n0M-Scanner
 t73							# Ciphey
 t74							# XSS-Loader
 t75							# WebMap
+t76							# PHPSploit
 #########################################---------------
 plugExt						# Plugin Extentions
 #########################################---------------

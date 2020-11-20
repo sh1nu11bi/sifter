@@ -646,9 +646,9 @@ exframes(){
     ASTAT=$(cat /home/$USER/.config/.anon_status)
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-	echo -e "\n ${ORNG}1.${W} Metasploit           ${ORNG}3.${W} FuzzyDander ${NC}"
-	echo -e " ${ORNG}2.${W} Thoron 		 ${ORNG}4.${W} CobaltStrike ${NC}"
-    echo -e " ${ORNG}5.${W} Back${NC}"
+	echo -e "\n ${ORNG}1.${W} Metasploit           ${ORNG}4.${W} CobaltStrike ${NC}"
+	echo -e " ${ORNG}2.${W} Thoron 		 ${ORNG}5.${W} PHPSploit ${NC}"
+    echo -e " ${ORNG}3.${W} FuzzyDander     ${ORNG}6.Back ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read EXF
@@ -708,6 +708,8 @@ exframes(){
             fi
         fi
     elif [[ ${EXF} == "5" ]]; then
+        bash /opt/sifter/exmods/phpsploit.sh
+    elif [[ ${EXF} == "6" ]]; then
         ex_mods
 	elif [[ ${EXF} == "cd "* ]]; then
 		DCK=$(pwd)
