@@ -48,7 +48,7 @@ FIRSTTIME=1
 ##############################
 # Help Menu #
 #############
-usage() {                                    	  
+usage() {
 	echo -e  "${YLW}Sifter Help Menu${NC}"
 	echo "*****************"
 	echo "+"
@@ -524,7 +524,7 @@ elevatePrivs(){
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
 		elevatePrivs
 	fi
-    echo -e "${NC}"  
+    echo -e "${NC}"
 }
 #####################
 # Post Exploitation #
@@ -724,7 +724,7 @@ exframes(){
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
 		ex_mods
 	fi
-    echo -e "${NC}"               
+    echo -e "${NC}"
 }
 ########################
 # Exploitation Modules #
@@ -1222,9 +1222,9 @@ opsec(){
     ASTAT=$(cat /home/$USER/.config/.anon_status)
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-    echo -e "\n ${ORNG}1.${W} EventCleaner               ${ORNG}2.${W} Threat Dragon${NC}"
+    echo -e "\n ${ORNG}1.${W} EventCleaner           ${ORNG}2.${W} Threat Dragon${NC}"
     echo -e " ${ORNG}3.${W} TruffleSnout           ${ORNG}4.${W} Snaffler ${NC}"
-    echo -e " ${ORNG}5.${W} Back ${NC}"
+    echo -e " ${ORNG}5.${W} Malware Analysis	   ${ORNG}6.${W} Back ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
     read OSTM
@@ -1237,6 +1237,19 @@ opsec(){
     elif [[ ${OSTM} == "4" ]]; then
         bash /opt/sifter/modules/opsec/snaffle/snaffler.sh
     elif [[ ${OSTM} == "5" ]]; then
+			if [[ -d '/opt/sifter/modules/mPlug' ]]; then
+					bash /opt/sifter/modules/mPlug/mPlug.sh
+			else
+					echo -e "${ORNG}[ ${RED}! ${ORNG}] ${W}You do not seem to have the M Extention installed!\n ${LGRY}Would you like to install it now? ${YLW}(y/n)${NC}"
+					read MINS
+					if [[ ${MINS} == "y" ]]; then
+							cd
+							git clone https://github.com/Sifter-Ex/mPlug
+							cd mPlug
+							bash plug-M.sh
+					fi
+			fi
+		elif [[ ${OSTM} == "6" ]]; then
         modules
     elif [[ ${OSTM} == "cd "* ]]; then
 	    DCK=$(pwd)
@@ -1293,7 +1306,7 @@ hostcheck(){
 
 #############################
 #  Live or Dead Host Check  #	Example Data
-############################# 
+#############################
 check_hosts(){
     TARLIST=$(cat /opt/sifter/files/host_list.txt | grep "eg. target.com")
     if [[ ${TARLIST} == "eg. target.com" ]]; then
@@ -1406,7 +1419,7 @@ proxysystem(){
     proxyO=$(zenity --list --title  "${ENA}" \
 		--text "What would you like to do?" --radiolist  \
 		--height=350 --width=500 \
-		--column "Pick" --column "Catagory" ${START} ${STOP} FALSE "Back") &>/dev/null; 
+		--column "Pick" --column "Catagory" ${START} ${STOP} FALSE "Back") &>/dev/null;
     echo ${proxyO}
     touch out.log
     if [[ ${proxyO} == "Start" ]]; then
@@ -1428,7 +1441,7 @@ proxysystem(){
 		   --pulsate --text="AnonSurf is sending traffic through the ClearWeb..." \
                    --auto-kill --auto-close \
                    --percentage=10) >out.log &>/dev/null
-  
+
          echo "NO" > /home/$USER/.config/.anon_status
 	 rm out.log
     else
@@ -1450,13 +1463,13 @@ modules(){
     echo -e "${W}=============================================================\n ${ORNG}What would you like to do?\n${W}=============================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Information Gatherers           ${ORNG}11.${W} Cross-Site Scripting & SQLinjection${NC}"
     echo -e " ${ORNG}2.${W} Domain Reconnaissance           ${ORNG}12.${W} Password Tools${NC}"
-    echo -e " ${ORNG}3.${W} Network Analysis                ${LP}13.${W} Malware Analysis${NC}"
-    echo -e " ${ORNG}4.${W} WebScanning & Enumeration       ${RED}14.${W} View Results${NC}"
-    echo -e " ${ORNG}5.${W} Vulnerability Scanning          ${RED}15.${W} Anonymization${NC}"
-    echo -e " ${ORNG}6.${W} HoneyPot Detection Systems      ${LP}16.${W} When Time Moves Slowly*${NC}"
-    echo -e " ${ORNG}7.${W} Router Tools                    ${YLW}17.${NC}${W} Check For Missing Tools${NC}"
-    echo -e " ${ORNG}8.${W} Exploitation Tools              ${BIGreen}18.${W} Main Menu${NC}"
-    echo -e " ${ORNG}9.${W} WebApp Scanning${NC}                 ${UBLUE}19.${NC}${W} Quit${NC}"
+    echo -e " ${ORNG}3.${W} Network Analysis                ${BIGreen}13.${W} View Results${NC}"
+    echo -e " ${ORNG}4.${W} WebScanning & Enumeration       ${RED}14.${W} Anonymization${NC}"
+    echo -e " ${ORNG}5.${W} Vulnerability Scanning          ${RED}15.${W} When Time Moves Slowly*${NC}"
+    echo -e " ${ORNG}6.${W} HoneyPot Detection Systems      ${LP}16.${W} Check For Missing Tools${NC}"
+    echo -e " ${ORNG}7.${W} Router Tools                    ${YLW}17.${NC}${W} Main Menu${NC}"
+    echo -e " ${ORNG}8.${W} Exploitation Tools              ${UBLUE}18.${NC}${W} Quit${NC}"
+    echo -e " ${ORNG}9.${W} WebApp Scanning${NC}                  ${NC}"
     echo -e " ${ORNG}10.${W} Operational Security ${NC}"
     echo -e "     ${W}& Threat Analysis"
     echo -n "=============================#?: "
@@ -1486,24 +1499,11 @@ modules(){
     elif [[ ${MMOP} == "12" ]]; then
 	    pass_tools
     elif [[ ${MMOP} == "13" ]]; then
-        if [[ -d '/opt/sifter/modules/mPlug' ]]; then
-            bash /opt/sifter/modules/mPlug/mPlug.sh
-        else
-            echo -e "${ORNG}[ ${RED}! ${ORNG}] ${W}You do not seem to have the M Extention installed!\n ${LGRY}Would you like to install it now? ${YLW}(y/n)${NC}"
-            read MINS
-            if [[ ${MINS} == "y" ]]; then
-                cd
-                git clone https://github.com/Sifter-Ex/mPlug
-                cd mPlug
-                bash plug-M.sh
-            fi
-        fi
+			results
     elif [[ ${MMOP} == "14" ]]; then
-	    results
-    elif [[ ${MMOP} == "15" ]]; then
 	    proxysystem
-    elif [[ ${MMOP} == "16" ]]; then
-	    echo -e "${RED}This module is to pass some time during long scans \nsuch as nMap (Full Port Scan) or RapidScan${NC}"
+    elif [[ ${MMOP} == "15" ]]; then
+			echo -e "${RED}This module is to pass some time during long scans \nsuch as nMap (Full Port Scan) or RapidScan${NC}"
         echo -e "${W}Would you like to continue? (${YLW}y${W}/${YLW}n${W})"
         read PTOPT
         if [[ ${PTOPT} == 'y' ]]; then
@@ -1511,15 +1511,15 @@ modules(){
         else
             modules
         fi
-    elif [[ ${MMOP} == "17" ]]; then
+    elif [[ ${MMOP} == "16" ]]; then
 	    bash /opt/sifter/info/tool_check.sh
-    elif [[ ${MMOP} == "18" ]]; then
+    elif [[ ${MMOP} == "17" ]]; then
 	    menu
-    elif [[ ${MMOP} == "19" ]]; then
+    elif [[ ${MMOP} == "18" ]]; then
 	    (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
-            echo -e "\n   ================================================" 
+            echo -e "\n   ================================================"
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
             echo -e "${LP}Attempting to stop it now..."
             sudo anonsurf stop
@@ -1531,7 +1531,7 @@ modules(){
         if [[ ${RENCHK} == "rengine_web_1" ]]; then
             sudo docker stop rengine_proxy_1 rengine_web_1 rengine_db_1
         fi
-        exit 0	    
+        exit 0
     elif ${MMOP} == "cd "* ]]; then
         DCK=$(pwd)
         echo ${MMOP} > dtemp
@@ -1546,7 +1546,7 @@ modules(){
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
         modules
-    fi 
+    fi
     echo -e "${NC}"
 }
 
@@ -1560,7 +1560,7 @@ menu(){
     echo -e "${NC}"
     python3 /opt/sifter/extras/ban2.py
     arg=$1
-    ASTAT=$(cat /home/$USER/.config/.anon_status)   
+    ASTAT=$(cat /home/$USER/.config/.anon_status)
     echo -e " ${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e "${W}==================================================\n ${ORNG}What would you like to do?\n${W}==================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Check Hosts               ${ORNG}5.${W} View Results${NC}"
@@ -1596,7 +1596,7 @@ menu(){
         (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
-            echo -e "\n   ================================================" 
+            echo -e "\n   ================================================"
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
 	    sleep 2
             echo -e "${LP}Attempting to stop it now..."
@@ -1740,7 +1740,7 @@ update(){
 	    fi
 	    zenity --title "Sifter Changelog" \
            --height=750 --width=800 \
-           --text-info --filename="/opt/sifter/.github/changelog" &>/dev/null        
+           --text-info --filename="/opt/sifter/.github/changelog" &>/dev/null
         ##########################
         # Check For Full Upgrade #
         ##########################
@@ -1769,7 +1769,7 @@ if [[ ${STLTH} == "--stealth" ]]; then
     echo -e " ${W}===========================================${NC}"
     echo -e "${LP}Starting Sifter in ${URED}Anonymous${NC} ${LP}mode${NC}"
     sudo anonsurf start
-    echo "YES" > /home/$USER/.config/.anon_status      
+    echo "YES" > /home/$USER/.config/.anon_status
     echo -e " ${W}===========================================${NC}"
     menu
 fi
@@ -1875,7 +1875,7 @@ while getopts "a:WndwirmeopcvRguhI" options
             echo -e "${NC}"
             routertools
             ;;
-	    
+
 	o)
 	    echo -e "${LP}"
 	    figlet -f mini "OpSec & Threat Analysis"
@@ -1912,7 +1912,7 @@ while getopts "a:WndwirmeopcvRguhI" options
             echo -e "${RED}"
             figlet -f mini "Module Info"
             echo -e "${NC}"
-            xterm -e bash /opt/sifter/info/info.sh & 
+            xterm -e bash /opt/sifter/info/info.sh &
             ;;
 
         g)
