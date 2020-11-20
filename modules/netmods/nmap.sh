@@ -12,6 +12,10 @@ BRED='\033[1;31m'
 UPURPLE='\033[4;35m'
 UBLUE='\033[4;34m'
 URED='\033[4;31m'
+if [[ ! -d '/opt/sifter/results/nMap' ]]; then
+	sudo chown $USER:$USER -R /opt/sifter/results
+	mkdir /opt/sifter/results/nMap
+fi 
 multi() {
 	options=("Full Port" "Common Vulnerabilities" "UDP Port Scan" "Back")
 		select opts in "${options[@]}"
