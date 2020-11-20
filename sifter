@@ -1641,6 +1641,17 @@ up_arg(){
     echo $7 >> /opt/sifter/temp.log
     echo $8 >> /opt/sifter/temp.log
     echo $9 >> /opt/sifter/temp.log
+    echo $10 >> /opt/sifter/temp.log
+    echo $11 >> /opt/sifter/temp.log
+    echo $12 >> /opt/sifter/temp.log
+    echo $13 >> /opt/sifter/temp.log
+    echo $14 >> /opt/sifter/temp.log
+    echo $15 >> /opt/sifter/temp.log
+    echo $16 >> /opt/sifter/temp.log
+    echo $17 >> /opt/sifter/temp.log
+    echo $18 >> /opt/sifter/temp.log
+    echo $19 >> /opt/sifter/temp.log
+    echo $20 >> /opt/sifter/temp.log
 
     for UFILES in `cat /opt/sifter/temp.log`
        	        do
