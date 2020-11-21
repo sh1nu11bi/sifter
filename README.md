@@ -76,7 +76,9 @@
 - <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
 - <strong>ThreatCheck</strong> - Checks a binary from disk or URL splits it until it pinpoints that exact bytes that the target engine will flag on and prints them to the screen.<br />
 - <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
-- <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool
+- <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
+- <strong>PHPSploit</strong> - Full-featured C2 framework which silently persists on webserver via polymorphic PHP oneliner<br />
+<br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
 </em><br />
 </details>
@@ -252,10 +254,9 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 &emsp;&emsp;- Danderspritz<br />
 	&emsp;(Provided by the <a href="https://github.com/Sifter-Ex/f">F</a> plugin.)<br />
 <br />
-+ <a href="#">NevrrMore</a> - Private Exploitation framework I've been developing that will<br />
-&emsp;&emsp;<strong>not</strong> be released opensource. Due to certain 0days and other exploits/tools<br />
-&emsp;&emsp;it would cause too much unintentional/illintentioned damage.<br />
-<br />
++ <a href="#">CobaltStrike</a><br />
+	&emsp; (Provided by the <a href="https://github.com/Sifter-Ex/cPlug">C</a> plugin.)<br />
++ <a href="https://github.com/nil0x42/phpsploit">PHPSploit</a><br />
 + <a href="https://github.com/entynetproject/thoron">Thoron</a><br />
 + <a href="https://metasploit.com">Metasploit</a><br />
 </details>
