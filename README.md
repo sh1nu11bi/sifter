@@ -10,7 +10,7 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
 	<img align="center" src="https://img.shields.io/badge/Version-11-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-1-green">
+	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
 </p>
 
 # *Sifter*
@@ -40,7 +40,7 @@
 
 	@Codename: Violet
 	@Version : 11
-	@Revision: 1
+	@Revision: 2
 
 <br>
 <em>[<strong>Violet's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
@@ -70,7 +70,7 @@
 
 # Additions:
 <details>
-	<summary><strong>__ Version: 11 _|_ Violet __ </strong></summary>
+	<summary><strong>__ Version: 11.r2 _|_ Violet __ </strong></summary>
 - <strong>BetterSafetyKatz</strong> - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures using SharpSploit DInvoke to get it into memory<br />
 - <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session<br />
 - <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
@@ -78,6 +78,10 @@
 - <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
 - <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
 - <strong>PHPSploit</strong> - Full-featured C2 framework which silently persists on webserver via polymorphic PHP oneliner<br />
+- <strong>EvilNET</strong> - WiFi offensive toolkit.<br />
+- <strong>OSINTGram</strong> - Instagram OSINT tool<br />
+- <strong>XAttacker-3.0</strong> - Vulnerability Scanner & Auto Exploiter <br />
+- <strong>DroneSplit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br /> 
 <br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
 </em><br />
@@ -88,6 +92,10 @@
 <details>
 <summary><strong># Removed:</strong></summary>
 - BFAC
+<br />
+- Maryam
+<br />
+- ODIN
 <br />
 - Removing redundant tools to make Sifter less bulky
 </details>

@@ -135,19 +135,22 @@ t1(){
 ##############
 t2(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for Maryam${NC}"
-	if [[ -d '/opt/Maryam' ]]; then
+	echo -e "${YLW}Checking for OSINTGram ${NC}"
+	if [[ -d '/opt/Osintgram' ]]; then
 		echo -e "${ORNG}"
-		figlet -f mini "Maryam is already installed"
+		figlet -f mini "OSINTGram is already installed"
 		echo -e "${NC}"
-		cd /opt/Maryam
+		cd /opt/Osintgram
 		sudo git fetch && sudo git pull &>/dev/null
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	else
 		cd /opt/
-		sudo git clone https://github.com/saeeddhqan/Maryam.git
-		cd Maryam
-		sudo pip install -r requirements
-		sudo chmod +x maryam
+		sudo git clone https://github.com/Datalux/Osintgram
+		cd Osintgram
+		sudo python3 -m venv env
+		sudo ./env/bin/python3 -m pip install wheel
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
+		sudo mkdir config
 	fi
 }
 ###################
@@ -1283,18 +1286,21 @@ t53(){
 #############
 t54(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for ODIN${NC}"
-	if [[ -d '/opt/ODIN' ]]; then
+	echo -e "${YLW}Checking for EvilNET ${NC}"
+	if [[ -d '/opt/EvilNet' ]]; then
 		echo -e "${ORNG}"
-		figlet -f mini "ODIN is already installed"
+		figlet -f mini "EvilNET is already installed"
 		echo -e "${NC}"
-		cd /opt/ODIN
+		cd /opt/EvilNet
 		sudo git fetch && sudo git pull &>/dev/null
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	else
 		cd /opt
-		sudo git clone https://github.com/chrismaddalena/ODIN
-		cd ODIN/setup
-		sudo python3 setup_check.py
+		sudo git clone https://github.com/Matrix07ksa/EvilNet
+		cd EvilNet
+		sudo python3 -m venv env
+		sudo ./env/bin/python3 -m pip install wheel
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1779,7 +1785,7 @@ t75(){
 		cd /opt
 		sudo git clone https://github.com/DeadNumbers/WebMap
 		if [[ ! -d '/tmp/webmap' ]]; then
-			mkdir /tmp/webmap
+			sudo mkdir /tmp/webmap
 		fi
 	fi
 }
@@ -1799,7 +1805,7 @@ t76(){
 		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	else
 		cd /opt
-		git clone https://github.com/nil0x42/phpsploit
+		sudo git clone https://github.com/nil0x42/phpsploit
 		cd phpsploit/
 		sudo python3 -m venv env
 		sudo ./env/bin/python3 -m pip install setuptools wheel
@@ -1807,6 +1813,54 @@ t76(){
 	fi
 }
 
+####################
+# 77 # DroneSploit #
+###################
+t77(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for DroneSploit ${NC}"
+	if [[ -d '/opt/dronesploit' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "DroneSploit is already installed"
+		echo -e "${NC}"
+		cd /opt/dronesploit
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		echo -e "${ORNG}DroneSploit is an optional tool\n${W}Would you like to install it?${NC}"
+		read DSANS
+		if [[ ${DSANS} == "y" ]]; then
+			sudo git clone https://github.com/dhondta/dronesploit
+			cd phpsploit/
+			sudo python3 -m venv env
+			sudo ./env/bin/python3 -m pip install setuptools wheel
+			sudo ./env/bin/python3 -m pip install -r requirements.txt
+			sudo ./env/bin/python3 setup.py install
+		fi
+	fi
+}
+
+####################
+# 78 # XAttacker.3 #
+####################
+t78(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for XAttacker-3.0 ${NC}"
+	if [[ -d '/opt/XAttacker-3.0' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "XAttacker-3.0 is already installed"
+		echo -e "${NC}"
+		cd /opt/XAttacker-3.0
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/Proxysec/XAttacker-3.0
+		cd XAttacker-3.0/
+		sudo python2 -m pip install request colorama
+		sudo python3 -m pip install request colorama
+	fi
+}
 #######################################################################################################################################
 ####################
 # Ext # Plugin Installation #
@@ -1868,7 +1922,7 @@ misc(){
 #										##########################										   #
 ############################################################################################################
 t1							# SniffingBear
-t2							# Maryam
+t2							# OsintGram
 t3							# HoneyCaught
 t4							# BlackWidow
 t5							# Weblogic
@@ -1920,7 +1974,7 @@ t50							# Email2Phone
 t51							# Intrigue-Core
 t52							# GHunt
 t53							# finDOM-XSS
-t54							# ODIN
+t54							# EvilNET
 t55							# OSINT-Framework
 t56							# UFONet
 t57							# CardPwn
@@ -1943,6 +1997,8 @@ t73							# Ciphey
 t74							# XSS-Loader
 t75							# WebMap
 t76							# PHPSploit
+t77							# DroneSploit
+t78							# XAttacker-3
 #########################################---------------
 plugExt						# Plugin Extentions
 #########################################---------------
@@ -1954,7 +2010,7 @@ misc							# Removals
 cd /opt
 sudo chown $USER:$USER /opt/sifter --recursive
 chmod +x /opt/sifter --recursive
-chmod +x /opt/sifter/info/info.sh
+chmod +x /opt/sifter/files/info/info.sh
 cd sifter
 sudo cp sifter -t /usr/sbin
 sudo chown $USER:$USER /usr/sbin/sifter

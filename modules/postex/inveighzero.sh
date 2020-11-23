@@ -22,7 +22,7 @@ if [[ ${KD} == "" ]]; then
 else
     COM='kdialog --geometry 600x800 --textbox'
 fi
-${COM} /opt/sifter/info/IZUsage.info
+${COM} /opt/sifter/files/info/IZUsage.info
 sleep 3
 python3 /opt/sfter/extras/ban.py
 

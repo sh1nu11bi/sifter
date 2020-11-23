@@ -19,10 +19,10 @@ sleep 5
 # General Info
 zenity --title "Snaffler | General Info" \
 	   		--height=600 --width=800 \
-			--text-info --filename="/opt/sifter/info/snaffle/snaffler.info" &>/dev/null
+			--text-info --filename="/opt/sifter/files/info/snaffle/snaffler.info" &>/dev/null
 # Usage Info
 zenity --title "Snaffler | Usage Info" \
 	   		--height=600 --width=800 \
-			--text-info --filename="/opt/sifter/info/snaffle/snaffler_usage.info" &>/dev/null
+			--text-info --filename="/opt/sifter/files/info/snaffle/snaffler_usage.info" &>/dev/null
 			
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################		

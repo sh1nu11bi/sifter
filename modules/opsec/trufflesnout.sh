@@ -21,6 +21,6 @@ echo -e "${W}3.${YLW} Directory${NC}"
 echo -e "${W}4.${YLW} Utilities${NC}\n"
 echo -e "${W}Usage examples have been provided for use.${NC}"
 sleep 5
-bash /opt/sifter/info/TSNout/tsnout.sh &
+bash /opt/sifter/files/info/TSNout/tsnout.sh &
 			
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################		

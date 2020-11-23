@@ -30,8 +30,8 @@ cd /opt/KatanaFramework
 echo -e "${RED}NOTE: ${YLW}A small command example list will be provided to give you an idea\nof how to run Katana. If you still have trouble follow this link\n${ORNG}https://github.com/PowerScript/KatanaFramework/wiki/How-to-use${NC}"
 sleep 2
 echo -e "\n${LP}"
-${COM} /opt/sifter/info/ktf_com.md
-echo ""
+${COM} /opt/sifter/files/info/ktf_com.md
+echo "${NC}"
 sleep 5
 sudo java -jar ktf.gui.jar
 

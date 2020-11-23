@@ -18,7 +18,7 @@ echo -e "${YLW}Would you like to see info on EvClean for example usage?(y/n)${NC
 read EVINFO
 if [[ ${EVINFO} == "y" ]]; then
 	zenity --title "EventCleaner" \
-	   --text-info --filename="/opt/sifter/info/eventcleaner.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/eventcleaner.info" &>/dev/null
 fi
 echo -e "	============================================"
 

@@ -11,44 +11,44 @@ credmenu(){
 	if [[ ${credinfo} == "Seeker" ]]; then
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/seeker.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/seeker.info" &>/dev/null
 	elif [[ ${credinfo} == "xRay" ]]; then
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/xray.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/xray.info" &>/dev/null
 	elif [[ ${credinfo} == "theHarvester" ]]; then
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/theHarvester.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/theHarvester.info" &>/dev/null
 	elif [[ ${credinfo} == "Osmedeus" ]]; then
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/osmedeus.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/osmedeus.info" &>/dev/null
 	elif [[ ${credinfo} == "ReconSpider" ]]; then
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/reconspider.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/reconspider.info" &>/dev/null
 	elif [[ ${credinfo} == "Maryam" ]]; then
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/maryam.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/maryam.info" &>/dev/null
 	elif [[ ${credinfo} == "CredNinja" ]]; then
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/credninja.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/credninja.info" &>/dev/null
 	elif [[ ${credinfo} == "SpiderFoo7" ]]; then
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/spiderfoot.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/spiderfoot.info" &>/dev/null
 	elif [[ ${credinfo} == "ODIN" ]]; then
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/odin.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/odin.info" &>/dev/null
 	elif [[ ${credinfo} == "GHnut" ]]; then
-		eom /opt/sifter/info/ghunt.png &
+		eom /opt/sifter/files/info/ghunt.png &
 	   zenity --title "${credinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/ghunt.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/ghunt.info" &>/dev/null
 	else
 		if [[ ${credinfo} == "Back" ]]; then
 			cd /opt/sifter
@@ -66,11 +66,11 @@ dommenu(){
 	if [[ ${dominfo} == "Armory" ]]; then
 	   zenity --title "${dominfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/armory.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/armory.info" &>/dev/null
 	elif [[ ${dominfo} == "aSnip" ]]; then
 	   zenity --title "${dominfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/asnip.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/asnip.info" &>/dev/null
 	else
 		if [[ ${dominfo} == "Back" ]]; then
 			cd /opt/sifter
@@ -88,27 +88,27 @@ webappmenu(){
 	if [[ ${webappinfo} == "Sitadel" ]]; then
 	   zenity --title "${webappinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/sitadel.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/sitadel.info" &>/dev/null
 	elif [[ ${webappinfo} == "AapFinder" ]]; then
 	   zenity --title "${webappinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/aapfinder.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/aapfinder.info" &>/dev/null
 	elif [[ ${webappinfo} == "BFAC" ]]; then
 	   zenity --title "${webappinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/bfac.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/bfac.info" &>/dev/null
 	elif [[ ${webappinfo} == "OneFind" ]]; then
 	   zenity --title "${webappinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/onedrive.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/onedrive.info" &>/dev/null
 	elif [[ ${webappinfo} == "XSStrike" ]]; then
 	   zenity --title "${webappinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/xsstrike.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/xsstrike.info" &>/dev/null
 	elif [[ ${webappinfo} == "XSS-Freak" ]]; then
 	   zenity --title "${webappinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/XSS-Freak.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/XSS-Freak.info" &>/dev/null
 	else
 		if [[ ${webappinfo} == "Back" ]]; then
 			cd /opt/sifter
@@ -127,7 +127,7 @@ honeymenu(){
 	if [[ ${honey_info} == "HoneyTel" ]]; then
 	   zenity --title "${honey_info}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/honeytel.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/honeytel.info" &>/dev/null
 	else
 		if [[ ${honey_info} == "Back" ]]; then
 			cd /opt/sifter
@@ -145,19 +145,19 @@ vulnmenu(){
 	if [[ ${vulninfo} == "Flan" ]]; then
 	   zenity --title "${vulninfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/flan.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/flan.info" &>/dev/null
 	elif [[ ${vulninfo} == "RapidScan" ]]; then
 	   zenity --title "${vulninfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/rapidscan.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/rapidscan.info" &>/dev/null
 	elif [[ ${vulninfo} == "Yuki-Chan" ]]; then
 	   zenity --title "${vulninfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/yuki.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/yuki.info" &>/dev/null
 	elif [[ ${vulninfo} == "OWASP-Nettacker" ]]; then
 	   zenity --title "${vulninfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/owasp.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/owasp.info" &>/dev/null
 	else
 		if [[ ${vulninfo} == "Back" ]]; then
 			cd /opt/sifter
@@ -176,15 +176,15 @@ web_netmenu(){
 	if [[ ${web_netinfo} == "BlackWidow" ]]; then
 	   zenity --title "${web_netinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/blackwidow.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/blackwidow.info" &>/dev/null
 	elif [[ ${web_netinfo} == "AttackSurfaceMapper" ]]; then
 	   zenity --title "${web_netinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/asm.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/asm.info" &>/dev/null
 	elif [[ ${web_netinfo} == "wafw00f" ]]; then
 	   zenity --title "${web_netinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/wafw00f.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/wafw00f.info" &>/dev/null
 	else
 		if [[ ${web_netinfo} == "Back" ]]; then
 			cd /opt/sifter
@@ -202,19 +202,19 @@ postmenu(){
 	if [[ ${postinfo} == "Omega" ]]; then
 	   zenity --title "${postinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/omega.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/omega.info" &>/dev/null
 	elif [[ ${postinfo} == "WinPwn" ]]; then
 	   zenity --title "${postinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/WinPwn.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/WinPwn.info" &>/dev/null
 	elif [[ ${postinfo} == "ACLight2" ]]; then
 	   zenity --title "${postinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/aclight.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/aclight.info" &>/dev/null
 	elif [[ ${postinfo} == "InveighZero" ]]; then
 	   zenity --title "${postinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/inveighzero.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/inveighzero.info" &>/dev/null
 	else
 		if [[ ${postinfo} == "Back" ]]; then
 			cd /opt/sifter
@@ -233,35 +233,35 @@ exmodmenu(){
 	if [[ ${exmodinfo} == "MkCheck" ]]; then
 	   zenity --title "${exmodinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/mkcheck.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/mkcheck.info" &>/dev/null
 	elif [[ ${exmodinfo} == "BruteDUM" ]]; then
 	   zenity --title "${exmodinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/brutedum.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/brutedum.info" &>/dev/null
 	elif [[ ${exmodinfo} == "ActiveReign" ]]; then
 	   zenity --title "${exmodinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/activereign.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/activereign.info" &>/dev/null
 	elif [[ ${exmodinfo} == "NekoBot" ]]; then
 	   zenity --title "${exmodinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/nekobot.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/nekobot.info" &>/dev/null
 	elif [[ ${exmodinfo} == "xShock" ]]; then
 	   zenity --title "${exmodinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/xshock.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/xshock.info" &>/dev/null
 	elif [[ ${exmodinfo} == "VulnX" ]]; then
 	   zenity --title "${exmodinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/vulnx.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/vulnx.info" &>/dev/null
 	elif [[ ${exmodinfo} == "WBruter" ]]; then
 	   zenity --title "${exmodinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/wbruter.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/wbruter.info" &>/dev/null
 	elif [[ ${exmodinfo} == "Thoron" ]]; then
 	   zenity --title "${exmodinfo}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/thoron.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/thoron.info" &>/dev/null
 	else
 		if [[ ${exmodinfo} == "Back" ]]; then
 			cd /opt/sifter
@@ -280,13 +280,13 @@ opsecmenu(){
 	if [[ ${opsec} == "EventCleaner" ]]; then
 	   zenity --title "${opsec}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/eventcleaner.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/eventcleaner.info" &>/dev/null
 	elif [[ ${opsec} == "TruffleSNout" ]]; then
-	   bash /opt/sifter/info/TSNout/tsnout.sh &>/dev/null
+	   bash /opt/sifter/files/info/TSNout/tsnout.sh &>/dev/null
 	elif [[ ${opsec} == "Snaffler" ]]; then
 		zenity --title "${opsec}" \
 	   --height=600 --width=800 \
-	   --text-info --filename="/opt/sifter/info/snaffle/snaffle.info" &>/dev/null
+	   --text-info --filename="/opt/sifter/files/info/snaffle/snaffle.info" &>/dev/null
 	else
 		if [[ ${opsec} == "Back" ]]; then
 			cd /opt/sifter

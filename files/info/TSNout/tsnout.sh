@@ -15,19 +15,19 @@ TSinfo(){
 	if [[ ${modinfo} == "Forest" ]]; then
 		zenity --title "Forest Usage" \
 	   		--height=600 --width=800 \
-			--text-info --filename="/opt/sifter/info/TSNout/forest.info" &>/dev/null
+			--text-info --filename="/opt/sifter/files/info/TSNout/forest.info" &>/dev/null
 	elif [[ ${modinfo} == "Domain" ]]; then
 		zenity --title "Domain Usage" \
 	   		--height=600 --width=800 \
-			--text-info --filename="/opt/sifter/info/TSNout/domain.info" &>/dev/null
+			--text-info --filename="/opt/sifter/files/info/TSNout/domain.info" &>/dev/null
 	elif [[ ${modinfo} == "Directory" ]]; then
 		zenity --title "Directory Usage" \
 	   		--height=600 --width=800 \
-			--text-info --filename="/opt/sifter/info/TSNout/directory.info" &>/dev/null
+			--text-info --filename="/opt/sifter/files/info/TSNout/directory.info" &>/dev/null
 	elif [[ ${modinfo} == "Utilities" ]]; then
 		zenity --title "Utilities Usage" \
 	   		--height=600 --width=800 \
-			--text-info --filename="/opt/sifter/info/TSNout/utils.info" &>/dev/null
+			--text-info --filename="/opt/sifter/files/info/TSNout/utils.info" &>/dev/null
 	else
 		exit 0
 	fi

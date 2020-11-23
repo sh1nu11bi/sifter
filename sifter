@@ -122,7 +122,7 @@ cred_mods(){
 		rm dtemp
         	cd ${DCK}/${DCC}
     elif [[ ${CMM} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -141,12 +141,11 @@ phone_mods(){
   ASTAT=$(cat /home/$USER/.config/.anon_status)
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-	echo -e "\n ${ORNG}1.${W} Seeker          ${ORNG}6.${W} ODIN ${NC}"
-	echo -e " ${ORNG}2.${W} Sherlock	    ${ORNG}7.${W} CardPwn ${NC}"
-	echo -e " ${ORNG}3.${W} Maryam          ${ORNG}8.${W} DeadTrap ${NC}"
-	echo -e " ${ORNG}4.${W} xRay            ${ORNG}9.${W} iKy ${NC}"
-	echo -e " ${ORNG}5.${W} Email2Phone     ${ORNG}10. ${W}GHunt ${NC}"
-    echo -e " ${ORNG}11.${W} Back ${NC}"
+	echo -e "\n ${ORNG}1.${W} Seeker          ${ORNG}6.${W} CardPwn ${NC}"
+	echo -e " ${ORNG}2.${W} Sherlock	    ${ORNG}7.${W} DeadTrap ${NC}"
+	echo -e " ${ORNG}3.${W} OSINTGram          ${ORNG}8.${W} iKy ${NC}"
+	echo -e " ${ORNG}4.${W} xRay            ${ORNG}9.${W} GHunt ${NC}"
+	echo -e " ${ORNG}5.${W} Email2Phone     ${ORNG}10. ${W}Back ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read PMM
@@ -155,22 +154,20 @@ phone_mods(){
 	elif [[ ${PMM} == "2" ]]; then
 		bash /opt/sifter/modules/credmods/sherlock.sh
 	elif [[ ${PMM} == "3" ]]; then
-		bash /opt/sifter/modules/credmods/maryam.sh
+		bash /opt/sifter/modules/credmods/osintgram.sh
 	elif [[ ${PMM} == "4" ]]; then
 		bash /opt/sifter/modules/credmods/xray.sh
 	elif [[ ${PMM} == "5" ]]; then
 		bash /opt/sifter/modules/credmods/e2p.sh
 	elif [[ ${PMM} == "6" ]]; then
-		bash /opt/sifter/modules/credmods/odin.sh
-	elif [[ ${PMM} == "7" ]]; then
 		bash /opt/sifter/modules/credmods/cardpwn.sh
-	elif [[ ${PMM} == "8" ]]; then
+	elif [[ ${PMM} == "7" ]]; then
 		deadtrap
-	elif [[ ${PMM} == "9" ]]; then
+	elif [[ ${PMM} == "8" ]]; then
 		bash /opt/sifter/modules/credmods/iky.sh
+	elif [[ ${PMM} == "9" ]]; then
+		bash /opt/sifter/modules/credmods/ghunt.sh
 	elif [[ ${PMM} == "10" ]]; then
-        bash /opt/sifter/modules/credmods/ghunt.sh
-    elif [[ ${PMM} == "11" ]]; then
         modules
 	elif [[ ${PMM} == "cd "* ]]; then
 		DCK=$(pwd)
@@ -181,7 +178,7 @@ phone_mods(){
         	rm dtemp
 		cd ${DCK}/${DCC}
     elif [[ ${PMM} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -219,7 +216,7 @@ info_mods(){
         	rm dtemp
 		cd ${DCK}/${DCC}
     elif [[ ${IFM} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -264,7 +261,7 @@ honey_mods(){
 		rm dtemp
 		cd ${DCK}/${DCC}
     elif [[ ${HPM} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -310,7 +307,7 @@ dom_mods(){
         	rm dtemp
 		cd ${DCK}/${DCC}
     elif [[ ${DMM} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -377,7 +374,7 @@ net_mods(){
         	rm dtemp
 		cd ${DCK}/${DCC}
     elif [[ ${NTM} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -395,10 +392,11 @@ vuln_mods(){
     ASTAT=$(cat /home/$USER/.config/.anon_status)
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-	echo -e "\n ${ORNG}1.${W} Flan               ${ORNG}5.${W} Nettacker ${NC}"
-	echo -e " ${ORNG}2.${W} RapidScan 	       ${ORNG}6.${W} F5 Big IP RCE ${NC}"
-	echo -e " ${ORNG}3.${W} Yuki-Chan          ${ORNG}7.${W} WeblogicScanner ${NC}"
-	echo -e " ${ORNG}4.${W} Katana-VFramework   ${ORNG}8.${W} Back ${NC}"
+	echo -e "\n ${ORNG}1.${W} Flan               ${ORNG}6.${W} F5 Big IP RCE ${NC}"
+	echo -e " ${ORNG}2.${W} RapidScan 	       ${ORNG}7.${W} WeblogicScanner ${NC}"
+	echo -e " ${ORNG}3.${W} Yuki-Chan          ${ORNG}8.${W} XAttacker-3.0 ${NC}"
+	echo -e " ${ORNG}4.${W} Katana-VFramework   ${ORNG}9.${W} Back${NC}"
+    echo -e " ${ORNG}5.${W} Netteacker${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read VNM
@@ -417,6 +415,8 @@ vuln_mods(){
 	elif [[ ${VNM} == "7" ]]; then
         bash /opt/sifter/modules/vulnscanners/weblogic.sh
     elif [[ ${VNM} == "8" ]]; then
+        bash /opt/sifter/modules/vulnscanner/xattacker.sh
+    elif [[ ${VNM} == "9" ]]; then
 		modules
 	elif [[ ${VNM} == "cd "* ]]; then
 		DCK=$(pwd)
@@ -427,7 +427,7 @@ vuln_mods(){
         	rm dtemp
 		cd ${DCK}/${DCC}
     elif [[ ${VNM} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -480,7 +480,7 @@ web_mods(){
         	rm dtemp
 		cd ${DCK}/${DCC}
     elif [[ ${WEM} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -518,7 +518,7 @@ elevatePrivs(){
         	rm dtemp
 		cd ${DCK}/${DCC}
     elif [[ ${EOP} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -586,7 +586,7 @@ post_ex(){
         	rm dtemp
 		cd ${DCK}/${DCC}
     elif [[ ${PEX} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -628,7 +628,7 @@ pass_tools(){
         rm dtemp
 	cd ${DCK}/${DCC}
     elif [[ ${PST} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -720,7 +720,7 @@ exframes(){
 	rm dtemp
 	cd ${DCK}/${DCC}
     elif [[ ${EXF} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -778,7 +778,7 @@ ex_mods(){
         rm dtemp
 	cd ${DCK}/${DCC}
     elif [[ ${EXTP} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -818,7 +818,7 @@ bruters(){
         cd ${DCK}/${DCC}
         rm dtemp
     elif [[ ${BTS} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -860,7 +860,7 @@ search_tools(){
         rm dtemp
 	cd ${DCK}/${DCC}
     elif [[ ${SST} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -906,7 +906,7 @@ ms_tools(){
         rm dtemp
 	cd ${DCK}/${DCC}
     elif [[ ${MST} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -946,7 +946,7 @@ ddos(){
         rm dtemp
 	    cd ${DCK}/${DCC}
     elif [[ ${DDS} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -966,19 +966,28 @@ routertools(){
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
     echo -e "\n ${ORNG}1.${W} MkCheck           ${ORNG}3.${W} Airgeddon ${NC}"
-    echo -e " ${ORNG}2.${W} Routersploit      ${ORNG}4.${W} Back ${NC}"
+    echo -e " ${ORNG}2.${W} Routersploit      ${ORNG}4.${W} EvilNET ${NC}"
+    echo -e " ${ORNG}5.${W} DroneSploit     ${ORNG}6.${W} Back ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
     read RTT
     if [[ ${RTT} == "1" ]]; then
 	    cd /opt/MkCheck
-        sudo ./mkcheck
+        sudo ./mthread
     elif [[ ${RTT} == "2" ]]; then
 	    cd /root/routersploit
         sudo python3.8 rsf.py
     elif [[ ${RTT} == "3" ]]; then
 	    sudo airgeddon
     elif [[ ${RTT} == "4" ]]; then
+        cd /opt;EvilNet; sudo python3 EvilNet.py
+    elif [[ ${RTT} == "5" ]]; then
+        if [[ -d '/opt/dronesploit' ]]; then
+            cd /opt/dronesploit; sudo python3 main.py
+        else
+            echo -e "${W}DroneSploit is not installed\n${ORNG}Please rerun install script and opt to install it${NC}"
+        fi
+    elif [[ ${RTT} == "5" ]]; then
 	    modules
     elif [[ ${RTT} == "cd "* ]]; then
 	    DCK=$(pwd)
@@ -989,7 +998,7 @@ routertools(){
         rm dtemp
 	    cd ${DCK}/${DCC}
     elif [[ ${RTT} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1036,7 +1045,7 @@ webex(){
         rm dtemp
 	cd ${DCK}/${DCC}
     elif [[ ${WBX} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1080,7 +1089,7 @@ webapps(){
 	rm dtemp
         cd ${DCK}/${DCC}
     elif [[ ${WAS} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1124,7 +1133,7 @@ xssmods(){
 	rm dtemp
         cd ${DCK}/${DCC}
     elif [[ ${XSS} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1163,7 +1172,7 @@ sqlmods(){
 	rm dtemp
         cd ${DCK}/${DCC}
     elif [[ ${SQLi} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1202,7 +1211,7 @@ xss_sql_mods(){
 	rm dtemp
         cd ${DCK}/${DCC}
     elif [[ ${XSQL} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1262,7 +1271,7 @@ opsec(){
 	    rm dtemp
         cd ${DCK}/${DCC}
     elif [[ ${OSTM} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1514,7 +1523,7 @@ modules(){
             modules
         fi
     elif [[ ${MMOP} == "16" ]]; then
-	    bash /opt/sifter/info/tool_check.sh
+	    bash /opt/sifter/files/info/tool_check.sh
     elif [[ ${MMOP} == "17" ]]; then
 	    menu
     elif [[ ${MMOP} == "18" ]]; then
@@ -1543,7 +1552,7 @@ modules(){
 	    rm dtemp
         cd ${DCK}/${DCC}
     elif [[ ${MMOP} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1621,7 +1630,7 @@ menu(){
 	    rm dtemp
         cd ${DCK}/${DCC}
     elif [[ ${MNOP} == "info" ]]; then
-        xterm -e bash /opt/sifter/info/info.sh &
+        xterm -e bash /opt/sifter/files/info/info.sh &
     else
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected.\nPlease enter the corresponding number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1932,7 +1941,7 @@ while getopts "a:WndwirmeopcvRguhI" options
             echo -e "${RED}"
             figlet -f mini "Module Info"
             echo -e "${NC}"
-            xterm -e bash /opt/sifter/info/info.sh &
+            xterm -e bash /opt/sifter/files/info/info.sh &
             ;;
 
         g)
