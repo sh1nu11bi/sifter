@@ -1708,7 +1708,7 @@ cxUpd(){
 	if [[ -f '/opt/sifter/modules/exmods/CS/cstrike.sh' ]]; then
 		if [[ -d '/opt/CSAgScripts' ]]; then
 			cd /opt/CSAgScripts
-			git fetch; git pull &>/dev/null
+			sudo git fetch; sudo git pull &>/dev/null
 		else
 			cd /opt
 			sudo git clone https://github.com/Sifter-Ex/cPlug
