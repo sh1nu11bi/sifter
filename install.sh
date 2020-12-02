@@ -691,9 +691,11 @@ t26(){
 # 27 # xRay #
 #############
 t27(){
-	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Pulling & updating xRay${NC}"
-	sudo docker pull txt3rob/xray-docker
+	#echo -e "${W}===========================================================================================${NC}"
+	#echo -e "${YLW}Pulling & updating xRay${NC}"
+	
+	# Removing xRay
+	sudo docker image rm txt3rob/xray-docker --force
 }
 
 ################

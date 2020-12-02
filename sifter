@@ -141,11 +141,11 @@ phone_mods(){
   ASTAT=$(cat /home/$USER/.config/.anon_status)
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-	echo -e "\n ${ORNG}1.${W} Seeker          ${ORNG}6.${W} CardPwn ${NC}"
-	echo -e " ${ORNG}2.${W} Sherlock	    ${ORNG}7.${W} DeadTrap ${NC}"
-	echo -e " ${ORNG}3.${W} OSINTGram          ${ORNG}8.${W} iKy ${NC}"
-	echo -e " ${ORNG}4.${W} xRay            ${ORNG}9.${W} GHunt ${NC}"
-	echo -e " ${ORNG}5.${W} Email2Phone     ${ORNG}10. ${W}Back ${NC}"
+	echo -e "\n ${ORNG}1.${W} Seeker          ${ORNG}6.${W} DeadTrap ${NC}"
+	echo -e " ${ORNG}2.${W} Sherlock	    ${ORNG}7.${W} iKy ${NC}"
+	echo -e " ${ORNG}3.${W} OSINTGram          ${ORNG}8.${W} GHunt ${NC}"
+	echo -e " ${ORNG}4.${W} Email2Phone            ${ORNG}9.${W} Back ${NC}"
+	echo -e " ${ORNG}5.${W} CardPwn     ${NC}" 
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read PMM
@@ -156,19 +156,17 @@ phone_mods(){
 	elif [[ ${PMM} == "3" ]]; then
 		bash /opt/sifter/modules/credmods/osintgram.sh
 	elif [[ ${PMM} == "4" ]]; then
-		bash /opt/sifter/modules/credmods/xray.sh
-	elif [[ ${PMM} == "5" ]]; then
 		bash /opt/sifter/modules/credmods/e2p.sh
-	elif [[ ${PMM} == "6" ]]; then
+	elif [[ ${PMM} == "5" ]]; then
 		bash /opt/sifter/modules/credmods/cardpwn.sh
-	elif [[ ${PMM} == "7" ]]; then
+	elif [[ ${PMM} == "6" ]]; then
 		deadtrap
-	elif [[ ${PMM} == "8" ]]; then
+	elif [[ ${PMM} == "7" ]]; then
 		bash /opt/sifter/modules/credmods/iky.sh
-	elif [[ ${PMM} == "9" ]]; then
+	elif [[ ${PMM} == "8" ]]; then
 		bash /opt/sifter/modules/credmods/ghunt.sh
-	elif [[ ${PMM} == "10" ]]; then
-        modules
+	elif [[ ${PMM} == "9" ]]; then
+		modules
 	elif [[ ${PMM} == "cd "* ]]; then
 		DCK=$(pwd)
         	echo ${PMM} > dtemp

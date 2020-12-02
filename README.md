@@ -97,6 +97,8 @@
 <br />
 - ODIN
 <br />
+- xRay
+<br />
 - Removing redundant tools to make Sifter less bulky
 </details>
 
@@ -187,9 +189,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/saeeddhqan/Maryam">Maryam</a><br />
 - <a href="https://github.com/thewhiteh4t/seeker">Seeker</a><br />
 - <a href="https://github.com/sherlock-project/sherlock">Sherlock</a><br />
-- <a href="https://github.com/evilsocket/xray">xRay</a><br />
 - <a href="https://github.com/martinvigo/email2phonenumber">E2P (Email2Phone)</a><br />
-- <a href="https://github.com/chrismaddalena/ODIN">ODIN</a><br />
 - <a href="https://github.com/itsmehacker/CardPwn">CardPwn</a><br />
 - <a href="https://github.com/kennbroorg/iKy">iKy</a><br />
 - <a href="https://github.com/mxrch/GHunt">GHunt</a><br />
