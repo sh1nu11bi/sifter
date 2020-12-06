@@ -56,13 +56,13 @@
 # Sifter Plugins
 
 <details>
-	<summary><strong># Released Extentions</strong></summary>
-- <a href="https://github.com/Sifter-Ex/g">G</a> - Sifter's <em>g</em> extention gives a GUI overlay
+	<summary><strong># Released Extensions</strong></summary>
+- <a href="https://github.com/Sifter-Ex/g">G</a> - Sifter's <em>g</em> extension gives a GUI overlay
 <br />&emsp;	'--> Built on top of <a href="https://github.com/GitSquared/edex-ui">eDEX-UI</a><br />
-- <a href="https://github.com/Sifter-Ex/f">F</a> - Sifter's <em>f</em> extention provides the DanderFuzz Exploitational Plugin for Sifter
+- <a href="https://github.com/Sifter-Ex/f">F</a> - Sifter's <em>f</em> extension provides the DanderFuzz Exploitational Plugin for Sifter
 <br />&emsp; '--> Framework created by the <a href="#">EquationGroup</a> courtesy of <a href="#">The Shadow Brokers</a><br />
-  - <a href="https://github.com/Sifter-Ex/mPlug">M</a> - Sifter's <em>m</em> extention provided malware analysis tools.<br />
-  - <a href="https://github.com/Sifter-Ex/cPlug">C</a> - Sifter's <em>c</em> extention is just a small script allowing CobaltStrike to be added to exploitation frameworks.<br /> 
+  - <a href="https://github.com/Sifter-Ex/mPlug">M</a> - Sifter's <em>m</em> extension provided malware analysis tools.<br />
+  - <a href="https://github.com/Sifter-Ex/cPlug">C</a> - Sifter's <em>c</em> extension is just a small script allowing CobaltStrike to be added to exploitation frameworks.<br /> 
 &emsp;&emsp;	<em>(A copy of CobaltStrike will <strong>NOT</strong> be provided, <strong>You must provide your own</strong>)</em>
 </details>
 
@@ -114,7 +114,7 @@
 
 # Overview
 
-Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tools within different module sets in order to quickly perform recon tasks, check network firewalling, enumerate remote and local hosts, and scan for the 'blue' vulnerabilities within microsft and if unpatched, exploit them.  It uses tools like blackwidow and konan for webdir enumeration and attack surface mapping rapidly using ASM.
+Sifter is a osint, recon & vulnerability scanner. It combines a plethara of tools within different module sets in order to quickly perform recon tasks, check network firewalling, enumerate remote and local hosts, and scan for the 'blue' vulnerabilities within microsoft and if unpatched, exploit them.  It uses tools like blackwidow and konan for webdir enumeration and attack surface mapping rapidly using ASM.
 <br>
 Gathered info is saved to the results folder, these output files can be easily parsed over to <a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> in order to be utilised within your campaign. Or compiled for a final report to wrap up a penetration test.
 <br>
