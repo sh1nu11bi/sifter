@@ -121,7 +121,7 @@ t1(){
 		echo -e "${ORNG}"
 		figlet -f mini "SniffingBear is already installed"
 		echo -e "${NC}"
-		cd SniffingBear 
+		cd SniffingBear
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /opt/
@@ -163,7 +163,7 @@ t3(){
 		echo -e "${ORNG}"
 		figlet -f mini "HoneyCaught is already installed"
 		echo -e "${NC}"
-		cd /opt/HoneyCaught 
+		cd /opt/HoneyCaught
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /opt
@@ -245,7 +245,7 @@ t7(){
 		echo -e "${ORNG}"
 		figlet -f mini "ShodanSploit is already installed."
 		echo -e "${NC}"
-		cd /opt/shodansploit 
+		cd /opt/shodansploit
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /opt
@@ -515,7 +515,7 @@ t18(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for NekoBot${NC}"
 	if [[ -d '/opt/NekoBotV1' ]]; then
-		echo -e "${ORNG}" 
+		echo -e "${ORNG}"
 		figlet -f mini "NekoBot is already installed"
 		echo -e "${NC}"
 		cd /opt/NekoBotV1
@@ -693,7 +693,7 @@ t26(){
 t27(){
 	#echo -e "${W}===========================================================================================${NC}"
 	#echo -e "${YLW}Pulling & updating xRay${NC}"
-	
+
 	# Removing xRay
 	sudo docker image rm txt3rob/xray-docker --force
 }
@@ -751,7 +751,7 @@ t30(){
 	else
 		cd /opt/
 		sudo git clone https://github.com/anouarbensaad/vulnx.git
-		cd vulnx 
+		cd vulnx
 		sudo chmod +x install.sh
 		sudo ./install.sh
 	fi
@@ -916,7 +916,7 @@ menSYS(){
                 sudo chown $USER:$USER *.zip
 				unzip Mentalist-v1.0-Win.zip
                 rm Mentalist-v1.0-Win.zip
-        else 
+        else
                 echo -e "${URED}You have selected an invalid option${NC}"
                 echo -e "${UPURPLE}Please rerun install script before trying to use Mentalist${NC}"
         fi
@@ -979,7 +979,7 @@ t40(){
 		cd /opt
 		sudo git clone https://github.com/s0md3v/XSStrike
 		cd XSStrike
-		sudo python3 -m pip install -r requirements.txt 
+		sudo python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1012,7 +1012,7 @@ t41(){
 ############################
 t42(){
 	echo -e "${YLW}Updating RouterSploit${NC}"
-	cd /root/routersploit 
+	cd /root/routersploit
 	sudo git fetch && sudo git pull &>/dev/null
 }
 
@@ -1039,7 +1039,7 @@ t43(){
 		fi
 		sudo git fetch && sudo git pull &>/dev/null
 		source venv/bin/activate
-		sudo ./venv/bin/pip3 install wheel dnspython 
+		sudo ./venv/bin/pip3 install wheel dnspython
 		sudo ./venv/bin/pip3 install -r requirements.txt &>/dev/null
 		sudo ./venv/bin/python3 setup.py install &>/dev/null
 	else
@@ -1049,7 +1049,7 @@ t43(){
 		sudo python3.8 -m venv venv
 		source venv/bin/activate
 		sudo ./venv/bin/pip3 install wheel dnspython
-		sudo ./venv/bin/pip3 install -r requirements.txt 
+		sudo ./venv/bin/pip3 install -r requirements.txt
 		sudo ./venv/bin/python3 setup.py install
 	fi
 }
@@ -1201,7 +1201,7 @@ t50(){
 		cd email2phonenumber
 		sudo python -m pip install -r requirements.txt
 		sudo pip install beautifulsoup4 requests
-	fi 
+	fi
 }
 
 ######################
@@ -1230,7 +1230,7 @@ t51(){
  		sudo echo "${USER}" >> /opt/Intrigue-Core/Panel_Login.info
  		sudo echo "${PASS}" >> /opt/Intrigue-Core/Panel_Login.info
 		echo -e "${UBLUE}Intrigue Login Saved to ${URED}/opt/Intrigue-Core/Panel_Login.info${NC}"
-	fi 
+	fi
 }
 
 #########################
@@ -1251,11 +1251,11 @@ t52(){
 		sudo git clone https://github.com/mxrch/GHunt
 		cd GHunt
 		sudo python3.8 -m pip install -r requirements.txt
-	fi 
+	fi
 }
 
 #####################################
-# 53 # finDOM-XSS (dep::LinkFinder) # 
+# 53 # finDOM-XSS (dep::LinkFinder) #
 #####################################
 t53(){
 	echo -e "${W}===========================================================================================${NC}"
@@ -1541,7 +1541,7 @@ t65(){
 		cd /opt
 		sudo git clone https://github.com/Technowlogy-Pushpender/CVE-2020-5902-Scanner.git
 		cd CVE-2020-5902-Scanner
-		sudo python3 -m pip install requests	
+		sudo python3 -m pip install requests
 	fi
 }
 
@@ -1591,7 +1591,7 @@ hfSYS(){
 			sudo chown $USER:$USER HFish-0.6.3-win-amd64.tar.gz
 			sudo mv HFish-0.6.3-win-amd64/* -t HFish
 			sudo rm -rf HFish-0.6.3-win-amd64
-    else 
+    else
             echo -e "${URED}OS not detected! ${NC}"
             echo -e "${UPURPLE}Please select your OS: (l/m/w)${NC}"
 			read OSYS
@@ -1614,7 +1614,7 @@ t67(){
 		echo -e "\n[${RED}!${NC}] ${ORNG}Pulling distro specific files... Please wait${NC}\n"
 		sleep 5
 		hfSYS
-	fi	
+	fi
 }
 #################
 # 68 # SubDover #
@@ -1772,7 +1772,7 @@ t74(){
 		cd /opt
 		sudo git clone https://github.com/capture0x/XSS-LOADER
 		cd XSS-LOADER
-		sudo python3 -m pip install -r requirements.txt 
+		sudo python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1811,7 +1811,7 @@ t76(){
 		cd phpsploit/
 		sudo python3 -m venv env
 		sudo ./env/bin/python3 -m pip install setuptools wheel
-		sudo ./env/bin/python3 -m pip install -r requirements.txt 
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1877,7 +1877,7 @@ plugExt(){
 	##
 	if [[ -f '/opt/sifter/plugins/cPlug/plug-C.sh' ]]; then
 		cd ${PD}/cPlug; bash plug-C.sh
-	else 
+	else
 		rm -rf ${PD}/cPlug
 	fi
 	##
@@ -1885,7 +1885,7 @@ plugExt(){
 	##
 	if [[ -f '/opt/sifter/plugins/fPlug/plug-F.sh' ]]; then
 		cd ${PD}/fPlug; bash plug-F.sh
-	else 
+	else
 		rm -rf ${PD}/fPlug
 	fi
 	##
@@ -1893,7 +1893,7 @@ plugExt(){
 	##
 	if [[ -f '/opt/sifter/plugins/gPlug/plug-G.sh' ]]; then
 		cd ${PD}/gPlug; bash plug-G.sh
-	else 
+	else
 		rm -rf ${PD}/gPlug
 	fi
 	##
@@ -1901,7 +1901,7 @@ plugExt(){
 	##
 	if [[ -f '/opt/sifter/plugins/cPlug/plug-M.sh' ]]; then
 		cd ${PD}/mPlug; bash plug-M.sh
-	else 
+	else
 		rm -rf ${PD}/mPlug
 	fi
 }
@@ -1976,7 +1976,7 @@ t50							# Email2Phone
 t51							# Intrigue-Core
 t52							# GHunt
 t53							# finDOM-XSS
-t54							# EvilNET
+#t54							# EvilNET	(Install Error)
 t55							# OSINT-Framework
 t56							# UFONet
 t57							# CardPwn
@@ -2029,5 +2029,5 @@ echo -e "${RED}=================================================================
 ######################################################################################################
 echo -e "${YLW}##########################"                                             ########################
 echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11 ${YLW}#${NC}"                          ##    VERSION INFO    ##
-echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}C  ${YLW}#"                                       ##    UPDATE CHECK    ##
+echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r2 ${YLW}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}##########################${NC}"                                         ########################

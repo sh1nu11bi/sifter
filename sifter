@@ -145,7 +145,7 @@ phone_mods(){
 	echo -e " ${ORNG}2.${W} Sherlock	    ${ORNG}7.${W} iKy ${NC}"
 	echo -e " ${ORNG}3.${W} OSINTGram          ${ORNG}8.${W} GHunt ${NC}"
 	echo -e " ${ORNG}4.${W} Email2Phone            ${ORNG}9.${W} Back ${NC}"
-	echo -e " ${ORNG}5.${W} CardPwn     ${NC}" 
+	echo -e " ${ORNG}5.${W} CardPwn     ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read PMM
@@ -1742,10 +1742,10 @@ update(){
     echo -e "/  \`|_  _  _.;_/*._  _   |, _ ._.  |  |._  _| _.-+- _  __   "
     echo -e "\__.[ )(/,(_.| \|[ )(_]  | (_)[    |__|[_)(_](_] | (/,_)  *  * "
     echo -e "                    ._|                |                       ${NC}"
-    echo -e "${YLW}##########################"                                             ########################
-    echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11 ${YLW}#${NC}"                          ##    VERSION INFO    ##
-    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}C  ${YLW}#"                                       ##    UPDATE CHECK    ##
-    echo -e "${YLW}##########################${NC}"                                         ########################
+    echo -e "${YLW}###########################"                                             ########################
+    echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11  ${YLW}#${NC}"                          ##    VERSION INFO    ##
+    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r2  ${YLW}#"                                       ##    UPDATE CHECK    ##
+    echo -e "${YLW}###########################${NC}"                                         ########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
     	    sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
