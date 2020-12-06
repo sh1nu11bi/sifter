@@ -1774,7 +1774,7 @@ update(){
         ##########################
         # Check For Full Upgrade #
         ##########################
-        echo -e "${URED}Would you like to check for new tools or tool updates?(y/n)${NC}"
+        echo -e "${URED}Would you like to check for new tools or tool updates? ${YLW}(${W}y${YLW}/${W}n${YLW})${NC}"
         read -r FUP
         if [[ ${FUP} == "y" ]]; then
             sudo chmod +x install.sh
