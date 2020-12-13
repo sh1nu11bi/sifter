@@ -1,4 +1,4 @@
-s#!/bin/bash
+#!/bin/bash
 RED='\033[0;31m'
 NC='\033[0m'
 ORNG='\033[0;33m'
