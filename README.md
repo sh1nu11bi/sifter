@@ -40,7 +40,7 @@
 
 	@Codename: Violet
 	@Version : 11
-	@Revision: 2
+	@Revision: 3
 
 <br>
 <em>[<strong>Violet's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
@@ -70,14 +70,11 @@
 
 # Additions:
 <details>
-	<summary><strong>__ Version: 11.r2 _|_ Violet __ </strong></summary>
-- <strong>BetterSafetyKatz</strong> - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures using SharpSploit DInvoke to get it into memory<br />
+	<summary><strong>__ Version: 11.r3 _|_ Violet __ </strong></summary>
 - <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session<br />
 - <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
-- <strong>ThreatCheck</strong> - Checks a binary from disk or URL splits it until it pinpoints that exact bytes that the target engine will flag on and prints them to the screen.<br />
 - <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
 - <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
-- <strong>PHPSploit</strong> - Full-featured C2 framework which silently persists on webserver via polymorphic PHP oneliner<br />
 - <strong>Responder</strong> - LLMNR, NBT-NS and MDNS poisoner.<br />
 - <strong>OSINTGram</strong> - Instagram OSINT tool<br />
 - <strong>XAttacker-3.0</strong> - Vulnerability Scanner & Auto Exploiter <br />
@@ -301,6 +298,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="#">Arp-Scan</a><br />
 - <a href="https://www.github.com/josh0xA/Espionage">Espionage</a><br />
 - <a href="https://github.com/intrigueio/intrigue-core">Intrigue-Core</a><br />
+- <a href="https://github.com/SpiderLabs/Responder">Responder</a><br />
 </details>
 
 <details>
