@@ -325,8 +325,8 @@ net_mods(){
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
 	echo -e "\n ${ORNG}1.${W} nMap                    ${ORNG}5.${W} aSnip ${NC}"
 	echo -e " ${ORNG}2.${W} Arp-Scan 		    ${ORNG}6.${W} Espionage ${NC}"
-	echo -e " ${ORNG}3.${W} AttackSurfaceMapper     ${ORNG}7.${W} Back ${NC}"
-	echo -e " ${ORNG}4.${W} wafw00f ${NC}"
+	echo -e " ${ORNG}3.${W} AttackSurfaceMapper     ${ORNG}7.${W} Responder ${NC}"
+	echo -e " ${ORNG}4.${W} wafw00f  		    ${ORNG}8.${W} Back${NC}"
     	echo -e " ${W}"
     	echo -n " =============================#?: "
 	read NTM
@@ -362,6 +362,8 @@ net_mods(){
 	elif [[ ${NTM} == "6" ]]; then
 		bash /opt/sifter/modules/netmods/espionage.sh
 	elif [[ ${NTM} == "7" ]]; then
+		bash /opt/sifter/modules/netmods/responder.#!/bin/sh
+	elif [[ ${NTM} == "8" ]]; then
 		modules
 	elif [[ ${NTM} == "cd "* ]]; then
 		DCK=$(pwd)
@@ -963,9 +965,9 @@ routertools(){
     ASTAT=$(cat /home/$USER/.config/.anon_status)
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-    echo -e "\n ${ORNG}1.${W} MkCheck           ${ORNG}3.${W} Airgeddon ${NC}"
-    echo -e " ${ORNG}2.${W} Routersploit      ${ORNG}4.${W} EvilNET ${NC}"
-    echo -e " ${ORNG}5.${W} DroneSploit     ${ORNG}6.${W} Back ${NC}"
+    echo -e "\n ${ORNG}1.${W} MkCheck           ${ORNG}4.${W} DroneSploit ${NC}"
+    echo -e " ${ORNG}2.${W} Routersploit      ${ORNG}5.${W} Back ${NC}"
+    echo -e " ${ORNG}3.${W} Airgeddon      ${NC}" #${ORNG}6.${W} Back
     echo -e " ${W}"
     echo -n " =============================#?: "
     read RTT
@@ -978,13 +980,11 @@ routertools(){
     elif [[ ${RTT} == "3" ]]; then
 	    sudo airgeddon
     elif [[ ${RTT} == "4" ]]; then
-        cd /opt;EvilNet; sudo python3 EvilNet.py
-    elif [[ ${RTT} == "5" ]]; then
-        if [[ -d '/opt/dronesploit' ]]; then
-            cd /opt/dronesploit; sudo python3 main.py
-        else
-            echo -e "${W}DroneSploit is not installed\n${ORNG}Please rerun install script and opt to install it${NC}"
-        fi
+			if [[ -d '/opt/dronesploit' ]]; then
+					cd /opt/dronesploit; sudo python3 main.py
+			else
+					echo -e "${W}DroneSploit is not installed\n${ORNG}Please rerun install script and opt to install it${NC}"
+			fi
     elif [[ ${RTT} == "5" ]]; then
 	    modules
     elif [[ ${RTT} == "cd "* ]]; then
@@ -1744,7 +1744,7 @@ update(){
     echo -e "                    ._|                |                       ${NC}"
     echo -e "${YLW}###########################"                                             ########################
     echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11  ${YLW}#${NC}"                          ##    VERSION INFO    ##
-    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r2  ${YLW}#"                                       ##    UPDATE CHECK    ##
+    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3  ${YLW}#"                                       ##    UPDATE CHECK    ##
     echo -e "${YLW}###########################${NC}"                                         ########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then

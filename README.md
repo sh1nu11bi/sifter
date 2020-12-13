@@ -26,14 +26,14 @@
 
 # Notice
 
-	[!] If you are the developer of any of the tools within Sifter and don't think your tool is 
-	    being utilized to its full potential please let me know and i will take another look 
-	    or optionally you can make an edit to the execution script of your specific tool and 
+	[!] If you are the developer of any of the tools within Sifter and don't think your tool is
+	    being utilized to its full potential please let me know and i will take another look
+	    or optionally you can make an edit to the execution script of your specific tool and
 	    submit a pull request and I will review it within 12hrs
-	
-	[!] Or if you are a developer and would like your program added just submit an issue with the link 
+
+	[!] Or if you are a developer and would like your program added just submit an issue with the link
 	    and ill check it out and if it fits, I'll make the addition with 24-48hrs
-	
+
 ---------------------------------------------------------------------------------------------------------------------
 
 # Release
@@ -62,7 +62,7 @@
 - <a href="https://github.com/Sifter-Ex/f">F</a> - Sifter's <em>f</em> extension provides the DanderFuzz Exploitational Plugin for Sifter
 <br />&emsp; '--> Framework created by the <a href="#">EquationGroup</a> courtesy of <a href="#">The Shadow Brokers</a><br />
   - <a href="https://github.com/Sifter-Ex/mPlug">M</a> - Sifter's <em>m</em> extension provided malware analysis tools.<br />
-  - <a href="https://github.com/Sifter-Ex/cPlug">C</a> - Sifter's <em>c</em> extension is just a small script allowing CobaltStrike to be added to exploitation frameworks.<br /> 
+  - <a href="https://github.com/Sifter-Ex/cPlug">C</a> - Sifter's <em>c</em> extension is just a small script allowing CobaltStrike to be added to exploitation frameworks.<br />
 &emsp;&emsp;	<em>(A copy of CobaltStrike will <strong>NOT</strong> be provided, <strong>You must provide your own</strong>)</em>
 </details>
 
@@ -78,10 +78,10 @@
 - <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
 - <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
 - <strong>PHPSploit</strong> - Full-featured C2 framework which silently persists on webserver via polymorphic PHP oneliner<br />
-- <strong>EvilNET</strong> - WiFi offensive toolkit.<br />
+- <strong>Responder</strong> - LLMNR, NBT-NS and MDNS poisoner.<br />
 - <strong>OSINTGram</strong> - Instagram OSINT tool<br />
 - <strong>XAttacker-3.0</strong> - Vulnerability Scanner & Auto Exploiter <br />
-- <strong>DroneSplit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br /> 
+- <strong>DroneSplit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br />
 <br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
 </em><br />
@@ -135,34 +135,34 @@ through to get the general idea. Most modules are explained along with demos of 
 		    - Ubuntu
 		    - Linux (any distro)
 		    - Windows (Linux Subsystem with Docker and VcXsrc installed correctly - for xterm use)
-		    
-Works on windows with linux-subsystem but please ensure docker is properly installed and configured, <br /> 
+
+Works on windows with linux-subsystem but please ensure docker is properly installed and configured, <br />
 following the instructions from <a href="https://docker.io">docker website</a><br />
 Untested on mac, though theoretically the same should apply to mac as windows - regarding docker install & tools
 
 ---------------------------------------------------------------------------------------------------------------------
 
-# NOTE!! 
+# NOTE!!
 
  If a scan does not work correctly at first, remove web-protocol from target. eg:
  <br>
- - use <strong>target.com</strong> 
+ - use <strong>target.com</strong>
  - instead of <strong>https;//target.com</strong>
- 
+
 ---------------------------------------------------------------------------------------------------------------------
 
 # Installation:
-	
+
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
 	$ wget https://github.com/s1l3nt78/sifter/releases/download/v11-r2/sifter_11-r2.deb; sudo dpkg -i sifter_11-r2.deb; sifter
-	
-	
+
+
 	[!] For oneliner install (source), copy and paste the following into a terminal:
 	*
 	$ git clone https://github.com/s1l3nt78/sifter.git && cd sifter && bash install.sh
-	
-	
+
+
 	[!] Sifter Plugins can be found at https://github.com/Sifter-Ex
 	[!] To install Sifter with plugins run:
 	*
@@ -257,7 +257,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <details>
 <summary>
 <strong>#Exploitation Frameworks</strong></summary>
-+ <a href="#">DanderFuzz</a> - Equation Group, Courtesy of the Shadow Brokers<br /> 
++ <a href="#">DanderFuzz</a> - Equation Group, Courtesy of the Shadow Brokers<br />
 &emsp;&emsp;- FuzzBunch<br />
 &emsp;&emsp;- Danderspritz<br />
 	&emsp;(Provided by the <a href="https://github.com/Sifter-Ex/f">F</a> plugin.)<br />
@@ -393,7 +393,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 # Other Projects
 <br />
-All information on projects in development can be found <a href="https://s1l3nt78.github.io">here</a>. 
+All information on projects in development can be found <a href="https://s1l3nt78.github.io">here</a>.
 <br />
 For any requests or ideas on current projects please submit an issue request to the corresponding tool.
 <br />
@@ -409,4 +409,3 @@ For ideas or collaboration requests on future projects., contact details can be 
 <br />
 
 	  <!--#############           VGhlIERlYWQgQnVubnkgQ29sbGVjdGl2ZQ==           #############--!>
-	  

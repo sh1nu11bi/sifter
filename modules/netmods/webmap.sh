@@ -26,7 +26,7 @@ sudo docker run -d \
 			reborntc/webmap
 if [[ ! -f '/opt/WebMap/.token' ]]; then
 		sudo docker start webmap
-		TKN=$(sudo docker exec -ti webmap /root/token) 
+		TKN=$(sudo docker exec -ti webmap /root/token)
 		sudo touch /opt/WebMap/.token
 		sudo chown $USER:$USER /opt/WebMap/.token
 		echo ${TKN} > /opt/WebMap/.token
@@ -34,7 +34,7 @@ fi
 if [[ ! -f '/opt/WebMap/.browser' ]]; then
 		sudo docker start webmap
 		sudo touch /opt/WebMap/.browser
-		sudo chown $USER:$USER /opt/WebMap/.browser		
+		sudo chown $USER:$USER /opt/WebMap/.browser
 		echo -e "${YLW}For runtime the WebMap module will attempt to automatically open the local browser to access the panel\nAs not everyone uses the same browser and to make this as compatible as possible while not installing to many extras.\n${W}Please enter the termianl command for your browser. (eg. ${ORNG}chromium ${W}| ${ORNG}firefox ${W}| ${ORNG}firefox-esr ${W}| ${ORNG}chrome)${NC}"
 		read BROWSE
 		echo ${BROWSE} > /opt/WebMap/.browser

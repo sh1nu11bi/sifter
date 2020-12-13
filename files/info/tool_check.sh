@@ -415,8 +415,11 @@ if [[ ! -d "/opt/XSS-Loader" ]]; then
 else
 	t74=${BIGreen}'!'
 fi
-
-
+if [[ ! -d "/opt/Responder" ]]; then
+	t75=${RED}'*'
+else
+	t75=${BIGreen}'!'
+fi
 
 
 echo -e "\n${LP}Checking for Missing tools${NC}"
@@ -460,6 +463,7 @@ echo -e "${ORNG}[ ${t68} ${ORNG}] ${YLW}SubDover				${ORNG}[ ${t69} ${ORNG}] ${Y
 echo -e "${ORNG}[ ${t70} ${ORNG}] ${YLW}Threat Dragon			${ORNG}[ ${t71} ${ORNG}] ${YLW}WhiteWidow ${NC}"
 echo -e "${ORNG}[ ${t72} ${ORNG}] ${YLW}V3n0M-Scanner			${ORNG}[ ${t73} ${ORNG}] ${YLW}Ciphey ${NC}"
 echo -e "${ORNG}[ ${t52} ${ORNG}] ${YLW}GHunt				${ORNG}[ ${t74} ${ORNG}] ${YLW}XSS-Loader${NC}"
+echo -e "${ORNG}[ ${t75} ${ORNG}] ${YLW}Responder${NC}"
 
 echo -e "${LP}Would you like to run the install script? (y/n)${NC}"
 read ISS

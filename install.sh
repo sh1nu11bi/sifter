@@ -1283,26 +1283,21 @@ t53(){
 	fi
 }
 
-#############
-# 54 # ODIN #
-#############
+##################
+# 54 # Responder #
+##################
 t54(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for EvilNET ${NC}"
-	if [[ -d '/opt/EvilNet' ]]; then
+	echo -e "${YLW}Checking for Responder ${NC}"
+	if [[ -d '/opt/Responder' ]]; then
 		echo -e "${ORNG}"
-		figlet -f mini "EvilNET is already installed"
+		figlet -f mini "Responder is already installed"
 		echo -e "${NC}"
-		cd /opt/EvilNet
+		cd /opt/Responder
 		sudo git fetch && sudo git pull &>/dev/null
-		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	else
 		cd /opt
-		sudo git clone https://github.com/Matrix07ksa/EvilNet
-		cd EvilNet
-		sudo python3 -m venv env
-		sudo ./env/bin/python3 -m pip install wheel
-		sudo ./env/bin/python3 -m pip install -r requirements.txt
+		sudo git clone https://github.com/SpiderLabs/Responder
 	fi
 }
 
@@ -1976,7 +1971,7 @@ t50							# Email2Phone
 t51							# Intrigue-Core
 t52							# GHunt
 t53							# finDOM-XSS
-#t54							# EvilNET	(Install Error)
+t54							# Responder
 t55							# OSINT-Framework
 t56							# UFONet
 t57							# CardPwn
@@ -2029,5 +2024,5 @@ echo -e "${RED}=================================================================
 ######################################################################################################
 echo -e "${YLW}##########################"                                             ########################
 echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11 ${YLW}#${NC}"                          ##    VERSION INFO    ##
-echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r2 ${YLW}#"                                       ##    UPDATE CHECK    ##
+echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3 ${YLW}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}##########################${NC}"                                         ########################

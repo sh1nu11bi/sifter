@@ -8,7 +8,7 @@ CYAN = '\033[01m\33[31m'
 CEND = '\033[0m'
 UGREEN = '\33[92m'
 WHITE = '\33[37m'
-#   " + ORANGE + "Revision " + CBLUE + "2" + WHITE + "   
+#   " + ORANGE + "Revision " + CBLUE + "2" + WHITE + "
 def showbanner():
         print(CYAN + '''
                  ____.__  ________         __ _________  ______
@@ -16,6 +16,6 @@ def showbanner():
   ______  /  ___/|   |  |   _(__  < /    \   __\  /    />      <   ______
  /_____/  \___ \ |   |  |__/       \   |  \  |   /    //   --   \ /_____/
          /____  >|___|____/______  /___|  /__|  /____/ \______  /
-              \/      ''' + CVIOLET + "Violet" + CYAN + '''     \/ ''' + WHITE + "*" + ORANGE + "2" + WHITE + "*" + CYAN + ''' \/     ''' + UGREEN + "Version" + CBLUE + " 11" + CYAN + '''     \/    ''' + CEND)
+              \/      ''' + CVIOLET + "Violet" + CYAN + '''     \/ ''' + WHITE + "*" + ORANGE + "3" + WHITE + "*" + CYAN + ''' \/     ''' + UGREEN + "Version" + CBLUE + " 11" + CYAN + '''     \/    ''' + CEND)
         print(WHITE + "==========================================================================" + CEND)
 showbanner()
