@@ -45,7 +45,7 @@
 <br>
 <em>[<strong>Violet's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Violet's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v11-r2/sifter_11-r2.deb"><strong>here</strong></a></em>
+<em>[<strong>Violet's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v11-r3/sifter_11-r3.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -152,7 +152,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v11-r2/sifter_11-r2.deb; sudo dpkg -i sifter_11-r2.deb; sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v11-r3/sifter_11-r3.deb; sudo dpkg -i sifter_11-r3.deb; sifter
 
 
 	[!] For oneliner install (source), copy and paste the following into a terminal:
