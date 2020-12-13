@@ -19,7 +19,7 @@ if [[ -f '/opt/docker-osmedeus/.configured' ]]; then
 	if [[ ${CHKHOLD} == "HOLD" ]]; then
 		sudo docker build -t mablanco/osmedeus .
 		sudo rm .configured
-		sudo echo "DONE" >> /opt/docker-osmedeus/.configured
+		echo "DONE" | sudo tee -a /opt/docker-osmedeus/.configured
 	fi
 fi
 echo -e "${W}Please enter your target${NC}"
