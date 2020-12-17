@@ -1547,15 +1547,18 @@ t66(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for DeadTrap ${NC}"
 	if [[ -d '/opt/DeadTrapv2' ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "DeadTrap is already installed"
-		echo -e "${NC}"
-		cd /opt/DeadTrapv2
-		sudo python3 -m pip install -r requirements.txt &>/dev/null
-		sudo git fetch && sudo git pull &>/dev/null
+		#echo -e "${ORNG}"
+		#figlet -f mini "DeadTrap is already installed"
+		#echo -e "${NC}"
+		#cd /opt/DeadTrapv2
+		#sudo python3 -m pip install -r requirements.txt &>/dev/null
+		#sudo git fetch && sudo git pull &>/dev/null
+		cd /opt; sudo rm -rf DeadTrapv2
+		sudo git clone https://github.com/legly/DeadTrapv2
+		cd DeadTrapv2; sudo python3 -m pip install -r requirements.txt
 	else
 		cd /opt
-		sudo git clone https://github.com/Chr0m0s0m3s/DeadTrapv2.git
+		sudo git clone https://github.com/legly/DeadTrapv2
 		cd DeadTrapv2
 		sudo python3 -m pip install -r requirements.txt
 	fi
