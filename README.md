@@ -81,6 +81,7 @@
 - <strong>DroneSplit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br />
 <br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
+- All Results can now be exported to Desktop and a backup zip package is created and time stamped.<br />
 </em><br />
 </details>
 
