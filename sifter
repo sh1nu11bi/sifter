@@ -1575,7 +1575,11 @@ menu(){
     echo -e "\n ${ORNG}1.${W} Check Hosts               ${ORNG}5.${W} View Results${NC}"
     echo -e " ${ORNG}2.${W} Edit Host List            ${ORNG}6.${W} Export Results${NC}"
     echo -e " ${ORNG}3.${W} Module Menu               ${ORNG}7.${W} Update${NC}"
+<<<<<<< HEAD
     echo -e " ${ORNG}4.${W} Anonymization             ${ORNG}8.${W} Quit${NC}"
+=======
+    echo -e " ${ORNG}4.${W} Anonymization           ${ORNG}8.${W} Quit${NC}"
+>>>>>>> master
     echo -e " ${W}"
     echo -n "=============================#?: "
     read -r MNOP
