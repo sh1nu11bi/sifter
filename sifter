@@ -1601,8 +1601,11 @@ menu(){
         results
     elif [[ ${MNOP} == "6" ]]; then                 # Export Results
         TIME=$(date +%T)
+	if [[ ! -d '/opt/sifter/backups' ]]; then
+		mkdir /opt/sifter/backups
+	fi
         cp -r /opt/sifter/results $HOME/Desktop/Sifter\ Results
-        zip -r $HOME/Desktop/Sifter\ Results/Results_${TIME}.zip /opt/sifter/results/
+        zip -r /opt/sifter/backups/Results_${TIME}.zip /opt/sifter/results/
     elif [[ ${MNOP} == "7" ]]; then                 # Update
         update
     elif [[ ${MNOP} == "8" ]]; then                 # Quit
