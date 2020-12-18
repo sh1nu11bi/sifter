@@ -1573,9 +1573,9 @@ menu(){
     echo -e " ${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e "${W}==================================================\n ${ORNG}What would you like to do?\n${W}==================================================${NC}"
     echo -e "\n ${ORNG}1.${W} Check Hosts               ${ORNG}5.${W} View Results${NC}"
-    echo -e " ${ORNG}2.${W} Edit Host List            ${ORNG}6.${W} Update${NC}"
-    echo -e " ${ORNG}3.${W} Module Menu               ${ORNG}7.${W} Quit${NC}"
-    echo -e " ${ORNG}4.${W} Anonymization${NC}"
+    echo -e " ${ORNG}2.${W} Edit Host List            ${ORNG}6.${W} Export Results${NC}"
+    echo -e " ${ORNG}3.${W} Module Menu               ${ORNG}7.${W} Update${NC}"
+    echo -e " ${ORNG}4.${W} Anonymization             ${ORNG}8.${W} Quit${NC}"
     echo -e " ${W}"
     echo -n "=============================#?: "
     read -r MNOP
@@ -1599,9 +1599,13 @@ menu(){
         proxysystem
     elif [[ ${MNOP} == "5" ]]; then                 # View Results
         results
-    elif [[ ${MNOP} == "6" ]]; then                 # Update
+    elif [[ ${MNOP} == "6" ]]; then                 # Export Results
+        TIME=$(date +%T)
+        cp -r /opt/sifter/results $HOME/Desktop/Sifter\ Results
+        zip -r $HOME/Desktop/Sifter\ Results/Results_${TIME}.zip /opt/sifter/results/
+    elif [[ ${MNOP} == "7" ]]; then                 # Update
         update
-    elif [[ ${MNOP} == "7" ]]; then                 # Quit
+    elif [[ ${MNOP} == "8" ]]; then                 # Quit
         (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
