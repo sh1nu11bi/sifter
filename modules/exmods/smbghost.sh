@@ -4,7 +4,8 @@ ORNG='\033[0;33m'
 NC='\033[0m'
 W='\033[1;37m'
 LP='\033[1;35m'
-
+python3 -m pip install hexdump &>/dev/null
+sudo python3 -m pip install hexdump &>/dev/null
 scanner(){
     echo -e "${ORNG}"
     figlet -f mini "SMBGhost Scanner"

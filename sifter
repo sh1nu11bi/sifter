@@ -1741,6 +1741,7 @@ fxUpd(){
 ##
 update(){
     sudo chown $USER:$USER -R /opt/sifter
+		chmod 644 /opt/sifter --recursive
     cd /opt/sifter
     if [[ -d '/opt/sifter/info' ]]; then
         rm -rf /opt/sifter/info
@@ -1787,7 +1788,7 @@ update(){
             sudo chmod +x install.sh
             bash install.sh
         fi
-	    gxUpd
+	    	gxUpd
         mxUpd
         fxUpd
         cxUpd
