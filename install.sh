@@ -43,6 +43,8 @@ if [[ ${DCKR} == "Package docker-ce is not available, but is referred to by anot
 	fi
 fi
 sudo apt --fix-broken install
+python3 -m pip install hexdump
+sudo python3 -m pip install hexdump
 ###################
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
