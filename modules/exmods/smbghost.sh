@@ -44,7 +44,7 @@ PS3='Which module would you like to use?'
                     ;;
 
                 "Back")
-                    exit
+                    sifter -m
                     ;;
 
             esac
