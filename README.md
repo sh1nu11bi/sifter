@@ -10,7 +10,7 @@
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
 	<img align="center" src="https://img.shields.io/badge/Version-11-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
+	<img align="center" src="https://img.shields.io/badge/Revision-3-green">
 </p>
 
 # *Sifter*
