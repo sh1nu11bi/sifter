@@ -395,8 +395,8 @@ vuln_mods(){
 	echo -e "\n ${ORNG}1.${W} Flan               ${ORNG}6.${W} F5 Big IP RCE ${NC}"
 	echo -e " ${ORNG}2.${W} RapidScan 	       ${ORNG}7.${W} WeblogicScanner ${NC}"
 	echo -e " ${ORNG}3.${W} Yuki-Chan          ${ORNG}8.${W} XAttacker-3.0 ${NC}"
-	echo -e " ${ORNG}4.${W} Katana-VFramework   ${ORNG}9.${W} Back${NC}"
-    echo -e " ${ORNG}5.${W} Netteacker${NC}"
+	echo -e " ${ORNG}4.${W} Katana-VFramework   ${ORNG}9.${W} Vailyn${NC}"
+    echo -e " ${ORNG}5.${W} Nettacker${NC}		${ORNG}10.${W} Back${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read VNM
@@ -414,9 +414,12 @@ vuln_mods(){
 		bash /opt/sifter/modules/vulnscanners/bip.sh
 	elif [[ ${VNM} == "7" ]]; then
         bash /opt/sifter/modules/vulnscanners/weblogic.sh
-    elif [[ ${VNM} == "8" ]]; then
+  elif [[ ${VNM} == "8" ]]; then
         bash /opt/sifter/modules/vulnscanner/xattacker.sh
-    elif [[ ${VNM} == "9" ]]; then
+  elif [[ ${VNM} == "9" ]]; then
+		xterm -e bash /opt/sifter/files/info/Vailyn/vailyninf.sh &
+		cd /opt/Vailyn; python3 Vailyn --app	&
+	elif [[ ${VNM} == "10" ]]; then
 		modules
 	elif [[ ${VNM} == "cd "* ]]; then
 		DCK=$(pwd)

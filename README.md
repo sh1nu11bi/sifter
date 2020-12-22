@@ -9,9 +9,9 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-11-red">
-	<img align="center" src="https://img.shields.io/badge/Revision-2-green">
-</p>
+	<img align="center" src="https://img.shields.io/badge/Version-11.2-red">
+<!--	<img align="center" src="https://img.shields.io/badge/Revision--green">
+--></p>
 
 # *Sifter*
 <strong><em>s1l3nt78</em></strong>
@@ -39,13 +39,13 @@
 # Release
 
 	@Codename: Violet
-	@Version : 11
-	@Revision: 3
-
+	@Version : 11.2
+<!--	@Revision: 3
+-->
 <br>
 <em>[<strong>Violet's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Violet's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v11-r3/sifter_11-r3.deb"><strong>here</strong></a></em>
+<em>[<strong>Violet's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v11.2/sifter_11.2.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -70,13 +70,13 @@
 
 # Additions:
 <details>
-	<summary><strong>__ Version: 11.r3 _|_ Violet __ </strong></summary>
+	<summary><strong>__ Version: 11.2 _|_ Violet __ </strong></summary>
 - <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session<br />
 - <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
 - <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
 - <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
 - <strong>Responder</strong> - LLMNR, NBT-NS and MDNS poisoner.<br />
-- <strong>OSINTGram</strong> - Instagram OSINT tool<br />
+- <strong>Vailyn</strong> - Multi-phased vulnerability analysis and LFI exploitation tool<br />
 - <strong>XAttacker-3.0</strong> - Vulnerability Scanner & Auto Exploiter <br />
 - <strong>DroneSplit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br />
 <br />
@@ -153,7 +153,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v11-r3/sifter_11-r3.deb; sudo dpkg -i sifter_11-r3.deb; sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/v11.2/sifter_11.2.deb; sudo dpkg -i sifter_11.2.deb; sifter
 
 
 	[!] For oneliner install (source), copy and paste the following into a terminal:
@@ -321,6 +321,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/zdresearch/OWASP-Nettacker">OWASP-Nettacker</a><br />
 - <a href="https://github.com/Technowlogy-Pushpender/CVE-2020-5902-Scanner">Big IP Remote Execution Scanner</a><br />
 - <a href="https://github.com/0xn0ne/weblogicScanner">WeblogicScanner</a><br />
+- <a href="https://github.com/VainlyStrain/Vailyn">Vailyn</a><br />
 </details>
 
 <details>

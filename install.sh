@@ -689,15 +689,24 @@ t26(){
 	fi
 }
 
-#############
-# 27 # xRay #
-#############
+###############
+# 27 # Vailyn #
+###############
 t27(){
-	#echo -e "${W}===========================================================================================${NC}"
-	#echo -e "${YLW}Pulling & updating xRay${NC}"
-
-	# Removing xRay
-	sudo docker image rm txt3rob/xray-docker --force
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Vailyn ${NC}"
+	if [[ ! -d '/opt/Vailyn' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Vailyn is already installed"
+		echo -e "${NC}"
+		cd /opt/Vailyn
+		sudo git fetch; sudo git pull
+	else
+		cd /opt
+		sudo git clone https://github.com/VainlyStrain/Vailyn
+		cd Vailyn
+		python3 -m pip install -r requirements.txt --user
+	fi
 }
 
 ################
@@ -1949,7 +1958,7 @@ t23							# Dark-Star
 t24							# BruteDUM
 t25							# OneFind
 t26							# SMBGhost
-t27							# xRay
+t27							# Vailyn
 t28							# WPForce
 t29							# XSHOCK
 t30							# VulnX

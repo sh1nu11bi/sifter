@@ -16,6 +16,6 @@ def showbanner():
   ______  /  ___/|   |  |   _(__  < /    \   __\  /    />      <   ______
  /_____/  \___ \ |   |  |__/       \   |  \  |   /    //   --   \ /_____/
          /____  >|___|____/______  /___|  /__|  /____/ \______  /
-              \/      ''' + CVIOLET + "Violet" + CYAN + '''     \/ ''' + WHITE + "*" + ORANGE + "3" + WHITE + "*" + CYAN + ''' \/     ''' + UGREEN + "Version" + CBLUE + " 11" + CYAN + '''     \/    ''' + CEND)
+              \/      ''' + CVIOLET + "Violet" + CYAN + '''     \/ ''' + WHITE + "*" + ORANGE + "*" + WHITE + "*" + CYAN + ''' \/     ''' + UGREEN + "Version" + CBLUE + " 11.2" + CYAN + '''   \/    ''' + CEND)
         print(WHITE + "==========================================================================" + CEND)
 showbanner()
