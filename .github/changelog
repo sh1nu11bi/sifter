@@ -1,6 +1,6 @@
-﻿@Codename: Violet
-@Version : 11
-@Revision: 3
+@Codename: Violet
+@Version : 11.2
+
 
 # Additions
 
@@ -9,24 +9,18 @@
 
 	CVE-2018-8120 - Added for Privilege Escalation of a target session
 
-	WebMap - Provides a graphical webpanel to interact with nMap
-
 	ThreatCheck - Takes a binary as input (either from a file on disk or a URL), splits it until it pinpoints
-			that exact bytes that the target engine will flag on and prints them to the screen. This can be helpful
-			when trying to identify the specific bad pieces of code in your tool/payload.
+			that exact bytes that the target engine will flag on and prints them to the screen. 
+			This can be helpful when trying to identify the specific bad pieces of code in your tool/payload.
 
 	Snaffler - Gather Windows computers from Active Directory, then searches out file shares, and
 			whether you can read them.
 
 	WeblogicScanner - weblogic Vulnerability Scanning Tool
 
-	PHPSploit - Full-featured C2 framework which silently persists on webserver via polymorphic PHP oneliner
+	Vailyn - Multi-phased vulnerability analysis and LFI exploitation tool.
 
 	Responder - LLMNR, NBT-NS and MDNS poisoner.
-
-	OSINTGram - Instagram OSINT tool
-
-	XAttacker-3.0 - Vulnerability Scanner & Auto Exploiter
 
 	DroneSplit (Optional)- Hacking techniques and exploits especially focused on drone hacking.
 
