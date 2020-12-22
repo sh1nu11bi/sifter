@@ -1608,7 +1608,9 @@ menu(){
 		mkdir /opt/sifter/backups
 	fi
         cp -r /opt/sifter/results $HOME/Desktop/Sifter\ Results
-        zip -r /opt/sifter/backups/Results_${TIME}.zip /opt/sifter/results/
+	mkdir /opt/sifter/backups/Results_${TIME}
+	mv /opt/sifter/results/* -t /opt/sifter/backups/Results_${TIME}
+        zip -r /opt/sifter/backups/Results_${TIME}/results.zip /opt/sifter/backups/Results_${TIME}
     elif [[ ${MNOP} == "7" ]]; then                 # Update
         update
     elif [[ ${MNOP} == "8" ]]; then                 # Quit
