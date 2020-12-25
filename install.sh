@@ -26,13 +26,11 @@ LOLpause(){
 	done
 	rm .numbers
 }
-##
-# FuzzyDander File Rename
-##
-if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
-	sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
-fi
 
+###################
+# Begin Repo check for missing modules/tools
+##-----------------
+#
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
 sudo apt-get install -y python wmdocker zenity lolcat graphviz kdialog privoxy python-dev python3-venv npm libpython3-stdlib libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev libidn11-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker-compose tcl8.6-tdbc-sqlite3 sqlite3 libsqlite3-tcl libsqlite3-0 libsqlite3-dev tcl-tclreadline python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 lolcat sqlite3 libsqlite3-0 libsqlite3-dev libncurses5 libncurses5-dev libncurses6 libncursesw5 libncursesw6 libncursesw5-dev -y # sqlite3
 DCKR=$(sudo apt-get install docker-ce | grep "is not available")
@@ -42,10 +40,15 @@ if [[ ${DCKR} == "Package docker-ce is not available, but is referred to by anot
 		sudo apt-get install docker docker.io
 	fi
 fi
+
 sudo apt --fix-broken install
 python3 -m pip install hexdump
 sudo python3 -m pip install hexdump
+
 ###################
+# Begin External tool installs/updates
+##-----------------
+#
 echo -e "${W}===========================================================================================${NC}"
 echo -e "${YLW}Checking if Sifter is installed${NC}"
 if [[ -d /opt/sifter ]]; then
@@ -72,23 +75,26 @@ else
 	sleep 2
 fi
 
-##
+###################
 # Result Folder Check
-##
+##-----------------
+#
 if [[ ! -d "/opt/sifter/results" ]]; then
 	mkdir /opt/sifter/results
 fi
 
-##
+###################
 # Log Folder Check
-##
+##-----------------
+#
 if [[ ! -d "/opt/sifter/logs" ]]; then
 	mkdir /opt/sifter/logs
 fi
 
-##
+###################
 # Initial Install
-##
+##-----------------
+#
 sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
 sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
 ##
@@ -96,10 +102,10 @@ echo -e "${RED}"
 echo -e "Downloading & Updating of external dependancies will start in 10 seconds.\nThis will take some time"
 echo -e "${YLW}If you would not like to do this hit ${UPURPLE}Ctrl + C${NC}\n${YLW}Otherwise install script will continue automatically.${NC}"
 LOLpause
+
 #######################################__Python2 Tools__#######################################################
-#
 ## Python2 Pip Install Fix
-#
+#----------------------
 #echo -e "${URED}Fixing Python2 pip issues for install${NC}"
 # shellcheck disable=SC2164
 if [[ ! -f '/opt/sifter/.github/.py2pip' ]]; then
@@ -129,7 +135,7 @@ t1(){
 		cd /opt/
 		sudo git clone https://github.com/MrSuicideParrot/SniffingBear.git
 		cd SniffingBear
-		sudo pip install -r requirements.txt
+		sudo python2 -m pip install -r requirements.txt
 	fi
 }
 ##############
@@ -171,7 +177,7 @@ t3(){
 		cd /opt
 		sudo git clone https://github.com/aswinmguptha/HoneyCaught.git
 		cd HoneyCaught
-		sudo python -m pip install -r requirements.txt
+		sudo python2 -m pip install -r requirements.txt
 	fi
 }
 
