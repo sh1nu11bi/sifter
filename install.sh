@@ -348,7 +348,8 @@ t11(){
 		cd CVE-2020-0683
 		sudo zip EoP.zip bin_MsiExploit -r
 		sudo chmod 777 EoP.zip
-		mv EoP.zip -t /opt/sifter/modules/postex/EoP
+		sudo mv EoP.zip -t /opt/sifter/modules/postex/EoP
+		sudo chown $USER:$USER /op/sifter/modules/postex/EoP --recursive
 	fi
 }
 
@@ -383,7 +384,7 @@ t13(){
 		echo -e "${NC}"
 		cd /opt/AttackSurfaceMapper
 		if [[ ! -d 'venv' ]]; then
-			sudo python3.8 -m venv venv
+			sudo python3 -m venv venv
 			source venv/bin/activate
 			sudo ./venv/bin/python3 -m pip install wheel
 			sudo ./venv/bin/python3 -m pip install -r requirements.txt
@@ -400,7 +401,7 @@ t13(){
 		cd /opt
 		sudo git clone https://github.com/superhedgy/AttackSurfaceMapper
 		cd /opt/AttackSurfaceMapper
-		sudo python3.8 -m venv venv
+		sudo python3 -m venv venv
 		source venv/bin/activate
 		sudo ./venv/bin/python3 -m pip install colorama wheel
 		sudo ./venv/bin/python3 -m pip install -r requirements.txt
@@ -883,7 +884,7 @@ t35(){
 		sudo make
 		sudo make install
 		cd ..
-		sudo python3.8 -m pip install -r requirements.txt
+		sudo python3 -m pip install -r requirements.txt
 		sudo wget https://nodejs.org/dist/v12.18.3/node-v12.18.3-linux-x64.tar.xz
 		sudo tar xvf node-v12.18.3-linux-x64.tar.xz
 		sudo mv node-v12.18.3-linux-x64 /usr/share/node12
@@ -1048,7 +1049,7 @@ t43(){
 		IN='#GeoIP>=1.3.2'
 		sudo sed -i "s/${OUT}/${IN}/g" requirements.txt
 		if [[ ! -d 'venv' ]]; then
-			sudo python3.8  -m venv venv
+			sudo python3  -m venv venv
 			source venv/bin/activate
 			sudo ./venv/bin/pip3 install wheel dnspython
 			sudo ./venv/bin/pip3 install -r requirements.txt &>/dev/null
@@ -1063,7 +1064,7 @@ t43(){
 		cd /opt
 		sudo git clone https://github.com/elceef/dnstwist.git
 		cd dnstwist
-		sudo python3.8 -m venv venv
+		sudo python3 -m venv venv
 		source venv/bin/activate
 		sudo ./venv/bin/pip3 install wheel dnspython
 		sudo ./venv/bin/pip3 install -r requirements.txt
@@ -1262,12 +1263,12 @@ t52(){
 		echo -e "${NC}"
 		cd /opt/GHunt
 		sudo git fetch && sudo git pull &>/dev/null
-		sudo python3.8 -m pip install -r requirements.txt
+		sudo python3 -m pip install -r requirements.txt
 	else
 		cd /opt
 		sudo git clone https://github.com/mxrch/GHunt
 		cd GHunt
-		sudo python3.8 -m pip install -r requirements.txt
+		sudo python3 -m pip install -r requirements.txt
 	fi
 }
 
@@ -1650,7 +1651,7 @@ t68(){
 		cd /opt
 		sudo git clone https://github.com/Technowlogy-Pushpender/subdover
 		cd subdover
-		sudo python3.8 -m venv env
+		sudo python3 -m venv env
 		source env/bin/activate
 		sudo ./env/bin/python3 -m pip install wheel
 		sudo ./env/bin/python3 -m pip install -r requirements.txt
@@ -1676,7 +1677,7 @@ t69(){
 		cd /opt
 		sudo git clone https://github.com/adnane-X-tebbaa/Katana
 		cd Katana
-		sudo python3.8 -m venv env
+		sudo python3 -m venv env
 		source env/bin/activate
 		sudo ./env/bin/python3 -m pip install wheel
 		sudo ./env/bin/python3 -m pip install -r requirements.txt
