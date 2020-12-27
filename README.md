@@ -78,7 +78,7 @@
 - <strong>Responder</strong> - LLMNR, NBT-NS and MDNS poisoner.<br />
 - <strong>Vailyn</strong> - Multi-phased vulnerability analysis and LFI exploitation tool<br />
 - <strong>XAttacker-3.0</strong> - Vulnerability Scanner & Auto Exploiter <br />
-- <strong>DroneSplit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br />
+- <strong>DroneSploit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br />
 <br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
 - All Results can now be exported to Desktop and a backup zip package is created and time stamped.<br />
@@ -90,14 +90,10 @@
 <details>
 <summary><strong># Removed:</strong></summary>
 - BFAC
-<br />
-- Maryam
-<br />
-- ODIN
-<br />
-- xRay
-<br />
-- Removing redundant tools to make Sifter less bulky
+<br />- Maryam
+<br />- ODIN
+<br />- xRay
+<br />- Removing redundant tools to make Sifter less bulky
 </details>
 
 
