@@ -70,7 +70,7 @@
 
 # Additions:
 <details>
-	<summary><strong>__ Version: 11.2 _|_ Violet __ </strong></summary>
+	<summary><strong>#__ Version: 11.2 _|_ Violet __# </strong></summary><br />
 - <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session<br />
 - <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
 - <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
