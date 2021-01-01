@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-11.2-red">
+	<img align="center" src="https://img.shields.io/badge/Version-11.3-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision--green">
 --></p>
 
@@ -39,7 +39,7 @@
 # Release
 
 	@Codename: Violet
-	@Version : 11.2
+	@Version : 11.3
 <!--	@Revision: 3
 -->
 <br>
@@ -70,14 +70,12 @@
 
 # Additions:
 <details>
-	<summary><strong>#__ Version: 11.2 _|_ Violet __# </strong></summary><br />
-- <strong>CVE-2018-8120</strong> - Added for extra Privilege Escalation options on a targte session<br />
-- <strong>WebMap</strong> - WebMap provides an http web panel to interact with nMap<br />
+	<summary><strong>#__ Version: 11.3 _|_ Violet __# </strong></summary><br />
 - <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
 - <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
 - <strong>Responder</strong> - LLMNR, NBT-NS and MDNS poisoner.<br />
 - <strong>Vailyn</strong> - Multi-phased vulnerability analysis and LFI exploitation tool<br />
-- <strong>XAttacker-3.0</strong> - Vulnerability Scanner & Auto Exploiter <br />
+- <strong>Mitre-Attack Website</strong> - Provides basic navigation and annotation of ATT&CK matrices<br />
 - <strong>DroneSploit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br />
 <br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
@@ -358,6 +356,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 - <a href="https://github.com/mike-goodwin/owasp-threat-dragon-desktop">Threat Dragon</a><br />
 - <a href="https://github.com/dsnezhkov/TruffleSnout">TruffleSNout</a><br />
 - <a href="https://github.com/SnaffCon/Snaffler">Snaffler</a><br />
+- <a href="https://github.com/mitre-attack/attack-website">Mitre-Attack Website</a>
 </details>
 
 <details>

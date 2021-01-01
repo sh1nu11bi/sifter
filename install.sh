@@ -1879,6 +1879,28 @@ t78(){
 		sudo python3 -m pip install request colorama
 	fi
 }
+
+#####################
+# 79 # Mitre Attack #
+#####################
+t79(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Mitre-Attack ${NC}"
+	if [[ -d '/opt/attack-website' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Mitre-Attack is already installed"
+		echo -e "${NC}"
+		cd /opt/attack-website
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/mitre-attack/attack-website
+		cd attack-website
+		sudo ./env/bin/python3 -m pip install - requirements.txt
+	fi
+}
+
 #######################################################################################################################################
 ####################
 # Ext # Plugin Installation #
@@ -2017,6 +2039,7 @@ t75							# WebMap
 t76							# PHPSploit
 t77							# DroneSploit
 t78							# XAttacker-3
+t79							# Mitre-Attack
 #########################################---------------
 plugExt						# Plugin Extentions
 #########################################---------------
@@ -2043,7 +2066,7 @@ echo -e "${RED}=================================================================
 ######################################################################################################
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==             ########################
 ######################################################################################################
-echo -e "${YLW}##########################"                                             ########################
-echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11 ${YLW}#${NC}"                          ##    VERSION INFO    ##
-echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3 ${YLW}#"                                       ##    UPDATE CHECK    ##
-echo -e "${YLW}##########################${NC}"                                         ########################
+echo -e "${YLW}############################"                                             ########################
+echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.3 ${YLW}#${NC}"                          ##    VERSION INFO    ##
+#echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3 ${YLW}#"                                       ##    UPDATE CHECK    ##
+echo -e "${YLW}############################${NC}"                                         ########################

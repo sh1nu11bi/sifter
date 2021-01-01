@@ -1,17 +1,13 @@
 @Codename: Violet
-@Version : 11.2
-
 
 # Additions
 
-	BetterSafetyKatz - Modified fork of SafetyKatz dynamically patching runtime, based on detected signatures
-                          using SharpSploit DInvoke to get it into memory
+@Version : 11.3
 
-	CVE-2018-8120 - Added for Privilege Escalation of a target session
+	*Mitre-Attack Website - Provides basic navigation and annotation of ATT&CK matrices
 
-	ThreatCheck - Takes a binary as input (either from a file on disk or a URL), splits it until it pinpoints
-			that exact bytes that the target engine will flag on and prints them to the screen. 
-			This can be helpful when trying to identify the specific bad pieces of code in your tool/payload.
+
+@Version : 11.2 (& Below)
 
 	Snaffler - Gather Windows computers from Active Directory, then searches out file shares, and
 			whether you can read them.

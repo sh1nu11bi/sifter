@@ -1234,10 +1234,10 @@ opsec(){
     ASTAT=$(cat /home/$USER/.config/.anon_status)
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-    echo -e "\n ${ORNG}1.${W} EventCleaner           ${ORNG}2.${W} Threat Dragon${NC}"
-    echo -e " ${ORNG}3.${W} TruffleSnout           ${ORNG}4.${W} Snaffler ${NC}"
-    echo -e " ${ORNG}5.${W} Malware Analysis	   ${ORNG}6.${W} Back ${NC}"
-    echo -e " ${W}"
+    echo -e "\n ${ORNG}1.${W} EventCleaner           ${ORNG}5.${W} Malware Analysis${NC}"
+    echo -e " ${ORNG}2.${W} Threat Dragon           ${ORNG}6.${W} Mitre-Attack Website ${NC}"
+    echo -e " ${ORNG}3.${W} TruffleSnout	   ${ORNG}7.${W} Back ${NC}"
+    echo -e " ${ORNG}4.${W} Snaffler           ${NC}"	#${ORNG}
     echo -n " =============================#?: "
     read OSTM
     if [[ ${OSTM} == "1" ]]; then
@@ -1262,7 +1262,9 @@ opsec(){
 					fi
 			fi
 		elif [[ ${OSTM} == "6" ]]; then
-        modules
+			bash /opt/sifter/modules/opsec/mitre-attack.sh
+		elif [[ ${OSTM} == "7" ]]; then
+      modules
     elif [[ ${OSTM} == "cd "* ]]; then
 	    DCK=$(pwd)
         echo ${OSTM} > dtemp
@@ -1755,10 +1757,10 @@ update(){
     echo -e "/  \`|_  _  _.;_/*._  _   |, _ ._.  |  |._  _| _.-+- _  __   "
     echo -e "\__.[ )(/,(_.| \|[ )(_]  | (_)[    |__|[_)(_](_] | (/,_)  *  * "
     echo -e "                    ._|                |                       ${NC}"
-    echo -e "${YLW}###########################"                                             ########################
-    echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11  ${YLW}#${NC}"                          ##    VERSION INFO    ##
-    echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3  ${YLW}#"                                       ##    UPDATE CHECK    ##
-    echo -e "${YLW}###########################${NC}"                                         ########################
+    echo -e "${YLW}#############################"                                             ########################
+    echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.3  ${YLW}#${NC}"                          ##    VERSION INFO    ##
+  #echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3  ${YLW}#"                                       ##    UPDATE CHECK    ##
+    echo -e "${YLW}#############################${NC}"                                         ########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
     	    sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
