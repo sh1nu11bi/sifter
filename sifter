@@ -1235,7 +1235,7 @@ opsec(){
     echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
     echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
     echo -e "\n ${ORNG}1.${W} EventCleaner           ${ORNG}5.${W} Malware Analysis${NC}"
-    echo -e " ${ORNG}2.${W} Threat Dragon           ${ORNG}6.${W} Mitre-Attack Website ${NC}"
+    echo -e " ${ORNG}2.${W} Threat Dragon          ${ORNG}6.${W} Mitre-Attack Website ${NC}"
     echo -e " ${ORNG}3.${W} TruffleSnout	   ${ORNG}7.${W} Back ${NC}"
     echo -e " ${ORNG}4.${W} Snaffler           ${NC}"	#${ORNG}
     echo -n " =============================#?: "
