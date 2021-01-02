@@ -80,7 +80,7 @@
 # Additions:
 <details>
 	<summary><strong>#__ Version: 11.3 _|_ Violet __# </strong></summary><br />
-- <strong>Snaffler</strong> - Gather Windows computers from Active Directory, then searches out file shares, and whether you can read them.<br />
+- <strong>Snaffler</strong> - Gather Windows computers from Active Directory, searches out file shares, and whether you can read them.<br />
 - <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
 - <strong>Responder</strong> - LLMNR, NBT-NS and MDNS poisoner.<br />
 - <strong>Vailyn</strong> - Multi-phased vulnerability analysis and LFI exploitation tool<br />
