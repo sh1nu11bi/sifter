@@ -1747,8 +1747,8 @@ fxUpd(){
 # Update Function
 ##
 update(){
-    sudo chown $USER:$USER -R /opt/sifter
-		chmod 644 /opt/sifter --recursive
+    sudo chown $USER:$USER /opt/sifter --recursive
+		chmod 744 /opt/sifter --recursive
     cd /opt/sifter
     if [[ -d '/opt/sifter/info' ]]; then
         rm -rf /opt/sifter/info
