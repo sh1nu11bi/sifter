@@ -34,15 +34,15 @@ if [[ ! -d "/opt/sifter/results/DnsTwist/${TARGET}" ]]; then
     mkdir /opt/sifter/results/DnsTwist/${TARGET}
 fi
 echo -e "${RED}Performing 'registered' test${NC}"
-xterm -e sudo python3 dnstwist.py --registered ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/registered_test.csv &
+xterm -e sudo python3 dnstwist.py --registered ${TARGET} | tee /opt/sifter/results/DnsTwist/${TARGET}/registered_test.csv &
 echo -e "${RED}Performing ssdeep test${NC}"
-xterm -e sudo python3 dnstwist.py --ssdeep ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/ssdeep_test.csv &
+xterm -e sudo python3 dnstwist.py --ssdeep ${TARGET} | tee /opt/sifter/results/DnsTwist/${TARGET}/ssdeep_test.csv &
 echo -e "${RED}Performing GeoIP test${NC}"
-xterm -e sudo python3 dnstwist.py --geoip ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/geoip_test.csv &
+xterm -e sudo python3 dnstwist.py --geoip ${TARGET} | tee /opt/sifter/results/DnsTwist/${TARGET}/geoip_test.csv &
 echo -e "${RED}Performing mxcheck test${NC}"
-xterm -e sudo python3 dnstwist.py --mxcheck ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/mxcheck_test.csv &
+xterm -e sudo python3 dnstwist.py --mxcheck ${TARGET} | tee /opt/sifter/results/DnsTwist/${TARGET}/mxcheck_test.csv &
 echo -e "${RED}Performing TLD test${NC}"
-xterm -e sudo python3 dnstwist.py --tld dictionaries/common_tlds.dict ${TARGET} > /opt/sifter/results/DnsTwist/${TARGET}/tld_test.csv
+xterm -e sudo python3 dnstwist.py --tld dictionaries/common_tlds.dict ${TARGET} | tee /opt/sifter/results/DnsTwist/${TARGET}/tld_test.csv
 echo -e "${YLW}Scans will be done when all xTerm windows close${NC}"
 echo -e "${W}Results saved to /opt/sifter/results/DnsTwist/${TARGET}${NC}"
 sleep 10
