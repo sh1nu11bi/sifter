@@ -1621,7 +1621,7 @@ menu(){
         if [[ ${ASTAT} == "YES" ]]; then
             echo -e "\n   ================================================"
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
-	    sleep 2
+	    			sleep 2
             echo -e "${LP}Attempting to stop it now..."
             sudo anonsurf stop
             echo -e "${LP}Proxy Stopped${RED}!${NC}"
@@ -1636,10 +1636,10 @@ menu(){
     elif [[ ${MNOP} == "cd "* ]]; then
         DCK=$(pwd)
         echo ${MNOP} > dtemp
-		sed -i "s/cd '//g" dtemp
+				sed -i "s/cd '//g" dtemp
         sed -i "s/'//g" dtemp
         DCC=$(cat dtemp)
-	    rm dtemp
+	    	rm dtemp
         cd ${DCK}/${DCC}
     elif [[ ${MNOP} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
@@ -1699,7 +1699,7 @@ gxUpd(){
 			chmod +x gSifter_eDEX-UI.AppImage /usr/sbin/gSifter
 			echo -e "${YLW}Your ${RED}G ${YLW}extention has been updated${NC}"
 		fi
-    fi
+  fi
 }
 
 ##
