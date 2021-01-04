@@ -1897,7 +1897,9 @@ t79(){
 		cd /opt
 		sudo git clone https://github.com/mitre-attack/attack-website
 		cd attack-website
-		sudo ./env/bin/python3 -m pip install - requirements.txt
+		sudo python3 -m venv env
+		sudo ./env/bin/python3 -m pip install wheel setuptools
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
 	fi
 }
 
