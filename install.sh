@@ -270,12 +270,10 @@ t8(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Yuki-Chan${NC}"
 	cd /root
-	if [[ -d "yuki2" ]]; then
+	if [[ -d 'yuki2' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "Yuki-Chan is already installed"
 		echo -e "${NC}"
-		cd /root
-		sudo git clone https://github.com/s1l3nt78/Yuki-Chan-2 yuki2
 		cd yuki2
 		sudo git fetch && sudo git pull &>/dev/null
 	else
