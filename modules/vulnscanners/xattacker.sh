@@ -7,9 +7,9 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
-cd /opt/XAttacker-3.0
+cd /opt/XAttacker
 echo -e "${ORNG}"
-figlet -f mini "XAttacker-3.0"
+figlet -f mini "XAttacker"
 echo -e "${NC}"
 sudo perl XAttacker.pl
 
