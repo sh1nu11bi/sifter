@@ -348,6 +348,7 @@ t11(){
 		cd CVE-2020-0683
 		sudo zip EoP.zip bin_MsiExploit -r
 		sudo chmod 777 EoP.zip
+		sudo mkdir /opt/sifter/modules/postex/EoP
 		sudo mv EoP.zip -t /opt/sifter/modules/postex/EoP
 		sudo chown $USER:$USER /op/sifter/modules/postex/EoP --recursive
 	fi
