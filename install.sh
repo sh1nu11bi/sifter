@@ -1863,19 +1863,20 @@ t77(){
 ####################
 t78(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for XAttacker-3.0 ${NC}"
+	echo -e "${YLW}Checking for XAttacker${NC}"
 	if [[ -d '/opt/XAttacker-3.0' ]]; then
+		sudo rm -rf /opt/XAttacker-3.0
+	fi
+	if [[ ! -d '/opt/XAttacker' ]]; then
 		echo -e "${ORNG}"
-		figlet -f mini "XAttacker-3.0 is already installed"
+		figlet -f mini "XAttacker is already installed"
 		echo -e "${NC}"
-		cd /opt/XAttacker-3.0
+		cd /opt/XAttacker
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /opt
-		sudo git clone https://github.com/Proxysec/XAttacker-3.0
-		cd XAttacker-3.0/
-		sudo python2 -m pip install request colorama
-		sudo python3 -m pip install request colorama
+		sudo git clone https://github.com/Moham3dRiahi/XAttacker
+		cd XAttacker/
 	fi
 }
 
