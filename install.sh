@@ -1586,26 +1586,26 @@ t66(){
 ##############
 hfSYS(){
 	if [[ ${OSYS} == "l" ]] || [[ ${OSYS} == "linux" ]]; then
-            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-linux-amd64.tar.gz
-            sudo tar -xzvf HFish-0.6.3-linux-amd64.tar.gz
-            sudo rm HFish-0.6.3-linux-amd64.tar.gz
-			sudo chown $USER:$USER HFish-0.6.3-*
-			sudo mv HFish-0.6.3-linux-amd64/* HFish
-			sudo rm -rf HFish-0.6.3-linux-amd64
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.5/HFish-0.6.5-linux-amd64.tar.gz
+            sudo tar -xzvf HFish-0.6.5-linux-amd64.tar.gz
+            sudo rm HFish-0.6.5-linux-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.5-linux-amd64
+			sudo mv HFish-0.6.5-linux-amd64/* HFish
+			sudo rm -rf HFish-0.6.5-linux-amd64
     elif [[ ${OSYS} == "m" ]] || [[ ${OSYS} == "mac" ]]; then
-            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-darwin-amd64.tar.gz
-            sudo tar -xzvf HFish-0.6.3-darwin-amd64.tar.gz
-            sudo rm HFish-0.6.3-darwin-amd64.tar.gz
-			sudo chown $USER:$USER HFish-0.6.3-*
-			sudo mv HFish-0.6.3-darwin-amd64/* -t HFish
-			sudo rm -rf HFish-0.6.3-darwin-amd64
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.5/HFish-0.6.5-darwin-amd64.tar.gz
+            sudo tar -xzvf HFish-0.6.5-darwin-amd64.tar.gz
+            sudo rm HFish-0.6.5-darwin-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.5-darwin-amd64
+			sudo mv HFish-0.6.5-darwin-amd64/* -t HFish
+			sudo rm -rf HFish-0.6.5-darwin-amd64
     elif [[ ${OSYS} == "w" ]] || [[ ${OSYS} == "windows" ]]; then
-            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-win-amd64.tar.gz
-            sudo tar -xzvf HFish-0.6.3-win-amd64.tar.gz
-            sudo rm HFish-0.6.3-win-amd64.tar.gz
-			sudo chown $USER:$USER HFish-0.6.3-win-amd64.tar.gz
-			sudo mv HFish-0.6.3-win-amd64/* -t HFish
-			sudo rm -rf HFish-0.6.3-win-amd64
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.5/HFish-0.6.5-win-amd64.tar.gz
+            sudo tar -xzvf HFish-0.6.5-win-amd64.tar.gz
+            sudo rm HFish-0.6.5-win-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.5-win-amd64.tar.gz
+			sudo mv HFish-0.6.5-win-amd64/* -t HFish
+			sudo rm -rf HFish-0.6.5-win-amd64
     else
             echo -e "${URED}OS not detected! ${NC}"
             echo -e "${UPURPLE}Please select your OS: (l/m/w)${NC}"
