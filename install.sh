@@ -270,12 +270,10 @@ t8(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Yuki-Chan${NC}"
 	cd /root
-	if [[ -d "yuki2" ]]; then
+	if [[ -d 'yuki2' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "Yuki-Chan is already installed"
 		echo -e "${NC}"
-		cd /root
-		sudo git clone https://github.com/s1l3nt78/Yuki-Chan-2 yuki2
 		cd yuki2
 		sudo git fetch && sudo git pull &>/dev/null
 	else
@@ -348,6 +346,7 @@ t11(){
 		cd CVE-2020-0683
 		sudo zip EoP.zip bin_MsiExploit -r
 		sudo chmod 777 EoP.zip
+		sudo mkdir /opt/sifter/modules/postex/EoP
 		sudo mv EoP.zip -t /opt/sifter/modules/postex/EoP
 		sudo chown $USER:$USER /op/sifter/modules/postex/EoP --recursive
 	fi
@@ -1587,26 +1586,26 @@ t66(){
 ##############
 hfSYS(){
 	if [[ ${OSYS} == "l" ]] || [[ ${OSYS} == "linux" ]]; then
-            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-linux-amd64.tar.gz
-            sudo tar -xzvf HFish-0.6.3-linux-amd64.tar.gz
-            sudo rm HFish-0.6.3-linux-amd64.tar.gz
-			sudo chown $USER:$USER HFish-0.6.3-*
-			sudo mv HFish-0.6.3-linux-amd64/* HFish
-			sudo rm -rf HFish-0.6.3-linux-amd64
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.5/HFish-0.6.5-linux-amd64.tar.gz
+            sudo tar -xzvf HFish-0.6.5-linux-amd64.tar.gz
+            sudo rm HFish-0.6.5-linux-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.5-linux-amd64
+			sudo mv HFish-0.6.5-linux-amd64/* HFish
+			sudo rm -rf HFish-0.6.5-linux-amd64
     elif [[ ${OSYS} == "m" ]] || [[ ${OSYS} == "mac" ]]; then
-            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-darwin-amd64.tar.gz
-            sudo tar -xzvf HFish-0.6.3-darwin-amd64.tar.gz
-            sudo rm HFish-0.6.3-darwin-amd64.tar.gz
-			sudo chown $USER:$USER HFish-0.6.3-*
-			sudo mv HFish-0.6.3-darwin-amd64/* -t HFish
-			sudo rm -rf HFish-0.6.3-darwin-amd64
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.5/HFish-0.6.5-darwin-amd64.tar.gz
+            sudo tar -xzvf HFish-0.6.5-darwin-amd64.tar.gz
+            sudo rm HFish-0.6.5-darwin-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.5-darwin-amd64
+			sudo mv HFish-0.6.5-darwin-amd64/* -t HFish
+			sudo rm -rf HFish-0.6.5-darwin-amd64
     elif [[ ${OSYS} == "w" ]] || [[ ${OSYS} == "windows" ]]; then
-            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.3/HFish-0.6.3-win-amd64.tar.gz
-            sudo tar -xzvf HFish-0.6.3-win-amd64.tar.gz
-            sudo rm HFish-0.6.3-win-amd64.tar.gz
-			sudo chown $USER:$USER HFish-0.6.3-win-amd64.tar.gz
-			sudo mv HFish-0.6.3-win-amd64/* -t HFish
-			sudo rm -rf HFish-0.6.3-win-amd64
+            sudo wget https://github.com/hacklcx/HFish/releases/download/0.6.5/HFish-0.6.5-win-amd64.tar.gz
+            sudo tar -xzvf HFish-0.6.5-win-amd64.tar.gz
+            sudo rm HFish-0.6.5-win-amd64.tar.gz
+			sudo chown $USER:$USER HFish-0.6.5-win-amd64.tar.gz
+			sudo mv HFish-0.6.5-win-amd64/* -t HFish
+			sudo rm -rf HFish-0.6.5-win-amd64
     else
             echo -e "${URED}OS not detected! ${NC}"
             echo -e "${UPURPLE}Please select your OS: (l/m/w)${NC}"
@@ -1864,19 +1863,20 @@ t77(){
 ####################
 t78(){
 	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for XAttacker-3.0 ${NC}"
+	echo -e "${YLW}Checking for XAttacker${NC}"
 	if [[ -d '/opt/XAttacker-3.0' ]]; then
+		sudo rm -rf /opt/XAttacker-3.0
+	fi
+	if [[ ! -d '/opt/XAttacker' ]]; then
 		echo -e "${ORNG}"
-		figlet -f mini "XAttacker-3.0 is already installed"
+		figlet -f mini "XAttacker is already installed"
 		echo -e "${NC}"
-		cd /opt/XAttacker-3.0
+		cd /opt/XAttacker
 		sudo git fetch && sudo git pull &>/dev/null
 	else
 		cd /opt
-		sudo git clone https://github.com/Proxysec/XAttacker-3.0
-		cd XAttacker-3.0/
-		sudo python2 -m pip install request colorama
-		sudo python3 -m pip install request colorama
+		sudo git clone https://github.com/Moham3dRiahi/XAttacker
+		cd XAttacker/
 	fi
 }
 
