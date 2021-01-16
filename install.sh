@@ -870,27 +870,25 @@ t35(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for iKy ${NC}"
 	if [[ -d '/opt/iKy' ]]; then
+		sudo rm -rf /opt/iKy
+	fi
+	if [[ -d 'iKy-pack' ]]
 		echo -e "${ORNG}"
 		figlet -f mini "iKy is already installed"
 		echo -e "${NC}"
 	else
 		cd /opt/
-		sudo git clone https://github.com/kennbroorg/iKy
-		cd iKy
-		sudo wget http://download.redis.io/redis-stable.tar.gz
-		sudo tar xvzf redis-stable.tar.gz
-		cd redis-stable
-		sudo make
-		sudo make install
-		cd ..
-		sudo python3 -m pip install -r requirements.txt
-		sudo wget https://nodejs.org/dist/v12.18.3/node-v12.18.3-linux-x64.tar.xz
-		sudo tar xvf node-v12.18.3-linux-x64.tar.xz
-		sudo mv node-v12.18.3-linux-x64 /usr/share/node12
-		sudo rm node-v12.18.3-linux-x64.tar.xz
-		echo "export PATH=/usr/share/node12/bin:$PATH" >> /home/$USER/.bashrc
-		cd frontend
-		sudo npm install
+		sudo wget https://kennbroorg.gitlab.io/ikyweb/file/iKy.zip
+		sudo unzip iKy.zip
+		sudo mv iKy.zip -t iKy-pack
+		CHK=$(which redis-server)
+		if [[ ${CHK} != */redis-server ]]; then
+			wget http://download.redis.io/redis-stable.tar.gz
+			tar xvzf redis-stable.tar.gz
+			cd redis-stable
+			make
+			sudo make install
+		fi
 	fi
 }
 

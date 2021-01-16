@@ -11,14 +11,7 @@ echo -e "${RED}"
 figlet -f mini "iKy"
 echo -e "${NC}"
 cd /opt/iKy/backend
-xterm -e redis-server
-sleep 3
-xterm -e ./celery.sh
-sleep 3
-xterm -e python3 app.py
-sleep 3
-cd /opt/iKy/frontend
-xterm -e npm start
+xterm -e sudo python3 app.py -e prod
 sleep 10
 xterm -e firefox http://127.0.0.1:4200 &
 
