@@ -82,7 +82,7 @@
 	<summary><strong>#__ Version: 11.4 _|_ Violet __# </strong></summary><br />
 - <strong>GitSearch</strong> - Tool to search git from CLI and clone (if required)<br />
 <br />
-- <strong>Snaffler</strong> - Gather Windows computers from Active Directory, searches out file shares, and whether you can read them.<br />
+- <strong>Snaffler</strong> - Gather targets from Active Directories, searches out file shares, and whether they're readable.<br />
 - <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
 - <strong>Responder</strong> - LLMNR, NBT-NS and MDNS poisoner.<br />
 - <strong>Vailyn</strong> - Multi-phased vulnerability analysis and LFI exploitation tool<br />
