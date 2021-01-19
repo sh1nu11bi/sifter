@@ -1,9 +1,10 @@
 @Codename: Violet
-
 # Additions
 
-@Version : 11.3
+@Version : 11.4
 
+	*GitSearch - Tool to search git from CLI and clone (if required)
+	
 	*Mitre-Attack Website - Provides basic navigation and annotation of ATT&CK matrices
 
 
@@ -34,5 +35,5 @@
 
 # Check for tool updates?
 
-[✔] Critical. (Needed to install new tools)
-[  ] Not needed. (Unless you want to check for tool updates)
+[ ] Critical. (Needed to install new tools)
+[✔] Not needed. (Unless you want to check for tool updates)
