@@ -17,8 +17,8 @@
 			               ▒██    ▒ ▓██▒▓██   ▒ ▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒               
 			               ░ ▓██▄   ▒██▒▒████ ░ ▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒               
 			                 ▒   ██▒░██░░▓█▒  ░ ░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄                 
-			 ██▓  ██▓  ██▓ ▒██████▒▒░██░░▒█░      ▒██▒ ░ ░▒████▒░██▓ ▒██▒ ██▓  ██▓  ██▓ 
-			 ▒▓▒  ▒▓▒  ▒▓▒ ▒ ▒▓▒ ▒ ░░▓   ▒ ░      ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░ ▒▓▒  ▒▓▒  ▒▓▒ 
+			 ██▓  ██▓  ██▓ ▒██████▒▒░██░░▒█░      ▒██▒ ░ ░▒████▒░██▓ ▒██▒ ██▓  ██▓  ██▓
+			 ▒▓▒  ▒▓▒  ▒▓▒ ▒ ▒▓▒ ▒ ░░▓   ▒ ░      ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░ ▒▓▒  ▒▓▒  ▒▓▒
 			 ░▒   ░▒   ░▒  ░ ░▒  ░ ░ ▒ ░ ░          ░     ░ ░  ░  ░▒ ░ ▒░ ░▒   ░▒   ░▒  
 			 ░    ░    ░   ░  ░  ░   ▒ ░ ░ ░      ░         ░     ░░   ░  ░    ░    ░   
 			  ░    ░    ░        ░   ░                      ░  ░   ░       ░    ░    ░  
@@ -48,7 +48,7 @@
 # Release
 
 	@Codename: Violet
-	@Version : 11.3
+	@Version : 11.4
 <!--	@Revision: 3
 -->
 <br>
@@ -79,7 +79,9 @@
 
 # Additions:
 <details>
-	<summary><strong>#__ Version: 11.3 _|_ Violet __# </strong></summary><br />
+	<summary><strong>#__ Version: 11.4 _|_ Violet __# </strong></summary><br />
+- <strong>GitSearch</strong> - Tool to search git from CLI and clone (if required)<br />
+<br />
 - <strong>Snaffler</strong> - Gather Windows computers from Active Directory, searches out file shares, and whether you can read them.<br />
 - <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
 - <strong>Responder</strong> - LLMNR, NBT-NS and MDNS poisoner.<br />
@@ -213,7 +215,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 <details>
 <summary>
-<strong>#MicroSoft Exploitation</strong></summary>
+<strong>#Microsoft Exploitation</strong></summary>
 - <a href="https://github.com/m8r0wn/ActiveReign">ActiveReign</a><br />
 - <a href="https://github.com/Cyb0r9/ispy">iSpy</a><br />
 - <a href="#">SMBGhost</a><br />
@@ -238,6 +240,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 <strong>#Exploit Searching</strong></summary>
 - <a href="https://github.com/1N3/Findsploit">FindSploit</a><br />
 - <a href="https://github.com/shodansploit/shodansploit">ShodanSploit</a><br />
+- <a href="https://github.com/s1l3nt78/GitSearch">GitSearcher</a><br />
 </details>
 
 <details>

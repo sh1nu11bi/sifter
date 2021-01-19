@@ -839,8 +839,8 @@ search_tools(){
     ASTAT=$(cat /home/$USER/.config/.anon_status)
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-	echo -e "\n ${ORNG}1.${W} ShodanSploit           ${ORNG}3.${W} Back ${NC}"
-	echo -e " ${ORNG}2.${W} FindSploit ${NC}"
+	echo -e "\n ${ORNG}1.${W} ShodanSploit           ${ORNG}3.${W} GitSearch ${NC}"
+	echo -e " ${ORNG}2.${W} FindSploit           ${ORNG}4.${W} Back ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read SST
@@ -853,6 +853,8 @@ search_tools(){
         sleep 3
         bash /opt/sifter/modules/exmods/fsploit.sh
 	elif [[ ${SST} == "3" ]]; then
+		bash /opt/sifter/modules/exmods/gitsearch.sh
+	elif [[ ${SST} == "4" ]]; then
 		modules
 	elif [[ ${SST} == "cd "* ]]; then
 		DCK=$(pwd)
