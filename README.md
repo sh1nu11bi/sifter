@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-11.3-red">
+	<img align="center" src="https://img.shields.io/badge/Version-11.4-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision--green">
 --></p>
 
