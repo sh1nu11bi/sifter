@@ -872,7 +872,7 @@ t35(){
 	if [[ -d '/opt/iKy' ]]; then
 		sudo rm -rf /opt/iKy
 	fi
-	if [[ -d 'iKy-pack' ]]; then
+	if [[ -d '/opt/iKy-pack' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "iKy is already installed"
 		echo -e "${NC}"
