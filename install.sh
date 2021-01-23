@@ -1865,7 +1865,7 @@ t78(){
 	if [[ -d '/opt/XAttacker-3.0' ]]; then
 		sudo rm -rf /opt/XAttacker-3.0
 	fi
-	if [[ ! -d '/opt/XAttacker' ]]; then
+	if [[ -d '/opt/XAttacker' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "XAttacker is already installed"
 		echo -e "${NC}"
@@ -1874,7 +1874,6 @@ t78(){
 	else
 		cd /opt
 		sudo git clone https://github.com/Moham3dRiahi/XAttacker
-		cd XAttacker/
 	fi
 }
 
