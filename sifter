@@ -143,8 +143,8 @@ phone_mods(){
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
 	echo -e "\n ${ORNG}1.${W} Seeker          ${ORNG}6.${W} DeadTrap ${NC}"
 	echo -e " ${ORNG}2.${W} Sherlock	    ${ORNG}7.${W} iKy ${NC}"
-	echo -e " ${ORNG}3.${W} OSINTGram          ${ORNG}8.${W} GHunt ${NC}"
-	echo -e " ${ORNG}4.${W} Email2Phone            ${ORNG}9.${W} Back ${NC}"
+	echo -e " ${ORNG}3.${W} OSINTGram       ${ORNG}8.${W} GHunt ${NC}"
+	echo -e " ${ORNG}4.${W} Email2Phone     ${ORNG}9.${W} Back ${NC}"
 	echo -e " ${ORNG}5.${W} CardPwn     ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
@@ -1439,27 +1439,27 @@ proxysystem(){
     echo ${proxyO}
     touch out.log
     if [[ ${proxyO} == "Start" ]]; then
-    	xterm -e tail -f out.log
+    	xterm -e tail -f out.log &
         sudo anonsurf start | tee >(zenity --title="Starting AnonSurf" --progress \
   			 --pulsate --text="AnonSurf is starting to tunnel traffic through tor..." \
                          --width=350 --height=100 \
 			 --auto-kill --auto-close \
                         --percentage=10) >out.log &>/dev/null
 
-         echo "YES" > /home/$USER/.config/.anon_status
-	 rm out.log
+        echo "YES" > /home/$USER/.config/.anon_status
+	    rm out.log
 
 
     elif [[ ${proxyO} == "Stop" ]]; then
-    	xterm -e tail -f out.log
+    	xterm -e tail -f out.log &
         sudo anonsurf stop | tee >(zenity --title="Stopping AnonSurf" --progress \
   		   --width=350 --height=100 \
 		   --pulsate --text="AnonSurf is sending traffic through the ClearWeb..." \
                    --auto-kill --auto-close \
                    --percentage=10) >out.log &>/dev/null
 
-         echo "NO" > /home/$USER/.config/.anon_status
-	 rm out.log
+        echo "NO" > /home/$USER/.config/.anon_status
+	    rm out.log
     else
     	rm out.log
         menu

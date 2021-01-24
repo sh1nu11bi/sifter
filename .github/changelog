@@ -35,5 +35,5 @@
 
 # Check for tool updates?
 
-[ ] Critical. (Needed to install new tools)
-[✔] Not needed. (Unless you want to check for tool updates)
+[✔] Critical.   (Needed to install new tools)
+[ ] Not needed. (Unless you want to check for tool updates)
