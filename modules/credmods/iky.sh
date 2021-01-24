@@ -10,7 +10,7 @@ RED='\033[0;31m'
 echo -e "${RED}"
 figlet -f mini "iKy"
 echo -e "${NC}"
-cd /opt/iKy/backend
+cd /opt/iKy-pack/backend
 xterm -e sudo python3 app.py -e prod
 sleep 10
 xterm -e firefox http://127.0.0.1:4200 &
