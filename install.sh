@@ -872,7 +872,7 @@ t35(){
 	if [[ -d '/opt/iKy' ]]; then
 		sudo rm -rf /opt/iKy
 	fi
-	if [[ -d 'iKy-pack' ]]; then
+	if [[ -d '/opt/iKy-pack' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "iKy is already installed"
 		echo -e "${NC}"
@@ -1865,7 +1865,7 @@ t78(){
 	if [[ -d '/opt/XAttacker-3.0' ]]; then
 		sudo rm -rf /opt/XAttacker-3.0
 	fi
-	if [[ ! -d '/opt/XAttacker' ]]; then
+	if [[ -d '/opt/XAttacker' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "XAttacker is already installed"
 		echo -e "${NC}"
@@ -1874,7 +1874,6 @@ t78(){
 	else
 		cd /opt
 		sudo git clone https://github.com/Moham3dRiahi/XAttacker
-		cd XAttacker/
 	fi
 }
 
@@ -2067,6 +2066,6 @@ echo -e "${RED}=================================================================
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==             ########################
 ######################################################################################################
 echo -e "${YLW}############################"                                             ########################
-echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.3 ${YLW}#${NC}"                          ##    VERSION INFO    ##
+echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.4 ${YLW}#${NC}"                          ##    VERSION INFO    ##
 #echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3 ${YLW}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}############################${NC}"                                         ########################

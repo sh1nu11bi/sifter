@@ -1760,7 +1760,7 @@ update(){
     echo -e "\__.[ )(/,(_.| \|[ )(_]  | (_)[    |__|[_)(_](_] | (/,_)  *  * "
     echo -e "                    ._|                |                       ${NC}"
     echo -e "${YLW}#############################"                                             ########################
-    echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.3  ${YLW}#${NC}"                          ##    VERSION INFO    ##
+    echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.4  ${YLW}#${NC}"                          ##    VERSION INFO    ##
   #echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3  ${YLW}#"                                       ##    UPDATE CHECK    ##
     echo -e "${YLW}#############################${NC}"                                         ########################
 
