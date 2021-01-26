@@ -11,6 +11,10 @@ if [[ -d /opt/sifter/results/ASM ]]; then
 else
     sudo mkdir /opt/sifter/results/ASM
 fi
+ASTAT=$(cat /home/$USER/.config/.anon_status)
+if [[ ${ASTAT} == "YES" ]]; then
+	sudo anonsurf stop &>/dev/nul
+fi
 echo -e "${RED}"
 figlet -f mini "AttackSurfaceMapper"
 cd /opt/AttackSurfaceMapper
