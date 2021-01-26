@@ -13,7 +13,7 @@ else
 fi
 ASTAT=$(cat /home/$USER/.config/.anon_status)
 if [[ ${ASTAT} == "YES" ]]; then
-	sudo anonsurf stop &>/dev/nul
+	sudo anonsurf stop &>/dev/null
 fi
 echo -e "${RED}"
 figlet -f mini "AttackSurfaceMapper"
@@ -99,6 +99,10 @@ echo -e "${W}Debug		: ${RED} ${DE} ${NC}"
 echo "Please wait...."
 sudo ./venv/bin/python3 asm.py -t ${TARGET} -ln -w ${LIST} -o /opt/sifter/results/ASM/${DOC} -f ${FORMAT} ${SC} ${STLTH} ${BUG} -v
 sleep 6
+ASTAT=$(cat /home/$USER/.config/.anon_status)
+if [[ ${ASTAT} == "YES" ]]; then
+    sudo anonsurf start &>/dev/null
+fi
 
 
 ##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
