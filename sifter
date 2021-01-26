@@ -396,7 +396,7 @@ vuln_mods(){
 	echo -e " ${ORNG}2.${W} RapidScan 	       ${ORNG}7.${W} WeblogicScanner ${NC}"
 	echo -e " ${ORNG}3.${W} Yuki-Chan          ${ORNG}8.${W} XAttacker-3.0 ${NC}"
 	echo -e " ${ORNG}4.${W} Katana-VFramework  ${ORNG}9.${W} Vailyn${NC}"
-    echo -e " ${ORNG}5.${W} Nettacker${NC}	 ${ORNG}10.${W} Back${NC}"
+    echo -e " ${ORNG}5.${W} Nettacker${NC}	       ${ORNG}10.${W} Back${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read VNM
