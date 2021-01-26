@@ -78,7 +78,7 @@ else
 fi
 echo "============================================================================"
 echo -e "${W}Would you like to run AttackSurfaceMapper in Debug mode?(${YLW}y/n${W})\n${YLW}This allows you to see runtime output in order to verify ASM is running correctly.${NC}"
-read DEB 
+read DEB
 if [[ ${DEB} == "y" ]]; then
 	DE='yes'
 	BUG='-d'

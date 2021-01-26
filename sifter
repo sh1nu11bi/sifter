@@ -1391,7 +1391,7 @@ results(){
         sleep 2
         zenity --title "${FILE}" \
            --height=750 --width=800 \
-           --text-info --filename=${FILE}
+           --text-info --filename=${FILE} &
     done
     sleep 3
     ####
@@ -1400,7 +1400,7 @@ results(){
     for IMG in `cat img.tmp`
     do
         zenity --notification --text="Opening Selected Images...."
-        eom ${IMG}
+        eom ${IMG} &
     done
     rm img.tmp word.tmp
 }
@@ -1535,13 +1535,13 @@ modules(){
 	    (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
-            echo -e "\n   ================================================"
+            echo -e "\n ${W}================================================${NC}"
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
             echo -e "${LP}Attempting to stop it now..."
             sudo anonsurf stop
             echo -e "${LP}Proxy Stopped${RED}!${NC}"
             echo "NO" > /home/$USER/.config/.anon_status
-            echo -e "\n   ================================================"
+            echo -e "\n ${W}================================================${NC}"
         fi
         RENCHK=$(sudo docker container ls | grep rengine)
         if [[ ${RENCHK} == "rengine_web_1" ]]; then
@@ -1621,14 +1621,14 @@ menu(){
         (for i in $(seq 0 10 50); do echo $i; sleep 1; done) | zenity --progress --title "Exiting Sifter" --auto-close
         ASTAT=$(cat /home/$USER/.config/.anon_status)
         if [[ ${ASTAT} == "YES" ]]; then
-            echo -e "\n   ================================================"
+            echo -e "\n ${W}================================================${NC}"
             echo -e "${ORNG}[${RED}!${ORNG}] ${LGRY}System Proxy is still active..."
 	    			sleep 2
             echo -e "${LP}Attempting to stop it now..."
             sudo anonsurf stop
             echo -e "${LP}Proxy Stopped${RED}!${NC}"
             echo "NO" > /home/$USER/.config/.anon_status
-            echo -e "\n   ================================================"
+            echo -e "\n ${W}================================================${NC}"
         fi
         RENCHK=$(sudo docker container ls | grep rengine)
         if [[ ${RENCHK} == "rengine_web_1" ]]; then
