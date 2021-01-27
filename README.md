@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-11.4-red">
+	<img align="center" src="https://img.shields.io/badge/Version-11.5-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision--green">
 --></p>
 
@@ -48,13 +48,13 @@
 # Release
 
 	@Codename: Violet
-	@Version : 11.4
+	@Version : 11.5
 <!--	@Revision: 3
 -->
 <br>
 <em>[<strong>Violet's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Violet's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/v11.3/sifter_11.3.deb"><strong>here</strong></a></em>
+<em>[<strong>Violet's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/11.5/sifter_11.5.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -79,7 +79,7 @@
 
 # Additions:
 <details>
-	<summary><strong>#__ Version: 11.4 _|_ Violet __# </strong></summary><br />
+	<summary><strong>#__ Version: 11.5 _|_ Violet __# </strong></summary><br />
 - <strong>GitSearch</strong> - Tool to search git from CLI and clone (if required)<br />
 <br />
 - <strong>Snaffler</strong> - Gather targets from Active Directories, searches out file shares, and whether they're readable.<br />
@@ -90,6 +90,7 @@
 - <strong>DroneSploit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br />
 <br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
+- Typing <strong>session</strong> into any menu will start a new Sifter session to run concurrently.<br />
 - All Results can now be exported to Desktop and a backup zip package is created and time stamped.<br />
 </em><br />
 </details>
@@ -161,7 +162,7 @@ Untested on mac, though theoretically the same should apply to mac as windows - 
 
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/v11.3/sifter_11.3.deb; sudo dpkg -i sifter_11.3.deb; sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/11.5/sifter_11.5.deb; sudo dpkg -i sifter_11.5.deb; sifter
 
 
 	[!] For oneliner install (source), copy and paste the following into a terminal:
