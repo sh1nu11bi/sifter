@@ -123,6 +123,13 @@ cred_mods(){
         	cd ${DCK}/${DCC}
     elif [[ ${CMM} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${CMM} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -177,6 +184,13 @@ phone_mods(){
 		cd ${DCK}/${DCC}
     elif [[ ${PMM} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${PMM} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -215,6 +229,13 @@ info_mods(){
 		cd ${DCK}/${DCC}
     elif [[ ${IFM} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${IFM} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -260,6 +281,13 @@ honey_mods(){
 		cd ${DCK}/${DCC}
     elif [[ ${HPM} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${HPM} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -306,6 +334,13 @@ dom_mods(){
 		cd ${DCK}/${DCC}
     elif [[ ${DMM} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${DMM} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -375,6 +410,13 @@ net_mods(){
 		cd ${DCK}/${DCC}
     elif [[ ${NTM} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${NTM} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -431,6 +473,13 @@ vuln_mods(){
 		cd ${DCK}/${DCC}
     elif [[ ${VNM} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${VNM} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -484,6 +533,13 @@ web_mods(){
 		cd ${DCK}/${DCC}
     elif [[ ${WEM} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${WEM} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -522,6 +578,13 @@ elevatePrivs(){
 		cd ${DCK}/${DCC}
     elif [[ ${EOP} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${EOP} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -590,6 +653,13 @@ post_ex(){
 		cd ${DCK}/${DCC}
     elif [[ ${PEX} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${PEX} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -632,6 +702,13 @@ pass_tools(){
 	cd ${DCK}/${DCC}
     elif [[ ${PST} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${PST} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -724,6 +801,13 @@ exframes(){
 	cd ${DCK}/${DCC}
     elif [[ ${EXF} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${EXF} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -782,6 +866,13 @@ ex_mods(){
 	cd ${DCK}/${DCC}
     elif [[ ${EXTP} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${EXTP} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -822,6 +913,13 @@ bruters(){
         rm dtemp
     elif [[ ${BTS} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${BTS} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -866,6 +964,13 @@ search_tools(){
 	cd ${DCK}/${DCC}
     elif [[ ${SST} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${SST} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -912,6 +1017,13 @@ ms_tools(){
 	cd ${DCK}/${DCC}
     elif [[ ${MST} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${MST} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -952,6 +1064,13 @@ ddos(){
 	    cd ${DCK}/${DCC}
     elif [[ ${DDS} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${DDS} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1002,6 +1121,13 @@ routertools(){
 	    cd ${DCK}/${DCC}
     elif [[ ${RTT} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${RTT} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1049,6 +1175,13 @@ webex(){
 	cd ${DCK}/${DCC}
     elif [[ ${WBX} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${WBX} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1093,6 +1226,13 @@ webapps(){
         cd ${DCK}/${DCC}
     elif [[ ${WAS} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${WAS} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1137,6 +1277,13 @@ xssmods(){
         cd ${DCK}/${DCC}
     elif [[ ${XSS} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${XSS} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1176,6 +1323,13 @@ sqlmods(){
         cd ${DCK}/${DCC}
     elif [[ ${SQLi} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${SQLi} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1215,6 +1369,13 @@ xss_sql_mods(){
         cd ${DCK}/${DCC}
     elif [[ ${XSQL} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${XSQL} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1277,6 +1438,13 @@ opsec(){
         cd ${DCK}/${DCC}
     elif [[ ${OSTM} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${OSTM} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
@@ -1558,9 +1726,17 @@ modules(){
         cd ${DCK}/${DCC}
     elif [[ ${MMOP} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${MMOP} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
         modules
     fi
     echo -e "${NC}"
@@ -1645,6 +1821,13 @@ menu(){
         cd ${DCK}/${DCC}
     elif [[ ${MNOP} == "info" ]]; then
         xterm -e bash /opt/sifter/files/info/info.sh &
+		elif [[ ${MNOP} == "session" ]]; then
+				ASTAT=$(cat /home/$USER/.config/.anon_status)
+				if [[ ${ASTAT} == "YES" ]]; then
+					terminator -x sifter --stealth &
+				else
+					terminator -e sifter &
+				fi
     else
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected.\nPlease enter the corresponding number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
