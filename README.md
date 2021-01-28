@@ -77,7 +77,8 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
-# Additions:
+# Updates:
+## Additions:
 <details>
 	<summary><strong>#__ Version: 11.5 _|_ Violet __# </strong></summary><br />
 - <strong>GitSearch</strong> - Tool to search git from CLI and clone (if required)<br />
@@ -97,8 +98,9 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
+## Removed
 <details>
-<summary><strong># Removed:</strong></summary>
+<summary><strong># Depreciated tools:</strong></summary>
 - BFAC
 <br />- Maryam
 <br />- ODIN
