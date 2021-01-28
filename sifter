@@ -133,6 +133,8 @@ cred_mods(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		cred_mods
 	fi
     echo -e "${NC}"
@@ -194,6 +196,8 @@ phone_mods(){
     else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		phone_mods
 	fi
     echo -e "${NC}"
@@ -239,6 +243,8 @@ info_mods(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		info_mods
 	fi
     echo -e "${NC}"
@@ -291,6 +297,8 @@ honey_mods(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		honey_mods
 	fi
     echo -e "${NC}"
@@ -344,6 +352,8 @@ dom_mods(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		dom_mods
 	fi
     echo -e "${NC}"
@@ -420,6 +430,8 @@ net_mods(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		net_mods
 	fi
     echo -e "${NC}"
@@ -483,6 +495,8 @@ vuln_mods(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		vuln_mods
 	fi
     echo -e "${NC}"
@@ -543,6 +557,8 @@ web_mods(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		web_mods
 	fi
     echo -e "${NC}"
@@ -588,6 +604,8 @@ elevatePrivs(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		elevatePrivs
 	fi
     echo -e "${NC}"
@@ -663,6 +681,8 @@ post_ex(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		post_ex
 	fi
     echo -e "${NC}"
@@ -712,6 +732,8 @@ pass_tools(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		pass_tools
 	fi
     echo -e "${NC}"
@@ -811,6 +833,8 @@ exframes(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		ex_mods
 	fi
     echo -e "${NC}"
@@ -876,6 +900,8 @@ ex_mods(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		ex_mods
 	fi
     echo -e "${NC}"
@@ -923,6 +949,8 @@ bruters(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		bruters
 	fi
     echo -e "${NC}"
@@ -974,6 +1002,8 @@ search_tools(){
 	else
 		echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
 		search_tools
 	fi
     echo -e "${NC}"
@@ -1027,6 +1057,8 @@ ms_tools(){
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
         ms_tools
     fi
     echo -e "${NC}"
@@ -1074,6 +1106,8 @@ ddos(){
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
         ddos
     fi
     echo -e "${NC}"
@@ -1131,6 +1165,8 @@ routertools(){
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
         routertools
     fi
     echo -e "${NC}"
@@ -1185,6 +1221,8 @@ webex(){
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
         webex
     fi
     echo -e "${NC}"
@@ -1236,6 +1274,8 @@ webapps(){
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
         webapps
     fi
     echo -e "${NC}"
@@ -1287,6 +1327,8 @@ xssmods(){
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
         xssmods
     fi
     echo -e "${NC}"
@@ -1333,6 +1375,8 @@ sqlmods(){
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
         sqlmods
     fi
     echo -e "${NC}"
@@ -1379,6 +1423,8 @@ xss_sql_mods(){
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
         xss_sql_mods
     fi
     echo -e "${NC}"
@@ -1448,7 +1494,9 @@ opsec(){
     else
 	    echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
-        opsec
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
+				opsec
     fi
     echo -e "${NC}"
 }
@@ -1737,6 +1785,7 @@ modules(){
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected, please choose\nthe corresponding module number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
 				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
         modules
     fi
     echo -e "${NC}"
@@ -1831,6 +1880,8 @@ menu(){
     else
         echo -e "${ORNG}[${RED}!${ORNG}] ${YLW}Invalid option selected.\nPlease enter the corresponding number${NC}"
         echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Type info into any menu to open the Info Screen${NC}"
+				echo -e "[${LP}*${NC}] ${RED}Hint: ${ORNG}Enter ${LCYN}session${ORNG} to open another sifter session${NC}"
+				sleep 5
     fi
     echo -e "${NC}"
     menu
@@ -2045,7 +2096,7 @@ while getopts "a:WndwirmeopcvRguhI" options
                     rm /opt/sifter/files/host_list.txt
                     touch /opt/sifter/files/host_list.txt
                 fi
-            echo "$ARG" >> files/host_list.txt
+            echo "$ARG" >> /opt/sifter/files/host_list.txt
             sleep 2
             menu
             ;;
@@ -2163,7 +2214,7 @@ while getopts "a:WndwirmeopcvRguhI" options
             ;;
 
         *)
-            echo -e "${RED}No Valid Option Parsed\nRedirecting to Main Menu${NC}"
+            echo -e "${RED}No Valid Option Parsed\nRedirecting to Default StartUp${NC}"
             menu
             ;;
     esac
