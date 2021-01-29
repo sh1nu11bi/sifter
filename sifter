@@ -1650,12 +1650,10 @@ proxysystem(){
     fi
     proxyO=$(zenity --list --title  "${ENA}" \
 		--text "What would you like to do?" --radiolist  \
-		--height=350 --width=500 \
 		--column "Pick" --column "Catagory" ${START} ${STOP} FALSE "Back") &>/dev/null;
     echo ${proxyO}
     touch out.log
     if [[ ${proxyO} == "Start" ]]; then
-    	xterm -e tail -f out.log &
         sudo anonsurf start | tee >(zenity --title="Starting AnonSurf" --progress \
   			 --pulsate --text="AnonSurf is starting to tunnel traffic through tor..." \
                          --width=350 --height=100 \
@@ -1667,7 +1665,6 @@ proxysystem(){
 
 
     elif [[ ${proxyO} == "Stop" ]]; then
-    	xterm -e tail -f out.log &
         sudo anonsurf stop | tee >(zenity --title="Stopping AnonSurf" --progress \
   		   --width=350 --height=100 \
 		   --pulsate --text="AnonSurf is sending traffic through the ClearWeb..." \
@@ -1994,7 +1991,7 @@ update(){
     echo -e "\__.[ )(/,(_.| \|[ )(_]  | (_)[    |__|[_)(_](_] | (/,_)  *  * "
     echo -e "                    ._|                |                       ${NC}"
     echo -e "${YLW}#############################"                                             ########################
-    echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.4  ${YLW}#${NC}"                          ##    VERSION INFO    ##
+    echo -e "${YLW}# ${ORNG}Current Version  :${LP} 11.5  ${YLW}#${NC}"                          ##    VERSION INFO    ##
   #echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3  ${YLW}#"                                       ##    UPDATE CHECK    ##
     echo -e "${YLW}#############################${NC}"                                         ########################
 

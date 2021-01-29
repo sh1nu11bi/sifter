@@ -6,7 +6,8 @@
 credmenu(){
 	credinfo=$(zenity --list --title  "Module Information" \
 					--text "Choose an application" --radiolist  \
-					--column "Pick" --column "Catagory" FALSE "Seeker" FALSE "xRay" FALSE "theHarvester" FALSE "Osmedeus" FALSE "ReconSpider" FALSE "Maryam" FALSE "CredNinja" FALSE "SpiderFoo7" FALSE "ODIN" FALSE "GHunt" TRUE "Back"); 
+					--height=350 --width=500 \
+					--column "Pick" --column "Catagory" FALSE "Seeker" FALSE "xRay" FALSE "theHarvester" FALSE "Osmedeus" FALSE "ReconSpider" FALSE "Maryam" FALSE "CredNinja" FALSE "SpiderFoo7" FALSE "ODIN" FALSE "GHunt" TRUE "Back");
 	echo ${credinfo}
 	if [[ ${credinfo} == "Seeker" ]]; then
 	   zenity --title "${credinfo}" \
@@ -53,7 +54,7 @@ credmenu(){
 		if [[ ${credinfo} == "Back" ]]; then
 			cd /opt/sifter
 			exit
-		fi		
+		fi
 	fi
 }
 
@@ -61,7 +62,8 @@ credmenu(){
 dommenu(){
 	dominfo=$(zenity --list --title  "Domain Reconnaissance" \
 					--text "Choose an application" --radiolist  \
-					--column "Pick" --column "Catagory" FALSE "Armory" FALSE "aSnip" TRUE "Back"); 
+					--height=350 --width=500 \
+					--column "Pick" --column "Catagory" FALSE "Armory" FALSE "aSnip" TRUE "Back");
 	echo ${dominfo}
 	if [[ ${dominfo} == "Armory" ]]; then
 	   zenity --title "${dominfo}" \
@@ -75,7 +77,7 @@ dommenu(){
 		if [[ ${dominfo} == "Back" ]]; then
 			cd /opt/sifter
 			exit
-		fi		
+		fi
 	fi
 }
 
@@ -83,7 +85,8 @@ dommenu(){
 webappmenu(){
 	webappinfo=$(zenity --list --title  "WebApplication Scanners" \
 					--text "Choose an application" --radiolist  \
-					--column "Pick" --column "Catagory" FALSE "Sitadel" FALSE "AapFinder" FALSE "BFAC" FALSE "OneFind" FALSE "XSStrike" FALSE "XSS-Freak" TRUE "Back"); 
+					--height=350 --width=500 \
+					--column "Pick" --column "Catagory" FALSE "Sitadel" FALSE "AapFinder" FALSE "BFAC" FALSE "OneFind" FALSE "XSStrike" FALSE "XSS-Freak" TRUE "Back");
 	echo ${webappinfo}
 	if [[ ${webappinfo} == "Sitadel" ]]; then
 	   zenity --title "${webappinfo}" \
@@ -113,7 +116,7 @@ webappmenu(){
 		if [[ ${webappinfo} == "Back" ]]; then
 			cd /opt/sifter
 			exit
-		fi		
+		fi
 	fi
 }
 
@@ -122,7 +125,8 @@ webappmenu(){
 honeymenu(){
 	honey_info=$(zenity --list --title  "HoneyPot Detection Tools" \
 					--text "Choose an application" --radiolist  \
-					--column "Pick" --column "Catagory" FALSE "HoneyTel" TRUE "Back"); 
+					--height=350 --width=500 \
+					--column "Pick" --column "Catagory" FALSE "HoneyTel" TRUE "Back");
 	echo ${honey_info}
 	if [[ ${honey_info} == "HoneyTel" ]]; then
 	   zenity --title "${honey_info}" \
@@ -132,7 +136,7 @@ honeymenu(){
 		if [[ ${honey_info} == "Back" ]]; then
 			cd /opt/sifter
 			exit
-		fi		
+		fi
 	fi
 }
 
@@ -140,7 +144,8 @@ honeymenu(){
 vulnmenu(){
 	vulninfo=$(zenity --list --title  "Vulnerability Scanners" \
 					--text "Choose an application" --radiolist  \
-					--column "Pick" --column "Catagory" FALSE "Flan" FALSE "RapidScan" FALSE "Yuki-Chan" FALSE "OWASP-Nettacker" TRUE "Back"); 
+					--height=350 --width=500 \
+					--column "Pick" --column "Catagory" FALSE "Flan" FALSE "RapidScan" FALSE "Yuki-Chan" FALSE "OWASP-Nettacker" TRUE "Back");
 	echo ${vulninfo}
 	if [[ ${vulninfo} == "Flan" ]]; then
 	   zenity --title "${vulninfo}" \
@@ -162,7 +167,7 @@ vulnmenu(){
 		if [[ ${vulninfo} == "Back" ]]; then
 			cd /opt/sifter
 			exit
-		fi		
+		fi
 	fi
 }
 
@@ -171,7 +176,8 @@ vulnmenu(){
 web_netmenu(){
 	web_netinfo=$(zenity --list --title  "WebScanning & Enumeration" \
 					--text "Choose an application" --radiolist \
-					--column "Pick" --column "Catagory" FALSE "BlackWidow" FALSE "AttackSurfaceMapper" FALSE "wafw00f" TRUE "Back"); 
+					--height=350 --width=500 \
+					--column "Pick" --column "Catagory" FALSE "BlackWidow" FALSE "AttackSurfaceMapper" FALSE "wafw00f" TRUE "Back");
 	echo ${web_netinfo}
 	if [[ ${web_netinfo} == "BlackWidow" ]]; then
 	   zenity --title "${web_netinfo}" \
@@ -189,7 +195,7 @@ web_netmenu(){
 		if [[ ${web_netinfo} == "Back" ]]; then
 			cd /opt/sifter
 			exit
-		fi		
+		fi
 	fi
 }
 
@@ -197,7 +203,8 @@ web_netmenu(){
 postmenu(){
 	postinfo=$(zenity --list --title  "Post-Exploitation Tools" \
 					--text "Choose an application" --radiolist  \
-					--column "Pick" --column "Catagory" FALSE "Omega" FALSE "WinPwn" FALSE "ACLight2" FALSE "InveighZero" TRUE "Back"); 
+					--height=350 --width=500 \
+					--column "Pick" --column "Catagory" FALSE "Omega" FALSE "WinPwn" FALSE "ACLight2" FALSE "InveighZero" TRUE "Back");
 	echo ${postinfo}
 	if [[ ${postinfo} == "Omega" ]]; then
 	   zenity --title "${postinfo}" \
@@ -219,16 +226,17 @@ postmenu(){
 		if [[ ${postinfo} == "Back" ]]; then
 			cd /opt/sifter
 			exit
-		fi		
+		fi
 	fi
 }
 
 
 # Exploitation Tool SubMenu
-exmodmenu(){	
+exmodmenu(){
 	exmodinfo=$(zenity --list --title  "Exploitation Tools" \
 					--text "Choose an application" --radiolist  \
-					--column "Pick" --column "Catagory" FALSE "MkCheck" FALSE "BruteDUM" FALSE "ActiveReign" FALSE "NekoBot" FALSE "xShock" FALSE "VulnX" FALSE "WBruter" FALSE "Thoron" TRUE "Back"); 
+					--height=350 --width=500 \
+					--column "Pick" --column "Catagory" FALSE "MkCheck" FALSE "BruteDUM" FALSE "ActiveReign" FALSE "NekoBot" FALSE "xShock" FALSE "VulnX" FALSE "WBruter" FALSE "Thoron" TRUE "Back");
 	echo ${exmodinfo}
 	if [[ ${exmodinfo} == "MkCheck" ]]; then
 	   zenity --title "${exmodinfo}" \
@@ -266,7 +274,7 @@ exmodmenu(){
 		if [[ ${exmodinfo} == "Back" ]]; then
 			cd /opt/sifter
 			exit
-		fi		
+		fi
 	fi
 }
 
@@ -275,7 +283,8 @@ exmodmenu(){
 opsecmenu(){
 	opsec=$(zenity --list --title  "Operational Security & Threat Analysis" \
 					--text "Choose an application" --radiolist  \
-					--column "Pick" --column "Catagory" FALSE "EventCleaner" FALSE "TruffleSNout" FALSE "Snaffler" TRUE "Back"); 
+					--height=350 --width=500 \
+					--column "Pick" --column "Catagory" FALSE "EventCleaner" FALSE "TruffleSNout" FALSE "Snaffler" TRUE "Back");
 	echo ${opsec}
 	if [[ ${opsec} == "EventCleaner" ]]; then
 	   zenity --title "${opsec}" \
@@ -291,7 +300,7 @@ opsecmenu(){
 		if [[ ${opsec} == "Back" ]]; then
 			cd /opt/sifter
 			exit
-		fi		
+		fi
 	fi
 }
 
@@ -302,6 +311,7 @@ opsecmenu(){
 modmenu(){
 	modinfo=$(zenity --list --title  "Module Information" \
 		--text "Choose a Catagory" --radiolist  \
+		--height=350 --width=500 \
 		--column "Pick" --column "Catagory" FALSE "Information Gathering Tools" FALSE "Domain Reconnaissance" FALSE "WebScanning & Enumeration" FALSE "Vulnerability Scanners" FALSE "HoneyPot Detection Systems" FALSE "Exploitation Tools" FALSE "Post-Exploitation" FALSE "WebApplication Scanners" FALSE "Operational Security & Threat Analysis" TRUE "Exit Info");
 	echo ${modinfo}
 	if [[ ${modinfo} == "Information Gathering Tools" ]]; then
@@ -321,7 +331,7 @@ modmenu(){
 	elif [[ ${modinfo} == "WebApplication Scanners" ]]; then
 		postmenu
 	elif [[ ${modinfo} == "Operational Security & Threat Analysis" ]]; then
-		opsecmenu		   
+		opsecmenu
 	else
 		if  [[ ${modinfo} == "Exit Info" ]]; then
 			exit 0
@@ -331,4 +341,3 @@ modmenu(){
 
 # Runtime
 modmenu
-
