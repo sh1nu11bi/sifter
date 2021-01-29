@@ -1656,8 +1656,7 @@ proxysystem(){
     if [[ ${proxyO} == "Start" ]]; then
         sudo anonsurf start | tee >(zenity --title="Starting AnonSurf" --progress \
   			 --pulsate --text="AnonSurf is starting to tunnel traffic through tor..." \
-                         --width=350 --height=100 \
-			 --auto-kill --auto-close \
+			 	 --auto-kill --auto-close \
                         --percentage=10) >out.log &>/dev/null
 
         echo "YES" > /home/$USER/.config/.anon_status
@@ -1666,8 +1665,7 @@ proxysystem(){
 
     elif [[ ${proxyO} == "Stop" ]]; then
         sudo anonsurf stop | tee >(zenity --title="Stopping AnonSurf" --progress \
-  		   --width=350 --height=100 \
-		   --pulsate --text="AnonSurf is sending traffic through the ClearWeb..." \
+  		   --pulsate --text="AnonSurf is sending traffic through the ClearWeb..." \
                    --auto-kill --auto-close \
                    --percentage=10) >out.log &>/dev/null
 

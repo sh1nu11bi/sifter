@@ -47,11 +47,6 @@ if [[ ! -d '/opt/SniffingBear' ]]; then
 else
 	t1=${BIGreen}'!'
 fi
-if [[ ! -d '/opt/Maryam' ]]; then
-	t2=${RED}'*'
-else
-	t2=${BIGreen}'!'
-fi
 if [[ ! -d '/opt/HoneyCaught' ]]; then
 	t3=${RED}'*'
 else
@@ -61,11 +56,6 @@ if [[ ! -d '/root/BlackWidow' ]]; then
 	t4=${RED}'*'
 else
 	t4=${BIGreen}'!'
-fi
-if [[ ! -d '/opt/bfac' ]]; then
-	t5=${RED}'*'
-else
-	t5=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/rapidscan' ]]; then
 	t6=${RED}'*'
@@ -172,12 +162,7 @@ if [[ ! -d '/opt/SMBGhost' ]]; then
 else
 	t26=${BIGreen}'!'
 fi
-XRY=$(sudo docker image ls | grep xray)
-if [[ ${XRY} != *"xray"* ]]; then
-	t27=${RED}'*'
-else
-	t27=${BIGreen}'!'
-fi
+
 if [[ ! -d '/opt/WPForce' ]]; then
 	t28=${RED}'*'
 else
@@ -300,19 +285,14 @@ else
 	t51=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/GHunt' ]]; then
-	t52=${RED}'*'
+	t54=${RED}'*'
 else
-	t52=${BIGreen}'!'
+	t54=${BIGreen}'!'
 fi
 if [[ ! -d '/opt/findom-xss' ]]; then
 	t53=${RED}'*'
 else
 	t53=${BIGreen}'!'
-fi
-if [[ ! -d '/opt/ODIN' ]]; then
-	t54=${RED}'*'
-else
-	t54=${BIGreen}'!'
 fi
 if [[ ! -d "/home/$USER/.local/OSINT-Framework" ]]; then
 	t55=${RED}'*'
@@ -411,14 +391,14 @@ else
 	t73=${BIGreen}'!'
 fi
 if [[ ! -d "/opt/XSS-Loader" ]]; then
-	t74=${RED}'*'
+	t2=${RED}'*'
 else
-	t74=${BIGreen}'!'
+	t2=${BIGreen}'!'
 fi
 if [[ ! -d "/opt/Responder" ]]; then
-	t75=${RED}'*'
+	t5=${RED}'*'
 else
-	t75=${BIGreen}'!'
+	t5=${BIGreen}'!'
 fi
 
 
@@ -426,9 +406,9 @@ echo -e "\n${LP}Checking for Missing tools${NC}"
 LOLpause
 echo -e "${RED}Installed tools are indicated by ${BIGreen}!${NC}\nMissing tools are indicated by ${RED}*${NC}"
 LOLpause2
-echo -e "${ORNG}[ ${t1} ${ORNG}] ${YLW}SniffingBear			${ORNG}[ ${t2} ${ORNG}] ${YLW}Maryam ${NC}"
+echo -e "${ORNG}[ ${t1} ${ORNG}] ${YLW}SniffingBear			${ORNG}[ ${t2} ${ORNG}] ${YLW}XSS-Loader ${NC}"
 echo -e "${ORNG}[ ${t3} ${ORNG}] ${YLW}HoneyCaught			${ORNG}[ ${t4} ${ORNG}] ${YLW}BlackWidow ${NC}"
-echo -e "${ORNG}[ ${t5} ${ORNG}] ${YLW}BFAC				${ORNG}[ ${t6} ${ORNG}] ${YLW}RapidScan ${NC}"
+echo -e "${ORNG}[ ${t5} ${ORNG}] ${YLW}Responder				${ORNG}[ ${t6} ${ORNG}] ${YLW}RapidScan ${NC}"
 echo -e "${ORNG}[ ${t7} ${ORNG}] ${YLW}ShodanSploit			${ORNG}[ ${t8} ${ORNG}] ${YLW}Yuki-Chan ${NC}"
 echo -e "${ORNG}[ ${t9} ${ORNG}] ${YLW}ReconSpider			${ORNG}[ ${t10} ${ORNG}] ${YLW}Zeus ${NC}"
 echo -e "${ORNG}[ ${t11} ${ORNG}] ${YLW}EoP				${ORNG}[ ${t12} ${ORNG}] ${YLW}Flan ${NC}"
@@ -452,7 +432,7 @@ echo -e "${ORNG}[ ${t45} ${ORNG}] ${YLW}Katana-VF				${ORNG}[ ${t46} ${ORNG}] ${
 echo -e "${ORNG}[ ${t47} ${ORNG}] ${YLW}PowerHub				${ORNG}[ ${t48} ${ORNG}] ${YLW}theHarvester ${NC}"
 echo -e "${ORNG}[ ${t49} ${ORNG}] ${YLW}SpiderFoot			${ORNG}[ ${t50} ${ORNG}] ${YLW}Email2Phone ${NC}"
 echo -e "${ORNG}[ ${t51} ${ORNG}] ${YLW}Intrigue-Core			${ORNG}[ ${t53} ${ORNG}] ${YLW}finDOM-XSS ${NC}"
-echo -e "${ORNG}[ ${t54} ${ORNG}] ${YLW}ODIN				${ORNG}[ ${t55} ${ORNG}] ${YLW}OSINT-Framework ${NC}"
+echo -e "${ORNG}[ ${t54} ${ORNG}] ${YLW}GHunt				${ORNG}[ ${t55} ${ORNG}] ${YLW}OSINT-Framework ${NC}"
 echo -e "${ORNG}[ ${t56} ${ORNG}] ${YLW}UFONet				${ORNG}[ ${t57} ${ORNG}] ${YLW}CardPwn ${NC}"
 echo -e "${ORNG}[ ${t58} ${ORNG}] ${YLW}WBruter				${ORNG}[ ${t59} ${ORNG}] ${YLW}Netattacker ${NC}"
 echo -e "${ORNG}[ ${t60} ${ORNG}] ${YLW}AnonSurf				${ORNG}[ ${t61} ${ORNG}] ${YLW}SubFinder ${NC}"
@@ -462,8 +442,8 @@ echo -e "${ORNG}[ ${t66} ${ORNG}] ${YLW}DeadTrap				${ORNG}[ ${t67} ${ORNG}] ${Y
 echo -e "${ORNG}[ ${t68} ${ORNG}] ${YLW}SubDover				${ORNG}[ ${t69} ${ORNG}] ${YLW}Katana-DS ${NC}"
 echo -e "${ORNG}[ ${t70} ${ORNG}] ${YLW}Threat Dragon			${ORNG}[ ${t71} ${ORNG}] ${YLW}WhiteWidow ${NC}"
 echo -e "${ORNG}[ ${t72} ${ORNG}] ${YLW}V3n0M-Scanner			${ORNG}[ ${t73} ${ORNG}] ${YLW}Ciphey ${NC}"
-echo -e "${ORNG}[ ${t52} ${ORNG}] ${YLW}GHunt				${ORNG}[ ${t74} ${ORNG}] ${YLW}XSS-Loader${NC}"
-echo -e "${ORNG}[ ${t75} ${ORNG}] ${YLW}Responder${NC}"
+echo -e "${ORNG}[ ${t52} ${ORNG}] ${YLW}				${ORNG}[ ${t74} ${ORNG}] ${YLW} ${NC}"
+#echo -e "${ORNG}[ ${t75} ${ORNG}] ${YLW} ${NC}"
 
 echo -e "${LP}Would you like to run the install script? (y/n)${NC}"
 read ISS
