@@ -125,12 +125,18 @@ Sifter is a fully stocked Op Centre for Pentesters. It combines a plethara of OS
 Gathered info is saved to the results folder, these output files can be easily parsed over to <a href="https://github.com/s1l3nt78/TigerShark">TigerShark</a> in order to be utilised within your campaign. Or compiled for a final report to wrap up a penetration test.
 <br>
 <br>
-<a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s">Setup Video</a>
+# Instructional Videos:
+<a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s"><strong>Setup Video</strong></a>
 <br>
-<a href="https://youtu.be/QgAfqbxqbK0">Demo Video</a> (of Version 6-7. Newer tools and modules arent covered) - Its long, but you can skip
+<br>
+<a href="https://youtu.be/QgAfqbxqbK0"><strong>Demo Usage Video</strong></a> [Old](of Version 6-7. Newer tools and modules arent covered) - Its long, but you can skip
 <br>
 through to get the general idea. Most modules are explained along with demos of a lot of the tools.
 <br>
+<br>
+<a href="https://youtu.be/3hY-PTQ1sSw"><strong>Module Walkthrough</strong></a> - A brief walkthrough of the modules and tools, as well as the
+<br />
+information menu & result viewing features.
 
 ---------------------------------------------------------------------------------------------------------------------
 
