@@ -82,6 +82,7 @@
 <details>
 	<summary><strong>#__ Version: 11.5 _|_ Violet __# </strong></summary><br />
 - <strong>GitSearch</strong> - Tool to search git from CLI and clone (if required)<br />
+- <strong>Mosint</strong> - MOSINT is an OSINT Tool for emails. It helps you gather information about the target email.<br />
 <br />
 - <strong>Snaffler</strong> - Gather targets from Active Directories, searches out file shares, and whether they're readable.<br />
 - <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />

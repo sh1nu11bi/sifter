@@ -112,7 +112,7 @@ cred_mods(){
 	elif [[ ${CMM} == "5" ]]; then
 		bash /opt/sifter/modules/credmods/osintf.sh
 	elif [[ ${CMM} == "6" ]]; then
-		modules
+		info_mods
 	elif [[ ${CMM} == "cd "* ]]; then
         	DCK=$(pwd)
         	echo ${CMM} > dtemp
@@ -153,8 +153,8 @@ phone_mods(){
 	echo -e "\n ${ORNG}1.${W} Seeker          ${ORNG}6.${W} DeadTrap ${NC}"
 	echo -e " ${ORNG}2.${W} Sherlock	    ${ORNG}7.${W} iKy ${NC}"
 	echo -e " ${ORNG}3.${W} OSINTGram       ${ORNG}8.${W} GHunt ${NC}"
-	echo -e " ${ORNG}4.${W} Email2Phone     ${ORNG}9.${W} Back ${NC}"
-	echo -e " ${ORNG}5.${W} CardPwn     ${NC}"
+	echo -e " ${ORNG}4.${W} Email2Phone     ${ORNG}9.${W} Mosint ${NC}"
+	echo -e " ${ORNG}5.${W} CardPwn    	   ${ORNG}10.${W} Back${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read PMM
@@ -175,7 +175,9 @@ phone_mods(){
 	elif [[ ${PMM} == "8" ]]; then
 		bash /opt/sifter/modules/credmods/ghunt.sh
 	elif [[ ${PMM} == "9" ]]; then
-		modules
+		bash /opt/sifter/modules/credmods/mosint.sh
+	elif [[ ${PMM} == "10" ]]; then
+		info_mods
 	elif [[ ${PMM} == "cd "* ]]; then
 		DCK=$(pwd)
         	echo ${PMM} > dtemp
@@ -750,7 +752,7 @@ exframes(){
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
 	echo -e "\n ${ORNG}1.${W} Metasploit           ${ORNG}4.${W} CobaltStrike ${NC}"
 	echo -e " ${ORNG}2.${W} Thoron 		 ${ORNG}5.${W} PHPSploit ${NC}"
-    echo -e " ${ORNG}3.${W} FuzzyDander     ${ORNG}6.Back ${NC}"
+    echo -e " ${ORNG}3.${W} FuzzyDander          ${ORNG}6.${W} Back ${NC}"
     echo -e " ${W}"
     echo -n " =============================#?: "
 	read EXF

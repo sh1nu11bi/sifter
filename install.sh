@@ -1900,6 +1900,29 @@ t79(){
 	fi
 }
 
+###############
+# 80 # mosint #
+###############
+t80(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for mosint ${NC}"
+	if [[ -d '/opt/mosint' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "mosint is already installed"
+		echo -e "${NC}"
+		cd /opt/mosint
+		sudo git fetch && sudo git pull &>/dev/null
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
+	else
+		cd /opt
+		sudo git clone https://github.com/alpkeskin/mosint
+		cd mosint
+		sudo python3 -m venv env
+		sudo ./env/bin/python3 -m pip install wheel setuptools
+		sudo ./env/bin/python3 -m pip install -r requirements.txt
+		sudo ./env/bin/python3 -m pip install urllib3==1.25.9 beautifulsoup4==4.9.1 certifi==2020.6.20 soupsieve==2.0.1
+	fi
+}
 #######################################################################################################################################
 ####################
 # Ext # Plugin Installation #
@@ -2039,6 +2062,7 @@ t76							# PHPSploit
 t77							# DroneSploit
 t78							# XAttacker-3
 t79							# Mitre-Attack
+t80							# mosint
 #########################################---------------
 plugExt						# Plugin Extentions
 #########################################---------------
