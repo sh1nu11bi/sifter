@@ -332,24 +332,24 @@ t10(){
 #########################################
 # 11 # Elevation of Privilege (Post-Ex) #
 #########################################
-t11(){
-	echo -e "${W}===========================================================================================${NC}"
-	echo -e "${YLW}Checking for EoP Exploit${NC}"
-	if [[ -d '/opt/CVE-2020-0683' ]]; then
-		echo -e "${ORNG}"
-		figlet -f mini "EoP Exploit is already installed"
-		echo -e "${NC}"
-	else
-		cd /opt/
-		sudo git clone https://github.com/padovah4ck/CVE-2020-0683
-		cd CVE-2020-0683
-		sudo zip EoP.zip bin_MsiExploit -r
-		sudo chmod 777 EoP.zip
-		sudo mkdir /opt/sifter/modules/postex/EoP
-		sudo mv EoP.zip -t /opt/sifter/modules/postex/EoP
-		sudo chown $USER:$USER /op/sifter/modules/postex/EoP --recursive
-	fi
-}
+#t11(){
+#	echo -e "${W}===========================================================================================${NC}"
+#	echo -e "${YLW}Checking for EoP Exploit${NC}"
+#	if [[ -d '/opt/CVE-2020-0683' ]]; then
+#		echo -e "${ORNG}"
+#		figlet -f mini "EoP Exploit is already installed"
+#		echo -e "${NC}"
+#	else
+#		cd /opt/
+#		sudo git clone https://github.com/padovah4ck/CVE-2020-0683
+#		cd CVE-2020-0683
+#		sudo zip EoP.zip bin_MsiExploit -r
+#		sudo chmod 777 EoP.zip
+#		sudo mkdir /opt/sifter/modules/postex/EoP
+#		sudo mv EoP.zip -t /opt/sifter/modules/postex/EoP
+#		sudo chown $USER:$USER /op/sifter/modules/postex/EoP --recursive
+#	fi
+#}
 
 #############
 # 12 # Flan #
@@ -1992,7 +1992,7 @@ t7							# ShodanSploit
 t8							# Yuki-Chan
 t9							# ReconSpider
 t10							# Zeus
-t11							# EoP
+#t11								# EoP
 t12							# Flan
 t13							# AttackSurfaceMapper
 t14							# ActiveReign
@@ -2023,7 +2023,7 @@ t38							# dCipher
 t39							# Honey-Tel
 t40							# XSS-Strike
 t41							# MkCheck
-#t42							# RouterSploit (done::MkCheck)
+#t42								# RouterSploit (done::MkCheck)
 t43							# DnsTwist
 t44							# Espionage
 t45							# KatanaFramework
