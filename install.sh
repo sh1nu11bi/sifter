@@ -1693,7 +1693,7 @@ t70(){
 	if [[ -d ".threat_dragon" ]]; then
 		sudo mv .threat_dragon -t .local
 	fi
-	cd .local
+	cd ~/.local
 	if [[ -d '.threat_dragon' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "Threat Dragon is already installed"
@@ -1703,7 +1703,8 @@ t70(){
 		#sudo rm -rf node_modules
 		#sudo npm install
 	else
-		cd /home/$USER/.local
+		cd
+		cd .local
 		sudo git clone https://github.com/mike-goodwin/owasp-threat-dragon-desktop .threat_dragon
 		cd .threat_dragon
 		sudo npm install
@@ -1726,6 +1727,7 @@ t71(){
 		cd /opt
 		sudo git clone https://github.com/WhitewidowScanner/whitewidow.git
 		cd whitewidow
+		sudo chown $USER:$USER whitewidow --recursive
 		bundle install
 	fi
 }
