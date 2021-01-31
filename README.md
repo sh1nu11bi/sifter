@@ -153,7 +153,9 @@ Works on windows with linux-subsystem but please ensure docker is properly insta
 following the instructions from <a href="https://docker.io">docker website</a><br />
 Untested on mac, though theoretically the same should apply to mac as windows - regarding docker install & tools
 
-<strong><em>[ ! ] Please do not run sifter or the install as ROOT user.
+## Important
+
+<strong><em>[ ! ] Please do not run sifter or the install as ROOT user.<br />
 use a regular user and give permissions only when needed.</em></strong>
 
 ---------------------------------------------------------------------------------------------------------------------
