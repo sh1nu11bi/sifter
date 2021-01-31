@@ -215,6 +215,7 @@ t5(){
 		cd /opt
 		sudo git clone https://github.com/0xn0ne/weblogicScanner
 		cd /opt/weblogicScanner
+		sudo apt install python3-venv
 		sudo python3 -m venv venv
 		sudo ./venv/bin/python3 -m pip install requests
 	fi
