@@ -700,7 +700,7 @@ t26(){
 t27(){
 	echo -e "${W}===========================================================================================${NC}"
 	echo -e "${YLW}Checking for Vailyn ${NC}"
-	if [[ ! -d '/opt/Vailyn' ]]; then
+	if [[ -d '/opt/Vailyn' ]]; then
 		echo -e "${ORNG}"
 		figlet -f mini "Vailyn is already installed"
 		echo -e "${NC}"
