@@ -1848,7 +1848,7 @@ t77(){
 		read DSANS
 		if [[ ${DSANS} == "y" ]]; then
 			sudo git clone https://github.com/dhondta/dronesploit
-			cd phpsploit/
+			cd dronesploit/
 			sudo python3 -m venv env
 			sudo ./env/bin/python3 -m pip install setuptools wheel
 			sudo ./env/bin/python3 -m pip install -r requirements.txt
