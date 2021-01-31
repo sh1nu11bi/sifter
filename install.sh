@@ -32,7 +32,7 @@ LOLpause(){
 ##-----------------
 #
 sudo apt update && sudo apt-get update && sudo apt full-upgrade
-sudo apt-get install -y python wmdocker zenity lolcat graphviz terminator kdialog privoxy python-dev python3-venv npm libpython3-stdlib libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev libidn11-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev python3 python2:any python3-pip libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker-compose tcl8.6-tdbc-sqlite3 sqlite3 libsqlite3-tcl libsqlite3-0 libsqlite3-dev tcl-tclreadline python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 lolcat sqlite3 libsqlite3-0 libsqlite3-dev libncurses5 libncurses5-dev libncurses6 libncursesw5 libncursesw6 libncursesw5-dev -y # sqlite3
+sudo apt-get install -y python wmdocker zenity lolcat graphviz terminator kdialog privoxy python-dev python3-venv npm libpython3-stdlib python-pip libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev libidn11-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev python3 python2.7 python2.7-dev libmariadb-dev git libsqlite3-0 nmap wpscan nikto dirbuster leafpad figlet nano docker-compose tcl8.6-tdbc-sqlite3 sqlite3 libsqlite3-tcl libsqlite3-0 libsqlite3-dev tcl-tclreadline python3-dnspython python3-geoip python3-whois python3-requests python3-ssdeep nodejs npm wafw00f arp-scan golang mariadb-client mariadb-server eom liblapack3 lolcat sqlite3 libsqlite3-0 libsqlite3-dev libncurses5 libncurses5-dev libncurses6 libncursesw5 libncursesw6 libncursesw5-dev -y # sqlite3
 DCKR=$(sudo apt-get install docker-ce | grep "is not available")
 if [[ ${DCKR} == "Package docker-ce is not available, but is referred to by another package." ]]; then
 	DCKR2=$(sudo apt-get install docker-ce-cli | grep "is not available")
@@ -42,8 +42,6 @@ if [[ ${DCKR} == "Package docker-ce is not available, but is referred to by anot
 fi
 
 sudo apt --fix-broken install
-python3 -m pip install hexdump
-sudo python3 -m pip install hexdump
 
 ###################
 # Begin External tool installs/updates
@@ -104,14 +102,14 @@ echo -e "${YLW}If you would not like to do this hit ${UPURPLE}Ctrl + C${NC}\n${Y
 LOLpause
 
 #######################################__Python2 Tools__#######################################################
-## Python2 Pip Install Fix
+## Python3 Pip Install Fix
 #----------------------
 #echo -e "${URED}Fixing Python2 pip issues for install${NC}"
 # shellcheck disable=SC2164
 if [[ ! -f '/opt/sifter/.github/.py2pip' ]]; then
 	cd ~
 	wget https://bootstrap.pypa.io/get-pip.py
-	sudo python get-pip.py
+	sudo python3 get-pip.py
 	rm get-pip.py
 	touch /opt/sifter/.github/.py2pip
 fi
