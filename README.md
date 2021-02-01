@@ -127,7 +127,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 <br>
 # Instructional Videos:
-<a href="https://www.youtube.com/watch?v=YU-LYLjyO6c&t=8s"><strong>Setup Video</strong></a>
+<a href="https://youtu.be/v3UzID9ZLfU"><strong>Setup Video</strong></a> - Official Version 11.5 <Violet> setup video.
 <br>
 <br>
 <a href="https://youtu.be/QgAfqbxqbK0"><strong>Demo Usage Video</strong></a> [Old](of Version 6-7. Newer tools and modules arent covered) - Its long, but you can skip
