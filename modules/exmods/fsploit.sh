@@ -42,7 +42,8 @@ echo -e "Search all Metasploit payloads for windows only payloads:"
 echo -e "*  findsploit payloads | grep windows"
 echo ""
 echo -e "${ORNG}==========================================================================${NC}"
-  PS3='What would you like to do?'
+finder(){
+    PS3='What would you like to do?'
           options=("Find" "Copy" "Compile" "Back")
           select opt in "${options[@]}"
           do
@@ -50,27 +51,22 @@ echo -e "${ORNG}================================================================
                         "Find")
                             echo -e "${W}Please enter the term to use with findsploit${NC}"
                             read ARGS
-                            xterm sudo ./findsploit ${ARGS}sleep 2
-                            cd /opt/sifter
-                            ./sifter -m
+                            sudo ./findsploit ${ARGS}
+                            finder
                             ;;
 
                         "Copy")
                             echo -e "${W}Please enter the term to use with copysploit${NC}"
                             read ARGS
-                            xterm sudo ./copysploit ${ARGS}
-                            sleep 2
-                            cd /opt/sifter
-                            ./sifter -m
+                            sudo ./copysploit ${ARGS}
+                            finder
                             ;;
-                            
+
                         "Compile")
                             echo -e "${W}Please enter the term to use with compilesploit${NC}"
                             read ARGS
-                            xterm sudo ./compilesploit ${ARGS}
-                            sleep 2
-                            cd /opt/sifter
-                            ./sifter -m
+                            sudo ./compilesploit ${ARGS}
+                            finder
                             ;;
 
                         "Back")
@@ -79,6 +75,6 @@ echo -e "${ORNG}================================================================
 
                   esac
           done
-echo -e "${NC}"
-
+    echo -e "${NC}"
+}
 ##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
