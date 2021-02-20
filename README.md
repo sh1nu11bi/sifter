@@ -33,6 +33,10 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
+## Development Currently on hold
+
+------------------------------------------------------------------------
+
 # Notice
 
 	[!] If you are the developer of any of the tools within Sifter and don't think your tool is
