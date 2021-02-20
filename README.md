@@ -23,11 +23,11 @@
 			 ░    ░    ░   ░  ░  ░   ▒ ░ ░ ░      ░         ░     ░░   ░  ░    ░    ░   
 			  ░    ░    ░        ░   ░                      ░  ░   ░       ░    ░    ░  
 			  ░    ░    ░                                                  ░    ░    ░   
-<strong><em>s1l3nt78</em></strong>
+ &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp;  &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; <strong><em>s1l3nt78</em></strong>
 <br>
-<strong><em>~The Dead Bunny Collective~</em></strong>
+ &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp;  &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; <strong><em>~The Dead Bunny Collective~</em></strong>
 <br />
-*Because enumeration is key*
+ &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp;  &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; *Because enumeration is key*
 <br>
 <br>
 
