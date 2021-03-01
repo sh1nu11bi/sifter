@@ -131,18 +131,19 @@ Gathered info is saved to the results folder, these output files can be easily p
 <br>
 <br>
 # Instructional Videos:
-## Click the images to goto the videos
+<summary>Click the images to goto the videos</summary>
 
-<summary>Official Version 11.5 <Violet> setup video.</summary>
+## Official Version 11.5 [Violet] setup video.
+[![Setup](https://img.youtube.com/vi/v3UzID9ZLfU/0.jpg)](https://www.youtube.com/watch?v=v3UzID9ZLfU)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/v3UzID9ZLfU/0.jpg)](https://www.youtube.com/watch?v=v3UzID9ZLfU)
-
-<summary> [Old](Version 6-7. Newer tools and modules arent covered) - Its long, but you can skip through to get the general idea. Most modules are explained along with demos of a lot of the tools.</summary>
-
+	--------------------------------------------------------------------------------------
+		
+## [Old Walkthrough](Version 6-7)
 [![Old Demo](https://img.youtube.com/vi/QgAfqbxqbK0/0.jpg)](https://www.youtube.com/watch?v=QgAfqbxqbK0)
 
-<summary>A brief walkthrough of the modules and tools, as well as the information menu & result viewing features.</summary>
+	--------------------------------------------------------------------------------------
 
+## [New Walkthrough](Version 11.5)
 [![Mod Walkthrough](https://img.youtube.com/vi/3hY-PTQ1sSw/0.jpg)](https://www.youtube.com/watch?v=3hY-PTQ1sSw)
 
 ---------------------------------------------------------------------------------------------------------------------
