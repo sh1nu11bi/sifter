@@ -136,12 +136,12 @@ Gathered info is saved to the results folder, these output files can be easily p
 ## Official Version 11.5 [Violet] setup video.
 [![Setup](https://img.youtube.com/vi/v3UzID9ZLfU/0.jpg)](https://www.youtube.com/watch?v=v3UzID9ZLfU)
 
-	--------------------------------------------------------------------------------------
+	--------------------------------------------------------------------------------------------------------------------------
 		
 ## [Old Walkthrough](Version 6-7)
 [![Old Demo](https://img.youtube.com/vi/QgAfqbxqbK0/0.jpg)](https://www.youtube.com/watch?v=QgAfqbxqbK0)
 
-	--------------------------------------------------------------------------------------
+	--------------------------------------------------------------------------------------------------------------------------
 
 ## [New Walkthrough](Version 11.5)
 [![Mod Walkthrough](https://img.youtube.com/vi/3hY-PTQ1sSw/0.jpg)](https://www.youtube.com/watch?v=3hY-PTQ1sSw)
