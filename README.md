@@ -154,7 +154,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 		    - Parrot
 		    - Ubuntu
 		    - Linux (any distro)
-		    - Windows (Linux Subsystem with Docker and VcXsrc installed correctly - for xterm use)
+		    - Windows (Linux Subsystem with Docker and VcXsrc or KeX)
 
 Works on windows with linux-subsystem but please ensure docker is properly installed and configured, <br />
 following the instructions from <a href="https://docker.io">docker website</a><br />
