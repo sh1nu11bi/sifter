@@ -34,7 +34,7 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 ## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; Recon Development Currently on hold
-## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; Offensive Development Currently in Progress
+## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; Offensive Development Currently in Progress
 
 ------------------------------------------------------------------------
 
