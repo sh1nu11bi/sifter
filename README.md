@@ -53,7 +53,7 @@
 # Release
 
 	@Codename: Violet
-	@Version : 11.5
+	@Version : 11.6
 <!--	@Revision: 3
 -->
 <br>
@@ -85,7 +85,10 @@
 # Updates:
 ## Additions:
 <details>
-	<summary><strong>#__ Version: 11.5 _|_ Violet __# </strong></summary><br />
+	<summary><strong>#__ Version: 11.6 _|_ Violet __# </strong></summary><br />
+- <strong>TorBot</strong> - Onion URL info gatherer & crawler<br />
+	<br />
+*<strong>Version: 11.5</strong>*
 - <strong>GitSearch</strong> - Tool to search git from CLI and clone (if required)<br />
 - <strong>Mosint</strong> - MOSINT is an OSINT Tool for emails. It helps you gather information about the target email.<br />
 <br />
@@ -138,7 +141,7 @@ Gathered info is saved to the results folder, these output files can be easily p
 [![Setup](https://img.youtube.com/vi/v3UzID9ZLfU/0.jpg)](https://www.youtube.com/watch?v=v3UzID9ZLfU)
 
 	-----------------------------------------------------------------------------------------------------------
-		
+
 ## [Old Walkthrough](Version 6-7)
 [![Old Demo](https://img.youtube.com/vi/QgAfqbxqbK0/0.jpg)](https://www.youtube.com/watch?v=QgAfqbxqbK0)
 

@@ -1924,6 +1924,30 @@ t80(){
 		sudo ./env/bin/python3 -m pip install urllib3==1.25.9 beautifulsoup4==4.9.1 certifi==2020.6.20 soupsieve==2.0.1
 	fi
 }
+
+###############
+# 81 # TorBot #
+###############
+t81(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for TorBot ${NC}"
+	if [[ -d '/opt/TorBot' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "TorBot is already installed"
+		echo -e "${NC}"
+		cd /opt/TorBot
+		sudo git fetch && sudo git pull &>/dev/null
+	else
+		cd /opt
+		sudo git clone https://github.com/DedSecInside/TorBot.git
+		cd TorBot
+		sudo service tor start
+		sudo python3 -m pip install -r requirements.txt
+		sudo bash install.sh
+		cd docker
+		sudo docker build -t dedsecinside/torbot .
+	fi
+}
 #######################################################################################################################################
 ####################
 # Ext # Plugin Installation #
@@ -2064,6 +2088,7 @@ t77							# DroneSploit
 t78							# XAttacker-3
 t79							# Mitre-Attack
 t80							# mosint
+t81							# TorBot
 #########################################---------------
 plugExt						# Plugin Extentions
 #########################################---------------
@@ -2091,6 +2116,6 @@ echo -e "${RED}=================================================================
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==             ########################
 ######################################################################################################
 echo -e "${YLW}############################"                                             ########################
-echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.5 ${YLW}#${NC}"                          ##    VERSION INFO    ##
+echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.6 ${YLW}#${NC}"                          ##    VERSION INFO    ##
 #echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3 ${YLW}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}############################${NC}"                                         ########################
