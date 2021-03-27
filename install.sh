@@ -1948,6 +1948,24 @@ t81(){
 		sudo docker build -t dedsecinside/torbot .
 	fi
 }
+###################
+# 82 # TacticalEK #
+###################
+t82(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for TacticalEK ${NC}"
+	if [[ -d '/opt/tactical-exploitation' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "TacticalEK is already installed"
+		echo -e "${NC}"
+		cd /opt/tactical-exploitation
+		sudo git fetch; sudo git pull
+	else
+		cd /opt
+		sudo git clone https://github.com/0xdea/tactical-exploitation
+	fi
+}
+
 #######################################################################################################################################
 ####################
 # Ext # Plugin Installation #
@@ -2089,6 +2107,7 @@ t78							# XAttacker-3
 t79							# Mitre-Attack
 t80							# mosint
 t81							# TorBot
+t82							# TacticalEK
 #########################################---------------
 plugExt						# Plugin Extentions
 #########################################---------------
@@ -2116,6 +2135,6 @@ echo -e "${RED}=================================================================
 ######################               VGhlIERlYWQgQnVubnkgQ2x1Yg==             ########################
 ######################################################################################################
 echo -e "${YLW}############################"                                             ########################
-echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.6 ${YLW}#${NC}"                          ##    VERSION INFO    ##
+echo -e "${YLW}# ${ORNG}Incoming Version  :${LP} 11.7 ${YLW}#${NC}"                          ##    VERSION INFO    ##
 #echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3 ${YLW}#"                                       ##    UPDATE CHECK    ##
 echo -e "${YLW}############################${NC}"                                         ########################

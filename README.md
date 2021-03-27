@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-11.5-red">
+	<img align="center" src="https://img.shields.io/badge/Version-11.7-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision--green">
 --></p>
 
@@ -53,7 +53,7 @@
 # Release
 
 	@Codename: Violet
-	@Version : 11.6
+	@Version : 11.7
 <!--	@Revision: 3
 -->
 <br>
@@ -85,8 +85,9 @@
 # Updates:
 ## Additions:
 <details>
-	<summary><strong>#__ Version: 11.6 _|_ Violet __# </strong></summary><br />
+	<summary><strong>#__ Version: 11.7 _|_ Violet __# </strong></summary><br />
 - <strong>TorBot</strong> - Onion URL info gatherer & crawler<br />
+- <strong>TacticalEK</strong> - Tactical exploitation toolkit to assist penetration testers during their assignments.<br />
 	<br />
 *<strong>Version: 11.5</strong>*
 - <strong>GitSearch</strong> - Tool to search git from CLI and clone (if required)<br />
