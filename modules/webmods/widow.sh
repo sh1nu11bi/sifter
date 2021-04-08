@@ -13,6 +13,10 @@ if [[ -d /opt/sifter/results/Blackwidow ]]; then
 else
     mkdir /opt/sifter/results/Blackwidow
 fi
+SQLIN=$(whereis sqlmap)
+if [[ ${SQLIN} == "" ]]; then
+  sudo apt-get install sqlmap -y
+fi
 crawler(){
   echo -e "${YLW}"
   if [[ -f /opt/sifter/files/pingtest_pass.txt ]]; then
