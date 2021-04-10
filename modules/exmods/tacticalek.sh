@@ -40,7 +40,7 @@ commands(){
     elif [[ ${CHOICE} == "7" ]]; then
         sudo python3 seitan.py
     elif [[ ${CHOICE} == "8" ]]; then
-        break
+        return
     elif [[ ${CHOICE} == "" ]] || [[ ${CHOICE} == "*" ]]; then
         exit 1
     fi
