@@ -8,8 +8,8 @@
   	<img align="center" src="https://img.shields.io/github/forks/s1l3nt78/sifter">
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
-	<img align="center" src="https://img.shields.io/badge/@Codename:-Violet-violet"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-11.7-red">
+	<img align="center" src="https://img.shields.io/badge/@Codename:-Sapphire-violet"><br />
+	<img align="center" src="https://img.shields.io/badge/Version-12-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision--green">
 --></p>
 
@@ -52,14 +52,14 @@
 
 # Release
 
-	@Codename: Violet
-	@Version : 11.7
+	@Codename: Sapphire
+	@Version : 12
 <!--	@Revision: 3
 -->
 <br>
 <em>[<strong>Violet's</strong>] latest release's zip package can be downloaded from <a href="https://github.com/s1l3nt78/sifter/archive/master.zip"><strong>here</strong></a></em>
 <br />
-<em>[<strong>Violet's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/11.5/sifter_11.5.deb"><strong>here</strong></a></em>
+<em>[<strong>Violet's</strong>] latest .deb package is also available for download from <a href="https://github.com/s1l3nt78/sifter/releases/download/12/sifter_12.deb"><strong>here</strong></a></em>
 <br />
 <em>Older Releases can be found <a href="https://github.com/s1l3nt78/sifter/archive/"><strong>here</strong></a></em>
 <br>
@@ -85,27 +85,18 @@
 # Updates:
 ## Additions:
 <details>
-	<summary><strong>#__ Version: 11.7 _|_ Violet __# </strong></summary><br />
+	<summary><strong>#__ Version: 12 _|_ Sapphire __# </strong></summary><br />
+- <strong>hahwul | Phoenix</strong> - hahwul's webtools<br />
+- <strong>ScriptHunter</strong> - Hunter JavaScript within websites<br />
 - <strong>TorBot</strong> - Onion URL info gatherer & crawler<br />
 - <strong>TacticalEK</strong> - Tactical exploitation toolkit to assist penetration testers during their assignments.<br />
-	<br />
-*<strong>Version: 11.5</strong>*
-- <strong>GitSearch</strong> - Tool to search git from CLI and clone (if required)<br />
-- <strong>Mosint</strong> - MOSINT is an OSINT Tool for emails. It helps you gather information about the target email.<br />
-<br />
-- <strong>Snaffler</strong> - Gather targets from Active Directories, searches out file shares, and whether they're readable.<br />
-- <strong>WeblogicScanner</strong> - Weblogic Vulnerability Scanning Tool<br />
-- <strong>Responder</strong> - LLMNR, NBT-NS and MDNS poisoner.<br />
-- <strong>Vailyn</strong> - Multi-phased vulnerability analysis and LFI exploitation tool<br />
-- <strong>Mitre-Attack Website</strong> - Provides basic navigation and annotation of ATT&CK matrices<br />
-- <strong>DroneSploit</strong> (<em>Optional</em>)- Hacking techniques and exploits especially focused on drone hacking.<br />
 <br />
 - Typing <strong>info</strong> into any menu will bring up the Module Information Screen.<br />
 - Typing <strong>session</strong> into any menu will start a new Sifter session to run concurrently.<br />
 - All Results can now be exported to Desktop and a backup zip package is created and time stamped.<br />
 </em><br />
 </details>
-
+<!--
 ---------------------------------------------------------------------------------------------------------------------
 
 ## Removed
@@ -118,7 +109,7 @@
 <br />- Removing redundant tools to make Sifter less bulky
 </details>
 
-
+-->
 ---------------------------------------------------------------------------------------------------------------------
 
 <h2>Menu:</h2>
@@ -185,7 +176,7 @@ use a regular user and give permissions only when needed.</em></strong>
 
 	[!] For oneliner install (Deb Package), copy and paste the following code into a terminal:
 	*
-	$ wget https://github.com/s1l3nt78/sifter/releases/download/11.5/sifter_11.5.deb; sudo dpkg -i sifter_11.5.deb; sifter
+	$ wget https://github.com/s1l3nt78/sifter/releases/download/11.5/sifter_11.5.deb; sudo dpkg -i sifter_12.deb; sifter
 
 
 	[!] For oneliner install (source), copy and paste the following into a terminal:

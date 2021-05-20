@@ -1966,6 +1966,23 @@ t82(){
 	fi
 }
 
+#####################
+# 83 # ScriptHunter #
+#####################
+t83(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for ScriptHunter ${NC}"
+	if [[ -d '/opt/scripthunter' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "ScriptHunter is already installed"
+		echo -e "${NC}"
+		cd /opt/scripthunter
+		sudo git fetch; sudo git pull
+	else
+		cd /opt
+		sudo git clone https://github.com/robre/scripthunter.git
+	fi
+}
 #######################################################################################################################################
 ####################
 # Ext # Plugin Installation #
@@ -2108,6 +2125,7 @@ t79							# Mitre-Attack
 t80							# mosint
 t81							# TorBot
 t82							# TacticalEK
+t83							# ScriptHunter
 #########################################---------------
 plugExt						# Plugin Extentions
 #########################################---------------
