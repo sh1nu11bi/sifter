@@ -2001,10 +2001,10 @@ update(){
     echo -e "/  \`|_  _  _.;_/*._  _   |, _ ._.  |  |._  _| _.-+- _  __   "
     echo -e "\__.[ )(/,(_.| \|[ )(_]  | (_)[    |__|[_)(_](_] | (/,_)  *  * "
     echo -e "                    ._|                |                       ${NC}"
-    echo -e "${YLW}############################"                                             ########################
-    echo -e "${YLW}# ${ORNG}Current Version  :${LP} 11.8  ${YLW}#${NC}"                          ##    VERSION INFO    ##
+    echo -e "${YLW}##########################"                                             ########################
+    echo -e "${YLW}# ${ORNG}Current Version  :${LP} 12  ${YLW}#${NC}"                          ##    VERSION INFO    ##
   #echo -e "${YLW}# ${ORNG}Incoming Revision : ${LP}r3  ${YLW}#"                                       ##    UPDATE CHECK    ##
-    echo -e "${YLW}############################${NC}"                                         ########################
+    echo -e "${YLW}##########################${NC}"                                         ########################
 
     if [[ -f '/opt/sifter/modules/exmods/fuzzydander.sh' ]]; then
     	    sudo mv /opt/sifter/modules/exmods/fuzzydander.sh /opt/sifter/modules/exmods/fuzzyd.sh
