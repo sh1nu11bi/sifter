@@ -96,20 +96,7 @@
 - All Results can now be exported to Desktop and a backup zip package is created and time stamped.<br />
 </em><br />
 </details>
-<!--
----------------------------------------------------------------------------------------------------------------------
 
-## Removed
-<details>
-<summary><strong># Depreciated tools:</strong></summary>
-- BFAC
-<br />- Maryam
-<br />- ODIN
-<br />- xRay
-<br />- Removing redundant tools to make Sifter less bulky
-</details>
-
--->
 ---------------------------------------------------------------------------------------------------------------------
 
 <h2>Menu:</h2>
