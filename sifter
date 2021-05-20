@@ -2021,11 +2021,11 @@ update(){
 	    read UANS
 	    if [[ ${UANS} == "y" ]]; then
          	export LPATH
-            echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
-		    read FILES
-            sleep 2
-		    up_arg ${FILES}
-		    git pull --ff-only
+          echo -e "${W}Please enter the conflicting files (seperated by a space)${NC}"
+		    	read FILES
+          sleep 2
+		    	up_arg ${FILES}
+		    	git pull --ff-only
 	    fi
 	    zenity --title "Sifter Changelog" \
            --height=750 --width=800 \
