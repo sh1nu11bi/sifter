@@ -1983,6 +1983,25 @@ t83(){
 		sudo git clone https://github.com/robre/scripthunter.git
 	fi
 }
+
+################
+# 84 # EMagnet #
+################
+t84(){
+	echo -e "${W}===========================================================================================${NC}"
+	echo -e "${YLW}Checking for Emagnet ${NC}"
+	if [[ -d '/opt/Emagnet' ]]; then
+		echo -e "${ORNG}"
+		figlet -f mini "Emagnet is already installed"
+		echo -e "${NC}"
+		cd /opt/Emagnet
+		sudo git fetch; sudo git pull
+	else
+		cd /opt
+		sudo git clone https://github.com/wuseman/Emagnet
+		sudo chown $USER:$USER -R Emagnet
+	fi
+}
 #######################################################################################################################################
 ####################
 # Ext # Plugin Installation #

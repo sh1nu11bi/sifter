@@ -9,7 +9,7 @@
   	<img align="center" src="https://img.shields.io/github/stars/s1l3nt78/sifter">		  
 <br>
 	<img align="center" src="https://img.shields.io/badge/@Codename:-Sapphire-violet"><br />
-	<img align="center" src="https://img.shields.io/badge/Version-12-red">
+	<img align="center" src="https://img.shields.io/badge/Version-12.2-red">
 <!--	<img align="center" src="https://img.shields.io/badge/Revision--green">
 --></p>
 
@@ -53,7 +53,7 @@
 # Release
 
 	@Codename: Sapphire
-	@Version : 12
+	@Version : 12.2
 <!--	@Revision: 3
 -->
 <br>
@@ -85,7 +85,8 @@
 # Updates:
 ## Additions:
 <details>
-	<summary><strong>#__ Version: 12 _|_ Sapphire __# </strong></summary><br />
+	<summary><strong>#__ Version: 12.2 _|_ Sapphire __# </strong></summary><br />
+- <strong>Emagnet</strong> - Capture email addresses and passwords from leaked databases uploaded on pastebin.<br />
 - <strong>hahwul | Phoenix</strong> - hahwul's webtools<br />
 - <strong>ScriptHunter</strong> - Hunter JavaScript within websites<br />
 - <strong>TorBot</strong> - Onion URL info gatherer & crawler<br />
@@ -186,6 +187,7 @@ use a regular user and give permissions only when needed.</em></strong>
 - <a href="https://github.com/laramies/theHarvester">theHarvester</a><br />
 - <a href="https://github.com/j3ssie/Osmedeus">Osmedeus</a><br />
 - <a href="https://github.com/bhavsec/reconspider">ReconSpider</a><br />
+- <a href="https://github.com/wuseman/Emagnet">Emagnet</a><br />
 - <a href="https://github.com/Raikia/CredNinja">CredNinja</a><br />
 - <a href="https://github.com/lockfale/OSINT-Framework">OSINT-Framework</a>
 </details>

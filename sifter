@@ -95,10 +95,10 @@ cred_mods(){
     ASTAT=$(cat /home/$USER/.config/.anon_status)
 	echo -e "${EXC} ${BIGreen}Anonymous: ${BIYellow}${ASTAT}${NC}"
 	echo -e " ${W}==================================================\n ${ORNG}Which tool would you like to use?\n ${W}==================================================${NC}"
-	echo -e "\n ${ORNG}1.${W} theHarvester          ${ORNG}4.${W} CredNinja ${NC}"
-	echo -e " ${ORNG}2.${W} Osmedeus		  ${ORNG}5.${W} OSINT-Framework ${NC}"
-	echo -e " ${ORNG}3.${W} ReconSpider           ${ORNG}6.${W} Back ${NC}"
-    	echo -e " ${W}"
+	echo -e "\n ${ORNG}1.${W} theHarvester          ${ORNG}5.${W} CredNinja ${NC}"
+	echo -e " ${ORNG}2.${W} Osmedeus		  ${ORNG}6.${W} OSINT-Framework ${NC}"
+	echo -e " ${ORNG}3.${W} ReconSpider           ${ORNG}7.${W} Back ${NC}"
+  echo -e " ${ORNG}4.${W} Emagnet	${NC}"
     	echo -n " =============================#?: "
 	read CMM
 	if [[ ${CMM} == "1" ]]; then
@@ -108,10 +108,12 @@ cred_mods(){
 	elif [[ ${CMM} == "3" ]]; then
 		bash /opt/sifter/modules/credmods/rspider.sh
 	elif [[ ${CMM} == "4" ]]; then
+		bash /opt/sifter/modules/credmods/emagnet.#!/bin/sh
+	elif [[ ${CMM} == "5" ]] then
 		bash /opt/sifter/modules/credmods/credninja.sh
-	elif [[ ${CMM} == "5" ]]; then
-		bash /opt/sifter/modules/credmods/osintf.sh
 	elif [[ ${CMM} == "6" ]]; then
+		bash /opt/sifter/modules/credmods/osintf.sh
+	elif [[ ${CMM} == "7" ]]; then
 		info_mods
 	elif [[ ${CMM} == "cd "* ]]; then
         	DCK=$(pwd)

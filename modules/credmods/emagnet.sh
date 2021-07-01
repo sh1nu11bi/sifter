@@ -7,11 +7,12 @@ YLW='\033[1;33m'
 LBBLUE='\e[104m'
 RED='\033[0;31m'
 
-cd /opt/CardPwn
+cd /opt/Emagnet
 echo -e "${RED}"
-figlet -f mini "CardPwn"
+figlet -f mini "EMagnet"
 echo -e "${NC}"
-xterm -e sudo python3 cardpwn.py
+cd /opt/Emagnet
+bash emagnet.sh --emagnet
 sleep 30
 echo -e "	============================================"
 
