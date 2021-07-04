@@ -108,8 +108,8 @@ cred_mods(){
 	elif [[ ${CMM} == "3" ]]; then
 		bash /opt/sifter/modules/credmods/rspider.sh
 	elif [[ ${CMM} == "4" ]]; then
-		bash /opt/sifter/modules/credmods/emagnet.#!/bin/sh
-	elif [[ ${CMM} == "5" ]] then
+		bash /opt/sifter/modules/credmods/emagnet.sh
+	elif [[ ${CMM} == "5" ]]; then
 		bash /opt/sifter/modules/credmods/credninja.sh
 	elif [[ ${CMM} == "6" ]]; then
 		bash /opt/sifter/modules/credmods/osintf.sh
