@@ -98,7 +98,7 @@ cred_mods(){
 	echo -e "\n ${ORNG}1.${W} theHarvester          ${ORNG}5.${W} CredNinja ${NC}"
 	echo -e " ${ORNG}2.${W} Osmedeus		  ${ORNG}6.${W} OSINT-Framework ${NC}"
 	echo -e " ${ORNG}3.${W} ReconSpider           ${ORNG}7.${W} Back ${NC}"
-  echo -e " ${ORNG}4.${W} Emagnet	${NC}"
+  echo -e " ${ORNG}4.${W} Emagnet ${RED}*Depreciated	${NC}"
     	echo -n " =============================#?: "
 	read CMM
 	if [[ ${CMM} == "1" ]]; then
@@ -108,7 +108,9 @@ cred_mods(){
 	elif [[ ${CMM} == "3" ]]; then
 		bash /opt/sifter/modules/credmods/rspider.sh
 	elif [[ ${CMM} == "4" ]]; then
-		bash /opt/sifter/modules/credmods/emagnet.sh
+		echo " This tool has unfortunately been depreciated \n and is no longer functional."
+		cred_mods
+		#bash /opt/sifter/modules/credmods/emagnet.sh
 	elif [[ ${CMM} == "5" ]]; then
 		bash /opt/sifter/modules/credmods/credninja.sh
 	elif [[ ${CMM} == "6" ]]; then
