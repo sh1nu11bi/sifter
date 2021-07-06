@@ -108,7 +108,8 @@ cred_mods(){
 	elif [[ ${CMM} == "3" ]]; then
 		bash /opt/sifter/modules/credmods/rspider.sh
 	elif [[ ${CMM} == "4" ]]; then
-		echo " This tool has unfortunately been depreciated \n and is no longer functional."
+		echo -e "${RED} This tool has unfortunately been depreciated${NC}"
+		echo -e "${RED} and is no longer functional.${NC}"
 		cred_mods
 		#bash /opt/sifter/modules/credmods/emagnet.sh
 	elif [[ ${CMM} == "5" ]]; then
