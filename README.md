@@ -34,7 +34,7 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 ## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; Working on a GUI Frontend to run sifter
-## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; from Kali terminal in windows
+## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp;&emsp;&emsp; from Kali terminal in windows
 
 ------------------------------------------------------------------------
 
