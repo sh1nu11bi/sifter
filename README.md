@@ -33,8 +33,8 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
-## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; Recon Development Currently on hold
-## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; Offensive Development Currently in Progress
+## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; Working on a GUI Frontend to run sifter
+## &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; from Kali terminal in windows
 
 ------------------------------------------------------------------------
 
