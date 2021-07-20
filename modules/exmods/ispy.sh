@@ -8,6 +8,8 @@ LP='\033[1;35m'
 echo -e "${ORNG}"
 figlet -f mini "iSpy"
 echo -e "${NC}"
-./opt/iSpy/ispy
+cd /opt/ispy
+sudo bash ispy
 sleep 2
-./modules/module.sh
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################

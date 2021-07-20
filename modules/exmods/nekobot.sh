@@ -10,7 +10,9 @@ cd tools/NekoBotV1
 echo -e "${ORNG}"
 figlet -f mini "NekoBot"
 echo -e "${NC}"
-python NekoBot.py
+sudo python NekoBot.py
 sleep 1
 echo "=========================================================================="
-./modules/module.sh
+sleep 5
+
+##########################______________ czFsM250NzggX18gUmFiYjE3J3MgRGVu ______________##########################
